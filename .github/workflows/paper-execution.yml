@@ -2,6 +2,20 @@ name: Paper Execution
 
 on:
   workflow_dispatch:
+    inputs:
+      approve_paper_plan:
+        description: "Generate trade_plan.json with --approve-paper?"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      confirm_manual_paper_execution:
+        description: "Type PAPER to confirm this may submit Alpaca paper orders"
+        required: true
+        default: "NO"
+        type: string
 
 permissions:
   contents: write
@@ -19,7 +33,7 @@ jobs:
       ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
       TRADING_MODE: paper
       ALPACA_PAPER: "true"
-      ALPACA_DATA_FEED: ${{ vars.ALPACA_DATA_FEED }}
+      ALPACA_DATA_FEED: ${{ vars.ALPACA_DATA_FEED || 'iex' }}
       ENABLE_PAPER_EXECUTION: ${{ vars.ENABLE_PAPER_EXECUTION }}
       LIVE_TRADING_CONFIRMED: "false"
 
@@ -39,6 +53,28 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Verify required environment and safety mode
+        run: |
+          test -n "$ALPACA_API_KEY" || (echo "::error::ALPACA_API_KEY secret is missing"; exit 1)
+          test -n "$ALPACA_API_SECRET" || (echo "::error::ALPACA_API_SECRET secret is missing"; exit 1)
+
+          if [ "$TRADING_MODE" != "paper" ]; then
+            echo "::error::TRADING_MODE must be paper"
+            exit 1
+          fi
+
+          if [ "$ALPACA_PAPER" != "true" ]; then
+            echo "::error::ALPACA_PAPER must be true"
+            exit 1
+          fi
+
+          if [ "$LIVE_TRADING_CONFIRMED" = "true" ]; then
+            echo "::error::LIVE_TRADING_CONFIRMED must not be true"
+            exit 1
+          fi
+
+          echo "Environment preflight passed. Secrets are present and mode is paper."
+
       - name: Refresh data
         run: python scripts/refresh_data.py
 
@@ -49,7 +85,117 @@ jobs:
         run: python scripts/scan_triggers.py
 
       - name: Generate trade plan
-        run: python scripts/generate_trade_plan.py
+        run: |
+          if [ "${{ github.event.inputs.approve_paper_plan }}" = "true" ]; then
+            echo "Generating trade plan with --approve-paper"
+            python scripts/generate_trade_plan.py --approve-paper
+          else
+            echo "Generating trade plan without approval"
+            python scripts/generate_trade_plan.py
+          fi
+
+      - name: Run final dry-run execution gate check
+        run: python scripts/dry_run_execute.py
+
+      - name: Verify dry-run gates passed
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          report_path = Path("data/latest/execution_report.json")
+
+          if not report_path.exists():
+              print("::error::data/latest/execution_report.json does not exist")
+              sys.exit(1)
+
+          report = json.loads(report_path.read_text())
+
+          all_gates_pass = report.get("all_gates_pass")
+          status = report.get("status")
+          failed_gates = report.get("failed_gates", [])
+
+          print(f"Dry-run status: {status}")
+          print(f"all_gates_pass: {all_gates_pass}")
+          print(f"failed_gates: {failed_gates}")
+
+          if not all_gates_pass:
+              print(f"::error::Dry-run gates did not all pass. Failed gates: {failed_gates}")
+              sys.exit(1)
+
+          print("Dry-run gates passed.")
+          PY
+
+      - name: Verify trade plan approval and order safety
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          plan_path = Path("data/latest/trade_plan.json")
+
+          if not plan_path.exists():
+              print("::error::data/latest/trade_plan.json does not exist")
+              sys.exit(1)
+
+          plan = json.loads(plan_path.read_text())
+
+          approval = plan.get("approval", {})
+          approved = approval.get("approved_for_execution")
+          proposed_orders = plan.get("proposed_orders", [])
+
+          print(f"approved_for_execution: {approved}")
+          print(f"proposed_orders: {len(proposed_orders)}")
+
+          if not approved:
+              print("::error::trade_plan.json is not approved for execution")
+              sys.exit(1)
+
+          bad_orders = []
+          for order in proposed_orders:
+              symbol = order.get("symbol")
+              order_type = order.get("order_type")
+              side = order.get("side")
+              limit_price = order.get("limit_price")
+
+              if order_type != "limit":
+                  bad_orders.append(f"{symbol}: order_type={order_type}")
+
+              if side not in {"buy", "sell"}:
+                  bad_orders.append(f"{symbol}: invalid side={side}")
+
+              if limit_price is None:
+                  bad_orders.append(f"{symbol}: missing limit_price")
+
+          if bad_orders:
+              print("::error::Unsafe proposed orders found:")
+              for item in bad_orders:
+                  print(f"  - {item}")
+              sys.exit(1)
+
+          print("Trade plan approval and order safety checks passed.")
+          PY
+
+      - name: Verify manual paper execution confirmation
+        run: |
+          if [ "$ENABLE_PAPER_EXECUTION" != "true" ]; then
+            echo "::error::ENABLE_PAPER_EXECUTION is not true. Paper execution remains disabled."
+            exit 1
+          fi
+
+          if [ "${{ github.event.inputs.approve_paper_plan }}" != "true" ]; then
+            echo "::error::approve_paper_plan must be true for paper execution."
+            exit 1
+          fi
+
+          if [ "${{ github.event.inputs.confirm_manual_paper_execution }}" != "PAPER" ]; then
+            echo "::error::You must type PAPER to confirm manual Alpaca paper execution."
+            exit 1
+          fi
+
+          echo "Manual paper execution confirmation passed."
 
       - name: Execute paper plan
         run: python scripts/execute_paper.py --confirm-paper
@@ -59,6 +205,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add data memory
-          git diff --cached --quiet || git commit -m "chore(exec): paper execution attempt ${{ github.run_id }}"
-          git push
+
+          if git diff --cached --quiet; then
+            echo "No execution artifacts changed."
+          else
+            git commit -m "chore(exec): paper execution attempt ${{ github.run_id }}"
+            git pull --rebase origin main
+            git push
+          fi
