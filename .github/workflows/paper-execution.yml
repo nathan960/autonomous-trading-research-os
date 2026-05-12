@@ -1,0 +1,87 @@
+name: Paper Execution
+
+# Manual dispatch ONLY — never runs on schedule or push.
+# Requires explicit confirmation input before any order is submitted.
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_paper:
+        description: >
+          Type CONFIRM to acknowledge that paper orders will be submitted to Alpaca.
+          Any other value aborts the run.
+        required: true
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+
+    # Hard abort if the confirmation input was not typed correctly.
+    if: ${{ github.event.inputs.confirm_paper == 'CONFIRM' }}
+
+    env:
+      TRADING_MODE: paper
+      ALPACA_PAPER: "true"
+      ENABLE_PAPER_EXECUTION: "true"
+      LIVE_TRADING_CONFIRMED: "false"
+      ALPACA_DATA_FEED: iex
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Compile check
+        run: python -m compileall src scripts tests
+
+      - name: Validate configs
+        run: python scripts/validate_all.py
+
+      - name: Refresh account and market data
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+        run: python scripts/refresh_data.py
+
+      - name: Scan triggers
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+        run: python scripts/scan_triggers.py
+
+      - name: Generate trade plan (approve for paper)
+        run: python scripts/generate_trade_plan.py --approve-paper
+
+      - name: Submit paper orders
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+        run: python scripts/execute_paper.py --confirm-paper
+
+      - name: Monitor positions post-execution
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+        run: python scripts/monitor_positions.py
+
+      - name: Commit and push execution results
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --ff-only
+          git add \
+            data/latest/ \
+            data/history/ \
+            memory/ || true
+          git commit -m "routine/paper-execution: $(date -u +%Y%m%dT%H%M%SZ)" || true
+          git push

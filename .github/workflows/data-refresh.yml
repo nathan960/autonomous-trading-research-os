@@ -1,0 +1,54 @@
+name: Data Refresh
+
+on:
+  schedule:
+    # 09:00 ET weekdays (14:00 UTC) — before market open
+    - cron: "0 14 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    env:
+      TRADING_MODE: paper
+      ALPACA_PAPER: "true"
+      ENABLE_PAPER_EXECUTION: "false"
+      LIVE_TRADING_CONFIRMED: "false"
+      ALPACA_DATA_FEED: iex
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Compile check
+        run: python -m compileall src scripts tests
+
+      - name: Validate configs
+        run: python scripts/validate_all.py
+
+      - name: Refresh market and account data
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+        run: python scripts/refresh_data.py
+
+      - name: Commit and push snapshots
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --ff-only
+          git add data/latest/ data/history/snapshots/ memory/DATA-QUALITY-LOG.md || true
+          git commit -m "routine/data-refresh: $(date -u +%Y%m%dT%H%M%SZ)" || true
+          git push
