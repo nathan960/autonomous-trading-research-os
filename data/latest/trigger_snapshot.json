@@ -16,11 +16,11 @@
     "SO"
   ],
   "data_stale_gate": {
-    "age_minutes": 0.11554375,
+    "age_minutes": 0.06270921666666666,
     "max_age_minutes": 90.0,
     "passes": true,
     "skip_reason": null,
-    "snapshot_timestamp": "2026-05-12T20:59:11Z",
+    "snapshot_timestamp": "2026-05-12T21:16:47Z",
     "trigger_id": "DATA_STALE_GATE_V1"
   },
   "excluded": [
@@ -339,7 +339,7 @@
     },
     "trigger_id": "SPY_REGIME_200DMA_V1"
   },
-  "scanned_at": "2026-05-12T20:59:17Z",
+  "scanned_at": "2026-05-12T21:16:50Z",
   "sector_counts": {
     "101": 1,
     "104": 1,
@@ -710,7 +710,7 @@
       },
       "input_hash": "8416e819a22b92594c90a8f3c6b5bf448991f8f00b3d08f0633a25b305c928cc",
       "liquidity": {
-        "avg_volume": 876921.75,
+        "avg_volume": 876921.8,
         "avg_volume_period": 20,
         "bar_count": 289,
         "input_hash": "8416e819a22b92594c90a8f3c6b5bf448991f8f00b3d08f0633a25b305c928cc",
@@ -911,7 +911,7 @@
       },
       "input_hash": "98a07893809dd9443b8cd536d3f7abaeffdfcb3f9f85340f2c8a135cc4ba0f53",
       "liquidity": {
-        "avg_volume": 1835483.2,
+        "avg_volume": 1835483.3,
         "avg_volume_period": 20,
         "bar_count": 289,
         "input_hash": "98a07893809dd9443b8cd536d3f7abaeffdfcb3f9f85340f2c8a135cc4ba0f53",
@@ -1045,7 +1045,7 @@
       },
       "input_hash": "713aad36c2e3216fbbfe120f1560e24087b007bcd9bb10f8ceaed90f8ced0845",
       "liquidity": {
-        "avg_volume": 595484.6,
+        "avg_volume": 595485.1,
         "avg_volume_period": 20,
         "bar_count": 289,
         "input_hash": "713aad36c2e3216fbbfe120f1560e24087b007bcd9bb10f8ceaed90f8ced0845",
@@ -1849,7 +1849,7 @@
       },
       "input_hash": "808b0be7bdf03ca039c54578ce3f6e78d5c6850e3c6971c13e2eba5faa50acec",
       "liquidity": {
-        "avg_volume": 909337.9,
+        "avg_volume": 909338.4,
         "avg_volume_period": 20,
         "bar_count": 289,
         "input_hash": "808b0be7bdf03ca039c54578ce3f6e78d5c6850e3c6971c13e2eba5faa50acec",
@@ -4194,7 +4194,7 @@
       },
       "input_hash": "2f6cc30289a6949131a4d2ce2e7b63cdc8c24bc7f6e277dc307371f882ffb175",
       "liquidity": {
-        "avg_volume": 868924.35,
+        "avg_volume": 868925.0,
         "avg_volume_period": 20,
         "bar_count": 289,
         "input_hash": "2f6cc30289a6949131a4d2ce2e7b63cdc8c24bc7f6e277dc307371f882ffb175",
@@ -5655,5 +5655,5 @@
       }
     }
   },
-  "trigger_snapshot_hash": "1899c4eb60b0a7109ce2fdb6d0db346f62dca4daccafa8bcdc272373640be6b8"
+  "trigger_snapshot_hash": "7c2c364da335e1d6de8c5f4ff92789dcecb1950cd12a6021abd9e13861183cef"
 }

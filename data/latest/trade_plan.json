@@ -1,9 +1,9 @@
 {
   "account_snapshot": {
-    "buying_power": "114503.27",
+    "buying_power": "114429.78",
     "cash": "14814.01",
-    "equity": "99689.26",
-    "fetched_at": "2026-05-12T20:59:11Z",
+    "equity": "99615.77",
+    "fetched_at": "2026-05-12T21:16:47Z",
     "position_count": 10,
     "status": "ACTIVE"
   },
@@ -375,14 +375,14 @@
       "symbol": "BIL"
     }
   ],
-  "data_hash": "c8266895946b16f73c988ae95c4ab49c1590e874cc200f49d1e046fcf54b16c0",
-  "expires_at": "2026-05-13T02:59:18Z",
-  "generated_at": "2026-05-12T20:59:18Z",
+  "data_hash": "4cdae1a7c667a8b6778ac8e849abfdd82dd69826bfba2f18e0a708fa438a7585",
+  "expires_at": "2026-05-13T03:16:50Z",
+  "generated_at": "2026-05-12T21:16:50Z",
   "market_clock": {
     "is_open": false,
     "next_close": "2026-05-13T20:00:00Z",
     "next_open": "2026-05-13T13:30:00Z",
-    "timestamp": "2026-05-12T20:59:12Z"
+    "timestamp": "2026-05-12T21:16:47Z"
   },
   "no_trade_reasons": [
     "max_orders_per_run_cap(1)_dequeued(non_blocking): ['AEP', 'JNJ', 'APD', 'NEE', 'GS', 'XOM', 'NVDA', 'LLY', 'COP', 'FCX', 'BIL']",
@@ -434,7 +434,7 @@
       "symbol": "BIL"
     }
   ],
-  "plan_id": "trade_plan-20260512T205918-71daec15",
+  "plan_id": "trade_plan-20260512T211650-20309759",
   "proposed_orders": [
     {
       "capped_by_max_notional_per_order": true,
@@ -604,82 +604,82 @@
     "AEP": {
       "atr_pct": 0.017713302786387147,
       "latest_close": 131.93,
-      "notional": 11962.71,
+      "notional": 11953.89,
       "reason": "risk_on_inverse_atr",
       "weight": 0.12
     },
     "APD": {
       "atr_pct": 0.02032235032452667,
       "latest_close": 303.46,
-      "notional": 11059.2,
+      "notional": 11051.05,
       "reason": "risk_on_inverse_atr",
       "weight": 0.11093671
     },
     "BIL": {
       "atr_pct": null,
       "latest_close": 91.49,
-      "notional": 9968.93,
+      "notional": 9961.58,
       "reason": "cash_allocation",
       "weight": 0.1
     },
     "COP": {
       "atr_pct": 0.030695206056123997,
       "latest_close": 117.89,
-      "notional": 7321.95,
+      "notional": 7316.56,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07344778
     },
     "FCX": {
       "atr_pct": 0.04070884892845473,
       "latest_close": 66.04,
-      "notional": 5520.89,
+      "notional": 5516.82,
       "reason": "risk_on_inverse_atr",
       "weight": 0.05538095
     },
     "GS": {
       "atr_pct": 0.02468963174183603,
       "latest_close": 946.27,
-      "notional": 9102.97,
+      "notional": 9096.26,
       "reason": "risk_on_inverse_atr",
       "weight": 0.09131342
     },
     "JNJ": {
       "atr_pct": 0.017820928944778082,
       "latest_close": 224.34,
-      "notional": 11962.71,
+      "notional": 11953.89,
       "reason": "risk_on_inverse_atr",
       "weight": 0.12
     },
     "LLY": {
       "atr_pct": 0.030501067639803554,
       "latest_close": 990.11,
-      "notional": 7368.56,
+      "notional": 7363.13,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07391527
     },
     "NEE": {
       "atr_pct": 0.02237652059656964,
       "latest_close": 94.56,
-      "notional": 10043.96,
+      "notional": 10036.56,
       "reason": "risk_on_inverse_atr",
       "weight": 0.10075269
     },
     "NVDA": {
       "atr_pct": 0.029697017632627252,
       "latest_close": 220.88,
-      "notional": 7568.06,
+      "notional": 7562.48,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07591654
     },
     "XOM": {
       "atr_pct": 0.028779570713530284,
       "latest_close": 150.65,
-      "notional": 7809.32,
+      "notional": 7803.56,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07833664
     }
   },
-  "trade_plan_hash": "935f3ddc4666246177b96f599daedb2749f5400466f02d50624539ed9f1d3a2c",
+  "trade_plan_hash": "74a42f0a5a7c7356bc22d8c767aa170ff8530965987efaf083bc8dad198adc4c",
   "trading_mode": "paper",
-  "trigger_snapshot_hash": "1899c4eb60b0a7109ce2fdb6d0db346f62dca4daccafa8bcdc272373640be6b8"
+  "trigger_snapshot_hash": "7c2c364da335e1d6de8c5f4ff92789dcecb1950cd12a6021abd9e13861183cef"
 }
