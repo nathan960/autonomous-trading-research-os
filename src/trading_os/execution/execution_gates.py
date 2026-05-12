@@ -415,9 +415,9 @@ def gate_no_prohibited_orders(ctx: dict) -> dict:
             # would_short=False means we own it; check passes
             pass
         order_type: str = o.get("order_type", "")
-        if order_type not in ("limit", "market"):
+        if order_type != "limit":
             return _gate("NO_PROHIBITED_ORDERS", False,
-                         f"prohibited order_type={order_type!r} for {symbol}")
+                         f"only limit orders are allowed (got order_type={order_type!r} for {symbol})")
         tif: str = o.get("time_in_force", "day")
         if tif in ("opg", "cls"):
             return _gate("NO_PROHIBITED_ORDERS", False,

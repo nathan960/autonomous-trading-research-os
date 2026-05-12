@@ -521,6 +521,18 @@ class TestGateNoProhibitedOrders:
         r = gate_no_prohibited_orders(_ctx(plan=_plan(orders=orders)))
         assert r["passes"] is True
 
+    def test_market_order_fails(self):
+        orders = [_order("AAPL", order_type="market")]
+        r = gate_no_prohibited_orders(_ctx(plan=_plan(orders=orders)))
+        assert r["passes"] is False
+        assert "limit" in r["detail"]
+
+    def test_market_order_detail_names_symbol(self):
+        orders = [_order("MSFT", order_type="market")]
+        r = gate_no_prohibited_orders(_ctx(plan=_plan(orders=orders)))
+        assert r["passes"] is False
+        assert "MSFT" in r["detail"]
+
     def test_invalid_order_type_fails(self):
         orders = [_order("AAPL", order_type="stop_loss")]
         r = gate_no_prohibited_orders(_ctx(plan=_plan(orders=orders)))

@@ -659,7 +659,7 @@ class TestRunPaperExecution:
         assert report["orders_submitted"] == []
 
     def test_market_order_is_skipped_not_submitted(self, monkeypatch, tmp_path):
-        """Paper execution enforces limit-only; market orders get a skip_reason."""
+        """NO_PROHIBITED_ORDERS gate blocks market orders before any submission."""
         _paper_env(monkeypatch)
         orders = [_order("AAPL", order_type="market")]
         ctx = _ctx(
@@ -668,10 +668,10 @@ class TestRunPaperExecution:
             orders_dir=tmp_path / "orders",
         )
         report = run_paper_execution(ctx, _mock_trading_client(), confirm_paper=True)
-        # Market order is blocked; no orders submitted to broker
+        # Gate blocks market orders; no orders submitted to broker
         assert report["orders_submitted"] == []
-        validated = report.get("orders_validated", [])
-        assert any("limit_only" in (o.get("validation_skip_reason") or "") for o in validated)
+        assert report.get("all_gates_pass") is False
+        assert "NO_PROHIBITED_ORDERS" in report.get("failed_gates", [])
 
     def test_execution_report_hash_present(self, monkeypatch, tmp_path):
         _paper_env(monkeypatch)

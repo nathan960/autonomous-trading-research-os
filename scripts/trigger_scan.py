@@ -1,27 +1,19 @@
 #!/usr/bin/env python3
-from __future__ import annotations
+"""
+DEPRECATED — use scripts/scan_triggers.py instead.
 
-import argparse
-import json
+This script called the legacy autonomous_trading_research_os package
+which has been superseded by trading_os. It is intentionally disabled.
+
+Canonical script:
+    python scripts/scan_triggers.py
+"""
 import sys
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-
-from autonomous_trading_research_os.trigger_scan import run_trigger_scan
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    args = parser.parse_args()
-    result = run_trigger_scan()
-    print(json.dumps({
-        "run_id": result.get("run_id"),
-        "status": result.get("status") or result.get("approval", {}).get("status"),
-        "generated_at": result.get("generated_at"),
-    }, indent=2, sort_keys=True))
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+print(
+    "[trigger_scan] DEPRECATED: this script is disabled.\n"
+    "Use the canonical script instead:\n"
+    "    python scripts/scan_triggers.py",
+    file=sys.stderr,
+)
+sys.exit(1)

@@ -58,6 +58,7 @@ VALID_EXECUTION_POLICY = {
     "allow_shorting": False,
     "allow_options": False,
     "allow_crypto": False,
+    "allow_extended_hours": False,
     "fail_closed_on_any_gate_failure": True,
 }
 
@@ -221,6 +222,15 @@ class TestValidateExecutionPolicy:
     def test_crypto_rejected(self) -> None:
         with pytest.raises(SchemaError):
             validate_execution_policy({**VALID_EXECUTION_POLICY, "allow_crypto": True})
+
+    def test_extended_hours_rejected(self) -> None:
+        with pytest.raises(SchemaError):
+            validate_execution_policy({**VALID_EXECUTION_POLICY, "allow_extended_hours": True})
+
+    def test_extended_hours_missing_rejected(self) -> None:
+        d = {k: v for k, v in VALID_EXECUTION_POLICY.items() if k != "allow_extended_hours"}
+        with pytest.raises(SchemaError):
+            validate_execution_policy(d)
 
     def test_fail_open_rejected(self) -> None:
         with pytest.raises(SchemaError):

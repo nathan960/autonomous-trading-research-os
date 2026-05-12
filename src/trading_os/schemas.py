@@ -179,6 +179,7 @@ def validate_execution_policy(d: Any) -> None:
     _require_bool_false(errors, d, "allow_shorting")
     _require_bool_false(errors, d, "allow_options")
     _require_bool_false(errors, d, "allow_crypto")
+    _require_bool_false(errors, d, "allow_extended_hours")
     _require_bool_true(errors, d, "fail_closed_on_any_gate_failure")
 
     if errors:
