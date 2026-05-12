@@ -1,17 +1,17 @@
 {
   "account_snapshot": {
-    "buying_power": "114429.78",
+    "buying_power": "114441.96",
     "cash": "14814.01",
-    "equity": "99615.77",
-    "fetched_at": "2026-05-12T21:16:47Z",
+    "equity": "99627.95",
+    "fetched_at": "2026-05-12T21:18:01Z",
     "position_count": 10,
     "status": "ACTIVE"
   },
   "approval": {
     "all_risk_checks_pass": true,
-    "approve_paper_flag": false,
-    "approved_for_execution": false,
-    "reason": "approve_paper_flag_not_set"
+    "approve_paper_flag": true,
+    "approved_for_execution": true,
+    "reason": "all_risk_checks_pass_and_paper_flag_set"
   },
   "blocked_symbols": [
     {
@@ -375,14 +375,14 @@
       "symbol": "BIL"
     }
   ],
-  "data_hash": "4cdae1a7c667a8b6778ac8e849abfdd82dd69826bfba2f18e0a708fa438a7585",
-  "expires_at": "2026-05-13T03:16:50Z",
-  "generated_at": "2026-05-12T21:16:50Z",
+  "data_hash": "b7e035c737b3d8f04a1aa0079868a5fa3c0347436490c82b0588ed820676ab2b",
+  "expires_at": "2026-05-13T03:18:05Z",
+  "generated_at": "2026-05-12T21:18:05Z",
   "market_clock": {
     "is_open": false,
     "next_close": "2026-05-13T20:00:00Z",
     "next_open": "2026-05-13T13:30:00Z",
-    "timestamp": "2026-05-12T21:16:47Z"
+    "timestamp": "2026-05-12T21:18:02Z"
   },
   "no_trade_reasons": [
     "max_orders_per_run_cap(1)_dequeued(non_blocking): ['AEP', 'JNJ', 'APD', 'NEE', 'GS', 'XOM', 'NVDA', 'LLY', 'COP', 'FCX', 'BIL']",
@@ -434,7 +434,7 @@
       "symbol": "BIL"
     }
   ],
-  "plan_id": "trade_plan-20260512T211650-20309759",
+  "plan_id": "trade_plan-20260512T211805-192708ea",
   "proposed_orders": [
     {
       "capped_by_max_notional_per_order": true,
@@ -604,82 +604,82 @@
     "AEP": {
       "atr_pct": 0.017713302786387147,
       "latest_close": 131.93,
-      "notional": 11953.89,
+      "notional": 11955.35,
       "reason": "risk_on_inverse_atr",
       "weight": 0.12
     },
     "APD": {
       "atr_pct": 0.02032235032452667,
       "latest_close": 303.46,
-      "notional": 11051.05,
+      "notional": 11052.4,
       "reason": "risk_on_inverse_atr",
       "weight": 0.11093671
     },
     "BIL": {
       "atr_pct": null,
       "latest_close": 91.49,
-      "notional": 9961.58,
+      "notional": 9962.79,
       "reason": "cash_allocation",
       "weight": 0.1
     },
     "COP": {
       "atr_pct": 0.030695206056123997,
       "latest_close": 117.89,
-      "notional": 7316.56,
+      "notional": 7317.45,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07344778
     },
     "FCX": {
       "atr_pct": 0.04070884892845473,
       "latest_close": 66.04,
-      "notional": 5516.82,
+      "notional": 5517.49,
       "reason": "risk_on_inverse_atr",
       "weight": 0.05538095
     },
     "GS": {
       "atr_pct": 0.02468963174183603,
       "latest_close": 946.27,
-      "notional": 9096.26,
+      "notional": 9097.37,
       "reason": "risk_on_inverse_atr",
       "weight": 0.09131342
     },
     "JNJ": {
       "atr_pct": 0.017820928944778082,
       "latest_close": 224.34,
-      "notional": 11953.89,
+      "notional": 11955.35,
       "reason": "risk_on_inverse_atr",
       "weight": 0.12
     },
     "LLY": {
       "atr_pct": 0.030501067639803554,
       "latest_close": 990.11,
-      "notional": 7363.13,
+      "notional": 7364.03,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07391527
     },
     "NEE": {
       "atr_pct": 0.02237652059656964,
       "latest_close": 94.56,
-      "notional": 10036.56,
+      "notional": 10037.78,
       "reason": "risk_on_inverse_atr",
       "weight": 0.10075269
     },
     "NVDA": {
       "atr_pct": 0.029697017632627252,
       "latest_close": 220.88,
-      "notional": 7562.48,
+      "notional": 7563.41,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07591654
     },
     "XOM": {
       "atr_pct": 0.028779570713530284,
       "latest_close": 150.65,
-      "notional": 7803.56,
+      "notional": 7804.52,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07833664
     }
   },
-  "trade_plan_hash": "74a42f0a5a7c7356bc22d8c767aa170ff8530965987efaf083bc8dad198adc4c",
+  "trade_plan_hash": "0583cb7de3ff35add81317df307519a705da0275a4b6926eb15c486748f97bb5",
   "trading_mode": "paper",
-  "trigger_snapshot_hash": "7c2c364da335e1d6de8c5f4ff92789dcecb1950cd12a6021abd9e13861183cef"
+  "trigger_snapshot_hash": "402eea43dc6a5e4037dd5e9cbfddb74269e4b92b69d4fc490a47131ab703ab46"
 }

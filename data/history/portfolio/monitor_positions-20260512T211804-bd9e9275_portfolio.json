@@ -1,6 +1,12 @@
 {
-  "data_hash": "014c098db686d61fbdd8db3d97d0210c93573fe018f9dc9868809ecb5e8aca1d",
-  "fetched_at": "2026-05-12T21:18:01Z",
+  "data_hash": "c53111f51c581e99417917378729a896856ab25ab7b992e7e11e70e1d20dd053",
+  "drawdown": -0.000508,
+  "dry_run": false,
+  "equity": 99638.64,
+  "generated_at": "2026-05-12T21:18:05Z",
+  "open_order_count": 0,
+  "orders_summary": [],
+  "peak_equity": 99689.29,
   "position_count": 10,
   "positions": [
     {
@@ -78,21 +84,21 @@
       "asset_marginable": true,
       "avg_entry_price": "394.42",
       "avg_entry_swap_rate": null,
-      "change_today": "-0.00062",
+      "change_today": "0.00062",
       "cost_basis": "8781.88",
-      "current_price": "388.4",
+      "current_price": "388.88",
       "exchange": "NASDAQ",
       "lastday_price": "388.64",
-      "market_value": "8647.842888",
+      "market_value": "8658.530233",
       "qty": "22.265300948",
       "qty_available": "22.265300948",
       "side": "long",
       "swap_rate": null,
       "symbol": "GOOGL",
-      "unrealized_intraday_pl": "-5.343672",
-      "unrealized_intraday_plpc": "-0.00062",
-      "unrealized_pl": "-134.037112",
-      "unrealized_plpc": "-0.01526",
+      "unrealized_intraday_pl": "5.343673",
+      "unrealized_intraday_plpc": "0.00062",
+      "unrealized_pl": "-123.349767",
+      "unrealized_plpc": "-0.01405",
       "usd": null
     },
     {
@@ -234,6 +240,7 @@
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260512T211804-bd9e9275",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }

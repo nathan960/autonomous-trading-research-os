@@ -16,11 +16,11 @@
     "SO"
   ],
   "data_stale_gate": {
-    "age_minutes": 0.06270921666666666,
+    "age_minutes": 0.07370875,
     "max_age_minutes": 90.0,
     "passes": true,
     "skip_reason": null,
-    "snapshot_timestamp": "2026-05-12T21:16:47Z",
+    "snapshot_timestamp": "2026-05-12T21:18:01Z",
     "trigger_id": "DATA_STALE_GATE_V1"
   },
   "excluded": [
@@ -339,7 +339,7 @@
     },
     "trigger_id": "SPY_REGIME_200DMA_V1"
   },
-  "scanned_at": "2026-05-12T21:16:50Z",
+  "scanned_at": "2026-05-12T21:18:05Z",
   "sector_counts": {
     "101": 1,
     "104": 1,
@@ -5655,5 +5655,5 @@
       }
     }
   },
-  "trigger_snapshot_hash": "7c2c364da335e1d6de8c5f4ff92789dcecb1950cd12a6021abd9e13861183cef"
+  "trigger_snapshot_hash": "402eea43dc6a5e4037dd5e9cbfddb74269e4b92b69d4fc490a47131ab703ab46"
 }

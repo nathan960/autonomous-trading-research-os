@@ -1,7 +1,7 @@
 {
   "all_gates_pass": true,
   "dry_run": true,
-  "execution_report_hash": "f7c36f3fb6d9290177948d89fa5d64b835aa41541d371aa24d953e949bc29a0b",
+  "execution_report_hash": "80808a9592d8f1bbba7e40bc5058bbd7f0ee26cbbaad149756fe6cf0a9297d5f",
   "failed_gates": [],
   "gate_results": [
     {
@@ -25,7 +25,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-05-12T21:16:47Z",
+      "detail": "[dry-run] market is_open=False at 2026-05-12T21:18:02Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -85,12 +85,12 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-05-12T21:16:51Z",
+  "generated_at": "2026-05-12T21:18:05Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260512T211650-PEP-SELL",
+      "client_order_id": "TOS-20260512T211805-PEP-SELL",
       "execution_ready": true,
       "limit_price": 151.85,
       "notional": 25.0,
@@ -101,8 +101,8 @@
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260512T211650-20309759",
-  "run_id": "execution-20260512T211651-ec294806",
+  "plan_id": "trade_plan-20260512T211805-192708ea",
+  "run_id": "execution-20260512T211805-695513a6",
   "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "74a42f0a5a7c7356bc22d8c767aa170ff8530965987efaf083bc8dad198adc4c"
+  "trade_plan_hash": "0583cb7de3ff35add81317df307519a705da0275a4b6926eb15c486748f97bb5"
 }
