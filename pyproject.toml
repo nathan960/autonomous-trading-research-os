@@ -1,19 +1,7 @@
-[build-system]
-requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "autonomous-trading-research-os"
-version = "0.1.0"
-description = "Auditable Alpaca paper trading research and execution system"
-requires-python = ">=3.10"
-dependencies = [
-  "alpaca-py>=0.40.0"
-]
-
-[tool.setuptools.packages.find]
-where = ["src"]
-
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["src"]
