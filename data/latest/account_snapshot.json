@@ -1,0 +1,26 @@
+{
+  "account": {
+    "buying_power": "40000.00",
+    "cash": "40000.00",
+    "equity": "40000.00",
+    "status": "ACTIVE"
+  },
+  "clock": {
+    "is_open": true,
+    "next_close": "2026-05-12T17:12:15Z",
+    "next_open": "2026-05-12T17:12:15Z",
+    "timestamp": "2026-05-12T17:12:15Z"
+  },
+  "data_hash": "ecfbf1757c6d595f4e5173231a8622c0713ab49908c63c1ae6934bfd5f4f4a2f",
+  "fetched_at": "2026-05-12T17:12:15Z",
+  "open_order_count": 0,
+  "position_count": 0,
+  "schema_version": "0.1.0",
+  "source": "dry_run_mock",
+  "source_labels": {
+    "account": "dry_run_mock",
+    "clock": "dry_run_mock",
+    "orders": "dry_run_mock",
+    "positions": "dry_run_mock"
+  }
+}

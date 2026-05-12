@@ -1,0 +1,15 @@
+{
+  "policy_version": "0.1.0",
+  "paper_only": true,
+  "require_confirm_paper_flag": true,
+  "require_plan_approval": true,
+  "require_market_open": true,
+  "require_alpaca_revalidation": true,
+  "plan_max_age_minutes": 360,
+  "allowed_order_sides": ["buy", "sell"],
+  "allowed_asset_classes": ["us_equity", "etf", "cash_like_etf"],
+  "allow_shorting": false,
+  "allow_options": false,
+  "allow_crypto": false,
+  "fail_closed_on_any_gate_failure": true
+}

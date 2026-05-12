@@ -3,6 +3,9 @@
 .env.*
 !.env.template
 
+# Nested repo accidentally cloned inside the project root
+autonomous-trading-research-os/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -28,6 +31,18 @@ logs/*
 # Archives can grow large; commit selected archives intentionally if needed.
 data/archive/*
 !data/archive/.gitkeep
+
+# History snapshots grow with every run; commit selectively.
+data/history/snapshots/*
+!data/history/snapshots/.gitkeep
+
+# Trigger history JSONL files grow with every run; commit selectively.
+data/history/triggers/*
+!data/history/triggers/.gitkeep
+
+# Execution history grows with every run; commit selectively.
+data/history/executions/*
+!data/history/executions/.gitkeep
 
 # Build artifacts
 dist/

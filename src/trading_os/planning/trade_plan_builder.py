@@ -1,0 +1,225 @@
+"""Orchestrate allocator, position_sizer, and risk_checks into a trade plan.
+
+The plan is always written — including no-trade plans when gates fail.
+No orders are ever submitted here. Phase 4 output only.
+
+Required trade_plan fields:
+    plan_id, generated_at, expires_at, trading_mode, strategy_hash, data_hash,
+    trigger_snapshot_hash, account_snapshot, market_clock, regime, targets,
+    proposed_orders, blocked_symbols, risk_checks, no_trade_reasons,
+    approval.approved_for_execution
+"""
+from __future__ import annotations
+
+import uuid
+from typing import Any, Optional
+
+from ..hashing import stable_hash
+from ..signals._indicators import closes, sorted_bars
+from ..time_utils import utc_now_iso, parse_iso_utc
+from .allocator import compute_targets
+from .position_sizer import compute_proposed_orders
+from .risk_checks import all_checks_pass, run_risk_checks
+
+_PLAN_ID_PREFIX = "trade_plan"
+
+
+def _plan_id(generated_at: str) -> str:
+    ts = generated_at.replace(":", "").replace("-", "").replace("Z", "")[:15]
+    uid = uuid.uuid4().hex[:8]
+    return f"{_PLAN_ID_PREFIX}-{ts}-{uid}"
+
+
+def _expires_at(generated_at: str, expiry_minutes: float) -> str:
+    from datetime import timedelta
+    dt = parse_iso_utc(generated_at)
+    if dt is None:
+        return generated_at
+    expires = dt + timedelta(minutes=expiry_minutes)
+    return expires.replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def _account_equity(account_snapshot: dict) -> float:
+    """Extract portfolio equity as float from account snapshot."""
+    acct = account_snapshot.get("account", {})
+    try:
+        return float(acct.get("equity") or 0)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _latest_close_from_bars(bars_map: dict, symbol: str) -> Optional[float]:
+    """Look up the latest close price for a symbol from market snapshot bars."""
+    bars = bars_map.get(symbol, [])
+    ordered = sorted_bars(bars)
+    cl = closes(ordered)
+    return cl[-1] if cl else None
+
+
+def _enrich_targets_with_prices(targets: dict, bars_map: dict) -> dict:
+    """Fill in missing latest_close values from market snapshot bars."""
+    enriched = {}
+    for sym, tgt in targets.items():
+        entry = dict(tgt)
+        if entry.get("latest_close") is None:
+            price = _latest_close_from_bars(bars_map, sym)
+            if price is not None:
+                entry["latest_close"] = price
+        enriched[sym] = entry
+    return enriched
+
+
+def build_trade_plan(
+    market_snapshot: dict,
+    trigger_snapshot: dict,
+    account_snapshot: dict,
+    positions: list,
+    strategy: dict,
+    risk_limits: dict,
+    execution_policy: dict,
+    sector_map: dict,
+    approve_paper: bool = False,
+) -> dict:
+    """Build and return a complete trade plan dict.
+
+    Args:
+        market_snapshot:    loaded data/latest/market_snapshot.json
+        trigger_snapshot:   loaded data/latest/trigger_snapshot.json
+        account_snapshot:   loaded data/latest/account_snapshot.json
+        positions:          list from data/latest/positions_snapshot.json ["positions"]
+        strategy:           loaded config/strategy.json
+        risk_limits:        loaded config/risk_limits.json
+        execution_policy:   loaded config/execution_policy.json
+        sector_map:         loaded config/sector_map.json
+        approve_paper:      set True only with --approve-paper CLI flag
+
+    Returns:
+        trade_plan dict (always returned, even on gate failure).
+    """
+    generated_at = utc_now_iso()
+    params = strategy.get("parameters", {})
+    expiry_minutes: float = float(params.get("plan_expiry_minutes", 360))
+    min_order_notional: float = float(params.get("min_order_notional", 25.0))
+
+    equity = _account_equity(account_snapshot)
+    bars_map: dict = market_snapshot.get("bars", {})
+
+    regime: Any = trigger_snapshot.get("regime") or {}
+    risk_on: bool = bool(regime.get("risk_on", False))
+    selected: list = trigger_snapshot.get("selected", [])
+    symbol_results: dict = trigger_snapshot.get("symbol_results", {})
+    trigger_snapshot_hash: str = trigger_snapshot.get("trigger_snapshot_hash", "")
+    data_hash: str = (
+        market_snapshot.get("source_data_hash")
+        or market_snapshot.get("data_hash")
+        or ""
+    )
+    strategy_hash: str = stable_hash(strategy)
+
+    # ── Determine no_trade_reasons from gate states ──────────────────────────
+    no_trade_reasons: list = []
+    stale_gate = trigger_snapshot.get("data_stale_gate") or {}
+    if not stale_gate.get("passes", True):
+        no_trade_reasons.append(f"data_stale_gate_failed: {stale_gate.get('skip_reason')}")
+
+    # ── Allocate targets ─────────────────────────────────────────────────────
+    targets = compute_targets(
+        selected=selected,
+        symbol_results=symbol_results,
+        strategy=strategy,
+        risk_on=risk_on,
+        equity=equity,
+    )
+
+    # Enrich fallback symbols (BIL, SPY) with latest_close from market bars
+    targets = _enrich_targets_with_prices(targets, bars_map)
+
+    # ── Compute proposed orders ──────────────────────────────────────────────
+    all_orders = compute_proposed_orders(
+        targets=targets,
+        equity=equity,
+        positions=positions,
+        min_order_notional=min_order_notional,
+    )
+    proposed_orders = [o for o in all_orders if o.get("skip_reason") is None]
+    sizer_blocked = [o for o in all_orders if o.get("skip_reason") is not None]
+
+    # ── blocked_symbols: trigger excluded + sizer-blocked orders ────────────
+    blocked_symbols: list = list(trigger_snapshot.get("excluded", []))
+    for o in sizer_blocked:
+        blocked_symbols.append({"symbol": o["symbol"], "skip_reason": o["skip_reason"]})
+
+    # ── Risk checks ──────────────────────────────────────────────────────────
+    risk_checks = run_risk_checks(
+        targets=targets,
+        proposed_orders=proposed_orders,
+        strategy=strategy,
+        risk_limits=risk_limits,
+        execution_policy=execution_policy,
+        trigger_snapshot_hash=trigger_snapshot_hash,
+        data_hash=data_hash,
+        sector_map=sector_map,
+    )
+    gates_pass = all_checks_pass(risk_checks)
+
+    # ── Collect additional no-trade reasons from failed checks ───────────────
+    failed_checks = [c for c in risk_checks if not c["passes"]]
+    for fc in failed_checks:
+        no_trade_reasons.append(f"risk_check_failed:{fc['check_id']}")
+
+    if not proposed_orders and not no_trade_reasons:
+        no_trade_reasons.append("no_actionable_orders")
+
+    # ── Approval ─────────────────────────────────────────────────────────────
+    approved_for_execution = gates_pass and approve_paper and not no_trade_reasons
+    if approved_for_execution:
+        approval_reason = "all_risk_checks_pass_and_paper_flag_set"
+    elif not gates_pass:
+        approval_reason = f"risk_checks_failed: {[c['check_id'] for c in failed_checks]}"
+    elif not approve_paper:
+        approval_reason = "approve_paper_flag_not_set"
+    else:
+        approval_reason = "; ".join(no_trade_reasons) or "unknown"
+
+    # ── Account summary for the plan ─────────────────────────────────────────
+    acct = account_snapshot.get("account", {})
+    account_summary = {
+        "equity": acct.get("equity"),
+        "cash": acct.get("cash"),
+        "buying_power": acct.get("buying_power"),
+        "status": acct.get("status"),
+        "position_count": account_snapshot.get("position_count", len(positions)),
+        "fetched_at": account_snapshot.get("fetched_at"),
+    }
+
+    market_clock = account_snapshot.get("clock", {})
+
+    # ── Assemble plan ─────────────────────────────────────────────────────────
+    plan_id = _plan_id(generated_at)
+    plan: dict = {
+        "plan_id": plan_id,
+        "generated_at": generated_at,
+        "expires_at": _expires_at(generated_at, expiry_minutes),
+        "trading_mode": "paper",
+        "strategy_hash": strategy_hash,
+        "data_hash": data_hash,
+        "trigger_snapshot_hash": trigger_snapshot_hash,
+        "account_snapshot": account_summary,
+        "market_clock": market_clock,
+        "regime": regime,
+        "targets": targets,
+        "proposed_orders": proposed_orders,
+        "blocked_symbols": blocked_symbols,
+        "risk_checks": risk_checks,
+        "no_trade_reasons": no_trade_reasons,
+        "approval": {
+            "approved_for_execution": approved_for_execution,
+            "all_risk_checks_pass": gates_pass,
+            "approve_paper_flag": approve_paper,
+            "reason": approval_reason,
+        },
+    }
+    plan["trade_plan_hash"] = stable_hash(
+        {k: v for k, v in plan.items() if k != "trade_plan_hash"}
+    )
+    return plan
