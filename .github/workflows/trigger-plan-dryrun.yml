@@ -1,71 +1,71 @@
-name: Trigger Scan → Trade Plan → Dry-Run
+name: Trigger Plan Dry Run
 
 on:
-  schedule:
-    # 09:45 ET weekdays (14:45 UTC) — after market open
-    - cron: "45 14 * * 1-5"
   workflow_dispatch:
+  schedule:
+    # Weekdays at 15:15 UTC.
+    # Scripts must still fail closed on stale data, market state, and risk gates.
+    - cron: "15 15 * * 1-5"
 
 permissions:
   contents: write
 
+concurrency:
+  group: trading-os-main
+  cancel-in-progress: false
+
 jobs:
-  plan:
+  trigger-plan-dryrun:
     runs-on: ubuntu-latest
 
     env:
+      ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+      ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
       TRADING_MODE: paper
       ALPACA_PAPER: "true"
+      ALPACA_DATA_FEED: ${{ vars.ALPACA_DATA_FEED }}
       ENABLE_PAPER_EXECUTION: "false"
       LIVE_TRADING_CONFIRMED: "false"
-      ALPACA_DATA_FEED: iex
 
     steps:
       - name: Check out repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Compile check
-        run: python -m compileall src scripts tests
+      - name: Refresh data
+        run: python scripts/refresh_data.py
 
-      - name: Validate configs
-        run: python scripts/validate_all.py
-
-      - name: Scan triggers
-        env:
-          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
-          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
-        run: python scripts/scan_triggers.py
-
-      - name: Generate trade plan (approve for paper)
-        run: python scripts/generate_trade_plan.py --approve-paper
-
-      - name: Dry-run execution gates
-        run: python scripts/dry_run_execute.py
-
-      - name: Monitor positions
-        env:
-          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
-          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+      - name: Monitor positions and risk state
         run: python scripts/monitor_positions.py
 
-      - name: Commit and push results
+      - name: Scan triggers
+        run: python scripts/scan_triggers.py
+
+      - name: Generate trade plan
+        run: python scripts/generate_trade_plan.py
+
+      - name: Dry-run execution
+        run: python scripts/dry_run_execute.py
+
+      - name: Validate
+        run: python scripts/validate_all.py
+
+      - name: Commit dry-run artifacts
+        if: always()
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --ff-only
-          git add \
-            data/latest/ \
-            data/history/triggers/ \
-            data/history/executions/ \
-            data/history/portfolio/ \
-            memory/ || true
-          git commit -m "routine/trigger-plan-dryrun: $(date -u +%Y%m%dT%H%M%SZ)" || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data memory
+          git diff --cached --quiet || git commit -m "chore(run): trigger plan dry-run ${{ github.run_id }}"
           git push

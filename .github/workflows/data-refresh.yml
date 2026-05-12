@@ -1,54 +1,61 @@
 name: Data Refresh
 
 on:
-  schedule:
-    # 09:00 ET weekdays (14:00 UTC) — before market open
-    - cron: "0 14 * * 1-5"
   workflow_dispatch:
+  schedule:
+    # Weekdays at 15:05 UTC.
+    # Scripts must still use Alpaca market clock and fail closed when needed.
+    - cron: "5 15 * * 1-5"
 
 permissions:
   contents: write
 
+concurrency:
+  group: trading-os-main
+  cancel-in-progress: false
+
 jobs:
-  refresh:
+  data-refresh:
     runs-on: ubuntu-latest
 
     env:
+      ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+      ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
       TRADING_MODE: paper
       ALPACA_PAPER: "true"
+      ALPACA_DATA_FEED: ${{ vars.ALPACA_DATA_FEED }}
       ENABLE_PAPER_EXECUTION: "false"
       LIVE_TRADING_CONFIRMED: "false"
-      ALPACA_DATA_FEED: iex
 
     steps:
       - name: Check out repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Compile check
-        run: python -m compileall src scripts tests
-
-      - name: Validate configs
-        run: python scripts/validate_all.py
-
-      - name: Refresh market and account data
-        env:
-          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
-          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+      - name: Refresh data
         run: python scripts/refresh_data.py
 
-      - name: Commit and push snapshots
+      - name: Monitor positions and risk state
+        run: python scripts/monitor_positions.py
+
+      - name: Validate
+        run: python scripts/validate_all.py
+
+      - name: Commit data and memory artifacts
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --ff-only
-          git add data/latest/ data/history/snapshots/ memory/DATA-QUALITY-LOG.md || true
-          git commit -m "routine/data-refresh: $(date -u +%Y%m%dT%H%M%SZ)" || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data memory
+          git diff --cached --quiet || git commit -m "chore(data): refresh snapshots and risk state ${{ github.run_id }}"
           git push
