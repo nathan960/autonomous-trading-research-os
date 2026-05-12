@@ -27,6 +27,8 @@ def run_risk_checks(
     sector_map: dict,
     spreads: Optional[dict] = None,
     max_quote_spread: Optional[float] = None,
+    max_orders_per_run: Optional[int] = None,
+    max_notional_per_order: Optional[float] = None,
 ) -> list:
     """Run all pre-plan risk checks and return a list of check result dicts.
 
@@ -41,6 +43,8 @@ def run_risk_checks(
         sector_map:              loaded config/sector_map.json
         spreads:                 market_snapshot["spreads"] for planning-time check
         max_quote_spread:        override threshold (falls back to risk_limits value)
+        max_orders_per_run:      cap applied before calling this function; checked here
+        max_notional_per_order:  cap applied before calling this function; checked here
 
     Returns:
         List of check dicts ordered from most fundamental to most specific.
@@ -172,6 +176,30 @@ def run_risk_checks(
         len(tiny_orders) == 0,
         f"orders below min_notional({min_order_notional}): {[o['symbol'] for o in tiny_orders]}",
     ))
+
+    # ── max_orders_per_run check ─────────────────────────────────────────────
+    # Verifies the per-run cap was applied: proposed_orders must not exceed the
+    # limit after trade_plan_builder has dequeued the overflow to blocked_symbols.
+    if max_orders_per_run is not None:
+        checks.append(_check(
+            "MAX_ORDERS_PER_RUN",
+            len(proposed_orders) <= max_orders_per_run,
+            f"proposed_orders={len(proposed_orders)} exceeds max_orders_per_run={max_orders_per_run}",
+        ))
+
+    # ── max_notional_per_order check ─────────────────────────────────────────
+    # Verifies every surviving proposed order's notional is within the cap.
+    if max_notional_per_order is not None:
+        over_notional = [
+            o["symbol"]
+            for o in proposed_orders
+            if o.get("notional", 0) > max_notional_per_order + 1e-6
+        ]
+        checks.append(_check(
+            "MAX_NOTIONAL_PER_ORDER",
+            len(over_notional) == 0,
+            f"orders exceeding max_notional_per_order={max_notional_per_order}: {over_notional}",
+        ))
 
     # ── Spread check at planning time ────────────────────────────────────────
     # Verifies that no proposed_order has a spread exceeding the threshold in

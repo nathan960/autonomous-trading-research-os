@@ -133,6 +133,26 @@ def validate_risk_limits(d: Any) -> None:
         "allowed_fallbacks must be a non-empty list",
     )
 
+    if "max_orders_per_run" in d:
+        _require(
+            errors,
+            isinstance(d["max_orders_per_run"], int) and d["max_orders_per_run"] >= 1,
+            "max_orders_per_run must be a positive int when present",
+        )
+    if "max_notional_per_order" in d:
+        _require(
+            errors,
+            isinstance(d["max_notional_per_order"], (int, float))
+            and float(d["max_notional_per_order"]) > 0,
+            "max_notional_per_order must be positive when present",
+        )
+        if "min_order_notional" in d and isinstance(d.get("min_order_notional"), (int, float)):
+            _require(
+                errors,
+                float(d["max_notional_per_order"]) >= float(d["min_order_notional"]),
+                "max_notional_per_order must be >= min_order_notional",
+            )
+
     if errors:
         raise SchemaError("risk_limits", errors)
 

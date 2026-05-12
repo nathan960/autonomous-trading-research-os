@@ -1,10 +1,10 @@
 {
   "account_snapshot": {
-    "buying_power": "114482.97",
-    "cash": "14814.01",
-    "equity": "99668.96",
-    "fetched_at": "2026-05-12T19:46:39Z",
-    "position_count": 10,
+    "buying_power": "40000.00",
+    "cash": "40000.00",
+    "equity": "40000.00",
+    "fetched_at": "2026-05-12T20:52:37Z",
+    "position_count": 0,
     "status": "ACTIVE"
   },
   "approval": {
@@ -343,213 +343,116 @@
       "momentum_score": 0.02663289470314134,
       "skip_reason": "max_holdings_reached",
       "symbol": "UPS"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "WMT"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "WELL"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "GOOGL"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "MRK"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "XOM"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "NVDA"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "SLB"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "AVGO"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "FCX"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "BIL"
     }
   ],
-  "data_hash": "7a1bb7c1ab3a47880cd978f03363d51f84dc6efd495c75354d117a729f8f1199",
-  "expires_at": "2026-05-13T01:46:42Z",
-  "generated_at": "2026-05-12T19:46:42Z",
+  "data_hash": "52c08b8fe11558259e797e012802f77f81a18114c6b69050ad10238cfa63a771",
+  "expires_at": "2026-05-13T02:52:43Z",
+  "generated_at": "2026-05-12T20:52:43Z",
   "market_clock": {
     "is_open": true,
-    "next_close": "2026-05-12T20:00:00Z",
-    "next_open": "2026-05-13T13:30:00Z",
-    "timestamp": "2026-05-12T19:46:39Z"
+    "next_close": "2026-05-12T20:52:37Z",
+    "next_open": "2026-05-12T20:52:37Z",
+    "timestamp": "2026-05-12T20:52:37Z"
   },
-  "no_trade_reasons": [],
-  "plan_id": "trade_plan-20260512T194642-d7326bc9",
+  "no_trade_reasons": [
+    "max_orders_per_run_cap(1)_dequeued(non_blocking): ['WMT', 'WELL', 'GOOGL', 'MRK', 'XOM', 'NVDA', 'SLB', 'AVGO', 'FCX', 'BIL']"
+  ],
+  "orders_run_capped_at_planning": [
+    {
+      "skip_reason": null,
+      "symbol": "WMT"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "WELL"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "GOOGL"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "MRK"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "XOM"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "NVDA"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "SLB"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "AVGO"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "FCX"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "BIL"
+    }
+  ],
+  "plan_id": "trade_plan-20260512T205243-b0f584f4",
   "proposed_orders": [
     {
-      "current_value": 8624.02,
-      "delta_value": 1202.62,
-      "limit_price": 387.4,
-      "notional": 1202.62,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "GOOGL",
-      "target_value": 9826.64,
-      "target_weight": 0.09859275,
-      "would_short": false
-    },
-    {
+      "capped_by_max_notional_per_order": true,
       "current_value": 0.0,
-      "delta_value": 5696.81,
-      "limit_price": 66.205,
-      "notional": 5696.81,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "FCX",
-      "target_value": 5696.81,
-      "target_weight": 0.05715736,
-      "would_short": false
-    },
-    {
-      "current_value": 6424.32,
-      "delta_value": 398.32,
-      "limit_price": 418.41,
-      "notional": 398.32,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "AVGO",
-      "target_value": 6822.64,
-      "target_weight": 0.068453,
-      "would_short": false
-    },
-    {
-      "current_value": 0.0,
-      "delta_value": 7635.12,
-      "limit_price": 55.94,
-      "notional": 7635.12,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "SLB",
-      "target_value": 7635.12,
-      "target_weight": 0.07660478,
-      "would_short": false
-    },
-    {
-      "current_value": 6127.84,
-      "delta_value": 1659.98,
-      "limit_price": 220.825,
-      "notional": 1659.98,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "NVDA",
-      "target_value": 7787.82,
-      "target_weight": 0.07813691,
-      "would_short": false
-    },
-    {
-      "current_value": 8344.63,
-      "delta_value": 1193.12,
-      "limit_price": 112.725,
-      "notional": 1193.12,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "MRK",
-      "target_value": 9537.75,
-      "target_weight": 0.09569427,
-      "would_short": false
-    },
-    {
-      "current_value": 7644.52,
-      "delta_value": 405.84,
-      "limit_price": 150.88,
-      "notional": 405.84,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "XOM",
-      "target_value": 8050.36,
-      "target_weight": 0.080771,
-      "would_short": false
-    },
-    {
-      "current_value": 0.0,
-      "delta_value": 11960.28,
+      "delta_value": 4800.0,
       "limit_price": 224.71,
-      "notional": 11960.28,
+      "notional": 200.0,
       "order_type": "limit",
       "side": "buy",
       "skip_reason": null,
       "symbol": "JNJ",
-      "target_value": 11960.28,
+      "target_value": 4800.0,
       "target_weight": 0.12,
-      "would_short": false
-    },
-    {
-      "current_value": 11803.71,
-      "delta_value": -241.01,
-      "limit_price": 130.32,
-      "notional": 241.01,
-      "order_type": "limit",
-      "side": "sell",
-      "skip_reason": null,
-      "symbol": "WMT",
-      "target_value": 11562.7,
-      "target_weight": 0.116011,
-      "would_short": false
-    },
-    {
-      "current_value": 0.0,
-      "delta_value": 10821.95,
-      "limit_price": 217.71,
-      "notional": 10821.95,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "WELL",
-      "target_value": 10821.95,
-      "target_weight": 0.10857893,
-      "would_short": false
-    },
-    {
-      "current_value": 0.0,
-      "delta_value": 9966.9,
-      "limit_price": 91.49,
-      "notional": 9966.9,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "BIL",
-      "target_value": 9966.9,
-      "target_weight": 0.1,
-      "would_short": false
-    },
-    {
-      "current_value": 4087.4,
-      "delta_value": -4087.4,
-      "limit_price": 444.33,
-      "notional": 4087.4,
-      "order_type": "limit",
-      "side": "sell",
-      "skip_reason": null,
-      "symbol": "AMD",
-      "target_value": 0.0,
-      "target_weight": 0.0,
-      "would_short": false
-    },
-    {
-      "current_value": 8002.58,
-      "delta_value": -8002.58,
-      "limit_price": 265.5375,
-      "notional": 8002.58,
-      "order_type": "limit",
-      "side": "sell",
-      "skip_reason": null,
-      "symbol": "AMZN",
-      "target_value": 0.0,
-      "target_weight": 0.0,
-      "would_short": false
-    },
-    {
-      "current_value": 13547.66,
-      "delta_value": -13547.66,
-      "limit_price": 80.21,
-      "notional": 13547.66,
-      "order_type": "limit",
-      "side": "sell",
-      "skip_reason": null,
-      "symbol": "KO",
-      "target_value": 0.0,
-      "target_weight": 0.0,
-      "would_short": false
-    },
-    {
-      "current_value": 10249.14,
-      "delta_value": -10249.14,
-      "limit_price": 151.89,
-      "notional": 10249.14,
-      "order_type": "limit",
-      "side": "sell",
-      "skip_reason": null,
-      "symbol": "PEP",
-      "target_value": 0.0,
-      "target_weight": 0.0,
       "would_short": false
     }
   ],
@@ -654,89 +557,105 @@
       "check_id": "MIN_ORDER_NOTIONAL",
       "detail": null,
       "passes": true
+    },
+    {
+      "check_id": "MAX_ORDERS_PER_RUN",
+      "detail": null,
+      "passes": true
+    },
+    {
+      "check_id": "MAX_NOTIONAL_PER_ORDER",
+      "detail": null,
+      "passes": true
+    },
+    {
+      "check_id": "SPREAD_OK_AT_PLANNING",
+      "detail": null,
+      "passes": true
     }
   ],
+  "spread_blocked_at_planning": [],
   "strategy_hash": "682943a3d7feb467ff2d693aefa40b51f023cee52b0176d7355e85bd86123334",
   "targets": {
     "AVGO": {
       "atr_pct": 0.03390663983904501,
       "latest_close": 418.41,
-      "notional": 6822.64,
+      "notional": 2738.12,
       "reason": "risk_on_inverse_atr",
       "weight": 0.068453
     },
     "BIL": {
       "atr_pct": null,
-      "latest_close": 91.49,
-      "notional": 9966.9,
+      "latest_close": 91.9626,
+      "notional": 4000.0,
       "reason": "cash_allocation",
       "weight": 0.1
     },
     "FCX": {
       "atr_pct": 0.0406073919376958,
       "latest_close": 66.205,
-      "notional": 5696.81,
+      "notional": 2286.29,
       "reason": "risk_on_inverse_atr",
       "weight": 0.05715736
     },
     "GOOGL": {
       "atr_pct": 0.0235413971693534,
       "latest_close": 387.4,
-      "notional": 9826.64,
+      "notional": 3943.71,
       "reason": "risk_on_inverse_atr",
       "weight": 0.09859275
     },
     "JNJ": {
       "atr_pct": 0.017791585596864914,
       "latest_close": 224.71,
-      "notional": 11960.28,
+      "notional": 4800.0,
       "reason": "risk_on_inverse_atr",
       "weight": 0.12
     },
     "MRK": {
       "atr_pct": 0.02425444139258634,
       "latest_close": 112.725,
-      "notional": 9537.75,
+      "notional": 3827.77,
       "reason": "risk_on_inverse_atr",
       "weight": 0.09569427
     },
     "NVDA": {
       "atr_pct": 0.029704414150094907,
       "latest_close": 220.825,
-      "notional": 7787.82,
+      "notional": 3125.48,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07813691
     },
     "SLB": {
       "atr_pct": 0.030298516331693594,
       "latest_close": 55.94,
-      "notional": 7635.12,
+      "notional": 3064.19,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07660478
     },
     "WELL": {
       "atr_pct": 0.021376257227750346,
       "latest_close": 217.71,
-      "notional": 10821.95,
+      "notional": 4343.16,
       "reason": "risk_on_inverse_atr",
       "weight": 0.10857893
     },
     "WMT": {
       "atr_pct": 0.02000681939049592,
       "latest_close": 130.32,
-      "notional": 11562.7,
+      "notional": 4640.44,
       "reason": "risk_on_inverse_atr",
       "weight": 0.116011
     },
     "XOM": {
       "atr_pct": 0.02873569941671088,
       "latest_close": 150.88,
-      "notional": 8050.36,
+      "notional": 3230.84,
       "reason": "risk_on_inverse_atr",
       "weight": 0.080771
     }
   },
-  "trade_plan_hash": "217b922e6d92c0206e2588a004106a98f2a14dd71c848ea2c0456519f2f2e779",
+  "trade_plan_hash": "7c713fe3958f64052125b82c763fd517a0c25705704057a7ab5413e08ae8192c",
   "trading_mode": "paper",
   "trigger_snapshot_hash": "6c400065cb07fb596a0dd6efef885726b54a5e82db730a2f4635e1a451ed7871"
 }

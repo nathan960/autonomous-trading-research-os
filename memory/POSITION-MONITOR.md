@@ -145,3 +145,131 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
   "source": "alpaca_paper"
 }
 ```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598685,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:46:26Z",
+  "open_order_count": 0,
+  "peak_equity": 99672.3,
+  "position_count": 10,
+  "run_id": "monitor_positions-20260512T204626-1254208c",
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598685,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:49:02Z",
+  "open_order_count": 0,
+  "peak_equity": 99672.3,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T204902-2a18a4e9",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598685,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:50:36Z",
+  "open_order_count": 0,
+  "peak_equity": 99672.3,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T205036-c7c9c182",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598685,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:51:34Z",
+  "open_order_count": 0,
+  "peak_equity": 99672.3,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T205134-7227156f",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598685,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:52:23Z",
+  "open_order_count": 0,
+  "peak_equity": 99672.3,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T205223-f58267d0",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598685,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:52:29Z",
+  "open_order_count": 0,
+  "peak_equity": 99672.3,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T205229-8528190c",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598685,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:52:36Z",
+  "open_order_count": 0,
+  "peak_equity": 99672.3,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T205236-ec43386d",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598685,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:52:43Z",
+  "open_order_count": 0,
+  "peak_equity": 99672.3,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T205243-f138d955",
+  "source": "dry_run_mock"
+}
+```

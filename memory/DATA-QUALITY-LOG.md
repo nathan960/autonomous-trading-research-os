@@ -600,3 +600,285 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:46:26Z",
+  "run_id": "data_refresh-20260512T204626-3900a0be",
+  "source_data_hash": "6fb6d53ba57079c0dc23b35d262158df3702c6b48bfeb1b68d3c0437a0f6a83e",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-12T20:46:27Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "92ea810c1aae9552b3dd54a9d28c1f62dad3587dbf7d4a559c985c06d164ba00",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260512T204627",
+  "snapshot_age_minutes": 0.0060308666666666665,
+  "snapshot_fetched_at": "2026-05-12T20:46:27Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:49:02Z",
+  "run_id": "data_refresh-20260512T204902-c2209fa0",
+  "source_data_hash": "c98f0777af0efaa4fc1c76dc6962c8c49713e11ef5ec5151d08f52242104cd66",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-12T20:49:03Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "956d9cf882adde99ed00a56d9b165bf0e32ee9929f2455e91f820dbabb4716fa",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260512T204903",
+  "snapshot_age_minutes": 0.00654955,
+  "snapshot_fetched_at": "2026-05-12T20:49:03Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:50:36Z",
+  "run_id": "data_refresh-20260512T205036-c57d926f",
+  "source_data_hash": "98699b800b983c0b8bc00e446eb92b70c6bf8fff2ad4ec9c8925a23fd4af2d4e",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-12T20:50:37Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "1548acc42d53b3294b0b5534aa17bed04ac50d46d32c1e418723bafac0bf8b28",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260512T205037",
+  "snapshot_age_minutes": 0.008680183333333334,
+  "snapshot_fetched_at": "2026-05-12T20:50:37Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:51:34Z",
+  "run_id": "data_refresh-20260512T205134-f69ec424",
+  "source_data_hash": "c3d50255f9345168d2bff56c84671cc993b368e273722b091f5e52600f70c5ec",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-12T20:51:35Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "5a725e6e062acbcb31c00d6b08ab5df5c5888b179226dec408e2cbe0803d3126",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260512T205135",
+  "snapshot_age_minutes": 0.009224533333333333,
+  "snapshot_fetched_at": "2026-05-12T20:51:35Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:51:56Z",
+  "run_id": "data_refresh-20260512T205156-391e68ac",
+  "source_data_hash": "51b3421c760533fa903fbeb391ee2da4f8ddb3c290f91c4d8fd46666780e7aac",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:13Z",
+  "run_id": "data_refresh-20260512T205213-85081042",
+  "source_data_hash": "853bad742d586116fa32652ba881fae17d8d4de1afdc2160d66e3056136a13b2",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:22Z",
+  "run_id": "data_refresh-20260512T205222-affb86b3",
+  "source_data_hash": "b671755b0a08a23fbf38a51e4c68dacd5daee30a2c890571d2fc69434c6e8f09",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-12T20:52:23Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "551442079e90569400da4892d81d3d130a6bdea253ada5b8e8aed15251452d42",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260512T205223",
+  "snapshot_age_minutes": 0.015108,
+  "snapshot_fetched_at": "2026-05-12T20:52:23Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:28Z",
+  "run_id": "data_refresh-20260512T205228-dfb8b2aa",
+  "source_data_hash": "bc6a8c0abd91995d439074a93535c5b9403fece35aba19cd5131f1e265d0f4c0",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-12T20:52:29Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "521a94822b9a776c6a930051893a5c3a7a99e99d6d882f6a76ce451ce62bbefe",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260512T205229",
+  "snapshot_age_minutes": 0.013917966666666667,
+  "snapshot_fetched_at": "2026-05-12T20:52:29Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:36Z",
+  "run_id": "data_refresh-20260512T205236-8739491b",
+  "source_data_hash": "0bd96b5ac6aa2713a246f78122eea6116cb9e15f635e33094245e4c348858530",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-12T20:52:37Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "38252213b639aaa58ae6c4dce2d0c8d2931d3a35d258d669ab18ae1e7731131d",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260512T205237",
+  "snapshot_age_minutes": 0.0110574,
+  "snapshot_fetched_at": "2026-05-12T20:52:37Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:43Z",
+  "run_id": "data_refresh-20260512T205243-6d745571",
+  "source_data_hash": "097b491713e2cbf7530551eb22b9f29efee770cf1e0e9f7027351c9fa89b060e",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-12T20:52:44Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "75d4ea760c530e1d69837f915ab09f8fdaf073723a931644748069ccfdda2d19",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260512T205244",
+  "snapshot_age_minutes": 0.006224283333333333,
+  "snapshot_fetched_at": "2026-05-12T20:52:44Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```

@@ -191,6 +191,79 @@ def build_trade_plan(
     for o in spread_blocked:
         blocked_symbols.append({"symbol": o["symbol"], "skip_reason": o["skip_reason"]})
 
+    # ── Read per-run caps from risk_limits ──────────────────────────────────
+    max_orders_per_run: Optional[int] = (
+        int(risk_limits["max_orders_per_run"])
+        if risk_limits.get("max_orders_per_run") is not None
+        else None
+    )
+    max_notional_per_order: Optional[float] = (
+        float(risk_limits["max_notional_per_order"])
+        if risk_limits.get("max_notional_per_order") is not None
+        else None
+    )
+
+    # ── Deterministic priority sort ──────────────────────────────────────────
+    # Sell exits sort before buys (reduce risk first).
+    # Within buys: highest momentum_score → lowest ATR% → alphabetical.
+    def _priority_key(o: dict) -> tuple:
+        sym = o["symbol"]
+        side = o.get("side", "buy")
+        res = symbol_results.get(sym, {})
+        score = float(res.get("momentum_score") or 0.0)
+        atr_data = res.get("atr") or {}
+        atr = float(atr_data.get("atr_pct") or 1.0) if isinstance(atr_data, dict) else 1.0
+        side_rank = 0 if side == "sell" else 1
+        return (side_rank, -score, atr, sym)
+
+    proposed_orders.sort(key=_priority_key)
+
+    # ── max_orders_per_run cap ───────────────────────────────────────────────
+    # Dequeued orders are moved to blocked_symbols; plan remains approvable when
+    # at least one order survives the cap.
+    orders_run_capped: list = []
+    if max_orders_per_run is not None and len(proposed_orders) > max_orders_per_run:
+        orders_run_capped = proposed_orders[max_orders_per_run:]
+        proposed_orders = proposed_orders[:max_orders_per_run]
+        for o in orders_run_capped:
+            blocked_symbols.append({
+                "symbol": o["symbol"],
+                "skip_reason": f"capped_by_max_orders_per_run({max_orders_per_run})",
+            })
+        dequeued_syms = [o["symbol"] for o in orders_run_capped]
+        tag = (
+            f"max_orders_per_run_cap({max_orders_per_run})"
+            f"_dequeued(non_blocking): {dequeued_syms}"
+        )
+        no_trade_reasons.append(tag)
+
+    # ── max_notional_per_order cap ───────────────────────────────────────────
+    # Cap each proposed order's notional in-place. Orders whose capped notional
+    # falls below min_order_notional are moved to blocked_symbols.
+    notional_recapped: list = []
+    if max_notional_per_order is not None:
+        kept: list = []
+        for o in proposed_orders:
+            o = dict(o)
+            if o.get("notional", 0) > max_notional_per_order:
+                o["notional"] = round(max_notional_per_order, 2)
+                o["capped_by_max_notional_per_order"] = True
+            else:
+                o["capped_by_max_notional_per_order"] = False
+            if o["notional"] < min_order_notional:
+                o["skip_reason"] = (
+                    f"below_min_notional_after_cap"
+                    f"({o['notional']:.2f}<{min_order_notional})"
+                )
+                blocked_symbols.append({
+                    "symbol": o["symbol"],
+                    "skip_reason": o["skip_reason"],
+                })
+                notional_recapped.append(o)
+            else:
+                kept.append(o)
+        proposed_orders = kept
+
     # ── Risk checks ──────────────────────────────────────────────────────────
     risk_checks = run_risk_checks(
         targets=targets,
@@ -203,6 +276,8 @@ def build_trade_plan(
         sector_map=sector_map,
         spreads=spreads,
         max_quote_spread=max_quote_spread,
+        max_orders_per_run=max_orders_per_run,
+        max_notional_per_order=max_notional_per_order,
     )
     gates_pass = all_checks_pass(risk_checks)
 
@@ -277,6 +352,10 @@ def build_trade_plan(
         "proposed_orders": proposed_orders,
         "blocked_symbols": blocked_symbols,
         "spread_blocked_at_planning": spread_blocked_summary,
+        "orders_run_capped_at_planning": [
+            {"symbol": o["symbol"], "skip_reason": o.get("skip_reason", "")}
+            for o in orders_run_capped
+        ],
         "risk_checks": risk_checks,
         "no_trade_reasons": no_trade_reasons,
         "approval": {

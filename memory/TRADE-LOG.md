@@ -5409,3 +5409,2673 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
   "trade_plan_hash": "129d27c931075227bc616d6d83e64909e1de5f989cc8c58e9ce81a5b730cc51d"
 }
 ```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:46:26Z",
+  "run_id": "execution-20260512T204626-14c11f55",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "df7e66450535adfaba51e8edec8e1113e34ff9482e5a82a45a9b65edeee3c8ca",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.004942533333333333,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:49:02Z",
+  "run_id": "execution-20260512T204902-2160169f",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "d2c85fdd0f532536fc281ae4c7082d3c77bfa0650545f5544856ef00ef891146",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.0062546,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:50:36Z",
+  "run_id": "execution-20260512T205036-03817eb3",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "fdbe7fbf89cba55fd53b0dd36d865f47cfb78d2d6b660e8dff2838c893d57aea",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.007643366666666667,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:51:34Z",
+  "run_id": "execution-20260512T205134-5a169ba6",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "54ee2d8eeb40bf0119d7e3fc68c9ce58fbb4ee8e6484b039ab624111de237df7",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.008520583333333333,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:51:56Z",
+  "run_id": "execution-20260512T205156-c61deb8e",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "a46a349a7f936ba49b22e8c264ca526e6888a95e73f96c5797a046907f8b9248",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.007743166666666666,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:13Z",
+  "run_id": "execution-20260512T205213-d32d0cbf",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "54abef48d25e009a00dbb218e857516089bf9b6f632dce39c89fd75d43d5c1a5",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.010255366666666666,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:22Z",
+  "run_id": "execution-20260512T205222-c45b38f9",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "72e596acf4000d83e564ed09b7564190e75ec4cabe28f1da66ffe1b62ffecb78",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.0152097,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:28Z",
+  "run_id": "execution-20260512T205228-c66044bf",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "5bf1f4d16797bf28375bd97c8d582edcd70f102afcc3ddc9b494eb3c71bc7502",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.015124416666666666,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:36Z",
+  "run_id": "execution-20260512T205236-2ee9428f",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "0dba45346458e6e79898c167aee17f8898366247aeb4cc5a56cad3eefc954485",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.012359716666666666,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-12T20:52:43Z",
+  "run_id": "execution-20260512T205243-cb30ace3",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "716e3a673ba6b7b2b35758d26c7c68fd6d83c49aa156e09d025419d0f70fffff",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.007410016666666667,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
