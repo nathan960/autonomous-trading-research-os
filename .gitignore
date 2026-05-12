@@ -44,6 +44,10 @@ data/history/triggers/*
 data/history/executions/*
 !data/history/executions/.gitkeep
 
+# Per-order audit logs grow with every run; commit selectively.
+data/history/orders/*
+!data/history/orders/.gitkeep
+
 # Build artifacts
 dist/
 build/
