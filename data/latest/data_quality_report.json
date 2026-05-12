@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-05-12T15:33:05Z",
+  "insufficient_bars": {},
+  "issues": [],
+  "missing_bars": [],
+  "missing_quotes": [],
+  "run_id": "data_quality-20260512T153305-e23bea72",
+  "schema_version": "0.1.0",
+  "snapshot_age_minutes": 0.01644005,
+  "snapshot_generated_at": "2026-05-12T15:33:05Z",
+  "source_data_hash": "0fb78d22643beabaaf9c9e8c41ab2094c955cf3b220b70a630927cb932414514",
+  "source_labels": {
+    "account": "dry_run_mock_alpaca_account",
+    "bars": "dry_run_mock_alpaca_bars",
+    "clock": "dry_run_mock_alpaca_clock",
+    "orders": "dry_run_mock_alpaca_orders",
+    "positions": "dry_run_mock_alpaca_positions",
+    "quotes": "dry_run_mock_alpaca_quote",
+    "spreads": "derived_from_dry_run_mock_quote"
+  },
+  "status": "PASS",
+  "wide_spreads": {}
+}

@@ -1,0 +1,94 @@
+{
+  "trade_critical_sources": {
+    "alpaca_account": {
+      "provider": "Alpaca",
+      "fields": [
+        "account"
+      ],
+      "required_for": [
+        "execution",
+        "position_monitor"
+      ]
+    },
+    "alpaca_positions": {
+      "provider": "Alpaca",
+      "fields": [
+        "positions"
+      ],
+      "required_for": [
+        "plan_generation",
+        "execution",
+        "position_monitor"
+      ]
+    },
+    "alpaca_orders": {
+      "provider": "Alpaca",
+      "fields": [
+        "orders"
+      ],
+      "required_for": [
+        "execution",
+        "position_monitor"
+      ]
+    },
+    "alpaca_clock": {
+      "provider": "Alpaca",
+      "fields": [
+        "market_clock"
+      ],
+      "required_for": [
+        "execution"
+      ]
+    },
+    "alpaca_bars": {
+      "provider": "Alpaca",
+      "fields": [
+        "daily_ohlcv"
+      ],
+      "required_for": [
+        "trigger_scan",
+        "plan_generation"
+      ]
+    },
+    "alpaca_quotes": {
+      "provider": "Alpaca",
+      "fields": [
+        "latest_bid",
+        "latest_ask"
+      ],
+      "required_for": [
+        "spreads",
+        "execution_gate"
+      ]
+    },
+    "alpaca_spreads": {
+      "provider": "Derived from Alpaca quotes",
+      "fields": [
+        "ask_minus_bid",
+        "spread_pct"
+      ],
+      "required_for": [
+        "risk_gate"
+      ]
+    }
+  },
+  "research_only_sources": {
+    "web": {
+      "allowed": true,
+      "can_generate_orders": false,
+      "purpose": "context and hypotheses only"
+    },
+    "connectors": {
+      "allowed": true,
+      "can_generate_orders": false,
+      "purpose": "context and hypotheses only"
+    }
+  },
+  "mock_sources": {
+    "dry_run_mock_alpaca": {
+      "allowed": true,
+      "can_submit_orders": false,
+      "purpose": "compile and pipeline validation"
+    }
+  }
+}

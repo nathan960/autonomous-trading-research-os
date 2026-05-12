@@ -1,0 +1,73 @@
+{
+  "strategy_id": "sp500_trend_allocator_v3_sector_caps_alpaca",
+  "version": "0.1.0",
+  "description": "Alpaca implementation seed based on vetted QuantConnect SPY/S&P 500 trend allocator V3 with sector caps.",
+  "trading_mode": "paper_only",
+  "asset_policy": {
+    "long_only": true,
+    "allow_shorting": false,
+    "allow_options": false,
+    "allow_crypto": false,
+    "allowed_asset_classes": [
+      "us_equity",
+      "etf",
+      "cash_like_etf"
+    ],
+    "cash_like_fallback_symbol": "BIL",
+    "benchmark_symbol": "SPY"
+  },
+  "schedule": {
+    "rebalance_frequency": "weekly",
+    "rebalance_check": "daily_after_market_open",
+    "after_market_open_minutes": 5,
+    "force_initial_deployment": true,
+    "continue_daily_until_stock_basket_ready": true
+  },
+  "parameters": {
+    "max_holdings": 10,
+    "max_position_weight": 0.12,
+    "breadth_threshold": 0.55,
+    "risk_on_equity_alloc": 0.9,
+    "min_momentum_6m": 0.0,
+    "min_momentum_12m": 0.0,
+    "max_names_per_sector": 2,
+    "sma_period": 200,
+    "roc_6m_period": 126,
+    "roc_12m_period": 252,
+    "atr_period": 20,
+    "min_atr_pct_floor": 0.01,
+    "plan_expiry_minutes": 360,
+    "min_order_notional": 25.0,
+    "max_snapshot_age_minutes": 90,
+    "max_quote_spread_pct": 0.02,
+    "max_open_orders": 25
+  },
+  "fallbacks": {
+    "risk_off_target": {
+      "symbol": "BIL",
+      "weight": 1.0
+    },
+    "risk_on_no_candidates_target": {
+      "symbol": "SPY",
+      "weight": 1.0
+    },
+    "risk_on_no_candidates_reason": "Immediate-start fallback until constituent indicators are ready."
+  },
+  "risk_gates": [
+    "NO_LIVE_TRADING",
+    "PLAN_EXISTS_AND_FRESH",
+    "ALPACA_REVALIDATION_REQUIRED",
+    "MARKET_CLOCK_OPEN_FOR_EXECUTION",
+    "LONG_ONLY_TARGETS",
+    "NO_OPTIONS_OR_CRYPTO",
+    "NO_SHORT_SELLS",
+    "UNIVERSE_ONLY",
+    "MAX_HOLDINGS",
+    "MAX_POSITION_WEIGHT",
+    "SECTOR_CAPS",
+    "TOTAL_WEIGHT_LIMIT",
+    "DATA_SOURCE_HASH_PRESENT",
+    "QUOTE_SPREAD_LIMIT",
+    "NO_SECRETS_IN_OUTPUT"
+  ]
+}

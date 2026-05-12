@@ -1,0 +1,65 @@
+{
+  "registry_version": "0.1.0",
+  "triggers": [
+    {
+      "id": "SPY_REGIME_TREND",
+      "layer": "trigger_scan",
+      "definition": "SPY latest close > SPY 200-day SMA",
+      "trade_direct": false
+    },
+    {
+      "id": "SPY_REGIME_MOMENTUM_126",
+      "layer": "trigger_scan",
+      "definition": "SPY 126-day ROC > 0",
+      "trade_direct": false
+    },
+    {
+      "id": "BREADTH_TREND",
+      "layer": "trigger_scan",
+      "definition": "Breadth of ready stocks above 200-day SMA >= threshold",
+      "trade_direct": false
+    },
+    {
+      "id": "STOCK_TREND_200DMA",
+      "layer": "trigger_scan",
+      "definition": "Candidate latest close > candidate 200-day SMA",
+      "trade_direct": false
+    },
+    {
+      "id": "STOCK_MOMENTUM_126_252",
+      "layer": "trigger_scan",
+      "definition": "Candidate ROC126 and ROC252 exceed minimum thresholds; score = 0.5 ROC126 + 0.5 ROC252",
+      "trade_direct": false
+    },
+    {
+      "id": "STOCK_ATR20_WEIGHT",
+      "layer": "trade_plan",
+      "definition": "Use inverse ATR% to size selected names",
+      "trade_direct": false
+    },
+    {
+      "id": "SECTOR_CAP",
+      "layer": "trade_plan",
+      "definition": "No more than configured names per sector",
+      "trade_direct": false
+    },
+    {
+      "id": "FALLBACK_BIL",
+      "layer": "trade_plan",
+      "definition": "Risk-off target is BIL",
+      "trade_direct": false
+    },
+    {
+      "id": "PROVISIONAL_SPY_FALLBACK",
+      "layer": "trade_plan",
+      "definition": "Risk-on but no eligible stock basket targets SPY until data readiness improves",
+      "trade_direct": false
+    },
+    {
+      "id": "RISK_GATE_EXECUTION",
+      "layer": "execution",
+      "definition": "Execution requires fresh approved plan and all gates pass",
+      "trade_direct": false
+    }
+  ]
+}

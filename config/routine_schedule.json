@@ -1,0 +1,45 @@
+{
+  "timezone": "America/New_York",
+  "notes": [
+    "Schedule routines far enough apart to avoid race conditions.",
+    "Execution must revalidate Alpaca state even if data refresh succeeded."
+  ],
+  "suggested_order": [
+    {
+      "layer": "data_refresh",
+      "time": "09:35"
+    },
+    {
+      "layer": "trigger_scan",
+      "time": "09:42"
+    },
+    {
+      "layer": "trade_plan_generation",
+      "time": "09:48"
+    },
+    {
+      "layer": "trade_execution",
+      "time": "09:55"
+    },
+    {
+      "layer": "position_monitor",
+      "time": "10:05 and 15:45"
+    },
+    {
+      "layer": "data_quality_review",
+      "time": "16:10"
+    },
+    {
+      "layer": "daily_summary",
+      "time": "16:20"
+    },
+    {
+      "layer": "weekly_review",
+      "time": "Friday 16:45"
+    },
+    {
+      "layer": "strategy_improvement_review",
+      "time": "Saturday 10:00"
+    }
+  ]
+}

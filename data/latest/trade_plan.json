@@ -1,0 +1,394 @@
+{
+  "approval": {
+    "all_gates_pass": true,
+    "reason": "Dry-run plan generated for compile/pipeline validation; execution must not submit orders.",
+    "status": "DRY_RUN_ONLY"
+  },
+  "blocked_symbols": [],
+  "dry_run": true,
+  "expires_at": "2026-05-12T21:33:11Z",
+  "generated_at": "2026-05-12T15:33:11Z",
+  "market_regime": {
+    "above_200dma_count": 71,
+    "breadth": 0.8987341772151899,
+    "breadth_threshold": 0.55,
+    "ready_count": 79,
+    "risk_on": true,
+    "spy_indicators": {
+      "atr20": 6.496612641766151,
+      "atr_pct": 0.011512635843320556,
+      "bar_count": 320,
+      "is_ready": true,
+      "latest_close": 564.3028,
+      "momentum_score": 0.1656758353004818,
+      "passes_trend_filter": true,
+      "roc126": 0.09867890504135945,
+      "roc252": 0.23267276555960414,
+      "sma200": 519.607576,
+      "symbol": "SPY"
+    },
+    "spy_momentum_ok": true,
+    "spy_trend_ok": true
+  },
+  "market_snapshot_hash": "63e0b1f423f05ca55c9003123d028106caa814eb0b10f33fbf5e2bd3612e27db",
+  "no_trade_reasons": [],
+  "proposed_orders": [
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-APD-BUY",
+      "current_value": 0.0,
+      "delta_value": 3382.12,
+      "notional": 3382.12,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "APD",
+      "target_value": 3382.12,
+      "target_weight": 0.084553,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-BIL-BUY",
+      "current_value": 0.0,
+      "delta_value": 4000.0,
+      "notional": 4000.0,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "BIL",
+      "target_value": 4000.0,
+      "target_weight": 0.1,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-BKNG-BUY",
+      "current_value": 0.0,
+      "delta_value": 3265.12,
+      "notional": 3265.12,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "BKNG",
+      "target_value": 3265.12,
+      "target_weight": 0.081628,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-BLK-BUY",
+      "current_value": 0.0,
+      "delta_value": 3846.4,
+      "notional": 3846.4,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "BLK",
+      "target_value": 3846.4,
+      "target_weight": 0.09616,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-DIS-BUY",
+      "current_value": 0.0,
+      "delta_value": 3656.36,
+      "notional": 3656.36,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "DIS",
+      "target_value": 3656.36,
+      "target_weight": 0.091409,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-EOG-BUY",
+      "current_value": 0.0,
+      "delta_value": 3760.72,
+      "notional": 3760.72,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "EOG",
+      "target_value": 3760.72,
+      "target_weight": 0.094018,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-KO-BUY",
+      "current_value": 0.0,
+      "delta_value": 3507.24,
+      "notional": 3507.24,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "KO",
+      "target_value": 3507.24,
+      "target_weight": 0.087681,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-LLY-BUY",
+      "current_value": 0.0,
+      "delta_value": 3479.2,
+      "notional": 3479.2,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "LLY",
+      "target_value": 3479.2,
+      "target_weight": 0.08698,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-ORCL-BUY",
+      "current_value": 0.0,
+      "delta_value": 3739.96,
+      "notional": 3739.96,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "ORCL",
+      "target_value": 3739.96,
+      "target_weight": 0.093499,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-WELL-BUY",
+      "current_value": 0.0,
+      "delta_value": 3846.4,
+      "notional": 3846.4,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "WELL",
+      "target_value": 3846.4,
+      "target_weight": 0.09616,
+      "time_in_force": "day",
+      "would_short": false
+    },
+    {
+      "action": "submit_candidate",
+      "client_order_id": "ATR-OS-trade_plan-20260512T1533-WMT-BUY",
+      "current_value": 0.0,
+      "delta_value": 3516.48,
+      "notional": 3516.48,
+      "order_type": "market",
+      "qty": null,
+      "side": "buy",
+      "symbol": "WMT",
+      "target_value": 3516.48,
+      "target_weight": 0.087912,
+      "time_in_force": "day",
+      "would_short": false
+    }
+  ],
+  "risk_gates": [
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.016075883333333332,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ],
+  "run_id": "trade_plan-20260512T153311-897f45cf",
+  "schema_version": "0.1.0",
+  "source_run_ids": {
+    "data_refresh": "data_refresh-20260512T153311-116cb081",
+    "trigger_scan": "trigger_scan-20260512T153311-53c96d1b"
+  },
+  "strategy_id": "sp500_trend_allocator_v3_sector_caps_alpaca",
+  "strategy_version": "0.1.0",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_critical_data_source": "dry_run_mock_alpaca_compatible",
+  "trade_critical_run_mode": "dry_run",
+  "trade_plan_hash": "eafa80017fbe07fddac1b2e89bb027ea4845eeb38c9940dd532a26d16ed642bb",
+  "trigger_snapshot_hash": "3bba9a82d0ec61d1201642f2fc088bfb14d28f1ecd326befa230ff517dba7444"
+}
