@@ -266,3 +266,76 @@ Data refreshes and quality reviews are logged here.
   "symbols": 81
 }
 ```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T17:47:36Z",
+  "run_id": "data_refresh-20260512T174736-80ad9db8",
+  "source_data_hash": "39dca3b550f50d97d5fb872b07a408f56397640c1d2305a9ef8f79eca03cd5a0",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T17:47:43Z",
+  "run_id": "data_refresh-20260512T174743-c6e62e04",
+  "source_data_hash": "bf6412f68b9785593e7955b62e09a1f8dbf605dcdfedfa1e8e45cc49cccf5d6f",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T17:47:49Z",
+  "run_id": "data_refresh-20260512T174749-4fb1f744",
+  "source_data_hash": "b024dd56f94314d1b078389239bb67799ec02fe595e44f8c9268dbd1941564e0",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T17:47:55Z",
+  "run_id": "data_refresh-20260512T174755-0ce52f65",
+  "source_data_hash": "5cdcfdab4be40476cbfd398eeaa4dea942264ffe5cd8e84ab007155b40c4215a",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-12T17:48:33Z",
+  "insufficient_bars_count": 0,
+  "issues": [
+    "wide_spreads"
+  ],
+  "market_data_hash": "25b6a1a95140646e425b5ccef2ff4c79d243d09c7596343105b9a0210a13afc5",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260512T174830",
+  "snapshot_age_minutes": 0.04366145,
+  "snapshot_fetched_at": "2026-05-12T17:48:31Z",
+  "status": "ATTENTION_REQUIRED",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```

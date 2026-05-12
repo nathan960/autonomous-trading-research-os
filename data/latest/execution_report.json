@@ -1,262 +1,286 @@
 {
-  "candidate_order_count": 11,
-  "confirm_paper": false,
+  "all_gates_pass": false,
   "dry_run": true,
-  "generated_at": "2026-05-12T17:35:26Z",
-  "run_id": "execution-20260512T173526-4e3f28d8",
-  "schema_version": "0.1.0",
-  "skipped": [
+  "execution_report_hash": "20d09f1c80e954a4f727ec638cc171ccb3c29eb2cf8b0b6ec5b6a8e3bb6c2a9a",
+  "failed_gates": [
+    "SPREAD_NOT_TOO_WIDE"
+  ],
+  "gate_results": [
     {
-      "reason": "dry_run_execution",
-      "symbol": "APD"
+      "detail": null,
+      "gate_id": "TRADING_MODE_PAPER",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "BIL"
+      "detail": null,
+      "gate_id": "ALPACA_PAPER_MODE",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "BKNG"
+      "detail": null,
+      "gate_id": "TRADE_PLAN_EXISTS",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "BLK"
+      "detail": null,
+      "gate_id": "TRADE_PLAN_NOT_EXPIRED",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "DIS"
+      "detail": null,
+      "gate_id": "MARKET_CLOCK_OPEN",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "EOG"
+      "detail": null,
+      "gate_id": "ACCOUNT_NOT_BLOCKED",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "KO"
+      "detail": null,
+      "gate_id": "RISK_STATE_NOT_PAUSED",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "LLY"
+      "detail": null,
+      "gate_id": "POSITIONS_MATCH_SNAPSHOT",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "ORCL"
+      "detail": null,
+      "gate_id": "NO_DUPLICATE_OPEN_ORDERS",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "WELL"
+      "detail": null,
+      "gate_id": "UNIVERSE_MEMBERSHIP",
+      "passes": true
     },
     {
-      "reason": "dry_run_execution",
-      "symbol": "WMT"
+      "detail": null,
+      "gate_id": "SYMBOLS_TRADABLE",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "QUOTE_FRESHNESS",
+      "passes": true
+    },
+    {
+      "detail": "spread too wide: ['AMD(0.0676>0.02)', 'MRK(0.0339>0.02)']",
+      "gate_id": "SPREAD_NOT_TOO_WIDE",
+      "passes": false
+    },
+    {
+      "detail": null,
+      "gate_id": "RISK_LIMITS_RESPECTED",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "NO_PROHIBITED_ORDERS",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "EXECUTION_LOG_WRITABLE",
+      "passes": true
     }
   ],
-  "status": "DRY_RUN_NO_SUBMISSION",
-  "submitted": [],
-  "trade_plan_hash": "054760162b875c1258d7e9eeb6d0b1da74f538139859fea34e629b163a5ffba4",
-  "validation": [
+  "generated_at": "2026-05-12T17:48:33Z",
+  "no_submit_reason": "dry_run_mode",
+  "orders_submitted": [],
+  "orders_validated": [
     {
-      "id": "PLAN_EXISTS",
-      "passed": true,
-      "reason": "data/latest/trade_plan.json exists."
+      "client_order_id": "TOS-20260512T174833-GOOGL-BUY",
+      "execution_ready": true,
+      "limit_price": 384.72,
+      "notional": 1193.14,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "GOOGL",
+      "target_weight": 0.09817941,
+      "validation_skip_reason": null
     },
     {
-      "id": "PLAN_NOT_EXPIRED",
-      "passed": true,
-      "reason": "Plan expiry must be in the future."
+      "client_order_id": "TOS-20260512T174833-FCX-BUY",
+      "execution_ready": true,
+      "limit_price": 64.67,
+      "notional": 5739.72,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "FCX",
+      "target_weight": 0.05775225,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "allow_paper_order_submission": false,
-        "alpaca_api_key_present": false,
-        "alpaca_api_secret_present": false,
-        "alpaca_data_feed": "iex",
-        "alpaca_paper": true,
-        "live_trading_confirmed": false,
-        "trading_mode": "paper"
-      },
-      "id": "PAPER_ONLY_SETTINGS",
-      "passed": true,
-      "reason": "Runtime settings must be paper-only."
+      "client_order_id": "TOS-20260512T174833-AVGO-BUY",
+      "execution_ready": true,
+      "limit_price": 411.66,
+      "notional": 393.91,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "AVGO",
+      "target_weight": 0.06753352,
+      "validation_skip_reason": null
     },
     {
-      "id": "MARKET_CLOCK_OPEN",
-      "passed": true,
-      "reason": "Alpaca market clock must be open for submission."
+      "client_order_id": "TOS-20260512T174833-SLB-BUY",
+      "execution_ready": true,
+      "limit_price": 55.705,
+      "notional": 7705.64,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "SLB",
+      "target_weight": 0.07753302,
+      "validation_skip_reason": null
     },
     {
-      "id": "PLAN_NOT_DRY_RUN",
-      "passed": false,
-      "reason": "Actual submission requires a non-dry-run approved paper plan."
+      "client_order_id": "TOS-20260512T174833-CSCO-BUY",
+      "execution_ready": true,
+      "limit_price": 98.51,
+      "notional": 10056.12,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "CSCO",
+      "target_weight": 0.10118318,
+      "validation_skip_reason": null
     },
     {
-      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
-      "passed": false,
-      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+      "client_order_id": "TOS-20260512T174833-GS-BUY",
+      "execution_ready": true,
+      "limit_price": 938.42,
+      "notional": 9349.92,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "GS",
+      "target_weight": 0.09407747,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "allow_paper_order_submission": false,
-        "alpaca_api_key_present": false,
-        "alpaca_api_secret_present": false,
-        "alpaca_data_feed": "iex",
-        "alpaca_paper": true,
-        "live_trading_confirmed": false,
-        "trading_mode": "paper"
-      },
-      "id": "NO_LIVE_TRADING",
-      "passed": true,
-      "reason": "Trading mode is paper-only and live confirmation is false."
+      "client_order_id": "TOS-20260512T174833-XOM-BUY",
+      "execution_ready": true,
+      "limit_price": 150.985,
+      "notional": 405.5,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "XOM",
+      "target_weight": 0.08104904,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "total_weight": 1.0000000000000002
-      },
-      "id": "TOTAL_WEIGHT_LIMIT",
-      "passed": true,
-      "reason": "Target gross exposure must be <= 100%."
+      "client_order_id": "TOS-20260512T174833-WMT-SELL",
+      "execution_ready": true,
+      "limit_price": 130.43,
+      "notional": 247.02,
+      "order_type": "limit",
+      "side": "sell",
+      "symbol": "WMT",
+      "target_weight": 0.11642758,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "targets": {
-          "APD": 0.084553,
-          "BIL": 0.1,
-          "BKNG": 0.081628,
-          "BLK": 0.09616,
-          "DIS": 0.091409,
-          "EOG": 0.094018,
-          "KO": 0.087681,
-          "LLY": 0.08698,
-          "ORCL": 0.093499,
-          "WELL": 0.09616,
-          "WMT": 0.087912
-        }
-      },
-      "id": "LONG_ONLY_TARGETS",
-      "passed": true,
-      "reason": "All targets must be non-negative."
+      "client_order_id": "TOS-20260512T174833-WELL-BUY",
+      "execution_ready": true,
+      "limit_price": 217.53,
+      "notional": 10832.18,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "WELL",
+      "target_weight": 0.10899183,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "APD": "equity_or_etf",
-        "BIL": "equity_or_etf",
-        "BKNG": "equity_or_etf",
-        "BLK": "equity_or_etf",
-        "DIS": "equity_or_etf",
-        "EOG": "equity_or_etf",
-        "KO": "equity_or_etf",
-        "LLY": "equity_or_etf",
-        "ORCL": "equity_or_etf",
-        "WELL": "equity_or_etf",
-        "WMT": "equity_or_etf"
-      },
-      "id": "NO_OPTIONS_OR_CRYPTO",
-      "passed": true,
-      "reason": "Targets must be US equities/ETFs only."
+      "client_order_id": "TOS-20260512T174833-SBUX-BUY",
+      "execution_ready": true,
+      "limit_price": 106.78,
+      "notional": 9667.47,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "SBUX",
+      "target_weight": 0.09727269,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "unknown_symbols": []
-      },
-      "id": "UNIVERSE_ONLY",
-      "passed": true,
-      "reason": "Targets must be in configured universe or approved fallback set."
+      "client_order_id": "TOS-20260512T174833-BIL-BUY",
+      "execution_ready": true,
+      "limit_price": 91.49,
+      "notional": 9938.53,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "BIL",
+      "target_weight": 0.1,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "cap": 0.12,
-        "overweight": {}
-      },
-      "id": "MAX_POSITION_WEIGHT",
-      "passed": true,
-      "reason": "Individual stock weights must stay under cap."
+      "client_order_id": "TOS-20260512T174833-AMD-SELL",
+      "execution_ready": false,
+      "limit_price": null,
+      "notional": 4009.03,
+      "order_type": "market",
+      "side": "sell",
+      "symbol": "AMD",
+      "target_weight": 0.0,
+      "validation_skip_reason": "spread_too_wide(0.0676>0.02)"
     },
     {
-      "details": {
-        "cap": 10,
-        "stock_holdings": 10
-      },
-      "id": "MAX_HOLDINGS",
-      "passed": true,
-      "reason": "Number of stock holdings must stay under cap."
+      "client_order_id": "TOS-20260512T174833-AMZN-SELL",
+      "execution_ready": true,
+      "limit_price": null,
+      "notional": 7965.13,
+      "order_type": "market",
+      "side": "sell",
+      "symbol": "AMZN",
+      "target_weight": 0.0,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "cap": 2,
-        "sector_counts": {
-          "101": 1,
-          "102": 1,
-          "103": 1,
-          "104": 1,
-          "105": 1,
-          "107": 2,
-          "108": 1,
-          "110": 1,
-          "111": 1
-        }
-      },
-      "id": "SECTOR_CAPS",
-      "passed": true,
-      "reason": "Sector name counts must stay under cap."
+      "client_order_id": "TOS-20260512T174833-KO-SELL",
+      "execution_ready": true,
+      "limit_price": null,
+      "notional": 13527.39,
+      "order_type": "market",
+      "side": "sell",
+      "symbol": "KO",
+      "target_weight": 0.0,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "oversells": []
-      },
-      "id": "NO_SHORT_SELLS",
-      "passed": true,
-      "reason": "Sell orders must not exceed current long quantity."
+      "client_order_id": "TOS-20260512T174833-MRK-SELL",
+      "execution_ready": false,
+      "limit_price": null,
+      "notional": 8398.33,
+      "order_type": "market",
+      "side": "sell",
+      "symbol": "MRK",
+      "target_weight": 0.0,
+      "validation_skip_reason": "spread_too_wide(0.0339>0.02)"
     },
     {
-      "details": {
-        "source_data_hash_present": true
-      },
-      "id": "DATA_SOURCE_HASH_PRESENT",
-      "passed": true,
-      "reason": "Snapshot must include source data hash."
+      "client_order_id": "TOS-20260512T174833-NVDA-SELL",
+      "execution_ready": true,
+      "limit_price": null,
+      "notional": 6061.62,
+      "order_type": "market",
+      "side": "sell",
+      "symbol": "NVDA",
+      "target_weight": 0.0,
+      "validation_skip_reason": null
     },
     {
-      "details": {
-        "age_minutes": 0.0107853,
-        "max_age_minutes": 90.0
-      },
-      "id": "PLAN_EXISTS_AND_FRESH",
-      "passed": true,
-      "reason": "Market snapshot must be fresh enough for plan generation."
-    },
-    {
-      "details": {
-        "data_source": "dry_run_mock_alpaca_compatible",
-        "required": false,
-        "run_mode": "dry_run"
-      },
-      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
-      "passed": true,
-      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
-    },
-    {
-      "details": {
-        "max_open_orders": 25,
-        "open_order_count": 0
-      },
-      "id": "MAX_OPEN_ORDERS",
-      "passed": true,
-      "reason": "Open orders must stay within configured operational cap before new submissions."
-    },
-    {
-      "details": {
-        "max_spread_pct": 0.02,
-        "wide_spreads": {}
-      },
-      "id": "QUOTE_SPREAD_LIMIT",
-      "passed": true,
-      "reason": "Target quote spreads must be below configured limit."
-    },
-    {
-      "details": {},
-      "id": "NO_SECRETS_IN_OUTPUT",
-      "passed": true,
-      "reason": "No secrets are required or emitted by risk gate output."
+      "client_order_id": "TOS-20260512T174833-PEP-SELL",
+      "execution_ready": true,
+      "limit_price": null,
+      "notional": 10259.6,
+      "order_type": "market",
+      "side": "sell",
+      "symbol": "PEP",
+      "target_weight": 0.0,
+      "validation_skip_reason": null
     }
-  ]
+  ],
+  "plan_id": "trade_plan-20260512T174833-a95ddc3a",
+  "run_id": "execution-20260512T174833-8a168561",
+  "status": "DRY_RUN_FAIL",
+  "trade_plan_hash": "7187194f79dbf8a3c6f64fb9cc356eaee1ab6456b3396a6ed6aaf7c95cb0a9e9"
 }

@@ -273,3 +273,99 @@ Every trigger scan records fired, skipped, and selected signals here.
   "spy_trend_ok": true
 }
 ```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "39dca3b550f50d97d5fb872b07a408f56397640c1d2305a9ef8f79eca03cd5a0",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T174736-6552a94b",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "bf6412f68b9785593e7955b62e09a1f8dbf605dcdfedfa1e8e45cc49cccf5d6f",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T174744-672a1dda",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "b024dd56f94314d1b078389239bb67799ec02fe595e44f8c9268dbd1941564e0",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T174749-b2ec0d22",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "5cdcfdab4be40476cbfd398eeaa4dea942264ffe5cd8e84ab007155b40c4215a",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T174755-7c1eea45",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.5949367088607594,
+  "breadth_ok": true,
+  "candidates_count": 27,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-05-12T17:48:33Z",
+  "selected": [
+    "GOOGL",
+    "FCX",
+    "AVGO",
+    "SLB",
+    "CSCO",
+    "GS",
+    "XOM",
+    "WMT",
+    "WELL",
+    "SBUX"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.0636964,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "652c3707b99df58eed3f41d9afc07a0d72065d2636f5190f43a1e0f7698cdae5"
+}
+```
