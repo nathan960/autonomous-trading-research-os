@@ -69,6 +69,32 @@ def _enrich_targets_with_prices(targets: dict, bars_map: dict) -> dict:
     return enriched
 
 
+def _filter_wide_spread_orders(
+    orders: list,
+    spreads: dict,
+    max_spread: float,
+) -> tuple:
+    """Split orders into (spread_ok, spread_blocked) using market snapshot spreads.
+
+    Spread-blocked orders have skip_reason set to spread_too_wide(...).
+    Orders with no spread data in the snapshot are allowed through — execution
+    gate SPREAD_NOT_TOO_WIDE will catch them if data arrives by then.
+    """
+    ok: list = []
+    blocked: list = []
+    for o in orders:
+        sym = o["symbol"]
+        sp = spreads.get(sym, {})
+        pct = sp.get("spread_pct")
+        if pct is not None and pct > max_spread:
+            bo = dict(o)
+            bo["skip_reason"] = f"spread_too_wide({pct:.4f}>{max_spread})"
+            blocked.append(bo)
+        else:
+            ok.append(o)
+    return ok, blocked
+
+
 def build_trade_plan(
     market_snapshot: dict,
     trigger_snapshot: dict,
@@ -100,9 +126,14 @@ def build_trade_plan(
     params = strategy.get("parameters", {})
     expiry_minutes: float = float(params.get("plan_expiry_minutes", 360))
     min_order_notional: float = float(params.get("min_order_notional", 25.0))
+    max_quote_spread: float = float(
+        params.get("max_quote_spread_pct")
+        or risk_limits.get("max_quote_spread_pct", 0.02)
+    )
 
     equity = _account_equity(account_snapshot)
     bars_map: dict = market_snapshot.get("bars", {})
+    spreads: dict = market_snapshot.get("spreads", {})
 
     regime: Any = trigger_snapshot.get("regime") or {}
     risk_on: bool = bool(regime.get("risk_on", False))
@@ -141,12 +172,23 @@ def build_trade_plan(
         positions=positions,
         min_order_notional=min_order_notional,
     )
-    proposed_orders = [o for o in all_orders if o.get("skip_reason") is None]
+    sizer_ok = [o for o in all_orders if o.get("skip_reason") is None]
     sizer_blocked = [o for o in all_orders if o.get("skip_reason") is not None]
 
-    # ── blocked_symbols: trigger excluded + sizer-blocked orders ────────────
+    # ── Spread filter at planning time ───────────────────────────────────────
+    # Remove any sizer-ok order whose symbol has spread > max_quote_spread_pct
+    # in the current market snapshot. These are moved to blocked_symbols with a
+    # clear reason. The execution gate SPREAD_NOT_TOO_WIDE re-validates at run
+    # time so that any spread widening after planning is also caught.
+    proposed_orders, spread_blocked = _filter_wide_spread_orders(
+        sizer_ok, spreads, max_quote_spread
+    )
+
+    # ── blocked_symbols: trigger excluded + sizer-blocked + spread-blocked ──
     blocked_symbols: list = list(trigger_snapshot.get("excluded", []))
     for o in sizer_blocked:
+        blocked_symbols.append({"symbol": o["symbol"], "skip_reason": o["skip_reason"]})
+    for o in spread_blocked:
         blocked_symbols.append({"symbol": o["symbol"], "skip_reason": o["skip_reason"]})
 
     # ── Risk checks ──────────────────────────────────────────────────────────
@@ -159,6 +201,8 @@ def build_trade_plan(
         trigger_snapshot_hash=trigger_snapshot_hash,
         data_hash=data_hash,
         sector_map=sector_map,
+        spreads=spreads,
+        max_quote_spread=max_quote_spread,
     )
     gates_pass = all_checks_pass(risk_checks)
 
@@ -167,11 +211,33 @@ def build_trade_plan(
     for fc in failed_checks:
         no_trade_reasons.append(f"risk_check_failed:{fc['check_id']}")
 
+    # Summarise spread-blocked symbols for auditability.
+    # They are always visible in blocked_symbols and spread_blocked_at_planning.
+    # Only added to no_trade_reasons when they are the sole reason proposed_orders
+    # is empty (so they do not block approval when other valid orders remain).
+    spread_blocked_summary: list = [
+        {"symbol": o["symbol"], "skip_reason": o["skip_reason"]}
+        for o in spread_blocked
+    ]
+    if spread_blocked_summary and not proposed_orders:
+        syms = [o["symbol"] for o in spread_blocked]
+        no_trade_reasons.append(f"spread_blocked_all_orders: {syms}")
+    elif spread_blocked_summary:
+        # Some orders remain — record as informational, not a plan blocker.
+        syms = [o["symbol"] for o in spread_blocked]
+        no_trade_reasons.append(f"spread_blocked_at_planning(non_blocking): {syms}")
+
     if not proposed_orders and not no_trade_reasons:
         no_trade_reasons.append("no_actionable_orders")
 
     # ── Approval ─────────────────────────────────────────────────────────────
-    approved_for_execution = gates_pass and approve_paper and not no_trade_reasons
+    # Informational no_trade_reasons (non_blocking prefix) document exclusions
+    # but do not block execution approval when actionable orders remain.
+    blocking_reasons = [
+        r for r in no_trade_reasons
+        if "(non_blocking)" not in r
+    ]
+    approved_for_execution = gates_pass and approve_paper and not blocking_reasons
     if approved_for_execution:
         approval_reason = "all_risk_checks_pass_and_paper_flag_set"
     elif not gates_pass:
@@ -210,6 +276,7 @@ def build_trade_plan(
         "targets": targets,
         "proposed_orders": proposed_orders,
         "blocked_symbols": blocked_symbols,
+        "spread_blocked_at_planning": spread_blocked_summary,
         "risk_checks": risk_checks,
         "no_trade_reasons": no_trade_reasons,
         "approval": {

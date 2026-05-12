@@ -25,6 +25,8 @@ def run_risk_checks(
     trigger_snapshot_hash: str,
     data_hash: str,
     sector_map: dict,
+    spreads: Optional[dict] = None,
+    max_quote_spread: Optional[float] = None,
 ) -> list:
     """Run all pre-plan risk checks and return a list of check result dicts.
 
@@ -37,6 +39,8 @@ def run_risk_checks(
         trigger_snapshot_hash:   hash from trigger_snapshot
         data_hash:               hash from market_snapshot
         sector_map:              loaded config/sector_map.json
+        spreads:                 market_snapshot["spreads"] for planning-time check
+        max_quote_spread:        override threshold (falls back to risk_limits value)
 
     Returns:
         List of check dicts ordered from most fundamental to most specific.
@@ -168,6 +172,30 @@ def run_risk_checks(
         len(tiny_orders) == 0,
         f"orders below min_notional({min_order_notional}): {[o['symbol'] for o in tiny_orders]}",
     ))
+
+    # ── Spread check at planning time ────────────────────────────────────────
+    # Verifies that no proposed_order has a spread exceeding the threshold in
+    # the market snapshot used for planning. This confirms the spread filter in
+    # trade_plan_builder worked correctly. The execution-time gate
+    # SPREAD_NOT_TOO_WIDE re-validates with fresh data before any order submission.
+    if spreads is not None:
+        _max_spread: float = float(
+            max_quote_spread
+            if max_quote_spread is not None
+            else risk_limits.get("max_quote_spread_pct", 0.02)
+        )
+        wide_in_proposed: list = []
+        for o in proposed_orders:
+            sym = o["symbol"]
+            sp = spreads.get(sym, {})
+            pct = sp.get("spread_pct")
+            if pct is not None and pct > _max_spread:
+                wide_in_proposed.append(f"{sym}({pct:.4f}>{_max_spread})")
+        checks.append(_check(
+            "SPREAD_OK_AT_PLANNING",
+            len(wide_in_proposed) == 0,
+            f"proposed orders with wide spread (should have been filtered): {wide_in_proposed}",
+        ))
 
     return checks
 
