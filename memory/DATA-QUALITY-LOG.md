@@ -253,3 +253,16 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-12T17:35:26Z",
+  "run_id": "data_refresh-20260512T173526-fc607fa4",
+  "source_data_hash": "6873fecfac4b8a49671cfe95f163b6cbdc577ca0b72847e9d481b9eaf7ce79d5",
+  "symbols": 81
+}
+```

@@ -3,738 +3,8 @@
     "buying_power": "40000.00",
     "cash": "40000.00",
     "equity": "40000.00",
+    "source": "dry_run_mock_alpaca_account",
     "status": "ACTIVE"
-  },
-  "assets": {
-    "AAPL": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "AAPL",
-      "tradable": true
-    },
-    "ABBV": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "ABBV",
-      "tradable": true
-    },
-    "ABT": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "ABT",
-      "tradable": true
-    },
-    "ADBE": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "ADBE",
-      "tradable": true
-    },
-    "AEP": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "AEP",
-      "tradable": true
-    },
-    "AMD": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "AMD",
-      "tradable": true
-    },
-    "AMGN": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "AMGN",
-      "tradable": true
-    },
-    "AMT": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "AMT",
-      "tradable": true
-    },
-    "AMZN": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "AMZN",
-      "tradable": true
-    },
-    "APD": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "APD",
-      "tradable": true
-    },
-    "AVGO": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "AVGO",
-      "tradable": true
-    },
-    "AXP": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "AXP",
-      "tradable": true
-    },
-    "BA": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "BA",
-      "tradable": true
-    },
-    "BAC": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "BAC",
-      "tradable": true
-    },
-    "BIL": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "BIL",
-      "tradable": true
-    },
-    "BKNG": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "BKNG",
-      "tradable": true
-    },
-    "BLK": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "BLK",
-      "tradable": true
-    },
-    "CAT": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "CAT",
-      "tradable": true
-    },
-    "CL": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "CL",
-      "tradable": true
-    },
-    "CMCSA": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "CMCSA",
-      "tradable": true
-    },
-    "COP": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "COP",
-      "tradable": true
-    },
-    "COST": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "COST",
-      "tradable": true
-    },
-    "CRM": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "CRM",
-      "tradable": true
-    },
-    "CSCO": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "CSCO",
-      "tradable": true
-    },
-    "CVX": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "CVX",
-      "tradable": true
-    },
-    "DE": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "DE",
-      "tradable": true
-    },
-    "DIS": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "DIS",
-      "tradable": true
-    },
-    "DUK": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "DUK",
-      "tradable": true
-    },
-    "ECL": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "ECL",
-      "tradable": true
-    },
-    "EOG": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "EOG",
-      "tradable": true
-    },
-    "EQIX": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "EQIX",
-      "tradable": true
-    },
-    "FCX": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "FCX",
-      "tradable": true
-    },
-    "GE": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "GE",
-      "tradable": true
-    },
-    "GOOGL": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "GOOGL",
-      "tradable": true
-    },
-    "GS": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "GS",
-      "tradable": true
-    },
-    "HD": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "HD",
-      "tradable": true
-    },
-    "HON": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "HON",
-      "tradable": true
-    },
-    "INTU": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "INTU",
-      "tradable": true
-    },
-    "ISRG": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "ISRG",
-      "tradable": true
-    },
-    "JNJ": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "JNJ",
-      "tradable": true
-    },
-    "JPM": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "JPM",
-      "tradable": true
-    },
-    "KO": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "KO",
-      "tradable": true
-    },
-    "LIN": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "LIN",
-      "tradable": true
-    },
-    "LLY": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "LLY",
-      "tradable": true
-    },
-    "LMT": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "LMT",
-      "tradable": true
-    },
-    "LOW": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "LOW",
-      "tradable": true
-    },
-    "MA": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "MA",
-      "tradable": true
-    },
-    "MCD": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "MCD",
-      "tradable": true
-    },
-    "MDLZ": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "MDLZ",
-      "tradable": true
-    },
-    "META": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "META",
-      "tradable": true
-    },
-    "MRK": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "MRK",
-      "tradable": true
-    },
-    "MS": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "MS",
-      "tradable": true
-    },
-    "MSFT": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "MSFT",
-      "tradable": true
-    },
-    "NEE": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "NEE",
-      "tradable": true
-    },
-    "NFLX": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "NFLX",
-      "tradable": true
-    },
-    "NKE": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "NKE",
-      "tradable": true
-    },
-    "NVDA": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "NVDA",
-      "tradable": true
-    },
-    "O": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "O",
-      "tradable": true
-    },
-    "ORCL": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "ORCL",
-      "tradable": true
-    },
-    "PEP": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "PEP",
-      "tradable": true
-    },
-    "PG": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "PG",
-      "tradable": true
-    },
-    "PLD": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "PLD",
-      "tradable": true
-    },
-    "PM": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "PM",
-      "tradable": true
-    },
-    "RTX": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "RTX",
-      "tradable": true
-    },
-    "SBUX": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "SBUX",
-      "tradable": true
-    },
-    "SHW": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "SHW",
-      "tradable": true
-    },
-    "SLB": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "SLB",
-      "tradable": true
-    },
-    "SO": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "SO",
-      "tradable": true
-    },
-    "SPY": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "SPY",
-      "tradable": true
-    },
-    "SRE": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "SRE",
-      "tradable": true
-    },
-    "TMO": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "TMO",
-      "tradable": true
-    },
-    "TMUS": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "TMUS",
-      "tradable": true
-    },
-    "TSLA": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "TSLA",
-      "tradable": true
-    },
-    "UNH": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "UNH",
-      "tradable": true
-    },
-    "UNP": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "UNP",
-      "tradable": true
-    },
-    "UPS": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "UPS",
-      "tradable": true
-    },
-    "V": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "V",
-      "tradable": true
-    },
-    "WELL": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "WELL",
-      "tradable": true
-    },
-    "WFC": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "WFC",
-      "tradable": true
-    },
-    "WMT": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "WMT",
-      "tradable": true
-    },
-    "XOM": {
-      "asset_class": "us_equity",
-      "exchange": "NASDAQ",
-      "fractionable": true,
-      "source": "dry_run_mock",
-      "status": "active",
-      "symbol": "XOM",
-      "tradable": true
-    }
   },
   "bars": {
     "AAPL": [
@@ -234182,744 +233452,13 @@
   },
   "clock": {
     "is_open": true,
-    "next_close": "2026-05-12T17:12:15Z",
-    "next_open": "2026-05-12T17:12:15Z",
-    "timestamp": "2026-05-12T17:12:15Z"
+    "next_close": "2026-05-12T17:35:26Z",
+    "next_open": "2026-05-12T17:35:26Z",
+    "source": "dry_run_mock_alpaca_clock",
+    "timestamp": "2026-05-12T17:35:26Z"
   },
-  "data_feed": "mock",
-  "data_source": "dry_run_mock",
-  "generated_at": "2026-05-12T17:12:15Z",
-  "latest_bars": {
-    "AAPL": {
-      "close": 457.8422,
-      "high": 459.6735,
-      "low": 455.0056,
-      "open": 457.0624,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1542270
-    },
-    "ABBV": {
-      "close": 173.793,
-      "high": 175.0994,
-      "low": 172.924,
-      "open": 174.1243,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3063849
-    },
-    "ABT": {
-      "close": 203.6498,
-      "high": 204.7088,
-      "low": 202.6751,
-      "open": 203.4891,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1560278
-    },
-    "ADBE": {
-      "close": 91.2198,
-      "high": 91.6212,
-      "low": 90.6001,
-      "open": 91.0554,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 4147756
-    },
-    "AEP": {
-      "close": 148.4385,
-      "high": 149.151,
-      "low": 147.7344,
-      "open": 148.4022,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1909192
-    },
-    "AMD": {
-      "close": 387.7529,
-      "high": 389.3039,
-      "low": 385.9137,
-      "open": 387.6581,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3954435
-    },
-    "AMGN": {
-      "close": 380.8533,
-      "high": 382.3767,
-      "low": 378.4937,
-      "open": 380.2046,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1858610
-    },
-    "AMT": {
-      "close": 397.1626,
-      "high": 399.834,
-      "low": 395.574,
-      "open": 397.6074,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1115939
-    },
-    "AMZN": {
-      "close": 338.2619,
-      "high": 340.1374,
-      "low": 336.9089,
-      "open": 338.7822,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1271640
-    },
-    "APD": {
-      "close": 397.8635,
-      "high": 400.3803,
-      "low": 395.8742,
-      "open": 398.309,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2223648
-    },
-    "AVGO": {
-      "close": 219.9241,
-      "high": 220.8918,
-      "low": 218.8715,
-      "open": 219.7505,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3866816
-    },
-    "AXP": {
-      "close": 448.5141,
-      "high": 451.0258,
-      "low": 446.1433,
-      "open": 448.1601,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1722159
-    },
-    "BA": {
-      "close": 423.9105,
-      "high": 425.6061,
-      "low": 421.2841,
-      "open": 423.1885,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2947875
-    },
-    "BAC": {
-      "close": 63.7314,
-      "high": 63.9863,
-      "low": 63.3912,
-      "open": 63.6458,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1616160
-    },
-    "BIL": {
-      "close": 91.9626,
-      "high": 92.404,
-      "low": 91.5264,
-      "open": 91.9401,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2146062
-    },
-    "BKNG": {
-      "close": 131.4487,
-      "high": 132.1848,
-      "low": 130.6159,
-      "open": 131.2722,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2525509
-    },
-    "BLK": {
-      "close": 368.9824,
-      "high": 370.8732,
-      "low": 367.322,
-      "open": 369.3956,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1430180
-    },
-    "CAT": {
-      "close": 68.8069,
-      "high": 69.0821,
-      "low": 68.4947,
-      "open": 68.8043,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1329170
-    },
-    "CL": {
-      "close": 495.6625,
-      "high": 498.0417,
-      "low": 493.0171,
-      "open": 494.9971,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1819497
-    },
-    "CMCSA": {
-      "close": 258.2503,
-      "high": 259.6965,
-      "low": 256.5214,
-      "open": 257.8104,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1074524
-    },
-    "COP": {
-      "close": 73.0205,
-      "high": 73.3126,
-      "low": 72.5681,
-      "open": 72.8962,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2108620
-    },
-    "COST": {
-      "close": 86.5847,
-      "high": 87.0696,
-      "low": 86.0483,
-      "open": 86.4373,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2895774
-    },
-    "CRM": {
-      "close": 176.2221,
-      "high": 176.9269,
-      "low": 175.1056,
-      "open": 175.9855,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2188490
-    },
-    "CSCO": {
-      "close": 356.8078,
-      "high": 359.2041,
-      "low": 355.0238,
-      "open": 357.4881,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1411637
-    },
-    "CVX": {
-      "close": 444.494,
-      "high": 446.8054,
-      "low": 442.3856,
-      "open": 444.3854,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2512128
-    },
-    "DE": {
-      "close": 405.24,
-      "high": 407.3472,
-      "low": 402.6205,
-      "open": 404.4405,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 4111938
-    },
-    "DIS": {
-      "close": 397.0028,
-      "high": 399.0673,
-      "low": 395.1197,
-      "open": 396.9058,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1627948
-    },
-    "DUK": {
-      "close": 37.7586,
-      "high": 37.9096,
-      "low": 37.5058,
-      "open": 37.6943,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3074600
-    },
-    "ECL": {
-      "close": 395.8258,
-      "high": 397.8841,
-      "low": 393.2672,
-      "open": 395.0449,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1394898
-    },
-    "EOG": {
-      "close": 290.7738,
-      "high": 292.0532,
-      "low": 289.2492,
-      "open": 290.7027,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2208181
-    },
-    "EQIX": {
-      "close": 492.0347,
-      "high": 494.5933,
-      "low": 489.9468,
-      "open": 491.9144,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2376348
-    },
-    "FCX": {
-      "close": 225.6752,
-      "high": 226.8487,
-      "low": 224.1038,
-      "open": 225.23,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2090953
-    },
-    "GE": {
-      "close": 325.6432,
-      "high": 327.3365,
-      "low": 323.7592,
-      "open": 325.3861,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1957268
-    },
-    "GOOGL": {
-      "close": 380.8419,
-      "high": 383.106,
-      "low": 379.1281,
-      "open": 381.4277,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2095201
-    },
-    "GS": {
-      "close": 416.3496,
-      "high": 418.658,
-      "low": 414.2678,
-      "open": 416.99,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1290950
-    },
-    "HD": {
-      "close": 167.6059,
-      "high": 168.4775,
-      "low": 166.5225,
-      "open": 167.2753,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3850293
-    },
-    "HON": {
-      "close": 103.9789,
-      "high": 104.4493,
-      "low": 103.459,
-      "open": 104.0332,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2621400
-    },
-    "INTU": {
-      "close": 413.798,
-      "high": 416.4238,
-      "low": 411.9359,
-      "open": 414.4345,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2394147
-    },
-    "ISRG": {
-      "close": 345.8469,
-      "high": 347.3686,
-      "low": 343.7839,
-      "open": 345.1646,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2546001
-    },
-    "JNJ": {
-      "close": 411.3828,
-      "high": 413.1929,
-      "low": 409.4315,
-      "open": 411.2823,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3754996
-    },
-    "JPM": {
-      "close": 49.991,
-      "high": 50.2882,
-      "low": 49.7661,
-      "open": 50.0679,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3737856
-    },
-    "KO": {
-      "close": 345.884,
-      "high": 347.6826,
-      "low": 343.8652,
-      "open": 345.4196,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3156368
-    },
-    "LIN": {
-      "close": 227.9948,
-      "high": 229.2088,
-      "low": 227.0828,
-      "open": 228.1138,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2175962
-    },
-    "LLY": {
-      "close": 104.6392,
-      "high": 105.1833,
-      "low": 104.112,
-      "open": 104.6352,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3475038
-    },
-    "LMT": {
-      "close": 352.5481,
-      "high": 353.9582,
-      "low": 350.3144,
-      "open": 352.0748,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2000680
-    },
-    "LOW": {
-      "close": 275.4595,
-      "high": 277.0021,
-      "low": 273.7257,
-      "open": 274.963,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 4187159
-    },
-    "MA": {
-      "close": 311.3585,
-      "high": 313.141,
-      "low": 309.9574,
-      "open": 311.521,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2791693
-    },
-    "MCD": {
-      "close": 251.825,
-      "high": 253.1344,
-      "low": 250.3552,
-      "open": 251.4869,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3386598
-    },
-    "MDLZ": {
-      "close": 168.7207,
-      "high": 169.3956,
-      "low": 167.6754,
-      "open": 168.4333,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3935040
-    },
-    "META": {
-      "close": 219.9761,
-      "high": 221.032,
-      "low": 218.5542,
-      "open": 219.5421,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1907502
-    },
-    "MRK": {
-      "close": 127.7077,
-      "high": 128.3717,
-      "low": 126.9164,
-      "open": 127.4901,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 4107548
-    },
-    "MS": {
-      "close": 422.4639,
-      "high": 424.1537,
-      "low": 420.46,
-      "open": 422.3606,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 4078700
-    },
-    "MSFT": {
-      "close": 223.2431,
-      "high": 224.4933,
-      "low": 221.838,
-      "open": 222.8408,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2287939
-    },
-    "NEE": {
-      "close": 57.2107,
-      "high": 57.5497,
-      "low": 56.9533,
-      "open": 57.2748,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1256712
-    },
-    "NFLX": {
-      "close": 448.5954,
-      "high": 450.9281,
-      "low": 446.784,
-      "open": 448.5783,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2951003
-    },
-    "NKE": {
-      "close": 95.5798,
-      "high": 96.1151,
-      "low": 95.0697,
-      "open": 95.4515,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 4031539
-    },
-    "NVDA": {
-      "close": 321.8802,
-      "high": 323.6585,
-      "low": 320.2708,
-      "open": 322.2406,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1634926
-    },
-    "O": {
-      "close": 302.0119,
-      "high": 303.3408,
-      "low": 300.2617,
-      "open": 301.4676,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2645386
-    },
-    "ORCL": {
-      "close": 131.123,
-      "high": 131.6475,
-      "low": 130.2452,
-      "open": 130.8997,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1304005
-    },
-    "PEP": {
-      "close": 322.2163,
-      "high": 324.6385,
-      "low": 320.9274,
-      "open": 322.8306,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3968349
-    },
-    "PG": {
-      "close": 168.4679,
-      "high": 169.4113,
-      "low": 167.7877,
-      "open": 168.4615,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2844389
-    },
-    "PLD": {
-      "close": 432.8677,
-      "high": 435.3458,
-      "low": 430.9198,
-      "open": 433.0937,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2721768
-    },
-    "PM": {
-      "close": 239.5958,
-      "high": 240.65,
-      "low": 237.9918,
-      "open": 239.1877,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3563376
-    },
-    "RTX": {
-      "close": 316.7001,
-      "high": 318.8303,
-      "low": 315.4333,
-      "open": 317.0548,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2091744
-    },
-    "SBUX": {
-      "close": 308.9321,
-      "high": 310.4149,
-      "low": 307.6846,
-      "open": 308.9203,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3389147
-    },
-    "SHW": {
-      "close": 311.8263,
-      "high": 313.5491,
-      "low": 310.579,
-      "open": 312.1755,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1992626
-    },
-    "SLB": {
-      "close": 422.2915,
-      "high": 424.7936,
-      "low": 420.6023,
-      "open": 422.7644,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1527207
-    },
-    "SO": {
-      "close": 255.6364,
-      "high": 256.7612,
-      "low": 254.272,
-      "open": 255.2932,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3958876
-    },
-    "SPY": {
-      "close": 564.3028,
-      "high": 567.4629,
-      "low": 561.344,
-      "open": 564.1648,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1278234
-    },
-    "SRE": {
-      "close": 68.9723,
-      "high": 69.3033,
-      "low": 68.5725,
-      "open": 68.8479,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1866772
-    },
-    "TMO": {
-      "close": 236.8039,
-      "high": 238.2543,
-      "low": 235.6198,
-      "open": 236.9275,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 4404769
-    },
-    "TMUS": {
-      "close": 70.1431,
-      "high": 70.6163,
-      "low": 69.8274,
-      "open": 70.251,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 1686523
-    },
-    "TSLA": {
-      "close": 186.8739,
-      "high": 187.6214,
-      "low": 185.7832,
-      "open": 186.623,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 4099510
-    },
-    "UNH": {
-      "close": 290.797,
-      "high": 292.3092,
-      "low": 288.8215,
-      "open": 290.2729,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2258278
-    },
-    "UNP": {
-      "close": 215.5392,
-      "high": 216.4876,
-      "low": 214.5168,
-      "open": 215.4865,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2935416
-    },
-    "UPS": {
-      "close": 53.1048,
-      "high": 53.4408,
-      "low": 52.8393,
-      "open": 53.1643,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 4186558
-    },
-    "V": {
-      "close": 63.9973,
-      "high": 64.3301,
-      "low": 63.6264,
-      "open": 63.8819,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 3878228
-    },
-    "WELL": {
-      "close": 150.8377,
-      "high": 151.5014,
-      "low": 150.1532,
-      "open": 150.8319,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2554571
-    },
-    "WFC": {
-      "close": 105.9209,
-      "high": 106.4717,
-      "low": 105.2118,
-      "open": 105.7405,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2800238
-    },
-    "WMT": {
-      "close": 66.8464,
-      "high": 67.194,
-      "low": 66.4322,
-      "open": 66.7325,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2380558
-    },
-    "XOM": {
-      "close": 163.2842,
-      "high": 164.1895,
-      "low": 162.4678,
-      "open": 163.5354,
-      "source": "dry_run_mock_alpaca_bars",
-      "timestamp": "2026-05-12T21:00:00Z",
-      "volume": 2222080
-    }
-  },
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "generated_at": "2026-05-12T17:35:26Z",
   "orders": [],
   "positions": [],
   "quotes": {
@@ -234928,583 +233467,581 @@
       "bid_price": 457.3844,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "AAPL",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "ABBV": {
       "ask_price": 173.9581,
       "bid_price": 173.6279,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "ABBV",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "ABT": {
       "ask_price": 203.9349,
       "bid_price": 203.3647,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "ABT",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "ADBE": {
       "ask_price": 91.3384,
       "bid_price": 91.1012,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "ADBE",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "AEP": {
       "ask_price": 148.6018,
       "bid_price": 148.2752,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "AEP",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "AMD": {
       "ask_price": 388.2376,
       "bid_price": 387.2682,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "AMD",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "AMGN": {
       "ask_price": 381.2342,
       "bid_price": 380.4724,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "AMGN",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "AMT": {
       "ask_price": 397.7385,
       "bid_price": 396.5867,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "AMT",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "AMZN": {
       "ask_price": 338.431,
       "bid_price": 338.0928,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "AMZN",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "APD": {
       "ask_price": 398.2216,
       "bid_price": 397.5054,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "APD",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "AVGO": {
       "ask_price": 220.21,
       "bid_price": 219.6382,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "AVGO",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "AXP": {
       "ask_price": 449.1644,
       "bid_price": 447.8638,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "AXP",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "BA": {
       "ask_price": 424.4404,
       "bid_price": 423.3806,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "BA",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "BAC": {
       "ask_price": 63.7633,
       "bid_price": 63.6995,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "BAC",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "BIL": {
       "ask_price": 91.9948,
       "bid_price": 91.9304,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "BIL",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "BKNG": {
       "ask_price": 131.5736,
       "bid_price": 131.3238,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "BKNG",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "BLK": {
       "ask_price": 369.1669,
       "bid_price": 368.7979,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "BLK",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "CAT": {
       "ask_price": 68.8757,
       "bid_price": 68.7381,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "CAT",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "CL": {
       "ask_price": 496.3316,
       "bid_price": 494.9934,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "CL",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "CMCSA": {
       "ask_price": 258.4311,
       "bid_price": 258.0695,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "CMCSA",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "COP": {
       "ask_price": 73.057,
       "bid_price": 72.984,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "COP",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "COST": {
       "ask_price": 86.6886,
       "bid_price": 86.4808,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "COST",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "CRM": {
       "ask_price": 176.3983,
       "bid_price": 176.0459,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "CRM",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "CSCO": {
       "ask_price": 357.2895,
       "bid_price": 356.3261,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "CSCO",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "CVX": {
       "ask_price": 444.894,
       "bid_price": 444.094,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "CVX",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "DE": {
       "ask_price": 405.8073,
       "bid_price": 404.6727,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "DE",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "DIS": {
       "ask_price": 397.3601,
       "bid_price": 396.6455,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "DIS",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "DUK": {
       "ask_price": 37.7775,
       "bid_price": 37.7397,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "DUK",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "ECL": {
       "ask_price": 396.38,
       "bid_price": 395.2716,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "ECL",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "EOG": {
       "ask_price": 290.9337,
       "bid_price": 290.6139,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "EOG",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "EQIX": {
       "ask_price": 492.4775,
       "bid_price": 491.5919,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "EQIX",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "FCX": {
       "ask_price": 225.9347,
       "bid_price": 225.4157,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "FCX",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "GE": {
       "ask_price": 325.9363,
       "bid_price": 325.3501,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "GE",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "GOOGL": {
       "ask_price": 381.0514,
       "bid_price": 380.6324,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "GOOGL",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "GS": {
       "ask_price": 416.7659,
       "bid_price": 415.9333,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "GS",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "HD": {
       "ask_price": 167.7986,
       "bid_price": 167.4132,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "HD",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "HON": {
       "ask_price": 104.0309,
       "bid_price": 103.9269,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "HON",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "INTU": {
       "ask_price": 414.1497,
       "bid_price": 413.4463,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "INTU",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "ISRG": {
       "ask_price": 346.0371,
       "bid_price": 345.6567,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "ISRG",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "JNJ": {
       "ask_price": 411.9176,
       "bid_price": 410.848,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "JNJ",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "JPM": {
       "ask_price": 50.056,
       "bid_price": 49.926,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "JPM",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "KO": {
       "ask_price": 346.1953,
       "bid_price": 345.5727,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "KO",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "LIN": {
       "ask_price": 228.1316,
       "bid_price": 227.858,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "LIN",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "LLY": {
       "ask_price": 104.7857,
       "bid_price": 104.4927,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "LLY",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "LMT": {
       "ask_price": 352.7244,
       "bid_price": 352.3718,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "LMT",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "LOW": {
       "ask_price": 275.8589,
       "bid_price": 275.0601,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "LOW",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "MA": {
       "ask_price": 311.7166,
       "bid_price": 311.0004,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "MA",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "MCD": {
       "ask_price": 252.1776,
       "bid_price": 251.4724,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "MCD",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "MDLZ": {
       "ask_price": 168.8051,
       "bid_price": 168.6363,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "MDLZ",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "META": {
       "ask_price": 220.1081,
       "bid_price": 219.8441,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "META",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "MRK": {
       "ask_price": 127.8226,
       "bid_price": 127.5928,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "MRK",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "MS": {
       "ask_price": 422.6751,
       "bid_price": 422.2527,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "MS",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "MSFT": {
       "ask_price": 223.5668,
       "bid_price": 222.9194,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "MSFT",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "NEE": {
       "ask_price": 57.2736,
       "bid_price": 57.1478,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "NEE",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "NFLX": {
       "ask_price": 448.887,
       "bid_price": 448.3038,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "NFLX",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "NKE": {
       "ask_price": 95.7184,
       "bid_price": 95.4412,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "NKE",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "NVDA": {
       "ask_price": 322.1377,
       "bid_price": 321.6227,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "NVDA",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "O": {
       "ask_price": 302.2535,
       "bid_price": 301.7703,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "O",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "ORCL": {
       "ask_price": 131.2213,
       "bid_price": 131.0247,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "ORCL",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "PEP": {
       "ask_price": 322.5224,
       "bid_price": 321.9102,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "PEP",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "PG": {
       "ask_price": 168.6279,
       "bid_price": 168.3079,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "PG",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "PLD": {
       "ask_price": 433.2573,
       "bid_price": 432.4781,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "PLD",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "PM": {
       "ask_price": 239.9073,
       "bid_price": 239.2843,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "PM",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "RTX": {
       "ask_price": 316.9218,
       "bid_price": 316.4784,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "RTX",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "SBUX": {
       "ask_price": 309.1947,
       "bid_price": 308.6695,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "SBUX",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "SHW": {
       "ask_price": 312.0758,
       "bid_price": 311.5768,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "SHW",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "SLB": {
       "ask_price": 422.6504,
       "bid_price": 421.9326,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "SLB",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "SO": {
       "ask_price": 255.9687,
       "bid_price": 255.3041,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "SO",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "SPY": {
       "ask_price": 564.5003,
       "bid_price": 564.1053,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "SPY",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "SRE": {
       "ask_price": 69.0482,
       "bid_price": 68.8964,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "SRE",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "TMO": {
       "ask_price": 237.0289,
       "bid_price": 236.5789,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "TMO",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "TMUS": {
       "ask_price": 70.1887,
       "bid_price": 70.0975,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "TMUS",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "TSLA": {
       "ask_price": 187.0608,
       "bid_price": 186.687,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "TSLA",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "UNH": {
       "ask_price": 291.2041,
       "bid_price": 290.3899,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "UNH",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "UNP": {
       "ask_price": 215.8194,
       "bid_price": 215.259,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "UNP",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "UPS": {
       "ask_price": 53.1791,
       "bid_price": 53.0305,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "UPS",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "V": {
       "ask_price": 64.0549,
       "bid_price": 63.9397,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "V",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "WELL": {
       "ask_price": 150.9961,
       "bid_price": 150.6793,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "WELL",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "WFC": {
       "ask_price": 106.0692,
       "bid_price": 105.7726,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "WFC",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "WMT": {
       "ask_price": 66.94,
       "bid_price": 66.7528,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "WMT",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     },
     "XOM": {
       "ask_price": 163.3658,
       "bid_price": 163.2026,
       "source": "dry_run_mock_alpaca_quote",
       "symbol": "XOM",
-      "timestamp": "2026-05-12T17:12:15Z"
+      "timestamp": "2026-05-12T17:35:26Z"
     }
   },
-  "run_id": "refresh_data-20260512T171215",
+  "run_id": "data_refresh-20260512T173526-fc607fa4",
   "run_mode": "dry_run",
   "schema_version": "0.1.0",
-  "source_data_hash": "af367353e21110a3d7a4edc02ee97e412a189b8bc9d564c94ddc479797700a05",
+  "source_data_hash": "6873fecfac4b8a49671cfe95f163b6cbdc577ca0b72847e9d481b9eaf7ce79d5",
   "source_labels": {
-    "account": "dry_run_mock",
-    "assets": "dry_run_mock",
-    "bars": "dry_run_mock",
-    "clock": "dry_run_mock",
-    "latest_bars": "dry_run_mock",
-    "orders": "dry_run_mock",
-    "positions": "dry_run_mock",
-    "quotes": "dry_run_mock",
-    "spreads": "dry_run_mock"
+    "account": "dry_run_mock_alpaca_account",
+    "bars": "dry_run_mock_alpaca_bars",
+    "clock": "dry_run_mock_alpaca_clock",
+    "orders": "dry_run_mock_alpaca_orders",
+    "positions": "dry_run_mock_alpaca_positions",
+    "quotes": "dry_run_mock_alpaca_quote",
+    "spreads": "derived_from_dry_run_mock_quote"
   },
   "spreads": {
     "AAPL": {
