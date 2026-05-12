@@ -285,30 +285,31 @@ def main() -> int:
         LATEST_DIR / "account_snapshot.json",
         {k: v for k, v in account_snapshot.items() if k not in {"positions", "orders"}},
     )
-    _write_json(
-        LATEST_DIR / "positions_snapshot.json",
-        {
-            "schema_version": "0.1.0",
-            "source": account_snapshot.get("source"),
-            "fetched_at": fetched_at,
-            "positions": account_snapshot.get("positions", []),
-            "position_count": account_snapshot.get("position_count", 0),
-        },
-    )
-    _write_json(
-        LATEST_DIR / "orders_snapshot.json",
-        {
-            "schema_version": "0.1.0",
-            "source": account_snapshot.get("source"),
-            "fetched_at": fetched_at,
-            "orders": account_snapshot.get("orders", []),
-            "open_order_count": account_snapshot.get("open_order_count", 0),
-        },
-    )
+    _pos_payload: dict = {
+        "schema_version": "0.1.0",
+        "source": account_snapshot.get("source"),
+        "fetched_at": fetched_at,
+        "positions": account_snapshot.get("positions", []),
+        "position_count": account_snapshot.get("position_count", 0),
+    }
+    _pos_payload["data_hash"] = stable_hash(_pos_payload)
+    _write_json(LATEST_DIR / "positions_snapshot.json", _pos_payload)
+
+    _ord_payload: dict = {
+        "schema_version": "0.1.0",
+        "source": account_snapshot.get("source"),
+        "fetched_at": fetched_at,
+        "orders": account_snapshot.get("orders", []),
+        "open_order_count": account_snapshot.get("open_order_count", 0),
+    }
+    _ord_payload["data_hash"] = stable_hash(_ord_payload)
+    _write_json(LATEST_DIR / "orders_snapshot.json", _ord_payload)
 
     # Combined market_snapshot.json (backward-compatible with existing pipeline).
     combined = _build_combined_snapshot(account_snapshot, market_snapshot)
     combined["run_id"] = run_id
+    _mkt_base = {k: v for k, v in combined.items() if k != "data_hash"}
+    combined["data_hash"] = stable_hash(_mkt_base)
     _write_json(LATEST_DIR / "market_snapshot.json", combined)
 
     # --- Data quality -------------------------------------------------

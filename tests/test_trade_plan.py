@@ -322,12 +322,13 @@ class TestComputeProposedOrders:
         assert aapl["order_type"] == "limit"
         assert aapl["limit_price"] == 150.0
 
-    def test_market_order_when_no_price(self):
+    def test_blocked_when_no_price(self):
         t = {"BIL": {"weight": 0.1, "notional": 4000, "latest_close": None}}
         orders = compute_proposed_orders(t, 40000, [], 25.0)
         bil = next(o for o in orders if o["symbol"] == "BIL")
-        assert bil["order_type"] == "market"
+        assert bil["order_type"] == "limit"
         assert bil["limit_price"] is None
+        assert bil["skip_reason"] == "no_limit_price_source"
 
     def test_order_has_required_fields(self):
         t = self._targets(["AAPL"])
