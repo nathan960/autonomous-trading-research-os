@@ -481,3 +481,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "33803bec309f659e052e3dfae18896adc14b782a7e96dc715275a5235c3dd014"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6075949367088608,
+  "breadth_ok": true,
+  "candidates_count": 27,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-05-12T19:45:50Z",
+  "selected": [
+    "GOOGL",
+    "FCX",
+    "AVGO",
+    "SLB",
+    "NVDA",
+    "MRK",
+    "XOM",
+    "JNJ",
+    "WMT",
+    "SBUX"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.06657771666666666,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "7c2320be68933c9c3d9bb67859f0aca0eef406307f9113471803a75304cb5e13"
+}
+```

@@ -5145,3 +5145,35 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
   JNJ       score=0.0301  atr_pct=0.0100  [candidate]
   SBUX      score=0.0298  atr_pct=0.0100  [candidate]
 ```
+
+## scan_triggers candidates  (2026-05-12T19:45:50Z)
+
+```
+  GOOGL     score=0.9628  atr_pct=0.0235  [SELECTED]
+  FCX       score=0.7073  atr_pct=0.0406  [SELECTED]
+  AVGO      score=0.6044  atr_pct=0.0339  [SELECTED]
+  SLB       score=0.5728  atr_pct=0.0303  [SELECTED]
+  NVDA      score=0.5367  atr_pct=0.0296  [SELECTED]
+  CSCO      score=0.5240  atr_pct=0.0229  [candidate]
+  MRK       score=0.3948  atr_pct=0.0243  [SELECTED]
+  XOM       score=0.3467  atr_pct=0.0287  [SELECTED]
+  COP       score=0.3413  atr_pct=0.0306  [candidate]
+  JNJ       score=0.3308  atr_pct=0.0178  [SELECTED]
+  WMT       score=0.3087  atr_pct=0.0200  [SELECTED]
+  AAPL      score=0.2910  atr_pct=0.0208  [candidate]
+  SBUX      score=0.2834  atr_pct=0.0240  [SELECTED]
+  EQIX      score=0.2826  atr_pct=0.0188  [candidate]
+  NEE       score=0.2403  atr_pct=0.0222  [candidate]
+  AMZN      score=0.2306  atr_pct=0.0252  [candidate]
+  BA        score=0.2179  atr_pct=0.0277  [candidate]
+  RTX       score=0.2066  atr_pct=0.0244  [candidate]
+  AEP       score=0.1739  atr_pct=0.0177  [candidate]
+  LIN       score=0.1550  atr_pct=0.0191  [candidate]
+  AMGN      score=0.1536  atr_pct=0.0225  [candidate]
+  KO        score=0.1370  atr_pct=0.0163  [candidate]
+  UNH       score=0.1305  atr_pct=0.0233  [candidate]
+  O         score=0.1013  atr_pct=0.0149  [candidate]
+  SO        score=0.0290  atr_pct=0.0167  [candidate]
+  DUK       score=0.0273  atr_pct=0.0159  [candidate]
+  UPS       score=0.0264  atr_pct=0.0278  [candidate]
+```
