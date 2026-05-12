@@ -273,3 +273,51 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
   "source": "dry_run_mock"
 }
 ```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598685,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:55:29Z",
+  "open_order_count": 0,
+  "peak_equity": 99672.3,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T205529-3f9333d7",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": 0.0,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:56:11Z",
+  "open_order_count": 0,
+  "peak_equity": 40000.0,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T205611-b34a1e43",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": 0.0,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-12T20:57:37Z",
+  "open_order_count": 0,
+  "peak_equity": 40000.0,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260512T205737-97b74ccd",
+  "source": "dry_run_mock"
+}
+```

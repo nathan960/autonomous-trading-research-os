@@ -705,3 +705,67 @@ Every trigger scan records fired, skipped, and selected signals here.
   "spy_trend_ok": true
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "breadth_ok": true,
+  "candidates_count": 71,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-05-12T20:55:33Z",
+  "selected": [
+    "WMT",
+    "APD",
+    "DIS",
+    "ORCL",
+    "LLY",
+    "BLK",
+    "BKNG",
+    "KO",
+    "WELL",
+    "EOG"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 2.8312201166666666,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "ed1b75abf9993232a1a112e1654bbfdac563ed742eaf86a3b537c91edf579da7"
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "cada0557b7f975aaac19b1e533276a3da9fa008f2a77baac93e5ef9ef0d32273",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T205611-ea1b99f6",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "d5628b767164eb8e5e84765603781ed42e9173c9a17b4c2cf07a32e9ad1fdd4a",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T205736-33700482",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```

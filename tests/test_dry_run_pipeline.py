@@ -17,6 +17,7 @@ _LATEST_DIR = _ROOT / "data" / "latest"
 _RESTORED_FILES = [
     "trigger_snapshot.json",
     "trade_plan.json",
+    "execution_report.json",
     "market_snapshot.json",
     "positions_snapshot.json",
     "orders_snapshot.json",
