@@ -1,9 +1,9 @@
 {
   "all_gates_pass": false,
   "dry_run": true,
-  "execution_report_hash": "20d09f1c80e954a4f727ec638cc171ccb3c29eb2cf8b0b6ec5b6a8e3bb6c2a9a",
+  "execution_report_hash": "bbc86c600abba5f084d8afd02505518d06eebf48f5ae5482bda93d2a0452bdef",
   "failed_gates": [
-    "SPREAD_NOT_TOO_WIDE"
+    "RISK_STATE_NOT_PAUSED"
   ],
   "gate_results": [
     {
@@ -37,9 +37,9 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "drawdown=-0.598 breaches block_threshold=-0.1",
       "gate_id": "RISK_STATE_NOT_PAUSED",
-      "passes": true
+      "passes": false
     },
     {
       "detail": null,
@@ -67,9 +67,9 @@
       "passes": true
     },
     {
-      "detail": "spread too wide: ['AMD(0.0676>0.02)', 'MRK(0.0339>0.02)']",
+      "detail": null,
       "gate_id": "SPREAD_NOT_TOO_WIDE",
-      "passes": false
+      "passes": true
     },
     {
       "detail": null,
@@ -87,200 +87,134 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-05-12T17:48:33Z",
+  "generated_at": "2026-05-12T18:25:07Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260512T174833-GOOGL-BUY",
+      "client_order_id": "TOS-20260512T182449-WMT-BUY",
       "execution_ready": true,
-      "limit_price": 384.72,
-      "notional": 1193.14,
+      "limit_price": 66.8464,
+      "notional": 3516.49,
       "order_type": "limit",
       "side": "buy",
-      "symbol": "GOOGL",
-      "target_weight": 0.09817941,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-FCX-BUY",
-      "execution_ready": true,
-      "limit_price": 64.67,
-      "notional": 5739.72,
-      "order_type": "limit",
-      "side": "buy",
-      "symbol": "FCX",
-      "target_weight": 0.05775225,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-AVGO-BUY",
-      "execution_ready": true,
-      "limit_price": 411.66,
-      "notional": 393.91,
-      "order_type": "limit",
-      "side": "buy",
-      "symbol": "AVGO",
-      "target_weight": 0.06753352,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-SLB-BUY",
-      "execution_ready": true,
-      "limit_price": 55.705,
-      "notional": 7705.64,
-      "order_type": "limit",
-      "side": "buy",
-      "symbol": "SLB",
-      "target_weight": 0.07753302,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-CSCO-BUY",
-      "execution_ready": true,
-      "limit_price": 98.51,
-      "notional": 10056.12,
-      "order_type": "limit",
-      "side": "buy",
-      "symbol": "CSCO",
-      "target_weight": 0.10118318,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-GS-BUY",
-      "execution_ready": true,
-      "limit_price": 938.42,
-      "notional": 9349.92,
-      "order_type": "limit",
-      "side": "buy",
-      "symbol": "GS",
-      "target_weight": 0.09407747,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-XOM-BUY",
-      "execution_ready": true,
-      "limit_price": 150.985,
-      "notional": 405.5,
-      "order_type": "limit",
-      "side": "buy",
-      "symbol": "XOM",
-      "target_weight": 0.08104904,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-WMT-SELL",
-      "execution_ready": true,
-      "limit_price": 130.43,
-      "notional": 247.02,
-      "order_type": "limit",
-      "side": "sell",
       "symbol": "WMT",
-      "target_weight": 0.11642758,
+      "target_weight": 0.08791219,
       "validation_skip_reason": null
     },
     {
-      "client_order_id": "TOS-20260512T174833-WELL-BUY",
+      "client_order_id": "TOS-20260512T182449-APD-BUY",
       "execution_ready": true,
-      "limit_price": 217.53,
-      "notional": 10832.18,
+      "limit_price": 397.8635,
+      "notional": 3382.12,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "APD",
+      "target_weight": 0.08455289,
+      "validation_skip_reason": null
+    },
+    {
+      "client_order_id": "TOS-20260512T182449-DIS-BUY",
+      "execution_ready": true,
+      "limit_price": 397.0028,
+      "notional": 3656.38,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "DIS",
+      "target_weight": 0.09140948,
+      "validation_skip_reason": null
+    },
+    {
+      "client_order_id": "TOS-20260512T182449-ORCL-BUY",
+      "execution_ready": true,
+      "limit_price": 131.123,
+      "notional": 3739.98,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "ORCL",
+      "target_weight": 0.09349938,
+      "validation_skip_reason": null
+    },
+    {
+      "client_order_id": "TOS-20260512T182449-LLY-BUY",
+      "execution_ready": true,
+      "limit_price": 104.6392,
+      "notional": 3479.2,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "LLY",
+      "target_weight": 0.08697993,
+      "validation_skip_reason": null
+    },
+    {
+      "client_order_id": "TOS-20260512T182449-BLK-BUY",
+      "execution_ready": true,
+      "limit_price": 368.9824,
+      "notional": 3846.38,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "BLK",
+      "target_weight": 0.09615962,
+      "validation_skip_reason": null
+    },
+    {
+      "client_order_id": "TOS-20260512T182449-BKNG-BUY",
+      "execution_ready": true,
+      "limit_price": 131.4487,
+      "notional": 3265.13,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "BKNG",
+      "target_weight": 0.08162825,
+      "validation_skip_reason": null
+    },
+    {
+      "client_order_id": "TOS-20260512T182449-KO-BUY",
+      "execution_ready": true,
+      "limit_price": 345.884,
+      "notional": 3507.24,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "KO",
+      "target_weight": 0.08768107,
+      "validation_skip_reason": null
+    },
+    {
+      "client_order_id": "TOS-20260512T182449-WELL-BUY",
+      "execution_ready": true,
+      "limit_price": 150.8377,
+      "notional": 3846.38,
       "order_type": "limit",
       "side": "buy",
       "symbol": "WELL",
-      "target_weight": 0.10899183,
+      "target_weight": 0.09615962,
       "validation_skip_reason": null
     },
     {
-      "client_order_id": "TOS-20260512T174833-SBUX-BUY",
+      "client_order_id": "TOS-20260512T182449-EOG-BUY",
       "execution_ready": true,
-      "limit_price": 106.78,
-      "notional": 9667.47,
+      "limit_price": 290.7738,
+      "notional": 3760.7,
       "order_type": "limit",
       "side": "buy",
-      "symbol": "SBUX",
-      "target_weight": 0.09727269,
+      "symbol": "EOG",
+      "target_weight": 0.09401756,
       "validation_skip_reason": null
     },
     {
-      "client_order_id": "TOS-20260512T174833-BIL-BUY",
+      "client_order_id": "TOS-20260512T182449-BIL-BUY",
       "execution_ready": true,
-      "limit_price": 91.49,
-      "notional": 9938.53,
+      "limit_price": 91.9626,
+      "notional": 4000.0,
       "order_type": "limit",
       "side": "buy",
       "symbol": "BIL",
       "target_weight": 0.1,
       "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-AMD-SELL",
-      "execution_ready": false,
-      "limit_price": null,
-      "notional": 4009.03,
-      "order_type": "market",
-      "side": "sell",
-      "symbol": "AMD",
-      "target_weight": 0.0,
-      "validation_skip_reason": "spread_too_wide(0.0676>0.02)"
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-AMZN-SELL",
-      "execution_ready": true,
-      "limit_price": null,
-      "notional": 7965.13,
-      "order_type": "market",
-      "side": "sell",
-      "symbol": "AMZN",
-      "target_weight": 0.0,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-KO-SELL",
-      "execution_ready": true,
-      "limit_price": null,
-      "notional": 13527.39,
-      "order_type": "market",
-      "side": "sell",
-      "symbol": "KO",
-      "target_weight": 0.0,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-MRK-SELL",
-      "execution_ready": false,
-      "limit_price": null,
-      "notional": 8398.33,
-      "order_type": "market",
-      "side": "sell",
-      "symbol": "MRK",
-      "target_weight": 0.0,
-      "validation_skip_reason": "spread_too_wide(0.0339>0.02)"
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-NVDA-SELL",
-      "execution_ready": true,
-      "limit_price": null,
-      "notional": 6061.62,
-      "order_type": "market",
-      "side": "sell",
-      "symbol": "NVDA",
-      "target_weight": 0.0,
-      "validation_skip_reason": null
-    },
-    {
-      "client_order_id": "TOS-20260512T174833-PEP-SELL",
-      "execution_ready": true,
-      "limit_price": null,
-      "notional": 10259.6,
-      "order_type": "market",
-      "side": "sell",
-      "symbol": "PEP",
-      "target_weight": 0.0,
-      "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260512T174833-a95ddc3a",
-  "run_id": "execution-20260512T174833-8a168561",
+  "plan_id": "trade_plan-20260512T182449-e8679da5",
+  "run_id": "execution-20260512T182507-73855233",
   "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "7187194f79dbf8a3c6f64fb9cc356eaee1ab6456b3396a6ed6aaf7c95cb0a9e9"
+  "trade_plan_hash": "e93171f73d02323ba8d12bf92d714be2aa9fda4bade9192679e05b01aacadac1"
 }

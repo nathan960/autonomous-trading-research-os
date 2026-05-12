@@ -3874,3 +3874,1274 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
   SO        score=0.0270  atr_pct=0.0167  [candidate]
   DUK       score=0.0266  atr_pct=0.0159  [candidate]
 ```
+
+## Signal candidates ranked
+
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T182353-5a204b8c",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
+```
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260512T182353-bba8978c",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "da79f7820b51fca182ae899b675e835f364d36d715dceb7f61e8a03e743aac18"
+}
+```
+
+## Signal candidates ranked
+
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T182413-c87504bc",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
+```
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260512T182413-d4616757",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "b024ae27bcc8ba7a0baf5470ce2eb62124ac106003f72af751fe2b68ecf80774"
+}
+```
+
+## Signal candidates ranked
+
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T182419-d8a02546",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
+```
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260512T182419-6fd89431",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "4529428e6110412e5bc4302d23693624cb2220b56fc4a5242852761876af8bbc"
+}
+```
+
+## Signal candidates ranked
+
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T182424-5c7b57b9",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
+```
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260512T182424-19cea115",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "c582a4e5785e46172c36164d9103016ea752b9b87025b41039ea8d6c8bfda988"
+}
+```
+
+## Signal candidates ranked
+
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260512T182431-656c59ab",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
+```
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260512T182431-519fd26f",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "4abd85771a1f7a0f6d4e38c0b0769d266624c681fc90de71ce6841f653731c15"
+}
+```
+
+## scan_triggers candidates  (2026-05-12T18:24:45Z)
+
+```
+  WMT       score=0.2220  atr_pct=0.0109  [SELECTED]
+  APD       score=0.2198  atr_pct=0.0114  [SELECTED]
+  DIS       score=0.2113  atr_pct=0.0105  [SELECTED]
+  ORCL      score=0.2093  atr_pct=0.0103  [SELECTED]
+  LLY       score=0.2016  atr_pct=0.0111  [SELECTED]
+  BLK       score=0.1996  atr_pct=0.0098  [SELECTED]
+  BKNG      score=0.1969  atr_pct=0.0118  [SELECTED]
+  KO        score=0.1963  atr_pct=0.0110  [SELECTED]
+  WELL      score=0.1905  atr_pct=0.0099  [SELECTED]
+  EOG       score=0.1862  atr_pct=0.0102  [SELECTED]
+  UNP       score=0.1859  atr_pct=0.0099  [candidate]
+  CRM       score=0.1782  atr_pct=0.0104  [candidate]
+  PG        score=0.1768  atr_pct=0.0105  [candidate]
+  COST      score=0.1717  atr_pct=0.0115  [candidate]
+  PEP       score=0.1712  atr_pct=0.0108  [candidate]
+  MCD       score=0.1708  atr_pct=0.0111  [candidate]
+  XOM       score=0.1671  atr_pct=0.0105  [candidate]
+  WFC       score=0.1666  atr_pct=0.0117  [candidate]
+  NFLX      score=0.1564  atr_pct=0.0103  [candidate]
+  GOOGL     score=0.1557  atr_pct=0.0103  [candidate]
+  CL        score=0.1537  atr_pct=0.0102  [candidate]
+  AMGN      score=0.1489  atr_pct=0.0099  [candidate]
+  MS        score=0.1472  atr_pct=0.0094  [candidate]
+  LMT       score=0.1454  atr_pct=0.0105  [candidate]
+  ABBV      score=0.1442  atr_pct=0.0116  [candidate]
+  INTU      score=0.1425  atr_pct=0.0106  [candidate]
+  TSLA      score=0.1422  atr_pct=0.0098  [candidate]
+  GS        score=0.1396  atr_pct=0.0103  [candidate]
+  HD        score=0.1392  atr_pct=0.0109  [candidate]
+  CSCO      score=0.1378  atr_pct=0.0110  [candidate]
+  NVDA      score=0.1334  atr_pct=0.0107  [candidate]
+  AXP       score=0.1333  atr_pct=0.0111  [candidate]
+  BAC       score=0.1318  atr_pct=0.0095  [candidate]
+  EQIX      score=0.1316  atr_pct=0.0103  [candidate]
+  AAPL      score=0.1295  atr_pct=0.0100  [candidate]
+  NKE       score=0.1268  atr_pct=0.0109  [candidate]
+  AMT       score=0.1266  atr_pct=0.0109  [candidate]
+  AMD       score=0.1264  atr_pct=0.0094  [candidate]
+  MSFT      score=0.1260  atr_pct=0.0112  [candidate]
+  GE        score=0.1218  atr_pct=0.0112  [candidate]
+  DE        score=0.1209  atr_pct=0.0109  [candidate]
+  COP       score=0.1205  atr_pct=0.0099  [candidate]
+  PLD       score=0.1175  atr_pct=0.0106  [candidate]
+  AMZN      score=0.1169  atr_pct=0.0094  [candidate]
+  ISRG      score=0.1167  atr_pct=0.0096  [candidate]
+  SO        score=0.1155  atr_pct=0.0097  [candidate]
+  CMCSA     score=0.1111  atr_pct=0.0120  [candidate]
+  SLB       score=0.1033  atr_pct=0.0103  [candidate]
+  CVX       score=0.1017  atr_pct=0.0108  [candidate]
+  CAT       score=0.1004  atr_pct=0.0095  [candidate]
+  ABT       score=0.0984  atr_pct=0.0102  [candidate]
+  TMO       score=0.0967  atr_pct=0.0114  [candidate]
+  HON       score=0.0966  atr_pct=0.0099  [candidate]
+  ECL       score=0.0911  atr_pct=0.0110  [candidate]
+  AEP       score=0.0909  atr_pct=0.0102  [candidate]
+  META      score=0.0870  atr_pct=0.0105  [candidate]
+  LIN       score=0.0845  atr_pct=0.0097  [candidate]
+  SHW       score=0.0805  atr_pct=0.0099  [candidate]
+  BA        score=0.0774  atr_pct=0.0100  [candidate]
+  PM        score=0.0751  atr_pct=0.0108  [candidate]
+  SRE       score=0.0718  atr_pct=0.0099  [candidate]
+  JPM       score=0.0696  atr_pct=0.0103  [candidate]
+  O         score=0.0676  atr_pct=0.0095  [candidate]
+  TMUS      score=0.0606  atr_pct=0.0112  [candidate]
+  MA        score=0.0588  atr_pct=0.0107  [candidate]
+  NEE       score=0.0588  atr_pct=0.0108  [candidate]
+  UPS       score=0.0465  atr_pct=0.0117  [candidate]
+  UNH       score=0.0403  atr_pct=0.0114  [candidate]
+  AVGO      score=0.0366  atr_pct=0.0094  [candidate]
+  JNJ       score=0.0301  atr_pct=0.0100  [candidate]
+  SBUX      score=0.0298  atr_pct=0.0100  [candidate]
+```
