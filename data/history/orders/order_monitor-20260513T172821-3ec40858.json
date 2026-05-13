@@ -1,0 +1,49 @@
+{
+  "clock": {
+    "is_open": true,
+    "next_close": "2026-05-13T17:28:06Z",
+    "next_open": "2026-05-13T17:28:06Z",
+    "timestamp": "2026-05-13T17:28:06Z"
+  },
+  "dry_run": true,
+  "fetch_log": null,
+  "generated_at": "2026-05-13T17:28:21Z",
+  "lifecycles": [
+    {
+      "broker_order_id": "a57f3df1-f9d5-4ab7-8655-ed8240ade13e",
+      "broker_status": null,
+      "checked_at": "2026-05-13T17:28:21Z",
+      "client_order_id": "TOS-20260513T160035-WELL-BUY",
+      "fill": null,
+      "lifecycle_status": "missing",
+      "limit_price": 218.9,
+      "notional": 25.0,
+      "side": "buy",
+      "stale_warning": null,
+      "submitted": true,
+      "submitted_at": "2026-05-13T16:00:36Z",
+      "symbol": "WELL",
+      "warning": "order TOS-20260513T160035-WELL-BUY (broker_id='a57f3df1-f9d5-4ab7-8655-ed8240ade13e') not found in Alpaca open or recent closed orders"
+    }
+  ],
+  "orders_active": 0,
+  "orders_canceled": 0,
+  "orders_expired": 0,
+  "orders_filled": 0,
+  "orders_missing": 1,
+  "orders_partially_filled": 0,
+  "orders_rejected": 0,
+  "orders_tracked": 1,
+  "report_hash": "610b332fb2ae76f09fd5f23459498c46d69b29961a6f58a9e647aa2d59c7f0f0",
+  "run_id": "order_monitor-20260513T172821-3ec40858",
+  "safety": {
+    "cancel_order_called": false,
+    "replace_order_called": false,
+    "submit_order_called": false
+  },
+  "source": "stored_snapshot",
+  "stale_orders": [],
+  "warnings": [
+    "order TOS-20260513T160035-WELL-BUY (broker_id='a57f3df1-f9d5-4ab7-8655-ed8240ade13e') not found in Alpaca open or recent closed orders"
+  ]
+}
