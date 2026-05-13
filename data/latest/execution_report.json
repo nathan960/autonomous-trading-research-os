@@ -1,8 +1,7 @@
 {
   "all_gates_pass": true,
-  "blocked_reason": "all_attempted_orders_failed_broker_submission: ['APIError: {\"available\":\"0.023054861\",\"code\":40310000,\"existing_qty\":\"0.023054861\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: 0.023057412, available: 0.023054861)\",\"symbol\":\"EQIX\"}']",
-  "dry_run": false,
-  "execution_report_hash": "cc8de0345fe4af948c920b823dbe389f75bed221f4ef59a210c9a735e5da05b3",
+  "dry_run": true,
+  "execution_report_hash": "c36fbad822431e47d70e9c0b7bbbab882a5d2875bbba201cfc3859b16e8da185",
   "failed_gates": [],
   "gate_results": [
     {
@@ -86,37 +85,12 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-05-13T19:31:30Z",
-  "orders_submitted": [
-    {
-      "broker_order_id": null,
-      "broker_status": null,
-      "client_order_id": "TOS-20260513T193129-EQIX-SELL",
-      "error": "APIError: {\"available\":\"0.023054861\",\"code\":40310000,\"existing_qty\":\"0.023054861\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: 0.023057412, available: 0.023054861)\",\"symbol\":\"EQIX\"}",
-      "limit_price": 1084.25,
-      "notional": 25.0,
-      "side": "sell",
-      "skip_reason": null,
-      "submitted": false,
-      "submitted_at": "2026-05-13T19:31:30Z",
-      "symbol": "EQIX"
-    }
-  ],
-  "orders_validated": [
-    {
-      "client_order_id": "TOS-20260513T193129-EQIX-SELL",
-      "execution_ready": true,
-      "limit_price": 1084.25,
-      "notional": 25.0,
-      "order_type": "limit",
-      "side": "sell",
-      "symbol": "EQIX",
-      "target_weight": 0.0,
-      "validation_skip_reason": null
-    }
-  ],
-  "plan_id": "trade_plan-20260513T193129-1ae31684",
-  "run_id": "execution-20260513T193130-305917e5",
-  "status": "PAPER_ORDER_ERRORS",
-  "trade_plan_hash": "70d351684fd0ff1d656b332817fbe6f1dee77935f2384cc3c2b3771f0c571d59"
+  "generated_at": "2026-05-13T19:33:17Z",
+  "no_submit_reason": "dry_run_mode",
+  "orders_submitted": [],
+  "orders_validated": [],
+  "plan_id": "trade_plan-20260513T193317-e5036a68",
+  "run_id": "execution-20260513T193317-d8bfdaf4",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "5730cbef1c1dc9990c985d7fb9957380ed9658f529e54d0134fc3ab1a753bd5e"
 }
