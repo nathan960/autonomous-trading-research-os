@@ -1505,3 +1505,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "a0c588d2ea1a6bc4dc0bb3f19a2406b54c881a892ab3dbebdf8c48de905ec46e"
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "manual_router_unapproved_plan_test_002",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-13T17:51:11Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "02afe8b90ddabd200bef5c68e611e3bf7f68b444bc979cc8069500a6e6b88b43",
+  "source": "tradingview",
+  "symbol": "SPY",
+  "trade_execution_allowed": false
+}
+```
