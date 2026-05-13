@@ -1041,3 +1041,19 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
   "source": "dry_run_mock"
 }
 ```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -2e-06,
+  "dry_run": false,
+  "equity": 99802.92,
+  "generated_at": "2026-05-13T20:38:12Z",
+  "open_order_count": 0,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260513T203811-800d3da5",
+  "source": "alpaca_paper"
+}
+```
