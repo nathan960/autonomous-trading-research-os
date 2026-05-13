@@ -14837,3 +14837,41 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
   "warnings": []
 }
 ```
+
+## dry_run_execute run
+
+```json
+{
+  "all_gates_pass": true,
+  "dry_run": true,
+  "failed_gates": [],
+  "generated_at": "2026-05-13T19:31:29Z",
+  "no_submit_reason": "dry_run_mode",
+  "orders_ready": 1,
+  "orders_validated": 1,
+  "plan_id": "trade_plan-20260513T193129-1ae31684",
+  "run_id": "execution-20260513T193129-d9b8742a",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "70d351684fd0ff1d656b332817fbe6f1dee77935f2384cc3c2b3771f0c571d59"
+}
+```
+
+## execute_paper run
+
+```json
+{
+  "all_gates_pass": true,
+  "blocked_reason": "all_attempted_orders_failed_broker_submission: ['APIError: {\"available\":\"0.023054861\",\"code\":40310000,\"existing_qty\":\"0.023054861\",\"held_for_orders\":\"0\",\"message\":\"insufficient qty available for order (requested: 0.023057412, available: 0.023054861)\",\"symbol\":\"EQIX\"}']",
+  "dry_run": false,
+  "failed_gates": [],
+  "generated_at": "2026-05-13T19:31:30Z",
+  "orders_submitted": 1,
+  "orders_submitted_err": 1,
+  "orders_submitted_ok": 0,
+  "orders_validated": 1,
+  "plan_id": "trade_plan-20260513T193129-1ae31684",
+  "run_id": "execution-20260513T193130-305917e5",
+  "status": "PAPER_ORDER_ERRORS",
+  "trade_plan_hash": "70d351684fd0ff1d656b332817fbe6f1dee77935f2384cc3c2b3771f0c571d59"
+}
+```
