@@ -14679,3 +14679,41 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
   "trade_plan_hash": "338cb4a89319ff12d217ed489a5ab71dde6b1a9f961bd8f07a20a40d375e58e6"
 }
 ```
+
+## dry_run_execute run
+
+```json
+{
+  "all_gates_pass": true,
+  "dry_run": true,
+  "failed_gates": [],
+  "generated_at": "2026-05-13T19:25:26Z",
+  "no_submit_reason": "dry_run_mode",
+  "orders_ready": 1,
+  "orders_validated": 1,
+  "plan_id": "trade_plan-20260513T192526-c793d98e",
+  "run_id": "execution-20260513T192526-de0f27e6",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e"
+}
+```
+
+## execute_paper run
+
+```json
+{
+  "all_gates_pass": true,
+  "blocked_reason": null,
+  "dry_run": false,
+  "failed_gates": [],
+  "generated_at": "2026-05-13T19:25:27Z",
+  "orders_submitted": 1,
+  "orders_submitted_err": 0,
+  "orders_submitted_ok": 1,
+  "orders_validated": 1,
+  "plan_id": "trade_plan-20260513T192526-c793d98e",
+  "run_id": "execution-20260513T192527-04dacaf4",
+  "status": "PAPER_SUBMITTED",
+  "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e"
+}
+```
