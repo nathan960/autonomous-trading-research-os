@@ -961,3 +961,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "1e3058f4e83a5f632010da1ac1dcb359eb6e2b423c9bf6b9bb02b060f95d2c76"
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "manual_test_tv_spy_002",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-13T13:10:52Z",
+  "next_step": "request_data_refresh",
+  "raw_payload_hash": "2350d412c419d1c74579811e718fe4d5e04406abdb58ece79edb2f2cc100879a",
+  "source": "tradingview",
+  "symbol": "SPY",
+  "trade_execution_allowed": false
+}
+```

@@ -1,0 +1,24 @@
+{
+  "alert_id": "manual_test_tv_spy_002",
+  "asset_class": "us_equity",
+  "blocked_by_default": true,
+  "condition": "manual_test_alert",
+  "confidence": 0.5,
+  "data_timestamp": "2026-05-13T13:30:00Z",
+  "ingested_at": "2026-05-13T13:10:52Z",
+  "metadata": {
+    "note": "Manual GitHub workflow_dispatch test before TradingView webhook setup",
+    "test": true
+  },
+  "next_step": "request_data_refresh",
+  "observed_value": {
+    "close": 500.0
+  },
+  "raw_payload_hash": "2350d412c419d1c74579811e718fe4d5e04406abdb58ece79edb2f2cc100879a",
+  "source": "tradingview",
+  "source_type": "tradingview",
+  "symbol": "SPY",
+  "threshold": null,
+  "trade_execution_allowed": false,
+  "trigger_id": "TV_EXTERNAL_TEST_ALERT_V1"
+}
