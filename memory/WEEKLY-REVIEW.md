@@ -190,3 +190,49 @@ Weekly summaries of triggers, skips, trades, drawdown, data quality, and operati
 - 8 external alert(s) ingested this period, 5 routed.
 
 ---
+## Weekly Review — 2026-05-07 to 2026-05-13 (7 days)
+
+**Generated:** 2026-05-13T19:46:16Z  **Run ID:** weekly_review-2026-05-13
+
+### Trigger Scans
+- Total runs: 0 | Risk-on: 0 | Risk-off: 0
+- Avg candidates: 0.0 | Avg excluded: 0.0
+
+### Dry Runs
+- Total: 0 | Pass: 0 | Fail: 0
+
+### Paper Executions
+- Attempts: 4 | Orders submitted: 4
+  - [2026-05-13] WELL BUY $25.0 @ $218.9 (PAPER_SUBMITTED)
+  - [2026-05-13] JNJ BUY $25.0 @ $230.26 (PAPER_SUBMITTED)
+  - [2026-05-13] EQIX BUY $25.0 @ $1084.52 (PAPER_SUBMITTED)
+  - [2026-05-13] EQIX SELL $25.0 @ $1084.25 (PAPER_ORDER_ERRORS)
+
+### Order Lifecycle
+- Monitor runs: 11 | Unique orders: 3
+- Fills: 3 | Partial: 0 | Missing: 0 | Expired: 0 | Rejected: 0 | Canceled: 0
+- Latest lifecycle by order (3):
+  - TOS-20260513T160035-WELL-BUY | WELL buy | status=filled fill=$218.808 qty=0.11425542 notional=$25.0 | checked=2026-05-13T19:32:15Z
+  - TOS-20260513T192526-JNJ-BUY | JNJ buy | status=filled fill=$230.248 qty=0.108578576 notional=$25.0 | checked=2026-05-13T19:32:15Z
+  - TOS-20260513T192934-EQIX-BUY | EQIX buy | status=filled fill=$1084.37 qty=0.023054861 notional=$25.0 | checked=2026-05-13T19:32:15Z
+
+### External Alerts
+- Ingested this period: 8 (all-time: 8)
+- Routes this period: 5 (all-time: 5)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Risk State
+- Equity: $99,803.07 | Peak: $99,803.14 | Drawdown: -0.00% | Positions: 3
+- Last updated: 2026-05-13T19:33:16Z
+
+### Operational Issues (1)
+- Paper execution execution-20260513T193130-305917e5 had unexpected status: PAPER_ORDER_ERRORS
+
+### Research Observations
+- 4 paper execution attempt(s), 4 order(s) submitted.
+- 3 order fill(s) confirmed by order monitor.
+- 8 external alert(s) ingested this period, 5 routed.
+
+---
