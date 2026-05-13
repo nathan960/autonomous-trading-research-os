@@ -1458,3 +1458,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trade_execution_allowed": false
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "manual_router_unapproved_plan_test_001",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-13T17:20:57Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "5a4f57e7dcf0ad83d61d6aed585c77a8245109244a94d1143210b0ebecd026d0",
+  "source": "tradingview",
+  "symbol": "SPY",
+  "trade_execution_allowed": false
+}
+```

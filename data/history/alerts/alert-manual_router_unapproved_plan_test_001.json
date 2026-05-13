@@ -1,0 +1,26 @@
+{
+  "alert_id": "manual_router_unapproved_plan_test_001",
+  "asset_class": "us_equity",
+  "blocked_by_default": true,
+  "condition": "manual_router_unapproved_plan_test",
+  "confidence": 0.5,
+  "data_timestamp": "2026-05-13T16:45:00Z",
+  "ingested_at": "2026-05-13T17:20:57Z",
+  "metadata": {
+    "note": "Router test only. Must generate unapproved trade plan. No execution authorization.",
+    "test": true
+  },
+  "next_step": "request_trade_plan_unapproved",
+  "observed_value": {
+    "close": 500.0
+  },
+  "raw_payload_hash": "5a4f57e7dcf0ad83d61d6aed585c77a8245109244a94d1143210b0ebecd026d0",
+  "source": "tradingview",
+  "source_type": "tradingview",
+  "symbol": "SPY",
+  "threshold": {
+    "test": true
+  },
+  "trade_execution_allowed": false,
+  "trigger_id": "TV_SPY_REGIME_ROUTER_TEST_V1"
+}
