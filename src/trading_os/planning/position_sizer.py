@@ -67,8 +67,9 @@ def compute_proposed_orders(
 
     Returns:
         List of order dicts, each with:
-            symbol, side, order_type, limit_price, notional, target_weight,
-            current_value, target_value, delta_value, would_short, skip_reason
+            symbol, side, order_type, time_in_force, limit_price, notional,
+            target_weight, current_value, target_value, delta_value,
+            would_short, skip_reason
     """
     orders: list = []
     processed: set = set()
@@ -98,6 +99,7 @@ def compute_proposed_orders(
             "symbol": sym,
             "side": side,
             "order_type": "limit",
+            "time_in_force": "day",
             "limit_price": limit_price,
             "notional": round(notional, 2),
             "target_weight": round(target_weight, 8),
@@ -123,6 +125,7 @@ def compute_proposed_orders(
             "symbol": sym,
             "side": "sell",
             "order_type": "limit",
+            "time_in_force": "day",
             "limit_price": limit_price,
             "notional": round(current_value, 2),
             "target_weight": 0.0,

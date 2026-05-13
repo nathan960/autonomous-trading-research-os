@@ -369,3 +369,51 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
   "source": "alpaca_paper"
 }
 ```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.000615,
+  "dry_run": true,
+  "equity": 99627.95,
+  "generated_at": "2026-05-13T12:31:35Z",
+  "open_order_count": 0,
+  "peak_equity": 99689.29,
+  "position_count": 10,
+  "run_id": "monitor_positions-20260513T123135-d4a372aa",
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.598753,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-13T12:31:42Z",
+  "open_order_count": 0,
+  "peak_equity": 99689.29,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260513T123142-3e5f8508",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": 0.0,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-13T12:33:18Z",
+  "open_order_count": 0,
+  "peak_equity": 40000.0,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260513T123318-7692cba2",
+  "source": "dry_run_mock"
+}
+```
