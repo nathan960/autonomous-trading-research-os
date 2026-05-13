@@ -334,8 +334,9 @@ class TestBuildOutcomeSnapshot:
 
     def _snap(self, lifecycles, positions=None, prices=None, existing=None, generated_at=None):
         report = _monitor_report(lifecycles, generated_at=generated_at or self.CHECKED_AT)
-        positions_snap = {"positions": positions or []}
+        positions_snap = {"source": "alpaca_paper", "positions": positions or []}
         ms = _market_snapshot(prices or {"WELL": 220.85, "SPY": 743.0, "BIL": 91.5})
+        ms["source"] = "alpaca_paper"
         return build_outcome_snapshot(report, positions_snap, ms, existing_outcomes=existing)
 
     def test_filled_order_creates_record(self):

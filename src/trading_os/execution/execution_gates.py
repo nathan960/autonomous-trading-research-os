@@ -25,6 +25,7 @@ import os
 from pathlib import Path
 from typing import Any, Optional
 
+from ..source_integrity import check_execution_snapshots
 from ..time_utils import iso_age_minutes, utc_now_iso
 
 
@@ -70,6 +71,33 @@ def gate_alpaca_paper_mode(ctx: dict) -> dict:
 
 # ── Gate 3 ───────────────────────────────────────────────────────────────────
 
+def gate_canonical_source_integrity(ctx: dict) -> dict:
+    """Confirm all execution-critical snapshots carry source='alpaca_paper'.
+
+    Fails if any snapshot has source=dry_run_mock, stored_snapshot, local_mock,
+    or unknown. Paper orders must never be based on mock data.
+    """
+    result = check_execution_snapshots(
+        account_snapshot=ctx.get("account_snapshot", {}),
+        positions_snapshot=ctx.get("positions_snapshot", {}),
+        orders_snapshot=ctx.get("orders_snapshot", {}),
+        market_snapshot=ctx.get("market_snapshot", {}),
+    )
+    if result["passes"]:
+        return _gate("CANONICAL_SOURCE_INTEGRITY", True)
+    failed_desc = "; ".join(
+        f"{c['name']}={c['source']!r}" for c in result["failed"]
+    )
+    return _gate(
+        "CANONICAL_SOURCE_INTEGRITY",
+        False,
+        f"mock/invalid snapshot source(s) detected: {failed_desc}. "
+        "Run live Data Refresh (refresh_data.py without --dry-run) before paper execution.",
+    )
+
+
+# ── Gate 4 ───────────────────────────────────────────────────────────────────
+
 def gate_plan_exists(ctx: dict) -> dict:
     """Confirm trade_plan was loaded and contains required fields."""
     trade_plan = ctx.get("trade_plan", {})
@@ -82,7 +110,7 @@ def gate_plan_exists(ctx: dict) -> dict:
     return _gate("TRADE_PLAN_EXISTS", True)
 
 
-# ── Gate 4 ───────────────────────────────────────────────────────────────────
+# ── Gate 5 ───────────────────────────────────────────────────────────────────
 
 def gate_plan_not_expired(ctx: dict) -> dict:
     """Confirm trade_plan.expires_at is in the future."""
@@ -98,7 +126,7 @@ def gate_plan_not_expired(ctx: dict) -> dict:
     return _gate("TRADE_PLAN_NOT_EXPIRED", True)
 
 
-# ── Gate 5 ───────────────────────────────────────────────────────────────────
+# ── Gate 6 ───────────────────────────────────────────────────────────────────
 
 def gate_market_clock_open(ctx: dict) -> dict:
     """Confirm market clock reports open; informational (non-blocking) in dry-run."""
@@ -117,7 +145,7 @@ def gate_market_clock_open(ctx: dict) -> dict:
     return _gate("MARKET_CLOCK_OPEN", False, detail)
 
 
-# ── Gate 6 ───────────────────────────────────────────────────────────────────
+# ── Gate 7 ───────────────────────────────────────────────────────────────────
 
 def gate_account_not_blocked(ctx: dict) -> dict:
     """Confirm account status is ACTIVE."""
@@ -130,7 +158,7 @@ def gate_account_not_blocked(ctx: dict) -> dict:
     )
 
 
-# ── Gate 7 ───────────────────────────────────────────────────────────────────
+# ── Gate 8 ───────────────────────────────────────────────────────────────────
 
 def gate_risk_state_not_paused(ctx: dict) -> dict:
     """Confirm risk state is not paused and drawdown is within block threshold."""
@@ -151,7 +179,7 @@ def gate_risk_state_not_paused(ctx: dict) -> dict:
     return _gate("RISK_STATE_NOT_PAUSED", True)
 
 
-# ── Gate 8 ───────────────────────────────────────────────────────────────────
+# ── Gate 9 ───────────────────────────────────────────────────────────────────
 
 def gate_positions_match_snapshot(ctx: dict) -> dict:
     """Confirm positions snapshot is fresh and position count is internally consistent."""
@@ -179,7 +207,7 @@ def gate_positions_match_snapshot(ctx: dict) -> dict:
     return _gate("POSITIONS_MATCH_SNAPSHOT", True)
 
 
-# ── Gate 9 ───────────────────────────────────────────────────────────────────
+# ── Gate 10 ─────────────────────────────────────────────────────────────────
 
 def gate_no_duplicate_open_orders(ctx: dict) -> dict:
     """Confirm no open orders exist for symbols we are about to trade."""
@@ -202,7 +230,7 @@ def gate_no_duplicate_open_orders(ctx: dict) -> dict:
     return _gate("NO_DUPLICATE_OPEN_ORDERS", True)
 
 
-# ── Gate 10 ──────────────────────────────────────────────────────────────────
+# ── Gate 11 ─────────────────────────────────────────────────────────────────
 
 def gate_universe_membership(ctx: dict) -> dict:
     """Confirm every proposed symbol is in universe.json or the allowed fallbacks list."""
@@ -232,7 +260,7 @@ def gate_universe_membership(ctx: dict) -> dict:
     return _gate("UNIVERSE_MEMBERSHIP", True)
 
 
-# ── Gate 11 ──────────────────────────────────────────────────────────────────
+# ── Gate 12 ─────────────────────────────────────────────────────────────────
 
 def gate_symbols_tradable(ctx: dict) -> dict:
     """Confirm proposed symbols are tradable US equities (universe membership as proxy in dry-run)."""
@@ -261,7 +289,7 @@ def gate_symbols_tradable(ctx: dict) -> dict:
     return _gate("SYMBOLS_TRADABLE", True)
 
 
-# ── Gate 12 ──────────────────────────────────────────────────────────────────
+# ── Gate 13 ─────────────────────────────────────────────────────────────────
 
 def gate_quote_freshness(ctx: dict) -> dict:
     """Confirm quotes exist and are fresh for all proposed symbols."""
@@ -297,7 +325,7 @@ def gate_quote_freshness(ctx: dict) -> dict:
     return _gate("QUOTE_FRESHNESS", True)
 
 
-# ── Gate 13 ──────────────────────────────────────────────────────────────────
+# ── Gate 14 ─────────────────────────────────────────────────────────────────
 
 def gate_spread_not_too_wide(ctx: dict) -> dict:
     """Confirm bid-ask spread is within limits for all proposed symbols."""
@@ -329,7 +357,7 @@ def gate_spread_not_too_wide(ctx: dict) -> dict:
     return _gate("SPREAD_NOT_TOO_WIDE", True)
 
 
-# ── Gate 14 ──────────────────────────────────────────────────────────────────
+# ── Gate 15 ─────────────────────────────────────────────────────────────────
 
 def gate_risk_limits_respected(ctx: dict) -> dict:
     """Confirm proposed orders respect per-order and per-plan risk limits.
@@ -391,7 +419,7 @@ def gate_risk_limits_respected(ctx: dict) -> dict:
     return _gate("RISK_LIMITS_RESPECTED", True)
 
 
-# ── Gate 15 ──────────────────────────────────────────────────────────────────
+# ── Gate 16 ─────────────────────────────────────────────────────────────────
 
 def gate_no_prohibited_orders(ctx: dict) -> dict:
     """Confirm no options, crypto, short-sells, or extended-hours orders."""
@@ -425,7 +453,7 @@ def gate_no_prohibited_orders(ctx: dict) -> dict:
     return _gate("NO_PROHIBITED_ORDERS", True)
 
 
-# ── Gate 16 ──────────────────────────────────────────────────────────────────
+# ── Gate 17 ─────────────────────────────────────────────────────────────────
 
 def gate_execution_log_writable(ctx: dict) -> dict:
     """Confirm the execution history directory can be written to."""
@@ -450,6 +478,7 @@ def gate_execution_log_writable(ctx: dict) -> dict:
 _GATE_FUNCTIONS = [
     gate_trading_mode_paper,
     gate_alpaca_paper_mode,
+    gate_canonical_source_integrity,
     gate_plan_exists,
     gate_plan_not_expired,
     gate_market_clock_open,

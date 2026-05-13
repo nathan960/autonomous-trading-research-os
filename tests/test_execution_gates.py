@@ -93,6 +93,7 @@ def _order(
 
 def _account_snapshot(status: str = "ACTIVE", is_open: bool = True, pos_count: int = 0) -> dict:
     return {
+        "source": "alpaca_paper",
         "account": {"equity": "40000.00", "cash": "40000.00", "status": status},
         "clock": {"is_open": is_open, "timestamp": utc_now_iso()},
         "position_count": pos_count,
@@ -102,6 +103,7 @@ def _account_snapshot(status: str = "ACTIVE", is_open: bool = True, pos_count: i
 
 def _positions_snapshot(pos_count: int = 0, age_minutes: int = 5) -> dict:
     return {
+        "source": "alpaca_paper",
         "positions": [],
         "position_count": pos_count,
         "fetched_at": _past_ts(age_minutes),
@@ -109,13 +111,14 @@ def _positions_snapshot(pos_count: int = 0, age_minutes: int = 5) -> dict:
 
 
 def _orders_snapshot(orders: list | None = None) -> dict:
-    return {"orders": orders or [], "open_order_count": len(orders or [])}
+    return {"source": "alpaca_paper", "orders": orders or [], "open_order_count": len(orders or [])}
 
 
 def _market_snapshot(symbols: list | None = None, spread_pct: float = 0.001) -> dict:
     syms = symbols or ["AAPL", "MSFT", "BIL"]
     now = utc_now_iso()
     return {
+        "source": "alpaca_paper",
         "generated_at": now,
         "quotes": {sym: {"symbol": sym, "bid_price": 100.0, "ask_price": 100.1, "timestamp": now} for sym in syms},
         "spreads": {sym: {"symbol": sym, "spread_pct": spread_pct} for sym in syms},
@@ -575,11 +578,11 @@ class TestGateExecutionLogWritable:
 # ===========================================================================
 
 class TestRunAllGates:
-    def test_returns_16_results(self):
+    def test_returns_17_results(self):
         with tempfile.TemporaryDirectory() as td:
             ctx = _ctx(exec_dir=Path(td) / "exec")
             results = run_all_gates(ctx)
-            assert len(results) == 16
+            assert len(results) == 17
 
     def test_each_result_has_required_keys(self):
         with tempfile.TemporaryDirectory() as td:
@@ -601,7 +604,7 @@ class TestRunAllGates:
     def test_never_raises_on_bad_context(self):
         results = run_all_gates({})
         assert isinstance(results, list)
-        assert len(results) == 16
+        assert len(results) == 17
 
     def test_gate_ids_are_unique(self):
         with tempfile.TemporaryDirectory() as td:

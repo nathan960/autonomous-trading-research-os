@@ -30,6 +30,9 @@ sys.path.insert(0, str(_ROOT / "src"))
 from trading_os.config import (
     LATEST_DIR,
     MEMORY_DIR,
+    SANDBOX_HISTORY_DIR,
+    SANDBOX_LATEST_DIR,
+    SANDBOX_MEMORY_DIR,
     SNAPSHOTS_DIR,
     load_config_file,
 )
@@ -51,8 +54,8 @@ def _write_json(path: Path, payload: Any) -> None:
     print(f"  wrote {path.relative_to(_ROOT)}")
 
 
-def _append_quality_log(report: dict) -> None:
-    log_path = MEMORY_DIR / "DATA-QUALITY-LOG.md"
+def _append_quality_log(report: dict, memory_dir: Path | None = None) -> None:
+    log_path = (memory_dir or MEMORY_DIR) / "DATA-QUALITY-LOG.md"
     log_path.parent.mkdir(parents=True, exist_ok=True)
     existing = log_path.read_text(encoding="utf-8") if log_path.exists() else ""
     if existing and not existing.endswith("\n"):
@@ -80,9 +83,9 @@ def _append_quality_log(report: dict) -> None:
     log_path.write_text(existing + block, encoding="utf-8")
 
 
-def _archive_snapshot(market_snapshot: dict, fetched_at: str) -> None:
+def _archive_snapshot(market_snapshot: dict, fetched_at: str, snapshots_dir: Path | None = None) -> None:
     ts = fetched_at.replace(":", "").replace("-", "").replace("Z", "")
-    archive_path = SNAPSHOTS_DIR / f"{ts}_market_snapshot.json"
+    archive_path = (snapshots_dir or SNAPSHOTS_DIR) / f"{ts}_market_snapshot.json"
     _write_json(archive_path, market_snapshot)
 
 
@@ -233,6 +236,21 @@ def main() -> int:
 
     print(f"=== refresh_data.py  dry_run={args.dry_run} ===")
 
+    # --- Resolve output paths based on mode ----------------------------
+    if args.dry_run:
+        out_latest = SANDBOX_LATEST_DIR
+        out_snapshots = SANDBOX_HISTORY_DIR / "snapshots"
+        out_memory = SANDBOX_MEMORY_DIR
+        print(
+            "WARNING: DRY RUN — outputs go to data/sandbox/ and memory/sandbox/. "
+            "Canonical data/latest/ and memory/ are NOT modified."
+        )
+    else:
+        out_latest = LATEST_DIR
+        out_snapshots = SNAPSHOTS_DIR
+        out_memory = MEMORY_DIR
+        print("Mode: LIVE — writing to canonical data/latest/ and memory/.")
+
     # --- Load config ---------------------------------------------------
     try:
         universe = load_config_file("universe.json")
@@ -279,10 +297,10 @@ def main() -> int:
     fetched_at = account_snapshot.get("fetched_at") or utc_now_iso()
 
     # --- Write individual snapshots -----------------------------------
-    LATEST_DIR.mkdir(parents=True, exist_ok=True)
+    out_latest.mkdir(parents=True, exist_ok=True)
 
     _write_json(
-        LATEST_DIR / "account_snapshot.json",
+        out_latest / "account_snapshot.json",
         {k: v for k, v in account_snapshot.items() if k not in {"positions", "orders"}},
     )
     _pos_payload: dict = {
@@ -293,7 +311,7 @@ def main() -> int:
         "position_count": account_snapshot.get("position_count", 0),
     }
     _pos_payload["data_hash"] = stable_hash(_pos_payload)
-    _write_json(LATEST_DIR / "positions_snapshot.json", _pos_payload)
+    _write_json(out_latest / "positions_snapshot.json", _pos_payload)
 
     _ord_payload: dict = {
         "schema_version": "0.1.0",
@@ -303,14 +321,14 @@ def main() -> int:
         "open_order_count": account_snapshot.get("open_order_count", 0),
     }
     _ord_payload["data_hash"] = stable_hash(_ord_payload)
-    _write_json(LATEST_DIR / "orders_snapshot.json", _ord_payload)
+    _write_json(out_latest / "orders_snapshot.json", _ord_payload)
 
     # Combined market_snapshot.json (backward-compatible with existing pipeline).
     combined = _build_combined_snapshot(account_snapshot, market_snapshot)
     combined["run_id"] = run_id
     _mkt_base = {k: v for k, v in combined.items() if k != "data_hash"}
     combined["data_hash"] = stable_hash(_mkt_base)
-    _write_json(LATEST_DIR / "market_snapshot.json", combined)
+    _write_json(out_latest / "market_snapshot.json", combined)
 
     # --- Data quality -------------------------------------------------
     quality_report = build_quality_report(
@@ -322,14 +340,15 @@ def main() -> int:
         max_snapshot_age_minutes=float(params.get("max_snapshot_age_minutes", 90.0)),
         run_id=run_id,
     )
-    _write_json(LATEST_DIR / "data_quality_snapshot.json", quality_report)
+    _write_json(out_latest / "data_quality_snapshot.json", quality_report)
 
     # --- Archive market snapshot -------------------------------------
-    _archive_snapshot(combined, fetched_at)
+    _archive_snapshot(combined, fetched_at, snapshots_dir=out_snapshots)
 
     # --- Update DATA-QUALITY-LOG.md ----------------------------------
-    _append_quality_log(quality_report)
-    print(f"  appended memory/DATA-QUALITY-LOG.md")
+    _append_quality_log(quality_report, memory_dir=out_memory)
+    log_label = "memory/sandbox/DATA-QUALITY-LOG.md" if args.dry_run else "memory/DATA-QUALITY-LOG.md"
+    print(f"  appended {log_label}")
 
     # --- Summary ------------------------------------------------------
     status = quality_report.get("status", "UNKNOWN")
@@ -339,7 +358,13 @@ def main() -> int:
         print(f"Issues: {', '.join(issues)}")
     else:
         print("No data-quality issues detected.")
-    print(f"PASS: refresh_data completed  run_id={run_id}")
+    if args.dry_run:
+        print(
+            f"PASS: refresh_data DRY RUN completed  run_id={run_id}  "
+            "(sandbox only — canonical data/latest/ NOT modified)"
+        )
+    else:
+        print(f"PASS: refresh_data completed  run_id={run_id}")
     return 0
 
 

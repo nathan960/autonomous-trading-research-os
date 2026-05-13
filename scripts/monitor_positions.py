@@ -35,8 +35,11 @@ from trading_os.config import (
     HISTORY_DIR,
     LATEST_DIR,
     MEMORY_DIR,
+    SANDBOX_HISTORY_DIR,
+    SANDBOX_MEMORY_DIR,
     load_risk_state,
 )
+from trading_os.source_integrity import is_mock_source
 from trading_os.hashing import stable_hash
 from trading_os.time_utils import utc_now_iso
 
@@ -337,21 +340,79 @@ def main() -> int:
         {k: v for k, v in portfolio_report.items() if k != "data_hash"}
     )
 
+    # ── Determine whether outputs are canonical or sandbox ───────────────────
+    # Write to sandbox (not canonical) if:
+    #   - --dry-run was passed, OR
+    #   - the positions source is a mock/dry-run value
+    use_sandbox = args.dry_run or is_mock_source(source)
+
+    if use_sandbox:
+        print(
+            f"  WARNING: source={source!r} or --dry-run — "
+            "writing to sandbox only. NOT modifying canonical memory/RISK-STATE.json."
+        )
+        sandbox_portfolio_dir = SANDBOX_HISTORY_DIR / "portfolio"
+        sandbox_monitor_log = SANDBOX_MEMORY_DIR / "POSITION-MONITOR.md"
+        sandbox_risk_state = SANDBOX_MEMORY_DIR / "RISK-STATE.json"
+    else:
+        print(f"  source={source!r} — writing to canonical paths.")
+
     # ── Write outputs ─────────────────────────────────────────────────────────
-    # 1. Update RISK-STATE.json (atomic)
-    _write_json(_RISK_STATE_PATH, new_risk_state)
+    if use_sandbox:
+        # 1. Sandbox risk state (never touches canonical RISK-STATE.json)
+        _write_json(sandbox_risk_state, new_risk_state)
 
-    # 2. Write per-run portfolio report to history
-    _PORTFOLIO_DIR.mkdir(parents=True, exist_ok=True)
-    portfolio_path = _PORTFOLIO_DIR / f"{run_id}_portfolio.json"
-    _write_json(portfolio_path, portfolio_report)
+        # 2. Sandbox portfolio history
+        sandbox_portfolio_dir.mkdir(parents=True, exist_ok=True)
+        portfolio_path = sandbox_portfolio_dir / f"{run_id}_portfolio.json"
+        _write_json(portfolio_path, portfolio_report)
 
-    # 3. Append to POSITION-MONITOR.md log
-    _append_monitor_log(portfolio_report)
+        # 3. Sandbox monitor log
+        _MONITOR_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+        sandbox_monitor_log.parent.mkdir(parents=True, exist_ok=True)
+        existing = (
+            sandbox_monitor_log.read_text(encoding="utf-8")
+            if sandbox_monitor_log.exists()
+            else ""
+        )
+        if existing and not existing.endswith("\n"):
+            existing += "\n"
+        summary = {
+            "run_id": portfolio_report.get("run_id"),
+            "generated_at": portfolio_report.get("generated_at"),
+            "source": portfolio_report.get("source"),
+            "equity": portfolio_report.get("equity"),
+            "peak_equity": portfolio_report.get("peak_equity"),
+            "drawdown": portfolio_report.get("drawdown"),
+            "position_count": portfolio_report.get("position_count"),
+            "open_order_count": portfolio_report.get("open_order_count"),
+            "dry_run": portfolio_report.get("dry_run"),
+            "sandbox": True,
+        }
+        block = (
+            "\n## monitor_positions run (SANDBOX)\n\n"
+            "```json\n"
+            + json.dumps(summary, indent=2, sort_keys=True, default=str)
+            + "\n```\n"
+        )
+        sandbox_monitor_log.write_text(existing + block, encoding="utf-8")
+        print(f"  appended {sandbox_monitor_log.relative_to(_ROOT)}")
+    else:
+        # 1. Update canonical RISK-STATE.json (atomic)
+        _write_json(_RISK_STATE_PATH, new_risk_state)
+
+        # 2. Write per-run portfolio report to canonical history
+        _PORTFOLIO_DIR.mkdir(parents=True, exist_ok=True)
+        portfolio_path = _PORTFOLIO_DIR / f"{run_id}_portfolio.json"
+        _write_json(portfolio_path, portfolio_report)
+
+        # 3. Append to canonical POSITION-MONITOR.md log
+        _append_monitor_log(portfolio_report)
 
     print(
         f"[monitor_positions] done  run_id={run_id}  "
-        f"equity={equity}  drawdown={drawdown:.4%}"
+        f"equity={equity}  drawdown={drawdown:.4%}  "
+        f"{'(sandbox)' if use_sandbox else '(canonical)'}"
     )
     return 0
 

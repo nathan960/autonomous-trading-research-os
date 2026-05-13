@@ -19,6 +19,7 @@ from typing import Any, Optional
 
 from ..config import HISTORY_DIR, LATEST_DIR, MEMORY_DIR
 from ..hashing import stable_hash
+from ..source_integrity import STATUS_DATA_INTEGRITY_BLOCK
 from ..time_utils import utc_now_iso
 
 
@@ -399,41 +400,73 @@ def _collect_fill_stats(orders_dir: Path, dates: list) -> dict:
 
 
 def _collect_outcome_stats(outcome_snapshot: dict) -> dict:
-    """Aggregate P/L and slippage from outcome snapshot."""
+    """Aggregate P/L and slippage from outcome snapshot.
+
+    If the outcome snapshot carries source_integrity_status != 'ok', P/L values
+    are blocked and recommendations are marked as data_integrity_block.
+    """
+    # Check snapshot-level source integrity set by outcome_tracker
+    snapshot_integrity = outcome_snapshot.get("source_integrity_status", "ok")
+    integrity_blocked = snapshot_integrity != "ok"
+    integrity_note = outcome_snapshot.get("source_integrity_note")
+
     outcomes = outcome_snapshot.get("outcomes", [])
-    slippages = [_safe_float(o.get("slippage_pct")) for o in outcomes if o.get("slippage_pct") is not None]
-    returns = [_safe_float(o.get("current_return_pct")) for o in outcomes if o.get("current_return_pct") is not None]
+
+    # Only use returns/slippage from outcomes with clean integrity
+    clean_outcomes = [
+        o for o in outcomes
+        if (o.get("source_integrity_status") or "ok") == "ok"
+    ] if not integrity_blocked else []
+
+    slippages = [_safe_float(o.get("slippage_pct")) for o in clean_outcomes if o.get("slippage_pct") is not None]
+    returns = [_safe_float(o.get("current_return_pct")) for o in clean_outcomes if o.get("current_return_pct") is not None]
 
     by_symbol: dict = {}
     for o in outcomes:
         sym = o.get("symbol", "?")
+        o_integrity = o.get("source_integrity_status", "ok")
         by_symbol[sym] = {
             "symbol": sym,
             "fill_price": o.get("fill_price"),
-            "current_price": o.get("current_price"),
+            "current_price": o.get("current_price") if o_integrity == "ok" else None,
             "slippage_pct": o.get("slippage_pct"),
-            "current_return_pct": o.get("current_return_pct"),
-            "current_unrealized_pl": o.get("current_unrealized_pl"),
+            "current_return_pct": o.get("current_return_pct") if o_integrity == "ok" else None,
+            "current_unrealized_pl": o.get("current_unrealized_pl") if o_integrity == "ok" else None,
             "filled_at": o.get("filled_at"),
             "entry_or_exit": o.get("entry_or_exit"),
+            "source_integrity_status": o_integrity,
         }
 
     n = len(outcomes)
-    label = "insufficient_sample" if n < MIN_FILL_SAMPLE else "sufficient"
-    rec = "needs_more_data" if n < MIN_FILL_SAMPLE else "keep_observing"
-    rec_reason = (
-        f"Only {n} filled order(s) — need {MIN_FILL_SAMPLE}+ for any P/L conclusions. "
-        "Do not change strategy from this sample."
-        if n < MIN_FILL_SAMPLE
-        else f"{n} fills. Outcome data available for review."
-    )
+
+    if integrity_blocked:
+        label = "blocked_mock_source"
+        rec = STATUS_DATA_INTEGRITY_BLOCK
+        rec_reason = (
+            f"P/L scoring blocked — outcome snapshot source_integrity_status="
+            f"{snapshot_integrity!r}. "
+            + (integrity_note or "Run live Data Refresh to restore canonical snapshots.")
+        )
+    elif n < MIN_FILL_SAMPLE:
+        label = "insufficient_sample"
+        rec = "needs_more_data"
+        rec_reason = (
+            f"Only {n} filled order(s) — need {MIN_FILL_SAMPLE}+ for any P/L conclusions. "
+            "Do not change strategy from this sample."
+        )
+    else:
+        label = "sufficient"
+        rec = "keep_observing"
+        rec_reason = f"{n} fills. Outcome data available for review."
 
     return {
         "total_outcomes": n,
-        "avg_slippage_pct": _avg(slippages),
-        "avg_current_return_pct": _avg(returns),
+        "avg_slippage_pct": _avg(slippages) if not integrity_blocked else None,
+        "avg_current_return_pct": _avg(returns) if not integrity_blocked else None,
         "by_symbol": by_symbol,
         "sample_status": label,
+        "source_integrity_status": snapshot_integrity,
+        "source_integrity_note": integrity_note,
         "recommendation": rec,
         "recommendation_reason": rec_reason,
     }
@@ -590,13 +623,20 @@ def _generate_observations(
         )
     )
 
-    avg_ret = outcome_stats.get("avg_current_return_pct")
-    if avg_ret is not None:
+    outcome_integrity = outcome_stats.get("source_integrity_status", "ok")
+    if outcome_integrity != "ok":
         obs.append(
-            f"Average current return across {outcome_stats.get('total_outcomes', 0)} "
-            f"tracked outcome(s): {avg_ret:+.3%}. "
-            "Window pending — no conclusions yet."
+            f"P/L DATA BLOCKED: outcome_snapshot source_integrity_status={outcome_integrity!r}. "
+            "Current returns are not reported. Run live Data Refresh to restore canonical snapshots."
         )
+    else:
+        avg_ret = outcome_stats.get("avg_current_return_pct")
+        if avg_ret is not None:
+            obs.append(
+                f"Average current return across {outcome_stats.get('total_outcomes', 0)} "
+                f"tracked outcome(s): {avg_ret:+.3%}. "
+                "Window pending — no conclusions yet."
+            )
 
     obs.append(
         "IMPORTANT: With only a few paper fills, no trigger should be promoted or "

@@ -29,6 +29,11 @@ LATEST_DIR = DATA_DIR / "latest"
 HISTORY_DIR = DATA_DIR / "history"
 SNAPSHOTS_DIR = HISTORY_DIR / "snapshots"
 
+SANDBOX_DIR = DATA_DIR / "sandbox"
+SANDBOX_LATEST_DIR = SANDBOX_DIR / "latest"
+SANDBOX_HISTORY_DIR = SANDBOX_DIR / "history"
+SANDBOX_MEMORY_DIR = MEMORY_DIR / "sandbox"
+
 REQUIRED_CONFIG_FILES: tuple = (
     "strategy.json",
     "risk_limits.json",

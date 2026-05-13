@@ -50,7 +50,7 @@ jobs:
         run: python scripts/monitor_positions.py
 
       - name: Validate
-        run: python scripts/validate_all.py
+        run: python scripts/validate_all.py --execution-check
 
       - name: Commit data and memory artifacts
         if: always()
@@ -62,6 +62,8 @@ jobs:
           git status --short
 
           git add -A data memory
+          # Never commit sandbox files — dry-run outputs stay local only
+          git restore --staged data/sandbox memory/sandbox 2>/dev/null || true
 
           echo "Git status after staging:"
           git status --short

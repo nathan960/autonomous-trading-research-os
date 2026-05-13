@@ -2179,44 +2179,67 @@ Data refreshes and quality reviews are logged here.
 }
 ```
 
-## refresh_data run
+## Data refresh completed
 
 ```json
 {
-  "generated_at": "2026-05-13T20:38:11Z",
-  "insufficient_bars_count": 0,
-  "issues": [
-    "wide_spreads"
-  ],
-  "market_data_hash": "b956bb2eb165a475a4216e602322f0317e0a401db78e8dc4c38bfbcc3293e674",
-  "missing_bars_count": 0,
-  "not_tradable_count": 0,
-  "run_id": "refresh_data-20260513T203805",
-  "snapshot_age_minutes": 0.0695307,
-  "snapshot_fetched_at": "2026-05-13T20:38:07Z",
-  "status": "ATTENTION_REQUIRED",
-  "symbols_expected": 81,
-  "symbols_with_bars": 81
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T20:55:24Z",
+  "run_id": "data_refresh-20260513T205524-12dc5eb0",
+  "source_data_hash": "bf66951ebac5dbe4775a62481abe0ff130f14bc74ed739b7cb78ed93c43823a8",
+  "symbols": 81
 }
 ```
 
-## refresh_data run
+## Data refresh completed
 
 ```json
 {
-  "generated_at": "2026-05-13T20:39:56Z",
-  "insufficient_bars_count": 0,
-  "issues": [
-    "wide_spreads"
-  ],
-  "market_data_hash": "d9f324d488fabf5b29a64c504570a27086a16c1e51e3edb5970e6fccf73b6926",
-  "missing_bars_count": 0,
-  "not_tradable_count": 0,
-  "run_id": "refresh_data-20260513T203953",
-  "snapshot_age_minutes": 0.040042266666666666,
-  "snapshot_fetched_at": "2026-05-13T20:39:54Z",
-  "status": "ATTENTION_REQUIRED",
-  "symbols_expected": 81,
-  "symbols_with_bars": 81
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T20:57:04Z",
+  "run_id": "data_refresh-20260513T205704-f035e936",
+  "source_data_hash": "1670c78c7fb7ece0d63da0abe5be55db65449ba5fe4356ee26543cb9a627f0d5",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T20:57:13Z",
+  "run_id": "data_refresh-20260513T205713-21603a0e",
+  "source_data_hash": "708348d0b5d577daaa606379d5f586982c0f29f43de81972f0597a52633ef746",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T20:57:23Z",
+  "run_id": "data_refresh-20260513T205723-2b531053",
+  "source_data_hash": "99efb17e5121205feb5bd89fe403c9ad52f24daf50795d6b402b6baf4e5b9b61",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T20:58:15Z",
+  "run_id": "data_refresh-20260513T205815-0f4e598d",
+  "source_data_hash": "c5f84fbbff609101ad8e2a24aca0eb7a6b72c9d8fc39fbfb648eb885d82b35c1",
+  "symbols": 81
 }
 ```

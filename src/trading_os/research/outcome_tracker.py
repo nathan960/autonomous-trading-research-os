@@ -19,6 +19,7 @@ from typing import Any, Optional
 
 from ..config import HISTORY_DIR, LATEST_DIR, MEMORY_DIR
 from ..hashing import stable_hash
+from ..source_integrity import get_snapshot_source, is_mock_source
 from ..time_utils import parse_iso_utc, utc_now_iso
 
 
@@ -134,6 +135,8 @@ def build_outcome_record(
     market_snapshot: dict,
     checked_at: str,
     first_seen_at: Optional[str] = None,
+    positions_integrity_blocked: bool = False,
+    market_integrity_blocked: bool = False,
 ) -> dict:
     """Build an outcome record from one filled lifecycle entry.
 
@@ -143,6 +146,8 @@ def build_outcome_record(
         market_snapshot: Full market_snapshot dict for current prices.
         checked_at:     ISO timestamp for this run.
         first_seen_at:  Preserved from an earlier record (not overwritten on update).
+        positions_integrity_blocked: True if positions_snapshot source is mock/invalid.
+        market_integrity_blocked:    True if market_snapshot source is mock/invalid.
 
     Returns an outcome dict. Never submits anything.
     """
@@ -158,29 +163,43 @@ def build_outcome_record(
 
     slippage, slippage_pct = _compute_slippage(fill_price, limit_price)
 
-    # Current position data
-    pos = _get_position(symbol, positions)
-    market_price = _get_current_price(symbol, market_snapshot)
-
-    if pos:
-        current_position_qty = _safe_float(pos.get("qty"))
-        current_market_value = _safe_float(pos.get("market_value"))
-        current_unrealized_pl = _safe_float(pos.get("unrealized_pl"))
-        current_unrealized_pl_pct = _safe_float(pos.get("unrealized_plpc"))
-        current_price: Optional[float] = _safe_float(pos.get("current_price")) or market_price
-    else:
+    # Source integrity check — block position/market-derived values from mock snapshots
+    integrity_blocked = positions_integrity_blocked or market_integrity_blocked
+    if integrity_blocked:
+        source_integrity_status = "blocked_stale_or_mock_position_snapshot"
         current_position_qty = None
         current_market_value = None
         current_unrealized_pl = None
         current_unrealized_pl_pct = None
-        current_price = market_price
+        current_price = None
+        current_return_pct = None
+        spy_price = None
+        bil_price = None
+    else:
+        source_integrity_status = "ok"
+        # Current position data
+        pos = _get_position(symbol, positions)
+        market_price = _get_current_price(symbol, market_snapshot)
 
-    current_return_pct: Optional[float] = None
-    if fill_price and current_price:
-        current_return_pct = round((current_price - fill_price) / fill_price, 6)
+        if pos:
+            current_position_qty = _safe_float(pos.get("qty"))
+            current_market_value = _safe_float(pos.get("market_value"))
+            current_unrealized_pl = _safe_float(pos.get("unrealized_pl"))
+            current_unrealized_pl_pct = _safe_float(pos.get("unrealized_plpc"))
+            current_price = _safe_float(pos.get("current_price")) or market_price
+        else:
+            current_position_qty = None
+            current_market_value = None
+            current_unrealized_pl = None
+            current_unrealized_pl_pct = None
+            current_price = market_price
 
-    spy_price = _get_current_price("SPY", market_snapshot)
-    bil_price = _get_current_price("BIL", market_snapshot)
+        current_return_pct: Optional[float] = None
+        if fill_price and current_price:
+            current_return_pct = round((current_price - fill_price) / fill_price, 6)
+
+        spy_price = _get_current_price("SPY", market_snapshot)
+        bil_price = _get_current_price("BIL", market_snapshot)
 
     return {
         "client_order_id": lifecycle.get("client_order_id", ""),
@@ -209,6 +228,7 @@ def build_outcome_record(
         "bil_price_at_check": bil_price,
         "outcome_windows": _compute_outcome_windows(filled_at, checked_at),
         "lifecycle_status": lifecycle.get("lifecycle_status", "filled"),
+        "source_integrity_status": source_integrity_status,
         "checked_at": checked_at,
         "first_seen_at": first_seen_at or checked_at,
     }
@@ -235,6 +255,12 @@ def build_outcome_snapshot(
     positions = positions_snapshot.get("positions", [])
     existing: dict = existing_outcomes or {}
 
+    # Source integrity: block position/market-derived P/L from mock snapshots
+    pos_source = get_snapshot_source(positions_snapshot)
+    mkt_source = get_snapshot_source(market_snapshot)
+    positions_integrity_blocked = is_mock_source(pos_source)
+    market_integrity_blocked = is_mock_source(mkt_source)
+
     new_records: dict = {}
     for lc in monitor_report.get("lifecycles", []):
         if lc.get("lifecycle_status") not in ("filled", "partially_filled"):
@@ -249,6 +275,8 @@ def build_outcome_snapshot(
             market_snapshot=market_snapshot,
             checked_at=checked_at,
             first_seen_at=first_seen,
+            positions_integrity_blocked=positions_integrity_blocked,
+            market_integrity_blocked=market_integrity_blocked,
         )
         new_records[cid] = record
 
@@ -268,10 +296,27 @@ def build_outcome_snapshot(
         f"-{stable_hash({'ts': now})[:8]}"
     )
 
+    # Snapshot-level integrity status (for downstream consumers)
+    any_blocked = positions_integrity_blocked or market_integrity_blocked
+    integrity_note: Optional[str] = None
+    if any_blocked:
+        parts = []
+        if positions_integrity_blocked:
+            parts.append(f"positions_snapshot.source={pos_source!r}")
+        if market_integrity_blocked:
+            parts.append(f"market_snapshot.source={mkt_source!r}")
+        integrity_note = (
+            "WARNING: current_return_pct and position data are BLOCKED — "
+            f"{'; '.join(parts)} is not alpaca_paper. "
+            "Run live Data Refresh before trusting P/L values."
+        )
+
     snapshot: dict = {
         "run_id": run_id,
         "generated_at": now,
         "outcomes_count": len(outcomes_list),
+        "source_integrity_status": "blocked_mock_source" if any_blocked else "ok",
+        "source_integrity_note": integrity_note,
         "outcomes": outcomes_list,
     }
     snapshot["snapshot_hash"] = stable_hash(
@@ -310,6 +355,9 @@ def _format_trade_log_entry(snapshot: dict) -> str:
         f"**Outcomes tracked:** {snapshot.get('outcomes_count', 0)}",
         "",
     ]
+    integrity_note = snapshot.get("source_integrity_note")
+    if integrity_note:
+        lines += [f"> ⚠ {integrity_note}", ""]
     for o in outcomes:
         windows = o.get("outcome_windows", {})
         pending = [k for k, v in windows.items() if (v or {}).get("status") == "pending"]
