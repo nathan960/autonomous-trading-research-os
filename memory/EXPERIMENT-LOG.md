@@ -159,3 +159,23 @@ Evidence-backed experiment proposals live here. Hypotheses are not production ch
 - Rollback plan
 
 ---
+## Experiment Candidates — 2026-05-13
+
+*From weekly review run weekly_review-2026-05-13*
+
+**Operational issues to investigate:**
+- [ ] Paper execution execution-20260513T193130-305917e5 had unexpected status: PAPER_ORDER_ERRORS
+- [ ] 6 order(s) have lifecycle_status=missing — verify on broker.
+
+**Observations (hypothesis candidates):**
+- 4 paper execution attempt(s), 4 order(s) submitted.
+- 6 order fill(s) confirmed by order monitor.
+- 8 external alert(s) ingested this period, 5 routed.
+
+**To propose a strategy experiment, open a PR with:**
+- Hypothesis
+- Supporting evidence (backtest or paper results)
+- Success criteria
+- Rollback plan
+
+---
