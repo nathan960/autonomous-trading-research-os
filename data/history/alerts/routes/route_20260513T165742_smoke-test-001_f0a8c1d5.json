@@ -1,0 +1,32 @@
+{
+  "action_taken": "logged",
+  "alert_id": "smoke-test-001",
+  "approved_trade_plan_created": false,
+  "block_reason": null,
+  "blocked": false,
+  "condition": null,
+  "data_hashes": {},
+  "execution_called": false,
+  "generated_files": [],
+  "next_step": "log_only",
+  "route_id": "route_20260513T165742_smoke-test-001_f0a8c1d5",
+  "route_mode": "record_only",
+  "routed_at": "2026-05-13T16:57:42Z",
+  "safety_checks": {
+    "approve_paper_passed": false,
+    "approved_trade_plan_created": false,
+    "blocked_by_default": true,
+    "enable_paper_execution_checked_false": true,
+    "execute_paper_called": false,
+    "execution_called": false,
+    "live_trading_confirmed_checked_false": true,
+    "no_execution_intent_fields": true,
+    "trade_execution_allowed": false
+  },
+  "scripts_run": [],
+  "source": "test",
+  "suggested_scripts": [],
+  "symbol": "AAPL",
+  "trade_execution_allowed": false,
+  "trigger_id": null
+}

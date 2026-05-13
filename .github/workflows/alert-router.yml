@@ -2,27 +2,45 @@ name: Alert Router (Research Only)
 
 # Research-only alert router.
 # Routes a previously ingested alert based on its next_step value.
-# Never places orders. Never enables paper execution.
-# Never passes --approve-paper to generate_trade_plan.py.
+#
+# Safety invariants hardcoded in this workflow:
+#   ENABLE_PAPER_EXECUTION=false  — execution is never possible from this path
+#   LIVE_TRADING_CONFIRMED=false  — live trading is never confirmed here
+#   --approve-paper is never passed to generate_trade_plan.py
+#   execute_paper.py is never called
 
 on:
   workflow_dispatch:
     inputs:
       alert_id:
         description: >
-          alert_id of the alert file to route (e.g. tv-20260512-aapl-001).
-          Leave blank to route the most recently ingested alert.
+          alert_id of the alert to route (e.g. tv-20260512-aapl-001).
+          Leave blank to route the most recently ingested alert (--latest).
         required: false
         type: string
         default: ""
-      run_pipeline:
+      latest:
         description: >
-          For request_trade_plan_unapproved alerts: invoke scan_triggers.py
-          then generate_trade_plan.py (no --approve-paper).
-          Ignored for other next_step values.
+          Route the most recently ingested alert (ignored when alert_id is set).
         required: false
-        type: boolean
-        default: false
+        type: choice
+        default: "false"
+        options:
+          - "false"
+          - "true"
+      route_mode:
+        description: >
+          record_only: write route record and logs, no scripts.
+          run_refresh: also run refresh_data.py + monitor_positions.py.
+          run_unapproved_plan: run full pipeline (no --approve-paper).
+          Incompatible modes for the alert next_step are rejected.
+        required: false
+        type: choice
+        default: record_only
+        options:
+          - record_only
+          - run_refresh
+          - run_unapproved_plan
 
 permissions:
   contents: write
@@ -36,16 +54,16 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      # Execution is explicitly disabled — this workflow has no execution path.
+      # Execution is explicitly and permanently disabled in this workflow.
       ENABLE_PAPER_EXECUTION: "false"
       LIVE_TRADING_CONFIRMED: "false"
       TRADING_MODE: paper
       ALPACA_PAPER: "true"
-      # Alpaca keys are only needed when run_pipeline=true (for refresh_data / scan_triggers).
-      # They are not needed for log_only, request_alert_review, or request_data_refresh.
+      ALPACA_DATA_FEED: ${{ vars.ALPACA_DATA_FEED || 'iex' }}
+      # Alpaca keys are required only when route_mode is run_refresh or run_unapproved_plan
+      # (for refresh_data.py / scan_triggers.py). They are never used for order submission.
       ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
       ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
-      ALPACA_DATA_FEED: ${{ vars.ALPACA_DATA_FEED }}
 
     steps:
       - name: Check out repo
@@ -63,30 +81,61 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Route alert (by alert_id)
-        if: ${{ inputs.alert_id != '' }}
+      - name: Safety preflight (never executes orders)
         run: |
-          ALERT_FILE="data/history/alerts/alert-${{ inputs.alert_id }}.json"
-          PIPELINE_FLAG=""
-          if [ "${{ inputs.run_pipeline }}" = "true" ]; then
-            PIPELINE_FLAG="--run-pipeline"
+          if [ "$ENABLE_PAPER_EXECUTION" = "true" ]; then
+            echo "::error::ENABLE_PAPER_EXECUTION must not be true in alert-router workflow"
+            exit 1
           fi
-          python scripts/route_alert.py --alert-file "$ALERT_FILE" $PIPELINE_FLAG
+          if [ "$LIVE_TRADING_CONFIRMED" = "true" ]; then
+            echo "::error::LIVE_TRADING_CONFIRMED must not be true"
+            exit 1
+          fi
+          if [ "$TRADING_MODE" != "paper" ]; then
+            echo "::error::TRADING_MODE must be paper"
+            exit 1
+          fi
+          echo "Safety preflight passed: ENABLE_PAPER_EXECUTION=false LIVE_TRADING_CONFIRMED=false TRADING_MODE=paper"
 
-      - name: Route alert (latest)
-        if: ${{ inputs.alert_id == '' }}
+      - name: Route alert
         run: |
-          PIPELINE_FLAG=""
-          if [ "${{ inputs.run_pipeline }}" = "true" ]; then
-            PIPELINE_FLAG="--run-pipeline"
+          if [ -n "${{ inputs.alert_id }}" ]; then
+            ALERT_FLAG="--alert-id ${{ inputs.alert_id }}"
+          else
+            ALERT_FLAG="--latest"
           fi
-          python scripts/route_alert.py --latest $PIPELINE_FLAG
+          python scripts/route_alert.py \
+            $ALERT_FLAG \
+            --route-mode "${{ inputs.route_mode }}"
+
+      - name: Run validate_all
+        run: python scripts/validate_all.py
 
       - name: Commit routing artifacts
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/history/alerts memory/TRIGGER-LOG.md memory/SIGNAL-LOG.md
-          git diff --cached --quiet || git commit -m "research: route alert run=${{ github.run_id }}"
-          git push
+
+          git add \
+            data/history/alerts/routes/ \
+            memory/TRIGGER-LOG.md \
+            memory/SIGNAL-LOG.md \
+            memory/RESEARCH-CONTEXT.md \
+            || true
+
+          # Also commit data/latest/ if modified (run_refresh or run_unapproved_plan)
+          if ! git diff --cached --quiet data/latest/ 2>/dev/null; then
+            git add data/latest/ || true
+          fi
+
+          # Also commit memory/DATA-QUALITY-LOG.md if modified
+          git add memory/DATA-QUALITY-LOG.md 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No routing artifacts changed."
+          else
+            git commit -m "research: alert router run=${{ github.run_id }} mode=${{ inputs.route_mode }}"
+            git pull --rebase origin main
+            git push
+          fi

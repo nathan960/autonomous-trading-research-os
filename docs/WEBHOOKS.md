@@ -118,42 +118,58 @@ echo '{"symbol":"MSFT","next_step":"request_alert_review"}' | python scripts/ing
 ## Alert Router
 
 After an alert is ingested, `scripts/route_alert.py` dispatches it based on `next_step`.
+See [docs/ALERT-ROUTER.md](ALERT-ROUTER.md) for the full design guide.
 
 ### Router safety invariants
 
 - Rejects any alert where `trade_execution_allowed` is not exactly `false`.
 - Rejects any alert where `blocked_by_default` is not exactly `true`.
+- Rejects any alert containing execution intent fields (`execute`, `execute_paper`,
+  `submit_order`, `order`, `approved_for_execution=true`).
+- Rejects crypto or options symbols.
+- Rejects disallowed `asset_class` values.
+- Fails closed on incompatible `route_mode` for a given `next_step`.
 - Never calls `execute_paper.py`.
 - Never passes `--approve-paper` to `generate_trade_plan.py`.
-- Every routing decision is logged to `memory/TRIGGER-LOG.md`.
+- After `run_unapproved_plan`: verifies trade plan is not approved.
+- Every routing decision is logged to `memory/TRIGGER-LOG.md` and `memory/SIGNAL-LOG.md`.
 
 ### Routing actions
 
-| `next_step` | Action | Artifact written |
-|---|---|---|
-| `log_only` | Log only; no file written. | — |
-| `request_alert_review` | Write review-request record. | `data/history/alerts/review-requests/review-<id>.json` |
-| `request_data_refresh` | Write refresh-request record. | `data/history/alerts/refresh-requests/refresh-<id>.json` |
-| `request_trade_plan_unapproved` | Write plan-request record with suggested (unapproved) pipeline commands. | `data/history/alerts/plan-requests/plan-request-<id>.json` |
+All routing calls write a route record to `data/history/alerts/routes/<route_id>.json`.
 
-For `request_trade_plan_unapproved`, the artifact includes `suggested_commands` pointing to
-`scan_triggers.py` and `generate_trade_plan.py` (no `--approve-paper`). Human approval is
-always required before a plan can reach execution.
+| `next_step` | Action | Additional logs |
+|---|---|---|
+| `log_only` | Write route record. | TRIGGER-LOG, SIGNAL-LOG |
+| `request_alert_review` | Write route record. | TRIGGER-LOG, SIGNAL-LOG, RESEARCH-CONTEXT |
+| `request_data_refresh` | Write route record; optionally run refresh scripts. | TRIGGER-LOG |
+| `request_trade_plan_unapproved` | Write route record; optionally run pipeline (no `--approve-paper`). | TRIGGER-LOG, SIGNAL-LOG |
+
+### `route_mode` values
+
+| `route_mode` | Scripts run | Compatible `next_step` values |
+|---|---|---|
+| `record_only` | None | All |
+| `run_refresh` | `refresh_data.py` + `monitor_positions.py` | `request_data_refresh`, `request_trade_plan_unapproved` |
+| `run_unapproved_plan` | Full pipeline (no `--approve-paper`) | `request_trade_plan_unapproved` only |
 
 ### Router CLI
 
 ```bash
+# Route by alert_id (record-only — writes route record, no scripts)
+python scripts/route_alert.py --alert-id tv-20260512-aapl-001 --route-mode record_only
+
 # Route the most recent alert
-python scripts/route_alert.py --latest
+python scripts/route_alert.py --latest --route-mode record_only
 
-# Route a specific alert file
-python scripts/route_alert.py --alert-file data/history/alerts/alert-foo.json
+# For request_data_refresh: also run refresh + monitor_positions
+python scripts/route_alert.py --alert-id <id> --route-mode run_refresh
 
-# For request_trade_plan_unapproved: also invoke the pipeline (no --approve-paper)
-python scripts/route_alert.py --latest --run-pipeline
+# For request_trade_plan_unapproved: run full pipeline (no --approve-paper)
+python scripts/route_alert.py --alert-id <id> --route-mode run_unapproved_plan
 
-# Validate safety only — no artifacts written
-python scripts/route_alert.py --latest --dry-run
+# Validate safety only — write no artifacts
+python scripts/route_alert.py --latest --route-mode record_only --dry-run
 ```
 
 ### Two-step pipeline (intake → route)
@@ -163,7 +179,7 @@ python scripts/route_alert.py --latest --dry-run
 python scripts/ingest_alert.py --payload '{"symbol":"AAPL","next_step":"request_alert_review"}'
 
 # Step 2: route it
-python scripts/route_alert.py --latest
+python scripts/route_alert.py --latest --route-mode record_only
 ```
 
 ## GitHub Actions
@@ -180,13 +196,15 @@ workflow_dispatch → ingest_alert.py → data/history/alerts/ + memory/TRIGGER-
 
 ### Alert Router (`alert-router.yml`)
 
-Runs on `workflow_dispatch` only, with `alert_id` and `run_pipeline` inputs.
+Runs on `workflow_dispatch` only, with `alert_id`, `latest`, and `route_mode` inputs.
 
 ```
-workflow_dispatch → route_alert.py → routing artifact + memory logs → commit + push
+workflow_dispatch → route_alert.py → data/history/alerts/routes/ + memory logs → commit + push
 ```
 
 `ENABLE_PAPER_EXECUTION` is hardcoded to `false`. `--approve-paper` is never passed.
+A safety preflight step verifies `ENABLE_PAPER_EXECUTION=false` and
+`LIVE_TRADING_CONFIRMED=false` before running.
 
 ## Connecting TradingView
 

@@ -1310,34 +1310,84 @@ Every trigger scan records fired, skipped, and selected signals here.
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.5569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 24,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-13T16:39:14Z",
-  "selected": [
-    "AMD",
-    "GOOGL",
-    "FCX",
-    "AVGO",
-    "SLB",
-    "MRK",
-    "JNJ",
-    "WELL",
-    "XOM",
-    "WMT"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "2a7a5ef4b9e1920bb75e196f80abb02d728471742bedc6b6f0e2e4c0f649e791",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T165714-05add63e",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.10289830000000001,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "0c9b1331d319a977de2d18d5dc2487efbe7e3f6bc62ad84850c6ba94ad67069b"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "cfb3c9dbfa3d4df31c7a38515bfdfca8c5b488dcd4712c4f876266bdb2b02e3b",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T165720-c77b5c3d",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "e4c8146637fbe44e6c227e7c79a8515b65aa058261df41788b7f3781ebdd1fb1",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T165726-259a9ce3",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Alert routed
+
+```json
+{
+  "action_taken": "refresh_requested",
+  "alert_id": "router-refresh-test-001",
+  "approved_trade_plan_created": false,
+  "execution_called": false,
+  "next_step": "request_data_refresh",
+  "route_id": "route_20260513T165731_router-refresh-test-001_0e1dcbf6",
+  "route_mode": "record_only",
+  "routed_at": "2026-05-13T16:57:31Z",
+  "symbol": "MSFT",
+  "trade_execution_allowed": false
+}
+```
+
+## Alert routed
+
+```json
+{
+  "action_taken": "logged",
+  "alert_id": "smoke-test-001",
+  "approved_trade_plan_created": false,
+  "execution_called": false,
+  "next_step": "log_only",
+  "route_id": "route_20260513T165742_smoke-test-001_f0a8c1d5",
+  "route_mode": "record_only",
+  "routed_at": "2026-05-13T16:57:42Z",
+  "symbol": "AAPL",
+  "trade_execution_allowed": false
 }
 ```
