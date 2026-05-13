@@ -40,13 +40,13 @@ data/history/snapshots/*
 data/history/triggers/*
 !data/history/triggers/.gitkeep
 
-# Execution history grows with every run; commit selectively.
-data/history/executions/*
-!data/history/executions/.gitkeep
+# Paper execution reports (*_paper.json) are auditable records — always committed.
+# Dry-run execution reports are ephemeral (captured in data/latest/).
+data/history/executions/*_dry_run.json
 
-# Per-order audit logs grow with every run; commit selectively.
-data/history/orders/*
-!data/history/orders/.gitkeep
+# Per-order audit logs (TOS-*.json) are auditable records — always committed.
+# Per-run monitor report files are ephemeral (captured in data/latest/ and TRADE-LOG.md).
+data/history/orders/order_monitor_*.json
 
 # Build artifacts
 dist/

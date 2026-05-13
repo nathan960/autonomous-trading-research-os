@@ -1230,35 +1230,19 @@ Every trigger scan records fired, skipped, and selected signals here.
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 27,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-13T16:00:34Z",
-  "selected": [
-    "AMD",
-    "CAT",
-    "GOOGL",
-    "FCX",
-    "AVGO",
-    "SLB",
-    "MRK",
-    "MS",
-    "XOM",
-    "WELL"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "797be3dac4d76439b7314f3a48c06d7279f156fe8d4b97f77442483c2cf6fab7",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T161411-96f65f27",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.09914718333333333,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "662e4fb2ad875e9ff2035deb8c306e6d78b049222c2c669f50795438c628f50b"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
 
@@ -1266,30 +1250,46 @@ Every trigger scan records fired, skipped, and selected signals here.
 
 ```json
 {
-  "breadth": 0.5569620253164557,
+  "breadth": 0.8987341772151899,
   "breadth_ok": true,
-  "candidates_count": 21,
+  "candidates_count": 71,
   "data_stale_gate_passes": true,
   "excluded_count": 69,
   "regime_risk_on": true,
   "regime_skip_reason": null,
-  "scanned_at": "2026-05-13T16:07:57Z",
+  "scanned_at": "2026-05-13T16:14:22Z",
   "selected": [
-    "AMD",
-    "GOOGL",
-    "FCX",
-    "AVGO",
-    "SLB",
-    "MRK",
-    "XOM",
     "WMT",
-    "SBUX",
-    "NEE"
+    "APD",
+    "DIS",
+    "ORCL",
+    "LLY",
+    "BLK",
+    "BKNG",
+    "KO",
+    "WELL",
+    "EOG"
   ],
   "selected_count": 10,
-  "snapshot_age_minutes": 0.08177731666666667,
+  "snapshot_age_minutes": 0.1729820333333333,
   "spy_passes_200dma": true,
   "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "e56d568aadc8670a4fa9df7c8cb022ad0510e83e30f96ffc78b7d89e78a0d1ce"
+  "trigger_snapshot_hash": "d7cc1186abca345045acdd78aefea7b1bad16f163d886b6218e2e4b355d39351"
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "99887556a9618983ede8fc45049391a1bd4375a42c5f55f3d61097360676bed5",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T161643-75a37982",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```

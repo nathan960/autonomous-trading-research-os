@@ -1,32 +1,8 @@
 {
-  "data_hash": "2fa4544770e257b04d6fc2e9213f70538a907c971ead15a182b193339612e1ee",
-  "fetched_at": "2026-05-13T16:07:53Z",
-  "position_count": 1,
-  "positions": [
-    {
-      "asset_class": "us_equity",
-      "asset_id": "b94a7925-39e6-4a74-9db6-44888cb57d40",
-      "asset_marginable": true,
-      "avg_entry_price": "218.808",
-      "avg_entry_swap_rate": null,
-      "change_today": "0.0072",
-      "cost_basis": "25",
-      "current_price": "219.065",
-      "exchange": "NYSE",
-      "lastday_price": "217.5",
-      "market_value": "25.029364",
-      "qty": "0.11425542",
-      "qty_available": "0.11425542",
-      "side": "long",
-      "swap_rate": null,
-      "symbol": "WELL",
-      "unrealized_intraday_pl": "0.029364",
-      "unrealized_intraday_plpc": "0.00117",
-      "unrealized_pl": "0.029364",
-      "unrealized_plpc": "0.00117",
-      "usd": null
-    }
-  ],
+  "data_hash": "64075599bdbfe5861dec51c83235433b91eefda431c19986ce9c6f7b35fefd96",
+  "fetched_at": "2026-05-13T16:16:44Z",
+  "position_count": 0,
+  "positions": [],
   "schema_version": "0.1.0",
-  "source": "alpaca_paper"
+  "source": "dry_run_mock"
 }

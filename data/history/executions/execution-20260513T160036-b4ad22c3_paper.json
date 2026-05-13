@@ -1,0 +1,23 @@
+{
+  "run_id": "execution-20260513T160036-b4ad22c3",
+  "plan_id": "trade_plan-20260513T160035-0460e121",
+  "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
+  "generated_at": "2026-05-13T16:00:36Z",
+  "dry_run": false,
+  "status": "PAPER_SUBMITTED",
+  "orders_submitted": [
+    {
+      "broker_order_id": "a57f3df1-f9d5-4ab7-8655-ed8240ade13e",
+      "broker_status": "pending_new",
+      "client_order_id": "TOS-20260513T160035-WELL-BUY",
+      "error": null,
+      "limit_price": 218.9,
+      "notional": 25.0,
+      "side": "buy",
+      "skip_reason": null,
+      "submitted": true,
+      "submitted_at": "2026-05-13T16:00:36Z",
+      "symbol": "WELL"
+    }
+  ]
+}
