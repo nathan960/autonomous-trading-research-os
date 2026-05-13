@@ -64,3 +64,47 @@ Weekly summaries of triggers, skips, trades, drawdown, data quality, and operati
   "trigger_log_entries": 4
 }
 ```
+## Weekly Review — 2026-05-07 to 2026-05-13 (7 days)
+
+**Generated:** 2026-05-13T19:05:13Z  **Run ID:** weekly_review-2026-05-13
+
+### Trigger Scans
+- Total runs: 14 | Risk-on: 14 | Risk-off: 0
+- Avg candidates: 67.9 | Avg excluded: 69.0
+
+### Dry Runs
+- Total: 15 | Pass: 10 | Fail: 5
+  - RISK_STATE_NOT_PAUSED: 4x
+  - SPREAD_NOT_TOO_WIDE: 1x
+
+### Paper Executions
+- Attempts: 1 | Orders submitted: 1
+  - [2026-05-13] WELL BUY $25.0 @ $218.9 (PAPER_SUBMITTED)
+
+### Order Lifecycle
+- Monitor runs: 7 | Tracked: 6
+- Fills: 0 | Missing: 5 | Expired: 0 | Rejected: 0 | Canceled: 0
+
+### External Alerts
+- Ingested this period: 8 (all-time: 8)
+- Routes this period: 5 (all-time: 5)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Risk State
+- Equity: $40,000.00 | Peak: $99,803.09 | Drawdown: -59.92% | Positions: 0
+- Last updated: 2026-05-13T19:04:59Z
+
+### Operational Issues (4)
+- Dry-run gate 'RISK_STATE_NOT_PAUSED' failed 4 time(s) this period.
+- Dry-run gate 'SPREAD_NOT_TOO_WIDE' failed 1 time(s) this period.
+- 5 order(s) have lifecycle_status=missing — verify on broker.
+- Drawdown is -59.9% — approaching warning threshold (-5%).
+
+### Research Observations
+- Market regime: 14/14 sessions risk_on (100%). Avg candidates=67.9, avg excluded=69.0.
+- 1 paper execution attempt(s), 1 order(s) submitted.
+- 8 external alert(s) ingested this period, 5 routed.
+
+---

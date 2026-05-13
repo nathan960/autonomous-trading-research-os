@@ -1,10 +1,10 @@
 {
   "account_snapshot": {
-    "buying_power": "199580.86",
-    "cash": "99777.86",
-    "equity": "99803",
-    "fetched_at": "2026-05-13T17:23:23Z",
-    "position_count": 1,
+    "buying_power": "40000.00",
+    "cash": "40000.00",
+    "equity": "40000.00",
+    "fetched_at": "2026-05-13T19:04:54Z",
+    "position_count": 0,
     "status": "ACTIVE"
   },
   "approval": {
@@ -382,14 +382,14 @@
       "symbol": "BIL"
     }
   ],
-  "data_hash": "a6da2facea02a7d89aaca4daab547d95d5846d37d4ec83d59d4796b31fdf0805",
-  "expires_at": "2026-05-13T23:23:27Z",
-  "generated_at": "2026-05-13T17:23:27Z",
+  "data_hash": "0f98fba79dc86dcf9fa6c21a8c027746ea4d3b818c243ab4b09f137c648e4147",
+  "expires_at": "2026-05-14T01:04:59Z",
+  "generated_at": "2026-05-13T19:04:59Z",
   "market_clock": {
     "is_open": true,
-    "next_close": "2026-05-13T20:00:00Z",
-    "next_open": "2026-05-14T13:30:00Z",
-    "timestamp": "2026-05-13T17:23:23Z"
+    "next_close": "2026-05-13T19:04:54Z",
+    "next_open": "2026-05-13T19:04:54Z",
+    "timestamp": "2026-05-13T19:04:54Z"
   },
   "no_trade_reasons": [
     "max_orders_per_run_cap(1)_dequeued(non_blocking): ['WMT', 'WELL', 'MRK', 'GOOGL', 'XOM', 'SLB', 'AVGO', 'FCX', 'AMD', 'BIL']"
@@ -436,19 +436,19 @@
       "symbol": "BIL"
     }
   ],
-  "plan_id": "trade_plan-20260513T172327-90852869",
+  "plan_id": "trade_plan-20260513T190459-18194eac",
   "proposed_orders": [
     {
       "capped_by_max_notional_per_order": true,
       "current_value": 0.0,
-      "delta_value": 11976.36,
+      "delta_value": 4800.0,
       "limit_price": 229.65,
       "notional": 25.0,
       "order_type": "limit",
       "side": "buy",
       "skip_reason": null,
       "symbol": "JNJ",
-      "target_value": 11976.36,
+      "target_value": 4800.0,
       "target_weight": 0.12,
       "time_in_force": "day",
       "would_short": false
@@ -578,82 +578,82 @@
     "AMD": {
       "atr_pct": 0.04515453466042198,
       "latest_close": 450.49,
-      "notional": 5281.42,
+      "notional": 2116.74,
       "reason": "risk_on_inverse_atr",
       "weight": 0.0529185
     },
     "AVGO": {
       "atr_pct": 0.03406036166119211,
       "latest_close": 417.04,
-      "notional": 7001.7,
+      "notional": 2806.21,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07015516
     },
     "BIL": {
       "atr_pct": null,
-      "latest_close": 91.495,
-      "notional": 9980.3,
+      "latest_close": 91.9626,
+      "notional": 4000.0,
       "reason": "cash_allocation",
       "weight": 0.1
     },
     "FCX": {
       "atr_pct": 0.039556216625339834,
       "latest_close": 68.295,
-      "notional": 6028.9,
+      "notional": 2416.32,
       "reason": "risk_on_inverse_atr",
       "weight": 0.06040796
     },
     "GOOGL": {
       "atr_pct": 0.02373156868648528,
       "latest_close": 401.33,
-      "notional": 10049.07,
+      "notional": 4027.56,
       "reason": "risk_on_inverse_atr",
       "weight": 0.10068909
     },
     "JNJ": {
       "atr_pct": 0.017735902235794746,
       "latest_close": 229.65,
-      "notional": 11976.36,
+      "notional": 4800.0,
       "reason": "risk_on_inverse_atr",
       "weight": 0.12
     },
     "MRK": {
       "atr_pct": 0.023679432371690012,
       "latest_close": 113.68,
-      "notional": 10071.2,
+      "notional": 4036.43,
       "reason": "risk_on_inverse_atr",
       "weight": 0.10091079
     },
     "SLB": {
       "atr_pct": 0.030102059817620926,
       "latest_close": 55.4,
-      "notional": 7922.39,
+      "notional": 3175.21,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07938029
     },
     "WELL": {
       "atr_pct": 0.021252397954670075,
       "latest_close": 220.005,
-      "notional": 11221.34,
+      "notional": 4497.39,
       "reason": "risk_on_inverse_atr",
       "weight": 0.11243485
     },
     "WMT": {
       "atr_pct": 0.020347281070338383,
       "latest_close": 130.8,
-      "notional": 11720.5,
+      "notional": 4697.45,
       "reason": "risk_on_inverse_atr",
       "weight": 0.11743634
     },
     "XOM": {
       "atr_pct": 0.027892997140585265,
       "latest_close": 151.395,
-      "notional": 8549.83,
+      "notional": 3426.68,
       "reason": "risk_on_inverse_atr",
       "weight": 0.08566703
     }
   },
-  "trade_plan_hash": "2b00ebed42a5c402feffaa6c2087fdbe767e88f3fe4c16ca62123a8738fefcd1",
+  "trade_plan_hash": "4c470514b2ae6dcc4e81138920d43ca1472a23ed21a6710e59a49942247d351b",
   "trading_mode": "paper",
   "trigger_snapshot_hash": "a0c588d2ea1a6bc4dc0bb3f19a2406b54c881a892ab3dbebdf8c48de905ec46e"
 }

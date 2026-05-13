@@ -1658,3 +1658,99 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T19:04:42Z",
+  "run_id": "data_refresh-20260513T190442-0094bcc2",
+  "source_data_hash": "2207688f1cae1c28c1a9a99d624ca8595407cdf7405fe8d22fed1de9be18b64f",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T19:04:44Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "0fb76364d08f5403270c3aa0316404553cd6cccc3fddbd4f09e5774c41c9cb49",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T190444",
+  "snapshot_age_minutes": 0.0055937999999999995,
+  "snapshot_fetched_at": "2026-05-13T19:04:44Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T19:04:53Z",
+  "run_id": "data_refresh-20260513T190453-0e912cdc",
+  "source_data_hash": "72de6900d8d673459998ab875dc02e8716e09cf0bf319d8f9f48812261ea5207",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T19:04:54Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "dc1f04b4a823ba35d1da711fe8c90fc42f607a9f1229d396e2206d103bb466a4",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T190454",
+  "snapshot_age_minutes": 0.011997150000000002,
+  "snapshot_fetched_at": "2026-05-13T19:04:54Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T19:04:59Z",
+  "run_id": "data_refresh-20260513T190459-6f9acd4a",
+  "source_data_hash": "3fa6a40cd986e23f516ea92853e2861da89138748d711f6a8eeee287be813689",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T19:05:00Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "2aca34adfd544398cf2248cd78bd5e475e3f2be37bfc607b4508814eeac288dd",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T190500",
+  "snapshot_age_minutes": 0.007065083333333333,
+  "snapshot_fetched_at": "2026-05-13T19:05:00Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```

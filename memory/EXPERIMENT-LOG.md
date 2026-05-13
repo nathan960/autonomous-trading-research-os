@@ -118,3 +118,25 @@ Evidence-backed experiment proposals live here. Hypotheses are not production ch
   "schema_version": "0.1.0"
 }
 ```
+## Experiment Candidates — 2026-05-13
+
+*From weekly review run weekly_review-2026-05-13*
+
+**Operational issues to investigate:**
+- [ ] Dry-run gate 'RISK_STATE_NOT_PAUSED' failed 4 time(s) this period.
+- [ ] Dry-run gate 'SPREAD_NOT_TOO_WIDE' failed 1 time(s) this period.
+- [ ] 5 order(s) have lifecycle_status=missing — verify on broker.
+- [ ] Drawdown is -59.9% — approaching warning threshold (-5%).
+
+**Observations (hypothesis candidates):**
+- Market regime: 14/14 sessions risk_on (100%). Avg candidates=67.9, avg excluded=69.0.
+- 1 paper execution attempt(s), 1 order(s) submitted.
+- 8 external alert(s) ingested this period, 5 routed.
+
+**To propose a strategy experiment, open a PR with:**
+- Hypothesis
+- Supporting evidence (backtest or paper results)
+- Success criteria
+- Rollback plan
+
+---

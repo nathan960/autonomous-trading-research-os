@@ -1520,3 +1520,51 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trade_execution_allowed": false
 }
 ```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "2207688f1cae1c28c1a9a99d624ca8595407cdf7405fe8d22fed1de9be18b64f",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T190443-dccac145",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "72de6900d8d673459998ab875dc02e8716e09cf0bf319d8f9f48812261ea5207",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T190453-2837b30e",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "3fa6a40cd986e23f516ea92853e2861da89138748d711f6a8eeee287be813689",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T190459-82ecb834",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
