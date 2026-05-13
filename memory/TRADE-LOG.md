@@ -13467,3 +13467,33 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
   "trade_plan_hash": "2b00ebed42a5c402feffaa6c2087fdbe767e88f3fe4c16ca62123a8738fefcd1"
 }
 ```
+
+## order_monitor run
+
+```json
+{
+  "dry_run": true,
+  "generated_at": "2026-05-13T17:24:01Z",
+  "lifecycles": [
+    {
+      "client_order_id": "TOS-20260513T160035-WELL-BUY",
+      "fill": null,
+      "lifecycle_status": "missing",
+      "notional": 25.0,
+      "side": "buy",
+      "symbol": "WELL"
+    }
+  ],
+  "orders_active": 0,
+  "orders_filled": 0,
+  "orders_missing": 1,
+  "orders_rejected": 0,
+  "orders_tracked": 1,
+  "run_id": "order_monitor-20260513T172401-ba786d52",
+  "source": "stored_snapshot",
+  "stale_orders": [],
+  "warnings": [
+    "order TOS-20260513T160035-WELL-BUY (broker_id='a57f3df1-f9d5-4ab7-8655-ed8240ade13e') not found in Alpaca open or recent closed orders"
+  ]
+}
+```
