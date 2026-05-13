@@ -1,10 +1,10 @@
 {
   "account_snapshot": {
-    "buying_power": "40000.00",
-    "cash": "40000.00",
-    "equity": "40000.00",
-    "fetched_at": "2026-05-13T19:04:54Z",
-    "position_count": 0,
+    "buying_power": "199580.88",
+    "cash": "99777.86",
+    "equity": "99803.02",
+    "fetched_at": "2026-05-13T19:20:50Z",
+    "position_count": 1,
     "status": "ACTIVE"
   },
   "approval": {
@@ -21,6 +21,10 @@
     {
       "skip_reason": "close_below_200dma",
       "symbol": "ORCL"
+    },
+    {
+      "skip_reason": "spread_too_wide(0.0330>0.02)",
+      "symbol": "AMD"
     },
     {
       "skip_reason": "close_below_200dma",
@@ -71,7 +75,7 @@
       "symbol": "LOW"
     },
     {
-      "skip_reason": "spread_too_wide(0.0571>0.02)",
+      "skip_reason": "spread_too_wide(0.0272>0.02)",
       "symbol": "SBUX"
     },
     {
@@ -95,10 +99,6 @@
       "symbol": "GS"
     },
     {
-      "skip_reason": "spread_too_wide(0.0480>0.02)",
-      "symbol": "MS"
-    },
-    {
       "skip_reason": "close_below_200dma",
       "symbol": "V"
     },
@@ -111,12 +111,12 @@
       "symbol": "AXP"
     },
     {
-      "skip_reason": "spread_too_wide(0.0613>0.02)",
-      "symbol": "LLY"
+      "skip_reason": "spread_too_wide(0.1101>0.02)",
+      "symbol": "BLK"
     },
     {
-      "skip_reason": "spread_too_wide(0.0622>0.02)",
-      "symbol": "UNH"
+      "skip_reason": "spread_too_wide(0.0585>0.02)",
+      "symbol": "LLY"
     },
     {
       "skip_reason": "close_below_200dma",
@@ -135,19 +135,15 @@
       "symbol": "ISRG"
     },
     {
-      "skip_reason": "spread_too_wide(0.0544>0.02)",
-      "symbol": "AMGN"
-    },
-    {
       "skip_reason": "close_below_200dma",
       "symbol": "GE"
     },
     {
-      "skip_reason": "spread_too_wide(0.0813>0.02)",
+      "skip_reason": "spread_too_wide(0.0474>0.02)",
       "symbol": "CAT"
     },
     {
-      "skip_reason": "spread_too_wide(0.0580>0.02)",
+      "skip_reason": "spread_too_wide(0.0798>0.02)",
       "symbol": "DE"
     },
     {
@@ -159,24 +155,12 @@
       "symbol": "LMT"
     },
     {
-      "skip_reason": "spread_too_wide(0.0549>0.02)",
-      "symbol": "UNP"
-    },
-    {
-      "skip_reason": "spread_too_wide(0.1076>0.02)",
+      "skip_reason": "spread_too_wide(0.0542>0.02)",
       "symbol": "HON"
     },
     {
-      "skip_reason": "roc_12m_below_min(-0.0259<=0.0)",
+      "skip_reason": "roc_12m_below_min(-0.0276<=0.0)",
       "symbol": "UPS"
-    },
-    {
-      "skip_reason": "spread_too_wide(0.0223>0.02)",
-      "symbol": "BA"
-    },
-    {
-      "skip_reason": "spread_too_wide(0.0434>0.02)",
-      "symbol": "COST"
     },
     {
       "skip_reason": "close_below_200dma",
@@ -187,19 +171,23 @@
       "symbol": "PEP"
     },
     {
-      "skip_reason": "spread_too_wide(0.0456>0.02)",
+      "skip_reason": "spread_too_wide(0.0871>0.02)",
       "symbol": "PM"
     },
     {
-      "skip_reason": "roc_12m_below_min(-0.0736<=0.0)",
+      "skip_reason": "roc_12m_below_min(-0.0671<=0.0)",
       "symbol": "MDLZ"
     },
     {
-      "skip_reason": "roc_12m_below_min(-0.0300<=0.0)",
+      "skip_reason": "roc_12m_below_min(-0.0174<=0.0)",
       "symbol": "CL"
     },
     {
-      "skip_reason": "roc_6m_below_min(-0.0004<=0.0)",
+      "skip_reason": "spread_too_wide(0.0513>0.02)",
+      "symbol": "EOG"
+    },
+    {
+      "skip_reason": "roc_6m_below_min(-0.0018<=0.0)",
       "symbol": "SRE"
     },
     {
@@ -207,11 +195,11 @@
       "symbol": "AMT"
     },
     {
-      "skip_reason": "spread_too_wide(0.0416>0.02)",
+      "skip_reason": "spread_too_wide(0.0452>0.02)",
       "symbol": "LIN"
     },
     {
-      "skip_reason": "spread_too_wide(0.0915>0.02)",
+      "skip_reason": "spread_too_wide(0.0457>0.02)",
       "symbol": "APD"
     },
     {
@@ -223,131 +211,152 @@
       "symbol": "ECL"
     },
     {
-      "atr_pct": 0.022184521181769373,
-      "input_hash": "076e7b27ab2de8e5f6524dade033925e1bd2cb841c5d4988994b44c72c84c006",
-      "momentum_score": 0.5121101291727322,
-      "skip_reason": "sector_cap(sector_code=101,count=2,max=2)",
-      "symbol": "CSCO"
-    },
-    {
-      "atr_pct": 0.028941362677359535,
-      "input_hash": "ad88ef39fe3493bc8e5f01db0c060a08b101891602761de543779b24f62b1c32",
-      "momentum_score": 0.49487552095692033,
+      "atr_pct": 0.028971957431544296,
+      "input_hash": "c7fff9b8531feda6194f9c73a6274713e82ff291a132b4554193bf3d2df7ea9d",
+      "momentum_score": 0.4932969134634998,
       "skip_reason": "sector_cap(sector_code=101,count=2,max=2)",
       "symbol": "NVDA"
     },
     {
-      "atr_pct": 0.03033129746137918,
-      "input_hash": "a97d45ece59657f65bfcc835f7c63b7dd163b45a3293f0d3a58787de5fc88d3a",
-      "momentum_score": 0.2978747315926661,
+      "atr_pct": 0.02029917141331905,
+      "input_hash": "3ec3c6f6a65a442b2d1e600b8adc337f9fedf2e1ce33dad0b3f5ae526d7056af",
+      "momentum_score": 0.3177716898124219,
+      "skip_reason": "max_holdings_reached",
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.030317050727014985,
+      "input_hash": "08658ca892a099bbc0f2933ab285897bcf422faec6f9239c56b3fd0429a797cf",
+      "momentum_score": 0.29848463513194823,
       "skip_reason": "max_holdings_reached",
       "symbol": "COP"
     },
     {
-      "atr_pct": 0.019027109509007073,
-      "input_hash": "4e3cf74a57abf330a7220cdd171cd44b35e2967482ab0c36993153a28442ca2d",
-      "momentum_score": 0.2750143516276081,
+      "atr_pct": 0.01899055536096138,
+      "input_hash": "a9de569b2578b86d4251912aa1c57766e50a51d0aecd2adb1bcfcf2683a9b95c",
+      "momentum_score": 0.27799608320741875,
       "skip_reason": "max_holdings_reached",
       "symbol": "EQIX"
     },
     {
-      "atr_pct": 0.020605955032315708,
-      "input_hash": "4c30c86afe90273b5acc78c7cd5361d0c9ea47badda9a65c400513f1123053ac",
-      "momentum_score": 0.265535137469026,
+      "atr_pct": 0.02073358045783189,
+      "input_hash": "64a945aa7caccc7cd9b5ef9ec5f0a53c808c342575e55ebe9907ca2a6b907c43",
+      "momentum_score": 0.26350574894804546,
       "skip_reason": "max_holdings_reached",
       "symbol": "AAPL"
     },
     {
-      "atr_pct": 0.024757505032059982,
-      "input_hash": "e82af019b7994e608ba3b26ddda1aa8ee5d21efd8f6156e1dd0d172ce4b9d186",
-      "momentum_score": 0.2472415653261234,
+      "atr_pct": 0.024722102815173,
+      "input_hash": "be676452c91c0425956fc5077df3c4bfffd9e30ec7abdcdd1008e5b19da44c2b",
+      "momentum_score": 0.24902762360507513,
       "skip_reason": "max_holdings_reached",
       "symbol": "CVX"
     },
     {
-      "atr_pct": 0.02211662616628222,
-      "input_hash": "bddb5b9dd7d48b272f71d685e3552fe8b7e0400615162649d23e828a964f694d",
-      "momentum_score": 0.2426159798137466,
+      "atr_pct": 0.02218185077841489,
+      "input_hash": "02f3275d740d81e5c7607339d80eb1f9c203da3a5571b0ef152aec7d412b5f29",
+      "momentum_score": 0.24470726577956348,
       "skip_reason": "max_holdings_reached",
       "symbol": "NEE"
     },
     {
-      "atr_pct": 0.01799137030381397,
-      "input_hash": "e854d9f5f2347953bfe4948536a84e88eeec0a5e91e7f43d82c1ad4050a55e2f",
-      "momentum_score": 0.22468636412616438,
+      "atr_pct": 0.02748777083221073,
+      "input_hash": "b3bd2090d3f2d38d002f0649b87d816115ac582b66cc6fa39cc24725730636f5",
+      "momentum_score": 0.22556058175991667,
+      "skip_reason": "max_holdings_reached",
+      "symbol": "BA"
+    },
+    {
+      "atr_pct": 0.018371314229661508,
+      "input_hash": "c57d0aed82e480ca8500eae802dab315b938dcdf1d95ee97b4aeb50da87b24ad",
+      "momentum_score": 0.2116700439164393,
       "skip_reason": "max_holdings_reached",
       "symbol": "PLD"
     },
     {
-      "atr_pct": 0.026980566842225755,
-      "input_hash": "e66c2b45900065d6d6684afcb37806b8b9e48288f44d1596301f44c4da51f42a",
-      "momentum_score": 0.21959265393151817,
-      "skip_reason": "max_holdings_reached",
-      "symbol": "EOG"
-    },
-    {
-      "atr_pct": 0.036652923668845,
-      "input_hash": "0ebc62df2b80ed423ec07f914b15f1fa60b56b3feeddc5bb01d6f3ed9d49c380",
-      "momentum_score": 0.20963463593301201,
+      "atr_pct": 0.03677080241833274,
+      "input_hash": "5b787f56353de4aa7c89f8ade7a5efc9944d3eda59fea4b756d4acc4347f09e9",
+      "momentum_score": 0.20575682503841608,
       "skip_reason": "max_holdings_reached",
       "symbol": "TSLA"
     },
     {
-      "atr_pct": 0.024915819634957988,
-      "input_hash": "0acfb6e6b012403114d83bc83cf48121a589d6a695f9c2c9e72e9bfa81fcf600",
-      "momentum_score": 0.18858931092411402,
+      "atr_pct": 0.02490103937712915,
+      "input_hash": "9aa091b92dd1feea388109362551775d2a6e8c90f893f845615dd19d1820249b",
+      "momentum_score": 0.18929480984735136,
       "skip_reason": "max_holdings_reached",
       "symbol": "AMZN"
     },
     {
-      "atr_pct": 0.019605092484799844,
-      "input_hash": "449e13ed2b5ff4b9543690302367b3842c878f230febbb9ecdf49427da747ec0",
-      "momentum_score": 0.1530648907055825,
+      "atr_pct": 0.018406052726484146,
+      "input_hash": "4855f9d3cc74b16ca08fdbd86e5ecef89c723c43be0f9a478d8b3cc2658ac96e",
+      "momentum_score": 0.1644715907665688,
+      "skip_reason": "max_holdings_reached",
+      "symbol": "UNP"
+    },
+    {
+      "atr_pct": 0.01950124871715953,
+      "input_hash": "a1691cc55c80e1dd8cee44ed0a71f1c9906e44446dd0e70d74a4f0026058429b",
+      "momentum_score": 0.15920493867488383,
       "skip_reason": "max_holdings_reached",
       "symbol": "AEP"
     },
     {
-      "atr_pct": 0.01622905022315682,
-      "input_hash": "cdbb7a4c92c82428a677cdceda0b58ae1f18841e7de34276a504f01e0b23ac7c",
-      "momentum_score": 0.14518740361948856,
+      "atr_pct": 0.02321425478182412,
+      "input_hash": "8043898e5ac37187a0f9ddf4afe55d0f59779a6afb2bb0f7e7111813c6a7f00f",
+      "momentum_score": 0.1534292001501194,
+      "skip_reason": "max_holdings_reached",
+      "symbol": "UNH"
+    },
+    {
+      "atr_pct": 0.016200771337958712,
+      "input_hash": "d0ac635ae5022155bbeb271c0f7dd8834c51b3860af51b8dc70b9a41e3b8b80c",
+      "momentum_score": 0.1471863592520144,
       "skip_reason": "max_holdings_reached",
       "symbol": "KO"
     },
     {
-      "atr_pct": 0.015118873312546188,
-      "input_hash": "b4a0df3a0cee01f4742ca05e754028558d7dab490371479fa5138ec84743d712",
-      "momentum_score": 0.09723906029657525,
+      "atr_pct": 0.022434190259114997,
+      "input_hash": "a62db350728190c6c1ef6a5652747392c65ae9ce3ed7d78d978439ca0a61b14a",
+      "momentum_score": 0.13243299311894685,
+      "skip_reason": "max_holdings_reached",
+      "symbol": "AMGN"
+    },
+    {
+      "atr_pct": 0.01550663799819331,
+      "input_hash": "f7a103b6eaa4e36aca562afdb6af63706d45da6e0b19cb2e4a0d27248a1ecbde",
+      "momentum_score": 0.09305452314679119,
       "skip_reason": "max_holdings_reached",
       "symbol": "O"
     },
     {
-      "atr_pct": 0.022456985725969072,
-      "input_hash": "f5628b6a01a2ee9c64a836c98ca27ebcfa927a781544558dc89ae18a3a2bf3d8",
-      "momentum_score": 0.07315508819382743,
+      "atr_pct": 0.017850282489500345,
+      "input_hash": "e1c3859ec300fe3bf503785a76b75b0ad9e009b557191cb801688f2e52f166b7",
+      "momentum_score": 0.07020225281582793,
       "skip_reason": "max_holdings_reached",
-      "symbol": "BLK"
+      "symbol": "COST"
     },
     {
-      "atr_pct": 0.016117234713488235,
-      "input_hash": "118f8c8763b825b2f4d6ab8789fa4a41a1ce84a8c3f74b6f222aa469ae6da080",
-      "momentum_score": 0.04007091292152787,
+      "atr_pct": 0.0160977710212974,
+      "input_hash": "11f67b52dad11b6e07adb43dea29ca240031c30255a222970470f3f44f7660af",
+      "momentum_score": 0.0413284547314442,
       "skip_reason": "max_holdings_reached",
       "symbol": "DUK"
     },
     {
-      "atr_pct": 0.016749420366704137,
-      "input_hash": "94188566a97531f5b9510112df896a41fb37bc0e087f5f84f180b80864ede74c",
-      "momentum_score": 0.03967323228137831,
+      "atr_pct": 0.01672598199590035,
+      "input_hash": "92209cf6d17b295ed136838e011a1279b76699fd74375cbbf58035962a7bd120",
+      "momentum_score": 0.04113014206036503,
       "skip_reason": "max_holdings_reached",
       "symbol": "SO"
     },
     {
       "skip_reason": "capped_by_max_orders_per_run(1)",
-      "symbol": "WMT"
+      "symbol": "WELL"
     },
     {
       "skip_reason": "capped_by_max_orders_per_run(1)",
-      "symbol": "WELL"
+      "symbol": "CSCO"
     },
     {
       "skip_reason": "capped_by_max_orders_per_run(1)",
@@ -356,6 +365,10 @@
     {
       "skip_reason": "capped_by_max_orders_per_run(1)",
       "symbol": "GOOGL"
+    },
+    {
+      "skip_reason": "capped_by_max_orders_per_run(1)",
+      "symbol": "MS"
     },
     {
       "skip_reason": "capped_by_max_orders_per_run(1)",
@@ -375,33 +388,29 @@
     },
     {
       "skip_reason": "capped_by_max_orders_per_run(1)",
-      "symbol": "AMD"
-    },
-    {
-      "skip_reason": "capped_by_max_orders_per_run(1)",
       "symbol": "BIL"
     }
   ],
-  "data_hash": "0f98fba79dc86dcf9fa6c21a8c027746ea4d3b818c243ab4b09f137c648e4147",
-  "expires_at": "2026-05-14T01:04:59Z",
-  "generated_at": "2026-05-13T19:04:59Z",
+  "data_hash": "fe80264c866b25503bee9b30dd10a5fbc17ce002dc0286156a7447320dad314b",
+  "expires_at": "2026-05-14T01:20:54Z",
+  "generated_at": "2026-05-13T19:20:54Z",
   "market_clock": {
     "is_open": true,
-    "next_close": "2026-05-13T19:04:54Z",
-    "next_open": "2026-05-13T19:04:54Z",
-    "timestamp": "2026-05-13T19:04:54Z"
+    "next_close": "2026-05-13T20:00:00Z",
+    "next_open": "2026-05-14T13:30:00Z",
+    "timestamp": "2026-05-13T19:20:51Z"
   },
   "no_trade_reasons": [
-    "max_orders_per_run_cap(1)_dequeued(non_blocking): ['WMT', 'WELL', 'MRK', 'GOOGL', 'XOM', 'SLB', 'AVGO', 'FCX', 'AMD', 'BIL']"
+    "max_orders_per_run_cap(1)_dequeued(non_blocking): ['WELL', 'CSCO', 'MRK', 'GOOGL', 'MS', 'XOM', 'SLB', 'AVGO', 'FCX', 'BIL']"
   ],
   "orders_run_capped_at_planning": [
     {
       "skip_reason": null,
-      "symbol": "WMT"
+      "symbol": "WELL"
     },
     {
       "skip_reason": null,
-      "symbol": "WELL"
+      "symbol": "CSCO"
     },
     {
       "skip_reason": null,
@@ -410,6 +419,10 @@
     {
       "skip_reason": null,
       "symbol": "GOOGL"
+    },
+    {
+      "skip_reason": null,
+      "symbol": "MS"
     },
     {
       "skip_reason": null,
@@ -429,26 +442,22 @@
     },
     {
       "skip_reason": null,
-      "symbol": "AMD"
-    },
-    {
-      "skip_reason": null,
       "symbol": "BIL"
     }
   ],
-  "plan_id": "trade_plan-20260513T190459-18194eac",
+  "plan_id": "trade_plan-20260513T192054-7bc0d923",
   "proposed_orders": [
     {
       "capped_by_max_notional_per_order": true,
       "current_value": 0.0,
-      "delta_value": 4800.0,
-      "limit_price": 229.65,
+      "delta_value": 11976.36,
+      "limit_price": 230.42,
       "notional": 25.0,
       "order_type": "limit",
       "side": "buy",
       "skip_reason": null,
       "symbol": "JNJ",
-      "target_value": 4800.0,
+      "target_value": 11976.36,
       "target_weight": 0.12,
       "time_in_force": "day",
       "would_short": false
@@ -462,19 +471,19 @@
       "breadth_threshold": 0.55,
       "ready_count": 79
     },
-    "input_hash": "2edd63252b3e93f600ede19be276f820f155e6236a2be66ac115ac962338dc47",
+    "input_hash": "5e50a9f5285a79e00dd7358b7459e208d9ec0862d20be232275fc8e12a6b6a41",
     "passed": true,
     "risk_on": true,
     "skip_reason": null,
     "spy_signals": {
       "bar_count": 289,
       "is_ready": true,
-      "latest_close": 742.66,
+      "latest_close": 743.62,
       "passes_200dma": true,
       "passes_6m_momentum": true,
-      "roc": 0.09004711511646679,
+      "roc": 0.09145616532855838,
       "roc_period": 126,
-      "sma": 674.9635750000001,
+      "sma": 674.968375,
       "sma_period": 200,
       "symbol": "SPY"
     },
@@ -575,85 +584,85 @@
   "spread_blocked_at_planning": [],
   "strategy_hash": "682943a3d7feb467ff2d693aefa40b51f023cee52b0176d7355e85bd86123334",
   "targets": {
-    "AMD": {
-      "atr_pct": 0.04515453466042198,
-      "latest_close": 450.49,
-      "notional": 2116.74,
-      "reason": "risk_on_inverse_atr",
-      "weight": 0.0529185
-    },
     "AVGO": {
-      "atr_pct": 0.03406036166119211,
-      "latest_close": 417.04,
-      "notional": 2806.21,
+      "atr_pct": 0.03395127211430652,
+      "latest_close": 418.38,
+      "notional": 6730.79,
       "reason": "risk_on_inverse_atr",
-      "weight": 0.07015516
+      "weight": 0.06744071
     },
     "BIL": {
       "atr_pct": null,
-      "latest_close": 91.9626,
-      "notional": 4000.0,
+      "latest_close": 91.49,
+      "notional": 9980.3,
       "reason": "cash_allocation",
       "weight": 0.1
     },
-    "FCX": {
-      "atr_pct": 0.039556216625339834,
-      "latest_close": 68.295,
-      "notional": 2416.32,
+    "CSCO": {
+      "atr_pct": 0.022514136719918264,
+      "latest_close": 100.73,
+      "notional": 10150.01,
       "reason": "risk_on_inverse_atr",
-      "weight": 0.06040796
+      "weight": 0.10170046
+    },
+    "FCX": {
+      "atr_pct": 0.040087428615930905,
+      "latest_close": 67.39,
+      "notional": 5700.51,
+      "reason": "risk_on_inverse_atr",
+      "weight": 0.05711761
     },
     "GOOGL": {
-      "atr_pct": 0.02373156868648528,
-      "latest_close": 401.33,
-      "notional": 4027.56,
+      "atr_pct": 0.023830629985591,
+      "latest_close": 402.725,
+      "notional": 9589.29,
       "reason": "risk_on_inverse_atr",
-      "weight": 0.10068909
+      "weight": 0.09608214
     },
     "JNJ": {
-      "atr_pct": 0.017735902235794746,
-      "latest_close": 229.65,
-      "notional": 4800.0,
+      "atr_pct": 0.017879524123124137,
+      "latest_close": 230.42,
+      "notional": 11976.36,
       "reason": "risk_on_inverse_atr",
       "weight": 0.12
     },
     "MRK": {
-      "atr_pct": 0.023679432371690012,
-      "latest_close": 113.68,
-      "notional": 4036.43,
+      "atr_pct": 0.023648228692029524,
+      "latest_close": 113.83,
+      "notional": 9663.25,
       "reason": "risk_on_inverse_atr",
-      "weight": 0.10091079
+      "weight": 0.09682323
+    },
+    "MS": {
+      "atr_pct": 0.02391396008056265,
+      "latest_close": 194.38,
+      "notional": 9555.87,
+      "reason": "risk_on_inverse_atr",
+      "weight": 0.09574734
     },
     "SLB": {
-      "atr_pct": 0.030102059817620926,
-      "latest_close": 55.4,
-      "notional": 3175.21,
+      "atr_pct": 0.03004240882536839,
+      "latest_close": 55.51,
+      "notional": 7606.54,
       "reason": "risk_on_inverse_atr",
-      "weight": 0.07938029
+      "weight": 0.07621553
     },
     "WELL": {
-      "atr_pct": 0.021252397954670075,
-      "latest_close": 220.005,
-      "notional": 4497.39,
+      "atr_pct": 0.021424312052047374,
+      "latest_close": 220.13,
+      "notional": 10666.33,
       "reason": "risk_on_inverse_atr",
-      "weight": 0.11243485
-    },
-    "WMT": {
-      "atr_pct": 0.020347281070338383,
-      "latest_close": 130.8,
-      "notional": 4697.45,
-      "reason": "risk_on_inverse_atr",
-      "weight": 0.11743634
+      "weight": 0.10687382
     },
     "XOM": {
-      "atr_pct": 0.027892997140585265,
-      "latest_close": 151.395,
-      "notional": 3426.68,
+      "atr_pct": 0.027923429888903704,
+      "latest_close": 151.23,
+      "notional": 8183.76,
       "reason": "risk_on_inverse_atr",
-      "weight": 0.08566703
+      "weight": 0.08199917
     }
   },
-  "trade_plan_hash": "4c470514b2ae6dcc4e81138920d43ca1472a23ed21a6710e59a49942247d351b",
+  "trade_plan_hash": "338cb4a89319ff12d217ed489a5ab71dde6b1a9f961bd8f07a20a40d375e58e6",
   "trading_mode": "paper",
-  "trigger_snapshot_hash": "a0c588d2ea1a6bc4dc0bb3f19a2406b54c881a892ab3dbebdf8c48de905ec46e"
+  "trigger_snapshot_hash": "316ca90f3ed556ec3b0ad1af59ab0558ab6a3e521be571d86b783e81c69a930e"
 }
