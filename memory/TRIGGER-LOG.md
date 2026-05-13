@@ -1441,3 +1441,20 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trade_execution_allowed": false
 }
 ```
+
+## Alert routed
+
+```json
+{
+  "action_taken": "refresh_requested",
+  "alert_id": "n8n_test_tv_spy_004",
+  "approved_trade_plan_created": false,
+  "execution_called": false,
+  "next_step": "request_data_refresh",
+  "route_id": "route_20260513T171035_n8n_test_tv_spy_004_38590915",
+  "route_mode": "run_refresh",
+  "routed_at": "2026-05-13T17:10:35Z",
+  "symbol": "SPY",
+  "trade_execution_allowed": false
+}
+```

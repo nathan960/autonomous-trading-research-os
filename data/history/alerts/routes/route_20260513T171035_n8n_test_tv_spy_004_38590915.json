@@ -1,0 +1,38 @@
+{
+  "action_taken": "refresh_requested",
+  "alert_id": "n8n_test_tv_spy_004",
+  "approved_trade_plan_created": false,
+  "block_reason": null,
+  "blocked": false,
+  "condition": "n8n_test_alert",
+  "data_hashes": {},
+  "execution_called": false,
+  "generated_files": [],
+  "next_step": "request_data_refresh",
+  "route_id": "route_20260513T171035_n8n_test_tv_spy_004_38590915",
+  "route_mode": "run_refresh",
+  "routed_at": "2026-05-13T17:10:35Z",
+  "safety_checks": {
+    "approve_paper_passed": false,
+    "approved_trade_plan_created": false,
+    "blocked_by_default": true,
+    "enable_paper_execution_checked_false": true,
+    "execute_paper_called": false,
+    "execution_called": false,
+    "live_trading_confirmed_checked_false": true,
+    "no_execution_intent_fields": true,
+    "trade_execution_allowed": false
+  },
+  "scripts_run": [
+    "python scripts/refresh_data.py",
+    "python scripts/monitor_positions.py"
+  ],
+  "source": "tradingview",
+  "suggested_scripts": [
+    "python scripts/refresh_data.py",
+    "python scripts/monitor_positions.py"
+  ],
+  "symbol": "SPY",
+  "trade_execution_allowed": false,
+  "trigger_id": "TV_EXTERNAL_TEST_ALERT_V1"
+}
