@@ -976,3 +976,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trade_execution_allowed": false
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "n8n_test_tv_spy_004",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-13T14:05:12Z",
+  "next_step": "request_data_refresh",
+  "raw_payload_hash": "ae02f2c881b6a8af3fe5198c5b9d8c82c9c2a17e086b75e0f5ebe27d616c0c99",
+  "source": "tradingview",
+  "symbol": "SPY",
+  "trade_execution_allowed": false
+}
+```
