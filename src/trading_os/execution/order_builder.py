@@ -19,6 +19,20 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
+from ..tick_rounding import round_to_tick
+
+
+def _apply_tick(price: Optional[float], side: str) -> Optional[float]:
+    if price is None:
+        return None
+    try:
+        v = float(price)
+    except (TypeError, ValueError):
+        return None
+    if v <= 0:
+        return None
+    return float(round_to_tick(v, side))
+
 
 def _client_order_id(plan_id: str, symbol: str, side: str) -> str:
     """Build a deterministic client order ID."""
@@ -54,7 +68,7 @@ def build_execution_order(
     symbol: str = proposed.get("symbol", "")
     side: str = proposed.get("side", "buy")
     order_type: str = proposed.get("order_type", "limit")
-    limit_price: Optional[float] = proposed.get("limit_price")
+    limit_price: Optional[float] = _apply_tick(proposed.get("limit_price"), side)
     notional: float = float(proposed.get("notional", 0))
     target_weight: float = float(proposed.get("target_weight", 0))
     would_short: bool = bool(proposed.get("would_short", False))

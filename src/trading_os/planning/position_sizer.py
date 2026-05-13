@@ -18,6 +18,21 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
+from ..tick_rounding import round_to_tick
+
+
+def _apply_tick(price: Optional[float], side: str) -> Optional[float]:
+    """Round *price* to a valid tick; return None if price is absent or non-positive."""
+    if price is None:
+        return None
+    try:
+        v = float(price)
+    except (TypeError, ValueError):
+        return None
+    if v <= 0:
+        return None
+    return float(round_to_tick(v, side))
+
 
 def _position_value(positions: list, symbol: str) -> float:
     """Return the current market value of a held position (0.0 if none)."""
@@ -87,6 +102,8 @@ def compute_proposed_orders(
         notional = abs(delta)
         would_short = (side == "sell") and (current_value <= 0.0)
 
+        limit_price = _apply_tick(limit_price, side)
+
         skip_reason: Any = None
         if would_short:
             skip_reason = "would_short_no_position"
@@ -119,7 +136,7 @@ def compute_proposed_orders(
         if current_value <= 0:
             continue
         delta = -current_value
-        limit_price = _position_exit_price(positions, sym)
+        limit_price = _apply_tick(_position_exit_price(positions, sym), "sell")
         skip_reason = None if limit_price is not None else "no_limit_price_source"
         orders.append({
             "symbol": sym,

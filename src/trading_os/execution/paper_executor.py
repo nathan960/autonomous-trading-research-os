@@ -23,6 +23,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 from ..hashing import stable_hash
+from ..tick_rounding import round_to_tick, validate_tick_price
 from ..time_utils import utc_now_iso
 from .execution_gates import all_gates_pass, run_all_gates
 from .order_builder import build_execution_orders
@@ -138,6 +139,10 @@ def _validate_order_paper_safe(order: dict) -> Optional[str]:
     if limit_price is None or float(limit_price) <= 0:
         return f"missing_or_zero_limit_price({symbol})"
 
+    tick_err = validate_tick_price(float(limit_price))
+    if tick_err:
+        return f"invalid_limit_price_tick({symbol}): {tick_err}"
+
     tif = order.get("time_in_force", "day")
     if tif != "day":
         return f"time_in_force_must_be_day(got {tif!r} for {symbol})"
@@ -200,6 +205,11 @@ def submit_paper_order(
     }
 
     try:
+        # Final tick-round before wire — defence against any upstream miss.
+        if limit_price > 0:
+            limit_price = float(round_to_tick(limit_price, side_str))
+            result["limit_price"] = limit_price
+
         side = OrderSide.BUY if side_str == "buy" else OrderSide.SELL
         req = LimitOrderRequest(
             symbol=symbol,
@@ -255,10 +265,12 @@ def run_paper_execution(
 
     Returns an execution report dict.  Never raises.
     Possible status values:
-        PAPER_BLOCKED    — hard pre-gate blocked submission (no gates run)
-        PAPER_FAIL       — one or more Phase-5 gates failed (no orders submitted)
-        PAPER_NO_ORDERS  — all gates passed but no execution-ready orders exist
-        PAPER_SUBMITTED  — at least one order was submitted to Alpaca paper
+        PAPER_BLOCKED        — hard pre-gate blocked submission (no gates run)
+        PAPER_FAIL           — one or more Phase-5 gates failed (no orders submitted)
+        PAPER_NO_ORDERS      — all gates passed but no execution-ready orders exist
+        PAPER_SUBMITTED      — all attempted orders were accepted by Alpaca (submitted=True)
+        PAPER_PARTIAL_SUBMIT — some orders accepted, some rejected by the broker
+        PAPER_ORDER_ERRORS   — all attempted orders were rejected by the broker
     """
     ctx = dict(ctx)  # shallow copy; never mutate caller's dict
     ctx["dry_run"] = False  # paper execution is never a dry run
@@ -368,7 +380,22 @@ def run_paper_execution(
         submitted.append(order_result)
 
     report["orders_submitted"] = submitted
-    report["status"] = "PAPER_SUBMITTED" if submitted else "PAPER_NO_ORDERS"
+
+    if not submitted:
+        report["status"] = "PAPER_NO_ORDERS"
+    else:
+        n_ok = sum(1 for o in submitted if o.get("submitted") is True)
+        n_fail = len(submitted) - n_ok
+        if n_ok > 0 and n_fail == 0:
+            report["status"] = "PAPER_SUBMITTED"
+        elif n_ok > 0:
+            report["status"] = "PAPER_PARTIAL_SUBMIT"
+        else:
+            report["status"] = "PAPER_ORDER_ERRORS"
+            failures = [o.get("error") for o in submitted if not o.get("submitted")]
+            report["blocked_reason"] = (
+                f"all_attempted_orders_failed_broker_submission: {failures}"
+            )
 
     _finalise_report(report)
     return report

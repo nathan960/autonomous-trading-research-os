@@ -1265,3 +1265,163 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T15:57:02Z",
+  "run_id": "data_refresh-20260513T155702-70be13b3",
+  "source_data_hash": "181a7234eb862f018834ddaca0fb97ebea6edc4beed0cbded54dd7e01a0d2cef",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T15:57:03Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "aa2d5f5cde0faaa5f29f98e190ef5469eeaa54be29a7526b9cd71d9ec2e5c4c5",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T155703",
+  "snapshot_age_minutes": 0.009002566666666666,
+  "snapshot_fetched_at": "2026-05-13T15:57:03Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T15:58:04Z",
+  "run_id": "data_refresh-20260513T155804-0d5079ba",
+  "source_data_hash": "46b3076d60aadfbd24f59e384137088d8f526b0cf036db0bffc15786645e0d11",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T15:58:06Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "2a87269dba33531359976b404410e8dda308242a395f23beb34e3ab18df38b44",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T155805",
+  "snapshot_age_minutes": 0.020182433333333336,
+  "snapshot_fetched_at": "2026-05-13T15:58:05Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T15:58:13Z",
+  "run_id": "data_refresh-20260513T155813-e70b7f0a",
+  "source_data_hash": "0a763f243612d8eb0ee4a30415dc7b943f6a8330964a563157d4651dd5864444",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T15:58:14Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "865cf8aa06d334ae7489fb91258047c54c354169e929fac132c90c8046deedde",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T155814",
+  "snapshot_age_minutes": 0.013497183333333333,
+  "snapshot_fetched_at": "2026-05-13T15:58:14Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T15:58:18Z",
+  "run_id": "data_refresh-20260513T155818-72e25c66",
+  "source_data_hash": "29b8000c13139bbd71cfac4faef13ece7314d53cf857e4f514e4011ca9a69974",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T15:58:20Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "0b124765370ba794c0f0bbb30e82f684f904ad985cce80876b12db1215bec6f2",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T155819",
+  "snapshot_age_minutes": 0.016739633333333333,
+  "snapshot_fetched_at": "2026-05-13T15:58:19Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T15:58:24Z",
+  "run_id": "data_refresh-20260513T155824-1aaec092",
+  "source_data_hash": "c388602ad88d0f2c3315eacc0cfabd4550c3e8a0b6460452e7d3a895870efb55",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T15:58:25Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "67932bb6b11f1a733c3999889cfcd9e5876ae0fc22d2e6b7888c9f00afaa943c",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T155825",
+  "snapshot_age_minutes": 0.008842899999999999,
+  "snapshot_fetched_at": "2026-05-13T15:58:25Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```

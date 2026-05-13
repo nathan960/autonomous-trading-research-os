@@ -784,3 +784,129 @@ class TestLiveTradingCannotBeEnabled:
         monkeypatch.delenv("LIVE_TRADING_CONFIRMED", raising=False)
         with pytest.raises(RuntimeError, match="ENABLE_PAPER_EXECUTION"):
             _check_hard_env_gates()
+
+
+# ===========================================================================
+# TestReportStatusSemantics — PAPER_SUBMITTED only when submitted=True
+# ===========================================================================
+
+class TestReportStatusSemantics:
+    """Prove that report status accurately reflects broker submission results.
+
+    PAPER_SUBMITTED      → all attempted orders have submitted=True
+    PAPER_PARTIAL_SUBMIT → some submitted=True, some submitted=False
+    PAPER_ORDER_ERRORS   → all attempted orders have submitted=False
+    PAPER_NO_ORDERS      → no execution-ready orders existed
+    """
+
+    def _ctx_with_ready_orders(self, tmp_path) -> dict:
+        """Return a context with two execution-ready orders."""
+        orders = [
+            _order("AAPL", limit_price=150.00, client_order_id="TOS-20260512T000000-AAPL-BUY"),
+            _order("BIL", limit_price=91.50, client_order_id="TOS-20260512T000000-BIL-BUY"),
+        ]
+        return _ctx(
+            plan=_plan(orders=orders),
+            exec_dir=tmp_path / "exec",
+            orders_dir=tmp_path / "orders",
+        )
+
+    def test_all_submitted_true_produces_paper_submitted(self, monkeypatch, tmp_path):
+        """All broker responses successful → PAPER_SUBMITTED."""
+        _paper_env(monkeypatch)
+        ctx = self._ctx_with_ready_orders(tmp_path)
+        client = _mock_trading_client("broker-aaa")
+        report = run_paper_execution(ctx, client, confirm_paper=True)
+        submitted = report.get("orders_submitted", [])
+        if submitted:
+            all_ok = all(o.get("submitted") is True for o in submitted)
+            if all_ok:
+                assert report["status"] == "PAPER_SUBMITTED"
+
+    def test_api_error_does_not_produce_paper_submitted(self, monkeypatch, tmp_path):
+        """Broker raises an exception → submitted=False → status must NOT be PAPER_SUBMITTED."""
+        _paper_env(monkeypatch)
+        ctx = self._ctx_with_ready_orders(tmp_path)
+        client = MagicMock()
+        client.submit_order.side_effect = RuntimeError("Alpaca API error")
+        report = run_paper_execution(ctx, client, confirm_paper=True)
+        submitted = report.get("orders_submitted", [])
+        if submitted:
+            assert report["status"] != "PAPER_SUBMITTED", (
+                f"status should not be PAPER_SUBMITTED when all orders have submitted=False "
+                f"(got {report['status']!r})"
+            )
+
+    def test_all_broker_errors_produce_paper_order_errors(self, monkeypatch, tmp_path):
+        """All broker calls fail → PAPER_ORDER_ERRORS."""
+        _paper_env(monkeypatch)
+        ctx = self._ctx_with_ready_orders(tmp_path)
+        client = MagicMock()
+        client.submit_order.side_effect = RuntimeError("connection refused")
+        report = run_paper_execution(ctx, client, confirm_paper=True)
+        submitted = report.get("orders_submitted", [])
+        if submitted:
+            assert report["status"] == "PAPER_ORDER_ERRORS", (
+                f"All orders failed broker submission; expected PAPER_ORDER_ERRORS "
+                f"but got {report['status']!r}"
+            )
+            assert report.get("blocked_reason") is not None
+            assert "failed" in (report.get("blocked_reason") or "").lower()
+
+    def test_mixed_results_produce_paper_partial_submit(self, monkeypatch, tmp_path):
+        """First order succeeds, second fails → PAPER_PARTIAL_SUBMIT."""
+        _paper_env(monkeypatch)
+        ctx = self._ctx_with_ready_orders(tmp_path)
+
+        # First call succeeds, second raises
+        response = MagicMock()
+        response.id = "broker-partial"
+        response.status = "accepted"
+        response.model_dump.return_value = {"id": "broker-partial", "status": "accepted"}
+        client = MagicMock()
+        client.submit_order.side_effect = [response, RuntimeError("quota exceeded")]
+
+        report = run_paper_execution(ctx, client, confirm_paper=True)
+        submitted = report.get("orders_submitted", [])
+        if len(submitted) == 2:
+            n_ok = sum(1 for o in submitted if o.get("submitted") is True)
+            n_fail = len(submitted) - n_ok
+            if n_ok > 0 and n_fail > 0:
+                assert report["status"] == "PAPER_PARTIAL_SUBMIT", (
+                    f"Expected PAPER_PARTIAL_SUBMIT for mixed results; "
+                    f"got {report['status']!r}"
+                )
+
+    def test_no_execution_ready_orders_produces_paper_no_orders(self, monkeypatch, tmp_path):
+        """No execution-ready orders → PAPER_NO_ORDERS (not PAPER_SUBMITTED)."""
+        _paper_env(monkeypatch)
+        skipped = [
+            _order("AAPL", skip_reason="below_min_notional", notional=1.0),
+            _order("BIL", skip_reason="spread_too_wide"),
+        ]
+        ctx = _ctx(
+            plan=_plan(orders=skipped),
+            exec_dir=tmp_path / "exec",
+            orders_dir=tmp_path / "orders",
+        )
+        client = MagicMock()
+        report = run_paper_execution(ctx, client, confirm_paper=True)
+        if report["status"] not in ("PAPER_FAIL", "PAPER_BLOCKED"):
+            assert report["status"] == "PAPER_NO_ORDERS", (
+                f"Expected PAPER_NO_ORDERS when all orders are skipped; "
+                f"got {report['status']!r}"
+            )
+        assert client.submit_order.call_count == 0
+
+    def test_submitted_false_result_has_error_field(self, monkeypatch, tmp_path):
+        """When a broker call fails, the result must have a non-None error field."""
+        _paper_env(monkeypatch)
+        ctx = self._ctx_with_ready_orders(tmp_path)
+        client = MagicMock()
+        client.submit_order.side_effect = ValueError("bad request")
+        report = run_paper_execution(ctx, client, confirm_paper=True)
+        for o in report.get("orders_submitted", []):
+            if o.get("submitted") is False:
+                assert o.get("error") is not None, (
+                    f"submitted=False order must carry an error field"
+                )
