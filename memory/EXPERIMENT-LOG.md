@@ -198,3 +198,21 @@ Evidence-backed experiment proposals live here. Hypotheses are not production ch
 - Rollback plan
 
 ---
+## Trigger Performance Observations — 2026-05-13
+
+*From trigger_performance run `trigger_performance-20260513T201006-077c7bad`*
+*Period: 2026-05-07 to 2026-05-13 (7 days)*
+
+**Observations (research only — no strategy conclusions):**
+- Regime: 14 session(s) scanned, 14 risk-on (100%).
+- Spread gate: 21/79 symbols blocked (27%). Avg spread (blocked): 5.026%
+- Trend gate (200 DMA): 33/79 symbols below 200 DMA (42% block rate).
+- Fill count this period: 3. Need 17 more fills before P/L analysis is meaningful.
+- Average current return across 3 tracked outcome(s): -2.340%. Window pending — no conclusions yet.
+- IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest.
+
+**Reminder:** Do not modify strategy.json, risk_limits.json, or trigger_registry.json
+based on this report alone. Any experiment requires a candidate PR with:
+- Hypothesis, supporting evidence, success criteria, and rollback plan.
+
+---
