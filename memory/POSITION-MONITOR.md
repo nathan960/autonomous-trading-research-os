@@ -503,29 +503,13 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
 ```json
 {
   "drawdown": 0.0,
-  "dry_run": false,
-  "equity": 99802.86,
-  "generated_at": "2026-05-13T15:28:42Z",
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-13T15:43:36Z",
   "open_order_count": 0,
-  "peak_equity": 99802.86,
+  "peak_equity": 40000.0,
   "position_count": 0,
-  "run_id": "monitor_positions-20260513T152842-d3d30d7f",
-  "source": "alpaca_paper"
-}
-```
-
-## monitor_positions run
-
-```json
-{
-  "drawdown": 0.0,
-  "dry_run": false,
-  "equity": 99802.86,
-  "generated_at": "2026-05-13T15:32:08Z",
-  "open_order_count": 0,
-  "peak_equity": 99802.86,
-  "position_count": 0,
-  "run_id": "monitor_positions-20260513T153208-a0515e70",
-  "source": "alpaca_paper"
+  "run_id": "monitor_positions-20260513T154336-3e7c0d2f",
+  "source": "dry_run_mock"
 }
 ```
