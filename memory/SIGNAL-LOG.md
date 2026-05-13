@@ -12156,3 +12156,32 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
   "trade_plan_hash": "201add782f1a65864852e61f05a5ef99779f25fb3798210471effd9141c1356b"
 }
 ```
+
+## scan_triggers candidates  (2026-05-13T16:39:14Z)
+
+```
+  AMD       score=1.9908  atr_pct=0.0454  [SELECTED]
+  GOOGL     score=0.9494  atr_pct=0.0236  [SELECTED]
+  FCX       score=0.7185  atr_pct=0.0393  [SELECTED]
+  AVGO      score=0.5164  atr_pct=0.0342  [SELECTED]
+  SLB       score=0.5122  atr_pct=0.0303  [SELECTED]
+  CSCO      score=0.5095  atr_pct=0.0222  [candidate]
+  NVDA      score=0.4972  atr_pct=0.0289  [candidate]
+  MRK       score=0.3581  atr_pct=0.0237  [SELECTED]
+  JNJ       score=0.3505  atr_pct=0.0177  [SELECTED]
+  WELL      score=0.3304  atr_pct=0.0211  [SELECTED]
+  XOM       score=0.3258  atr_pct=0.0281  [SELECTED]
+  WMT       score=0.3094  atr_pct=0.0204  [SELECTED]
+  COP       score=0.2873  atr_pct=0.0306  [candidate]
+  EQIX      score=0.2771  atr_pct=0.0190  [candidate]
+  AAPL      score=0.2641  atr_pct=0.0204  [candidate]
+  NEE       score=0.2386  atr_pct=0.0221  [candidate]
+  BA        score=0.2255  atr_pct=0.0275  [candidate]
+  TSLA      score=0.2124  atr_pct=0.0366  [candidate]
+  DE        score=0.2007  atr_pct=0.0253  [candidate]
+  AMZN      score=0.1869  atr_pct=0.0248  [candidate]
+  LLY       score=0.1864  atr_pct=0.0295  [candidate]
+  AEP       score=0.1492  atr_pct=0.0197  [candidate]
+  KO        score=0.1430  atr_pct=0.0163  [candidate]
+  O         score=0.0989  atr_pct=0.0151  [candidate]
+```
