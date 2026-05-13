@@ -18521,3 +18521,12 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
   "warnings": []
 }
 ```
+## Outcome Tracker — 2026-05-13T21:03:03Z
+
+**Run ID:** `outcome_tracker-20260513T210303-fe0c667b`  **Outcomes tracked:** 3
+
+- WELL BUY (entry) fill=$218.808 return=+0.609% unpl=$+0.1522 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
+- JNJ BUY (entry) fill=$230.248 return=+0.281% unpl=$+0.0704 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1084.37 return=-0.654% unpl=$-0.1635 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
+
+---
