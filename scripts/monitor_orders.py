@@ -36,6 +36,7 @@ from trading_os.config import (
     LATEST_DIR,
     MEMORY_DIR,
 )
+from trading_os.logging.event_log import write_event
 from trading_os.monitoring.order_monitor import (
     append_trade_log,
     fetch_broker_orders,
@@ -45,6 +46,7 @@ from trading_os.time_utils import utc_now_iso
 
 _ORDERS_DIR = HISTORY_DIR / "orders"
 _EXECUTIONS_DIR = HISTORY_DIR / "executions"
+_EVENTS_DIR = HISTORY_DIR / "events"
 _TRADE_LOG_PATH = MEMORY_DIR / "TRADE-LOG.md"
 _TRADE_PLAN_PATH = LATEST_DIR / "trade_plan.json"
 
@@ -287,6 +289,12 @@ def main() -> int:
 
     append_trade_log(report, _TRADE_LOG_PATH)
     print(f"  appended {_TRADE_LOG_PATH.relative_to(_ROOT)}")
+
+    try:
+        event_path = write_event("order_monitor", run_id, report, _EVENTS_DIR)
+        print(f"  event:  {event_path.relative_to(_ROOT)}")
+    except Exception as exc:
+        print(f"  WARNING: event write failed (non-fatal): {exc}", file=sys.stderr)
 
     # ── Warn about stale orders in risk summary ──────────────────────────────
     if stale:

@@ -77,7 +77,22 @@ jobs:
           fi
           python scripts/monitor_orders.py $DRY_RUN_FLAG
 
-      - name: Commit order monitor artifacts
+      - name: Commit event files (conflict-free)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A data/history/events/
+          if git diff --cached --quiet; then
+            echo "No event files to commit."
+          else
+            git commit -m "chore(events): order-monitor ${{ github.run_id }}"
+            git pull --rebase --autostash origin main
+            git push
+          fi
+
+      - name: Commit remaining artifacts
         if: always()
         run: |
           git config user.name "github-actions[bot]"
@@ -89,9 +104,15 @@ jobs:
                   || true
 
           if git diff --cached --quiet; then
-            echo "No order monitor artifacts changed."
-          else
-            git commit -m "chore(orders): order monitor run ${{ github.run_id }}"
-            git pull --rebase origin main
-            git push
+            echo "No remaining artifacts changed."
+            exit 0
           fi
+
+          git commit -m "chore(orders): order monitor run ${{ github.run_id }}"
+
+          if ! git pull --rebase --autostash origin main; then
+            git rebase --abort || true
+            echo "::warning::Markdown conflict during rebase. Event JSON files already pushed. Run rebuild_memory_logs.py to regenerate memory logs."
+            exit 1
+          fi
+          git push

@@ -39,9 +39,11 @@ from trading_os.config import (
 from trading_os.execution.execution_gates import all_gates_pass, run_all_gates
 from trading_os.execution.order_builder import build_execution_orders
 from trading_os.hashing import stable_hash
+from trading_os.logging.event_log import write_event
 from trading_os.time_utils import utc_now_iso
 
 _EXEC_HISTORY_DIR = HISTORY_DIR / "executions"
+_EVENTS_DIR = HISTORY_DIR / "events"
 
 
 # ---------------------------------------------------------------------------
@@ -231,6 +233,12 @@ def main() -> int:
     _write_json(history_path, report)
 
     _append_trade_log(report)
+
+    try:
+        event_path = write_event("dry_run", run_id, report, _EVENTS_DIR, generated_at)
+        print(f"  event:  {event_path.relative_to(_ROOT)}")
+    except Exception as exc:
+        print(f"  WARNING: event write failed (non-fatal): {exc}", file=sys.stderr)
 
     print(f"[dry_run_execute] done  status={status}")
     return 0

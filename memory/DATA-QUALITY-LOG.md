@@ -2350,3 +2350,29 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T22:09:15Z",
+  "run_id": "data_refresh-20260513T220915-de8400ea",
+  "source_data_hash": "f17ddfffdae2a42d9b7afac0e9297fbbb6f6879831c9dc502c15bb51614cccbb",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T22:10:46Z",
+  "run_id": "data_refresh-20260513T221046-be60cfd3",
+  "source_data_hash": "b2622aea4a54a77401bbd7d7b480922427a3a50765b8fb82dd2bd2c78471f31a",
+  "symbols": 81
+}
+```

@@ -2064,3 +2064,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "01c1c1fb2f6f498ef8a0565fa3763223b51f5b6b33233fa95a4d7ae7f42aa6a3"
 }
 ```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "f17ddfffdae2a42d9b7afac0e9297fbbb6f6879831c9dc502c15bb51614cccbb",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T220916-93328892",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "b2622aea4a54a77401bbd7d7b480922427a3a50765b8fb82dd2bd2c78471f31a",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T221046-7ca724ab",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```

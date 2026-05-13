@@ -25,7 +25,10 @@ _ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(_ROOT / "src"))
 
 from trading_os.config import HISTORY_DIR, MEMORY_DIR
+from trading_os.logging.event_log import write_event
 from trading_os.research.daily_summary import build_daily_summary, write_daily_summary
+
+_EVENTS_DIR = HISTORY_DIR / "events"
 
 
 def main() -> int:
@@ -87,6 +90,17 @@ def main() -> int:
         "generated_at": summary.get("generated_at"),
         "status": summary.get("status"),
     }, indent=2))
+
+    try:
+        run_id = summary.get("run_id", "daily_summary")
+        event_path = write_event(
+            "daily_summary", run_id, summary, _EVENTS_DIR,
+            generated_at=summary.get("generated_at"),
+        )
+        print(f"  event:  {event_path.relative_to(_ROOT)}")
+    except Exception as exc:
+        print(f"  WARNING: event write failed (non-fatal): {exc}", file=sys.stderr)
+
     return 0
 
 

@@ -54,9 +54,11 @@ from trading_os.execution.paper_executor import (
     run_paper_execution,
 )
 from trading_os.hashing import stable_hash
+from trading_os.logging.event_log import write_event
 from trading_os.time_utils import utc_now_iso
 
 _EXEC_HISTORY_DIR = HISTORY_DIR / "executions"
+_EVENTS_DIR = HISTORY_DIR / "events"
 _ORDERS_HISTORY_DIR = HISTORY_DIR / "orders"
 
 
@@ -308,6 +310,12 @@ def main() -> int:
     _write_json(history_path, report)
 
     _append_trade_log(report)
+
+    try:
+        event_path = write_event("paper_execution", run_id, report, _EVENTS_DIR)
+        print(f"  event:  {event_path.relative_to(_ROOT)}")
+    except Exception as exc:
+        print(f"  WARNING: event write failed (non-fatal): {exc}", file=sys.stderr)
 
     print(f"[execute_paper] done  status={status}")
     return 0
