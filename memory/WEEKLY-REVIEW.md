@@ -108,3 +108,42 @@ Weekly summaries of triggers, skips, trades, drawdown, data quality, and operati
 - 8 external alert(s) ingested this period, 5 routed.
 
 ---
+## Weekly Review — 2026-05-07 to 2026-05-13 (7 days)
+
+**Generated:** 2026-05-13T19:22:57Z  **Run ID:** weekly_review-2026-05-13
+
+### Trigger Scans
+- Total runs: 0 | Risk-on: 0 | Risk-off: 0
+- Avg candidates: 0.0 | Avg excluded: 0.0
+
+### Dry Runs
+- Total: 0 | Pass: 0 | Fail: 0
+
+### Paper Executions
+- Attempts: 1 | Orders submitted: 1
+  - [2026-05-13] WELL BUY $25.0 @ $218.9 (PAPER_SUBMITTED)
+
+### Order Lifecycle
+- Monitor runs: 9 | Tracked: 8
+- Fills: 1 | Missing: 6 | Expired: 0 | Rejected: 0 | Canceled: 0
+
+### External Alerts
+- Ingested this period: 8 (all-time: 8)
+- Routes this period: 5 (all-time: 5)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Risk State
+- Equity: $99,803.02 | Peak: $99,803.12 | Drawdown: -0.00% | Positions: 1
+- Last updated: 2026-05-13T19:20:54Z
+
+### Operational Issues (1)
+- 6 order(s) have lifecycle_status=missing — verify on broker.
+
+### Research Observations
+- 1 paper execution attempt(s), 1 order(s) submitted.
+- 1 order fill(s) confirmed by order monitor.
+- 8 external alert(s) ingested this period, 5 routed.
+
+---
