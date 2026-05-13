@@ -1074,22 +1074,161 @@ Data refreshes and quality reviews are logged here.
 }
 ```
 
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T12:59:49Z",
+  "run_id": "data_refresh-20260513T125949-3d4c0585",
+  "source_data_hash": "6ea732335973c7e59b048a8f06201aaf0e9e08eb891ea5d0d5d010627d9404de",
+  "symbols": 81
+}
+```
+
 ## refresh_data run
 
 ```json
 {
-  "generated_at": "2026-05-13T12:48:18Z",
+  "generated_at": "2026-05-13T12:59:50Z",
   "insufficient_bars_count": 0,
-  "issues": [
-    "wide_spreads"
-  ],
-  "market_data_hash": "f5b8cf090a751f67fc526e49796ae03c8f0a9ad6b1cbf1cb216cc79009fd436e",
+  "issues": [],
+  "market_data_hash": "f2b5db63415d1a4f6effec776c6cf128686f85a417df1fa1e41fad4ac8fd2ed5",
   "missing_bars_count": 0,
   "not_tradable_count": 0,
-  "run_id": "refresh_data-20260513T124813",
-  "snapshot_age_minutes": 0.05502421666666667,
-  "snapshot_fetched_at": "2026-05-13T12:48:15Z",
-  "status": "ATTENTION_REQUIRED",
+  "run_id": "refresh_data-20260513T125950",
+  "snapshot_age_minutes": 0.008648766666666667,
+  "snapshot_fetched_at": "2026-05-13T12:59:50Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T12:59:55Z",
+  "run_id": "data_refresh-20260513T125955-764f628b",
+  "source_data_hash": "6accb371a87128a52391e569b49b07c1871b910c8bdde8f9c7750a36bd7922c4",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T12:59:56Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "bf704bcb1d56a7044112d20111b0fd9b964b512646380cdfc93607f0c645f3a3",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T125956",
+  "snapshot_age_minutes": 0.009242116666666666,
+  "snapshot_fetched_at": "2026-05-13T12:59:56Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T13:00:01Z",
+  "run_id": "data_refresh-20260513T130001-c5a77384",
+  "source_data_hash": "f2330fa75ebad3328baf7d8c519bc521fb82c28343d480a93eeada5bb6cf025b",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T13:00:03Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "58d25687a7db09cf915212e1913eb9390cdaf259bb4b185a3edc547d9619f455",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T130002",
+  "snapshot_age_minutes": 0.02002691666666667,
+  "snapshot_fetched_at": "2026-05-13T13:00:02Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T13:00:07Z",
+  "run_id": "data_refresh-20260513T130007-1a66df06",
+  "source_data_hash": "4726c42fd9e7fa45af613b28e75800c47a07e079ef1e634e8de95d84491652af",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T13:00:08Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "cdaea24577c3f3416fe824fd2df12f4578630946885ec930a08458db7755e5c0",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T130008",
+  "snapshot_age_minutes": 0.005891733333333333,
+  "snapshot_fetched_at": "2026-05-13T13:00:08Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T13:00:13Z",
+  "run_id": "data_refresh-20260513T130013-d903e600",
+  "source_data_hash": "1535c46f15963dc0268178ce36051df57af9e4480610cc5747088ec2048d3a74",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T13:00:14Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "0a076ee84b89a8671e25c2adb1e2d07e779d98bc0d9508bc678a506a634eff9a",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T130013",
+  "snapshot_age_minutes": 0.02032035,
+  "snapshot_fetched_at": "2026-05-13T13:00:13Z",
+  "status": "PASS",
   "symbols_expected": 81,
   "symbols_with_bars": 81
 }

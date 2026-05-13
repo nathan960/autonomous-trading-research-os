@@ -423,13 +423,77 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
 ```json
 {
   "drawdown": 0.0,
-  "dry_run": false,
-  "equity": 99446.91,
-  "generated_at": "2026-05-13T12:48:19Z",
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-13T12:59:49Z",
   "open_order_count": 0,
-  "peak_equity": 99446.91,
-  "position_count": 10,
-  "run_id": "monitor_positions-20260513T124818-277a22c0",
-  "source": "alpaca_paper"
+  "peak_equity": 40000.0,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260513T125949-5ca099ac",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": 0.0,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-13T12:59:55Z",
+  "open_order_count": 0,
+  "peak_equity": 40000.0,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260513T125955-0f814a72",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": 0.0,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-13T13:00:02Z",
+  "open_order_count": 0,
+  "peak_equity": 40000.0,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260513T130002-2906c918",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": 0.0,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-13T13:00:07Z",
+  "open_order_count": 0,
+  "peak_equity": 40000.0,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260513T130007-06b722c3",
+  "source": "dry_run_mock"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": 0.0,
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-13T13:00:13Z",
+  "open_order_count": 0,
+  "peak_equity": 40000.0,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260513T130013-710d9e6b",
+  "source": "dry_run_mock"
 }
 ```
