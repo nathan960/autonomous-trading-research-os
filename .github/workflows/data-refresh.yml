@@ -53,9 +53,24 @@ jobs:
         run: python scripts/validate_all.py
 
       - name: Commit data and memory artifacts
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data memory
-          git diff --cached --quiet || git commit -m "chore(data): refresh snapshots and risk state ${{ github.run_id }}"
+
+          echo "Git status before staging:"
+          git status --short
+
+          git add -A data memory
+
+          echo "Git status after staging:"
+          git status --short
+
+          if git diff --cached --quiet; then
+            echo "No data artifacts changed."
+          else
+            git commit -m "chore(data): refresh snapshots and risk state ${{ github.run_id }}"
+          fi
+
+          git pull --rebase --autostash origin main
           git push
