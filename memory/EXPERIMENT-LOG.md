@@ -274,3 +274,15 @@ based on this report alone. Any experiment requires a candidate PR with:
 - Rollback plan
 
 ---
+## Outcome Observations — 2026-05-13T22:40:21Z
+
+*From outcome_tracker run `outcome_tracker-20260513T224021-e7ad10a5`*
+
+**Current unrealized returns (intraday — no strategy conclusions yet):**
+- WELL entry: fill=$218.808 current=$220.14 return=+0.609%
+- JNJ entry: fill=$230.248 current=$230.43 return=+0.079%
+- EQIX entry: fill=$1084.37 current=$1077.28 return=-0.654%
+
+*Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
+
+---
