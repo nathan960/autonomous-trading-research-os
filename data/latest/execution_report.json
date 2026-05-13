@@ -1,7 +1,8 @@
 {
   "all_gates_pass": true,
-  "dry_run": true,
-  "execution_report_hash": "276136ad3a5f0e4b5a81fd5ff015cab4acc494fa7bcf02da778d144fc5457f14",
+  "blocked_reason": null,
+  "dry_run": false,
+  "execution_report_hash": "cc2a04f2a272d90a8747e99f8edd53aa1b1c53e97c1b0e73d53bece444775ce4",
   "failed_gates": [],
   "gate_results": [
     {
@@ -85,24 +86,37 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-05-13T15:28:43Z",
-  "no_submit_reason": "dry_run_mode",
-  "orders_submitted": [],
+  "generated_at": "2026-05-13T15:32:10Z",
+  "orders_submitted": [
+    {
+      "broker_order_id": null,
+      "broker_status": null,
+      "client_order_id": "TOS-20260513T153209-EQIX-BUY",
+      "error": "APIError: {\"code\":42210000,\"message\":\"invalid limit_price 1078.765. sub-penny increment does not fulfill minimum pricing criteria\"}",
+      "limit_price": 1078.765,
+      "notional": 25.0,
+      "side": "buy",
+      "skip_reason": null,
+      "submitted": false,
+      "submitted_at": "2026-05-13T15:32:10Z",
+      "symbol": "EQIX"
+    }
+  ],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260513T152843-WMT-BUY",
+      "client_order_id": "TOS-20260513T153209-EQIX-BUY",
       "execution_ready": true,
-      "limit_price": 130.56,
+      "limit_price": 1078.765,
       "notional": 25.0,
       "order_type": "limit",
       "side": "buy",
-      "symbol": "WMT",
-      "target_weight": 0.11516177,
+      "symbol": "EQIX",
+      "target_weight": 0.12,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260513T152843-0ac4d30e",
-  "run_id": "execution-20260513T152843-bc0829fb",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "366d997604df51abf97b69bac76df6e47ae490d2889401dde3baf89d1adf7437"
+  "plan_id": "trade_plan-20260513T153209-77170c06",
+  "run_id": "execution-20260513T153210-56d859a3",
+  "status": "PAPER_SUBMITTED",
+  "trade_plan_hash": "bb5398ef10697971cb7a908270a8d5784c711366651b6321fa0825ae1bed45b5"
 }
