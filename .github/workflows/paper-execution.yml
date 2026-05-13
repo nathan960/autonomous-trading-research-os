@@ -206,12 +206,29 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data memory
+          echo "Git status before staging:"
+          git status --short
+
+          # Stage all generated data/memory artifacts.
+          git add -A data memory
+
+          echo "Git status after staging:"
+          git status --short
 
           if git diff --cached --quiet; then
             echo "No execution artifacts changed."
-          else
-            git commit -m "chore(exec): paper execution attempt ${{ github.run_id }}"
-            git pull --rebase origin main
-            git push
+            exit 0
           fi
+
+          git commit -m "chore(exec): paper execution attempt ${{ github.run_id }}"
+
+          # Try to rebase/push. If append-only markdown conflicts, preserve
+          # safety by aborting rebase and pushing nothing rather than force-pushing.
+          if ! git pull --rebase --autostash origin main; then
+            echo "::warning::Could not rebase execution artifacts cleanly. This is usually an append-only memory log conflict."
+            git rebase --abort || true
+            echo "::warning::Execution artifacts were not pushed. Run Data Refresh / Order Monitor / Daily Summary to reconstruct broker state."
+            exit 1
+          fi
+
+          git push
