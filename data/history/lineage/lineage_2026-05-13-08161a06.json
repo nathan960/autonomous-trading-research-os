@@ -1,28 +1,27 @@
 {
-  "generated_at": "2026-05-13T21:27:51Z",
-  "outcomes": [
+  "complete_count": 3,
+  "generated_at": "2026-05-13T21:27:46Z",
+  "lineage_count": 3,
+  "lineage_records": [
     {
-      "bil_price_at_check": 91.495,
+      "alert_id": null,
       "broker_order_id": "a57f3df1-f9d5-4ab7-8655-ed8240ade13e",
+      "broker_status": "filled",
       "candidate_rank": 8,
-      "checked_at": "2026-05-13T20:38:56Z",
+      "candidate_source": "selected",
       "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "current_market_value": 25.152188,
-      "current_position_qty": 0.11425542,
-      "current_price": 220.14,
-      "current_return_pct": 0.006088,
-      "current_unrealized_pl": 0.152188,
-      "current_unrealized_pl_pct": 0.00609,
-      "entry_or_exit": "entry",
+      "current_return_pct": -0.310639,
+      "current_unrealized_pl": null,
       "fill_price": 218.808,
       "filled_at": "2026-05-13T16:00:36Z",
       "filled_notional": 25.0,
       "filled_qty": 0.11425542,
-      "first_seen_at": "2026-05-13T19:32:15Z",
-      "lifecycle_status": "filled",
       "limit_price": 218.9,
+      "lineage_note": null,
       "lineage_status": "complete_recovered_from_trigger_history",
+      "linked_at": "2026-05-13T21:27:46Z",
       "momentum_score": 0.3325688520489576,
+      "outcome_client_order_id": "TOS-20260513T160035-WELL-BUY",
       "outcome_windows": {
         "1_trading_day": {
           "status": "pending"
@@ -41,13 +40,16 @@
         }
       },
       "plan_id": "trade_plan-20260513T160035-0460e121",
+      "proposed_limit_price": 218.9,
+      "proposed_notional": 25.0,
+      "proposed_side": "buy",
+      "proposed_target_weight": null,
       "run_id": "execution-20260513T160036-b4ad22c3",
       "side": "buy",
-      "slippage_pct": -0.00042,
-      "slippage_vs_limit": -0.092,
-      "source_integrity_status": "ok",
-      "spy_price_at_check": 742.77,
       "symbol": "WELL",
+      "target_notional": null,
+      "target_reason": null,
+      "target_weight": null,
       "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
       "trigger_ids": [
         "SPY_REGIME_200DMA_V1",
@@ -57,30 +59,29 @@
         "MOMENTUM_BLEND_6M_12M_V1",
         "ATR_SIZING_V1"
       ],
-      "trigger_snapshot_hash": "d52e92b99f633ff582b06e239284349472a57ea197c8eaa1aaa202101419a6ad"
+      "trigger_ids_source": "inferred_from_selected_in_trigger_history",
+      "trigger_snapshot_hash": "d52e92b99f633ff582b06e239284349472a57ea197c8eaa1aaa202101419a6ad",
+      "trigger_snapshot_hash_source": "recovered_from_trigger_history"
     },
     {
-      "bil_price_at_check": 91.495,
+      "alert_id": null,
       "broker_order_id": "bd0079c7-6044-4864-bb4e-ad2798e188a3",
+      "broker_status": "filled",
       "candidate_rank": null,
-      "checked_at": "2026-05-13T20:38:56Z",
+      "candidate_source": "candidates_not_selected",
       "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "current_market_value": 25.070359,
-      "current_position_qty": 0.108578576,
-      "current_price": 230.896,
-      "current_return_pct": 0.002814,
-      "current_unrealized_pl": 0.070359,
-      "current_unrealized_pl_pct": 0.00281,
-      "entry_or_exit": "entry",
+      "current_return_pct": 0.786694,
+      "current_unrealized_pl": null,
       "fill_price": 230.248,
       "filled_at": "2026-05-13T19:25:31Z",
       "filled_notional": 25.0,
       "filled_qty": 0.108578576,
-      "first_seen_at": "2026-05-13T19:32:15Z",
-      "lifecycle_status": "filled",
       "limit_price": 230.26,
+      "lineage_note": null,
       "lineage_status": "complete_recovered_from_trigger_history",
+      "linked_at": "2026-05-13T21:27:46Z",
       "momentum_score": 0.3592107726646362,
+      "outcome_client_order_id": "TOS-20260513T192526-JNJ-BUY",
       "outcome_windows": {
         "1_trading_day": {
           "status": "pending"
@@ -99,13 +100,16 @@
         }
       },
       "plan_id": "trade_plan-20260513T192526-c793d98e",
+      "proposed_limit_price": 230.26,
+      "proposed_notional": 25.0,
+      "proposed_side": "buy",
+      "proposed_target_weight": 0.12,
       "run_id": "execution-20260513T192527-04dacaf4",
       "side": "buy",
-      "slippage_pct": -5.2e-05,
-      "slippage_vs_limit": -0.012,
-      "source_integrity_status": "ok",
-      "spy_price_at_check": 742.77,
       "symbol": "JNJ",
+      "target_notional": null,
+      "target_reason": null,
+      "target_weight": null,
       "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
       "trigger_ids": [
         "SPY_REGIME_200DMA_V1",
@@ -115,30 +119,29 @@
         "MOMENTUM_BLEND_6M_12M_V1",
         "ATR_SIZING_V1"
       ],
-      "trigger_snapshot_hash": "d779e66ad03b4814411c69993153738df2899c5bb76382e153cdfd1011777140"
+      "trigger_ids_source": "inferred_from_candidates_in_trigger_history",
+      "trigger_snapshot_hash": "d779e66ad03b4814411c69993153738df2899c5bb76382e153cdfd1011777140",
+      "trigger_snapshot_hash_source": "recovered_from_trigger_history"
     },
     {
-      "bil_price_at_check": 91.495,
+      "alert_id": null,
       "broker_order_id": "a2d097a2-bb62-4a63-9849-24c45949bc95",
+      "broker_status": "filled",
       "candidate_rank": null,
-      "checked_at": "2026-05-13T20:38:56Z",
+      "candidate_source": "candidates_not_selected",
       "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "current_market_value": 24.836541,
-      "current_position_qty": 0.023054861,
-      "current_price": 1077.28,
-      "current_return_pct": -0.006538,
-      "current_unrealized_pl": -0.163459,
-      "current_unrealized_pl_pct": -0.00654,
-      "entry_or_exit": "entry",
+      "current_return_pct": -0.546248,
+      "current_unrealized_pl": null,
       "fill_price": 1084.37,
       "filled_at": "2026-05-13T19:31:19Z",
       "filled_notional": 25.0,
       "filled_qty": 0.023054861,
-      "first_seen_at": "2026-05-13T19:32:15Z",
-      "lifecycle_status": "filled",
       "limit_price": 1084.52,
+      "lineage_note": null,
       "lineage_status": "complete_recovered_from_trigger_history",
+      "linked_at": "2026-05-13T21:27:46Z",
       "momentum_score": 0.26935731147618935,
+      "outcome_client_order_id": "TOS-20260513T192934-EQIX-BUY",
       "outcome_windows": {
         "1_trading_day": {
           "status": "pending"
@@ -157,13 +160,16 @@
         }
       },
       "plan_id": "trade_plan-20260513T192934-3bac0e2c",
+      "proposed_limit_price": 1084.52,
+      "proposed_notional": 25.0,
+      "proposed_side": "buy",
+      "proposed_target_weight": 0.12,
       "run_id": "execution-20260513T192935-303e6fbe",
       "side": "buy",
-      "slippage_pct": -0.000138,
-      "slippage_vs_limit": -0.15,
-      "source_integrity_status": "ok",
-      "spy_price_at_check": 742.77,
       "symbol": "EQIX",
+      "target_notional": null,
+      "target_reason": null,
+      "target_weight": null,
       "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
       "trigger_ids": [
         "ATR_SIZING_V1",
@@ -173,12 +179,12 @@
         "SPY_REGIME_200DMA_V1",
         "STOCK_TREND_200DMA_V1"
       ],
-      "trigger_snapshot_hash": "d779e66ad03b4814411c69993153738df2899c5bb76382e153cdfd1011777140"
+      "trigger_ids_source": "from_current_trigger_snapshot",
+      "trigger_snapshot_hash": "d779e66ad03b4814411c69993153738df2899c5bb76382e153cdfd1011777140",
+      "trigger_snapshot_hash_source": "recovered_from_trigger_history"
     }
   ],
-  "outcomes_count": 3,
-  "run_id": "outcome_tracker-20260513T212751-abca712a",
-  "snapshot_hash": "1ed551a3da547f1e",
-  "source_integrity_note": null,
-  "source_integrity_status": "ok"
+  "partial_count": 0,
+  "run_id": "lineage-20260513T212746-f5836379",
+  "snapshot_hash": "08161a06fdf0edb6"
 }

@@ -1,0 +1,79 @@
+name: Build Trade Lineage
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekdays at 21:00 UTC (after market close + outcome tracker run).
+    - cron: "0 21 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trading-os-main
+  cancel-in-progress: false
+
+jobs:
+  build-lineage:
+    runs-on: ubuntu-latest
+
+    env:
+      TRADING_MODE: paper
+      ALPACA_PAPER: "true"
+      ENABLE_PAPER_EXECUTION: "false"
+      LIVE_TRADING_CONFIRMED: "false"
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile check
+        run: python -m compileall src scripts tests
+
+      - name: Build lineage snapshot
+        run: python scripts/build_lineage.py
+
+      - name: Track outcomes with lineage
+        run: python scripts/track_outcomes.py
+
+      - name: Score triggers with lineage fill counts
+        run: python scripts/score_triggers.py
+
+      - name: Validate
+        run: python scripts/validate_all.py
+
+      - name: Commit lineage artifacts
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          echo "Git status before staging:"
+          git status --short
+
+          git add -A data memory
+          git restore --staged data/sandbox memory/sandbox 2>/dev/null || true
+
+          echo "Git status after staging:"
+          git status --short
+
+          if git diff --cached --quiet; then
+            echo "No lineage artifacts changed."
+          else
+            git commit -m "chore(run): build-lineage ${{ github.run_id }}"
+          fi
+
+          git pull --rebase --autostash origin main
+          git push

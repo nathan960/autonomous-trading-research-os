@@ -219,6 +219,9 @@ based on this report alone. Any experiment requires a candidate PR with:
 ## Outcome Observations — 2026-05-13T21:03:03Z
 
 *From outcome_tracker run `outcome_tracker-20260513T210303-fe0c667b`*
+## Outcome Observations — 2026-05-13T21:27:51Z
+
+*From outcome_tracker run `outcome_tracker-20260513T212751-abca712a`*
 
 **Current unrealized returns (intraday — no strategy conclusions yet):**
 - WELL entry: fill=$218.808 current=$220.14 return=+0.609%
@@ -231,16 +234,20 @@ based on this report alone. Any experiment requires a candidate PR with:
 ## Trigger Performance Observations — 2026-05-13
 
 *From trigger_performance run `trigger_performance-20260513T210354-bb200c9c`*
+*From trigger_performance run `trigger_performance-20260513T212755-af5b15f5`*
 *Period: 2026-05-07 to 2026-05-13 (7 days)*
 
 **Operational issues:**
 - [ ] Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 67% of candidates — review spread threshold or data freshness.
 
 **Observations (research only — no strategy conclusions):**
+- Regime: 14 session(s) scanned, 14 risk-on (100%).
 - Spread gate: 53/79 symbols blocked (67%). Avg spread (blocked): 10.013%
 - Trend gate (200 DMA): 34/79 symbols below 200 DMA (43% block rate).
 - Fill count this period: 3. Need 17 more fills before P/L analysis is meaningful.
 - Average current return across 3 tracked outcome(s): +0.079%. Window pending — no conclusions yet.
+- Lineage: Lineage snapshot: 3 records (3 complete, 0 partial). 18 trigger fill associations recovered.
+- Fills linked to triggers (via lineage): ATR_SIZING_V1=3, LIQUIDITY_GATE_V1=3, MOMENTUM_BLEND_6M_12M_V1=3, SPREAD_GATE_V1=3, STOCK_TREND_200DMA_V1=3.
 - IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest.
 
 **Reminder:** Do not modify strategy.json, risk_limits.json, or trigger_registry.json

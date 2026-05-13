@@ -2262,5 +2262,15 @@ Data refreshes and quality reviews are logged here.
   "status": "ATTENTION_REQUIRED",
   "symbols_expected": 81,
   "symbols_with_bars": 81
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T21:27:36Z",
+  "run_id": "data_refresh-20260513T212736-f240e99c",
+  "source_data_hash": "b8f6ac3868b67b5de62b79541cd07e4e5a3e170da2f38f556a8fc1128978d312",
+  "symbols": 81
 }
 ```

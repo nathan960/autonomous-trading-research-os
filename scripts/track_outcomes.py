@@ -32,6 +32,7 @@ from trading_os.research.outcome_tracker import (
     load_existing_outcomes,
     write_outcome_snapshot,
 )
+from trading_os.research.lineage import _load_json as _lineage_load_json
 
 
 def main() -> int:
@@ -54,9 +55,18 @@ def main() -> int:
     monitor_report = _load_json(LATEST_DIR / "order_monitor_report.json", {})
     positions_snapshot = _load_json(LATEST_DIR / "positions_snapshot.json", {})
     market_snapshot = _load_json(LATEST_DIR / "market_snapshot.json", {})
+    lineage_snapshot = _lineage_load_json(LATEST_DIR / "lineage_snapshot.json", None)
 
     if not monitor_report:
         print("[track_outcomes] WARNING: order_monitor_report.json not found or empty")
+    if lineage_snapshot:
+        print(
+            f"  lineage snapshot loaded: {lineage_snapshot.get('lineage_count', 0)} records "
+            f"({lineage_snapshot.get('complete_count', 0)} complete, "
+            f"{lineage_snapshot.get('partial_count', 0)} partial)"
+        )
+    else:
+        print("  lineage snapshot not found — run build_lineage.py to recover trigger provenance")
 
     existing_outcomes = load_existing_outcomes(LATEST_DIR)
     print(f"  existing outcomes loaded: {len(existing_outcomes)}")
@@ -67,6 +77,7 @@ def main() -> int:
             positions_snapshot=positions_snapshot,
             market_snapshot=market_snapshot,
             existing_outcomes=existing_outcomes,
+            lineage_snapshot=lineage_snapshot,
         )
     except Exception as exc:
         print(f"[track_outcomes] ERROR building snapshot: {exc}", file=sys.stderr)

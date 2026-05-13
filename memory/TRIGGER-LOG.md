@@ -2000,3 +2000,19 @@ Every trigger scan records fired, skipped, and selected signals here.
   "spy_trend_ok": true
 }
 ```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "b8f6ac3868b67b5de62b79541cd07e4e5a3e170da2f38f556a8fc1128978d312",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T212737-b6e4eb10",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```

@@ -21,6 +21,7 @@ from ..config import HISTORY_DIR, LATEST_DIR, MEMORY_DIR
 from ..hashing import stable_hash
 from ..source_integrity import STATUS_DATA_INTEGRITY_BLOCK
 from ..time_utils import utc_now_iso
+from .lineage import collect_fill_counts_from_lineage
 
 
 # ---------------------------------------------------------------------------
@@ -473,6 +474,32 @@ def _collect_outcome_stats(outcome_snapshot: dict) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Lineage fill count application
+# ---------------------------------------------------------------------------
+
+def _apply_lineage_fill_counts(triggers: dict, fill_counts: dict) -> None:
+    """Update fill_count and recommendation in-place for each trigger record.
+
+    fill_counts = {trigger_id: int} from collect_fill_counts_from_lineage().
+    Triggers with lineage-linked fills get accurate fill_count and re-classified
+    recommendations. Triggers absent from fill_counts get fill_count=0.
+    """
+    for tid, rec in triggers.items():
+        fc = fill_counts.get(tid, 0)
+        rec["fill_count"] = fc
+        rec["fills_linked"] = fc > 0
+        label, reason = classify_recommendation(
+            tid,
+            rec.get("category", "unknown"),
+            rec.get("block_rate"),
+            rec.get("observation_count", 0),
+            fc,
+        )
+        rec["recommendation"] = label
+        rec["recommendation_reason"] = reason
+
+
+# ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
 
@@ -496,6 +523,7 @@ def build_trigger_performance(
     trigger_snapshot = _load_json(latest_dir / "trigger_snapshot.json", {})
     trade_plan = _load_json(latest_dir / "trade_plan.json", {})
     outcome_snapshot = _load_json(latest_dir / "outcome_snapshot.json", {})
+    lineage_snapshot = _load_json(latest_dir / "lineage_snapshot.json", {})
 
     orders_dir = history_dir / "orders"
 
@@ -527,6 +555,26 @@ def build_trigger_performance(
     # richer per-symbol stats and must win for any trigger in both.
     all_triggers = {**plan_layer_records, **symbol_triggers}
 
+    # Apply lineage fill counts — update fill_count and recommendation per trigger
+    fill_counts = collect_fill_counts_from_lineage(lineage_snapshot) if lineage_snapshot else {}
+    _apply_lineage_fill_counts(all_triggers, fill_counts)
+
+    lineage_fills_total = sum(fill_counts.values())
+    lineage_status_note: Optional[str] = None
+    if lineage_snapshot:
+        n_lineage = lineage_snapshot.get("lineage_count", 0)
+        n_partial = lineage_snapshot.get("partial_count", 0)
+        lineage_status_note = (
+            f"Lineage snapshot: {n_lineage} records "
+            f"({n_lineage - n_partial} complete, {n_partial} partial). "
+            f"{lineage_fills_total} trigger fill associations recovered."
+        )
+        if n_partial > 0:
+            lineage_status_note += (
+                f" {n_partial} record(s) have partial lineage — "
+                "save trade plans to history/trade_plans/ to improve completeness."
+            )
+
     # Collect operational issues
     issues: list = []
     for tid, rec in all_triggers.items():
@@ -538,7 +586,9 @@ def build_trigger_performance(
         issues.append("No fills recorded this period — verify execution pipeline is active.")
 
     # Research observations (facts only, no strategy conclusions)
-    observations = _generate_observations(regime, all_triggers, fill_stats, outcome_stats)
+    observations = _generate_observations(
+        regime, all_triggers, fill_stats, outcome_stats, lineage_status_note
+    )
 
     now = utc_now_iso()
     run_id = (
@@ -554,6 +604,7 @@ def build_trigger_performance(
         "period_end": end_date_str,
         "days": days,
         "status": "ok",
+        "lineage_status_note": lineage_status_note,
         "regime": regime,
         "triggers": all_triggers,
         "fill_outcomes": outcome_stats,
@@ -580,6 +631,7 @@ def _generate_observations(
     triggers: dict,
     fill_stats: dict,
     outcome_stats: dict,
+    lineage_status_note: Optional[str] = None,
 ) -> list:
     obs: list = []
 
@@ -637,6 +689,24 @@ def _generate_observations(
                 f"tracked outcome(s): {avg_ret:+.3%}. "
                 "Window pending — no conclusions yet."
             )
+
+    if lineage_status_note:
+        obs.append(f"Lineage: {lineage_status_note}")
+
+    # Summarise per-trigger fill counts where non-zero
+    linked_triggers = [
+        (tid, rec["fill_count"])
+        for tid, rec in triggers.items()
+        if rec.get("fill_count", 0) > 0
+    ]
+    if linked_triggers:
+        parts = [f"{tid}={fc}" for tid, fc in sorted(linked_triggers)]
+        obs.append(f"Fills linked to triggers (via lineage): {', '.join(parts)}.")
+    elif triggers:
+        obs.append(
+            "No fills linked to triggers via lineage — "
+            "run build_lineage.py to recover trigger provenance."
+        )
 
     obs.append(
         "IMPORTANT: With only a few paper fills, no trigger should be promoted or "

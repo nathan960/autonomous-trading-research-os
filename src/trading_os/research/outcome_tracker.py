@@ -137,6 +137,7 @@ def build_outcome_record(
     first_seen_at: Optional[str] = None,
     positions_integrity_blocked: bool = False,
     market_integrity_blocked: bool = False,
+    lineage_record: Optional[dict] = None,
 ) -> dict:
     """Build an outcome record from one filled lifecycle entry.
 
@@ -148,6 +149,9 @@ def build_outcome_record(
         first_seen_at:  Preserved from an earlier record (not overwritten on update).
         positions_integrity_blocked: True if positions_snapshot source is mock/invalid.
         market_integrity_blocked:    True if market_snapshot source is mock/invalid.
+        lineage_record: Optional matching record from lineage_snapshot.json. When
+                        present, populates trigger_snapshot_hash, trigger_ids,
+                        lineage_status, candidate_rank, and momentum_score.
 
     Returns an outcome dict. Never submits anything.
     """
@@ -201,6 +205,10 @@ def build_outcome_record(
         spy_price = _get_current_price("SPY", market_snapshot)
         bil_price = _get_current_price("BIL", market_snapshot)
 
+    # Lineage-enriched fields: prefer lineage_record values when available
+    lr = lineage_record or {}
+    recovered_trigger_hash = lr.get("trigger_snapshot_hash") or fill.get("trigger_snapshot_hash")
+
     return {
         "client_order_id": lifecycle.get("client_order_id", ""),
         "broker_order_id": lifecycle.get("broker_order_id", ""),
@@ -210,7 +218,11 @@ def build_outcome_record(
         "plan_id": fill.get("plan_id"),
         "run_id": fill.get("run_id"),
         "trade_plan_hash": fill.get("trade_plan_hash"),
-        "trigger_snapshot_hash": fill.get("trigger_snapshot_hash"),
+        "trigger_snapshot_hash": recovered_trigger_hash,
+        "trigger_ids": lr.get("trigger_ids"),
+        "lineage_status": lr.get("lineage_status"),
+        "candidate_rank": lr.get("candidate_rank"),
+        "momentum_score": lr.get("momentum_score"),
         "filled_at": filled_at,
         "fill_price": fill_price,
         "limit_price": limit_price,
@@ -243,17 +255,30 @@ def build_outcome_snapshot(
     positions_snapshot: dict,
     market_snapshot: dict,
     existing_outcomes: Optional[dict] = None,
+    lineage_snapshot: Optional[dict] = None,
 ) -> dict:
     """Build a complete outcome snapshot.
 
     Only filled and partially_filled lifecycle entries produce outcome records.
     Existing outcomes are merged by client_order_id; later checked_at wins.
 
+    When lineage_snapshot is provided, each outcome record is enriched with
+    recovered trigger_snapshot_hash, trigger_ids, lineage_status, candidate_rank,
+    and momentum_score from the matching lineage record.
+
     Never submits anything.
     """
     checked_at = monitor_report.get("generated_at") or utc_now_iso()
     positions = positions_snapshot.get("positions", [])
     existing: dict = existing_outcomes or {}
+
+    # Index lineage records by client_order_id
+    lineage_by_cid: dict = {}
+    if lineage_snapshot:
+        for lr in (lineage_snapshot.get("lineage_records") or []):
+            cid = lr.get("client_order_id")
+            if cid:
+                lineage_by_cid[cid] = lr
 
     # Source integrity: block position/market-derived P/L from mock snapshots
     pos_source = get_snapshot_source(positions_snapshot)
@@ -277,6 +302,7 @@ def build_outcome_snapshot(
             first_seen_at=first_seen,
             positions_integrity_blocked=positions_integrity_blocked,
             market_integrity_blocked=market_integrity_blocked,
+            lineage_record=lineage_by_cid.get(cid),
         )
         new_records[cid] = record
 
