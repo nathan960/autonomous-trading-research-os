@@ -3,7 +3,7 @@
     "buying_power": "199530.78",
     "cash": "99727.86",
     "equity": "99802.92",
-    "fetched_at": "2026-05-13T20:39:53Z",
+    "fetched_at": "2026-05-13T21:01:05Z",
     "position_count": 3,
     "status": "ACTIVE"
   },
@@ -348,14 +348,14 @@
       "symbol": "BIL"
     }
   ],
-  "data_hash": "93a9f4235da49ae86f0a9887b3605b69d7a5bac36e9b78fe66ada72a7222e6aa",
-  "expires_at": "2026-05-14T03:27:37Z",
-  "generated_at": "2026-05-13T21:27:37Z",
+  "data_hash": "98e9a19698d2020cfd60db35f1ee5ce44fde4e5037d667b1a8d4d8ab787b0fd8",
+  "expires_at": "2026-05-14T03:39:18Z",
+  "generated_at": "2026-05-13T21:39:18Z",
   "market_clock": {
     "is_open": false,
     "next_close": "2026-05-14T20:00:00Z",
     "next_open": "2026-05-14T13:30:00Z",
-    "timestamp": "2026-05-13T20:39:54Z"
+    "timestamp": "2026-05-13T21:01:05Z"
   },
   "no_trade_reasons": [
     "max_orders_per_run_cap(1)_dequeued(non_blocking): ['WMT', 'NEE', 'CSCO', 'GOOGL', 'MS', 'GS', 'XOM', 'AVGO', 'FCX', 'BIL']",
@@ -403,7 +403,7 @@
       "symbol": "BIL"
     }
   ],
-  "plan_id": "trade_plan-20260513T212737-2083034f",
+  "plan_id": "trade_plan-20260513T213918-c6221437",
   "proposed_orders": [
     {
       "capped_by_max_notional_per_order": true,
@@ -629,7 +629,7 @@
       "weight": 0.07969654
     }
   },
-  "trade_plan_hash": "0cbf855ef08ed1f971dcfe0c334b4fa1b25ca15628fa03f6bce8b40878a04bc4",
+  "trade_plan_hash": "71232f37ca686c3fab0883c4f038b1791c876f691b4e73bea9d7348dd5e7798f",
   "trading_mode": "paper",
   "trigger_snapshot_hash": "56e8ddc76dbcf2398eb338ca958d71b13fe638c41b086cfe0e1af5a351d0e183"
 }
