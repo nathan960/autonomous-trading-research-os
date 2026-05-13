@@ -9293,3 +9293,23 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
   "trade_plan_hash": "3194c0f3311249f7a12d5151594a47c2f38d8aa1c1b132479a57a50cd07a7316"
 }
 ```
+
+## dry_run_execute run
+
+```json
+{
+  "all_gates_pass": false,
+  "dry_run": true,
+  "failed_gates": [
+    "QUOTE_FRESHNESS"
+  ],
+  "generated_at": "2026-05-13T12:48:19Z",
+  "no_submit_reason": "dry_run_mode",
+  "orders_ready": 1,
+  "orders_validated": 1,
+  "plan_id": "trade_plan-20260513T124819-e89604f8",
+  "run_id": "execution-20260513T124819-2f250422",
+  "status": "DRY_RUN_FAIL",
+  "trade_plan_hash": "4a4770eb3676301e4f5af4fa8cdbc38b9435829600223c52f81c06efb9a777d6"
+}
+```

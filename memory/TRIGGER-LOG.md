@@ -929,3 +929,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "spy_trend_ok": true
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.5949367088607594,
+  "breadth_ok": true,
+  "candidates_count": 14,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-05-13T12:48:19Z",
+  "selected": [
+    "FCX",
+    "NVDA",
+    "GS",
+    "XOM",
+    "COP",
+    "JNJ",
+    "NEE",
+    "LLY",
+    "AEP",
+    "APD"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.07599391666666667,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "1e3058f4e83a5f632010da1ac1dcb359eb6e2b423c9bf6b9bb02b060f95d2c76"
+}
+```

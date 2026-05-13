@@ -417,3 +417,19 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
   "source": "dry_run_mock"
 }
 ```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": 0.0,
+  "dry_run": false,
+  "equity": 99446.91,
+  "generated_at": "2026-05-13T12:48:19Z",
+  "open_order_count": 0,
+  "peak_equity": 99446.91,
+  "position_count": 10,
+  "run_id": "monitor_positions-20260513T124818-277a22c0",
+  "source": "alpaca_paper"
+}
+```
