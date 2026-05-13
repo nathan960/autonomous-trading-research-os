@@ -189,3 +189,60 @@ None.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-13
+
+**Generated:** 2026-05-13T19:22:10Z  **Run ID:** daily_summary-2026-05-13
+
+### Account & Risk
+- Equity: $99,803.02 | Cash: $99,777.86 | Buying power: $199,580.88
+- Peak: $99,803.12 | Drawdown: -0.00% | Positions: 1
+
+### Positions (1)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| WELL | long | 0.11425542 | $25.16 | +$0.16 (0.63%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+9.15%, breadth=58.23%)
+- Candidates: 30 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-13T19:20:54Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260513T192054-7bc0d923`
+- Generated: 2026-05-13T19:20:54Z | Expires: 2026-05-14T01:20:54Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - JNJ BUY $25.00 @ $230.42 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260513T192055-9711b452`
+- All gates pass: YES
+
+### Dry Runs Today (0)
+- Pass: 0 | Fail: 0
+
+### Paper Executions Today (1)
+- WELL BUY $25.00 @ $218.90 (PAPER_SUBMITTED) submitted=2026-05-13T16:00:36Z
+
+### Order Monitor
+- Tracked: 1 | Filled: 1 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 9 | Latest: order_monitor-20260513T191959-be097bf5
+
+### Alerts (total=8, today=8)
+- By source: tradingview=6, test=2
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=5)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
