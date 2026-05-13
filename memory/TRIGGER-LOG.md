@@ -1391,3 +1391,36 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trade_execution_allowed": false
 }
 ```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "0010333c8115d583f5d3075401e647f70cd9a3882c3c952f0d44c9159b529e01",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T165927-05010b1b",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Alert routed
+
+```json
+{
+  "action_taken": "refresh_requested",
+  "alert_id": "router-refresh-test-001",
+  "approved_trade_plan_created": false,
+  "execution_called": false,
+  "next_step": "request_data_refresh",
+  "route_id": "route_20260513T165933_router-refresh-test-001_069c22b1",
+  "route_mode": "record_only",
+  "routed_at": "2026-05-13T16:59:33Z",
+  "symbol": "MSFT",
+  "trade_execution_allowed": false
+}
+```

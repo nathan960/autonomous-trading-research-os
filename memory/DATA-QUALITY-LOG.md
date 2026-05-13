@@ -1542,3 +1542,35 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-13T16:59:27Z",
+  "run_id": "data_refresh-20260513T165927-978e5c33",
+  "source_data_hash": "0010333c8115d583f5d3075401e647f70cd9a3882c3c952f0d44c9159b529e01",
+  "symbols": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-13T16:59:29Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "87310c2524274f0185915f1ba33a75e60a7cadaee28f36c34fc15830c5b762bb",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260513T165928",
+  "snapshot_age_minutes": 0.019015300000000002,
+  "snapshot_fetched_at": "2026-05-13T16:59:28Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
