@@ -14623,3 +14623,41 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
   ]
 }
 ```
+
+## order_monitor run
+
+```json
+{
+  "dry_run": false,
+  "generated_at": "2026-05-13T19:19:59Z",
+  "lifecycles": [
+    {
+      "client_order_id": "TOS-20260513T160035-WELL-BUY",
+      "fill": {
+        "fill_price": 218.808,
+        "filled_at": "2026-05-13T16:00:36Z",
+        "filled_notional": 25.0,
+        "filled_qty": 0.11425542,
+        "plan_id": "trade_plan-20260513T160035-0460e121",
+        "position_confirmed": true,
+        "run_id": "execution-20260513T160036-b4ad22c3",
+        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
+        "trigger_snapshot_hash": null
+      },
+      "lifecycle_status": "filled",
+      "notional": 25.0,
+      "side": "buy",
+      "symbol": "WELL"
+    }
+  ],
+  "orders_active": 0,
+  "orders_filled": 1,
+  "orders_missing": 0,
+  "orders_rejected": 0,
+  "orders_tracked": 1,
+  "run_id": "order_monitor-20260513T191959-be097bf5",
+  "source": "alpaca_paper",
+  "stale_orders": [],
+  "warnings": []
+}
+```
