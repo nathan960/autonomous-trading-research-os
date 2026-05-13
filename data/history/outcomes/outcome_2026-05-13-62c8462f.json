@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-05-13T19:53:51Z",
+  "outcomes": [
+    {
+      "bil_price_at_check": 91.9626,
+      "broker_order_id": "a57f3df1-f9d5-4ab7-8655-ed8240ade13e",
+      "checked_at": "2026-05-13T19:32:15Z",
+      "client_order_id": "TOS-20260513T160035-WELL-BUY",
+      "current_market_value": null,
+      "current_position_qty": null,
+      "current_price": 150.8377,
+      "current_return_pct": -0.310639,
+      "current_unrealized_pl": null,
+      "current_unrealized_pl_pct": null,
+      "entry_or_exit": "entry",
+      "fill_price": 218.808,
+      "filled_at": "2026-05-13T16:00:36Z",
+      "filled_notional": 25.0,
+      "filled_qty": 0.11425542,
+      "first_seen_at": "2026-05-13T19:32:15Z",
+      "lifecycle_status": "filled",
+      "limit_price": 218.9,
+      "outcome_windows": {
+        "1_trading_day": {
+          "status": "pending"
+        },
+        "20_trading_days": {
+          "status": "pending"
+        },
+        "5_trading_days": {
+          "status": "pending"
+        },
+        "63_trading_days": {
+          "status": "pending"
+        },
+        "same_day": {
+          "status": "pending"
+        }
+      },
+      "plan_id": "trade_plan-20260513T160035-0460e121",
+      "run_id": "execution-20260513T160036-b4ad22c3",
+      "side": "buy",
+      "slippage_pct": -0.00042,
+      "slippage_vs_limit": -0.092,
+      "spy_price_at_check": 564.3028,
+      "symbol": "WELL",
+      "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
+      "trigger_snapshot_hash": null
+    },
+    {
+      "bil_price_at_check": 91.9626,
+      "broker_order_id": "bd0079c7-6044-4864-bb4e-ad2798e188a3",
+      "checked_at": "2026-05-13T19:32:15Z",
+      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
+      "current_market_value": null,
+      "current_position_qty": null,
+      "current_price": 411.3828,
+      "current_return_pct": 0.786694,
+      "current_unrealized_pl": null,
+      "current_unrealized_pl_pct": null,
+      "entry_or_exit": "entry",
+      "fill_price": 230.248,
+      "filled_at": "2026-05-13T19:25:31Z",
+      "filled_notional": 25.0,
+      "filled_qty": 0.108578576,
+      "first_seen_at": "2026-05-13T19:32:15Z",
+      "lifecycle_status": "filled",
+      "limit_price": 230.26,
+      "outcome_windows": {
+        "1_trading_day": {
+          "status": "pending"
+        },
+        "20_trading_days": {
+          "status": "pending"
+        },
+        "5_trading_days": {
+          "status": "pending"
+        },
+        "63_trading_days": {
+          "status": "pending"
+        },
+        "same_day": {
+          "status": "pending"
+        }
+      },
+      "plan_id": "trade_plan-20260513T192526-c793d98e",
+      "run_id": "execution-20260513T192527-04dacaf4",
+      "side": "buy",
+      "slippage_pct": -5.2e-05,
+      "slippage_vs_limit": -0.012,
+      "spy_price_at_check": 564.3028,
+      "symbol": "JNJ",
+      "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
+      "trigger_snapshot_hash": null
+    },
+    {
+      "bil_price_at_check": 91.9626,
+      "broker_order_id": "a2d097a2-bb62-4a63-9849-24c45949bc95",
+      "checked_at": "2026-05-13T19:32:15Z",
+      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
+      "current_market_value": null,
+      "current_position_qty": null,
+      "current_price": 492.0347,
+      "current_return_pct": -0.546248,
+      "current_unrealized_pl": null,
+      "current_unrealized_pl_pct": null,
+      "entry_or_exit": "entry",
+      "fill_price": 1084.37,
+      "filled_at": "2026-05-13T19:31:19Z",
+      "filled_notional": 25.0,
+      "filled_qty": 0.023054861,
+      "first_seen_at": "2026-05-13T19:32:15Z",
+      "lifecycle_status": "filled",
+      "limit_price": 1084.52,
+      "outcome_windows": {
+        "1_trading_day": {
+          "status": "pending"
+        },
+        "20_trading_days": {
+          "status": "pending"
+        },
+        "5_trading_days": {
+          "status": "pending"
+        },
+        "63_trading_days": {
+          "status": "pending"
+        },
+        "same_day": {
+          "status": "pending"
+        }
+      },
+      "plan_id": "trade_plan-20260513T192934-3bac0e2c",
+      "run_id": "execution-20260513T192935-303e6fbe",
+      "side": "buy",
+      "slippage_pct": -0.000138,
+      "slippage_vs_limit": -0.15,
+      "spy_price_at_check": 564.3028,
+      "symbol": "EQIX",
+      "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
+      "trigger_snapshot_hash": null
+    }
+  ],
+  "outcomes_count": 3,
+  "run_id": "outcome_tracker-20260513T195351-015ef98f",
+  "snapshot_hash": "62c8462f5a0c1b41"
+}
