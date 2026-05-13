@@ -1,8 +1,10 @@
 {
-  "all_gates_pass": true,
+  "all_gates_pass": false,
   "dry_run": true,
-  "execution_report_hash": "527c4316ad60bd3c472b32fee1ccf8b838a9b21b502a03a7d1e0a71962f6f7c0",
-  "failed_gates": [],
+  "execution_report_hash": "5b2e5bd05a11953302eeae5bc5fdc0849dd276e30088b5f5e38627e7eb06ce8a",
+  "failed_gates": [
+    "QUOTE_FRESHNESS"
+  ],
   "gate_results": [
     {
       "detail": null,
@@ -16,6 +18,11 @@
     },
     {
       "detail": null,
+      "gate_id": "CANONICAL_SOURCE_INTEGRITY",
+      "passes": true
+    },
+    {
+      "detail": null,
       "gate_id": "TRADE_PLAN_EXISTS",
       "passes": true
     },
@@ -25,7 +32,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-05-13T20:39:54Z",
+      "detail": "[dry-run] market is_open=False at 2026-05-13T21:50:23Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -60,9 +67,9 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "stale quotes (>90.0min): ['EQIX(110min)']",
       "gate_id": "QUOTE_FRESHNESS",
-      "passes": true
+      "passes": false
     },
     {
       "detail": null,
@@ -85,12 +92,12 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-05-13T20:39:57Z",
+  "generated_at": "2026-05-13T21:50:27Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260513T203957-EQIX-BUY",
+      "client_order_id": "TOS-20260513T215026-EQIX-BUY",
       "execution_ready": true,
       "limit_price": 1077.05,
       "notional": 25.0,
@@ -101,8 +108,8 @@
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260513T203957-5aa93970",
-  "run_id": "execution-20260513T203957-9632fb92",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "29354e05ab127bdb633955bb76686eb7da7d7a7c3ae0648ee43f1b058f17705c"
+  "plan_id": "trade_plan-20260513T215026-c8754de3",
+  "run_id": "execution-20260513T215027-de088ae7",
+  "status": "DRY_RUN_FAIL",
+  "trade_plan_hash": "319bdf24dc5149dc938bf41e76d15f72250104181c38b3aed18cc331c18e982b"
 }

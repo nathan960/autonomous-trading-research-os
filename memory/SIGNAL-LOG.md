@@ -18138,3 +18138,21 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
   "trade_plan_hash": "7259d36acd592961981bc4552c8862eddbc4aa1770282b7b05b4701eb688c235"
 }
 ```
+
+## scan_triggers candidates  (2026-05-13T21:50:26Z)
+
+```
+  GOOGL     score=0.9642  atr_pct=0.0238  [SELECTED]
+  FCX       score=0.6790  atr_pct=0.0402  [SELECTED]
+  CSCO      score=0.5329  atr_pct=0.0224  [SELECTED]
+  AVGO      score=0.5223  atr_pct=0.0341  [SELECTED]
+  NVDA      score=0.4859  atr_pct=0.0291  [candidate]
+  GS        score=0.4074  atr_pct=0.0246  [SELECTED]
+  MS        score=0.3506  atr_pct=0.0241  [SELECTED]
+  XOM       score=0.3356  atr_pct=0.0279  [SELECTED]
+  WMT       score=0.3222  atr_pct=0.0202  [SELECTED]
+  EQIX      score=0.2694  atr_pct=0.0191  [SELECTED]
+  NEE       score=0.2403  atr_pct=0.0223  [SELECTED]
+  LIN       score=0.1755  atr_pct=0.0190  [candidate]
+  APD       score=0.1477  atr_pct=0.0199  [candidate]
+```

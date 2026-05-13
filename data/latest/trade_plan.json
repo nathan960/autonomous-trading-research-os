@@ -1,9 +1,9 @@
 {
   "account_snapshot": {
-    "buying_power": "199530.78",
+    "buying_power": "199530.73",
     "cash": "99727.86",
-    "equity": "99802.92",
-    "fetched_at": "2026-05-13T21:01:05Z",
+    "equity": "99802.87",
+    "fetched_at": "2026-05-13T21:50:23Z",
     "position_count": 3,
     "status": "ACTIVE"
   },
@@ -348,14 +348,14 @@
       "symbol": "BIL"
     }
   ],
-  "data_hash": "98e9a19698d2020cfd60db35f1ee5ce44fde4e5037d667b1a8d4d8ab787b0fd8",
-  "expires_at": "2026-05-14T03:39:18Z",
-  "generated_at": "2026-05-13T21:39:18Z",
+  "data_hash": "76a88e5f902bd9479d825c2e5d99ec4d906439d3ae1bd2ca902e9780515d79e4",
+  "expires_at": "2026-05-14T03:50:26Z",
+  "generated_at": "2026-05-13T21:50:26Z",
   "market_clock": {
     "is_open": false,
     "next_close": "2026-05-14T20:00:00Z",
     "next_open": "2026-05-14T13:30:00Z",
-    "timestamp": "2026-05-13T21:01:05Z"
+    "timestamp": "2026-05-13T21:50:23Z"
   },
   "no_trade_reasons": [
     "max_orders_per_run_cap(1)_dequeued(non_blocking): ['WMT', 'NEE', 'CSCO', 'GOOGL', 'MS', 'GS', 'XOM', 'AVGO', 'FCX', 'BIL']",
@@ -403,19 +403,19 @@
       "symbol": "BIL"
     }
   ],
-  "plan_id": "trade_plan-20260513T213918-c6221437",
+  "plan_id": "trade_plan-20260513T215026-c8754de3",
   "proposed_orders": [
     {
       "capped_by_max_notional_per_order": true,
       "current_value": 24.84,
-      "delta_value": 11561.59,
+      "delta_value": 11561.58,
       "limit_price": 1077.05,
       "notional": 25.0,
       "order_type": "limit",
       "side": "buy",
       "skip_reason": null,
       "symbol": "EQIX",
-      "target_value": 11586.43,
+      "target_value": 11586.42,
       "target_weight": 0.11609309,
       "time_in_force": "day",
       "would_short": false
@@ -575,14 +575,14 @@
     "EQIX": {
       "atr_pct": 0.01911979798739084,
       "latest_close": 1077.05,
-      "notional": 11586.43,
+      "notional": 11586.42,
       "reason": "risk_on_inverse_atr",
       "weight": 0.11609309
     },
     "FCX": {
       "atr_pct": 0.040230704608005714,
       "latest_close": 67.15,
-      "notional": 5506.5,
+      "notional": 5506.49,
       "reason": "risk_on_inverse_atr",
       "weight": 0.05517369
     },
@@ -596,40 +596,40 @@
     "GS": {
       "atr_pct": 0.024563819577960045,
       "latest_close": 955.67,
-      "notional": 9018.56,
+      "notional": 9018.55,
       "reason": "risk_on_inverse_atr",
       "weight": 0.09036365
     },
     "MS": {
       "atr_pct": 0.024085998609936658,
       "latest_close": 193.905,
-      "notional": 9197.47,
+      "notional": 9197.46,
       "reason": "risk_on_inverse_atr",
       "weight": 0.0921563
     },
     "NEE": {
       "atr_pct": 0.022271869002302137,
       "latest_close": 94.89,
-      "notional": 9946.64,
+      "notional": 9946.63,
       "reason": "risk_on_inverse_atr",
       "weight": 0.09966279
     },
     "WMT": {
       "atr_pct": 0.02023127604713235,
       "latest_close": 131.55,
-      "notional": 10949.89,
+      "notional": 10949.88,
       "reason": "risk_on_inverse_atr",
       "weight": 0.1097151
     },
     "XOM": {
       "atr_pct": 0.02785160468341186,
       "latest_close": 151.62,
-      "notional": 7953.95,
+      "notional": 7953.94,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07969654
     }
   },
-  "trade_plan_hash": "71232f37ca686c3fab0883c4f038b1791c876f691b4e73bea9d7348dd5e7798f",
+  "trade_plan_hash": "319bdf24dc5149dc938bf41e76d15f72250104181c38b3aed18cc331c18e982b",
   "trading_mode": "paper",
-  "trigger_snapshot_hash": "56e8ddc76dbcf2398eb338ca958d71b13fe638c41b086cfe0e1af5a351d0e183"
+  "trigger_snapshot_hash": "01c1c1fb2f6f498ef8a0565fa3763223b51f5b6b33233fa95a4d7ae7f42aa6a3"
 }
