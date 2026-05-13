@@ -10,6 +10,14 @@ Safety invariants proved:
 - Fill links back to plan_id, run_id, trade_plan_hash, trigger_snapshot_hash.
 - Safety block is always present with all False values.
 - Dry-run mode uses stored data and produces a valid report.
+
+Fetch lookup tests (TestFetchBrokerOrdersLookupPaths):
+- Order found via bulk open orders list.
+- Order found via bulk closed orders list.
+- Order found via direct broker_order_id fallback (get_order_by_id).
+- Order found via direct client_order_id fallback (get_order_by_client_id).
+- Truly missing order remains missing with warning.
+- fetch_log counts are accurate and contain no secrets.
 """
 from __future__ import annotations
 
@@ -817,3 +825,202 @@ class TestMonitorNeverSubmitsCancelsReplaces:
         assert safety["submit_order_called"] is False
         assert safety["cancel_order_called"] is False
         assert safety["replace_order_called"] is False
+
+
+# ===========================================================================
+# TestFetchBrokerOrdersLookupPaths — all four lookup strategies
+#
+# fetch_broker_orders uses a real trading_client, so we mock it here.
+# Each test exercises exactly one lookup path.
+# ===========================================================================
+
+from unittest.mock import MagicMock, call
+
+
+def _mock_order_primitive(
+    broker_id: str = "broker-abc123",
+    client_id: str = "TOS-20260513T160035-WELL-BUY",
+    symbol: str = "WELL",
+    status: str = "pending_new",
+) -> dict:
+    return {
+        "id": broker_id,
+        "client_order_id": client_id,
+        "symbol": symbol,
+        "status": status,
+        "side": "buy",
+        "order_type": "limit",
+        "time_in_force": "day",
+    }
+
+
+def _make_sdk_order(primitive: dict) -> MagicMock:
+    """Return a mock Alpaca SDK Order that model_dump() returns the primitive."""
+    obj = MagicMock()
+    obj.model_dump.return_value = primitive
+    return obj
+
+
+class TestFetchBrokerOrdersLookupPaths:
+    """Mock the TradingClient to exercise each lookup path in isolation."""
+
+    def _import_fn(self):
+        from trading_os.monitoring.order_monitor import fetch_broker_orders
+        return fetch_broker_orders
+
+    def _client(
+        self,
+        open_orders=None,
+        closed_orders=None,
+        by_id_order=None,
+        by_client_id_order=None,
+        by_id_raises=False,
+        by_client_id_raises=False,
+    ) -> MagicMock:
+        """Build a mock TradingClient with controlled return values."""
+        client = MagicMock()
+
+        def _get_orders(filter=None):
+            status = getattr(filter, "status", None)
+            status_val = status.value if hasattr(status, "value") else str(status)
+            if status_val == "open":
+                return [_make_sdk_order(o) for o in (open_orders or [])]
+            else:
+                return [_make_sdk_order(o) for o in (closed_orders or [])]
+
+        client.get_orders.side_effect = _get_orders
+
+        if by_id_raises:
+            client.get_order_by_id.side_effect = Exception("order not found")
+        elif by_id_order:
+            client.get_order_by_id.return_value = _make_sdk_order(by_id_order)
+        else:
+            client.get_order_by_id.side_effect = Exception("order not found")
+
+        if by_client_id_raises:
+            client.get_order_by_client_id.side_effect = Exception("order not found")
+        elif by_client_id_order:
+            client.get_order_by_client_id.return_value = _make_sdk_order(by_client_id_order)
+        else:
+            client.get_order_by_client_id.side_effect = Exception("order not found")
+
+        return client
+
+    def test_order_found_in_open_orders_bulk(self):
+        fn = self._import_fn()
+        prim = _mock_order_primitive(status="new")
+        client = self._client(open_orders=[prim])
+        result = fn(client, known_broker_ids=["broker-abc123"])
+        assert "broker-abc123" in result["by_broker_id"]
+        assert result["by_broker_id"]["broker-abc123"]["status"] == "new"
+        assert result["fetch_log"]["open_count"] == 1
+
+    def test_order_found_in_closed_orders_bulk(self):
+        fn = self._import_fn()
+        prim = _mock_order_primitive(status="filled")
+        client = self._client(closed_orders=[prim])
+        result = fn(client, known_broker_ids=["broker-abc123"])
+        assert "broker-abc123" in result["by_broker_id"]
+        assert result["by_broker_id"]["broker-abc123"]["status"] == "filled"
+        assert result["fetch_log"]["closed_count"] == 1
+
+    def test_order_found_by_direct_broker_id_fallback(self):
+        """Not in bulk; found via get_order_by_id."""
+        fn = self._import_fn()
+        prim = _mock_order_primitive(status="expired")
+        # Bulk returns nothing; direct lookup succeeds
+        client = self._client(by_id_order=prim)
+        result = fn(
+            client,
+            known_broker_ids=["broker-abc123"],
+            known_client_ids=["TOS-20260513T160035-WELL-BUY"],
+        )
+        assert "broker-abc123" in result["by_broker_id"]
+        assert result["by_broker_id"]["broker-abc123"]["status"] == "expired"
+        assert result["fetch_log"]["direct_broker_id_hits"] == 1
+        # No client_id lookup needed — client_id was indexed via broker_id hit
+        assert result["fetch_log"]["direct_client_id_lookups"] == 0
+
+    def test_order_found_by_direct_client_id_fallback(self):
+        """Not in bulk, broker_id lookup fails; found via get_order_by_client_id."""
+        fn = self._import_fn()
+        prim = _mock_order_primitive(status="canceled")
+        # Bulk empty, broker_id lookup raises, client_id lookup succeeds
+        client = self._client(by_id_raises=True, by_client_id_order=prim)
+        result = fn(
+            client,
+            known_broker_ids=["broker-abc123"],
+            known_client_ids=["TOS-20260513T160035-WELL-BUY"],
+        )
+        assert "TOS-20260513T160035-WELL-BUY" in result["by_client_id"]
+        assert result["by_client_id"]["TOS-20260513T160035-WELL-BUY"]["status"] == "canceled"
+        assert result["fetch_log"]["direct_client_id_hits"] == 1
+
+    def test_truly_missing_order_not_in_result(self):
+        """All three layers fail — order is absent from all lookup results."""
+        fn = self._import_fn()
+        # Bulk empty, both direct lookups raise
+        client = self._client(by_id_raises=True, by_client_id_raises=True)
+        result = fn(
+            client,
+            known_broker_ids=["broker-abc123"],
+            known_client_ids=["TOS-20260513T160035-WELL-BUY"],
+        )
+        assert "broker-abc123" not in result["by_broker_id"]
+        assert "TOS-20260513T160035-WELL-BUY" not in result["by_client_id"]
+        assert result["fetch_log"]["direct_broker_id_errors"] == 1
+        assert result["fetch_log"]["direct_client_id_errors"] == 1
+
+    def test_truly_missing_order_shows_warning_in_lifecycle(self):
+        """When all lookups fail, build_order_lifecycle produces a warning."""
+        lc = build_order_lifecycle(
+            audit=_audit(),
+            broker_lookup={"by_broker_id": {}, "by_client_id": {}},
+            plan_refs=None,
+            trigger_snapshot_hash=None,
+            positions=[],
+            clock=_open_clock(),
+            checked_at=utc_now_iso(),
+        )
+        assert lc["lifecycle_status"] == "missing"
+        assert lc["warning"] is not None
+
+    def test_fetch_log_contains_no_secrets(self):
+        """fetch_log must never contain API keys, secrets, or credentials."""
+        fn = self._import_fn()
+        prim = _mock_order_primitive()
+        client = self._client(open_orders=[prim])
+        result = fn(client, known_broker_ids=["broker-abc123"])
+        fetch_log_str = str(result["fetch_log"])
+        for forbidden in ("api_key", "secret", "password", "token", "credential"):
+            assert forbidden.lower() not in fetch_log_str.lower(), (
+                f"fetch_log must not contain {forbidden!r}"
+            )
+
+    def test_closed_orders_request_uses_after_date(self):
+        """Prove the closed orders request includes an `after` datetime (7-day window)."""
+        fn = self._import_fn()
+        client = self._client()
+        fn(client)
+        # Find the closed-orders call
+        closed_call = None
+        for c in client.get_orders.call_args_list:
+            filt = c.kwargs.get("filter") or (c.args[0] if c.args else None)
+            if filt and hasattr(filt, "status"):
+                status_val = filt.status.value if hasattr(filt.status, "value") else str(filt.status)
+                if status_val == "closed":
+                    closed_call = filt
+                    break
+        assert closed_call is not None, "A closed-orders request must be made"
+        assert closed_call.after is not None, (
+            "closed orders request must include `after` date to enforce 7-day lookback window"
+        )
+
+    def test_no_direct_lookup_when_already_in_bulk(self):
+        """If an order is found in bulk, direct lookup is not called."""
+        fn = self._import_fn()
+        prim = _mock_order_primitive(status="new")
+        client = self._client(open_orders=[prim])
+        fn(client, known_broker_ids=["broker-abc123"])
+        # get_order_by_id should not have been called since it was in open orders
+        assert client.get_order_by_id.call_count == 0

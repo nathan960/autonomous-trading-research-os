@@ -631,13 +631,13 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
 ```json
 {
   "drawdown": 0.0,
-  "dry_run": false,
-  "equity": 99802.89,
-  "generated_at": "2026-05-13T16:23:46Z",
+  "dry_run": true,
+  "equity": 40000.0,
+  "generated_at": "2026-05-13T16:34:39Z",
   "open_order_count": 0,
-  "peak_equity": 99802.89,
-  "position_count": 1,
-  "run_id": "monitor_positions-20260513T162345-2398451f",
-  "source": "alpaca_paper"
+  "peak_equity": 40000.0,
+  "position_count": 0,
+  "run_id": "monitor_positions-20260513T163439-a37d8a9b",
+  "source": "dry_run_mock"
 }
 ```

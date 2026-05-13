@@ -58,27 +58,58 @@ _MONITOR_REPORT_RE = re.compile(r"^order_monitor_.*\.json$")
 # Broker order fetch (lazy SDK imports so tests don't need credentials)
 # ---------------------------------------------------------------------------
 
-def fetch_broker_orders(trading_client: Any) -> dict:
-    """Fetch open and recent closed orders from Alpaca.
+def fetch_broker_orders(
+    trading_client: Any,
+    known_broker_ids: Optional[list] = None,
+    known_client_ids: Optional[list] = None,
+    lookback_days: int = 7,
+) -> dict:
+    """Fetch open and recent closed orders from Alpaca; fall back to direct lookups.
 
-    Returns a dict with two keys:
-        by_broker_id    {broker_order_id: order_primitive}
-        by_client_id    {client_order_id: order_primitive}
+    Strategy (three layers, each read-only):
+      1. Bulk fetch all open orders.
+      2. Bulk fetch closed orders from the last *lookback_days* days (default 7).
+      3. For any known_broker_id not yet found: call get_order_by_id().
+      4. For any known_client_id not yet found: call get_order_by_client_id().
+
+    Returns:
+        {
+            "by_broker_id":  {broker_order_id: order_primitive},
+            "by_client_id":  {client_order_id: order_primitive},
+            "fetch_log":     {open_count, closed_count, direct_broker_id_hits,
+                              direct_client_id_hits, direct_broker_id_errors,
+                              direct_client_id_errors}
+        }
 
     Never submits, cancels, or replaces orders.
+    Exceptions from individual fallback lookups are caught and counted, never raised.
     """
-    from alpaca.trading.requests import GetOrdersRequest
-    from alpaca.trading.enums import QueryOrdersSortBy
+    from datetime import datetime, timezone, timedelta
+
+    from alpaca.trading.requests import GetOrderByIdRequest, GetOrdersRequest
 
     from ..data.alpaca_client import _to_primitive
 
     result_by_broker: dict = {}
     result_by_client: dict = {}
 
-    def _index(orders_raw: Any) -> None:
+    fetch_log: dict = {
+        "open_count": 0,
+        "closed_count": 0,
+        "direct_broker_id_lookups": 0,
+        "direct_broker_id_hits": 0,
+        "direct_broker_id_errors": 0,
+        "direct_client_id_lookups": 0,
+        "direct_client_id_hits": 0,
+        "direct_client_id_errors": 0,
+    }
+
+    def _index(orders_raw: Any) -> int:
+        """Add orders to lookup dicts; return count added."""
         orders = _to_primitive(orders_raw)
         if not isinstance(orders, list):
-            return
+            return 0
+        added = 0
         for o in orders:
             if not isinstance(o, dict):
                 continue
@@ -88,16 +119,65 @@ def fetch_broker_orders(trading_client: Any) -> dict:
                 result_by_broker[str(bid)] = o
             if cid:
                 result_by_client[str(cid)] = o
+            added += 1
+        return added
 
-    # Open orders
+    # ── Layer 1: bulk open orders ────────────────────────────────────────────
     open_req = GetOrdersRequest(status="open")
-    _index(trading_client.get_orders(filter=open_req))
+    fetch_log["open_count"] = _index(trading_client.get_orders(filter=open_req))
 
-    # Recent closed orders (filled/canceled/rejected/expired)
-    closed_req = GetOrdersRequest(status="closed", limit=200)
-    _index(trading_client.get_orders(filter=closed_req))
+    # ── Layer 2: bulk closed orders with explicit 7-day lookback ────────────
+    # Without `after`, Alpaca defaults to the current calendar day (ET), which
+    # misses orders from earlier days.  Force a full 7-day window.
+    after_dt = datetime.now(timezone.utc) - timedelta(days=lookback_days)
+    closed_req = GetOrdersRequest(status="closed", limit=500, after=after_dt)
+    fetch_log["closed_count"] = _index(trading_client.get_orders(filter=closed_req))
 
-    return {"by_broker_id": result_by_broker, "by_client_id": result_by_client}
+    # ── Layer 3a: direct lookup by broker_order_id (UUID) ───────────────────
+    # Catches orders that slipped through pagination or landed outside the
+    # lookback window.  Uses get_order_by_id which always hits the live index.
+    for bid in (known_broker_ids or []):
+        bid_str = str(bid).strip()
+        if not bid_str or bid_str in result_by_broker:
+            continue
+        fetch_log["direct_broker_id_lookups"] += 1
+        try:
+            raw = trading_client.get_order_by_id(bid_str, filter=GetOrderByIdRequest(nested=False))
+            prim = _to_primitive(raw)
+            if isinstance(prim, dict):
+                cid = prim.get("client_order_id")
+                result_by_broker[bid_str] = prim
+                if cid:
+                    result_by_client[str(cid)] = prim
+                fetch_log["direct_broker_id_hits"] += 1
+        except Exception:
+            fetch_log["direct_broker_id_errors"] += 1
+
+    # ── Layer 3b: direct lookup by client_order_id ──────────────────────────
+    # Final fallback: if still not found after broker_id lookup, try the
+    # client_order_id endpoint (deterministic TOS- prefix ID we assigned).
+    for cid in (known_client_ids or []):
+        cid_str = str(cid).strip()
+        if not cid_str or cid_str in result_by_client:
+            continue
+        fetch_log["direct_client_id_lookups"] += 1
+        try:
+            raw = trading_client.get_order_by_client_id(cid_str)
+            prim = _to_primitive(raw)
+            if isinstance(prim, dict):
+                bid = prim.get("id") or prim.get("order_id")
+                result_by_client[cid_str] = prim
+                if bid:
+                    result_by_broker[str(bid)] = prim
+                fetch_log["direct_client_id_hits"] += 1
+        except Exception:
+            fetch_log["direct_client_id_errors"] += 1
+
+    return {
+        "by_broker_id": result_by_broker,
+        "by_client_id": result_by_client,
+        "fetch_log": fetch_log,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -371,7 +451,9 @@ def run_order_monitor(
     """Run the full order lifecycle monitor.
 
     Args:
-        broker_lookup:      {"by_broker_id": {...}, "by_client_id": {...}} or empty.
+        broker_lookup:      {"by_broker_id": {...}, "by_client_id": {...},
+                             "fetch_log": {...}} or empty.
+                            fetch_log is optional and surfaced in the report.
         orders_dir:         data/history/orders/
         executions_dir:     data/history/executions/
         positions:          Current positions list (from account state or snapshot).
@@ -452,6 +534,7 @@ def run_order_monitor(
         "dry_run": dry_run,
         "source": "stored_snapshot" if dry_run else "alpaca_paper",
         "clock": clock,
+        "fetch_log": broker_lookup.get("fetch_log"),
         "orders_tracked": n_total,
         "orders_filled": n_filled,
         "orders_partially_filled": n_partially,

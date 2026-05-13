@@ -3,7 +3,7 @@
     "buying_power": "40000.00",
     "cash": "40000.00",
     "equity": "40000.00",
-    "fetched_at": "2026-05-13T16:14:12Z",
+    "fetched_at": "2026-05-13T16:16:44Z",
     "position_count": 0,
     "status": "ACTIVE"
   },
@@ -514,14 +514,14 @@
       "symbol": "BIL"
     }
   ],
-  "data_hash": "cf8a1765d4da9ca05c93dc6afebbf2b2b3258ca878b5062c4cc0ff5972ec9710",
-  "expires_at": "2026-05-13T22:16:43Z",
-  "generated_at": "2026-05-13T16:16:43Z",
+  "data_hash": "5e975926f668e420eb351e5f6be2cd0e4668c3fe54ddbecd24a0682ed25824a6",
+  "expires_at": "2026-05-13T22:34:39Z",
+  "generated_at": "2026-05-13T16:34:39Z",
   "market_clock": {
     "is_open": true,
-    "next_close": "2026-05-13T16:14:12Z",
-    "next_open": "2026-05-13T16:14:12Z",
-    "timestamp": "2026-05-13T16:14:12Z"
+    "next_close": "2026-05-13T16:16:44Z",
+    "next_open": "2026-05-13T16:16:44Z",
+    "timestamp": "2026-05-13T16:16:44Z"
   },
   "no_trade_reasons": [
     "max_orders_per_run_cap(1)_dequeued(non_blocking): ['WELL', 'EOG', 'ORCL', 'DIS', 'WMT', 'KO', 'LLY', 'APD', 'BKNG', 'BIL']"
@@ -568,7 +568,7 @@
       "symbol": "BIL"
     }
   ],
-  "plan_id": "trade_plan-20260513T161643-883a5141",
+  "plan_id": "trade_plan-20260513T163439-870bd1aa",
   "proposed_orders": [
     {
       "capped_by_max_notional_per_order": true,
@@ -785,7 +785,7 @@
       "weight": 0.08791219
     }
   },
-  "trade_plan_hash": "8aa7fd6ad38d0e1b24e84569028d93f793a013f04e0260abc039f3be53c36cc2",
+  "trade_plan_hash": "805ec65113c7adf9cf21b2f4870b41775f7db8fa3dfb8749843bb6b46a5321d3",
   "trading_mode": "paper",
   "trigger_snapshot_hash": "d7cc1186abca345045acdd78aefea7b1bad16f163d886b6218e2e4b355d39351"
 }

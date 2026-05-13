@@ -1,17 +1,18 @@
 {
   "clock": {
     "is_open": true,
-    "next_close": "2026-05-13T20:00:00Z",
-    "next_open": "2026-05-14T13:30:00Z",
-    "timestamp": "2026-05-13T16:23:43Z"
+    "next_close": "2026-05-13T16:34:40Z",
+    "next_open": "2026-05-13T16:34:40Z",
+    "timestamp": "2026-05-13T16:34:40Z"
   },
   "dry_run": true,
-  "generated_at": "2026-05-13T16:26:53Z",
+  "fetch_log": null,
+  "generated_at": "2026-05-13T16:34:45Z",
   "lifecycles": [
     {
       "broker_order_id": "a57f3df1-f9d5-4ab7-8655-ed8240ade13e",
       "broker_status": null,
-      "checked_at": "2026-05-13T16:26:53Z",
+      "checked_at": "2026-05-13T16:34:45Z",
       "client_order_id": "TOS-20260513T160035-WELL-BUY",
       "fill": null,
       "lifecycle_status": "missing",
@@ -33,8 +34,8 @@
   "orders_partially_filled": 0,
   "orders_rejected": 0,
   "orders_tracked": 1,
-  "report_hash": "f873872a86f61355502828ad2d2ab426758d8cdc1745d2aefae2e6802e7aa00b",
-  "run_id": "order_monitor-20260513T162653-9d8411b7",
+  "report_hash": "f9279b694dd836342ccce1d8ede6c58b075ed788b13300934aa33b03ecfccfd5",
+  "run_id": "order_monitor-20260513T163445-db740ab7",
   "safety": {
     "cancel_order_called": false,
     "replace_order_called": false,

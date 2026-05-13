@@ -201,11 +201,35 @@ def main() -> int:
             f"positions={len(positions)}  open_orders={fresh_state.get('open_order_count')}"
         )
 
+        # Load known broker/client IDs from audit files so fetch_broker_orders
+        # can attempt direct lookups for any orders not in the bulk results.
+        from trading_os.monitoring.order_monitor import load_submitted_audits
+        known_broker_ids: list = []
+        known_client_ids: list = []
+        for _, audit in load_submitted_audits(_ORDERS_DIR):
+            bid = audit.get("broker_order_id")
+            cid = audit.get("client_order_id")
+            if bid:
+                known_broker_ids.append(str(bid))
+            if cid:
+                known_client_ids.append(str(cid))
+
         try:
             trading_client = alpaca_client.trading_client()
-            broker_lookup = fetch_broker_orders(trading_client)
-            n_open = len(broker_lookup["by_broker_id"])
-            print(f"  fetched {n_open} broker orders (open + recent closed)")
+            broker_lookup = fetch_broker_orders(
+                trading_client,
+                known_broker_ids=known_broker_ids,
+                known_client_ids=known_client_ids,
+            )
+            fl = broker_lookup.get("fetch_log", {})
+            print(
+                f"  broker fetch: open={fl.get('open_count', '?')}  "
+                f"closed={fl.get('closed_count', '?')}  "
+                f"direct_broker_id_hits={fl.get('direct_broker_id_hits', 0)}  "
+                f"direct_client_id_hits={fl.get('direct_client_id_hits', 0)}  "
+                f"direct_broker_id_errors={fl.get('direct_broker_id_errors', 0)}  "
+                f"direct_client_id_errors={fl.get('direct_client_id_errors', 0)}"
+            )
         except Exception as exc:
             print(f"[monitor_orders] ERROR fetching broker orders: {exc}", file=sys.stderr)
             return 1
