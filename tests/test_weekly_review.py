@@ -106,17 +106,50 @@ def _make_paper_execution(exec_dir: Path, date_str: str, idx: int = 0) -> None:
     })
 
 
-def _make_order_monitor(orders_dir: Path, date_str: str, idx: int = 0,
-                        missing: int = 0, fills: int = 0) -> None:
+def _make_order_monitor(
+    orders_dir: Path,
+    date_str: str,
+    idx: int = 0,
+    missing: int = 0,
+    fills: int = 0,
+    lifecycles: "list | None" = None,
+    checked_at: "str | None" = None,
+) -> None:
     dn = date_str.replace("-", "")
+    ts = checked_at or f"{date_str}T17{idx:02d}:00Z"
+    if lifecycles is None:
+        lifecycles = []
+        for i in range(fills):
+            lifecycles.append({
+                "client_order_id": f"TOS-fill-{date_str}-{idx}-{i}",
+                "symbol": "TEST",
+                "side": "buy",
+                "lifecycle_status": "filled",
+                "broker_status": "filled",
+                "checked_at": ts,
+                "fill": {"fill_price": 100.0, "filled_qty": 1.0, "filled_notional": 100.0, "filled_at": ts},
+                "warning": None,
+            })
+        for i in range(missing):
+            lifecycles.append({
+                "client_order_id": f"TOS-missing-{date_str}-{idx}-{i}",
+                "symbol": "TEST",
+                "side": "buy",
+                "lifecycle_status": "missing",
+                "broker_status": None,
+                "checked_at": ts,
+                "fill": None,
+                "warning": "not found in broker",
+            })
     _write_json(orders_dir / f"order_monitor-{dn}T17{idx:02d}00-test.json", {
         "run_id": f"order_monitor-{dn}-{idx}",
-        "orders_tracked": missing + fills,
+        "orders_tracked": len(lifecycles),
         "orders_filled": fills,
         "orders_missing": missing,
         "orders_expired": 0,
         "orders_rejected": 0,
         "orders_canceled": 0,
+        "lifecycles": lifecycles,
     })
 
 
@@ -587,3 +620,218 @@ class TestWeeklyReviewNoExecutionPath:
         script = Path(__file__).parents[1] / "scripts" / "weekly_review.py"
         src = script.read_text(encoding="utf-8")
         assert "execute_paper" not in src
+
+
+# ---------------------------------------------------------------------------
+# TestOrderMonitorDeduplication — lifecycle deduplication correctness
+# ---------------------------------------------------------------------------
+
+def _lc(
+    client_order_id: str,
+    symbol: str = "TEST",
+    side: str = "buy",
+    lifecycle_status: str = "missing",
+    checked_at: str = "2026-05-13T17:00:00Z",
+    fill: "dict | None" = None,
+) -> dict:
+    """Build a minimal lifecycle entry."""
+    return {
+        "client_order_id": client_order_id,
+        "symbol": symbol,
+        "side": side,
+        "lifecycle_status": lifecycle_status,
+        "broker_status": lifecycle_status if lifecycle_status != "missing" else None,
+        "checked_at": checked_at,
+        "fill": fill,
+        "warning": None,
+    }
+
+
+def _make_monitor_file(orders_dir: Path, filename: str, lifecycles: list) -> None:
+    fills = sum(1 for lc in lifecycles if lc.get("lifecycle_status") == "filled")
+    missing = sum(1 for lc in lifecycles if lc.get("lifecycle_status") == "missing")
+    _write_json(orders_dir / filename, {
+        "run_id": filename.replace(".json", ""),
+        "orders_tracked": len(lifecycles),
+        "orders_filled": fills,
+        "orders_missing": missing,
+        "orders_expired": 0,
+        "orders_rejected": 0,
+        "orders_canceled": 0,
+        "lifecycles": lifecycles,
+    })
+
+
+class TestOrderMonitorDeduplication:
+    """Prove _aggregate_order_monitor deduplicates by client_order_id using latest checked_at."""
+
+    def _review(self, dirs):
+        return build_weekly_review(
+            end_date_str="2026-05-13",
+            days=7,
+            latest_dir=dirs["latest"],
+            history_dir=dirs["history"],
+            memory_dir=dirs["memory"],
+        )
+
+    # --- core deduplication ---
+
+    def test_same_order_missing_then_filled_counts_as_filled(self, dirs):
+        """Order missing in early run, filled in later run → final status=filled, missing=0."""
+        orders_dir = dirs["history"] / "orders"
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", lifecycle_status="missing", checked_at="2026-05-13T16:00:00Z"),
+        ])
+        _make_monitor_file(orders_dir, "order_monitor-20260513T180000-bbb.json", [
+            _lc("TOS-WELL-001", lifecycle_status="filled", checked_at="2026-05-13T17:00:00Z",
+                fill={"fill_price": 218.90, "filled_qty": 0.11, "filled_notional": 24.08, "filled_at": "2026-05-13T17:00:00Z"}),
+        ])
+        om = self._review(dirs)["order_monitor"]
+        assert om["fills"] == 1
+        assert om["missing"] == 0
+        assert om["total_tracked"] == 1
+
+    def test_same_order_filled_in_multiple_reports_counted_once(self, dirs):
+        """Same order filled in two separate reports → fills=1, not 2."""
+        orders_dir = dirs["history"] / "orders"
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", lifecycle_status="filled", checked_at="2026-05-13T16:00:00Z"),
+        ])
+        _make_monitor_file(orders_dir, "order_monitor-20260513T180000-bbb.json", [
+            _lc("TOS-WELL-001", lifecycle_status="filled", checked_at="2026-05-13T17:00:00Z"),
+        ])
+        om = self._review(dirs)["order_monitor"]
+        assert om["fills"] == 1
+        assert om["total_tracked"] == 1
+
+    def test_multiple_unique_orders_counted_correctly(self, dirs):
+        """WELL filled + BLK missing → fills=1, missing=1, total_tracked=2."""
+        orders_dir = dirs["history"] / "orders"
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", symbol="WELL", lifecycle_status="filled",
+                checked_at="2026-05-13T17:00:00Z"),
+            _lc("TOS-BLK-001", symbol="BLK", lifecycle_status="missing",
+                checked_at="2026-05-13T17:00:00Z"),
+        ])
+        om = self._review(dirs)["order_monitor"]
+        assert om["fills"] == 1
+        assert om["missing"] == 1
+        assert om["total_tracked"] == 2
+
+    def test_order_missing_then_resolved_missing_count_zero(self, dirs):
+        """Order missing across several runs, then filled → missing_count=0 in the end."""
+        orders_dir = dirs["history"] / "orders"
+        for i in range(5):
+            _make_monitor_file(orders_dir, f"order_monitor-20260513T1{i}0000-r{i}.json", [
+                _lc("TOS-WELL-001", lifecycle_status="missing",
+                    checked_at=f"2026-05-13T1{i}:00:00Z"),
+            ])
+        _make_monitor_file(orders_dir, "order_monitor-20260513T200000-final.json", [
+            _lc("TOS-WELL-001", lifecycle_status="filled", checked_at="2026-05-13T20:00:00Z"),
+        ])
+        om = self._review(dirs)["order_monitor"]
+        assert om["missing"] == 0
+        assert om["fills"] == 1
+
+    def test_latest_checked_at_wins(self, dirs):
+        """When same order appears with different checked_at, the later one wins."""
+        orders_dir = dirs["history"] / "orders"
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", lifecycle_status="new", checked_at="2026-05-13T16:00:00Z"),
+        ])
+        _make_monitor_file(orders_dir, "order_monitor-20260513T180000-bbb.json", [
+            _lc("TOS-WELL-001", lifecycle_status="canceled", checked_at="2026-05-13T17:00:00Z"),
+        ])
+        om = self._review(dirs)["order_monitor"]
+        assert om["canceled"] == 1
+        assert om["fills"] == 0
+
+    # --- execution attempts remain separate ---
+
+    def test_execution_attempts_remain_separate_from_lifecycle(self, dirs):
+        """Paper execution attempt count is not confused with order lifecycle fill count."""
+        exec_dir = dirs["history"] / "executions"
+        orders_dir = dirs["history"] / "orders"
+        _make_paper_execution(exec_dir, "2026-05-12", idx=0)
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", lifecycle_status="filled", checked_at="2026-05-13T17:00:00Z"),
+            _lc("TOS-BLK-001", lifecycle_status="filled", checked_at="2026-05-13T17:00:00Z"),
+        ])
+        review = self._review(dirs)
+        assert review["paper_executions"]["total_attempts"] == 1
+        assert review["order_monitor"]["fills"] == 2
+
+    # --- latest_lifecycle_by_order field ---
+
+    def test_latest_lifecycle_by_order_present_in_review(self, dirs):
+        orders_dir = dirs["history"] / "orders"
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", symbol="WELL", lifecycle_status="filled",
+                checked_at="2026-05-13T17:00:00Z",
+                fill={"fill_price": 218.9, "filled_qty": 0.11, "filled_notional": 24.08, "filled_at": "t"}),
+        ])
+        om = self._review(dirs)["order_monitor"]
+        assert "latest_lifecycle_by_order" in om
+        assert len(om["latest_lifecycle_by_order"]) == 1
+        entry = om["latest_lifecycle_by_order"][0]
+        assert entry["client_order_id"] == "TOS-WELL-001"
+        assert entry["symbol"] == "WELL"
+        assert entry["lifecycle_status"] == "filled"
+        assert entry["fill_price"] == 218.9
+
+    def test_latest_lifecycle_by_order_empty_when_no_orders(self, dirs):
+        om = self._review(dirs)["order_monitor"]
+        assert om["latest_lifecycle_by_order"] == []
+
+    def test_md_contains_latest_lifecycle_section(self, dirs):
+        orders_dir = dirs["history"] / "orders"
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", symbol="WELL", lifecycle_status="filled",
+                checked_at="2026-05-13T17:00:00Z"),
+        ])
+        review = self._review(dirs)
+        md = format_weekly_review_md(review)
+        assert "Latest lifecycle by order" in md
+        assert "TOS-WELL-001" in md
+        assert "WELL" in md
+
+    def test_md_lifecycle_section_absent_when_no_orders(self, dirs):
+        review = self._review(dirs)
+        md = format_weekly_review_md(review)
+        assert "Latest lifecycle by order" not in md
+
+    # --- operational issues use deduplicated counts ---
+
+    def test_no_missing_issue_when_order_later_filled(self, dirs):
+        """If latest lifecycle is filled, no 'missing orders' operational issue is raised."""
+        orders_dir = dirs["history"] / "orders"
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", lifecycle_status="missing", checked_at="2026-05-13T16:00:00Z"),
+        ])
+        _make_monitor_file(orders_dir, "order_monitor-20260513T180000-bbb.json", [
+            _lc("TOS-WELL-001", lifecycle_status="filled", checked_at="2026-05-13T17:00:00Z"),
+        ])
+        review = self._review(dirs)
+        issues = review["operational_issues"]
+        assert not any("missing" in i.lower() for i in issues)
+
+    def test_missing_issue_raised_when_latest_status_is_missing(self, dirs):
+        orders_dir = dirs["history"] / "orders"
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", lifecycle_status="missing", checked_at="2026-05-13T17:00:00Z"),
+        ])
+        review = self._review(dirs)
+        issues = review["operational_issues"]
+        assert any("missing" in i.lower() for i in issues)
+
+    # --- partially_filled ---
+
+    def test_partially_filled_counted_separately(self, dirs):
+        orders_dir = dirs["history"] / "orders"
+        _make_monitor_file(orders_dir, "order_monitor-20260513T170000-aaa.json", [
+            _lc("TOS-WELL-001", lifecycle_status="partially_filled",
+                checked_at="2026-05-13T17:00:00Z"),
+        ])
+        om = self._review(dirs)["order_monitor"]
+        assert om["partially_filled"] == 1
+        assert om["fills"] == 0

@@ -1,0 +1,117 @@
+{
+  "alerts": {
+    "alerts_this_period": 8,
+    "approved_trade_plan_created_any": false,
+    "by_action": {
+      "logged": 1,
+      "refresh_requested": 4
+    },
+    "by_next_step": {
+      "log_only": 1,
+      "request_data_refresh": 5,
+      "request_trade_plan_unapproved": 2
+    },
+    "by_source": {
+      "test": 2,
+      "tradingview": 6
+    },
+    "execution_called_any": false,
+    "routes_this_period": 5,
+    "total_alerts_all_time": 8,
+    "total_routes_all_time": 5
+  },
+  "data_quality": {
+    "available": true,
+    "insufficient_bars_count": 0,
+    "issues_count": 0,
+    "latest_generated_at": "2026-05-12T15:33:05Z",
+    "latest_status": "PASS",
+    "missing_bars_count": 0,
+    "wide_spreads_count": 0
+  },
+  "days": 7,
+  "dry_runs": {
+    "all_pass_count": 10,
+    "fail_count": 5,
+    "failing_gates": {
+      "RISK_STATE_NOT_PAUSED": 4,
+      "SPREAD_NOT_TOO_WIDE": 1
+    },
+    "total_runs": 15
+  },
+  "generated_at": "2026-05-13T19:42:59Z",
+  "operational_issues": [
+    "Dry-run gate 'RISK_STATE_NOT_PAUSED' failed 4 time(s) this period.",
+    "Dry-run gate 'SPREAD_NOT_TOO_WIDE' failed 1 time(s) this period.",
+    "1 order(s) have lifecycle_status=missing \u2014 verify on broker.",
+    "Drawdown is -59.9% \u2014 approaching warning threshold (-5%)."
+  ],
+  "order_monitor": {
+    "canceled": 0,
+    "expired": 0,
+    "fills": 0,
+    "latest_lifecycle_by_order": [
+      {
+        "checked_at": "2026-05-13T19:16:57Z",
+        "client_order_id": "TOS-20260513T160035-WELL-BUY",
+        "fill_price": null,
+        "filled_notional": null,
+        "filled_qty": null,
+        "lifecycle_status": "missing",
+        "side": "buy",
+        "symbol": "WELL"
+      }
+    ],
+    "missing": 1,
+    "partially_filled": 0,
+    "rejected": 0,
+    "total_runs": 8,
+    "total_tracked": 1
+  },
+  "paper_executions": {
+    "runs": [
+      {
+        "date": "2026-05-13",
+        "orders": [
+          {
+            "limit_price": 218.9,
+            "notional": 25.0,
+            "side": "buy",
+            "symbol": "WELL"
+          }
+        ],
+        "orders_count": 1,
+        "run_id": "execution-20260513T160036-b4ad22c3",
+        "status": "PAPER_SUBMITTED"
+      }
+    ],
+    "total_attempts": 1,
+    "total_orders_submitted": 1
+  },
+  "period_end": "2026-05-13",
+  "period_start": "2026-05-07",
+  "proposed_experiments": [],
+  "research_observations": [
+    "Market regime: 14/14 sessions risk_on (100%). Avg candidates=67.9, avg excluded=69.0.",
+    "1 paper execution attempt(s), 1 order(s) submitted.",
+    "8 external alert(s) ingested this period, 5 routed."
+  ],
+  "review_hash": "7710d0e2af8e7ec3",
+  "risk_state": {
+    "drawdown": -0.599211,
+    "latest_equity": 40000.0,
+    "peak_equity": 99803.12,
+    "position_count": 0,
+    "updated_at": "2026-05-13T19:42:48Z"
+  },
+  "run_id": "weekly_review-2026-05-13",
+  "status": "ok",
+  "trigger_scans": {
+    "avg_candidates": 67.9,
+    "avg_excluded": 69.0,
+    "regime_errors": [],
+    "risk_off_sessions": 0,
+    "risk_on_sessions": 14,
+    "total_runs": 14
+  }
+}

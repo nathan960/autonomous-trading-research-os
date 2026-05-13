@@ -163,13 +163,15 @@ def _aggregate_paper_executions(exec_dir: Path, dates: list[str]) -> dict:
 
 
 def _aggregate_order_monitor(orders_dir: Path, dates: list[str]) -> dict:
+    """Aggregate order lifecycle across monitor runs, deduplicating by client_order_id.
+
+    Each unique order is represented by its most recent lifecycle entry (latest
+    checked_at). This prevents an order that was 'missing' in early runs and
+    'filled' in a later run from being counted under both statuses.
+    """
     total_runs = 0
-    total_tracked = 0
-    fills = 0
-    missing = 0
-    expired = 0
-    rejected = 0
-    canceled = 0
+    # {client_order_id: lifecycle_dict} — latest checked_at wins
+    latest_by_order: dict = {}
 
     for date_str in dates:
         dn = _date_nodash(date_str)
@@ -178,21 +180,44 @@ def _aggregate_order_monitor(orders_dir: Path, dates: list[str]) -> dict:
             if not d:
                 continue
             total_runs += 1
-            total_tracked += d.get("orders_tracked", 0)
-            fills += d.get("orders_filled", 0)
-            missing += d.get("orders_missing", 0)
-            expired += d.get("orders_expired", 0)
-            rejected += d.get("orders_rejected", 0)
-            canceled += d.get("orders_canceled", 0)
+            for lc in d.get("lifecycles", []):
+                cid = lc.get("client_order_id")
+                if not cid:
+                    continue
+                existing = latest_by_order.get(cid)
+                if existing is None or (lc.get("checked_at") or "") > (existing.get("checked_at") or ""):
+                    latest_by_order[cid] = lc
+
+    def _count(status: str) -> int:
+        return sum(1 for lc in latest_by_order.values() if lc.get("lifecycle_status") == status)
+
+    latest_lifecycle_by_order = sorted(
+        [
+            {
+                "client_order_id": lc.get("client_order_id"),
+                "symbol": lc.get("symbol"),
+                "side": lc.get("side"),
+                "lifecycle_status": lc.get("lifecycle_status"),
+                "fill_price": (lc.get("fill") or {}).get("fill_price"),
+                "filled_qty": (lc.get("fill") or {}).get("filled_qty"),
+                "filled_notional": (lc.get("fill") or {}).get("filled_notional"),
+                "checked_at": lc.get("checked_at"),
+            }
+            for lc in latest_by_order.values()
+        ],
+        key=lambda x: x.get("checked_at") or "",
+    )
 
     return {
         "total_runs": total_runs,
-        "total_tracked": total_tracked,
-        "fills": fills,
-        "missing": missing,
-        "expired": expired,
-        "rejected": rejected,
-        "canceled": canceled,
+        "total_tracked": len(latest_by_order),
+        "fills": _count("filled"),
+        "partially_filled": _count("partially_filled"),
+        "missing": _count("missing"),
+        "expired": _count("expired"),
+        "rejected": _count("rejected"),
+        "canceled": _count("canceled"),
+        "latest_lifecycle_by_order": latest_lifecycle_by_order,
     }
 
 
@@ -476,14 +501,31 @@ def format_weekly_review_md(review: dict) -> str:
     lines += [
         "### Order Lifecycle",
         f"- Monitor runs: {om.get('total_runs', 0)} | "
-        f"Tracked: {om.get('total_tracked', 0)}",
+        f"Unique orders: {om.get('total_tracked', 0)}",
         f"- Fills: {om.get('fills', 0)} | "
+        f"Partial: {om.get('partially_filled', 0)} | "
         f"Missing: {om.get('missing', 0)} | "
         f"Expired: {om.get('expired', 0)} | "
         f"Rejected: {om.get('rejected', 0)} | "
         f"Canceled: {om.get('canceled', 0)}",
-        "",
     ]
+    orders_list = om.get("latest_lifecycle_by_order", [])
+    if orders_list:
+        lines.append(f"- Latest lifecycle by order ({len(orders_list)}):")
+        for o in orders_list:
+            fill_price = o.get("fill_price")
+            filled_qty = o.get("filled_qty")
+            filled_notional = o.get("filled_notional")
+            fill_str = (
+                f" fill=${fill_price} qty={filled_qty} notional=${filled_notional}"
+                if fill_price is not None else ""
+            )
+            lines.append(
+                f"  - {o.get('client_order_id')} | {o.get('symbol')} {o.get('side')} | "
+                f"status={o.get('lifecycle_status')}{fill_str} | "
+                f"checked={o.get('checked_at')}"
+            )
+    lines.append("")
 
     # Alerts
     al = review.get("alerts", {})
