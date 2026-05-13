@@ -13497,3 +13497,31 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
   ]
 }
 ```
+
+## order_monitor run
+
+```json
+{
+  "dry_run": false,
+  "generated_at": "2026-05-13T17:47:42Z",
+  "lifecycles": [
+    {
+      "client_order_id": "TOS-20260513T160035-WELL-BUY",
+      "fill": null,
+      "lifecycle_status": "unknown",
+      "notional": 25.0,
+      "side": "buy",
+      "symbol": "WELL"
+    }
+  ],
+  "orders_active": 0,
+  "orders_filled": 0,
+  "orders_missing": 0,
+  "orders_rejected": 0,
+  "orders_tracked": 1,
+  "run_id": "order_monitor-20260513T174742-2bda44ae",
+  "source": "alpaca_paper",
+  "stale_orders": [],
+  "warnings": []
+}
+```
