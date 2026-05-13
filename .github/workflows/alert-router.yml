@@ -117,25 +117,30 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add \
-            data/history/alerts/routes/ \
-            memory/TRIGGER-LOG.md \
-            memory/SIGNAL-LOG.md \
-            memory/RESEARCH-CONTEXT.md \
-            || true
+          echo "Git status before staging:"
+          git status --short
 
-          # Also commit data/latest/ if modified (run_refresh or run_unapproved_plan)
-          if ! git diff --cached --quiet data/latest/ 2>/dev/null; then
-            git add data/latest/ || true
-          fi
+          # The alert router may write:
+          # - route records
+          # - data/latest snapshots
+          # - data/history snapshots
+          # - memory logs
+          #
+          # Stage all data and memory artifacts so git pull --rebase does not
+          # fail on leftover unstaged files.
+          git add -A data memory
 
-          # Also commit memory/DATA-QUALITY-LOG.md if modified
-          git add memory/DATA-QUALITY-LOG.md 2>/dev/null || true
+          echo "Git status after staging:"
+          git status --short
 
           if git diff --cached --quiet; then
             echo "No routing artifacts changed."
           else
             git commit -m "research: alert router run=${{ github.run_id }} mode=${{ inputs.route_mode }}"
-            git pull --rebase origin main
-            git push
           fi
+
+          # Use --autostash defensively in case GitHub or tooling leaves
+          # harmless unstaged files. The workflow should still prefer a clean
+          # data/memory artifact commit before pushing.
+          git pull --rebase --autostash origin main
+          git push
