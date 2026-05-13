@@ -307,3 +307,65 @@ None.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-13
+
+**Generated:** 2026-05-13T21:04:39Z  **Run ID:** daily_summary-2026-05-13
+
+### Account & Risk
+- Equity: $99,802.92 | Cash: $99,727.86 | Buying power: $199,530.78
+- Peak: $99,803.14 | Drawdown: -0.00% | Positions: 3
+
+### Positions (3)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.023054861 | $24.84 | $-0.16 (-0.65%) |
+| JNJ | long | 0.108578576 | $25.07 | +$0.07 (0.28%) |
+| WELL | long | 0.11425542 | $25.15 | +$0.15 (0.61%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+8.95%, breadth=56.96%)
+- Candidates: 13 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-13T20:39:57Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260513T205815-47e1943d`
+- Generated: 2026-05-13T20:58:15Z | Expires: 2026-05-14T02:58:15Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - JNJ BUY $25.00 @ $230.16 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260513T203957-9632fb92`
+- All gates pass: YES
+
+### Dry Runs Today (0)
+- Pass: 0 | Fail: 0
+
+### Paper Executions Today (4)
+- WELL BUY $25.00 @ $218.90 (PAPER_SUBMITTED) submitted=2026-05-13T16:00:36Z
+- JNJ BUY $25.00 @ $230.26 (PAPER_SUBMITTED) submitted=2026-05-13T19:25:27Z
+- EQIX BUY $25.00 @ $1,084.52 (PAPER_SUBMITTED) submitted=2026-05-13T19:29:35Z
+- EQIX SELL $25.00 @ $1,084.25 (PAPER_ORDER_ERRORS) submitted=2026-05-13T19:31:30Z
+
+### Order Monitor
+- Tracked: 3 | Filled: 3 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 13 | Latest: order_monitor-20260513T210202-634fc7d9
+
+### Alerts (total=8, today=8)
+- By source: tradingview=6, test=2
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=5)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
