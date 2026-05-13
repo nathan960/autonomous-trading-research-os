@@ -35,6 +35,7 @@ sys.path.insert(0, str(_ROOT / "src"))
 from trading_os.monitoring.order_monitor import (
     ACTIVE_STATUSES,
     TERMINAL_STATUSES,
+    _normalize_status,
     append_trade_log,
     build_order_lifecycle,
     build_plan_refs_index,
@@ -1024,3 +1025,219 @@ class TestFetchBrokerOrdersLookupPaths:
         fn(client, known_broker_ids=["broker-abc123"])
         # get_order_by_id should not have been called since it was in open orders
         assert client.get_order_by_id.call_count == 0
+
+
+# ---------------------------------------------------------------------------
+# TestStatusNormalization — _normalize_status and lifecycle counter correctness
+# ---------------------------------------------------------------------------
+
+class _StrEnum(str):
+    """Minimal str-subclass that mimics Alpaca SDK str-enum behaviour."""
+    def __new__(cls, value, name=None):
+        obj = super().__new__(cls, value)
+        obj._name_ = name or value.upper()
+        obj.value = value
+        return obj
+
+    def __str__(self):
+        return f"{type(self).__name__}.{self._name_}"
+
+
+class TestStatusNormalization:
+    """Prove _normalize_status handles plain strings, str-enums, and aliases."""
+
+    # --- _normalize_status unit tests ---
+
+    def test_plain_string_filled(self):
+        assert _normalize_status("filled") == "filled"
+
+    def test_plain_string_partially_filled(self):
+        assert _normalize_status("partially_filled") == "partially_filled"
+
+    def test_plain_string_canceled(self):
+        assert _normalize_status("canceled") == "canceled"
+
+    def test_british_cancelled_aliased(self):
+        assert _normalize_status("cancelled") == "canceled"
+
+    def test_plain_string_active_statuses(self):
+        for s in ("new", "pending_new", "accepted", "pending_cancel", "pending_replace"):
+            assert _normalize_status(s) == s, f"expected {s!r} to pass through"
+
+    def test_plain_string_expired(self):
+        assert _normalize_status("expired") == "expired"
+
+    def test_plain_string_rejected(self):
+        assert _normalize_status("rejected") == "rejected"
+
+    def test_none_returns_unknown(self):
+        assert _normalize_status(None) == "unknown"
+
+    def test_unrecognised_string(self):
+        assert _normalize_status("totally_made_up") == "totally_made_up"
+
+    def test_str_enum_filled(self):
+        """str-enum member with value 'filled' must normalise to 'filled', not 'classname.FILLED'."""
+        enum_member = _StrEnum("filled", "FILLED")
+        assert _normalize_status(enum_member) == "filled"
+
+    def test_str_enum_partially_filled(self):
+        enum_member = _StrEnum("partially_filled", "PARTIALLY_FILLED")
+        assert _normalize_status(enum_member) == "partially_filled"
+
+    def test_str_enum_canceled(self):
+        enum_member = _StrEnum("canceled", "CANCELED")
+        assert _normalize_status(enum_member) == "canceled"
+
+    def test_str_enum_cancelled_aliased(self):
+        enum_member = _StrEnum("cancelled", "CANCELLED")
+        assert _normalize_status(enum_member) == "canceled"
+
+    def test_str_enum_new(self):
+        enum_member = _StrEnum("new", "NEW")
+        assert _normalize_status(enum_member) == "new"
+
+    def test_str_enum_rejected(self):
+        enum_member = _StrEnum("rejected", "REJECTED")
+        assert _normalize_status(enum_member) == "rejected"
+
+    # --- lifecycle classification via build_order_lifecycle ---
+
+    def _lc(self, status, broker_id="broker-abc123"):
+        """Helper: build lifecycle for a single order with given broker status."""
+        audit = _audit(broker_order_id=broker_id)
+        order = _broker_order(broker_id=broker_id, status=status)
+        lookup = _broker_lookup([order])
+        clock = {"is_open": True}
+        return build_order_lifecycle(
+            audit=audit,
+            broker_lookup=lookup,
+            plan_refs=None,
+            trigger_snapshot_hash=None,
+            positions=[],
+            clock=clock,
+            checked_at=utc_now_iso(),
+        )
+
+    def test_plain_filled_produces_lifecycle_filled(self):
+        lc = self._lc("filled")
+        assert lc["lifecycle_status"] == "filled"
+
+    def test_str_enum_filled_produces_lifecycle_filled(self):
+        """Regression: Alpaca SDK str-enum must not produce lifecycle=unknown."""
+        lc = self._lc(_StrEnum("filled", "FILLED"))
+        assert lc["lifecycle_status"] == "filled"
+
+    def test_str_enum_filled_has_fill_block(self):
+        """When lifecycle=filled, fill block must be present (not None)."""
+        lc = self._lc(_StrEnum("filled", "FILLED"))
+        assert lc["fill"] is not None, "fill block must be present for filled orders"
+
+    def test_str_enum_partially_filled_lifecycle(self):
+        lc = self._lc(_StrEnum("partially_filled", "PARTIALLY_FILLED"))
+        assert lc["lifecycle_status"] == "partially_filled"
+        assert lc["fill"] is not None
+
+    def test_str_enum_canceled_lifecycle(self):
+        lc = self._lc(_StrEnum("canceled", "CANCELED"))
+        assert lc["lifecycle_status"] == "canceled"
+
+    def test_str_enum_cancelled_lifecycle(self):
+        """British spelling str-enum must map to lifecycle_status='canceled'."""
+        lc = self._lc(_StrEnum("cancelled", "CANCELLED"))
+        assert lc["lifecycle_status"] == "canceled"
+
+    def test_str_enum_new_is_active(self):
+        lc = self._lc(_StrEnum("new", "NEW"))
+        assert lc["lifecycle_status"] == "new"
+
+    def test_str_enum_pending_new_is_active(self):
+        lc = self._lc(_StrEnum("pending_new", "PENDING_NEW"))
+        assert lc["lifecycle_status"] == "pending_new"
+
+    def test_str_enum_accepted_is_active(self):
+        lc = self._lc(_StrEnum("accepted", "ACCEPTED"))
+        assert lc["lifecycle_status"] == "accepted"
+
+    def test_str_enum_rejected_lifecycle(self):
+        lc = self._lc(_StrEnum("rejected", "REJECTED"))
+        assert lc["lifecycle_status"] == "rejected"
+
+    def test_str_enum_expired_lifecycle(self):
+        lc = self._lc(_StrEnum("expired", "EXPIRED"))
+        assert lc["lifecycle_status"] == "expired"
+
+    def test_unknown_status_produces_unknown_lifecycle(self):
+        import warnings
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            lc = self._lc("totally_bogus_status_xyz")
+        assert lc["lifecycle_status"] == "unknown"
+        assert any("unrecognised" in str(warning.message).lower() for warning in w), (
+            "expected a RuntimeWarning about unrecognised status"
+        )
+
+    # --- orders_filled counter ---
+
+    def _run_monitor(self, status, tmp_path):
+        """Helper: write one audit file and run monitor with given broker status."""
+        orders_dir = tmp_path / "orders"
+        orders_dir.mkdir(parents=True)
+        executions_dir = tmp_path / "executions"
+        executions_dir.mkdir(parents=True)
+
+        audit = _audit(client_order_id="TOS-test", broker_order_id="broker-001")
+        audit_path = orders_dir / "TOS-test.json"
+        audit_path.write_text(json.dumps(audit), encoding="utf-8")
+
+        order = _broker_order(broker_id="broker-001", client_id="TOS-test", status=status)
+        lookup = _broker_lookup([order])
+        clock = {"is_open": True}
+
+        return run_order_monitor(
+            broker_lookup=lookup,
+            orders_dir=orders_dir,
+            executions_dir=executions_dir,
+            positions=[],
+            clock=clock,
+        )
+
+    def test_orders_filled_counter_increments(self, tmp_path):
+        report = self._run_monitor("filled", tmp_path)
+        assert report["orders_filled"] == 1, (
+            f"expected orders_filled=1 for filled order, got {report['orders_filled']}"
+        )
+
+    def test_orders_filled_counter_with_str_enum(self, tmp_path):
+        """Regression: str-enum filled must increment orders_filled, not leave it at 0."""
+        report = self._run_monitor(_StrEnum("filled", "FILLED"), tmp_path)
+        assert report["orders_filled"] == 1, (
+            f"expected orders_filled=1 for str-enum filled order, got {report['orders_filled']}"
+        )
+
+    def test_orders_partially_filled_counter(self, tmp_path):
+        report = self._run_monitor("partially_filled", tmp_path)
+        assert report["orders_partially_filled"] == 1
+
+    def test_orders_filled_zero_for_active(self, tmp_path):
+        report = self._run_monitor("new", tmp_path)
+        assert report["orders_filled"] == 0
+
+    # --- safety block ---
+
+    def test_safety_block_never_submits(self, tmp_path):
+        report = self._run_monitor("filled", tmp_path)
+        sb = report.get("safety", {})
+        assert sb.get("submit_order_called") is False
+        assert sb.get("cancel_order_called") is False
+        assert sb.get("replace_order_called") is False
+
+    def test_safety_block_present_for_unknown_status(self, tmp_path):
+        import warnings
+        with warnings.catch_warnings(record=True):
+            warnings.simplefilter("always")
+            report = self._run_monitor("bogus_status_xyz", tmp_path)
+        sb = report.get("safety", {})
+        assert sb.get("submit_order_called") is False
+        assert sb.get("cancel_order_called") is False
+        assert sb.get("replace_order_called") is False

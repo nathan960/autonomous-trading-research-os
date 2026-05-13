@@ -27,9 +27,13 @@ Lifecycle statuses (superset of Alpaca statuses):
 from __future__ import annotations
 
 import json
+import logging
 import re
+import warnings
 from pathlib import Path
 from typing import Any, Optional
+
+logger = logging.getLogger(__name__)
 
 from ..hashing import stable_hash
 from ..time_utils import utc_now_iso
@@ -47,11 +51,31 @@ ACTIVE_STATUSES: frozenset = frozenset({
     "held", "pending_cancel", "pending_replace", "done_for_day",
 })
 
+# British-spelling alias for "canceled"
+_STATUS_ALIASES: dict = {"cancelled": "canceled"}
+
 # Pattern that identifies per-order audit files (client_order_id prefix)
 _CLIENT_ORDER_FILE_RE = re.compile(r"^TOS-.*\.json$")
 
 # Pattern for monitor-report files (skip these when scanning for order audits)
 _MONITOR_REPORT_RE = re.compile(r"^order_monitor_.*\.json$")
+
+
+# ---------------------------------------------------------------------------
+# Status normalisation
+# ---------------------------------------------------------------------------
+
+def _normalize_status(status: Any) -> str:
+    """Return a canonical lowercase status string.
+
+    Handles Alpaca SDK str-enum members (OrderStatus) where str() returns
+    "OrderStatus.FILLED" instead of "filled" on Python 3.9.  We extract
+    .value when available so we always get the raw string value.
+    """
+    if status is None:
+        return "unknown"
+    raw = str(status.value).lower().strip() if hasattr(status, "value") else str(status).lower().strip()
+    return _STATUS_ALIASES.get(raw, raw)
 
 
 # ---------------------------------------------------------------------------
@@ -393,10 +417,17 @@ def build_order_lifecycle(
         fill = None
         stale_warning = None
     else:
-        raw_status = str(broker_order.get("status", "unknown")).lower()
-        lifecycle_status = raw_status if (
-            raw_status in TERMINAL_STATUSES or raw_status in ACTIVE_STATUSES
-        ) else "unknown"
+        raw_status = _normalize_status(broker_order.get("status"))
+        if raw_status in TERMINAL_STATUSES or raw_status in ACTIVE_STATUSES:
+            lifecycle_status = raw_status
+        else:
+            lifecycle_status = "unknown"
+            msg = (
+                f"order {audit.get('client_order_id', '?')} has unrecognised "
+                f"broker status {broker_order.get('status')!r} (normalised: {raw_status!r})"
+            )
+            warnings.warn(msg, RuntimeWarning, stacklevel=2)
+            logger.warning(msg)
 
         warning = None
 
