@@ -1792,3 +1792,131 @@ Every trigger scan records fired, skipped, and selected signals here.
   "spy_trend_ok": true
 }
 ```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "5ed195f7d0bd7456213998c8e7cdf04c39c96e65a5b056eb568539345cf9775c",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T195237-44315e0f",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "bdff2c1a19d04b84ae354b9a143fd0f230b2a751d5da623cf2b41cb689a91603",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T195458-775d7200",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "e88d05d1ddc489aecd3e10aa2f3debed41b34c24afc036ceb633f878ff551bee",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T200808-c64dafef",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "d947623a66b22100565af46d30beb51d0b2d290f9f7c94d9bbe53147d504fb73",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T200814-17f2bc00",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "202ad469861dd2840109542edecdced2bc864ba15cd78b861f10421878828f9c",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T200822-2d9cbeaa",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "79494b5c3253e5f1c6b5086f5e80a47b67d7d1d170feff74d8f1e7d9450ba4e9",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T200827-ddab4bf6",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "88b83506b0680faa4585a8481a1b95701460195b1c368ac58f9dcd6e9b2c0b0c",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T200833-3da71461",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "37ff5b2fc2a0068caddc23881be876fb530a02cdc5ffefe6c9fb5e761e784e61",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260513T201013-eeb38237",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```

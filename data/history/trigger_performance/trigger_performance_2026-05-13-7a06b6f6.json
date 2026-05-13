@@ -1,0 +1,173 @@
+{
+  "days": 7,
+  "execution_fill_stats": {
+    "total_fills": 3,
+    "total_tracked": 3
+  },
+  "fill_outcomes": {
+    "avg_current_return_pct": -0.023398,
+    "avg_slippage_pct": -0.000203,
+    "by_symbol": {
+      "EQIX": {
+        "current_price": 492.0347,
+        "current_return_pct": -0.546248,
+        "current_unrealized_pl": null,
+        "entry_or_exit": "entry",
+        "fill_price": 1084.37,
+        "filled_at": "2026-05-13T19:31:19Z",
+        "slippage_pct": -0.000138,
+        "symbol": "EQIX"
+      },
+      "JNJ": {
+        "current_price": 411.3828,
+        "current_return_pct": 0.786694,
+        "current_unrealized_pl": null,
+        "entry_or_exit": "entry",
+        "fill_price": 230.248,
+        "filled_at": "2026-05-13T19:25:31Z",
+        "slippage_pct": -5.2e-05,
+        "symbol": "JNJ"
+      },
+      "WELL": {
+        "current_price": 150.8377,
+        "current_return_pct": -0.310639,
+        "current_unrealized_pl": null,
+        "entry_or_exit": "entry",
+        "fill_price": 218.808,
+        "filled_at": "2026-05-13T16:00:36Z",
+        "slippage_pct": -0.00042,
+        "symbol": "WELL"
+      }
+    },
+    "recommendation": "needs_more_data",
+    "recommendation_reason": "Only 3 filled order(s) \u2014 need 20+ for any P/L conclusions. Do not change strategy from this sample.",
+    "sample_status": "insufficient_sample",
+    "total_outcomes": 3
+  },
+  "generated_at": "2026-05-13T20:10:06Z",
+  "operational_issues": [],
+  "performance_hash": "7a06b6f615d5d9a0",
+  "period_end": "2026-05-13",
+  "period_start": "2026-05-07",
+  "regime": {
+    "avg_candidates_per_session": 67.857143,
+    "avg_excluded_per_session": 69.0,
+    "avg_selected_per_session": 10.0,
+    "category": "market_regime",
+    "description": "SPY above 200-day SMA and 6m momentum positive",
+    "recommendation": "keep_observing",
+    "recommendation_reason": "Only 14 session(s) \u2014 accumulating data.",
+    "regime_errors": [],
+    "risk_on_pct": 1.0,
+    "sessions_risk_off": 0,
+    "sessions_risk_on": 14,
+    "sessions_total": 14,
+    "trigger_id": "SPY_REGIME_200DMA_V1"
+  },
+  "research_observations": [
+    "Regime: 14 session(s) scanned, 14 risk-on (100%).",
+    "Spread gate: 21/79 symbols blocked (27%). Avg spread (blocked): 5.026%",
+    "Trend gate (200 DMA): 33/79 symbols below 200 DMA (42% block rate).",
+    "Fill count this period: 3. Need 17 more fills before P/L analysis is meaningful.",
+    "Average current return across 3 tracked outcome(s): -2.340%. Window pending \u2014 no conclusions yet.",
+    "IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest."
+  ],
+  "run_id": "trigger_performance-20260513T201006-077c7bad",
+  "safety_note": "All recommendations are research-only observations. No config files were read for modification. No strategy changes are implied or permitted from this output.",
+  "status": "ok",
+  "triggers": {
+    "ATR_SIZING_V1": {
+      "avg_atr_pct": 0.032974,
+      "block_rate": 0.0,
+      "blocked_count": 0,
+      "category": "sizing",
+      "description": "Inverse ATR% position sizing (not a gate)",
+      "observation_count": 79,
+      "passed_count": 79,
+      "recommendation": "do_not_promote_yet",
+      "recommendation_reason": "Only 0 fills linked to this trigger \u2014 need 20+ before any strategy conclusion.",
+      "trigger_id": "ATR_SIZING_V1"
+    },
+    "LIQUIDITY_GATE_V1": {
+      "block_rate": 0.0,
+      "blocked_count": 0,
+      "category": "liquidity",
+      "description": "Minimum 20-day average volume",
+      "observation_count": 79,
+      "passed_count": 79,
+      "recommendation": "do_not_promote_yet",
+      "recommendation_reason": "Only 0 fills linked to this trigger \u2014 need 20+ before any strategy conclusion.",
+      "trigger_id": "LIQUIDITY_GATE_V1"
+    },
+    "MAX_HOLDINGS": {
+      "block_rate": null,
+      "blocked_count": 18,
+      "category": "plan_layer",
+      "description": "Maximum total holdings cap",
+      "observation_count": 18,
+      "passed_count": 0,
+      "recommendation": "needs_more_data",
+      "recommendation_reason": "Only 18 symbol observations \u2014 need 20+ for reliable statistics.",
+      "trigger_id": "MAX_HOLDINGS"
+    },
+    "MAX_ORDERS_PER_RUN": {
+      "block_rate": null,
+      "blocked_count": 20,
+      "category": "plan_layer",
+      "description": "Orders-per-run cap",
+      "observation_count": 20,
+      "passed_count": 0,
+      "recommendation": "do_not_promote_yet",
+      "recommendation_reason": "Only 0 fills linked to this trigger \u2014 need 20+ before any strategy conclusion.",
+      "trigger_id": "MAX_ORDERS_PER_RUN"
+    },
+    "MOMENTUM_BLEND_6M_12M_V1": {
+      "avg_momentum_score_blocked": -0.126857,
+      "avg_momentum_score_passing": 0.331825,
+      "block_rate": 0.4684,
+      "blocked_count": 37,
+      "category": "momentum",
+      "description": "6-month and 12-month ROC momentum blend",
+      "observation_count": 79,
+      "passed_count": 42,
+      "recommendation": "do_not_promote_yet",
+      "recommendation_reason": "Only 0 fills linked to this trigger \u2014 need 20+ before any strategy conclusion.",
+      "trigger_id": "MOMENTUM_BLEND_6M_12M_V1"
+    },
+    "SECTOR_CAP": {
+      "block_rate": null,
+      "blocked_count": 1,
+      "category": "plan_layer",
+      "description": "Sector concentration cap",
+      "observation_count": 1,
+      "passed_count": 0,
+      "recommendation": "needs_more_data",
+      "recommendation_reason": "Only 1 symbol observations \u2014 need 20+ for reliable statistics.",
+      "trigger_id": "SECTOR_CAP"
+    },
+    "SPREAD_GATE_V1": {
+      "avg_spread_blocked": 0.05026,
+      "avg_spread_passing": 0.003298,
+      "block_rate": 0.2658,
+      "blocked_count": 21,
+      "category": "spread_gate",
+      "description": "Bid-ask spread percentage limit",
+      "observation_count": 79,
+      "passed_count": 58,
+      "recommendation": "do_not_promote_yet",
+      "recommendation_reason": "Only 0 fills linked to this trigger \u2014 need 20+ before any strategy conclusion.",
+      "trigger_id": "SPREAD_GATE_V1"
+    },
+    "STOCK_TREND_200DMA_V1": {
+      "block_rate": 0.4177,
+      "blocked_count": 33,
+      "category": "stock_trend",
+      "description": "Stock latest close above 200-day SMA",
+      "observation_count": 79,
+      "passed_count": 46,
+      "recommendation": "do_not_promote_yet",
+      "recommendation_reason": "Only 0 fills linked to this trigger \u2014 need 20+ before any strategy conclusion.",
+      "trigger_id": "STOCK_TREND_200DMA_V1"
+    }
+  }
+}

@@ -1,17 +1,17 @@
 {
   "account_snapshot": {
-    "buying_power": "199530.93",
-    "cash": "99727.86",
-    "equity": "99803.07",
-    "fetched_at": "2026-05-13T19:33:12Z",
-    "position_count": 3,
+    "buying_power": "40000.00",
+    "cash": "40000.00",
+    "equity": "40000.00",
+    "fetched_at": "2026-05-13T20:08:34Z",
+    "position_count": 0,
     "status": "ACTIVE"
   },
   "approval": {
     "all_risk_checks_pass": true,
-    "approve_paper_flag": true,
+    "approve_paper_flag": false,
     "approved_for_execution": false,
-    "reason": "max_orders_per_run_cap(1)_dequeued(non_blocking): ['JNJ', 'CSCO', 'GOOGL', 'MS', 'GS', 'XOM', 'CAT', 'SLB', 'AVGO', 'FCX', 'BIL']; spread_blocked_all_orders: ['WELL']"
+    "reason": "approve_paper_flag_not_set"
   },
   "blocked_symbols": [
     {
@@ -348,14 +348,6 @@
       "symbol": "DUK"
     },
     {
-      "skip_reason": "spread_too_wide(0.0402>0.02)",
-      "symbol": "WELL"
-    },
-    {
-      "skip_reason": "capped_by_max_orders_per_run(1)",
-      "symbol": "JNJ"
-    },
-    {
       "skip_reason": "capped_by_max_orders_per_run(1)",
       "symbol": "CSCO"
     },
@@ -394,32 +386,23 @@
     {
       "skip_reason": "capped_by_max_orders_per_run(1)",
       "symbol": "BIL"
-    },
-    {
-      "skip_reason": "below_min_notional_after_cap(24.99<25.0)",
-      "symbol": "EQIX"
     }
   ],
-  "data_hash": "fc428279b970d4a6f62566cdf61dbb445b69e4a6d36d4f9f59f6406cae65c0ad",
-  "expires_at": "2026-05-14T01:33:17Z",
-  "generated_at": "2026-05-13T19:33:17Z",
+  "data_hash": "09c4f5ca2e827da3e95daa4f4425352b49089b7535a87c0356f370a3d73f6c00",
+  "expires_at": "2026-05-14T02:10:13Z",
+  "generated_at": "2026-05-13T20:10:13Z",
   "market_clock": {
     "is_open": true,
-    "next_close": "2026-05-13T20:00:00Z",
-    "next_open": "2026-05-14T13:30:00Z",
-    "timestamp": "2026-05-13T19:33:13Z"
+    "next_close": "2026-05-13T20:08:34Z",
+    "next_open": "2026-05-13T20:08:34Z",
+    "timestamp": "2026-05-13T20:08:34Z"
   },
   "no_trade_reasons": [
-    "max_orders_per_run_cap(1)_dequeued(non_blocking): ['JNJ', 'CSCO', 'GOOGL', 'MS', 'GS', 'XOM', 'CAT', 'SLB', 'AVGO', 'FCX', 'BIL']",
-    "spread_blocked_all_orders: ['WELL']"
+    "max_orders_per_run_cap(1)_dequeued(non_blocking): ['CSCO', 'GOOGL', 'MS', 'GS', 'XOM', 'CAT', 'SLB', 'AVGO', 'FCX', 'BIL']"
   ],
   "orders_run_capped_at_planning": [
     {
       "skip_reason": null,
-      "symbol": "JNJ"
-    },
-    {
-      "skip_reason": null,
       "symbol": "CSCO"
     },
     {
@@ -459,8 +442,24 @@
       "symbol": "BIL"
     }
   ],
-  "plan_id": "trade_plan-20260513T193317-e5036a68",
-  "proposed_orders": [],
+  "plan_id": "trade_plan-20260513T201013-6923419a",
+  "proposed_orders": [
+    {
+      "capped_by_max_notional_per_order": true,
+      "current_value": 0.0,
+      "delta_value": 4800.0,
+      "limit_price": 230.16,
+      "notional": 25.0,
+      "order_type": "limit",
+      "side": "buy",
+      "skip_reason": null,
+      "symbol": "JNJ",
+      "target_value": 4800.0,
+      "target_weight": 0.12,
+      "time_in_force": "day",
+      "would_short": false
+    }
+  ],
   "regime": {
     "breadth": {
       "above_200dma_count": 46,
@@ -579,93 +578,88 @@
       "passes": true
     }
   ],
-  "spread_blocked_at_planning": [
-    {
-      "skip_reason": "spread_too_wide(0.0402>0.02)",
-      "symbol": "WELL"
-    }
-  ],
+  "spread_blocked_at_planning": [],
   "strategy_hash": "682943a3d7feb467ff2d693aefa40b51f023cee52b0176d7355e85bd86123334",
   "targets": {
     "AVGO": {
       "atr_pct": 0.03399799721684413,
       "latest_close": 417.805,
-      "notional": 7015.47,
+      "notional": 2811.72,
       "reason": "risk_on_inverse_atr",
       "weight": 0.0702931
     },
     "BIL": {
       "atr_pct": null,
-      "latest_close": 91.495,
-      "notional": 9980.31,
+      "latest_close": 91.9626,
+      "notional": 4000.0,
       "reason": "cash_allocation",
       "weight": 0.1
     },
     "CAT": {
       "atr_pct": 0.029649499672840373,
       "latest_close": 905.56,
-      "notional": 8044.38,
+      "notional": 3224.1,
       "reason": "risk_on_inverse_atr",
       "weight": 0.08060253
     },
     "CSCO": {
       "atr_pct": 0.022398508560961646,
       "latest_close": 101.25,
-      "notional": 10648.56,
+      "notional": 4267.83,
       "reason": "risk_on_inverse_atr",
       "weight": 0.1066957
     },
     "FCX": {
       "atr_pct": 0.04011719356144318,
       "latest_close": 67.34,
-      "notional": 5945.38,
+      "notional": 2382.84,
       "reason": "risk_on_inverse_atr",
       "weight": 0.05957108
     },
     "GOOGL": {
       "atr_pct": 0.02381555030261337,
       "latest_close": 402.98,
-      "notional": 10014.96,
+      "notional": 4013.89,
       "reason": "risk_on_inverse_atr",
       "weight": 0.10034723
     },
     "GS": {
       "atr_pct": 0.024569732747288235,
       "latest_close": 955.44,
-      "notional": 9707.55,
+      "notional": 3890.68,
       "reason": "risk_on_inverse_atr",
       "weight": 0.09726702
     },
     "JNJ": {
       "atr_pct": 0.01789972170859517,
       "latest_close": 230.16,
-      "notional": 11976.37,
+      "notional": 4800.0,
       "reason": "risk_on_inverse_atr",
       "weight": 0.12
     },
     "MS": {
       "atr_pct": 0.023908371770214196,
       "latest_close": 194.53,
-      "notional": 9976.08,
+      "notional": 3998.31,
       "reason": "risk_on_inverse_atr",
       "weight": 0.09995765
     },
     "SLB": {
       "atr_pct": 0.030018074230873895,
       "latest_close": 55.555,
-      "notional": 7945.61,
+      "notional": 3184.51,
       "reason": "risk_on_inverse_atr",
       "weight": 0.07961286
     },
     "XOM": {
       "atr_pct": 0.02790129040038921,
       "latest_close": 151.35,
-      "notional": 8548.42,
+      "notional": 3426.11,
       "reason": "risk_on_inverse_atr",
       "weight": 0.08565283
     }
   },
-  "trade_plan_hash": "5730cbef1c1dc9990c985d7fb9957380ed9658f529e54d0134fc3ab1a753bd5e",
+  "trade_plan_hash": "2f675b73f6f4b0a3c0be5647e5e817838105df1bf45f765be3bb8ea15a011194",
   "trading_mode": "paper",
   "trigger_snapshot_hash": "22a2aef7efde93817afd17299862e6db56b1c1838598536339458b1366fb479d"
 }
