@@ -1,6 +1,19 @@
 {
-  "data_hash": "df2fc1028ad54292eb08136b8d9035a63eef89edf863881136937b025c1788d9",
-  "fetched_at": "2026-05-14T17:05:48Z",
+  "data_hash": "28f79cda9efccdda71a82853922cb220412aeeeadbe8bbebac87a07aa50abe4c",
+  "drawdown": -7e-06,
+  "dry_run": false,
+  "equity": 99802.47,
+  "generated_at": "2026-05-14T17:05:52Z",
+  "open_order_count": 1,
+  "orders_summary": [
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "EQIX"
+    }
+  ],
+  "peak_equity": 99803.14,
   "position_count": 4,
   "positions": [
     {
@@ -9,21 +22,21 @@
       "asset_marginable": true,
       "avg_entry_price": "1080.164043",
       "avg_entry_swap_rate": null,
-      "change_today": "0.0019",
+      "change_today": "0.00156",
       "cost_basis": "49.919153",
-      "current_price": "1079.325",
+      "current_price": "1078.96",
       "exchange": "NASDAQ",
       "lastday_price": "1077.28",
-      "market_value": "49.880377",
+      "market_value": "49.863508",
       "qty": "0.046214418",
       "qty_available": "0.046214418",
       "side": "long",
       "swap_rate": null,
       "symbol": "EQIX",
-      "unrealized_intraday_pl": "0.094509",
-      "unrealized_intraday_plpc": "0.0019",
-      "unrealized_pl": "-0.038776",
-      "unrealized_plpc": "-0.00078",
+      "unrealized_intraday_pl": "0.07764",
+      "unrealized_intraday_plpc": "0.00156",
+      "unrealized_pl": "-0.055645",
+      "unrealized_plpc": "-0.00111",
       "usd": null
     },
     {
@@ -78,24 +91,25 @@
       "asset_marginable": true,
       "avg_entry_price": "132.276",
       "avg_entry_swap_rate": null,
-      "change_today": "0.007",
+      "change_today": "0.00715",
       "cost_basis": "25",
-      "current_price": "132.39",
+      "current_price": "132.41",
       "exchange": "NASDAQ",
       "lastday_price": "131.47",
-      "market_value": "25.021546",
+      "market_value": "25.025326",
       "qty": "0.18899876",
       "qty_available": "0.18899876",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "0.021546",
-      "unrealized_intraday_plpc": "0.00086",
-      "unrealized_pl": "0.021546",
-      "unrealized_plpc": "0.00086",
+      "unrealized_intraday_pl": "0.025326",
+      "unrealized_intraday_plpc": "0.00101",
+      "unrealized_pl": "0.025326",
+      "unrealized_plpc": "0.00101",
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260514T170552-c769b5ab",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }
