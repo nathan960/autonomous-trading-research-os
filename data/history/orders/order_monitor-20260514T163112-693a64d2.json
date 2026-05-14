@@ -3,7 +3,7 @@
     "is_open": true,
     "next_close": "2026-05-14T20:00:00Z",
     "next_open": "2026-05-15T13:30:00Z",
-    "timestamp": "2026-05-14T16:31:19Z"
+    "timestamp": "2026-05-14T16:31:12Z"
   },
   "dry_run": false,
   "fetch_log": {
@@ -14,14 +14,14 @@
     "direct_client_id_errors": 0,
     "direct_client_id_hits": 0,
     "direct_client_id_lookups": 0,
-    "open_count": 2
+    "open_count": 1
   },
-  "generated_at": "2026-05-14T16:31:20Z",
+  "generated_at": "2026-05-14T16:31:12Z",
   "lifecycles": [
     {
       "broker_order_id": "a57f3df1-f9d5-4ab7-8655-ed8240ade13e",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T16:31:20Z",
+      "checked_at": "2026-05-14T16:31:12Z",
       "client_order_id": "TOS-20260513T160035-WELL-BUY",
       "fill": {
         "fill_price": 218.808,
@@ -47,7 +47,7 @@
     {
       "broker_order_id": "bd0079c7-6044-4864-bb4e-ad2798e188a3",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T16:31:20Z",
+      "checked_at": "2026-05-14T16:31:12Z",
       "client_order_id": "TOS-20260513T192526-JNJ-BUY",
       "fill": {
         "fill_price": 230.248,
@@ -73,7 +73,7 @@
     {
       "broker_order_id": "a2d097a2-bb62-4a63-9849-24c45949bc95",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T16:31:20Z",
+      "checked_at": "2026-05-14T16:31:12Z",
       "client_order_id": "TOS-20260513T192934-EQIX-BUY",
       "fill": {
         "fill_price": 1084.37,
@@ -99,7 +99,7 @@
     {
       "broker_order_id": "78156e6b-e7b7-4f7e-a8c5-01e6637ab461",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T16:31:20Z",
+      "checked_at": "2026-05-14T16:31:12Z",
       "client_order_id": "TOS-20260514T145625-EQIX-BUY",
       "fill": {
         "fill_price": 1079.5,
@@ -125,7 +125,7 @@
     {
       "broker_order_id": "65c59c44-e0da-4d17-8722-f80530c90a8a",
       "broker_status": "new",
-      "checked_at": "2026-05-14T16:31:20Z",
+      "checked_at": "2026-05-14T16:31:12Z",
       "client_order_id": "TOS-20260514T154323-JNJ-BUY",
       "fill": null,
       "lifecycle_status": "new",
@@ -141,7 +141,7 @@
     {
       "broker_order_id": "fbca0ce7-983c-44d3-8b55-2dba2afc3427",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T16:31:20Z",
+      "checked_at": "2026-05-14T16:31:12Z",
       "client_order_id": "TOS-20260514T154543-EQIX-SELL",
       "fill": {
         "fill_price": 1078.442,
@@ -167,7 +167,7 @@
     {
       "broker_order_id": "3351082e-8e6a-4148-af27-81e5414dd0db",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T16:31:20Z",
+      "checked_at": "2026-05-14T16:31:12Z",
       "client_order_id": "TOS-20260514T154817-EQIX-BUY",
       "fill": {
         "fill_price": 1078.41,
@@ -189,34 +189,18 @@
       "submitted_at": "2026-05-14T15:48:18Z",
       "symbol": "EQIX",
       "warning": null
-    },
-    {
-      "broker_order_id": "cc380d6e-9b8f-4429-8f91-a7907b0c570f",
-      "broker_status": "new",
-      "checked_at": "2026-05-14T16:31:20Z",
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": null,
-      "lifecycle_status": "new",
-      "limit_price": 1076.96,
-      "notional": 25.0,
-      "side": "buy",
-      "stale_warning": null,
-      "submitted": true,
-      "submitted_at": "2026-05-14T16:31:14Z",
-      "symbol": "EQIX",
-      "warning": null
     }
   ],
-  "orders_active": 2,
+  "orders_active": 1,
   "orders_canceled": 0,
   "orders_expired": 0,
   "orders_filled": 6,
   "orders_missing": 0,
   "orders_partially_filled": 0,
   "orders_rejected": 0,
-  "orders_tracked": 8,
-  "report_hash": "23f8d9ddd1b804d7d205046257560ea4e2c96f72a7056e684eff33d1317a832d",
-  "run_id": "order_monitor-20260514T163120-833c0bc8",
+  "orders_tracked": 7,
+  "report_hash": "35e08ee3d955946c759d2ed44a150b644f0c422f9e8039e2d8dcedc644e1593d",
+  "run_id": "order_monitor-20260514T163112-693a64d2",
   "safety": {
     "cancel_order_called": false,
     "replace_order_called": false,
