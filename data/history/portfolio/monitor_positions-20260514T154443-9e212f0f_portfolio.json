@@ -1,6 +1,19 @@
 {
-  "data_hash": "12e9bf5e31cff7ab630e9958765569309958f02047fadc5737e02609099ba518",
-  "fetched_at": "2026-05-14T15:44:46Z",
+  "data_hash": "829d91a72dd90e080802e5641b815bc7610d6d05b95b40a2d27178a2ae519f77",
+  "drawdown": -6e-06,
+  "dry_run": false,
+  "equity": 99802.53,
+  "generated_at": "2026-05-14T15:44:44Z",
+  "open_order_count": 1,
+  "orders_summary": [
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "JNJ"
+    }
+  ],
+  "peak_equity": 99803.14,
   "position_count": 3,
   "positions": [
     {
@@ -73,6 +86,7 @@
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260514T154443-9e212f0f",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }

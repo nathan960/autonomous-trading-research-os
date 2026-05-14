@@ -3,7 +3,7 @@
     "is_open": true,
     "next_close": "2026-05-14T20:00:00Z",
     "next_open": "2026-05-15T13:30:00Z",
-    "timestamp": "2026-05-14T15:44:49Z"
+    "timestamp": "2026-05-14T15:44:44Z"
   },
   "dry_run": false,
   "fetch_log": {
@@ -16,12 +16,12 @@
     "direct_client_id_lookups": 0,
     "open_count": 1
   },
-  "generated_at": "2026-05-14T15:44:49Z",
+  "generated_at": "2026-05-14T15:44:45Z",
   "lifecycles": [
     {
       "broker_order_id": "a57f3df1-f9d5-4ab7-8655-ed8240ade13e",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T15:44:49Z",
+      "checked_at": "2026-05-14T15:44:45Z",
       "client_order_id": "TOS-20260513T160035-WELL-BUY",
       "fill": {
         "fill_price": 218.808,
@@ -47,7 +47,7 @@
     {
       "broker_order_id": "bd0079c7-6044-4864-bb4e-ad2798e188a3",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T15:44:49Z",
+      "checked_at": "2026-05-14T15:44:45Z",
       "client_order_id": "TOS-20260513T192526-JNJ-BUY",
       "fill": {
         "fill_price": 230.248,
@@ -73,7 +73,7 @@
     {
       "broker_order_id": "a2d097a2-bb62-4a63-9849-24c45949bc95",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T15:44:49Z",
+      "checked_at": "2026-05-14T15:44:45Z",
       "client_order_id": "TOS-20260513T192934-EQIX-BUY",
       "fill": {
         "fill_price": 1084.37,
@@ -99,7 +99,7 @@
     {
       "broker_order_id": "78156e6b-e7b7-4f7e-a8c5-01e6637ab461",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T15:44:49Z",
+      "checked_at": "2026-05-14T15:44:45Z",
       "client_order_id": "TOS-20260514T145625-EQIX-BUY",
       "fill": {
         "fill_price": 1079.5,
@@ -125,7 +125,7 @@
     {
       "broker_order_id": "65c59c44-e0da-4d17-8722-f80530c90a8a",
       "broker_status": "new",
-      "checked_at": "2026-05-14T15:44:49Z",
+      "checked_at": "2026-05-14T15:44:45Z",
       "client_order_id": "TOS-20260514T154323-JNJ-BUY",
       "fill": null,
       "lifecycle_status": "new",
@@ -147,8 +147,8 @@
   "orders_partially_filled": 0,
   "orders_rejected": 0,
   "orders_tracked": 5,
-  "report_hash": "e257d1ebc768a50d9f73d7e937265671f6f430341034587cecc6f59f0ca2c687",
-  "run_id": "order_monitor-20260514T154449-4dcd0712",
+  "report_hash": "b4711ad0a4b2600c403a73b55e165c60b22fb22d9d27b517b56a75b4ec2e02cb",
+  "run_id": "order_monitor-20260514T154445-9041df87",
   "safety": {
     "cancel_order_called": false,
     "replace_order_called": false,

@@ -650,3 +650,39 @@ based on this report alone. Any experiment requires a candidate PR with:
 - Hypothesis, supporting evidence, success criteria, and rollback plan.
 
 ---
+## Outcome Observations — 2026-05-14T15:44:50Z
+
+*From outcome_tracker run `outcome_tracker-20260514T154450-35e30060`*
+
+**Current unrealized returns (intraday — no strategy conclusions yet):**
+- WELL entry: fill=$218.808 current=$218.27 return=-0.246%
+- JNJ entry: fill=$230.248 current=$230.185 return=-0.027%
+- EQIX entry: fill=$1084.37 current=$1078.5 return=-0.541%
+- EQIX entry: fill=$1079.5 current=$1078.5 return=-0.093%
+
+*Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
+
+---
+## Trigger Performance Observations — 2026-05-14
+
+*From trigger_performance run `trigger_performance-20260514T154450-35e30060`*
+*Period: 2026-05-08 to 2026-05-14 (7 days)*
+
+**Operational issues:**
+- [ ] Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 52% of candidates — review spread threshold or data freshness.
+
+**Observations (research only — no strategy conclusions):**
+- Regime: 1 session(s) scanned, 1 risk-on (100%).
+- Spread gate: 41/79 symbols blocked (52%). Avg spread (blocked): 5.377%
+- Trend gate (200 DMA): 34/79 symbols below 200 DMA (43% block rate).
+- Fill count this period: 4. Need 16 more fills before P/L analysis is meaningful.
+- Average current return across 4 tracked outcome(s): -0.227%. Window pending — no conclusions yet.
+- Lineage: Lineage snapshot: 4 records (0 complete, 4 partial). 18 trigger fill associations recovered. 4 record(s) have partial lineage — save trade plans to history/trade_plans/ to improve completeness.
+- Fills linked to triggers (via lineage): ATR_SIZING_V1=3, LIQUIDITY_GATE_V1=3, MOMENTUM_BLEND_6M_12M_V1=3, SPREAD_GATE_V1=3, STOCK_TREND_200DMA_V1=3.
+- IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest.
+
+**Reminder:** Do not modify strategy.json, risk_limits.json, or trigger_registry.json
+based on this report alone. Any experiment requires a candidate PR with:
+- Hypothesis, supporting evidence, success criteria, and rollback plan.
+
+---
