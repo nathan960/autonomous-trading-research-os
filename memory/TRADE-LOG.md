@@ -28187,2720 +28187,1604 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
 }
 ```
 
-## order_monitor run
+## Execution attempt completed
 
 ```json
 {
-  "dry_run": false,
-  "generated_at": "2026-05-14T17:48:59Z",
-  "lifecycles": [
-    {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WELL"
-    },
-    {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": {
-        "fill_price": 1079.5,
-        "filled_at": "2026-05-14T15:41:11Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023158869,
-        "plan_id": "trade_plan-20260514T145625-7807f306",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T145626-8a29a24f",
-        "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.116,
-        "filled_at": "2026-05-14T16:34:23Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108640859,
-        "plan_id": "trade_plan-20260514T154323-1f27d10d",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154324-0732af2c",
-        "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T154543-EQIX-SELL",
-      "fill": {
-        "fill_price": 1078.442,
-        "filled_at": "2026-05-14T15:47:26Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023181589,
-        "plan_id": "trade_plan-20260514T154543-b29ff94f",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154544-c2e241e8",
-        "trade_plan_hash": "e509327fb66887dc158535967804ce7b8cee093ad40cdb65eab52e988f7e7c09",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154817-EQIX-BUY",
-      "fill": {
-        "fill_price": 1078.41,
-        "filled_at": "2026-05-14T16:01:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023182277,
-        "plan_id": "trade_plan-20260514T154817-6a53654a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154818-6157fada",
-        "trade_plan_hash": "ec58d5499d6c8e52e3dd98e59782bcadc67f53d6dd35a04402e561cad33b77c3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.89,
-        "filled_at": "2026-05-14T17:20:40Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023214998,
-        "plan_id": "trade_plan-20260514T163113-1c676d38",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T163114-dd6029a9",
-        "trade_plan_hash": "8ac7328c69c7cd0377af0133e8092381d3d9da649baea5bb5bda660ccdd83c2b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T165232-WMT-BUY",
-      "fill": {
-        "fill_price": 132.276,
-        "filled_at": "2026-05-14T16:52:33Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.18899876,
-        "plan_id": "trade_plan-20260514T165232-1f83cea2",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T165233-adcb0da2",
-        "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T171739-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.044,
-        "filled_at": "2026-05-14T17:21:14Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108674862,
-        "plan_id": "trade_plan-20260514T171739-65285f83",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171740-77316146",
-        "trade_plan_hash": "7ada198bc1596edefd21961d1f742195c9eead499fb75189bf15f965928dfe2f",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T171844-WMT-BUY",
-      "fill": {
-        "fill_price": 132.474,
-        "filled_at": "2026-05-14T17:20:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.188716276,
-        "plan_id": "trade_plan-20260514T171844-6adf1380",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171846-d8b15803",
-        "trade_plan_hash": "a0c973a51e85f59bd52d56c0d86f0df521a6a9ab142199800e2bfa7924e15360",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T172103-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.82,
-        "filled_at": "2026-05-14T17:21:04Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023216507,
-        "plan_id": "trade_plan-20260514T172103-835a36b9",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172104-b71591c3",
-        "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172226-EQIX-SELL",
-      "fill": {
-        "fill_price": 1076.718,
-        "filled_at": "2026-05-14T17:23:27Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023218707,
-        "plan_id": "trade_plan-20260514T172226-ed557b0a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172227-c20719b0",
-        "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172335-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.542,
-        "filled_at": "2026-05-14T17:26:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023222503,
-        "plan_id": "trade_plan-20260514T172335-e46d4d8a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172337-37cce12a",
-        "trade_plan_hash": "be22bcde61b16718328b9c6215e426c7b4d2d3080b3671e392278d67b30b7ee0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    }
-  ],
-  "orders_active": 0,
-  "orders_filled": 14,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 14,
-  "run_id": "order_monitor-20260514T174859-d546c9b3",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
-}
-```
-
-## dry_run_execute run
-
-```json
-{
-  "all_gates_pass": true,
+  "candidate_order_count": 11,
+  "confirm_paper": false,
   "dry_run": true,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T17:49:00Z",
-  "no_submit_reason": "dry_run_mode",
-  "orders_ready": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T174859-80aa0a0e",
-  "run_id": "execution-20260514T174900-d95a399d",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "6cde28a82a6181094611b6fd7079f9016b2ca7b474be67a68718c409ef0df92a"
-}
-```
-
-## execute_paper run
-
-```json
-{
-  "all_gates_pass": false,
-  "blocked_reason": "trade_plan.approval.approved_for_execution is not True (reason=\"spread_blocked_all_orders: ['JNJ', 'WELL']; churn_blocked_all_orders: ['WMT', 'EQIX', 'AMD', 'GOOGL', 'CSCO', 'FCX', 'SLB', 'XOM', 'NEE', 'PM', 'BIL']\") \u2014 regenerate with --approve-paper",
-  "dry_run": false,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T17:49:00Z",
-  "orders_submitted": 0,
-  "orders_submitted_err": 0,
-  "orders_submitted_ok": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T174859-80aa0a0e",
-  "run_id": "execution-20260514T174900-1d804822",
-  "status": "PAPER_BLOCKED",
-  "trade_plan_hash": "6cde28a82a6181094611b6fd7079f9016b2ca7b474be67a68718c409ef0df92a"
-}
-```
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T17:49:05Z",
-  "lifecycles": [
+  "generated_at": "2026-05-14T18:54:19Z",
+  "run_id": "execution-20260514T185418-5edfe1b3",
+  "schema_version": "0.1.0",
+  "skipped": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
       "symbol": "WELL"
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": {
-        "fill_price": 1079.5,
-        "filled_at": "2026-05-14T15:41:11Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023158869,
-        "plan_id": "trade_plan-20260514T145625-7807f306",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T145626-8a29a24f",
-        "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.116,
-        "filled_at": "2026-05-14T16:34:23Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108640859,
-        "plan_id": "trade_plan-20260514T154323-1f27d10d",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154324-0732af2c",
-        "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T154543-EQIX-SELL",
-      "fill": {
-        "fill_price": 1078.442,
-        "filled_at": "2026-05-14T15:47:26Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023181589,
-        "plan_id": "trade_plan-20260514T154543-b29ff94f",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154544-c2e241e8",
-        "trade_plan_hash": "e509327fb66887dc158535967804ce7b8cee093ad40cdb65eab52e988f7e7c09",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154817-EQIX-BUY",
-      "fill": {
-        "fill_price": 1078.41,
-        "filled_at": "2026-05-14T16:01:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023182277,
-        "plan_id": "trade_plan-20260514T154817-6a53654a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154818-6157fada",
-        "trade_plan_hash": "ec58d5499d6c8e52e3dd98e59782bcadc67f53d6dd35a04402e561cad33b77c3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.89,
-        "filled_at": "2026-05-14T17:20:40Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023214998,
-        "plan_id": "trade_plan-20260514T163113-1c676d38",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T163114-dd6029a9",
-        "trade_plan_hash": "8ac7328c69c7cd0377af0133e8092381d3d9da649baea5bb5bda660ccdd83c2b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T165232-WMT-BUY",
-      "fill": {
-        "fill_price": 132.276,
-        "filled_at": "2026-05-14T16:52:33Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.18899876,
-        "plan_id": "trade_plan-20260514T165232-1f83cea2",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T165233-adcb0da2",
-        "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
       "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T171739-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.044,
-        "filled_at": "2026-05-14T17:21:14Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108674862,
-        "plan_id": "trade_plan-20260514T171739-65285f83",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171740-77316146",
-        "trade_plan_hash": "7ada198bc1596edefd21961d1f742195c9eead499fb75189bf15f965928dfe2f",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T171844-WMT-BUY",
-      "fill": {
-        "fill_price": 132.474,
-        "filled_at": "2026-05-14T17:20:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.188716276,
-        "plan_id": "trade_plan-20260514T171844-6adf1380",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171846-d8b15803",
-        "trade_plan_hash": "a0c973a51e85f59bd52d56c0d86f0df521a6a9ab142199800e2bfa7924e15360",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T172103-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.82,
-        "filled_at": "2026-05-14T17:21:04Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023216507,
-        "plan_id": "trade_plan-20260514T172103-835a36b9",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172104-b71591c3",
-        "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172226-EQIX-SELL",
-      "fill": {
-        "fill_price": 1076.718,
-        "filled_at": "2026-05-14T17:23:27Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023218707,
-        "plan_id": "trade_plan-20260514T172226-ed557b0a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172227-c20719b0",
-        "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172335-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.542,
-        "filled_at": "2026-05-14T17:26:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023222503,
-        "plan_id": "trade_plan-20260514T172335-e46d4d8a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172337-37cce12a",
-        "trade_plan_hash": "be22bcde61b16718328b9c6215e426c7b4d2d3080b3671e392278d67b30b7ee0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
     }
   ],
-  "orders_active": 0,
-  "orders_filled": 14,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 14,
-  "run_id": "order_monitor-20260514T174905-df0c406c",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
-}
-```
-## Outcome Tracker — 2026-05-14T17:49:06Z
-
-**Run ID:** `outcome_tracker-20260514T174906-0396f2c0`  **Outcomes tracked:** 14
-
-- WELL BUY (entry) fill=$218.808 return=-0.314% unpl=$-0.0786 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.248 return=+0.010% unpl=$+0.0437 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1084.37 return=-0.582% unpl=$+0.0043 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1079.5 return=-0.133% unpl=$+0.0043 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1078.442 return=-0.035% unpl=$+0.0043 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1078.41 return=-0.033% unpl=$+0.0043 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.116 return=+0.067% unpl=$+0.0437 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.276 return=+0.343% unpl=$+0.1341 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.474 return=+0.193% unpl=$+0.1341 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.89 return=+0.109% unpl=$+0.0043 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.82 return=+0.115% unpl=$+0.0043 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.044 return=+0.098% unpl=$+0.0437 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1076.718 return=+0.125% unpl=$+0.0043 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.542 return=+0.141% unpl=$+0.0043 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-
----
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T17:50:21Z",
-  "lifecycles": [
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "74bcc8e5c1c04f7d6c87d4a1ef30006828042f58d07f37c354648a12e53fb8a9",
+  "validation": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WELL"
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
     },
     {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
     },
     {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": {
-        "fill_price": 1079.5,
-        "filled_at": "2026-05-14T15:41:11Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023158869,
-        "plan_id": "trade_plan-20260514T145625-7807f306",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T145626-8a29a24f",
-        "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
     },
     {
-      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.116,
-        "filled_at": "2026-05-14T16:34:23Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108640859,
-        "plan_id": "trade_plan-20260514T154323-1f27d10d",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154324-0732af2c",
-        "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
     },
     {
-      "client_order_id": "TOS-20260514T154543-EQIX-SELL",
-      "fill": {
-        "fill_price": 1078.442,
-        "filled_at": "2026-05-14T15:47:26Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023181589,
-        "plan_id": "trade_plan-20260514T154543-b29ff94f",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154544-c2e241e8",
-        "trade_plan_hash": "e509327fb66887dc158535967804ce7b8cee093ad40cdb65eab52e988f7e7c09",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
     },
     {
-      "client_order_id": "TOS-20260514T154817-EQIX-BUY",
-      "fill": {
-        "fill_price": 1078.41,
-        "filled_at": "2026-05-14T16:01:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023182277,
-        "plan_id": "trade_plan-20260514T154817-6a53654a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154818-6157fada",
-        "trade_plan_hash": "ec58d5499d6c8e52e3dd98e59782bcadc67f53d6dd35a04402e561cad33b77c3",
-        "trigger_snapshot_hash": null
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
     },
     {
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.89,
-        "filled_at": "2026-05-14T17:20:40Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023214998,
-        "plan_id": "trade_plan-20260514T163113-1c676d38",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T163114-dd6029a9",
-        "trade_plan_hash": "8ac7328c69c7cd0377af0133e8092381d3d9da649baea5bb5bda660ccdd83c2b",
-        "trigger_snapshot_hash": null
+      "details": {
+        "total_weight": 1.0000000000000002
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
     },
     {
-      "client_order_id": "TOS-20260514T165232-WMT-BUY",
-      "fill": {
-        "fill_price": 132.276,
-        "filled_at": "2026-05-14T16:52:33Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.18899876,
-        "plan_id": "trade_plan-20260514T165232-1f83cea2",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T165233-adcb0da2",
-        "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
-        "trigger_snapshot_hash": null
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
     },
     {
-      "client_order_id": "TOS-20260514T171739-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.044,
-        "filled_at": "2026-05-14T17:21:14Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108674862,
-        "plan_id": "trade_plan-20260514T171739-65285f83",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171740-77316146",
-        "trade_plan_hash": "7ada198bc1596edefd21961d1f742195c9eead499fb75189bf15f965928dfe2f",
-        "trigger_snapshot_hash": null
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
     },
     {
-      "client_order_id": "TOS-20260514T171844-WMT-BUY",
-      "fill": {
-        "fill_price": 132.474,
-        "filled_at": "2026-05-14T17:20:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.188716276,
-        "plan_id": "trade_plan-20260514T171844-6adf1380",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171846-d8b15803",
-        "trade_plan_hash": "a0c973a51e85f59bd52d56c0d86f0df521a6a9ab142199800e2bfa7924e15360",
-        "trigger_snapshot_hash": null
+      "details": {
+        "unknown_symbols": []
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
     },
     {
-      "client_order_id": "TOS-20260514T172103-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.82,
-        "filled_at": "2026-05-14T17:21:04Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023216507,
-        "plan_id": "trade_plan-20260514T172103-835a36b9",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172104-b71591c3",
-        "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
     },
     {
-      "client_order_id": "TOS-20260514T172226-EQIX-SELL",
-      "fill": {
-        "fill_price": 1076.718,
-        "filled_at": "2026-05-14T17:23:27Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023218707,
-        "plan_id": "trade_plan-20260514T172226-ed557b0a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172227-c20719b0",
-        "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
     },
     {
-      "client_order_id": "TOS-20260514T172335-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.542,
-        "filled_at": "2026-05-14T17:26:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023222503,
-        "plan_id": "trade_plan-20260514T172335-e46d4d8a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172337-37cce12a",
-        "trade_plan_hash": "be22bcde61b16718328b9c6215e426c7b4d2d3080b3671e392278d67b30b7ee0",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.016437216666666667,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
     }
-  ],
-  "orders_active": 0,
-  "orders_filled": 14,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 14,
-  "run_id": "order_monitor-20260514T175021-dbc79077",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
+  ]
 }
 ```
 
-## dry_run_execute run
+## Execution attempt completed
 
 ```json
 {
-  "all_gates_pass": true,
+  "candidate_order_count": 11,
+  "confirm_paper": false,
   "dry_run": true,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T17:50:22Z",
-  "no_submit_reason": "dry_run_mode",
-  "orders_ready": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T175022-194500dd",
-  "run_id": "execution-20260514T175022-dd852758",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "4140324cc20c45b5196702468d9e0c8f2c60b517bd02f118399c8d5b18c9cf6d"
-}
-```
-
-## execute_paper run
-
-```json
-{
-  "all_gates_pass": false,
-  "blocked_reason": "trade_plan.approval.approved_for_execution is not True (reason=\"spread_blocked_all_orders: ['JNJ', 'WELL']; churn_blocked_all_orders: ['WMT', 'EQIX', 'CAT', 'GOOGL', 'CSCO', 'FCX', 'AVGO', 'SLB', 'MS', 'XOM', 'BIL']\") \u2014 regenerate with --approve-paper",
-  "dry_run": false,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T17:50:23Z",
-  "orders_submitted": 0,
-  "orders_submitted_err": 0,
-  "orders_submitted_ok": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T175022-194500dd",
-  "run_id": "execution-20260514T175023-d2a85437",
-  "status": "PAPER_BLOCKED",
-  "trade_plan_hash": "4140324cc20c45b5196702468d9e0c8f2c60b517bd02f118399c8d5b18c9cf6d"
-}
-```
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T17:50:28Z",
-  "lifecycles": [
+  "generated_at": "2026-05-14T18:54:25Z",
+  "run_id": "execution-20260514T185425-c147510c",
+  "schema_version": "0.1.0",
+  "skipped": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
       "symbol": "WELL"
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": {
-        "fill_price": 1079.5,
-        "filled_at": "2026-05-14T15:41:11Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023158869,
-        "plan_id": "trade_plan-20260514T145625-7807f306",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T145626-8a29a24f",
-        "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.116,
-        "filled_at": "2026-05-14T16:34:23Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108640859,
-        "plan_id": "trade_plan-20260514T154323-1f27d10d",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154324-0732af2c",
-        "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T154543-EQIX-SELL",
-      "fill": {
-        "fill_price": 1078.442,
-        "filled_at": "2026-05-14T15:47:26Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023181589,
-        "plan_id": "trade_plan-20260514T154543-b29ff94f",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154544-c2e241e8",
-        "trade_plan_hash": "e509327fb66887dc158535967804ce7b8cee093ad40cdb65eab52e988f7e7c09",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154817-EQIX-BUY",
-      "fill": {
-        "fill_price": 1078.41,
-        "filled_at": "2026-05-14T16:01:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023182277,
-        "plan_id": "trade_plan-20260514T154817-6a53654a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154818-6157fada",
-        "trade_plan_hash": "ec58d5499d6c8e52e3dd98e59782bcadc67f53d6dd35a04402e561cad33b77c3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.89,
-        "filled_at": "2026-05-14T17:20:40Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023214998,
-        "plan_id": "trade_plan-20260514T163113-1c676d38",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T163114-dd6029a9",
-        "trade_plan_hash": "8ac7328c69c7cd0377af0133e8092381d3d9da649baea5bb5bda660ccdd83c2b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T165232-WMT-BUY",
-      "fill": {
-        "fill_price": 132.276,
-        "filled_at": "2026-05-14T16:52:33Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.18899876,
-        "plan_id": "trade_plan-20260514T165232-1f83cea2",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T165233-adcb0da2",
-        "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
       "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T171739-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.044,
-        "filled_at": "2026-05-14T17:21:14Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108674862,
-        "plan_id": "trade_plan-20260514T171739-65285f83",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171740-77316146",
-        "trade_plan_hash": "7ada198bc1596edefd21961d1f742195c9eead499fb75189bf15f965928dfe2f",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T171844-WMT-BUY",
-      "fill": {
-        "fill_price": 132.474,
-        "filled_at": "2026-05-14T17:20:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.188716276,
-        "plan_id": "trade_plan-20260514T171844-6adf1380",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171846-d8b15803",
-        "trade_plan_hash": "a0c973a51e85f59bd52d56c0d86f0df521a6a9ab142199800e2bfa7924e15360",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T172103-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.82,
-        "filled_at": "2026-05-14T17:21:04Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023216507,
-        "plan_id": "trade_plan-20260514T172103-835a36b9",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172104-b71591c3",
-        "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172226-EQIX-SELL",
-      "fill": {
-        "fill_price": 1076.718,
-        "filled_at": "2026-05-14T17:23:27Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023218707,
-        "plan_id": "trade_plan-20260514T172226-ed557b0a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172227-c20719b0",
-        "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172335-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.542,
-        "filled_at": "2026-05-14T17:26:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023222503,
-        "plan_id": "trade_plan-20260514T172335-e46d4d8a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172337-37cce12a",
-        "trade_plan_hash": "be22bcde61b16718328b9c6215e426c7b4d2d3080b3671e392278d67b30b7ee0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
     }
   ],
-  "orders_active": 0,
-  "orders_filled": 14,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 14,
-  "run_id": "order_monitor-20260514T175028-5d1f8063",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
-}
-```
-## Outcome Tracker — 2026-05-14T17:50:28Z
-
-**Run ID:** `outcome_tracker-20260514T175028-5d1f8063`  **Outcomes tracked:** 14
-
-- WELL BUY (entry) fill=$218.808 return=-0.308% unpl=$-0.0769 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.248 return=-0.043% unpl=$+0.0046 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1084.37 return=-0.604% unpl=$-0.0175 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1079.5 return=-0.155% unpl=$-0.0175 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1078.442 return=-0.057% unpl=$-0.0175 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1078.41 return=-0.054% unpl=$-0.0175 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.116 return=+0.015% unpl=$+0.0046 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.276 return=+0.347% unpl=$+0.1360 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.474 return=+0.197% unpl=$+0.1360 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.89 return=+0.087% unpl=$-0.0175 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.82 return=+0.093% unpl=$-0.0175 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.044 return=+0.046% unpl=$+0.0046 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1076.718 return=+0.103% unpl=$-0.0175 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.542 return=+0.119% unpl=$-0.0175 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-
----
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T17:52:20Z",
-  "lifecycles": [
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "1b6933ffd3d85a3e978eaec04c5505e50d6d4c7fc73a04209ea8930e4b4ce09d",
+  "validation": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WELL"
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
     },
     {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
     },
     {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": {
-        "fill_price": 1079.5,
-        "filled_at": "2026-05-14T15:41:11Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023158869,
-        "plan_id": "trade_plan-20260514T145625-7807f306",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T145626-8a29a24f",
-        "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
     },
     {
-      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.116,
-        "filled_at": "2026-05-14T16:34:23Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108640859,
-        "plan_id": "trade_plan-20260514T154323-1f27d10d",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154324-0732af2c",
-        "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
     },
     {
-      "client_order_id": "TOS-20260514T154543-EQIX-SELL",
-      "fill": {
-        "fill_price": 1078.442,
-        "filled_at": "2026-05-14T15:47:26Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023181589,
-        "plan_id": "trade_plan-20260514T154543-b29ff94f",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154544-c2e241e8",
-        "trade_plan_hash": "e509327fb66887dc158535967804ce7b8cee093ad40cdb65eab52e988f7e7c09",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
     },
     {
-      "client_order_id": "TOS-20260514T154817-EQIX-BUY",
-      "fill": {
-        "fill_price": 1078.41,
-        "filled_at": "2026-05-14T16:01:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023182277,
-        "plan_id": "trade_plan-20260514T154817-6a53654a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154818-6157fada",
-        "trade_plan_hash": "ec58d5499d6c8e52e3dd98e59782bcadc67f53d6dd35a04402e561cad33b77c3",
-        "trigger_snapshot_hash": null
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
     },
     {
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.89,
-        "filled_at": "2026-05-14T17:20:40Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023214998,
-        "plan_id": "trade_plan-20260514T163113-1c676d38",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T163114-dd6029a9",
-        "trade_plan_hash": "8ac7328c69c7cd0377af0133e8092381d3d9da649baea5bb5bda660ccdd83c2b",
-        "trigger_snapshot_hash": null
+      "details": {
+        "total_weight": 1.0000000000000002
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
     },
     {
-      "client_order_id": "TOS-20260514T165232-WMT-BUY",
-      "fill": {
-        "fill_price": 132.276,
-        "filled_at": "2026-05-14T16:52:33Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.18899876,
-        "plan_id": "trade_plan-20260514T165232-1f83cea2",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T165233-adcb0da2",
-        "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
-        "trigger_snapshot_hash": null
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
     },
     {
-      "client_order_id": "TOS-20260514T171739-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.044,
-        "filled_at": "2026-05-14T17:21:14Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108674862,
-        "plan_id": "trade_plan-20260514T171739-65285f83",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171740-77316146",
-        "trade_plan_hash": "7ada198bc1596edefd21961d1f742195c9eead499fb75189bf15f965928dfe2f",
-        "trigger_snapshot_hash": null
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
     },
     {
-      "client_order_id": "TOS-20260514T171844-WMT-BUY",
-      "fill": {
-        "fill_price": 132.474,
-        "filled_at": "2026-05-14T17:20:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.188716276,
-        "plan_id": "trade_plan-20260514T171844-6adf1380",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171846-d8b15803",
-        "trade_plan_hash": "a0c973a51e85f59bd52d56c0d86f0df521a6a9ab142199800e2bfa7924e15360",
-        "trigger_snapshot_hash": null
+      "details": {
+        "unknown_symbols": []
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
     },
     {
-      "client_order_id": "TOS-20260514T172103-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.82,
-        "filled_at": "2026-05-14T17:21:04Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023216507,
-        "plan_id": "trade_plan-20260514T172103-835a36b9",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172104-b71591c3",
-        "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
     },
     {
-      "client_order_id": "TOS-20260514T172226-EQIX-SELL",
-      "fill": {
-        "fill_price": 1076.718,
-        "filled_at": "2026-05-14T17:23:27Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023218707,
-        "plan_id": "trade_plan-20260514T172226-ed557b0a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172227-c20719b0",
-        "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
     },
     {
-      "client_order_id": "TOS-20260514T172335-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.542,
-        "filled_at": "2026-05-14T17:26:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023222503,
-        "plan_id": "trade_plan-20260514T172335-e46d4d8a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172337-37cce12a",
-        "trade_plan_hash": "be22bcde61b16718328b9c6215e426c7b4d2d3080b3671e392278d67b30b7ee0",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.006481333333333334,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
     }
-  ],
-  "orders_active": 0,
-  "orders_filled": 14,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 14,
-  "run_id": "order_monitor-20260514T175220-deb27fe8",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
+  ]
 }
 ```
 
-## dry_run_execute run
+## Execution attempt completed
 
 ```json
 {
-  "all_gates_pass": true,
+  "candidate_order_count": 11,
+  "confirm_paper": false,
   "dry_run": true,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T17:52:20Z",
-  "no_submit_reason": "dry_run_mode",
-  "orders_ready": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T175220-3c52d3d5",
-  "run_id": "execution-20260514T175220-fe2f3fae",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "ac7d133f642f7376e87a6607e4468d1673746ee5e7f5c53c4be948603341916d"
-}
-```
-
-## execute_paper run
-
-```json
-{
-  "all_gates_pass": false,
-  "blocked_reason": "trade_plan.approval.approved_for_execution is not True (reason=\"spread_blocked_all_orders: ['WELL']; churn_blocked_all_orders: ['JNJ', 'WMT', 'EQIX', 'AMD', 'CAT', 'GOOGL', 'CSCO', 'FCX', 'SLB', 'MS', 'XOM', 'BIL']\") \u2014 regenerate with --approve-paper",
-  "dry_run": false,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T17:52:21Z",
-  "orders_submitted": 0,
-  "orders_submitted_err": 0,
-  "orders_submitted_ok": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T175220-3c52d3d5",
-  "run_id": "execution-20260514T175221-05f9ad9c",
-  "status": "PAPER_BLOCKED",
-  "trade_plan_hash": "ac7d133f642f7376e87a6607e4468d1673746ee5e7f5c53c4be948603341916d"
-}
-```
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T17:52:26Z",
-  "lifecycles": [
+  "generated_at": "2026-05-14T18:54:32Z",
+  "run_id": "execution-20260514T185432-2c31b225",
+  "schema_version": "0.1.0",
+  "skipped": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
       "symbol": "WELL"
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": {
-        "fill_price": 1079.5,
-        "filled_at": "2026-05-14T15:41:11Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023158869,
-        "plan_id": "trade_plan-20260514T145625-7807f306",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T145626-8a29a24f",
-        "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.116,
-        "filled_at": "2026-05-14T16:34:23Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108640859,
-        "plan_id": "trade_plan-20260514T154323-1f27d10d",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154324-0732af2c",
-        "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T154543-EQIX-SELL",
-      "fill": {
-        "fill_price": 1078.442,
-        "filled_at": "2026-05-14T15:47:26Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023181589,
-        "plan_id": "trade_plan-20260514T154543-b29ff94f",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154544-c2e241e8",
-        "trade_plan_hash": "e509327fb66887dc158535967804ce7b8cee093ad40cdb65eab52e988f7e7c09",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154817-EQIX-BUY",
-      "fill": {
-        "fill_price": 1078.41,
-        "filled_at": "2026-05-14T16:01:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023182277,
-        "plan_id": "trade_plan-20260514T154817-6a53654a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154818-6157fada",
-        "trade_plan_hash": "ec58d5499d6c8e52e3dd98e59782bcadc67f53d6dd35a04402e561cad33b77c3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.89,
-        "filled_at": "2026-05-14T17:20:40Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023214998,
-        "plan_id": "trade_plan-20260514T163113-1c676d38",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T163114-dd6029a9",
-        "trade_plan_hash": "8ac7328c69c7cd0377af0133e8092381d3d9da649baea5bb5bda660ccdd83c2b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T165232-WMT-BUY",
-      "fill": {
-        "fill_price": 132.276,
-        "filled_at": "2026-05-14T16:52:33Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.18899876,
-        "plan_id": "trade_plan-20260514T165232-1f83cea2",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T165233-adcb0da2",
-        "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
       "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T171739-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.044,
-        "filled_at": "2026-05-14T17:21:14Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108674862,
-        "plan_id": "trade_plan-20260514T171739-65285f83",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171740-77316146",
-        "trade_plan_hash": "7ada198bc1596edefd21961d1f742195c9eead499fb75189bf15f965928dfe2f",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T171844-WMT-BUY",
-      "fill": {
-        "fill_price": 132.474,
-        "filled_at": "2026-05-14T17:20:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.188716276,
-        "plan_id": "trade_plan-20260514T171844-6adf1380",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171846-d8b15803",
-        "trade_plan_hash": "a0c973a51e85f59bd52d56c0d86f0df521a6a9ab142199800e2bfa7924e15360",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T172103-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.82,
-        "filled_at": "2026-05-14T17:21:04Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023216507,
-        "plan_id": "trade_plan-20260514T172103-835a36b9",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172104-b71591c3",
-        "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172226-EQIX-SELL",
-      "fill": {
-        "fill_price": 1076.718,
-        "filled_at": "2026-05-14T17:23:27Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023218707,
-        "plan_id": "trade_plan-20260514T172226-ed557b0a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172227-c20719b0",
-        "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172335-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.542,
-        "filled_at": "2026-05-14T17:26:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023222503,
-        "plan_id": "trade_plan-20260514T172335-e46d4d8a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172337-37cce12a",
-        "trade_plan_hash": "be22bcde61b16718328b9c6215e426c7b4d2d3080b3671e392278d67b30b7ee0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
     }
   ],
-  "orders_active": 0,
-  "orders_filled": 14,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 14,
-  "run_id": "order_monitor-20260514T175226-ca48b7d0",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
-}
-```
-## Outcome Tracker — 2026-05-14T17:52:26Z
-
-**Run ID:** `outcome_tracker-20260514T175226-ca48b7d0`  **Outcomes tracked:** 14
-
-- WELL BUY (entry) fill=$218.808 return=-0.417% unpl=$-0.1043 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.248 return=-0.047% unpl=$+0.0013 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1084.37 return=-0.666% unpl=$-0.0800 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1079.5 return=-0.218% unpl=$-0.0800 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1078.442 return=-0.120% unpl=$-0.0800 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1078.41 return=-0.117% unpl=$-0.0800 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.116 return=+0.010% unpl=$+0.0013 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.276 return=+0.355% unpl=$+0.1398 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.474 return=+0.205% unpl=$+0.1398 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.89 return=+0.024% unpl=$-0.0800 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.82 return=+0.031% unpl=$-0.0800 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.044 return=+0.042% unpl=$+0.0013 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1076.718 return=+0.040% unpl=$-0.0800 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.542 return=+0.056% unpl=$-0.0800 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-
----
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T17:57:38Z",
-  "lifecycles": [
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "aa77633fea3206ecde60d80b9f49bdbab55b33439e0c618abf46b0f79804bb96",
+  "validation": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WELL"
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
     },
     {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
     },
     {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": {
-        "fill_price": 1079.5,
-        "filled_at": "2026-05-14T15:41:11Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023158869,
-        "plan_id": "trade_plan-20260514T145625-7807f306",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T145626-8a29a24f",
-        "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
     },
     {
-      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.116,
-        "filled_at": "2026-05-14T16:34:23Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108640859,
-        "plan_id": "trade_plan-20260514T154323-1f27d10d",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154324-0732af2c",
-        "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
     },
     {
-      "client_order_id": "TOS-20260514T154543-EQIX-SELL",
-      "fill": {
-        "fill_price": 1078.442,
-        "filled_at": "2026-05-14T15:47:26Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023181589,
-        "plan_id": "trade_plan-20260514T154543-b29ff94f",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154544-c2e241e8",
-        "trade_plan_hash": "e509327fb66887dc158535967804ce7b8cee093ad40cdb65eab52e988f7e7c09",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
     },
     {
-      "client_order_id": "TOS-20260514T154817-EQIX-BUY",
-      "fill": {
-        "fill_price": 1078.41,
-        "filled_at": "2026-05-14T16:01:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023182277,
-        "plan_id": "trade_plan-20260514T154817-6a53654a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154818-6157fada",
-        "trade_plan_hash": "ec58d5499d6c8e52e3dd98e59782bcadc67f53d6dd35a04402e561cad33b77c3",
-        "trigger_snapshot_hash": null
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
     },
     {
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.89,
-        "filled_at": "2026-05-14T17:20:40Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023214998,
-        "plan_id": "trade_plan-20260514T163113-1c676d38",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T163114-dd6029a9",
-        "trade_plan_hash": "8ac7328c69c7cd0377af0133e8092381d3d9da649baea5bb5bda660ccdd83c2b",
-        "trigger_snapshot_hash": null
+      "details": {
+        "total_weight": 1.0000000000000002
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
     },
     {
-      "client_order_id": "TOS-20260514T165232-WMT-BUY",
-      "fill": {
-        "fill_price": 132.276,
-        "filled_at": "2026-05-14T16:52:33Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.18899876,
-        "plan_id": "trade_plan-20260514T165232-1f83cea2",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T165233-adcb0da2",
-        "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
-        "trigger_snapshot_hash": null
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
     },
     {
-      "client_order_id": "TOS-20260514T171739-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.044,
-        "filled_at": "2026-05-14T17:21:14Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108674862,
-        "plan_id": "trade_plan-20260514T171739-65285f83",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171740-77316146",
-        "trade_plan_hash": "7ada198bc1596edefd21961d1f742195c9eead499fb75189bf15f965928dfe2f",
-        "trigger_snapshot_hash": null
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
     },
     {
-      "client_order_id": "TOS-20260514T171844-WMT-BUY",
-      "fill": {
-        "fill_price": 132.474,
-        "filled_at": "2026-05-14T17:20:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.188716276,
-        "plan_id": "trade_plan-20260514T171844-6adf1380",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171846-d8b15803",
-        "trade_plan_hash": "a0c973a51e85f59bd52d56c0d86f0df521a6a9ab142199800e2bfa7924e15360",
-        "trigger_snapshot_hash": null
+      "details": {
+        "unknown_symbols": []
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
     },
     {
-      "client_order_id": "TOS-20260514T172103-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.82,
-        "filled_at": "2026-05-14T17:21:04Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023216507,
-        "plan_id": "trade_plan-20260514T172103-835a36b9",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172104-b71591c3",
-        "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
     },
     {
-      "client_order_id": "TOS-20260514T172226-EQIX-SELL",
-      "fill": {
-        "fill_price": 1076.718,
-        "filled_at": "2026-05-14T17:23:27Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023218707,
-        "plan_id": "trade_plan-20260514T172226-ed557b0a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172227-c20719b0",
-        "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
     },
     {
-      "client_order_id": "TOS-20260514T172335-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.542,
-        "filled_at": "2026-05-14T17:26:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023222503,
-        "plan_id": "trade_plan-20260514T172335-e46d4d8a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172337-37cce12a",
-        "trade_plan_hash": "be22bcde61b16718328b9c6215e426c7b4d2d3080b3671e392278d67b30b7ee0",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.013920766666666667,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
     }
-  ],
-  "orders_active": 0,
-  "orders_filled": 14,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 14,
-  "run_id": "order_monitor-20260514T175738-cb9c099e",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
+  ]
 }
 ```
 
-## dry_run_execute run
+## Execution attempt completed
 
 ```json
 {
-  "all_gates_pass": true,
+  "candidate_order_count": 11,
+  "confirm_paper": false,
   "dry_run": true,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T17:57:38Z",
-  "no_submit_reason": "dry_run_mode",
-  "orders_ready": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T175738-9eae9b62",
-  "run_id": "execution-20260514T175738-24840104",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "248eee65f494dbfccfe91b79fa7f787d4cfe8c347d4d7bc4fb2dcd5165e7a7a2"
-}
-```
-
-## execute_paper run
-
-```json
-{
-  "all_gates_pass": false,
-  "blocked_reason": "trade_plan.approval.approved_for_execution is not True (reason=\"spread_blocked_all_orders: ['JNJ']; churn_blocked_all_orders: ['WMT', 'EQIX', 'AMD', 'CAT', 'GOOGL', 'CSCO', 'FCX', 'SLB', 'XOM', 'WELL', 'BIL']\") \u2014 regenerate with --approve-paper",
-  "dry_run": false,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T17:57:39Z",
-  "orders_submitted": 0,
-  "orders_submitted_err": 0,
-  "orders_submitted_ok": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T175738-9eae9b62",
-  "run_id": "execution-20260514T175739-c2e2d180",
-  "status": "PAPER_BLOCKED",
-  "trade_plan_hash": "248eee65f494dbfccfe91b79fa7f787d4cfe8c347d4d7bc4fb2dcd5165e7a7a2"
-}
-```
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T17:57:43Z",
-  "lifecycles": [
+  "generated_at": "2026-05-14T18:54:38Z",
+  "run_id": "execution-20260514T185438-75b1a1b9",
+  "schema_version": "0.1.0",
+  "skipped": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
       "symbol": "WELL"
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": {
-        "fill_price": 1079.5,
-        "filled_at": "2026-05-14T15:41:11Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023158869,
-        "plan_id": "trade_plan-20260514T145625-7807f306",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T145626-8a29a24f",
-        "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.116,
-        "filled_at": "2026-05-14T16:34:23Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108640859,
-        "plan_id": "trade_plan-20260514T154323-1f27d10d",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154324-0732af2c",
-        "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T154543-EQIX-SELL",
-      "fill": {
-        "fill_price": 1078.442,
-        "filled_at": "2026-05-14T15:47:26Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023181589,
-        "plan_id": "trade_plan-20260514T154543-b29ff94f",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154544-c2e241e8",
-        "trade_plan_hash": "e509327fb66887dc158535967804ce7b8cee093ad40cdb65eab52e988f7e7c09",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T154817-EQIX-BUY",
-      "fill": {
-        "fill_price": 1078.41,
-        "filled_at": "2026-05-14T16:01:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023182277,
-        "plan_id": "trade_plan-20260514T154817-6a53654a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154818-6157fada",
-        "trade_plan_hash": "ec58d5499d6c8e52e3dd98e59782bcadc67f53d6dd35a04402e561cad33b77c3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.89,
-        "filled_at": "2026-05-14T17:20:40Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023214998,
-        "plan_id": "trade_plan-20260514T163113-1c676d38",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T163114-dd6029a9",
-        "trade_plan_hash": "8ac7328c69c7cd0377af0133e8092381d3d9da649baea5bb5bda660ccdd83c2b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T165232-WMT-BUY",
-      "fill": {
-        "fill_price": 132.276,
-        "filled_at": "2026-05-14T16:52:33Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.18899876,
-        "plan_id": "trade_plan-20260514T165232-1f83cea2",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T165233-adcb0da2",
-        "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
       "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T171739-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.044,
-        "filled_at": "2026-05-14T17:21:14Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108674862,
-        "plan_id": "trade_plan-20260514T171739-65285f83",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171740-77316146",
-        "trade_plan_hash": "7ada198bc1596edefd21961d1f742195c9eead499fb75189bf15f965928dfe2f",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260514T171844-WMT-BUY",
-      "fill": {
-        "fill_price": 132.474,
-        "filled_at": "2026-05-14T17:20:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.188716276,
-        "plan_id": "trade_plan-20260514T171844-6adf1380",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171846-d8b15803",
-        "trade_plan_hash": "a0c973a51e85f59bd52d56c0d86f0df521a6a9ab142199800e2bfa7924e15360",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
-    },
-    {
-      "client_order_id": "TOS-20260514T172103-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.82,
-        "filled_at": "2026-05-14T17:21:04Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023216507,
-        "plan_id": "trade_plan-20260514T172103-835a36b9",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172104-b71591c3",
-        "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172226-EQIX-SELL",
-      "fill": {
-        "fill_price": 1076.718,
-        "filled_at": "2026-05-14T17:23:27Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023218707,
-        "plan_id": "trade_plan-20260514T172226-ed557b0a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172227-c20719b0",
-        "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T172335-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.542,
-        "filled_at": "2026-05-14T17:26:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023222503,
-        "plan_id": "trade_plan-20260514T172335-e46d4d8a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172337-37cce12a",
-        "trade_plan_hash": "be22bcde61b16718328b9c6215e426c7b4d2d3080b3671e392278d67b30b7ee0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
     }
   ],
-  "orders_active": 0,
-  "orders_filled": 14,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 14,
-  "run_id": "order_monitor-20260514T175743-7012dd33",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
-}
-```
-## Outcome Tracker — 2026-05-14T17:57:44Z
-
-**Run ID:** `outcome_tracker-20260514T175744-22c6744b`  **Outcomes tracked:** 14
-
-- WELL BUY (entry) fill=$218.808 return=-0.477% unpl=$-0.1192 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.248 return=-0.164% unpl=$-0.0867 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1084.37 return=-0.637% unpl=$-0.0508 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1079.5 return=-0.189% unpl=$-0.0508 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1078.442 return=-0.091% unpl=$-0.0508 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1078.41 return=-0.088% unpl=$-0.0508 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.116 return=-0.107% unpl=$-0.0867 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.276 return=+0.215% unpl=$+0.0699 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.474 return=+0.065% unpl=$+0.0699 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.89 return=+0.053% unpl=$-0.0508 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.82 return=+0.060% unpl=$-0.0508 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.044 return=-0.076% unpl=$-0.0867 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1076.718 return=+0.069% unpl=$-0.0508 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.542 return=+0.086% unpl=$-0.0508 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-
----
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T18:07:55Z",
-  "lifecycles": [
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "c8dc6280eb24ede06961c39005675bfb1ec057e43bacb483efbfc5e377f0b596",
+  "validation": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WELL"
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
     },
     {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
     },
     {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": {
-        "fill_price": 1079.5,
-        "filled_at": "2026-05-14T15:41:11Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023158869,
-        "plan_id": "trade_plan-20260514T145625-7807f306",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T145626-8a29a24f",
-        "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
     },
     {
-      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.116,
-        "filled_at": "2026-05-14T16:34:23Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108640859,
-        "plan_id": "trade_plan-20260514T154323-1f27d10d",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154324-0732af2c",
-        "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
     },
     {
-      "client_order_id": "TOS-20260514T154543-EQIX-SELL",
-      "fill": {
-        "fill_price": 1078.442,
-        "filled_at": "2026-05-14T15:47:26Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023181589,
-        "plan_id": "trade_plan-20260514T154543-b29ff94f",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154544-c2e241e8",
-        "trade_plan_hash": "e509327fb66887dc158535967804ce7b8cee093ad40cdb65eab52e988f7e7c09",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
     },
     {
-      "client_order_id": "TOS-20260514T154817-EQIX-BUY",
-      "fill": {
-        "fill_price": 1078.41,
-        "filled_at": "2026-05-14T16:01:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023182277,
-        "plan_id": "trade_plan-20260514T154817-6a53654a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T154818-6157fada",
-        "trade_plan_hash": "ec58d5499d6c8e52e3dd98e59782bcadc67f53d6dd35a04402e561cad33b77c3",
-        "trigger_snapshot_hash": null
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
     },
     {
-      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.89,
-        "filled_at": "2026-05-14T17:20:40Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023214998,
-        "plan_id": "trade_plan-20260514T163113-1c676d38",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T163114-dd6029a9",
-        "trade_plan_hash": "8ac7328c69c7cd0377af0133e8092381d3d9da649baea5bb5bda660ccdd83c2b",
-        "trigger_snapshot_hash": null
+      "details": {
+        "total_weight": 1.0000000000000002
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
     },
     {
-      "client_order_id": "TOS-20260514T165232-WMT-BUY",
-      "fill": {
-        "fill_price": 132.276,
-        "filled_at": "2026-05-14T16:52:33Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.18899876,
-        "plan_id": "trade_plan-20260514T165232-1f83cea2",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T165233-adcb0da2",
-        "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
-        "trigger_snapshot_hash": null
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
     },
     {
-      "client_order_id": "TOS-20260514T171739-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.044,
-        "filled_at": "2026-05-14T17:21:14Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108674862,
-        "plan_id": "trade_plan-20260514T171739-65285f83",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171740-77316146",
-        "trade_plan_hash": "7ada198bc1596edefd21961d1f742195c9eead499fb75189bf15f965928dfe2f",
-        "trigger_snapshot_hash": null
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
     },
     {
-      "client_order_id": "TOS-20260514T171844-WMT-BUY",
-      "fill": {
-        "fill_price": 132.474,
-        "filled_at": "2026-05-14T17:20:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.188716276,
-        "plan_id": "trade_plan-20260514T171844-6adf1380",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T171846-d8b15803",
-        "trade_plan_hash": "a0c973a51e85f59bd52d56c0d86f0df521a6a9ab142199800e2bfa7924e15360",
-        "trigger_snapshot_hash": null
+      "details": {
+        "unknown_symbols": []
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WMT"
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
     },
     {
-      "client_order_id": "TOS-20260514T172103-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.82,
-        "filled_at": "2026-05-14T17:21:04Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023216507,
-        "plan_id": "trade_plan-20260514T172103-835a36b9",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172104-b71591c3",
-        "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
     },
     {
-      "client_order_id": "TOS-20260514T172226-EQIX-SELL",
-      "fill": {
-        "fill_price": 1076.718,
-        "filled_at": "2026-05-14T17:23:27Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023218707,
-        "plan_id": "trade_plan-20260514T172226-ed557b0a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172227-c20719b0",
-        "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "sell",
-      "symbol": "EQIX"
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
     },
     {
-      "client_order_id": "TOS-20260514T172335-EQIX-BUY",
-      "fill": {
-        "fill_price": 1076.542,
-        "filled_at": "2026-05-14T17:26:29Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023222503,
-        "plan_id": "trade_plan-20260514T172335-e46d4d8a",
-        "position_confirmed": true,
-        "run_id": "execution-20260514T172337-37cce12a",
-        "trade_plan_hash": "be22bcde61b16718328b9c6215e426c7b4d2d3080b3671e392278d67b30b7ee0",
-        "trigger_snapshot_hash": null
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
       },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.012523466666666667,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
     }
-  ],
-  "orders_active": 0,
-  "orders_filled": 14,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 14,
-  "run_id": "order_monitor-20260514T180755-9e97e747",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
+  ]
 }
 ```
 
-## dry_run_execute run
+## Execution attempt completed
 
 ```json
 {
-  "all_gates_pass": true,
+  "candidate_order_count": 11,
+  "confirm_paper": false,
   "dry_run": true,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T18:07:56Z",
-  "no_submit_reason": "dry_run_mode",
-  "orders_ready": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T180756-fc25ae26",
-  "run_id": "execution-20260514T180756-13659e28",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "f75fce729de873a1ac66b6626c85c176b651595bd64f5cab4b6edb7c28912434"
+  "generated_at": "2026-05-14T19:05:22Z",
+  "run_id": "execution-20260514T190522-f9bf1294",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "f66a5217f64131fd022979cbc7949258eeb21874ed13fc5bd988e06b1e228057",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.011881933333333334,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
 }
 ```
-## Outcome Tracker — 2026-05-14T18:07:56Z
 
-**Run ID:** `outcome_tracker-20260514T180756-786bd07b`  **Outcomes tracked:** 14
+## Execution attempt completed
 
-- WELL BUY (entry) fill=$218.808 return=-0.659% unpl=$-0.1649 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.248 return=-0.183% unpl=$-0.1010 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1084.37 return=-0.812% unpl=$-0.2273 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1079.5 return=-0.365% unpl=$-0.2273 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1078.442 return=-0.267% unpl=$-0.2273 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1078.41 return=-0.264% unpl=$-0.2273 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.116 return=-0.126% unpl=$-0.1010 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.276 return=+0.056% unpl=$-0.0094 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- WMT BUY (entry) fill=$132.474 return=-0.094% unpl=$-0.0094 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.89 return=-0.123% unpl=$-0.2273 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.82 return=-0.117% unpl=$-0.2273 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.044 return=-0.095% unpl=$-0.1010 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX SELL (exit) fill=$1076.718 return=-0.107% unpl=$-0.2273 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1076.542 return=-0.091% unpl=$-0.2273 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-
----
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-14T19:05:35Z",
+  "run_id": "execution-20260514T190534-99c0e772",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "9b93275ed432b28ebc5ee76dee6d40efc6c8c8ad1871103df256ca47bf361bb3",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.016473883333333335,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
