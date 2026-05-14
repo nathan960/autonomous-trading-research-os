@@ -1,0 +1,262 @@
+name: Manual Paper Cycle
+
+# One-click manual paper cycle.
+# Runs the full research pipeline. Optionally submits Alpaca paper orders
+# when the operator provides all three explicit confirmations.
+#
+# Safety invariants hardcoded in this workflow:
+#   ENABLE_PAPER_EXECUTION=false at job level — never armed by default
+#   LIVE_TRADING_CONFIRMED=false — live trading is never reachable
+#   No schedule trigger — manual dispatch only
+#   execute_paper.py is called only when cycle_mode=paper_execution,
+#     approve_paper_plan=true, and confirm_manual_paper_execution=PAPER
+#   The execution step sets its own step-level ENABLE_PAPER_EXECUTION=true;
+#     no other step can see or inherit that value
+#   --approve-paper is passed only when cycle_mode=paper_execution
+#     and approve_paper_plan=true
+
+on:
+  workflow_dispatch:
+    inputs:
+      cycle_mode:
+        description: >
+          research_only: full research pipeline, no order submission.
+          paper_execution: research + Alpaca paper order submission
+          (requires approve_paper_plan=true and PAPER confirmation).
+        required: true
+        default: research_only
+        type: choice
+        options:
+          - research_only
+          - paper_execution
+
+      approve_paper_plan:
+        description: >
+          Generate trade_plan.json with --approve-paper?
+          Required for paper execution. Ignored in research_only mode.
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+      confirm_manual_paper_execution:
+        description: "Type PAPER to allow one Alpaca paper execution attempt"
+        required: true
+        default: "NO"
+        type: string
+
+      run_post_trade_reconciliation:
+        description: >
+          Run outcome tracking, lineage, scoring, and daily summary after
+          execution (or after research pipeline in research_only mode).
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trading-os-main
+  cancel-in-progress: false
+
+jobs:
+  manual-paper-cycle:
+    runs-on: ubuntu-latest
+
+    env:
+      ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+      ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+      TRADING_MODE: paper
+      ALPACA_PAPER: "true"
+      ALPACA_DATA_FEED: ${{ vars.ALPACA_DATA_FEED || 'iex' }}
+      # ENABLE_PAPER_EXECUTION is always false at the job level.
+      # Only the Execute paper plan step sets its own step-level override.
+      ENABLE_PAPER_EXECUTION: "false"
+      LIVE_TRADING_CONFIRMED: "false"
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Safety preflight
+        run: |
+          if [ "$LIVE_TRADING_CONFIRMED" = "true" ]; then
+            echo "::error::LIVE_TRADING_CONFIRMED must not be true"
+            exit 1
+          fi
+
+          if [ "$TRADING_MODE" != "paper" ]; then
+            echo "::error::TRADING_MODE must be paper"
+            exit 1
+          fi
+
+          echo "Job-level ENABLE_PAPER_EXECUTION=${ENABLE_PAPER_EXECUTION} (false — the execution step sets its own override)"
+          echo "Safety preflight passed. cycle_mode=${{ github.event.inputs.cycle_mode }}"
+
+      - name: Refresh data
+        run: python scripts/refresh_data.py
+
+      - name: Monitor positions and risk state
+        run: python scripts/monitor_positions.py
+
+      - name: Monitor orders
+        run: python scripts/monitor_orders.py
+
+      - name: Scan triggers
+        run: python scripts/scan_triggers.py
+
+      - name: Generate trade plan
+        run: |
+          if [ "${{ github.event.inputs.cycle_mode }}" = "paper_execution" ] && \
+             [ "${{ github.event.inputs.approve_paper_plan }}" = "true" ]; then
+            echo "Generating trade plan with --approve-paper"
+            python scripts/generate_trade_plan.py --approve-paper
+          else
+            echo "Generating trade plan without approval"
+            python scripts/generate_trade_plan.py
+          fi
+
+      - name: Dry-run execution gates
+        run: python scripts/dry_run_execute.py
+
+      - name: Verify dry-run gates passed
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          cycle_mode = "${{ github.event.inputs.cycle_mode }}"
+          report_path = Path("data/latest/execution_report.json")
+
+          if not report_path.exists():
+              if cycle_mode == "paper_execution":
+                  print("::error::data/latest/execution_report.json does not exist")
+                  sys.exit(1)
+              print("data/latest/execution_report.json missing — skipping in research_only mode")
+              sys.exit(0)
+
+          report = json.loads(report_path.read_text())
+          all_gates_pass = report.get("all_gates_pass")
+          failed_gates = report.get("failed_gates", [])
+          status = report.get("status")
+
+          print(f"Dry-run status: {status}")
+          print(f"all_gates_pass: {all_gates_pass}")
+          print(f"failed_gates: {failed_gates}")
+
+          if not all_gates_pass:
+              if cycle_mode == "paper_execution":
+                  print(f"::error::Dry-run gates did not all pass. Cannot proceed to paper execution. Failed: {failed_gates}")
+                  sys.exit(1)
+              print(f"::warning::Dry-run gates did not all pass (research_only — not blocking). Failed: {failed_gates}")
+          else:
+              print("Dry-run gates passed.")
+          PY
+
+      - name: Verify manual paper execution confirmation
+        if: github.event.inputs.cycle_mode == 'paper_execution'
+        run: |
+          if [ "${{ github.event.inputs.approve_paper_plan }}" != "true" ]; then
+            echo "::error::approve_paper_plan must be true for paper execution."
+            exit 1
+          fi
+
+          if [ "${{ github.event.inputs.confirm_manual_paper_execution }}" != "PAPER" ]; then
+            echo "::error::You must type PAPER to confirm manual Alpaca paper execution."
+            exit 1
+          fi
+
+          echo "Manual paper execution confirmation passed."
+
+      # ── Paper execution ──────────────────────────────────────────────────────
+      # Triple-locked: cycle_mode, approve_paper_plan, and literal "PAPER" string.
+      # Step-level ENABLE_PAPER_EXECUTION=true is scoped to this step only.
+      # The job-level value (false) is restored after this step exits.
+      - name: Execute paper plan
+        if: >-
+          github.event.inputs.cycle_mode == 'paper_execution' &&
+          github.event.inputs.approve_paper_plan == 'true' &&
+          github.event.inputs.confirm_manual_paper_execution == 'PAPER'
+        env:
+          ENABLE_PAPER_EXECUTION: "true"
+        run: python scripts/execute_paper.py --confirm-paper
+
+      # ── Post-trade reconciliation ────────────────────────────────────────────
+      - name: Post-trade reconciliation
+        if: github.event.inputs.run_post_trade_reconciliation == 'true'
+        run: |
+          python scripts/refresh_data.py
+          python scripts/monitor_positions.py
+          python scripts/monitor_orders.py
+          python scripts/track_outcomes.py
+          python scripts/build_lineage.py
+          python scripts/score_triggers.py
+          python scripts/daily_summary.py
+
+      - name: Validate
+        run: python scripts/validate_all.py
+
+      - name: Commit event files (conflict-free)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A data/history/events/
+          if git diff --cached --quiet; then
+            echo "No event files to commit."
+          else
+            git commit -m "chore(events): manual-paper-cycle ${{ github.run_id }}"
+            git pull --rebase --autostash origin main
+            git push
+          fi
+
+      - name: Commit cycle artifacts
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          echo "Git status before staging:"
+          git status --short
+
+          git add -A data memory
+          git restore --staged data/history/events/ 2>/dev/null || true
+          git restore --staged data/sandbox memory/sandbox 2>/dev/null || true
+
+          echo "Git status after staging:"
+          git status --short
+
+          if git diff --cached --quiet; then
+            echo "No cycle artifacts changed."
+            exit 0
+          fi
+
+          git commit -m "chore(cycle): manual-paper-cycle run=${{ github.run_id }} mode=${{ github.event.inputs.cycle_mode }}"
+
+          if ! git pull --rebase --autostash origin main; then
+            git rebase --abort || true
+            echo "::warning::Markdown conflict during rebase. Event JSON files already pushed. Run rebuild_memory_logs.py to regenerate memory logs."
+            exit 1
+          fi
+
+          git push
