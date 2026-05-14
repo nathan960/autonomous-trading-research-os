@@ -1,0 +1,133 @@
+{
+  "event_type": "paper_execution",
+  "run_id": "execution-20260514T172227-c20719b0",
+  "generated_at": "2026-05-14T17:22:27Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "run_id": "execution-20260514T172227-c20719b0",
+    "plan_id": "trade_plan-20260514T172226-ed557b0a",
+    "generated_at": "2026-05-14T17:22:27Z",
+    "dry_run": false,
+    "trade_plan_hash": "1177c0ee9807237a73f6a670c0d6a961753770caef2dc15bfd2466ef0d6bc0cc",
+    "gate_results": [
+      {
+        "gate_id": "TRADING_MODE_PAPER",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "ALPACA_PAPER_MODE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "CANONICAL_SOURCE_INTEGRITY",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_EXISTS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_NOT_EXPIRED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "MARKET_CLOCK_OPEN",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "ACCOUNT_NOT_BLOCKED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_STATE_NOT_PAUSED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "POSITIONS_MATCH_SNAPSHOT",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_DUPLICATE_OPEN_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "UNIVERSE_MEMBERSHIP",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "SYMBOLS_TRADABLE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "QUOTE_FRESHNESS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "SPREAD_NOT_TOO_WIDE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_LIMITS_RESPECTED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_PROHIBITED_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "EXECUTION_LOG_WRITABLE",
+        "passes": true,
+        "detail": null
+      }
+    ],
+    "all_gates_pass": true,
+    "failed_gates": [],
+    "orders_validated": [
+      {
+        "symbol": "EQIX",
+        "side": "sell",
+        "order_type": "limit",
+        "limit_price": 1076.63,
+        "notional": 25.0,
+        "target_weight": 0.0,
+        "client_order_id": "TOS-20260514T172226-EQIX-SELL",
+        "execution_ready": true,
+        "validation_skip_reason": null
+      }
+    ],
+    "orders_submitted": [
+      {
+        "symbol": "EQIX",
+        "client_order_id": "TOS-20260514T172226-EQIX-SELL",
+        "side": "sell",
+        "notional": 25.0,
+        "limit_price": 1076.63,
+        "submitted_at": "2026-05-14T17:22:27Z",
+        "submitted": true,
+        "broker_order_id": "728a0631-46b9-4223-86c4-e5b24b3c45a4",
+        "broker_status": "pending_new",
+        "skip_reason": null,
+        "error": null
+      }
+    ],
+    "status": "PAPER_SUBMITTED",
+    "blocked_reason": null,
+    "execution_report_hash": "7e8ca829b3585035a0b25302a64a36ea5f7894ef0f89439b03a43c23b8343dbe"
+  }
+}
