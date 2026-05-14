@@ -1011,3 +1011,40 @@ based on this report alone. Any experiment requires a candidate PR with:
 - Hypothesis, supporting evidence, success criteria, and rollback plan.
 
 ---
+## Outcome Observations — 2026-05-14T17:19:58Z
+
+*From outcome_tracker run `outcome_tracker-20260514T171958-3d5a3be6`*
+
+**Current unrealized returns (intraday — no strategy conclusions yet):**
+- WELL entry: fill=$218.808 current=$217.305 return=-0.687%
+- JNJ entry: fill=$230.248 current=$230.265 return=+0.007%
+- EQIX entry: fill=$1084.37 current=$1078.12 return=-0.576%
+- EQIX entry: fill=$1079.5 current=$1078.12 return=-0.128%
+- EQIX exit: fill=$1078.442 current=$1078.12 return=-0.030%
+- EQIX entry: fill=$1078.41 current=$1078.12 return=-0.027%
+- JNJ entry: fill=$230.116 current=$230.265 return=+0.065%
+- WMT entry: fill=$132.276 current=$132.5325 return=+0.194%
+
+*Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
+
+---
+## Trigger Performance Observations — 2026-05-14
+
+*From trigger_performance run `trigger_performance-20260514T171958-3d5a3be6`*
+*Period: 2026-05-08 to 2026-05-14 (7 days)*
+
+**Observations (research only — no strategy conclusions):**
+- Regime: 1 session(s) scanned, 1 risk-on (100%).
+- Spread gate: 34/79 symbols blocked (43%). Avg spread (blocked): 5.847%
+- Trend gate (200 DMA): 34/79 symbols below 200 DMA (43% block rate).
+- Fill count this period: 8. Need 12 more fills before P/L analysis is meaningful.
+- Average current return across 8 tracked outcome(s): -0.148%. Window pending — no conclusions yet.
+- Lineage: Lineage snapshot: 8 records (0 complete, 8 partial). 48 trigger fill associations recovered. 8 record(s) have partial lineage — save trade plans to history/trade_plans/ to improve completeness.
+- Fills linked to triggers (via lineage): ATR_SIZING_V1=8, LIQUIDITY_GATE_V1=8, MOMENTUM_BLEND_6M_12M_V1=8, SPREAD_GATE_V1=8, STOCK_TREND_200DMA_V1=8.
+- IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest.
+
+**Reminder:** Do not modify strategy.json, risk_limits.json, or trigger_registry.json
+based on this report alone. Any experiment requires a candidate PR with:
+- Hypothesis, supporting evidence, success criteria, and rollback plan.
+
+---
