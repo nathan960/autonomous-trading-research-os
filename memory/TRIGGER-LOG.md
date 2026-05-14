@@ -3063,3 +3063,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "spy_trend_ok": true
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "tv_GS_D_1778765400000_spy_strong_uptrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-14T20:01:33Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "8ac54fc1900b2bd1cc5889586fed6e49c718a999175cbf003692835619d8e451",
+  "source": "tradingview",
+  "symbol": "GS",
+  "trade_execution_allowed": false
+}
+```
