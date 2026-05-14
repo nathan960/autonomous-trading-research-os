@@ -511,3 +511,117 @@ class TestBuildTradePlan:
         )
         blocked_syms = {b["symbol"] for b in plan["blocked_symbols"]}
         assert "MSFT" in blocked_syms
+
+
+# ===========================================================================
+# Open-order awareness at planning time
+# ===========================================================================
+
+def _orders_snapshot(symbols: list, status: str = "new") -> dict:
+    return {
+        "orders": [
+            {"symbol": sym, "status": status, "client_order_id": f"TOS-{sym}"}
+            for sym in symbols
+        ],
+        "open_order_count": len(symbols),
+        "source": "alpaca_paper",
+    }
+
+
+class TestOpenOrderBlockedAtPlanning:
+    """Open orders in orders_snapshot must block the same symbol at planning time."""
+
+    def _build(
+        self,
+        selected: list = None,
+        orders_snapshot: dict = None,
+        equity: float = 40_000.0,
+    ) -> dict:
+        syms = selected or ["AAPL", "MSFT"]
+        ms = _market_snapshot(syms)
+        ts = _trigger_snapshot(syms, risk_on=True)
+        return build_trade_plan(
+            market_snapshot=ms,
+            trigger_snapshot=ts,
+            account_snapshot=_account_snapshot(equity),
+            positions=[],
+            strategy=_strategy(),
+            risk_limits=_risk_limits(),
+            execution_policy=_execution_policy(),
+            sector_map=_sector_map(syms),
+            orders_snapshot=orders_snapshot,
+        )
+
+    def test_open_order_symbol_not_in_proposed_orders(self):
+        plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot=_orders_snapshot(["AAPL"]))
+        proposed_syms = {o["symbol"] for o in plan["proposed_orders"]}
+        assert "AAPL" not in proposed_syms
+
+    def test_open_order_blocked_in_blocked_symbols(self):
+        plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot=_orders_snapshot(["AAPL"]))
+        blocked_syms = {b["symbol"] for b in plan["blocked_symbols"]}
+        assert "AAPL" in blocked_syms
+
+    def test_blocked_symbol_has_open_order_skip_reason(self):
+        plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot=_orders_snapshot(["AAPL"], status="new"))
+        matched = [b for b in plan["blocked_symbols"] if b["symbol"] == "AAPL"]
+        assert matched, "AAPL must appear in blocked_symbols"
+        assert "open_order_exists" in matched[0]["skip_reason"]
+
+    def test_no_trade_reasons_includes_open_order_blocked_at_planning(self):
+        plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot=_orders_snapshot(["AAPL"]))
+        assert any("open_order_blocked_at_planning" in r for r in plan["no_trade_reasons"])
+
+    def test_open_order_blocked_at_planning_field_present(self):
+        plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot=_orders_snapshot(["AAPL"]))
+        assert "open_order_blocked_at_planning" in plan
+        assert isinstance(plan["open_order_blocked_at_planning"], list)
+
+    def test_next_eligible_selected_when_top_candidate_blocked(self):
+        # max_orders_per_run=1: AAPL is top-priority but has an open order → MSFT fills the slot
+        rl = _risk_limits()
+        rl["max_orders_per_run"] = 1
+        syms = ["AAPL", "MSFT"]
+        ms = _market_snapshot(syms)
+        ts = _trigger_snapshot(syms, risk_on=True)
+        plan = build_trade_plan(
+            market_snapshot=ms,
+            trigger_snapshot=ts,
+            account_snapshot=_account_snapshot(),
+            positions=[],
+            strategy=_strategy(),
+            risk_limits=rl,
+            execution_policy=_execution_policy(),
+            sector_map=_sector_map(syms),
+            orders_snapshot=_orders_snapshot(["AAPL"]),
+        )
+        proposed_syms = {o["symbol"] for o in plan["proposed_orders"]}
+        assert "AAPL" not in proposed_syms
+        assert "MSFT" in proposed_syms
+
+    def test_all_blocked_produces_empty_proposed_orders(self):
+        # Block all symbols including the BIL cash-allocation fallback so
+        # no order survives — produces a genuine no-trade plan.
+        plan = self._build(
+            selected=["AAPL", "MSFT"],
+            orders_snapshot=_orders_snapshot(["AAPL", "MSFT", "BIL", "SPY"]),
+        )
+        assert plan["proposed_orders"] == []
+
+    def test_all_blocked_adds_blocking_no_trade_reason(self):
+        plan = self._build(
+            selected=["AAPL", "MSFT"],
+            orders_snapshot=_orders_snapshot(["AAPL", "MSFT", "BIL", "SPY"]),
+        )
+        blocking = [r for r in plan["no_trade_reasons"] if "(non_blocking)" not in r]
+        assert any("open_order_blocked_at_planning" in r for r in blocking)
+
+    def test_no_orders_snapshot_produces_valid_plan(self):
+        plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot=None)
+        assert isinstance(plan["proposed_orders"], list)
+        assert plan["open_order_blocked_at_planning"] == []
+
+    def test_empty_orders_snapshot_does_not_block(self):
+        plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot={"orders": [], "open_order_count": 0})
+        proposed_syms = {o["symbol"] for o in plan["proposed_orders"]}
+        assert "AAPL" in proposed_syms or "MSFT" in proposed_syms

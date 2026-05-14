@@ -95,6 +95,35 @@ def _filter_wide_spread_orders(
     return ok, blocked
 
 
+def _filter_open_order_symbols(
+    orders: list,
+    open_orders: list,
+) -> tuple:
+    """Split orders into (no_conflict, open_order_blocked).
+
+    Any symbol that already has an open order is blocked at planning time with
+    skip_reason open_order_exists(<status>).  The execution gate
+    NO_DUPLICATE_OPEN_ORDERS is the independent last line of defense.
+    """
+    open_by_symbol: dict = {}
+    for oo in open_orders:
+        sym = oo.get("symbol")
+        if sym and sym not in open_by_symbol:
+            open_by_symbol[sym] = oo
+    ok: list = []
+    blocked: list = []
+    for o in orders:
+        sym = o["symbol"]
+        if sym in open_by_symbol:
+            status = open_by_symbol[sym].get("status", "unknown")
+            bo = dict(o)
+            bo["skip_reason"] = f"open_order_exists({status})"
+            blocked.append(bo)
+        else:
+            ok.append(o)
+    return ok, blocked
+
+
 def build_trade_plan(
     market_snapshot: dict,
     trigger_snapshot: dict,
@@ -105,6 +134,7 @@ def build_trade_plan(
     execution_policy: dict,
     sector_map: dict,
     approve_paper: bool = False,
+    orders_snapshot: Optional[dict] = None,
 ) -> dict:
     """Build and return a complete trade plan dict.
 
@@ -118,6 +148,7 @@ def build_trade_plan(
         execution_policy:   loaded config/execution_policy.json
         sector_map:         loaded config/sector_map.json
         approve_paper:      set True only with --approve-paper CLI flag
+        orders_snapshot:    loaded data/latest/orders_snapshot.json (optional)
 
     Returns:
         trade_plan dict (always returned, even on gate failure).
@@ -190,6 +221,27 @@ def build_trade_plan(
         blocked_symbols.append({"symbol": o["symbol"], "skip_reason": o["skip_reason"]})
     for o in spread_blocked:
         blocked_symbols.append({"symbol": o["symbol"], "skip_reason": o["skip_reason"]})
+
+    # ── Open-order filter at planning time ───────────────────────────────────
+    # Prevents the execution gate NO_DUPLICATE_OPEN_ORDERS from blocking an
+    # otherwise-valid plan. Inserted after spread filter so the priority sort
+    # and max_orders_per_run cap operate only on non-conflicting candidates —
+    # this lets the next eligible symbol fill the slot automatically.
+    _open_orders: list = []
+    if orders_snapshot:
+        raw = orders_snapshot.get("orders", [])
+        _open_orders = [o for o in raw if isinstance(o, dict)]
+
+    proposed_orders, open_order_blocked = _filter_open_order_symbols(
+        proposed_orders, _open_orders
+    )
+    for o in open_order_blocked:
+        blocked_symbols.append({"symbol": o["symbol"], "skip_reason": o["skip_reason"]})
+
+    open_order_blocked_summary: list = [
+        {"symbol": o["symbol"], "skip_reason": o["skip_reason"]}
+        for o in open_order_blocked
+    ]
 
     # ── Read per-run caps from risk_limits ──────────────────────────────────
     max_orders_per_run: Optional[int] = (
@@ -302,6 +354,14 @@ def build_trade_plan(
         syms = [o["symbol"] for o in spread_blocked]
         no_trade_reasons.append(f"spread_blocked_at_planning(non_blocking): {syms}")
 
+    # Summarise open-order-blocked symbols for auditability.
+    if open_order_blocked_summary and not proposed_orders:
+        syms = [o["symbol"] for o in open_order_blocked_summary]
+        no_trade_reasons.append(f"open_order_blocked_at_planning: {syms}")
+    elif open_order_blocked_summary:
+        syms = [o["symbol"] for o in open_order_blocked_summary]
+        no_trade_reasons.append(f"open_order_blocked_at_planning(non_blocking): {syms}")
+
     if not proposed_orders and not no_trade_reasons:
         no_trade_reasons.append("no_actionable_orders")
 
@@ -352,6 +412,7 @@ def build_trade_plan(
         "proposed_orders": proposed_orders,
         "blocked_symbols": blocked_symbols,
         "spread_blocked_at_planning": spread_blocked_summary,
+        "open_order_blocked_at_planning": open_order_blocked_summary,
         "orders_run_capped_at_planning": [
             {"symbol": o["symbol"], "skip_reason": o.get("skip_reason", "")}
             for o in orders_run_capped

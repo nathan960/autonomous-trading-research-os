@@ -105,6 +105,23 @@ def main(approve_paper: bool = False) -> int:
     else:
         positions = account_snapshot.get("positions", [])
 
+    # Open orders snapshot — optional, degrade gracefully to empty
+    orders_snapshot: dict = {}
+    orders_snapshot_path = LATEST_DIR / "orders_snapshot.json"
+    if orders_snapshot_path.exists():
+        try:
+            orders_snapshot = _load_json(orders_snapshot_path, "orders_snapshot")
+            open_count = len([
+                o for o in orders_snapshot.get("orders", [])
+                if isinstance(o, dict) and o.get("symbol")
+            ])
+            print(f"  orders_snapshot  open_orders={open_count}")
+        except Exception as exc:
+            print(
+                f"  [generate_trade_plan] WARNING: could not load orders_snapshot: {exc}"
+                f" — using empty (execution gate will still catch duplicates)"
+            )
+
     print(f"  market_snapshot  generated_at={market_snapshot.get('generated_at', '?')}")
     print(f"  trigger_snapshot scanned_at={trigger_snapshot.get('scanned_at', '?')}")
     print(f"  account equity={account_snapshot.get('account', {}).get('equity', '?')}")
@@ -122,6 +139,7 @@ def main(approve_paper: bool = False) -> int:
             execution_policy=execution_policy,
             sector_map=sector_map,
             approve_paper=approve_paper,
+            orders_snapshot=orders_snapshot,
         )
     except Exception as exc:
         print(f"[generate_trade_plan] ERROR building plan: {exc}", file=sys.stderr)
