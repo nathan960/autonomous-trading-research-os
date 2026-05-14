@@ -1,11 +1,8 @@
 {
-  "all_gates_pass": false,
-  "blocked_reason": "gate(s) failed: ['CANONICAL_SOURCE_INTEGRITY']",
-  "dry_run": false,
-  "execution_report_hash": "e3a237b772ef88ccf1788b9395b7f38ea1e04e436e230460b7d5a72497320bfa",
-  "failed_gates": [
-    "CANONICAL_SOURCE_INTEGRITY"
-  ],
+  "all_gates_pass": true,
+  "dry_run": true,
+  "execution_report_hash": "85910346df9cb8ed5d61135a9523ed95761504516bfbd688bdcdc31895ec5be5",
+  "failed_gates": [],
   "gate_results": [
     {
       "detail": null,
@@ -18,9 +15,9 @@
       "passes": true
     },
     {
-      "detail": "mock/invalid snapshot source(s) detected: account_snapshot='unknown'; positions_snapshot='unknown'; orders_snapshot='unknown'. Run live Data Refresh (refresh_data.py without --dry-run) before paper execution.",
+      "detail": null,
       "gate_id": "CANONICAL_SOURCE_INTEGRITY",
-      "passes": false
+      "passes": true
     },
     {
       "detail": null,
@@ -93,11 +90,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-05-14T13:55:04Z",
+  "generated_at": "2026-05-14T14:16:25Z",
+  "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
-  "orders_validated": [],
-  "plan_id": "trade_plan-20260514T135503-484a3f03",
-  "run_id": "execution-20260514T135504-19cce5c5",
-  "status": "PAPER_FAIL",
-  "trade_plan_hash": "2efbed265751d3233eb8a1511f9b4d8f6cfdc0226d9e3f613addc0913576d579"
+  "orders_validated": [
+    {
+      "client_order_id": "TOS-20260514T141625-EQIX-BUY",
+      "execution_ready": true,
+      "limit_price": 1073.13,
+      "notional": 25.0,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "EQIX",
+      "target_weight": 0.12,
+      "validation_skip_reason": null
+    }
+  ],
+  "plan_id": "trade_plan-20260514T141625-a3944e26",
+  "run_id": "execution-20260514T141625-7f7875ec",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "c4f4465fc7519aeccc2287525953fd7d5841f105ec69ca9ff68d4391c3bef14d"
 }
