@@ -127,6 +127,20 @@ def load_trade_plan_history(history_dir: Path) -> dict:
     return index
 
 
+def load_trigger_snapshot_history(history_dir: Path) -> dict:
+    """Build {trigger_snapshot_hash: full_snapshot} from data/history/trigger_snapshots/*.json."""
+    index: dict = {}
+    snaps_dir = history_dir / "trigger_snapshots"
+    if not snaps_dir.is_dir():
+        return index
+    for f in sorted(snaps_dir.glob("*.json")):
+        data = _load_json(f, {})
+        h = data.get("trigger_snapshot_hash")
+        if h:
+            index[h] = data
+    return index
+
+
 def load_order_records(history_dir: Path) -> dict:
     """Build {client_order_id: order_record} from history/orders/TOS-*.json files."""
     index: dict = {}
@@ -206,18 +220,22 @@ def infer_trigger_ids(
     symbol: str,
     trigger_entry: Optional[dict],
     trigger_snapshot: dict,
+    archived_snapshot: Optional[dict] = None,
 ) -> tuple:
     """Infer trigger_ids passed by symbol at fill time.
 
     Returns (trigger_ids_list_or_none, source_string_or_none).
 
     Never invents IDs — returns None if evidence is insufficient.
+
+    Priority: archived_snapshot (exact fill-time) > trigger_snapshot (current) > JSONL entry.
     """
-    # From current trigger snapshot symbol_results (most reliable per-trigger data)
-    sym_result = (trigger_snapshot.get("symbol_results") or {}).get(symbol)
-    if sym_result and sym_result.get("passes"):
+    def _ids_from_snapshot(snap: dict, source: str) -> Optional[tuple]:
+        sym_result = (snap.get("symbol_results") or {}).get(symbol)
+        if not sym_result or not sym_result.get("passes"):
+            return None
         ids = []
-        if (trigger_snapshot.get("regime") or {}).get("risk_on"):
+        if (snap.get("regime") or {}).get("risk_on"):
             ids.append("SPY_REGIME_200DMA_V1")
         for sub_key, id_key in (
             ("spread", "trigger_id"),
@@ -232,8 +250,18 @@ def infer_trigger_ids(
         atr = sym_result.get("atr") or {}
         if atr.get("signal_id"):
             ids.append(atr["signal_id"])
-        if ids:
-            return (sorted(set(ids)), "from_current_trigger_snapshot")
+        return (sorted(set(ids)), source) if ids else None
+
+    # Archived snapshot: exact fill-time data (most accurate)
+    if archived_snapshot:
+        result = _ids_from_snapshot(archived_snapshot, "from_archived_trigger_snapshot")
+        if result:
+            return result
+
+    # Current trigger snapshot symbol_results
+    result = _ids_from_snapshot(trigger_snapshot, "from_current_trigger_snapshot")
+    if result:
+        return result
 
     # From JSONL entry: if symbol was in candidates (passed all eligibility checks),
     # infer it passed all ELIGIBILITY_TRIGGER_IDS. This is safe because candidates
@@ -260,25 +288,43 @@ def _candidate_metadata(
     symbol: str,
     trigger_entry: Optional[dict],
     trigger_snapshot: dict,
+    archived_snapshot: Optional[dict] = None,
 ) -> dict:
-    """Extract candidate rank, source, and momentum score."""
+    """Extract candidate rank, source, and momentum score.
+
+    Priority: archived_snapshot (exact fill-time) > JSONL trigger_entry.
+    Momentum score falls back to current snapshot when not available from archived.
+    """
     candidate_rank: Optional[int] = None
     candidate_source: Optional[str] = None
     momentum_score: Optional[float] = None
 
-    if trigger_entry:
-        selected = trigger_entry.get("selected") or []
-        candidates = trigger_entry.get("candidates") or []
+    # Archived snapshot provides exact fill-time rank and momentum
+    if archived_snapshot:
+        selected = archived_snapshot.get("selected") or []
+        candidates_list = archived_snapshot.get("candidates") or []
         if symbol in selected:
             candidate_rank = selected.index(symbol)
             candidate_source = "selected"
-        elif symbol in candidates:
+        elif symbol in candidates_list:
+            candidate_source = "candidates_not_selected"
+        sym_result = (archived_snapshot.get("symbol_results") or {}).get(symbol) or {}
+        mom = sym_result.get("momentum") or {}
+        momentum_score = _safe_float(mom.get("momentum_score"))
+    elif trigger_entry:
+        selected = trigger_entry.get("selected") or []
+        candidates_list = trigger_entry.get("candidates") or []
+        if symbol in selected:
+            candidate_rank = selected.index(symbol)
+            candidate_source = "selected"
+        elif symbol in candidates_list:
             candidate_source = "candidates_not_selected"
 
-    # Momentum score from current snapshot (best available even if stale)
-    sym_result = (trigger_snapshot.get("symbol_results") or {}).get(symbol) or {}
-    mom = sym_result.get("momentum") or {}
-    momentum_score = _safe_float(mom.get("momentum_score"))
+    # Fallback: momentum from current snapshot when not set from archived data
+    if momentum_score is None:
+        sym_result = (trigger_snapshot.get("symbol_results") or {}).get(symbol) or {}
+        mom = sym_result.get("momentum") or {}
+        momentum_score = _safe_float(mom.get("momentum_score"))
 
     return {
         "candidate_rank": candidate_rank,
@@ -300,10 +346,14 @@ def build_lineage_record(
     outcome_by_cid: dict,
     linked_at: str,
     trade_plan_history: Optional[dict] = None,
+    trigger_snapshot_history: Optional[dict] = None,
 ) -> dict:
     """Build a lineage record for one filled lifecycle entry.
 
     Never submits or approves anything. Pure computation.
+
+    trigger_snapshot_history: {hash: full_snapshot} from load_trigger_snapshot_history().
+    Provides exact fill-time trigger data (momentum scores, candidate ranks, trigger IDs).
     """
     cid: str = lifecycle.get("client_order_id", "")
     symbol: str = lifecycle.get("symbol", "")
@@ -330,11 +380,20 @@ def build_lineage_record(
         trade_plan_history=trade_plan_history,
     )
 
-    # Trigger ID inference
-    trigger_ids, ids_source = infer_trigger_ids(symbol, trigger_entry, trigger_snapshot)
+    # Look up archived trigger snapshot for exact fill-time data
+    archived_snapshot: Optional[dict] = None
+    if trigger_hash and trigger_snapshot_history:
+        archived_snapshot = trigger_snapshot_history.get(trigger_hash)
 
-    # Candidate metadata
-    cand = _candidate_metadata(symbol, trigger_entry, trigger_snapshot)
+    # Trigger ID inference (prefers archived snapshot, falls back to current/JSONL)
+    trigger_ids, ids_source = infer_trigger_ids(
+        symbol, trigger_entry, trigger_snapshot, archived_snapshot=archived_snapshot
+    )
+
+    # Candidate metadata (prefers archived snapshot for exact rank and momentum)
+    cand = _candidate_metadata(
+        symbol, trigger_entry, trigger_snapshot, archived_snapshot=archived_snapshot
+    )
 
     # Target data — from current plan if it matches, otherwise from archived history
     target_weight: Optional[float] = None
@@ -386,8 +445,8 @@ def build_lineage_record(
     if lineage_status == LINEAGE_STATUS_PARTIAL_NO_HASH:
         lineage_note = (
             f"trigger_snapshot_hash not recoverable for plan_id={plan_id!r}. "
-            "Trade plan history is not persisted to data/history/; no JSONL entry found "
-            "before filled_at. Save trade plans to history to improve lineage completeness."
+            "No archived trade plan found and no matching trigger JSONL entry before filled_at. "
+            "Orders submitted before Paper Ops v2 archiving may remain partial."
         )
     elif lineage_status == LINEAGE_STATUS_PARTIAL_NO_IDS:
         lineage_note = (
@@ -456,11 +515,14 @@ def build_lineage_snapshot(
     trigger_snapshot: dict,
     outcome_snapshot: dict,
     trade_plan_history: Optional[dict] = None,
+    trigger_snapshot_history: Optional[dict] = None,
 ) -> dict:
     """Build a complete lineage snapshot from all data sources.
 
     Only filled and partially_filled lifecycles produce lineage records.
     Deduped by client_order_id — latest checked_at wins.
+
+    trigger_snapshot_history: {hash: full_snapshot} from load_trigger_snapshot_history().
 
     Never submits anything.
     """
@@ -490,6 +552,7 @@ def build_lineage_snapshot(
             outcome_by_cid=outcome_by_cid,
             linked_at=linked_at,
             trade_plan_history=trade_plan_history,
+            trigger_snapshot_history=trigger_snapshot_history,
         )
         records_by_cid[cid] = record
 

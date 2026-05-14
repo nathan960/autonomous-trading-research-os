@@ -40,6 +40,7 @@ from trading_os.research.lineage import (
     load_execution_index,
     load_trade_plan_history,
     load_trigger_history_lines,
+    load_trigger_snapshot_history,
     write_lineage_snapshot,
 )
 
@@ -99,6 +100,10 @@ def main() -> int:
     trade_plan_history = load_trade_plan_history(HISTORY_DIR)
     print(f"  trade plan history loaded: {len(trade_plan_history)} plans")
 
+    # Load archived trigger snapshots — enables rich trigger data (IDs, rank, momentum)
+    trigger_snapshot_history = load_trigger_snapshot_history(HISTORY_DIR)
+    print(f"  trigger snapshot history loaded: {len(trigger_snapshot_history)} snapshots")
+
     try:
         snapshot = build_lineage_snapshot(
             monitor_report=monitor_report,
@@ -108,6 +113,7 @@ def main() -> int:
             trigger_snapshot=trigger_snapshot,
             outcome_snapshot=outcome_snapshot,
             trade_plan_history=trade_plan_history,
+            trigger_snapshot_history=trigger_snapshot_history,
         )
     except Exception as exc:
         print(f"[build_lineage] ERROR building snapshot: {exc}", file=sys.stderr)

@@ -244,6 +244,7 @@ def main() -> int:
         positions=positions,
         clock=clock,
         trade_plan_path=_TRADE_PLAN_PATH if _TRADE_PLAN_PATH.exists() else None,
+        trade_plans_dir=HISTORY_DIR / "trade_plans",
         dry_run=args.dry_run,
     )
 

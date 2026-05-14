@@ -346,6 +346,7 @@ def run_paper_execution(
         "generated_at": generated_at,
         "dry_run": False,
         "trade_plan_hash": trade_plan.get("trade_plan_hash"),
+        "trigger_snapshot_hash": trade_plan.get("trigger_snapshot_hash"),
         "gate_results": [],
         "all_gates_pass": False,
         "failed_gates": [],

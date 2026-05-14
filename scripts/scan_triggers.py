@@ -212,6 +212,14 @@ def main(dry_run: bool = False) -> int:
     LATEST_DIR.mkdir(parents=True, exist_ok=True)
     _write_json(LATEST_DIR / "trigger_snapshot.json", trigger_snapshot)
 
+    # Archive full snapshot by hash so lineage can recover rich trigger data
+    snap_hash = trigger_snapshot.get("trigger_snapshot_hash")
+    if snap_hash:
+        _write_json(
+            HISTORY_DIR / "trigger_snapshots" / f"{snap_hash}.json",
+            trigger_snapshot,
+        )
+
     scanned_at = trigger_snapshot.get("scanned_at", utc_now_iso())
     date_str = scanned_at[:10]
     _TRIGGERS_HISTORY_DIR.mkdir(parents=True, exist_ok=True)

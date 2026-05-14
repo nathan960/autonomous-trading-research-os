@@ -246,7 +246,7 @@ def _write_json_atomic(path: Path, payload: dict) -> None:
 def build_plan_refs_index(executions_dir: Path) -> dict:
     """Scan execution history for paper runs; build {client_order_id: plan_refs}.
 
-    plan_refs = {plan_id, run_id, trade_plan_hash}
+    plan_refs = {plan_id, run_id, trade_plan_hash, trigger_snapshot_hash}
     """
     index: dict = {}
     if not executions_dir.exists():
@@ -259,6 +259,7 @@ def build_plan_refs_index(executions_dir: Path) -> dict:
         plan_id = report.get("plan_id")
         run_id = report.get("run_id")
         trade_plan_hash = report.get("trade_plan_hash")
+        trigger_snapshot_hash = report.get("trigger_snapshot_hash")
         for o in report.get("orders_submitted", []):
             cid = o.get("client_order_id")
             if cid:
@@ -266,6 +267,7 @@ def build_plan_refs_index(executions_dir: Path) -> dict:
                     "plan_id": plan_id,
                     "run_id": run_id,
                     "trade_plan_hash": trade_plan_hash,
+                    "trigger_snapshot_hash": trigger_snapshot_hash,
                 }
     return index
 
@@ -276,6 +278,24 @@ def find_trigger_snapshot_hash(trade_plan_path: Optional[Path], plan_id: Optiona
         return None
     try:
         plan = json.loads(trade_plan_path.read_text(encoding="utf-8"))
+        if plan.get("plan_id") == plan_id:
+            return plan.get("trigger_snapshot_hash")
+    except Exception:
+        pass
+    return None
+
+
+def find_trigger_hash_from_plans_dir(
+    plans_dir: Optional[Path], plan_id: Optional[str]
+) -> Optional[str]:
+    """Return trigger_snapshot_hash from an archived trade plan file by plan_id."""
+    if not plans_dir or not plan_id or not plans_dir.is_dir():
+        return None
+    plan_file = plans_dir / f"{plan_id}.json"
+    if not plan_file.exists():
+        return None
+    try:
+        plan = json.loads(plan_file.read_text(encoding="utf-8"))
         if plan.get("plan_id") == plan_id:
             return plan.get("trigger_snapshot_hash")
     except Exception:
@@ -477,6 +497,7 @@ def run_order_monitor(
     positions: list,
     clock: dict,
     trade_plan_path: Optional[Path] = None,
+    trade_plans_dir: Optional[Path] = None,
     dry_run: bool = False,
 ) -> dict:
     """Run the full order lifecycle monitor.
@@ -490,6 +511,7 @@ def run_order_monitor(
         positions:          Current positions list (from account state or snapshot).
         clock:              Broker clock dict.
         trade_plan_path:    Path to data/latest/trade_plan.json (for trigger_snapshot_hash).
+        trade_plans_dir:    Path to data/history/trade_plans/ (archived plans fallback).
         dry_run:            If True, broker_lookup is from stored snapshot (noted in report).
 
     Returns a report dict. Never submits, cancels, or replaces orders.
@@ -516,10 +538,20 @@ def run_order_monitor(
         client_order_id = audit.get("client_order_id", "")
         plan_refs = plan_refs_index.get(client_order_id)
 
+        # Three-tier trigger_snapshot_hash lookup (most reliable first):
+        # 1. Stored in execution report (requires paper_executor.py to write it)
+        # 2. Current trade plan if plan_id matches
+        # 3. Archived trade plan file in data/history/trade_plans/
         trigger_hash = None
         if plan_refs:
+            trigger_hash = plan_refs.get("trigger_snapshot_hash")
+        if not trigger_hash:
             trigger_hash = find_trigger_snapshot_hash(
-                trade_plan_path, plan_refs.get("plan_id")
+                trade_plan_path, plan_refs.get("plan_id") if plan_refs else None
+            )
+        if not trigger_hash and plan_refs:
+            trigger_hash = find_trigger_hash_from_plans_dir(
+                trade_plans_dir, plan_refs.get("plan_id")
             )
 
         lifecycle = build_order_lifecycle(

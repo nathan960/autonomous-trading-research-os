@@ -1,0 +1,161 @@
+{
+  "blocking_issues": [
+    "Only 13 filled order(s). Need at least 20 before reviewing promotion.",
+    "1 open/active order(s) still pending. Wait for settlement or cancel via cancel_paper_order.py before promotion review."
+  ],
+  "checks": [
+    {
+      "blocking": true,
+      "check_id": "FILLED_ORDERS_MIN_20",
+      "detail": "Only 13 filled order(s). Need at least 20 before reviewing promotion.",
+      "evidence": "orders_filled=13",
+      "passes": false,
+      "required": ">= 20"
+    },
+    {
+      "blocking": true,
+      "check_id": "NO_MISSING_ORDERS",
+      "detail": null,
+      "evidence": "orders_missing=0",
+      "passes": true,
+      "required": "== 0"
+    },
+    {
+      "blocking": true,
+      "check_id": "NO_REJECTED_ORDERS",
+      "detail": null,
+      "evidence": "orders_rejected=0",
+      "passes": true,
+      "required": "== 0"
+    },
+    {
+      "blocking": true,
+      "check_id": "SOURCE_INTEGRITY_OK",
+      "detail": null,
+      "evidence": "source_integrity_status=ok",
+      "passes": true,
+      "required": "== 'ok'"
+    },
+    {
+      "blocking": true,
+      "check_id": "NO_SYSTEM_BLOCKING_ISSUES",
+      "detail": null,
+      "evidence": "blocking_issues=[]",
+      "passes": true,
+      "required": "empty list"
+    },
+    {
+      "blocking": true,
+      "check_id": "OPEN_ORDERS_ZERO",
+      "detail": "1 open/active order(s) still pending. Wait for settlement or cancel via cancel_paper_order.py before promotion review.",
+      "evidence": "orders_active=1",
+      "passes": false,
+      "required": "== 0"
+    },
+    {
+      "blocking": true,
+      "check_id": "DRAWDOWN_NOT_BREACHED",
+      "detail": null,
+      "evidence": "drawdown=-0.0000 block_threshold=-0.1",
+      "passes": true,
+      "required": "> -0.1"
+    },
+    {
+      "blocking": true,
+      "check_id": "DAILY_SUMMARIES_PRESENT",
+      "detail": null,
+      "evidence": "daily_summary_history_count=28",
+      "passes": true,
+      "required": ">= 1"
+    },
+    {
+      "blocking": true,
+      "check_id": "WEEKLY_REVIEW_PRESENT",
+      "detail": null,
+      "evidence": "weekly_review_history_count=6",
+      "passes": true,
+      "required": ">= 1"
+    },
+    {
+      "blocking": true,
+      "check_id": "OUTCOME_INTEGRITY_OK",
+      "detail": null,
+      "evidence": "outcome_snapshot.source_integrity_status=ok",
+      "passes": true,
+      "required": "== 'ok'"
+    },
+    {
+      "blocking": true,
+      "check_id": "TRIGGER_PERFORMANCE_OK",
+      "detail": null,
+      "evidence": "trigger_performance.status=ok",
+      "passes": true,
+      "required": "== 'ok'"
+    },
+    {
+      "blocking": true,
+      "check_id": "MAX_ORDERS_PER_RUN_ONE",
+      "detail": null,
+      "evidence": "max_orders_per_run=1",
+      "passes": true,
+      "required": "== 1"
+    },
+    {
+      "blocking": false,
+      "check_id": "DAILY_ORDER_LIMIT_RESPECTED",
+      "detail": "Daily order limit reached today (max=3, violations=['EQIX(count=4,limit=1)', 'JNJ(count=1,limit=1)', 'WMT(count=1,limit=1)']). Churn guard is now active and will prevent future violations. Ensure churn guard config is in place before promotion.",
+      "evidence": "today_limit_reached=True violations=['EQIX(count=4,limit=1)', 'JNJ(count=1,limit=1)', 'WMT(count=1,limit=1)'] max_total_paper_orders_per_day=3",
+      "passes": false,
+      "required": "daily limits not exceeded"
+    },
+    {
+      "blocking": false,
+      "check_id": "LINEAGE_ADEQUATE",
+      "detail": "Lineage completeness ratio 0.0% (0/13). Older fills have partial lineage \u2014 trade plan archiving to data/history/trade_plans/ is now active so future fills will be complete. Run build_lineage.py to update after more fills are archived.",
+      "evidence": "lineage_count=13 complete_count=0 ratio=0.00",
+      "passes": false,
+      "required": ">= 0.5 complete ratio"
+    }
+  ],
+  "current_phase": "PHASE_1_TINY_MANUAL",
+  "eligible_for_next_phase": false,
+  "evidence_summary": {
+    "active_orders_count": 1,
+    "daily_order_limit_violations": [
+      "EQIX(count=4,limit=1)",
+      "JNJ(count=1,limit=1)",
+      "WMT(count=1,limit=1)"
+    ],
+    "daily_summaries_count": 28,
+    "drawdown": -7e-06,
+    "filled_orders_count": 13,
+    "lineage_complete_count": 0,
+    "lineage_complete_ratio": 0.0,
+    "lineage_count": 13,
+    "lineage_note": "13 fill(s) have partial lineage. Trade plan archiving is now active \u2014 future fills will resolve to COMPLETE.",
+    "lineage_partial_count": 13,
+    "max_notional_per_order": 25.0,
+    "max_orders_per_run": 1,
+    "max_total_paper_orders_per_day": 3,
+    "missing_orders_count": 0,
+    "outcome_integrity_status": "ok",
+    "rejected_orders_count": 0,
+    "source_integrity_status": "ok",
+    "weekly_reviews_count": 6
+  },
+  "generated_at": "2026-05-14T18:54:46Z",
+  "next_phase": "PHASE_2_SMALL_MANUAL",
+  "phase_gate_hash": "8b6d1e50e271ec50",
+  "recommendation": "stay_at_phase",
+  "recommended_phase": "PHASE_1_TINY_MANUAL",
+  "required_human_actions": [
+    "Resolve all blocking issues before requesting promotion review.",
+    "Re-run phase_gate.py after resolving blockers."
+  ],
+  "run_id": "phase_gate-20260514T185446-d482be60",
+  "safety_note": "No config was changed. No orders were placed. No paper execution was enabled. No trade plans were approved. No scheduled execution was enabled.",
+  "warnings": [
+    "Daily order limit reached today (max=3, violations=['EQIX(count=4,limit=1)', 'JNJ(count=1,limit=1)', 'WMT(count=1,limit=1)']). Churn guard is now active and will prevent future violations. Ensure churn guard config is in place before promotion.",
+    "Lineage completeness ratio 0.0% (0/13). Older fills have partial lineage \u2014 trade plan archiving to data/history/trade_plans/ is now active so future fills will be complete. Run build_lineage.py to update after more fills are archived."
+  ]
+}

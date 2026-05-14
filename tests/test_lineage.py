@@ -31,6 +31,7 @@ from trading_os.research.lineage import (
     infer_trigger_ids,
     load_execution_index,
     load_trigger_history_lines,
+    load_trigger_snapshot_history,
     recover_trigger_snapshot_hash,
     write_lineage_snapshot,
 )
@@ -829,3 +830,480 @@ class TestWriteLineageSnapshot:
         content = (mem / "SIGNAL-LOG.md").read_text(encoding="utf-8")
         assert "Lineage Snapshot" in content
         assert "# existing" in content  # original preserved
+
+
+# ---------------------------------------------------------------------------
+# load_trigger_snapshot_history
+# ---------------------------------------------------------------------------
+
+class TestLoadTriggerSnapshotHistory:
+    def test_loads_snapshots_by_hash(self, tmp_path):
+        snaps_dir = tmp_path / "trigger_snapshots"
+        snaps_dir.mkdir()
+        snap = {"trigger_snapshot_hash": "hash_abc123", "scanned_at": "2026-05-14T15:00:00Z"}
+        (snaps_dir / "hash_abc123.json").write_text(json.dumps(snap), encoding="utf-8")
+
+        index = load_trigger_snapshot_history(tmp_path)
+        assert "hash_abc123" in index
+        assert index["hash_abc123"]["scanned_at"] == "2026-05-14T15:00:00Z"
+
+    def test_returns_empty_when_no_dir(self, tmp_path):
+        index = load_trigger_snapshot_history(tmp_path)
+        assert index == {}
+
+    def test_ignores_files_without_hash(self, tmp_path):
+        snaps_dir = tmp_path / "trigger_snapshots"
+        snaps_dir.mkdir()
+        (snaps_dir / "bad.json").write_text(json.dumps({"no_hash": True}), encoding="utf-8")
+        index = load_trigger_snapshot_history(tmp_path)
+        assert index == {}
+
+    def test_multiple_snapshots(self, tmp_path):
+        snaps_dir = tmp_path / "trigger_snapshots"
+        snaps_dir.mkdir()
+        for h in ("hash1", "hash2", "hash3"):
+            snap = {"trigger_snapshot_hash": h}
+            (snaps_dir / f"{h}.json").write_text(json.dumps(snap), encoding="utf-8")
+        index = load_trigger_snapshot_history(tmp_path)
+        assert len(index) == 3
+        assert all(h in index for h in ("hash1", "hash2", "hash3"))
+
+
+# ---------------------------------------------------------------------------
+# infer_trigger_ids with archived_snapshot
+# ---------------------------------------------------------------------------
+
+class TestInferTriggerIdsArchived:
+    def _archived_snap(self, symbol: str = "WELL", momentum_score: float = 0.456) -> dict:
+        return {
+            "trigger_snapshot_hash": "archived_hash_xyz",
+            "scanned_at": "2026-05-14T15:30:00Z",
+            "regime": {"risk_on": True},
+            "selected": [symbol],
+            "candidates": [symbol],
+            "symbol_results": {
+                symbol: {
+                    "passes": True,
+                    "spread": {"trigger_id": "SPREAD_GATE_V1", "passes": True},
+                    "trend": {"trigger_id": "STOCK_TREND_200DMA_V1", "passes": True},
+                    "momentum": {
+                        "trigger_id": "MOMENTUM_BLEND_6M_12M_V1",
+                        "passes": True,
+                        "momentum_score": momentum_score,
+                    },
+                    "liquidity": {"trigger_id": "LIQUIDITY_GATE_V1", "passes": True},
+                    "atr": {"signal_id": "ATR_SIZING_V1"},
+                }
+            },
+        }
+
+    def test_archived_snapshot_preferred_over_current(self):
+        archived = self._archived_snap("WELL", momentum_score=0.456)
+        current = _trigger_snapshot("WELL", passes=False)  # current says symbol doesn't pass
+        ids, source = infer_trigger_ids("WELL", None, current, archived_snapshot=archived)
+        assert ids is not None
+        assert source == "from_archived_trigger_snapshot"
+
+    def test_archived_source_label_correct(self):
+        archived = self._archived_snap()
+        ids, source = infer_trigger_ids("WELL", None, {}, archived_snapshot=archived)
+        assert source == "from_archived_trigger_snapshot"
+        assert "SPREAD_GATE_V1" in ids
+        assert "MOMENTUM_BLEND_6M_12M_V1" in ids
+
+    def test_falls_back_to_current_when_no_archived(self):
+        current = _trigger_snapshot("WELL", passes=True)
+        ids, source = infer_trigger_ids("WELL", None, current)
+        assert source == "from_current_trigger_snapshot"
+
+    def test_falls_back_to_jsonl_when_archived_symbol_not_found(self):
+        archived = self._archived_snap("OTHER_SYM")  # archived has different symbol
+        entry = _trigger_entry("WELL", risk_on=True)
+        ids, source = infer_trigger_ids("WELL", entry, {}, archived_snapshot=archived)
+        assert ids is not None
+        assert "inferred_from" in source
+
+
+# ---------------------------------------------------------------------------
+# _candidate_metadata with archived_snapshot (via build_lineage_record)
+# ---------------------------------------------------------------------------
+
+class TestCandidateMetadataArchived:
+    PLAN_ID = "trade_plan-20260514T160000-arch001"
+    TRIGGER_HASH = "archived_trigger_hash_meta"
+
+    def _archived_snap(self) -> dict:
+        return {
+            "trigger_snapshot_hash": self.TRIGGER_HASH,
+            "scanned_at": "2026-05-14T15:30:00Z",
+            "regime": {"risk_on": True},
+            "selected": ["OTHER", "WELL"],
+            "candidates": ["OTHER", "WELL", "UNH"],
+            "symbol_results": {
+                "WELL": {
+                    "passes": True,
+                    "spread": {"trigger_id": "SPREAD_GATE_V1", "passes": True},
+                    "trend": {"trigger_id": "STOCK_TREND_200DMA_V1", "passes": True},
+                    "momentum": {
+                        "trigger_id": "MOMENTUM_BLEND_6M_12M_V1",
+                        "passes": True,
+                        "momentum_score": 0.789,
+                    },
+                    "liquidity": {"trigger_id": "LIQUIDITY_GATE_V1", "passes": True},
+                    "atr": {"signal_id": "ATR_SIZING_V1"},
+                }
+            },
+        }
+
+    def _lifecycle_with_fill(self) -> dict:
+        return {
+            "client_order_id": "TOS-20260514T160000-WELL-BUY",
+            "broker_order_id": "broker-meta-001",
+            "symbol": "WELL",
+            "side": "buy",
+            "lifecycle_status": "filled",
+            "broker_status": "filled",
+            "limit_price": 220.0,
+            "notional": 25.0,
+            "submitted_at": "2026-05-14T16:00:00Z",
+            "fill": {
+                "plan_id": self.PLAN_ID,
+                "run_id": "execution-20260514T160001-meta",
+                "trade_plan_hash": "hash_meta_plan",
+                "trigger_snapshot_hash": self.TRIGGER_HASH,
+                "fill_price": 219.5,
+                "filled_qty": 0.114,
+                "filled_notional": 25.0,
+                "filled_at": "2026-05-14T16:01:00Z",
+                "position_confirmed": True,
+            },
+        }
+
+    def test_candidate_rank_from_archived_snapshot(self):
+        trade_plan_history = {
+            self.PLAN_ID: {
+                "plan_id": self.PLAN_ID,
+                "trigger_snapshot_hash": self.TRIGGER_HASH,
+            }
+        }
+        trigger_snapshot_history = {self.TRIGGER_HASH: self._archived_snap()}
+        lc = self._lifecycle_with_fill()
+
+        record = build_lineage_record(
+            lifecycle=lc,
+            execution_index={},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_by_cid={},
+            linked_at="2026-05-14T20:00:00Z",
+            trade_plan_history=trade_plan_history,
+            trigger_snapshot_history=trigger_snapshot_history,
+        )
+        # WELL is at index 1 in selected ["OTHER", "WELL"]
+        assert record["candidate_rank"] == 1
+        assert record["candidate_source"] == "selected"
+
+    def test_momentum_score_from_archived_snapshot(self):
+        trade_plan_history = {
+            self.PLAN_ID: {
+                "plan_id": self.PLAN_ID,
+                "trigger_snapshot_hash": self.TRIGGER_HASH,
+            }
+        }
+        trigger_snapshot_history = {self.TRIGGER_HASH: self._archived_snap()}
+        lc = self._lifecycle_with_fill()
+
+        record = build_lineage_record(
+            lifecycle=lc,
+            execution_index={},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_by_cid={},
+            linked_at="2026-05-14T20:00:00Z",
+            trade_plan_history=trade_plan_history,
+            trigger_snapshot_history=trigger_snapshot_history,
+        )
+        assert record["momentum_score"] == pytest.approx(0.789)
+
+
+# ---------------------------------------------------------------------------
+# Requirement 7: new order after archival gets lineage_status=complete
+# ---------------------------------------------------------------------------
+
+class TestNewOrderAfterArchivalGetsCompleteLineage:
+    """Prove that an order submitted after Paper Ops v2 archiving is active
+    gets lineage_status=complete with full trigger metadata."""
+
+    PLAN_ID = "trade_plan-20260514T160035-new123"
+    RUN_ID = "execution-20260514T160036-new456"
+    TRIGGER_HASH = "archived_trigger_hash_xyz789"
+    CLIENT_ORDER_ID = "TOS-20260514T160035-WELL-BUY"
+
+    def _archived_trigger_snapshot(self) -> dict:
+        return {
+            "trigger_snapshot_hash": self.TRIGGER_HASH,
+            "scanned_at": "2026-05-14T15:30:00Z",
+            "regime": {"risk_on": True},
+            "selected": ["WELL"],
+            "candidates": ["WELL", "UNH"],
+            "symbol_results": {
+                "WELL": {
+                    "passes": True,
+                    "spread": {"trigger_id": "SPREAD_GATE_V1", "passes": True},
+                    "trend": {"trigger_id": "STOCK_TREND_200DMA_V1", "passes": True},
+                    "momentum": {
+                        "trigger_id": "MOMENTUM_BLEND_6M_12M_V1",
+                        "passes": True,
+                        "momentum_score": 0.456,
+                    },
+                    "liquidity": {"trigger_id": "LIQUIDITY_GATE_V1", "passes": True},
+                    "atr": {"signal_id": "ATR_SIZING_V1"},
+                }
+            },
+        }
+
+    def _archived_trade_plan(self) -> dict:
+        return {
+            "plan_id": self.PLAN_ID,
+            "trigger_snapshot_hash": self.TRIGGER_HASH,
+            "trade_plan_hash": "hash_of_new_plan",
+            "targets": {
+                "WELL": {"weight": 0.12, "notional": 25.0, "reason": "risk_on_inverse_atr"}
+            },
+        }
+
+    def _lifecycle_with_fill(self) -> dict:
+        return {
+            "client_order_id": self.CLIENT_ORDER_ID,
+            "broker_order_id": "broker-new001",
+            "symbol": "WELL",
+            "side": "buy",
+            "lifecycle_status": "filled",
+            "broker_status": "filled",
+            "limit_price": 220.0,
+            "notional": 25.0,
+            "submitted_at": "2026-05-14T16:00:35Z",
+            "fill": {
+                "plan_id": self.PLAN_ID,
+                "run_id": self.RUN_ID,
+                "trade_plan_hash": "hash_of_new_plan",
+                "trigger_snapshot_hash": self.TRIGGER_HASH,
+                "fill_price": 219.5,
+                "filled_qty": 0.114,
+                "filled_notional": 25.0,
+                "filled_at": "2026-05-14T16:01:00Z",
+                "position_confirmed": True,
+            },
+        }
+
+    def test_complete_lineage_via_trade_plan_and_trigger_history(self):
+        """Order with archived trade plan + archived trigger snapshot → complete."""
+        trade_plan_history = {self.PLAN_ID: self._archived_trade_plan()}
+        trigger_snapshot_history = {self.TRIGGER_HASH: self._archived_trigger_snapshot()}
+        lc = self._lifecycle_with_fill()
+
+        record = build_lineage_record(
+            lifecycle=lc,
+            execution_index={},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_by_cid={},
+            linked_at="2026-05-14T20:00:00Z",
+            trade_plan_history=trade_plan_history,
+            trigger_snapshot_history=trigger_snapshot_history,
+        )
+
+        assert record["lineage_status"] == LINEAGE_STATUS_COMPLETE
+        assert record["trigger_snapshot_hash"] == self.TRIGGER_HASH
+        assert record["trigger_snapshot_hash_source"] == "from_trade_plan_history"
+
+    def test_trigger_ids_populated_from_archived_snapshot(self):
+        """Trigger IDs come from archived snapshot, not inferred from JSONL candidates."""
+        trade_plan_history = {self.PLAN_ID: self._archived_trade_plan()}
+        trigger_snapshot_history = {self.TRIGGER_HASH: self._archived_trigger_snapshot()}
+        lc = self._lifecycle_with_fill()
+
+        record = build_lineage_record(
+            lifecycle=lc,
+            execution_index={},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_by_cid={},
+            linked_at="2026-05-14T20:00:00Z",
+            trade_plan_history=trade_plan_history,
+            trigger_snapshot_history=trigger_snapshot_history,
+        )
+
+        assert record["trigger_ids"] is not None
+        assert "SPREAD_GATE_V1" in record["trigger_ids"]
+        assert "MOMENTUM_BLEND_6M_12M_V1" in record["trigger_ids"]
+        assert record["trigger_ids_source"] == "from_archived_trigger_snapshot"
+
+    def test_momentum_score_from_archived_snapshot(self):
+        trade_plan_history = {self.PLAN_ID: self._archived_trade_plan()}
+        trigger_snapshot_history = {self.TRIGGER_HASH: self._archived_trigger_snapshot()}
+        lc = self._lifecycle_with_fill()
+
+        record = build_lineage_record(
+            lifecycle=lc,
+            execution_index={},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_by_cid={},
+            linked_at="2026-05-14T20:00:00Z",
+            trade_plan_history=trade_plan_history,
+            trigger_snapshot_history=trigger_snapshot_history,
+        )
+
+        assert record["momentum_score"] == pytest.approx(0.456)
+
+    def test_candidate_rank_from_archived_snapshot(self):
+        trade_plan_history = {self.PLAN_ID: self._archived_trade_plan()}
+        trigger_snapshot_history = {self.TRIGGER_HASH: self._archived_trigger_snapshot()}
+        lc = self._lifecycle_with_fill()
+
+        record = build_lineage_record(
+            lifecycle=lc,
+            execution_index={},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_by_cid={},
+            linked_at="2026-05-14T20:00:00Z",
+            trade_plan_history=trade_plan_history,
+            trigger_snapshot_history=trigger_snapshot_history,
+        )
+
+        # WELL is rank 0 in selected=["WELL"]
+        assert record["candidate_rank"] == 0
+        assert record["candidate_source"] == "selected"
+
+    def test_complete_lineage_without_trigger_snapshot_history(self):
+        """Even without archived trigger snapshot, lineage is complete via trade plan."""
+        trade_plan_history = {self.PLAN_ID: self._archived_trade_plan()}
+        lc = self._lifecycle_with_fill()
+
+        record = build_lineage_record(
+            lifecycle=lc,
+            execution_index={},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_by_cid={},
+            linked_at="2026-05-14T20:00:00Z",
+            trade_plan_history=trade_plan_history,
+        )
+
+        assert record["lineage_status"] == LINEAGE_STATUS_COMPLETE
+        assert record["trigger_snapshot_hash"] == self.TRIGGER_HASH
+
+    def test_build_lineage_snapshot_complete_count(self):
+        """Full snapshot call produces complete_count=1, partial_count=0."""
+        trade_plan_history = {self.PLAN_ID: self._archived_trade_plan()}
+        trigger_snapshot_history = {self.TRIGGER_HASH: self._archived_trigger_snapshot()}
+        lc = self._lifecycle_with_fill()
+        monitor_report = {
+            "lifecycles": [lc],
+            "safety": {
+                "submit_order_called": False,
+                "cancel_order_called": False,
+                "replace_order_called": False,
+            },
+        }
+
+        snap = build_lineage_snapshot(
+            monitor_report=monitor_report,
+            execution_index={},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_snapshot={},
+            trade_plan_history=trade_plan_history,
+            trigger_snapshot_history=trigger_snapshot_history,
+        )
+
+        assert snap["complete_count"] == 1
+        assert snap["partial_count"] == 0
+        record = snap["lineage_records"][0]
+        assert record["lineage_status"] == LINEAGE_STATUS_COMPLETE
+        assert record["momentum_score"] == pytest.approx(0.456)
+
+    def test_old_order_without_archived_plan_stays_partial(self):
+        """Old orders (before archival was active) remain partial — not faked."""
+        old_lc = {
+            "client_order_id": "TOS-OLD-ORDER",
+            "broker_order_id": "broker-old",
+            "symbol": "XYZ",
+            "side": "buy",
+            "lifecycle_status": "filled",
+            "broker_status": "filled",
+            "limit_price": 50.0,
+            "notional": 25.0,
+            "submitted_at": "2026-04-01T16:00:00Z",
+            "fill": {
+                "plan_id": "old_plan_not_in_history",
+                "run_id": "old_run",
+                "trade_plan_hash": "old_hash",
+                "trigger_snapshot_hash": None,
+                "fill_price": 49.9,
+                "filled_qty": 0.5,
+                "filled_notional": 25.0,
+                "filled_at": "2026-04-01T16:01:00Z",
+                "position_confirmed": False,
+            },
+        }
+
+        record = build_lineage_record(
+            lifecycle=old_lc,
+            execution_index={},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_by_cid={},
+            linked_at="2026-05-14T20:00:00Z",
+            trade_plan_history={},
+            trigger_snapshot_history={},
+        )
+
+        assert record["lineage_status"] == LINEAGE_STATUS_PARTIAL_NO_HASH
+        assert record["trigger_snapshot_hash"] is None
+        assert record["lineage_note"] is not None
+
+    def test_proposed_order_details_from_execution_report(self):
+        """Proposed order details (notional, limit_price, side) come from execution report."""
+        execution_report = {
+            "run_id": self.RUN_ID,
+            "plan_id": self.PLAN_ID,
+            "orders_validated": [
+                {
+                    "symbol": "WELL",
+                    "side": "buy",
+                    "notional": 25.0,
+                    "limit_price": 220.0,
+                    "target_weight": 0.12,
+                }
+            ],
+        }
+        trade_plan_history = {self.PLAN_ID: self._archived_trade_plan()}
+        lc = self._lifecycle_with_fill()
+
+        record = build_lineage_record(
+            lifecycle=lc,
+            execution_index={self.RUN_ID: execution_report},
+            current_trade_plan={},
+            trigger_history_lines=[],
+            trigger_snapshot={},
+            outcome_by_cid={},
+            linked_at="2026-05-14T20:00:00Z",
+            trade_plan_history=trade_plan_history,
+        )
+
+        assert record["proposed_notional"] == pytest.approx(25.0)
+        assert record["proposed_limit_price"] == pytest.approx(220.0)
+        assert record["proposed_side"] == "buy"
+        assert record["proposed_target_weight"] == pytest.approx(0.12)

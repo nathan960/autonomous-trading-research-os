@@ -1,0 +1,100 @@
+name: Phase Gate Scorecard (Research Only)
+
+# Evidence-based promotion scorecard for paper operations phase review.
+# Reads local artifacts and config; writes scorecard and appends to
+# memory/PROMOTION-DECISIONS.md.
+#
+# Safety invariants hardcoded in this workflow:
+#   ENABLE_PAPER_EXECUTION=false  — execution is never possible from this path
+#   LIVE_TRADING_CONFIRMED=false  — live trading is never confirmed here
+#   execute_paper.py is never called
+#   trade plans are never approved
+#   risk_limits.json is never modified
+#   No broker API calls are made
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Fridays at 22:00 UTC (after market close and weekly review).
+    - cron: "0 22 * * 5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trading-os-main
+  cancel-in-progress: false
+
+jobs:
+  phase-gate:
+    runs-on: ubuntu-latest
+
+    env:
+      ENABLE_PAPER_EXECUTION: "false"
+      LIVE_TRADING_CONFIRMED: "false"
+      TRADING_MODE: paper
+      # No Alpaca keys needed — reads local artifacts and config only.
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Safety preflight
+        run: |
+          if [ "$ENABLE_PAPER_EXECUTION" = "true" ]; then
+            echo "::error::ENABLE_PAPER_EXECUTION must not be true in phase-gate workflow"
+            exit 1
+          fi
+          if [ "$LIVE_TRADING_CONFIRMED" = "true" ]; then
+            echo "::error::LIVE_TRADING_CONFIRMED must not be true"
+            exit 1
+          fi
+          # Confirm execute_paper.py is NOT called in this workflow
+          if grep -q "execute_paper" "$GITHUB_WORKFLOW"; then
+            echo "::error::execute_paper.py must not be referenced in this workflow"
+            exit 1
+          fi
+          echo "Safety preflight passed: ENABLE_PAPER_EXECUTION=false LIVE_TRADING_CONFIRMED=false"
+
+      - name: Run phase gate scorecard
+        run: python scripts/phase_gate.py
+
+      - name: Commit scorecard artifacts
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          echo "Git status before staging:"
+          git status --short
+
+          git add -A data/latest/phase_gate.json data/history/runs memory/PROMOTION-DECISIONS.md
+
+          echo "Git status after staging:"
+          git status --short
+
+          if git diff --cached --quiet; then
+            echo "No phase gate artifacts changed."
+            exit 0
+          fi
+
+          git commit -m "research: phase gate scorecard run=${{ github.run_id }}"
+
+          if ! git pull --rebase --autostash origin main; then
+            git rebase --abort || true
+            echo "::warning::Conflict during rebase. Run rebuild_memory_logs.py to regenerate memory logs if needed."
+            exit 1
+          fi
+          git push
