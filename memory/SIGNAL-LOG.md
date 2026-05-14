@@ -19981,3 +19981,39 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
 - EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
 
 ---
+
+## scan_triggers candidates  (2026-05-14T14:56:25Z)
+
+```
+  AMD       score=1.9585  atr_pct=0.0447  [SELECTED]
+  GOOGL     score=0.9288  atr_pct=0.0238  [SELECTED]
+  CSCO      score=0.7504  atr_pct=0.0262  [SELECTED]
+  FCX       score=0.6244  atr_pct=0.0408  [SELECTED]
+  AVGO      score=0.5560  atr_pct=0.0334  [candidate]
+  NVDA      score=0.5122  atr_pct=0.0288  [candidate]
+  SLB       score=0.5049  atr_pct=0.0292  [SELECTED]
+  MRK       score=0.3600  atr_pct=0.0231  [SELECTED]
+  XOM       score=0.3245  atr_pct=0.0270  [SELECTED]
+  WMT       score=0.3227  atr_pct=0.0198  [SELECTED]
+  EQIX      score=0.2790  atr_pct=0.0185  [SELECTED]
+  AAPL      score=0.2430  atr_pct=0.0203  [candidate]
+  NEE       score=0.2068  atr_pct=0.0216  [SELECTED]
+  DE        score=0.1950  atr_pct=0.0245  [candidate]
+  TSLA      score=0.1725  atr_pct=0.0358  [candidate]
+  AMZN      score=0.1701  atr_pct=0.0246  [candidate]
+  AEP       score=0.1614  atr_pct=0.0190  [candidate]
+  KO        score=0.1451  atr_pct=0.0158  [candidate]
+  O         score=0.1006  atr_pct=0.0150  [candidate]
+  COST      score=0.0754  atr_pct=0.0174  [candidate]
+  CL        score=0.0664  atr_pct=0.0211  [candidate]
+  SO        score=0.0537  atr_pct=0.0161  [candidate]
+```
+## Lineage Snapshot — 2026-05-14T14:56:34Z
+
+**Run ID:** `lineage-20260514T145634-50dad7cb`  **Records:** 3 (complete: 0, partial: 3)
+
+- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
+
+---
