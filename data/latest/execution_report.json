@@ -1,15 +1,115 @@
 {
   "all_gates_pass": false,
-  "blocked_reason": "trade_plan.approval.approved_for_execution is not True (reason=\"max_orders_per_run_cap(1)_dequeued(non_blocking): ['WMT', 'WELL', 'MRK', 'GOOGL', 'GS', 'CSCO', 'XOM', 'SLB', 'FCX', 'AMD', 'BIL']; spread_blocked_all_orders: ['JNJ']\") \u2014 regenerate with --approve-paper",
-  "dry_run": false,
-  "execution_report_hash": "57b0a4e27481c9a07d39cd50a0301acc02236b959f9a248f73a8769cddafd581",
-  "failed_gates": [],
-  "gate_results": [],
-  "generated_at": "2026-05-14T15:01:21Z",
+  "dry_run": true,
+  "execution_report_hash": "2431a00cf1e12d61e5812d9a61a23f434191a54dfad7eda17e1d033c746b4d81",
+  "failed_gates": [
+    "NO_DUPLICATE_OPEN_ORDERS"
+  ],
+  "gate_results": [
+    {
+      "detail": null,
+      "gate_id": "TRADING_MODE_PAPER",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "ALPACA_PAPER_MODE",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "CANONICAL_SOURCE_INTEGRITY",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "TRADE_PLAN_EXISTS",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "TRADE_PLAN_NOT_EXPIRED",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "MARKET_CLOCK_OPEN",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "ACCOUNT_NOT_BLOCKED",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "RISK_STATE_NOT_PAUSED",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "POSITIONS_MATCH_SNAPSHOT",
+      "passes": true
+    },
+    {
+      "detail": "open orders already exist for: ['EQIX']",
+      "gate_id": "NO_DUPLICATE_OPEN_ORDERS",
+      "passes": false
+    },
+    {
+      "detail": null,
+      "gate_id": "UNIVERSE_MEMBERSHIP",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "SYMBOLS_TRADABLE",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "QUOTE_FRESHNESS",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "SPREAD_NOT_TOO_WIDE",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "RISK_LIMITS_RESPECTED",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "NO_PROHIBITED_ORDERS",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "EXECUTION_LOG_WRITABLE",
+      "passes": true
+    }
+  ],
+  "generated_at": "2026-05-14T15:13:14Z",
+  "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
-  "orders_validated": [],
-  "plan_id": "trade_plan-20260514T150120-1cea48e5",
-  "run_id": "execution-20260514T150121-0f807e87",
-  "status": "PAPER_BLOCKED",
-  "trade_plan_hash": "9b38cbf14bf0a2026b77e6796b960b2e94ad175853eca10b4043c08678cd0f5c"
+  "orders_validated": [
+    {
+      "client_order_id": "TOS-20260514T151314-EQIX-BUY",
+      "execution_ready": true,
+      "limit_price": 1083.47,
+      "notional": 25.0,
+      "order_type": "limit",
+      "side": "buy",
+      "symbol": "EQIX",
+      "target_weight": 0.12,
+      "validation_skip_reason": null
+    }
+  ],
+  "plan_id": "trade_plan-20260514T151314-d878d221",
+  "run_id": "execution-20260514T151314-ddcac1c7",
+  "status": "DRY_RUN_FAIL",
+  "trade_plan_hash": "35f78fe5018ee530ac0ea0e86c45108e390d39969e9f65112b71b902109fdee9"
 }

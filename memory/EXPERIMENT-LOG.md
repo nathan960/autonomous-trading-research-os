@@ -551,3 +551,35 @@ based on this report alone. Any experiment requires a candidate PR with:
 - Hypothesis, supporting evidence, success criteria, and rollback plan.
 
 ---
+## Outcome Observations — 2026-05-14T15:13:14Z
+
+*From outcome_tracker run `outcome_tracker-20260514T151314-7ed26ffc`*
+
+**Current unrealized returns (intraday — no strategy conclusions yet):**
+- WELL entry: fill=$218.808 current=$218.76 return=-0.022%
+- JNJ entry: fill=$230.248 current=$229.77 return=-0.208%
+- EQIX entry: fill=$1084.37 current=$1084.0 return=-0.034%
+
+*Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
+
+---
+## Trigger Performance Observations — 2026-05-14
+
+*From trigger_performance run `trigger_performance-20260514T151315-66148988`*
+*Period: 2026-05-08 to 2026-05-14 (7 days)*
+
+**Observations (research only — no strategy conclusions):**
+- Regime: 1 session(s) scanned, 1 risk-on (100%).
+- Spread gate: 36/79 symbols blocked (46%). Avg spread (blocked): 6.617%
+- Trend gate (200 DMA): 34/79 symbols below 200 DMA (43% block rate).
+- Fill count this period: 3. Need 17 more fills before P/L analysis is meaningful.
+- Average current return across 3 tracked outcome(s): -0.088%. Window pending — no conclusions yet.
+- Lineage: Lineage snapshot: 3 records (0 complete, 3 partial). 6 trigger fill associations recovered. 3 record(s) have partial lineage — save trade plans to history/trade_plans/ to improve completeness.
+- Fills linked to triggers (via lineage): ATR_SIZING_V1=1, LIQUIDITY_GATE_V1=1, MOMENTUM_BLEND_6M_12M_V1=1, SPREAD_GATE_V1=1, STOCK_TREND_200DMA_V1=1.
+- IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest.
+
+**Reminder:** Do not modify strategy.json, risk_limits.json, or trigger_registry.json
+based on this report alone. Any experiment requires a candidate PR with:
+- Hypothesis, supporting evidence, success criteria, and rollback plan.
+
+---
