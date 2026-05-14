@@ -1,6 +1,25 @@
 {
-  "data_hash": "cf82899abf5e5d31f29d383f92e27e7d2321c57255d6c290dfb43342533a9344",
-  "fetched_at": "2026-05-14T15:53:37Z",
+  "data_hash": "5e661b76bccc7e79956585fa6f28cda6da9c31849e54898f1ae8138c19013704",
+  "drawdown": -6e-06,
+  "dry_run": false,
+  "equity": 99802.54,
+  "generated_at": "2026-05-14T15:53:40Z",
+  "open_order_count": 2,
+  "orders_summary": [
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "EQIX"
+    },
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "JNJ"
+    }
+  ],
+  "peak_equity": 99803.14,
   "position_count": 3,
   "positions": [
     {
@@ -11,18 +30,18 @@
       "avg_entry_swap_rate": null,
       "change_today": "0.00071",
       "cost_basis": "24.919153",
-      "current_price": "1078.04",
+      "current_price": "1078.045",
       "exchange": "NASDAQ",
       "lastday_price": "1077.28",
-      "market_value": "24.829569",
+      "market_value": "24.829684",
       "qty": "0.023032141",
       "qty_available": "0.023032141",
       "side": "long",
       "swap_rate": null,
       "symbol": "EQIX",
-      "unrealized_intraday_pl": "0.017504",
+      "unrealized_intraday_pl": "0.017619",
       "unrealized_intraday_plpc": "0.00071",
-      "unrealized_pl": "-0.089584",
+      "unrealized_pl": "-0.089469",
       "unrealized_plpc": "-0.00359",
       "usd": null
     },
@@ -32,21 +51,21 @@
       "asset_marginable": true,
       "avg_entry_price": "230.248",
       "avg_entry_swap_rate": null,
-      "change_today": "0.00013",
+      "change_today": "0.00026",
       "cost_basis": "25",
-      "current_price": "230.45",
+      "current_price": "230.48",
       "exchange": "NYSE",
       "lastday_price": "230.42",
-      "market_value": "25.021933",
+      "market_value": "25.02519",
       "qty": "0.108578576",
       "qty_available": "0.108578576",
       "side": "long",
       "swap_rate": null,
       "symbol": "JNJ",
-      "unrealized_intraday_pl": "0.003258",
-      "unrealized_intraday_plpc": "0.00013",
-      "unrealized_pl": "0.021933",
-      "unrealized_plpc": "0.00088",
+      "unrealized_intraday_pl": "0.006515",
+      "unrealized_intraday_plpc": "0.00026",
+      "unrealized_pl": "0.02519",
+      "unrealized_plpc": "0.00101",
       "usd": null
     },
     {
@@ -73,6 +92,7 @@
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260514T155339-2a448042",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }
