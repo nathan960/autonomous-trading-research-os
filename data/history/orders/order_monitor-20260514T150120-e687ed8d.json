@@ -3,7 +3,7 @@
     "is_open": true,
     "next_close": "2026-05-14T20:00:00Z",
     "next_open": "2026-05-15T13:30:00Z",
-    "timestamp": "2026-05-14T15:01:26Z"
+    "timestamp": "2026-05-14T15:01:20Z"
   },
   "dry_run": false,
   "fetch_log": {
@@ -16,12 +16,12 @@
     "direct_client_id_lookups": 0,
     "open_count": 1
   },
-  "generated_at": "2026-05-14T15:01:27Z",
+  "generated_at": "2026-05-14T15:01:20Z",
   "lifecycles": [
     {
       "broker_order_id": "a57f3df1-f9d5-4ab7-8655-ed8240ade13e",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T15:01:27Z",
+      "checked_at": "2026-05-14T15:01:20Z",
       "client_order_id": "TOS-20260513T160035-WELL-BUY",
       "fill": {
         "fill_price": 218.808,
@@ -47,7 +47,7 @@
     {
       "broker_order_id": "bd0079c7-6044-4864-bb4e-ad2798e188a3",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T15:01:27Z",
+      "checked_at": "2026-05-14T15:01:20Z",
       "client_order_id": "TOS-20260513T192526-JNJ-BUY",
       "fill": {
         "fill_price": 230.248,
@@ -73,7 +73,7 @@
     {
       "broker_order_id": "a2d097a2-bb62-4a63-9849-24c45949bc95",
       "broker_status": "filled",
-      "checked_at": "2026-05-14T15:01:27Z",
+      "checked_at": "2026-05-14T15:01:20Z",
       "client_order_id": "TOS-20260513T192934-EQIX-BUY",
       "fill": {
         "fill_price": 1084.37,
@@ -99,7 +99,7 @@
     {
       "broker_order_id": "78156e6b-e7b7-4f7e-a8c5-01e6637ab461",
       "broker_status": "new",
-      "checked_at": "2026-05-14T15:01:27Z",
+      "checked_at": "2026-05-14T15:01:20Z",
       "client_order_id": "TOS-20260514T145625-EQIX-BUY",
       "fill": null,
       "lifecycle_status": "new",
@@ -121,8 +121,8 @@
   "orders_partially_filled": 0,
   "orders_rejected": 0,
   "orders_tracked": 4,
-  "report_hash": "bea2e2a0a285f38c1c9154ac17835843824404d1bceb1081bdeba3b2721d0a8a",
-  "run_id": "order_monitor-20260514T150127-4dbd4463",
+  "report_hash": "6b71238e757073f4a6b2971fec096fd3b4f5779ba9d83a93db0a7b52c61c36a3",
+  "run_id": "order_monitor-20260514T150120-e687ed8d",
   "safety": {
     "cancel_order_called": false,
     "replace_order_called": false,

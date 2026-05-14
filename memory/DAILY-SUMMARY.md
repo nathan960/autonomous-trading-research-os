@@ -786,3 +786,61 @@ None.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-14
+
+**Generated:** 2026-05-14T15:01:27Z  **Run ID:** daily_summary-2026-05-14
+
+### Account & Risk
+- Equity: $99,802.81 | Cash: $99,727.76 | Buying power: $199,505.57
+- Peak: $99,803.14 | Drawdown: -0.00% | Positions: 3
+
+### Positions (3)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.023054861 | $24.96 | $-0.04 (-0.17%) |
+| JNJ | long | 0.108578576 | $25.00 | $-0.00 (-0.02%) |
+| WELL | long | 0.11425542 | $25.10 | +$0.10 (0.40%) |
+
+### Open Orders (1)
+- EQIX BUY $25.00 @ $1,079.73 (limit) status=new
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+9.43%, breadth=56.96%)
+- Candidates: 23 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-14T15:01:20Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260514T150120-1cea48e5`
+- Generated: 2026-05-14T15:01:20Z | Expires: 2026-05-14T21:01:20Z
+- Approved for execution: NO | Reason: max_orders_per_run_cap(1)_dequeued(non_blocking): ['WMT', 'WELL', 'MRK', 'GOOGL', 'GS', 'CSCO', 'XOM', 'SLB', 'FCX', 'AMD', 'BIL']; spread_blocked_all_orders: ['JNJ']
+- All risk checks pass: YES
+- No proposed orders.
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260514T150121-0f807e87`
+- All gates pass: NO
+
+### Dry Runs Today (1)
+- Pass: 1 | Fail: 0
+
+### Paper Executions Today (4)
+- EQIX BUY $25.00 @ $1,079.73 (PAPER_SUBMITTED) submitted=2026-05-14T14:56:26Z
+
+### Order Monitor
+- Tracked: 4 | Filled: 3 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 1
+- Runs today: 11 | Latest: order_monitor-20260514T150127-4dbd4463
+
+### Alerts (total=8, today=0)
+- By source: tradingview=6, test=2
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
