@@ -2222,5 +2222,50 @@ Every trigger scan records fired, skipped, and selected signals here.
   "spy_passes_200dma": true,
   "spy_passes_6m_momentum": true,
   "trigger_snapshot_hash": "efa4f2dd5596a97bda459402fdee857e5ec042cbb422a3cee91441708ba1c195"
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "1e1bc33a3393ac03e7d5007ca37ed0488ccddb8423fb44f778dbe2c34515e4c3",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T140837-0eb8fca0",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "da81db45e620d8101098472ded575ab96d41ea644e37e2aee0c58f3bd7fbd2e9",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T140844-014b1461",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "a9e79ba1643d818f5e57589740b2ac54afdfb0539b9401135600d9eeb8b8af16",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T140849-d697249a",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
