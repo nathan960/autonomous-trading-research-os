@@ -432,3 +432,62 @@ None.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-14
+
+**Generated:** 2026-05-14T13:52:19Z  **Run ID:** daily_summary-2026-05-14
+
+### Account & Risk
+- Equity: $99,802.72 | Cash: $99,727.76 | Buying power: $199,530.48
+- Peak: $99,803.14 | Drawdown: -0.00% | Positions: 3
+
+### Positions (3)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.023054861 | $24.79 | $-0.21 (-0.82%) |
+| JNJ | long | 0.108578576 | $25.07 | +$0.07 (0.28%) |
+| WELL | long | 0.11425542 | $25.09 | +$0.09 (0.37%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+9.19%, breadth=56.96%)
+- Candidates: 16 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-14T13:48:13Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260514T134813-981486ac`
+- Generated: 2026-05-14T13:48:13Z | Expires: 2026-05-14T19:48:13Z
+- Approved for execution: **YES** | Reason: all_risk_checks_pass_and_paper_flag_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - EQIX BUY $25.00 @ $1,077.99 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260514T134814-b4369954`
+- All gates pass: NO
+- Failed gates: CANONICAL_SOURCE_INTEGRITY
+
+### Dry Runs Today (0)
+- Pass: 0 | Fail: 0
+
+### Paper Executions Today (1)
+
+### Order Monitor
+- Tracked: 3 | Filled: 3 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 1 | Latest: order_monitor-20260514T135003-8d27b238
+
+### Alerts (total=8, today=0)
+- By source: tradingview=6, test=2
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
