@@ -1,0 +1,133 @@
+{
+  "event_type": "paper_execution",
+  "run_id": "execution-20260514T154324-0732af2c",
+  "generated_at": "2026-05-14T15:43:24Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "run_id": "execution-20260514T154324-0732af2c",
+    "plan_id": "trade_plan-20260514T154323-1f27d10d",
+    "generated_at": "2026-05-14T15:43:24Z",
+    "dry_run": false,
+    "trade_plan_hash": "edd636a80898a01f62b9b46ed9b5b299a0053880453e9ddd02b20b4455da68a0",
+    "gate_results": [
+      {
+        "gate_id": "TRADING_MODE_PAPER",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "ALPACA_PAPER_MODE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "CANONICAL_SOURCE_INTEGRITY",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_EXISTS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_NOT_EXPIRED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "MARKET_CLOCK_OPEN",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "ACCOUNT_NOT_BLOCKED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_STATE_NOT_PAUSED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "POSITIONS_MATCH_SNAPSHOT",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_DUPLICATE_OPEN_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "UNIVERSE_MEMBERSHIP",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "SYMBOLS_TRADABLE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "QUOTE_FRESHNESS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "SPREAD_NOT_TOO_WIDE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_LIMITS_RESPECTED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_PROHIBITED_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "EXECUTION_LOG_WRITABLE",
+        "passes": true,
+        "detail": null
+      }
+    ],
+    "all_gates_pass": true,
+    "failed_gates": [],
+    "orders_validated": [
+      {
+        "symbol": "JNJ",
+        "side": "buy",
+        "order_type": "limit",
+        "limit_price": 230.12,
+        "notional": 25.0,
+        "target_weight": 0.12,
+        "client_order_id": "TOS-20260514T154323-JNJ-BUY",
+        "execution_ready": true,
+        "validation_skip_reason": null
+      }
+    ],
+    "orders_submitted": [
+      {
+        "symbol": "JNJ",
+        "client_order_id": "TOS-20260514T154323-JNJ-BUY",
+        "side": "buy",
+        "notional": 25.0,
+        "limit_price": 230.12,
+        "submitted_at": "2026-05-14T15:43:24Z",
+        "submitted": true,
+        "broker_order_id": "65c59c44-e0da-4d17-8722-f80530c90a8a",
+        "broker_status": "pending_new",
+        "skip_reason": null,
+        "error": null
+      }
+    ],
+    "status": "PAPER_SUBMITTED",
+    "blocked_reason": null,
+    "execution_report_hash": "7cdd40f602d264fdf2b44f5b4e4f9cbc55c63dd9422c949267b3a8e5c3028d1d"
+  }
+}
