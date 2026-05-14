@@ -2225,3 +2225,72 @@ None.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-14
+
+**Generated:** 2026-05-14T21:49:48Z  **Run ID:** daily_summary-2026-05-14
+
+### Account & Risk
+- Equity: $99,802.93 | Cash: $99,552.76 | Buying power: $199,355.69
+- Peak: $99,803.14 | Drawdown: -0.00% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $100.03 | +$0.15 (0.15%) |
+| JNJ | long | 0.325894297 | $75.22 | +$0.22 (0.29%) |
+| WELL | long | 0.11425542 | $24.88 | $-0.12 (-0.48%) |
+| WMT | long | 0.377715036 | $50.04 | +$0.04 (0.09%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+9.55%, breadth=58.23%)
+- Candidates: 17 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-14T21:49:47Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260514T214947-b0ee5f7f`
+- Generated: 2026-05-14T21:49:47Z | Expires: 2026-05-15T03:49:47Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- No proposed orders.
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260514T214947-fbdb271b`
+- All gates pass: YES
+
+### Dry Runs Today (1)
+- Pass: 1 | Fail: 0
+
+### Paper Executions Today (19)
+- EQIX BUY $25.00 @ $1,079.73 (PAPER_SUBMITTED) submitted=2026-05-14T14:56:26Z
+- JNJ BUY $25.00 @ $230.12 (PAPER_SUBMITTED) submitted=2026-05-14T15:43:24Z
+- EQIX SELL $25.00 @ $1,078.28 (PAPER_SUBMITTED) submitted=2026-05-14T15:45:44Z
+- EQIX BUY $25.00 @ $1,078.43 (PAPER_SUBMITTED) submitted=2026-05-14T15:48:18Z
+- EQIX BUY $25.00 @ $1,076.96 (PAPER_SUBMITTED) submitted=2026-05-14T16:31:14Z
+- WMT BUY $25.00 @ $132.36 (PAPER_SUBMITTED) submitted=2026-05-14T16:52:33Z
+- JNJ BUY $25.00 @ $230.05 (PAPER_SUBMITTED) submitted=2026-05-14T17:17:40Z
+- WMT BUY $25.00 @ $132.48 (PAPER_SUBMITTED) submitted=2026-05-14T17:18:46Z
+- EQIX BUY $25.00 @ $1,078.96 (PAPER_SUBMITTED) submitted=2026-05-14T17:21:04Z
+- EQIX SELL $25.00 @ $1,076.63 (PAPER_SUBMITTED) submitted=2026-05-14T17:22:27Z
+- EQIX BUY $25.00 @ $1,076.63 (PAPER_SUBMITTED) submitted=2026-05-14T17:23:37Z
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 53 | Latest: order_monitor-20260514T214946-f5d4b8ea
+
+### Alerts (total=10, today=2)
+- By source: tradingview=8, test=2
+- By next_step: request_trade_plan_unapproved=4, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---

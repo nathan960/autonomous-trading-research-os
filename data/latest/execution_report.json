@@ -1,7 +1,7 @@
 {
   "all_gates_pass": true,
   "dry_run": true,
-  "execution_report_hash": "8688e07bb4d783ff1a2d1433f5a8f8bfff3fad6ce50c6c96ee9a26e5a2bb0c49",
+  "execution_report_hash": "f530f884fc1950fa627db865453be43a534d737e0df6d0ee53aa7ed10ec8d0db",
   "failed_gates": [],
   "gate_results": [
     {
@@ -30,7 +30,7 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "[dry-run] market is_open=False at 2026-05-14T21:49:40Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -95,12 +95,12 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-05-14T18:07:56Z",
+  "generated_at": "2026-05-14T21:49:47Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [],
-  "plan_id": "trade_plan-20260514T180756-fc25ae26",
-  "run_id": "execution-20260514T180756-13659e28",
+  "plan_id": "trade_plan-20260514T214947-b0ee5f7f",
+  "run_id": "execution-20260514T214947-fbdb271b",
   "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "f75fce729de873a1ac66b6626c85c176b651595bd64f5cab4b6edb7c28912434"
+  "trade_plan_hash": "b4be96ec377ae43499ac5ec319ff8857c77ad3dc5c71e153dde2fa9988dec396"
 }
