@@ -20255,3 +20255,39 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
   "trade_plan_hash": "e3c63704be73d9cfd754166eef541c1940d9e8e16544c4f981ef2d72170a66de"
 }
 ```
+
+## scan_triggers candidates  (2026-05-14T15:00:04Z)
+
+```
+  GOOGL     score=0.9292  atr_pct=0.0238  [SELECTED]
+  CSCO      score=0.7576  atr_pct=0.0261  [SELECTED]
+  FCX       score=0.6199  atr_pct=0.0409  [SELECTED]
+  AVGO      score=0.5532  atr_pct=0.0335  [SELECTED]
+  NVDA      score=0.5102  atr_pct=0.0288  [candidate]
+  SLB       score=0.5016  atr_pct=0.0293  [SELECTED]
+  WELL      score=0.3270  atr_pct=0.0208  [SELECTED]
+  WMT       score=0.3257  atr_pct=0.0198  [SELECTED]
+  XOM       score=0.3243  atr_pct=0.0270  [SELECTED]
+  EQIX      score=0.2813  atr_pct=0.0185  [SELECTED]
+  COP       score=0.2685  atr_pct=0.0292  [candidate]
+  SBUX      score=0.2484  atr_pct=0.0238  [SELECTED]
+  AAPL      score=0.2437  atr_pct=0.0203  [candidate]
+  NEE       score=0.2065  atr_pct=0.0216  [candidate]
+  DE        score=0.1963  atr_pct=0.0245  [candidate]
+  TSLA      score=0.1722  atr_pct=0.0358  [candidate]
+  AMZN      score=0.1700  atr_pct=0.0246  [candidate]
+  AEP       score=0.1612  atr_pct=0.0190  [candidate]
+  KO        score=0.1462  atr_pct=0.0158  [candidate]
+  O         score=0.1024  atr_pct=0.0149  [candidate]
+  CL        score=0.0674  atr_pct=0.0211  [candidate]
+  SO        score=0.0542  atr_pct=0.0161  [candidate]
+```
+## Lineage Snapshot — 2026-05-14T15:00:15Z
+
+**Run ID:** `lineage-20260514T150015-70c5c992`  **Records:** 3 (complete: 0, partial: 3)
+
+- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
+- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
+
+---

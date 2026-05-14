@@ -1,9 +1,10 @@
 {
-  "all_gates_pass": true,
-  "blocked_reason": null,
-  "dry_run": false,
-  "execution_report_hash": "88e5076ceaca73f946bf374c42117fbbb15ef2414d0e2aa85dfb857da0696caa",
-  "failed_gates": [],
+  "all_gates_pass": false,
+  "dry_run": true,
+  "execution_report_hash": "a1e1c3a0277a99dce39301f330a8ba7433388444dbea508c3a3c9e1ecbed9fc7",
+  "failed_gates": [
+    "NO_DUPLICATE_OPEN_ORDERS"
+  ],
   "gate_results": [
     {
       "detail": null,
@@ -51,9 +52,9 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "open orders already exist for: ['EQIX']",
       "gate_id": "NO_DUPLICATE_OPEN_ORDERS",
-      "passes": true
+      "passes": false
     },
     {
       "detail": null,
@@ -91,27 +92,14 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-05-14T14:56:26Z",
-  "orders_submitted": [
-    {
-      "broker_order_id": "78156e6b-e7b7-4f7e-a8c5-01e6637ab461",
-      "broker_status": "pending_new",
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "error": null,
-      "limit_price": 1079.73,
-      "notional": 25.0,
-      "side": "buy",
-      "skip_reason": null,
-      "submitted": true,
-      "submitted_at": "2026-05-14T14:56:26Z",
-      "symbol": "EQIX"
-    }
-  ],
+  "generated_at": "2026-05-14T15:00:05Z",
+  "no_submit_reason": "dry_run_mode",
+  "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
+      "client_order_id": "TOS-20260514T150004-EQIX-BUY",
       "execution_ready": true,
-      "limit_price": 1079.73,
+      "limit_price": 1081.64,
       "notional": 25.0,
       "order_type": "limit",
       "side": "buy",
@@ -120,8 +108,8 @@
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260514T145625-7807f306",
-  "run_id": "execution-20260514T145626-8a29a24f",
-  "status": "PAPER_SUBMITTED",
-  "trade_plan_hash": "0298a30202102127b52b6753d2da05a0487667e088f90a3d2d9482a05d85aa0e"
+  "plan_id": "trade_plan-20260514T150004-88cc6ef5",
+  "run_id": "execution-20260514T150005-a2085adb",
+  "status": "DRY_RUN_FAIL",
+  "trade_plan_hash": "9bd017afa8ce0e724c1eff1dca652015e66c5b490d04cffd948d81e4cb5dfcf3"
 }
