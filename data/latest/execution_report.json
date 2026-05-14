@@ -1,15 +1,106 @@
 {
-  "all_gates_pass": false,
-  "blocked_reason": "trade_plan.approval.approved_for_execution is not True (reason=\"spread_blocked_all_orders: ['JNJ']; churn_blocked_all_orders: ['WMT', 'EQIX', 'AMD', 'CAT', 'GOOGL', 'CSCO', 'FCX', 'SLB', 'XOM', 'WELL', 'BIL']\") \u2014 regenerate with --approve-paper",
-  "dry_run": false,
-  "execution_report_hash": "b946e03448106ffb5848d13629d063c1217f81d724877590d43bc306a975f3f8",
+  "all_gates_pass": true,
+  "dry_run": true,
+  "execution_report_hash": "8688e07bb4d783ff1a2d1433f5a8f8bfff3fad6ce50c6c96ee9a26e5a2bb0c49",
   "failed_gates": [],
-  "gate_results": [],
-  "generated_at": "2026-05-14T17:57:39Z",
+  "gate_results": [
+    {
+      "detail": null,
+      "gate_id": "TRADING_MODE_PAPER",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "ALPACA_PAPER_MODE",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "CANONICAL_SOURCE_INTEGRITY",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "TRADE_PLAN_EXISTS",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "TRADE_PLAN_NOT_EXPIRED",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "MARKET_CLOCK_OPEN",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "ACCOUNT_NOT_BLOCKED",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "RISK_STATE_NOT_PAUSED",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "POSITIONS_MATCH_SNAPSHOT",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "NO_DUPLICATE_OPEN_ORDERS",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "UNIVERSE_MEMBERSHIP",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "SYMBOLS_TRADABLE",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "QUOTE_FRESHNESS",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "SPREAD_NOT_TOO_WIDE",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "RISK_LIMITS_RESPECTED",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "NO_PROHIBITED_ORDERS",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "EXECUTION_LOG_WRITABLE",
+      "passes": true
+    },
+    {
+      "detail": null,
+      "gate_id": "DAILY_ORDER_LIMITS",
+      "passes": true
+    }
+  ],
+  "generated_at": "2026-05-14T18:07:56Z",
+  "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [],
-  "plan_id": "trade_plan-20260514T175738-9eae9b62",
-  "run_id": "execution-20260514T175739-c2e2d180",
-  "status": "PAPER_BLOCKED",
-  "trade_plan_hash": "248eee65f494dbfccfe91b79fa7f787d4cfe8c347d4d7bc4fb2dcd5165e7a7a2"
+  "plan_id": "trade_plan-20260514T180756-fc25ae26",
+  "run_id": "execution-20260514T180756-13659e28",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "f75fce729de873a1ac66b6626c85c176b651595bd64f5cab4b6edb7c28912434"
 }
