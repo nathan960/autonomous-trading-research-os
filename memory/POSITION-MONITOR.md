@@ -1937,3 +1937,35 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
   "source": "alpaca_paper"
 }
 ```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -5e-06,
+  "dry_run": false,
+  "equity": 99802.6,
+  "generated_at": "2026-05-14T17:52:19Z",
+  "open_order_count": 0,
+  "peak_equity": 99803.14,
+  "position_count": 4,
+  "run_id": "monitor_positions-20260514T175219-0ba645d6",
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -5e-06,
+  "dry_run": false,
+  "equity": 99802.6,
+  "generated_at": "2026-05-14T17:52:25Z",
+  "open_order_count": 0,
+  "peak_equity": 99803.14,
+  "position_count": 4,
+  "run_id": "monitor_positions-20260514T175224-b6fea714",
+  "source": "alpaca_paper"
+}
+```
