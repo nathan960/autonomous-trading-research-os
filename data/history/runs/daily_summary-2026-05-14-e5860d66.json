@@ -1,0 +1,266 @@
+{
+  "account": {
+    "buying_power": 199480.19,
+    "cash": 99702.76,
+    "equity": 99802.43,
+    "fetched_at": "2026-05-14T16:29:59Z",
+    "position_count": 3,
+    "source": "alpaca_paper"
+  },
+  "alert_routes": {
+    "approved_trade_plan_created_any": false,
+    "by_action": {
+      "logged": 1,
+      "refresh_requested": 4
+    },
+    "execution_called_any": false,
+    "routes_today": 0,
+    "total_routes": 5
+  },
+  "alerts": {
+    "by_next_step": {
+      "log_only": 1,
+      "request_data_refresh": 5,
+      "request_trade_plan_unapproved": 2
+    },
+    "by_source": {
+      "test": 2,
+      "tradingview": 6
+    },
+    "ingested_today": 0,
+    "total_count": 8
+  },
+  "data_quality": {
+    "available": true,
+    "generated_at": "2026-05-12T15:33:05Z",
+    "insufficient_bars_count": 0,
+    "issues_count": 0,
+    "missing_bars_count": 0,
+    "missing_quotes_count": 0,
+    "status": "PASS",
+    "wide_spreads_count": 0
+  },
+  "date": "2026-05-14",
+  "dry_runs": {
+    "all_pass_count": 1,
+    "count": 1,
+    "fail_count": 0,
+    "failing_gates": {},
+    "latest": {
+      "all_gates_pass": true,
+      "failed_gates": [],
+      "run_id": "execution-20260514T163003-73a62e3e",
+      "status": "DRY_RUN_PASS"
+    }
+  },
+  "execution_report": {
+    "all_gates_pass": true,
+    "available": true,
+    "dry_run": true,
+    "failed_gates": [],
+    "generated_at": "2026-05-14T16:30:03Z",
+    "orders_submitted_count": 0,
+    "run_id": "execution-20260514T163003-73a62e3e",
+    "status": "DRY_RUN_PASS"
+  },
+  "generated_at": "2026-05-14T16:30:04Z",
+  "open_orders": [
+    {
+      "client_order_id": "TOS-20260514T154323-JNJ-BUY",
+      "limit_price": 230.12,
+      "notional": 25.0,
+      "order_type": "limit",
+      "side": "buy",
+      "status": "new",
+      "symbol": "JNJ"
+    }
+  ],
+  "order_monitor": {
+    "available": true,
+    "generated_at": "2026-05-14T16:30:03Z",
+    "latest_run_id": "order_monitor-20260514T163003-ef335475",
+    "orders_active": 1,
+    "orders_canceled": 0,
+    "orders_expired": 0,
+    "orders_filled": 6,
+    "orders_missing": 0,
+    "orders_rejected": 0,
+    "orders_tracked": 7,
+    "runs_today": 26
+  },
+  "paper_executions": {
+    "count": 7,
+    "runs": [
+      {
+        "orders_submitted": [],
+        "run_id": "execution-20260514T134814-b4369954",
+        "status": "PAPER_FAIL"
+      },
+      {
+        "orders_submitted": [],
+        "run_id": "execution-20260514T135504-19cce5c5",
+        "status": "PAPER_FAIL"
+      },
+      {
+        "orders_submitted": [
+          {
+            "broker_order_id": "78156e6b-e7b7-4f7e-a8c5-01e6637ab461",
+            "broker_status": "pending_new",
+            "client_order_id": "TOS-20260514T145625-EQIX-BUY",
+            "error": null,
+            "limit_price": 1079.73,
+            "notional": 25.0,
+            "side": "buy",
+            "skip_reason": null,
+            "submitted": true,
+            "submitted_at": "2026-05-14T14:56:26Z",
+            "symbol": "EQIX"
+          }
+        ],
+        "run_id": "execution-20260514T145626-8a29a24f",
+        "status": "PAPER_SUBMITTED"
+      },
+      {
+        "orders_submitted": [],
+        "run_id": "execution-20260514T150121-0f807e87",
+        "status": "PAPER_BLOCKED"
+      },
+      {
+        "orders_submitted": [
+          {
+            "broker_order_id": "65c59c44-e0da-4d17-8722-f80530c90a8a",
+            "broker_status": "pending_new",
+            "client_order_id": "TOS-20260514T154323-JNJ-BUY",
+            "error": null,
+            "limit_price": 230.12,
+            "notional": 25.0,
+            "side": "buy",
+            "skip_reason": null,
+            "submitted": true,
+            "submitted_at": "2026-05-14T15:43:24Z",
+            "symbol": "JNJ"
+          }
+        ],
+        "run_id": "execution-20260514T154324-0732af2c",
+        "status": "PAPER_SUBMITTED"
+      },
+      {
+        "orders_submitted": [
+          {
+            "broker_order_id": "fbca0ce7-983c-44d3-8b55-2dba2afc3427",
+            "broker_status": "pending_new",
+            "client_order_id": "TOS-20260514T154543-EQIX-SELL",
+            "error": null,
+            "limit_price": 1078.28,
+            "notional": 25.0,
+            "side": "sell",
+            "skip_reason": null,
+            "submitted": true,
+            "submitted_at": "2026-05-14T15:45:44Z",
+            "symbol": "EQIX"
+          }
+        ],
+        "run_id": "execution-20260514T154544-c2e241e8",
+        "status": "PAPER_SUBMITTED"
+      },
+      {
+        "orders_submitted": [
+          {
+            "broker_order_id": "3351082e-8e6a-4148-af27-81e5414dd0db",
+            "broker_status": "pending_new",
+            "client_order_id": "TOS-20260514T154817-EQIX-BUY",
+            "error": null,
+            "limit_price": 1078.43,
+            "notional": 25.0,
+            "side": "buy",
+            "skip_reason": null,
+            "submitted": true,
+            "submitted_at": "2026-05-14T15:48:18Z",
+            "symbol": "EQIX"
+          }
+        ],
+        "run_id": "execution-20260514T154818-6157fada",
+        "status": "PAPER_SUBMITTED"
+      }
+    ],
+    "total_orders_submitted": 4
+  },
+  "positions": [
+    {
+      "avg_entry_price": 1080.164043,
+      "market_value": 49.770849,
+      "qty": "0.046214418",
+      "side": "long",
+      "symbol": "EQIX",
+      "unrealized_pl": -0.148304,
+      "unrealized_plpc": -0.00297
+    },
+    {
+      "avg_entry_price": 230.248,
+      "market_value": 25.002389,
+      "qty": "0.108578576",
+      "side": "long",
+      "symbol": "JNJ",
+      "unrealized_pl": 0.002389,
+      "unrealized_plpc": 0.0001
+    },
+    {
+      "avg_entry_price": 218.808,
+      "market_value": 24.900826,
+      "qty": "0.11425542",
+      "side": "long",
+      "symbol": "WELL",
+      "unrealized_pl": -0.099174,
+      "unrealized_plpc": -0.00397
+    }
+  ],
+  "risk_state": {
+    "drawdown": -7e-06,
+    "latest_equity": 99802.43,
+    "peak_equity": 99803.14,
+    "position_count": 3,
+    "updated_at": "2026-05-14T16:30:02Z"
+  },
+  "run_id": "daily_summary-2026-05-14",
+  "status": "ok",
+  "summary_hash": "e5860d660c7ba0a2",
+  "trade_plan": {
+    "all_risk_checks_pass": true,
+    "approval_reason": "approve_paper_flag_not_set",
+    "approve_paper_flag": false,
+    "approved_for_execution": false,
+    "available": true,
+    "blocked_symbols_count": 80,
+    "expires_at": "2026-05-14T22:30:03Z",
+    "failed_risk_checks": [],
+    "generated_at": "2026-05-14T16:30:03Z",
+    "plan_id": "trade_plan-20260514T163003-2a802acf",
+    "proposed_orders": [
+      {
+        "limit_price": 1076.89,
+        "notional": 25.0,
+        "order_type": "limit",
+        "side": "buy",
+        "symbol": "EQIX",
+        "time_in_force": "day",
+        "would_short": false
+      }
+    ],
+    "proposed_orders_count": 1,
+    "trading_mode": "paper"
+  },
+  "trigger_scan": {
+    "available": true,
+    "breadth_ok": true,
+    "breadth_pct": 0.569620253164557,
+    "candidates_count": 27,
+    "excluded_count": 69,
+    "risk_on": true,
+    "scanned_at": "2026-05-14T16:30:03Z",
+    "selected_count": 10,
+    "spy_200dma": 675.5262500000001,
+    "spy_6m_roc": 0.09555571826036013,
+    "spy_close": 748.155,
+    "spy_passes_200dma": true
+  }
+}

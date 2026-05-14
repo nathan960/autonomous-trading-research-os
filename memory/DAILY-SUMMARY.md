@@ -1278,3 +1278,65 @@ None.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-14
+
+**Generated:** 2026-05-14T16:30:04Z  **Run ID:** daily_summary-2026-05-14
+
+### Account & Risk
+- Equity: $99,802.43 | Cash: $99,702.76 | Buying power: $199,480.19
+- Peak: $99,803.14 | Drawdown: -0.00% | Positions: 3
+
+### Positions (3)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.046214418 | $49.77 | $-0.15 (-0.30%) |
+| JNJ | long | 0.108578576 | $25.00 | +$0.00 (0.01%) |
+| WELL | long | 0.11425542 | $24.90 | $-0.10 (-0.40%) |
+
+### Open Orders (1)
+- JNJ BUY $25.00 @ $230.12 (limit) status=new
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+9.56%, breadth=56.96%)
+- Candidates: 27 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-14T16:30:03Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260514T163003-2a802acf`
+- Generated: 2026-05-14T16:30:03Z | Expires: 2026-05-14T22:30:03Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - EQIX BUY $25.00 @ $1,076.89 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260514T163003-73a62e3e`
+- All gates pass: YES
+
+### Dry Runs Today (1)
+- Pass: 1 | Fail: 0
+
+### Paper Executions Today (7)
+- EQIX BUY $25.00 @ $1,079.73 (PAPER_SUBMITTED) submitted=2026-05-14T14:56:26Z
+- JNJ BUY $25.00 @ $230.12 (PAPER_SUBMITTED) submitted=2026-05-14T15:43:24Z
+- EQIX SELL $25.00 @ $1,078.28 (PAPER_SUBMITTED) submitted=2026-05-14T15:45:44Z
+- EQIX BUY $25.00 @ $1,078.43 (PAPER_SUBMITTED) submitted=2026-05-14T15:48:18Z
+
+### Order Monitor
+- Tracked: 7 | Filled: 6 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 1
+- Runs today: 26 | Latest: order_monitor-20260514T163003-ef335475
+
+### Alerts (total=8, today=0)
+- By source: tradingview=6, test=2
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---

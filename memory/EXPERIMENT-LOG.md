@@ -830,3 +830,38 @@ based on this report alone. Any experiment requires a candidate PR with:
 - Hypothesis, supporting evidence, success criteria, and rollback plan.
 
 ---
+## Outcome Observations — 2026-05-14T16:30:03Z
+
+*From outcome_tracker run `outcome_tracker-20260514T163003-ef335475`*
+
+**Current unrealized returns (intraday — no strategy conclusions yet):**
+- WELL entry: fill=$218.808 current=$217.94 return=-0.397%
+- JNJ entry: fill=$230.248 current=$230.27 return=+0.010%
+- EQIX entry: fill=$1084.37 current=$1076.955 return=-0.684%
+- EQIX entry: fill=$1079.5 current=$1076.955 return=-0.236%
+- EQIX exit: fill=$1078.442 current=$1076.955 return=-0.138%
+- EQIX entry: fill=$1078.41 current=$1076.955 return=-0.135%
+
+*Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
+
+---
+## Trigger Performance Observations — 2026-05-14
+
+*From trigger_performance run `trigger_performance-20260514T163004-d263b0c5`*
+*Period: 2026-05-08 to 2026-05-14 (7 days)*
+
+**Observations (research only — no strategy conclusions):**
+- Regime: 1 session(s) scanned, 1 risk-on (100%).
+- Spread gate: 35/79 symbols blocked (44%). Avg spread (blocked): 5.521%
+- Trend gate (200 DMA): 34/79 symbols below 200 DMA (43% block rate).
+- Fill count this period: 6. Need 14 more fills before P/L analysis is meaningful.
+- Average current return across 6 tracked outcome(s): -0.263%. Window pending — no conclusions yet.
+- Lineage: Lineage snapshot: 6 records (0 complete, 6 partial). 30 trigger fill associations recovered. 6 record(s) have partial lineage — save trade plans to history/trade_plans/ to improve completeness.
+- Fills linked to triggers (via lineage): ATR_SIZING_V1=5, LIQUIDITY_GATE_V1=5, MOMENTUM_BLEND_6M_12M_V1=5, SPREAD_GATE_V1=5, STOCK_TREND_200DMA_V1=5.
+- IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest.
+
+**Reminder:** Do not modify strategy.json, risk_limits.json, or trigger_registry.json
+based on this report alone. Any experiment requires a candidate PR with:
+- Hypothesis, supporting evidence, success criteria, and rollback plan.
+
+---
