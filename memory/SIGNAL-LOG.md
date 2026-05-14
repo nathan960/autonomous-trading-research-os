@@ -18677,3 +18677,27 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
   O         score=0.0995  atr_pct=0.0149  [candidate]
   SO        score=0.0553  atr_pct=0.0160  [candidate]
 ```
+
+## scan_triggers candidates  (2026-05-14T13:53:52Z)
+
+```
+  GOOGL     score=0.9355  atr_pct=0.0237  [SELECTED]
+  CSCO      score=0.7674  atr_pct=0.0260  [SELECTED]
+  FCX       score=0.6358  atr_pct=0.0403  [SELECTED]
+  AVGO      score=0.5348  atr_pct=0.0335  [SELECTED]
+  SLB       score=0.5043  atr_pct=0.0292  [SELECTED]
+  NVDA      score=0.4934  atr_pct=0.0285  [candidate]
+  MS        score=0.3366  atr_pct=0.0237  [SELECTED]
+  XOM       score=0.3323  atr_pct=0.0268  [SELECTED]
+  WMT       score=0.3302  atr_pct=0.0197  [SELECTED]
+  EQIX      score=0.2769  atr_pct=0.0185  [SELECTED]
+  COP       score=0.2739  atr_pct=0.0291  [candidate]
+  AAPL      score=0.2412  atr_pct=0.0203  [candidate]
+  SBUX      score=0.2400  atr_pct=0.0240  [SELECTED]
+  NEE       score=0.2116  atr_pct=0.0215  [candidate]
+  AMZN      score=0.1815  atr_pct=0.0241  [candidate]
+  TSLA      score=0.1693  atr_pct=0.0357  [candidate]
+  AEP       score=0.1664  atr_pct=0.0187  [candidate]
+  KO        score=0.1434  atr_pct=0.0158  [candidate]
+  O         score=0.1004  atr_pct=0.0149  [candidate]
+```

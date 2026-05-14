@@ -2439,3 +2439,24 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T13:53:51Z",
+  "insufficient_bars_count": 0,
+  "issues": [
+    "wide_spreads"
+  ],
+  "market_data_hash": "7c2a8902b92130ce19531311be213ef9f4aa4b92cb5197f18fe96c81360c706d",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T135347",
+  "snapshot_age_minutes": 0.034604883333333336,
+  "snapshot_fetched_at": "2026-05-14T13:53:49Z",
+  "status": "ATTENTION_REQUIRED",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
