@@ -19948,3 +19948,36 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
   "trade_plan_hash": "d5ef7e6ab917f7c751f192f115dfdc5556312ea7fd67f6070c40ca5c4f5c651f"
 }
 ```
+
+## scan_triggers candidates  (2026-05-14T14:55:02Z)
+
+```
+  GOOGL     score=0.9285  atr_pct=0.0238  [SELECTED]
+  CSCO      score=0.7467  atr_pct=0.0263  [SELECTED]
+  FCX       score=0.6222  atr_pct=0.0409  [SELECTED]
+  NVDA      score=0.5142  atr_pct=0.0287  [SELECTED]
+  SLB       score=0.5024  atr_pct=0.0292  [SELECTED]
+  XOM       score=0.3249  atr_pct=0.0270  [SELECTED]
+  WMT       score=0.3239  atr_pct=0.0198  [SELECTED]
+  EQIX      score=0.2762  atr_pct=0.0186  [SELECTED]
+  AAPL      score=0.2428  atr_pct=0.0203  [candidate]
+  NEE       score=0.2069  atr_pct=0.0216  [SELECTED]
+  DE        score=0.1910  atr_pct=0.0246  [SELECTED]
+  TSLA      score=0.1738  atr_pct=0.0357  [candidate]
+  AMZN      score=0.1713  atr_pct=0.0246  [candidate]
+  AEP       score=0.1614  atr_pct=0.0190  [candidate]
+  KO        score=0.1452  atr_pct=0.0158  [candidate]
+  O         score=0.1003  atr_pct=0.0150  [candidate]
+  BLK       score=0.0825  atr_pct=0.0216  [candidate]
+  CL        score=0.0666  atr_pct=0.0211  [candidate]
+  SO        score=0.0528  atr_pct=0.0162  [candidate]
+```
+## Lineage Snapshot — 2026-05-14T14:55:09Z
+
+**Run ID:** `lineage-20260514T145509-dd18af53`  **Records:** 3 (complete: 0, partial: 3)
+
+- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
+
+---

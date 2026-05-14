@@ -2330,3 +2330,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "spy_trend_ok": true
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.569620253164557,
+  "breadth_ok": true,
+  "candidates_count": 19,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-05-14T14:55:02Z",
+  "selected": [
+    "GOOGL",
+    "CSCO",
+    "FCX",
+    "NVDA",
+    "SLB",
+    "XOM",
+    "WMT",
+    "EQIX",
+    "NEE",
+    "DE"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.10001698333333334,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "2e79ad3c5a5e7c79f373a8213008ed94e21c802bd287755e99757c49991299a2"
+}
+```
