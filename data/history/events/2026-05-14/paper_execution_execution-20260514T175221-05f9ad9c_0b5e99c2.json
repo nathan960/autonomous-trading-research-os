@@ -1,0 +1,21 @@
+{
+  "event_type": "paper_execution",
+  "run_id": "execution-20260514T175221-05f9ad9c",
+  "generated_at": "2026-05-14T17:52:21Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "run_id": "execution-20260514T175221-05f9ad9c",
+    "plan_id": "trade_plan-20260514T175220-3c52d3d5",
+    "generated_at": "2026-05-14T17:52:21Z",
+    "dry_run": false,
+    "trade_plan_hash": "ac7d133f642f7376e87a6607e4468d1673746ee5e7f5c53c4be948603341916d",
+    "gate_results": [],
+    "all_gates_pass": false,
+    "failed_gates": [],
+    "orders_validated": [],
+    "orders_submitted": [],
+    "status": "PAPER_BLOCKED",
+    "blocked_reason": "trade_plan.approval.approved_for_execution is not True (reason=\"spread_blocked_all_orders: ['WELL']; churn_blocked_all_orders: ['JNJ', 'WMT', 'EQIX', 'AMD', 'CAT', 'GOOGL', 'CSCO', 'FCX', 'SLB', 'MS', 'XOM', 'BIL']\") \u2014 regenerate with --approve-paper",
+    "execution_report_hash": "6dfc4cf74537fdb203d9047060db3e3b5c65fd38108fd2509dd149c471239330"
+  }
+}
