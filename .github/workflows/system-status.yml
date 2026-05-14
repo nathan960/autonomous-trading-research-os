@@ -1,0 +1,94 @@
+name: System Status
+
+# Generates a single GREEN/YELLOW/RED status report indicating whether the
+# system is ready for a research cycle or manual paper execution.
+#
+# Safety invariants hardcoded in this workflow:
+#   ENABLE_PAPER_EXECUTION=false — never armed
+#   LIVE_TRADING_CONFIRMED=false — live trading is never reachable
+#   No execution scripts are called — only system_status.py
+#   No secrets are printed or logged
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run after Research Cycle (research-cycle.yml runs at 20:45 UTC weekdays)
+    - cron: "10 21 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: system-status
+  cancel-in-progress: true
+
+jobs:
+  system-status:
+    runs-on: ubuntu-latest
+
+    env:
+      TRADING_MODE: paper
+      ALPACA_PAPER: "true"
+      ENABLE_PAPER_EXECUTION: "false"
+      LIVE_TRADING_CONFIRMED: "false"
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Safety preflight
+        run: |
+          if [ "$LIVE_TRADING_CONFIRMED" = "true" ]; then
+            echo "::error::LIVE_TRADING_CONFIRMED must not be true"
+            exit 1
+          fi
+
+          if [ "$ENABLE_PAPER_EXECUTION" = "true" ]; then
+            echo "::error::ENABLE_PAPER_EXECUTION must not be true in system-status workflow"
+            exit 1
+          fi
+
+          if [ "$TRADING_MODE" != "paper" ]; then
+            echo "::error::TRADING_MODE must be paper"
+            exit 1
+          fi
+
+          echo "Safety preflight passed."
+
+      - name: Generate system status
+        run: python scripts/system_status.py
+
+      - name: Commit status artifacts
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/latest/system_status.json memory/SYSTEM-STATUS.md
+
+          if git diff --cached --quiet; then
+            echo "No status artifacts changed."
+            exit 0
+          fi
+
+          git commit -m "chore(status): system-status run=${{ github.run_id }}"
+
+          if ! git pull --rebase --autostash origin main; then
+            git rebase --abort || true
+            echo "::warning::Rebase conflict during status commit. Status JSON written locally."
+            exit 1
+          fi
+
+          git push

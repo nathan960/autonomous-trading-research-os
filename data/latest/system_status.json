@@ -1,0 +1,123 @@
+{
+  "blocking_issues": [
+    "Open duplicate orders for planned symbols: ['EQIX']",
+    "Execution gates: unexpected failures: ['NO_DUPLICATE_OPEN_ORDERS']"
+  ],
+  "buying_power": 199505.45,
+  "cash": 99727.76,
+  "current_positions": [
+    {
+      "avg_entry_price": "1084.37",
+      "current_price": "1084",
+      "market_value": "24.991469",
+      "qty": "0.023054861",
+      "symbol": "EQIX",
+      "unrealized_pl": "-0.008531"
+    },
+    {
+      "avg_entry_price": "230.248",
+      "current_price": "229.77",
+      "market_value": "24.948099",
+      "qty": "0.108578576",
+      "symbol": "JNJ",
+      "unrealized_pl": "-0.051901"
+    },
+    {
+      "avg_entry_price": "218.808",
+      "current_price": "218.76",
+      "market_value": "24.994516",
+      "qty": "0.11425542",
+      "symbol": "WELL",
+      "unrealized_pl": "-0.005484"
+    }
+  ],
+  "data_quality_status": "ATTENTION_REQUIRED",
+  "dry_run_all_gates_pass": false,
+  "failed_gates": [
+    "NO_DUPLICATE_OPEN_ORDERS"
+  ],
+  "generated_at": "2026-05-14T15:29:43Z",
+  "last_alert_count": 24,
+  "last_route_count": 4,
+  "latest_account_equity": 99802.69,
+  "latest_plan_id": "trade_plan-20260514T152756-a1cc9ba9",
+  "lineage_status": {
+    "complete_count": 0,
+    "generated_at": "2026-05-14T15:13:14Z",
+    "lineage_count": 3,
+    "partial_count": 3
+  },
+  "open_order_count": 1,
+  "order_lifecycle_summary": {
+    "orders_active": 1,
+    "orders_canceled": 0,
+    "orders_expired": 0,
+    "orders_filled": 3,
+    "orders_rejected": 0,
+    "orders_tracked": 4,
+    "safety": {
+      "cancel_order_called": false,
+      "replace_order_called": false,
+      "submit_order_called": false
+    },
+    "stale_orders": [],
+    "warnings": []
+  },
+  "outcome_summary": {
+    "avg_current_return_pct": -0.000879,
+    "outcomes_count": 3,
+    "source_integrity_status": "ok",
+    "tracked_symbols": [
+      "WELL",
+      "JNJ",
+      "EQIX"
+    ]
+  },
+  "overall_status": "RED",
+  "position_count": 3,
+  "proposed_order_count": 1,
+  "proposed_orders": [
+    {
+      "limit_price": 1079.73,
+      "notional": 25.0,
+      "order_type": "limit",
+      "side": "buy",
+      "skip_reason": null,
+      "symbol": "EQIX"
+    }
+  ],
+  "required_operator_actions": [
+    "Cancel or wait for existing open orders to settle before re-running",
+    "Investigate gate failures: ['NO_DUPLICATE_OPEN_ORDERS']"
+  ],
+  "risk_state": {
+    "drawdown": -5e-06,
+    "drawdown_blocked": false,
+    "drawdown_warn": false,
+    "latest_equity": 99802.69,
+    "paused": false,
+    "peak_equity": 99803.14,
+    "stale": false,
+    "updated_at": "2026-05-14T15:13:13Z"
+  },
+  "safe_for_manual_paper_execution": false,
+  "safe_for_research_cycle": false,
+  "safe_for_scheduled_paper_execution": false,
+  "schema_version": "0.1.0",
+  "source_integrity_status": "ok",
+  "status_hash": "4460e301b9d49e8dc690e3fbafdbd0986d6b9ff4a22e8f6ff085b25dd154d297",
+  "trade_plan_approved_for_execution": false,
+  "trigger_performance_summary": {
+    "avg_current_return_pct": -0.000879,
+    "avg_slippage_pct": -0.000203,
+    "days": 7,
+    "operational_issues": [],
+    "recommendation": "needs_more_data",
+    "regime_category": "market_regime",
+    "regime_recommendation": "keep_observing",
+    "status": "ok"
+  },
+  "warnings": [
+    "36 wide-spread symbols (['ABBV', 'ADBE', 'AMGN', 'AMT', 'APD', 'AXP', 'BA', 'BLK', 'COST', 'CRM', 'CVX', 'DE', 'ECL', 'EOG', 'GS', 'HD', 'HON', 'ISRG', 'JNJ', 'LIN', 'LLY', 'LMT', 'LOW', 'MA', 'MS', 'ORCL', 'PG', 'PM', 'RTX', 'TMO', 'TMUS', 'UNH', 'UNP', 'UPS', 'V', 'WELL']) \u2014 SPREAD_NOT_TOO_WIDE may block execution"
+  ]
+}
