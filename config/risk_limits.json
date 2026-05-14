@@ -15,5 +15,10 @@
   "allowed_fallbacks": [
     "BIL",
     "SPY"
-  ]
+  ],
+  "same_symbol_buy_cooldown_minutes": 240,
+  "same_symbol_sell_cooldown_minutes": 240,
+  "same_symbol_roundtrip_cooldown_days": 1,
+  "max_orders_per_symbol_per_day": 1,
+  "max_total_paper_orders_per_day": 3
 }

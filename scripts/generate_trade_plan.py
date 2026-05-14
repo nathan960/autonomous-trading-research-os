@@ -29,6 +29,7 @@ _ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(_ROOT / "src"))
 
 from trading_os.config import (
+    HISTORY_DIR,
     LATEST_DIR,
     MEMORY_DIR,
     load_config_file,
@@ -122,6 +123,20 @@ def main(approve_paper: bool = False) -> int:
                 f" — using empty (execution gate will still catch duplicates)"
             )
 
+    # Order monitor report — optional, used for churn/cooldown guard
+    monitor_report: dict = {}
+    monitor_report_path = LATEST_DIR / "order_monitor_report.json"
+    if monitor_report_path.exists():
+        try:
+            monitor_report = _load_json(monitor_report_path, "order_monitor_report")
+            lifecycle_count = len(monitor_report.get("lifecycles", []))
+            print(f"  order_monitor_report  lifecycles={lifecycle_count}")
+        except Exception as exc:
+            print(
+                f"  [generate_trade_plan] WARNING: could not load order_monitor_report: {exc}"
+                f" — cooldown guard disabled this run"
+            )
+
     print(f"  market_snapshot  generated_at={market_snapshot.get('generated_at', '?')}")
     print(f"  trigger_snapshot scanned_at={trigger_snapshot.get('scanned_at', '?')}")
     print(f"  account equity={account_snapshot.get('account', {}).get('equity', '?')}")
@@ -140,6 +155,7 @@ def main(approve_paper: bool = False) -> int:
             sector_map=sector_map,
             approve_paper=approve_paper,
             orders_snapshot=orders_snapshot,
+            monitor_report=monitor_report,
         )
     except Exception as exc:
         print(f"[generate_trade_plan] ERROR building plan: {exc}", file=sys.stderr)
@@ -160,9 +176,14 @@ def main(approve_paper: bool = False) -> int:
     if trade_plan.get("no_trade_reasons"):
         print(f"  no_trade_reasons={trade_plan['no_trade_reasons']}")
 
-    # ── Write output ─────────────────────────────────────────────────────────
+    # ── Write outputs ────────────────────────────────────────────────────────
     LATEST_DIR.mkdir(parents=True, exist_ok=True)
     _write_json(LATEST_DIR / "trade_plan.json", trade_plan)
+
+    # Archive to history — improves lineage completeness (trigger_snapshot_hash recovery)
+    plan_id = trade_plan.get("plan_id", "trade_plan-unknown")
+    history_path = HISTORY_DIR / "trade_plans" / f"{plan_id}.json"
+    _write_json(history_path, trade_plan)
 
     print("[generate_trade_plan] done")
     return 0

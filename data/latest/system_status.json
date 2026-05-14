@@ -1,55 +1,80 @@
 {
   "blocking_issues": [],
-  "buying_power": 199480.27,
-  "cash": 99727.76,
+  "buying_power": 199430.19,
+  "cash": 99652.76,
+  "churn_state": {
+    "daily_total_limit_reached": true,
+    "max_orders_per_symbol_per_day": 1,
+    "max_total_paper_orders_per_day": 3,
+    "passes": false,
+    "per_symbol_counts": {
+      "EQIX": 4,
+      "JNJ": 1,
+      "WMT": 1
+    },
+    "symbol_daily_limit_violations": [
+      "EQIX(count=4,limit=1)",
+      "JNJ(count=1,limit=1)",
+      "WMT(count=1,limit=1)"
+    ],
+    "today_total_count": 6
+  },
   "current_positions": [
     {
-      "avg_entry_price": "1081.92952",
-      "current_price": "1078.05",
-      "market_value": "24.8298",
-      "qty": "0.023032141",
+      "avg_entry_price": "1080.164043",
+      "current_price": "1078.065",
+      "market_value": "49.822147",
+      "qty": "0.046214418",
       "symbol": "EQIX",
-      "unrealized_pl": "-0.089353"
+      "unrealized_pl": "-0.097006"
     },
     {
-      "avg_entry_price": "230.248",
-      "current_price": "230.29",
-      "market_value": "25.00456",
-      "qty": "0.108578576",
+      "avg_entry_price": "230.181981",
+      "current_price": "229.86",
+      "market_value": "49.930059",
+      "qty": "0.217219435",
       "symbol": "JNJ",
-      "unrealized_pl": "0.00456"
+      "unrealized_pl": "-0.069941"
     },
     {
       "avg_entry_price": "218.808",
-      "current_price": "218.035",
-      "market_value": "24.91168",
+      "current_price": "217.91",
+      "market_value": "24.897399",
       "qty": "0.11425542",
       "symbol": "WELL",
-      "unrealized_pl": "-0.08832"
+      "unrealized_pl": "-0.102601"
+    },
+    {
+      "avg_entry_price": "132.276",
+      "current_price": "132.36",
+      "market_value": "25.015876",
+      "qty": "0.18899876",
+      "symbol": "WMT",
+      "unrealized_pl": "0.015876"
     }
   ],
   "data_quality_status": "ATTENTION_REQUIRED",
   "dry_run_all_gates_pass": true,
   "failed_gates": [],
-  "generated_at": "2026-05-14T17:01:51Z",
-  "last_alert_count": 24,
-  "last_route_count": 7,
-  "latest_account_equity": 99802.51,
-  "latest_plan_id": "trade_plan-20260514T170134-8fd5fb41",
+  "generated_at": "2026-05-14T17:45:26Z",
+  "last_alert_count": 25,
+  "last_route_count": 9,
+  "latest_account_equity": 99802.43,
+  "latest_plan_id": "trade_plan-20260514T174516-ddb701fd",
   "lineage_status": {
-    "complete_count": 0,
-    "generated_at": "2026-05-14T15:53:42Z",
-    "lineage_count": 5,
-    "partial_count": 5
+    "complete_count": 1,
+    "generated_at": "2026-05-14T16:52:38Z",
+    "lineage_count": 8,
+    "partial_count": 7
   },
-  "open_order_count": 2,
+  "open_order_count": 1,
   "order_lifecycle_summary": {
-    "orders_active": 2,
+    "orders_active": 1,
     "orders_canceled": 0,
     "orders_expired": 0,
-    "orders_filled": 5,
+    "orders_filled": 8,
     "orders_rejected": 0,
-    "orders_tracked": 7,
+    "orders_tracked": 9,
     "safety": {
       "cancel_order_called": false,
       "replace_order_called": false,
@@ -59,61 +84,57 @@
     "warnings": []
   },
   "outcome_summary": {
-    "avg_current_return_pct": -0.00197,
-    "outcomes_count": 5,
+    "avg_current_return_pct": -0.000643,
+    "outcomes_count": 8,
     "source_integrity_status": "ok",
     "tracked_symbols": [
       "WELL",
       "JNJ",
       "EQIX",
       "EQIX",
-      "EQIX"
+      "EQIX",
+      "EQIX",
+      "JNJ",
+      "WMT"
     ]
   },
   "overall_status": "YELLOW",
-  "position_count": 3,
-  "proposed_order_count": 1,
-  "proposed_orders": [
-    {
-      "limit_price": 132.07,
-      "notional": 25.0,
-      "order_type": "limit",
-      "side": "buy",
-      "skip_reason": null,
-      "symbol": "WMT"
-    }
+  "position_count": 4,
+  "proposed_order_count": 0,
+  "proposed_orders": [],
+  "required_operator_actions": [
+    "Daily order limits hit \u2014 churn guard will block new orders until tomorrow"
   ],
-  "required_operator_actions": [],
   "risk_state": {
-    "drawdown": -6e-06,
+    "drawdown": -7e-06,
     "drawdown_blocked": false,
     "drawdown_warn": false,
-    "latest_equity": 99802.51,
+    "latest_equity": 99802.43,
     "paused": false,
     "peak_equity": 99803.14,
     "stale": false,
-    "updated_at": "2026-05-14T15:54:47Z"
+    "updated_at": "2026-05-14T17:07:54Z"
   },
   "safe_for_manual_paper_execution": false,
   "safe_for_research_cycle": true,
   "safe_for_scheduled_paper_execution": false,
   "schema_version": "0.1.0",
   "source_integrity_status": "ok",
-  "status_hash": "a730017e8e8cd6aed6d5125fe75f5e3ea042d32c95ecf79ef8fd31a5dca38f20",
+  "status_hash": "b530e0cb0e316720636fd85c09f4ee70775b19a59052c2fd17a955f52064be97",
   "trade_plan_approved_for_execution": false,
   "trigger_performance_summary": {
-    "avg_current_return_pct": -0.00197,
-    "avg_slippage_pct": -0.000135,
+    "avg_current_return_pct": -0.000643,
+    "avg_slippage_pct": -0.000168,
     "days": 7,
-    "operational_issues": [
-      "Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 51% of candidates \u2014 review spread threshold or data freshness."
-    ],
+    "operational_issues": [],
     "recommendation": "needs_more_data",
     "regime_category": "market_regime",
     "regime_recommendation": "keep_observing",
     "status": "ok"
   },
   "warnings": [
-    "34 wide-spread symbols (['AMGN', 'AMT', 'APD', 'AXP', 'BA', 'BLK', 'COST', 'DE', 'EOG', 'GS', 'HON', 'INTU', 'ISRG', 'JPM', 'LIN', 'LLY', 'LMT', 'LOW', 'MCD', 'MRK', 'MS', 'ORCL', 'PEP', 'PG', 'PLD', 'PM', 'RTX', 'SHW', 'SRE', 'TMO', 'TMUS', 'UNH', 'UNP', 'WELL']) \u2014 SPREAD_NOT_TOO_WIDE may block execution"
+    "37 wide-spread symbols (['ABBV', 'ABT', 'ADBE', 'AMGN', 'APD', 'AXP', 'BA', 'BKNG', 'CAT', 'COP', 'COST', 'CVX', 'DE', 'DIS', 'ECL', 'FCX', 'GS', 'HON', 'INTU', 'ISRG', 'LLY', 'LOW', 'MA', 'MCD', 'MS', 'ORCL', 'PEP', 'PG', 'PLD', 'PM', 'RTX', 'SHW', 'TMO', 'TMUS', 'UNH', 'UNP', 'UPS']) \u2014 SPREAD_NOT_TOO_WIDE may block execution",
+    "Daily order limit reached: 6 orders today (max_total_paper_orders_per_day=3)",
+    "Per-symbol daily order limits reached: ['EQIX(count=4,limit=1)', 'JNJ(count=1,limit=1)', 'WMT(count=1,limit=1)']"
   ]
 }

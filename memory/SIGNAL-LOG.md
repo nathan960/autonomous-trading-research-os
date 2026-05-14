@@ -22130,261 +22130,1197 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
   SO        score=0.0570  atr_pct=0.0163  [candidate]
 ```
 
-## scan_triggers candidates  (2026-05-14T17:17:38Z)
+## Signal candidates ranked
 
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174412-8dbc4e7f",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
 ```
-  GOOGL     score=0.9356  atr_pct=0.0237  [SELECTED]
-  CSCO      score=0.7293  atr_pct=0.0265  [SELECTED]
-  FCX       score=0.6252  atr_pct=0.0409  [SELECTED]
-  SLB       score=0.5117  atr_pct=0.0291  [SELECTED]
-  NVDA      score=0.5023  atr_pct=0.0290  [SELECTED]
-  JNJ       score=0.3683  atr_pct=0.0176  [SELECTED]
-  XOM       score=0.3339  atr_pct=0.0269  [SELECTED]
-  WMT       score=0.3306  atr_pct=0.0197  [SELECTED]
-  COP       score=0.2912  atr_pct=0.0292  [candidate]
-  EQIX      score=0.2781  atr_pct=0.0187  [SELECTED]
-  CVX       score=0.2535  atr_pct=0.0239  [candidate]
-  AAPL      score=0.2384  atr_pct=0.0206  [candidate]
-  NEE       score=0.2098  atr_pct=0.0216  [SELECTED]
-  AMZN      score=0.1724  atr_pct=0.0246  [candidate]
-  TSLA      score=0.1721  atr_pct=0.0364  [candidate]
-  LIN       score=0.1691  atr_pct=0.0187  [candidate]
-  KO        score=0.1498  atr_pct=0.0159  [candidate]
-  O         score=0.1033  atr_pct=0.0150  [candidate]
-  CL        score=0.0705  atr_pct=0.0212  [candidate]
-  SO        score=0.0582  atr_pct=0.0162  [candidate]
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260514T174412-3948c51b",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "f624730e79078a07e1406fff1683ffe0fc6799fbd9dc97bbfd0dd13ad8623974"
+}
 ```
-## Lineage Snapshot — 2026-05-14T17:17:45Z
 
-**Run ID:** `lineage-20260514T171745-bcccbeb9`  **Records:** 8 (complete: 0, partial: 8)
+## Signal candidates ranked
 
-- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T145625-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX SELL cid=TOS-20260514T154543-EQIX-SELL trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T154817-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260514T154323-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- WMT BUY cid=TOS-20260514T165232-WMT-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-
----
-
-## scan_triggers candidates  (2026-05-14T17:18:44Z)
-
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174431-f59165f2",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
 ```
-  AMD       score=1.9091  atr_pct=0.0454  [SELECTED]
-  GOOGL     score=0.9368  atr_pct=0.0237  [SELECTED]
-  CSCO      score=0.7294  atr_pct=0.0265  [SELECTED]
-  FCX       score=0.6252  atr_pct=0.0409  [SELECTED]
-  AVGO      score=0.5426  atr_pct=0.0340  [candidate]
-  SLB       score=0.5130  atr_pct=0.0291  [SELECTED]
-  NVDA      score=0.5009  atr_pct=0.0291  [candidate]
-  JNJ       score=0.3692  atr_pct=0.0175  [SELECTED]
-  XOM       score=0.3355  atr_pct=0.0268  [SELECTED]
-  WMT       score=0.3308  atr_pct=0.0197  [SELECTED]
-  COP       score=0.2921  atr_pct=0.0292  [candidate]
-  EQIX      score=0.2781  atr_pct=0.0187  [SELECTED]
-  UNH       score=0.2449  atr_pct=0.0229  [SELECTED]
-  AAPL      score=0.2402  atr_pct=0.0206  [candidate]
-  NEE       score=0.2100  atr_pct=0.0216  [candidate]
-  AMZN      score=0.1738  atr_pct=0.0245  [candidate]
-  TSLA      score=0.1723  atr_pct=0.0364  [candidate]
-  KO        score=0.1501  atr_pct=0.0159  [candidate]
-  O         score=0.1037  atr_pct=0.0150  [candidate]
-  CL        score=0.0708  atr_pct=0.0212  [candidate]
-  SO        score=0.0588  atr_pct=0.0162  [candidate]
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260514T174431-849fd3df",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "1c44699f9c375ad7451f9c49d4df19b7f644466beff077c926cc8c1c25b2f584"
+}
 ```
-## Lineage Snapshot — 2026-05-14T17:18:53Z
 
-**Run ID:** `lineage-20260514T171853-e8122113`  **Records:** 8 (complete: 0, partial: 8)
+## Signal candidates ranked
 
-- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T145625-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX SELL cid=TOS-20260514T154543-EQIX-SELL trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T154817-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260514T154323-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- WMT BUY cid=TOS-20260514T165232-WMT-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-
----
-
-## scan_triggers candidates  (2026-05-14T17:19:52Z)
-
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174439-1c95ca60",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
 ```
-  CAT       score=1.0928  atr_pct=0.0289  [SELECTED]
-  GOOGL     score=0.9373  atr_pct=0.0237  [SELECTED]
-  CSCO      score=0.7267  atr_pct=0.0266  [SELECTED]
-  FCX       score=0.6256  atr_pct=0.0409  [SELECTED]
-  AVGO      score=0.5433  atr_pct=0.0340  [SELECTED]
-  SLB       score=0.5109  atr_pct=0.0291  [SELECTED]
-  NVDA      score=0.4995  atr_pct=0.0291  [candidate]
-  JNJ       score=0.3692  atr_pct=0.0175  [SELECTED]
-  MRK       score=0.3607  atr_pct=0.0231  [SELECTED]
-  XOM       score=0.3354  atr_pct=0.0268  [SELECTED]
-  WMT       score=0.3312  atr_pct=0.0197  [SELECTED]
-  WELL      score=0.3141  atr_pct=0.0214  [candidate]
-  COP       score=0.2921  atr_pct=0.0292  [candidate]
-  EQIX      score=0.2781  atr_pct=0.0187  [candidate]
-  UNH       score=0.2453  atr_pct=0.0229  [candidate]
-  AAPL      score=0.2400  atr_pct=0.0206  [candidate]
-  EOG       score=0.2128  atr_pct=0.0264  [candidate]
-  NEE       score=0.2100  atr_pct=0.0216  [candidate]
-  AMZN      score=0.1737  atr_pct=0.0245  [candidate]
-  TSLA      score=0.1719  atr_pct=0.0364  [candidate]
-  AEP       score=0.1650  atr_pct=0.0190  [candidate]
-  KO        score=0.1503  atr_pct=0.0159  [candidate]
-  APD       score=0.1235  atr_pct=0.0204  [candidate]
-  O         score=0.1038  atr_pct=0.0150  [candidate]
-  CL        score=0.0707  atr_pct=0.0212  [candidate]
-  SO        score=0.0590  atr_pct=0.0162  [candidate]
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260514T174440-044a0b48",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "48df7c6dab6861085f4eb8a15f852523ac2ad0f88baf1dd0dbe8034e94e1fdfb"
+}
 ```
-## Lineage Snapshot — 2026-05-14T17:19:58Z
 
-**Run ID:** `lineage-20260514T171958-3d5a3be6`  **Records:** 8 (complete: 0, partial: 8)
+## Signal candidates ranked
 
-- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T145625-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX SELL cid=TOS-20260514T154543-EQIX-SELL trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T154817-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260514T154323-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- WMT BUY cid=TOS-20260514T165232-WMT-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-
----
-
-## scan_triggers candidates  (2026-05-14T17:21:02Z)
-
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174447-ab6272a3",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
 ```
-  GOOGL     score=0.9376  atr_pct=0.0237  [SELECTED]
-  CSCO      score=0.7267  atr_pct=0.0266  [SELECTED]
-  FCX       score=0.6257  atr_pct=0.0409  [SELECTED]
-  AVGO      score=0.5424  atr_pct=0.0340  [SELECTED]
-  SLB       score=0.5113  atr_pct=0.0291  [SELECTED]
-  NVDA      score=0.5001  atr_pct=0.0291  [candidate]
-  XOM       score=0.3355  atr_pct=0.0268  [SELECTED]
-  MS        score=0.3333  atr_pct=0.0239  [SELECTED]
-  WMT       score=0.3314  atr_pct=0.0197  [SELECTED]
-  WELL      score=0.3131  atr_pct=0.0214  [SELECTED]
-  COP       score=0.2926  atr_pct=0.0292  [candidate]
-  EQIX      score=0.2781  atr_pct=0.0187  [SELECTED]
-  CVX       score=0.2535  atr_pct=0.0239  [candidate]
-  UNH       score=0.2447  atr_pct=0.0230  [candidate]
-  AAPL      score=0.2395  atr_pct=0.0206  [candidate]
-  NEE       score=0.2105  atr_pct=0.0216  [candidate]
-  AMZN      score=0.1737  atr_pct=0.0245  [candidate]
-  TSLA      score=0.1710  atr_pct=0.0364  [candidate]
-  AEP       score=0.1648  atr_pct=0.0190  [candidate]
-  KO        score=0.1505  atr_pct=0.0159  [candidate]
-  O         score=0.1042  atr_pct=0.0150  [candidate]
-  CL        score=0.0712  atr_pct=0.0212  [candidate]
-  SO        score=0.0590  atr_pct=0.0162  [candidate]
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260514T174447-b93351f0",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "5708f350b5319f8d815ed0654a260c92b5982e4b190a059b79a6bf6aef1c6bba"
+}
 ```
-## Lineage Snapshot — 2026-05-14T17:21:09Z
 
-**Run ID:** `lineage-20260514T172109-0160a03c`  **Records:** 11 (complete: 1, partial: 10)
+## Signal candidates ranked
 
-- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T145625-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX SELL cid=TOS-20260514T154543-EQIX-SELL trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T154817-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260514T154323-JNJ-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
-- WMT BUY cid=TOS-20260514T165232-WMT-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- WMT BUY cid=TOS-20260514T171844-WMT-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T163113-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T172103-EQIX-BUY trigger_hash=6ff598462706 trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=complete_from_trade_plan
-
----
-
-## scan_triggers candidates  (2026-05-14T17:22:25Z)
-
+```json
+{
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174454-cc988d83",
+  "selected": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ],
+  "top_candidates": [
+    {
+      "atr_pct": 0.010938144972713254,
+      "latest_close": 66.8464,
+      "momentum_score": 0.2219724443399539,
+      "roc126": 0.1373329000403234,
+      "roc252": 0.3066119886395844,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "WMT"
+    },
+    {
+      "atr_pct": 0.011372719049647961,
+      "latest_close": 397.8635,
+      "momentum_score": 0.21978791670686748,
+      "roc126": 0.13492012327521374,
+      "roc252": 0.3046557101385212,
+      "sector": "Materials",
+      "sector_code": 111,
+      "symbol": "APD"
+    },
+    {
+      "atr_pct": 0.010519655190385375,
+      "latest_close": 397.0028,
+      "momentum_score": 0.21129738787910313,
+      "roc126": 0.1280501180324216,
+      "roc252": 0.29454465772578464,
+      "sector": "Communication Services",
+      "sector_code": 102,
+      "symbol": "DIS"
+    },
+    {
+      "atr_pct": 0.010284519834542934,
+      "latest_close": 131.123,
+      "momentum_score": 0.20930406978644833,
+      "roc126": 0.12509921188225848,
+      "roc252": 0.2935089276906382,
+      "sector": "Technology",
+      "sector_code": 101,
+      "symbol": "ORCL"
+    },
+    {
+      "atr_pct": 0.01105538114772093,
+      "latest_close": 104.6392,
+      "momentum_score": 0.2015814864072044,
+      "roc126": 0.12588511881385211,
+      "roc252": 0.2772778540005567,
+      "sector": "Health Care",
+      "sector_code": 105,
+      "symbol": "LLY"
+    },
+    {
+      "atr_pct": 0.009817870296887523,
+      "latest_close": 368.9824,
+      "momentum_score": 0.19955606214422494,
+      "roc126": 0.12881908572306133,
+      "roc252": 0.27029303856538855,
+      "sector": "Financials",
+      "sector_code": 104,
+      "symbol": "BLK"
+    },
+    {
+      "atr_pct": 0.011780188713451269,
+      "latest_close": 131.4487,
+      "momentum_score": 0.19692295910538415,
+      "roc126": 0.1223765416286704,
+      "roc252": 0.2714693765820979,
+      "sector": "Consumer Discretionary",
+      "sector_code": 103,
+      "symbol": "BKNG"
+    },
+    {
+      "atr_pct": 0.01096697673112274,
+      "latest_close": 345.884,
+      "momentum_score": 0.19631743002941815,
+      "roc126": 0.12744057846016243,
+      "roc252": 0.26519428159867386,
+      "sector": "Consumer Staples",
+      "sector_code": 107,
+      "symbol": "KO"
+    },
+    {
+      "atr_pct": 0.009923952009687284,
+      "latest_close": 150.8377,
+      "momentum_score": 0.19048644316063956,
+      "roc126": 0.12370392885185888,
+      "roc252": 0.25726895746942025,
+      "sector": "Real Estate",
+      "sector_code": 110,
+      "symbol": "WELL"
+    },
+    {
+      "atr_pct": 0.01022783604659481,
+      "latest_close": 290.7738,
+      "momentum_score": 0.1861546764474581,
+      "roc126": 0.11825238476886102,
+      "roc252": 0.25405696812605516,
+      "sector": "Energy",
+      "sector_code": 108,
+      "symbol": "EOG"
+    }
+  ]
+}
 ```
-  GOOGL     score=0.9398  atr_pct=0.0236  [SELECTED]
-  CSCO      score=0.7237  atr_pct=0.0266  [SELECTED]
-  FCX       score=0.6237  atr_pct=0.0409  [SELECTED]
-  AVGO      score=0.5440  atr_pct=0.0339  [SELECTED]
-  SLB       score=0.5111  atr_pct=0.0291  [SELECTED]
-  NVDA      score=0.5035  atr_pct=0.0290  [candidate]
-  JNJ       score=0.3681  atr_pct=0.0176  [SELECTED]
-  MRK       score=0.3573  atr_pct=0.0232  [SELECTED]
-  XOM       score=0.3341  atr_pct=0.0269  [SELECTED]
-  MS        score=0.3333  atr_pct=0.0239  [SELECTED]
-  WMT       score=0.3291  atr_pct=0.0197  [SELECTED]
-  COP       score=0.2916  atr_pct=0.0292  [candidate]
-  EQIX      score=0.2753  atr_pct=0.0188  [candidate]
-  AAPL      score=0.2397  atr_pct=0.0206  [candidate]
-  NEE       score=0.2093  atr_pct=0.0216  [candidate]
-  AMZN      score=0.1741  atr_pct=0.0245  [candidate]
-  TSLA      score=0.1717  atr_pct=0.0364  [candidate]
-  KO        score=0.1495  atr_pct=0.0159  [candidate]
-  O         score=0.1028  atr_pct=0.0151  [candidate]
-  CL        score=0.0700  atr_pct=0.0212  [candidate]
-  SO        score=0.0572  atr_pct=0.0163  [candidate]
+
+## Trade plan generated
+
+```json
+{
+  "approval_status": "DRY_RUN_ONLY",
+  "candidate_order_count": 11,
+  "failed_gates": [],
+  "run_id": "trade_plan-20260514T174455-cc8e6604",
+  "target_reason": "risk_on_stock_basket_inverse_atr_weighted",
+  "targets": {
+    "APD": 0.084553,
+    "BIL": 0.1,
+    "BKNG": 0.081628,
+    "BLK": 0.09616,
+    "DIS": 0.091409,
+    "EOG": 0.094018,
+    "KO": 0.087681,
+    "LLY": 0.08698,
+    "ORCL": 0.093499,
+    "WELL": 0.09616,
+    "WMT": 0.087912
+  },
+  "trade_plan_hash": "6c9fb776d5298d5b156427c20765657a3e6b85660e452126fed9a57452b42140"
+}
 ```
-## Lineage Snapshot — 2026-05-14T17:22:32Z
-
-**Run ID:** `lineage-20260514T172232-2e4ad7df`  **Records:** 12 (complete: 0, partial: 12)
-
-- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T145625-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX SELL cid=TOS-20260514T154543-EQIX-SELL trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T154817-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260514T154323-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- WMT BUY cid=TOS-20260514T165232-WMT-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- WMT BUY cid=TOS-20260514T171844-WMT-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T163113-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T172103-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260514T171739-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-
----
-
-## scan_triggers candidates  (2026-05-14T17:23:35Z)
-
-```
-  GOOGL     score=0.9420  atr_pct=0.0236  [SELECTED]
-  CSCO      score=0.7253  atr_pct=0.0266  [SELECTED]
-  FCX       score=0.6250  atr_pct=0.0409  [SELECTED]
-  AVGO      score=0.5452  atr_pct=0.0339  [SELECTED]
-  SLB       score=0.5119  atr_pct=0.0291  [SELECTED]
-  NVDA      score=0.5058  atr_pct=0.0290  [candidate]
-  MRK       score=0.3586  atr_pct=0.0232  [SELECTED]
-  XOM       score=0.3344  atr_pct=0.0269  [SELECTED]
-  WMT       score=0.3288  atr_pct=0.0197  [SELECTED]
-  WELL      score=0.3132  atr_pct=0.0214  [SELECTED]
-  COP       score=0.2911  atr_pct=0.0292  [candidate]
-  EQIX      score=0.2753  atr_pct=0.0188  [SELECTED]
-  AAPL      score=0.2400  atr_pct=0.0206  [candidate]
-  NEE       score=0.2093  atr_pct=0.0216  [candidate]
-  AMZN      score=0.1744  atr_pct=0.0245  [candidate]
-  TSLA      score=0.1724  atr_pct=0.0364  [candidate]
-  AEP       score=0.1630  atr_pct=0.0190  [candidate]
-  KO        score=0.1493  atr_pct=0.0159  [candidate]
-  O         score=0.1032  atr_pct=0.0151  [candidate]
-  BLK       score=0.0795  atr_pct=0.0219  [candidate]
-  CL        score=0.0700  atr_pct=0.0212  [candidate]
-  SO        score=0.0579  atr_pct=0.0163  [candidate]
-```
-## Lineage Snapshot — 2026-05-14T17:23:42Z
-
-**Run ID:** `lineage-20260514T172342-3397bcc4`  **Records:** 13 (complete: 0, partial: 13)
-
-- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T145625-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX SELL cid=TOS-20260514T154543-EQIX-SELL trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T154817-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260514T154323-JNJ-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
-- WMT BUY cid=TOS-20260514T165232-WMT-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- WMT BUY cid=TOS-20260514T171844-WMT-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T163113-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- EQIX BUY cid=TOS-20260514T172103-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-- JNJ BUY cid=TOS-20260514T171739-JNJ-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
-- EQIX SELL cid=TOS-20260514T172226-EQIX-SELL trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
-
----

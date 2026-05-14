@@ -18,6 +18,7 @@ from ..hashing import stable_hash
 from ..signals._indicators import closes, sorted_bars
 from ..time_utils import utc_now_iso, parse_iso_utc
 from .allocator import compute_targets
+from .churn_guard import filter_churn_blocked
 from .position_sizer import compute_proposed_orders
 from .risk_checks import all_checks_pass, run_risk_checks
 
@@ -143,6 +144,7 @@ def build_trade_plan(
     sector_map: dict,
     approve_paper: bool = False,
     orders_snapshot: Optional[dict] = None,
+    monitor_report: Optional[dict] = None,
 ) -> dict:
     """Build and return a complete trade plan dict.
 
@@ -268,6 +270,25 @@ def build_trade_plan(
         else None
     )
 
+    # ── Churn / cooldown filter ──────────────────────────────────────────────
+    # Prevents repeated same-symbol trades and daily over-trading.
+    # Runs after open-order filter so the remaining candidates are already clean.
+    _lifecycles: list = []
+    if monitor_report:
+        _lifecycles = [
+            lc for lc in monitor_report.get("lifecycles", [])
+            if isinstance(lc, dict)
+        ]
+
+    proposed_orders, churn_blocked = filter_churn_blocked(
+        proposed_orders, _lifecycles, risk_limits, generated_at
+    )
+
+    churn_blocked_summary: list = []
+    for o in churn_blocked:
+        blocked_symbols.append({"symbol": o["symbol"], "skip_reason": o.get("skip_reason", "")})
+        churn_blocked_summary.append({"symbol": o["symbol"], "skip_reason": o.get("skip_reason", "")})
+
     # ── Deterministic priority sort ──────────────────────────────────────────
     # Sell exits sort before buys (reduce risk first).
     # Within buys: highest momentum_score → lowest ATR% → alphabetical.
@@ -375,6 +396,14 @@ def build_trade_plan(
         syms = [o["symbol"] for o in open_order_blocked_summary]
         no_trade_reasons.append(f"open_order_blocked_at_planning(non_blocking): {syms}")
 
+    # Summarise churn-blocked symbols for auditability.
+    if churn_blocked_summary and not proposed_orders:
+        syms = [o["symbol"] for o in churn_blocked_summary]
+        no_trade_reasons.append(f"churn_blocked_all_orders: {syms}")
+    elif churn_blocked_summary:
+        syms = [o["symbol"] for o in churn_blocked_summary]
+        no_trade_reasons.append(f"churn_blocked_at_planning(non_blocking): {syms}")
+
     if not proposed_orders and not no_trade_reasons:
         no_trade_reasons.append("no_actionable_orders")
 
@@ -426,6 +455,7 @@ def build_trade_plan(
         "blocked_symbols": blocked_symbols,
         "spread_blocked_at_planning": spread_blocked_summary,
         "open_order_blocked_at_planning": open_order_blocked_summary,
+        "churn_blocked_at_planning": churn_blocked_summary,
         "orders_run_capped_at_planning": [
             {"symbol": o["symbol"], "skip_reason": o.get("skip_reason", "")}
             for o in orders_run_capped

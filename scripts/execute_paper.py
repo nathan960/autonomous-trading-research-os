@@ -243,20 +243,33 @@ def main() -> int:
     _EXEC_HISTORY_DIR.mkdir(parents=True, exist_ok=True)
     _ORDERS_HISTORY_DIR.mkdir(parents=True, exist_ok=True)
 
+    # ── Load order monitor report for Gate 18 (DAILY_ORDER_LIMITS) ───────────
+    order_monitor_report: dict = {}
+    monitor_report_path = LATEST_DIR / "order_monitor_report.json"
+    if monitor_report_path.exists():
+        try:
+            order_monitor_report = _load_json(monitor_report_path, "order_monitor_report")
+        except Exception as exc:
+            print(
+                f"[execute_paper] WARNING: could not load order_monitor_report: {exc}"
+                " — DAILY_ORDER_LIMITS gate will pass (degrade gracefully)",
+            )
+
     # ── Build gate context (dry_run=False forced inside run_paper_execution) ──
     ctx = {
-        "trade_plan":         trade_plan,
-        "account_snapshot":   account_snapshot,
-        "positions_snapshot": positions_snapshot,
-        "orders_snapshot":    orders_snapshot,
-        "market_snapshot":    market_snapshot,
-        "risk_state":         risk_state,
-        "universe":           universe,
-        "risk_limits":        risk_limits,
-        "strategy":           strategy,
-        "exec_history_dir":   _EXEC_HISTORY_DIR,
-        "orders_dir":         _ORDERS_HISTORY_DIR,
-        "dry_run":            False,
+        "trade_plan":           trade_plan,
+        "account_snapshot":     account_snapshot,
+        "positions_snapshot":   positions_snapshot,
+        "orders_snapshot":      orders_snapshot,
+        "market_snapshot":      market_snapshot,
+        "risk_state":           risk_state,
+        "universe":             universe,
+        "risk_limits":          risk_limits,
+        "strategy":             strategy,
+        "exec_history_dir":     _EXEC_HISTORY_DIR,
+        "orders_dir":           _ORDERS_HISTORY_DIR,
+        "dry_run":              False,
+        "order_monitor_report": order_monitor_report,
     }
 
     # ── Run the full paper execution pipeline ─────────────────────────────────

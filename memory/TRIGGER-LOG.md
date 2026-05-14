@@ -2888,194 +2888,82 @@ Every trigger scan records fired, skipped, and selected signals here.
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 20,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-14T17:17:38Z",
-  "selected": [
-    "GOOGL",
-    "CSCO",
-    "FCX",
-    "SLB",
-    "NVDA",
-    "JNJ",
-    "XOM",
-    "WMT",
-    "EQIX",
-    "NEE"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "a50df924d4ad447da8fe996054d20bb5c6a437cf6c3bf0e4fecc2ac7ef5510a0",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174412-8dbc4e7f",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.08224218333333333,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "f2be68ef81b309cff2ef927f4fd8b8ddd31f17909651490def5de78e0bab8e4b"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 21,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-14T17:18:44Z",
-  "selected": [
-    "AMD",
-    "GOOGL",
-    "CSCO",
-    "FCX",
-    "SLB",
-    "JNJ",
-    "XOM",
-    "WMT",
-    "EQIX",
-    "UNH"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "9a7f7bf7b8eeab86ae8cff83e97b4ed20a78cd04a019538f870f5e7cc3ee0edb",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174431-f59165f2",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.11304403333333334,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "de6db19835da14f3cb319aec4f8d2d86d6f23d3c5167240af998a07ddf41c96e"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 26,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-14T17:19:52Z",
-  "selected": [
-    "CAT",
-    "GOOGL",
-    "CSCO",
-    "FCX",
-    "AVGO",
-    "SLB",
-    "JNJ",
-    "MRK",
-    "XOM",
-    "WMT"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "ccc35b9315c1353f686fe2ac2de4e527fb8602c2fa18dd78995813b093287331",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174439-1c95ca60",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.08561633333333334,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "6fd83ea80481c5a05859a8fcf8b219162f4934da1ce3ed6ed5bd6a06b1875570"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 23,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-14T17:21:02Z",
-  "selected": [
-    "GOOGL",
-    "CSCO",
-    "FCX",
-    "AVGO",
-    "SLB",
-    "XOM",
-    "MS",
-    "WMT",
-    "WELL",
-    "EQIX"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "2155042889ed3c44248dbfca9ef807fc5fd1da21d6ee1fa8cd2e71b418b7f810",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174447-ab6272a3",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.0974006,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "6ff598462706d8d43190cdcf9ab421401af90b485e5233c58e0cbac76644cbf4"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 21,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-14T17:22:25Z",
-  "selected": [
-    "GOOGL",
-    "CSCO",
-    "FCX",
-    "AVGO",
-    "SLB",
-    "JNJ",
-    "MRK",
-    "XOM",
-    "MS",
-    "WMT"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "99b98947f8561333070bdee50fd0660609e3c5cf350b9c554a900f79ba2b9209",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T174454-cc988d83",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.09417176666666666,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "5b6266a33555ccbd1456913e1f5229e9a69283d4158a80088da6ee2523ceb007"
-}
-```
-
-## scan_triggers run
-
-```json
-{
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 22,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-14T17:23:35Z",
-  "selected": [
-    "GOOGL",
-    "CSCO",
-    "FCX",
-    "AVGO",
-    "SLB",
-    "MRK",
-    "XOM",
-    "WMT",
-    "WELL",
-    "EQIX"
-  ],
-  "selected_count": 10,
-  "snapshot_age_minutes": 0.09639858333333334,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "b14799740d1d33e593fa634f7458c836b29b452a527bfbc1c6e4a553bb5af237"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```

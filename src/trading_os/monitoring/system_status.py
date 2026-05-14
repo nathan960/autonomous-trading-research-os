@@ -15,6 +15,13 @@ from __future__ import annotations
 from typing import Optional
 
 from ..hashing import stable_hash
+from ..planning.churn_guard import (
+    _date_str,
+    check_daily_total_limit,
+    check_daily_symbol_limit,
+    get_orders_today,
+    get_symbol_orders_today,
+)
 from ..source_integrity import check_execution_snapshots
 from ..time_utils import iso_age_minutes, utc_now_iso
 
@@ -208,6 +215,46 @@ def check_order_safety(orders_snapshot: dict, trade_plan: dict) -> dict:
         "has_duplicates": bool(conflicts),
         "conflict_symbols": conflicts,
         "open_order_count": orders_snapshot.get("open_order_count", 0),
+    }
+
+
+def check_churn_state(monitor_report: dict, risk_limits: dict) -> dict:
+    """Report daily order counts and check against configured daily limits."""
+    now_iso = utc_now_iso()
+    today_str = _date_str(now_iso)
+    lifecycles = monitor_report.get("lifecycles", [])
+
+    today_all = get_orders_today(lifecycles, today_str)
+    today_total = len(today_all)
+
+    per_symbol_counts: dict = {}
+    for lc in today_all:
+        sym = lc.get("symbol", "")
+        if sym:
+            per_symbol_counts[sym] = per_symbol_counts.get(sym, 0) + 1
+
+    total_check = check_daily_total_limit(lifecycles, today_str, risk_limits)
+    daily_total_limit_reached = not total_check["passes"]
+
+    symbol_limit_violations: list = []
+    max_per_sym = risk_limits.get("max_orders_per_symbol_per_day")
+    if max_per_sym is not None:
+        for sym, count in per_symbol_counts.items():
+            if count >= int(max_per_sym):
+                symbol_limit_violations.append(
+                    f"{sym}(count={count},limit={int(max_per_sym)})"
+                )
+
+    passes = not daily_total_limit_reached and not symbol_limit_violations
+
+    return {
+        "passes": passes,
+        "today_total_count": today_total,
+        "per_symbol_counts": per_symbol_counts,
+        "daily_total_limit_reached": daily_total_limit_reached,
+        "symbol_daily_limit_violations": symbol_limit_violations,
+        "max_total_paper_orders_per_day": risk_limits.get("max_total_paper_orders_per_day"),
+        "max_orders_per_symbol_per_day": risk_limits.get("max_orders_per_symbol_per_day"),
     }
 
 
@@ -405,6 +452,22 @@ def _determine_status(checks: dict) -> tuple:
         warnings_.append(f"Non-limit orders in trade plan: {checks['trade_plan']['non_limit_orders']}")
         actions.append("Regenerate trade plan — only limit orders are allowed for paper execution")
 
+    # ── YELLOW: daily order / churn limits ─────────────────────────────────
+    if not checks["churn_state"]["passes"]:
+        cs = checks["churn_state"]
+        if cs["daily_total_limit_reached"]:
+            warnings_.append(
+                f"Daily order limit reached: {cs['today_total_count']} orders today "
+                f"(max_total_paper_orders_per_day={cs['max_total_paper_orders_per_day']})"
+            )
+        if cs["symbol_daily_limit_violations"]:
+            warnings_.append(
+                f"Per-symbol daily order limits reached: {cs['symbol_daily_limit_violations']}"
+            )
+        actions.append(
+            "Daily order limits hit — churn guard will block new orders until tomorrow"
+        )
+
     if blocking:
         return STATUS_RED, blocking, warnings_, actions
     if warnings_:
@@ -458,6 +521,7 @@ def build_system_status(snapshots: dict, configs: dict) -> dict:
         "trade_plan": check_trade_plan(trade_plan, execution_policy),
         "order_safety": check_order_safety(orders_snap, trade_plan),
         "execution_policy": check_execution_policy(risk_limits, execution_policy),
+        "churn_state": check_churn_state(monitor_report, risk_limits),
     }
 
     # Determine overall status
@@ -477,6 +541,7 @@ def build_system_status(snapshots: dict, configs: dict) -> dict:
         and plan_approved
         and not checks["order_safety"]["has_duplicates"]
         and not checks["risk_state"]["drawdown_blocked"]
+        and checks["churn_state"]["passes"]
         and overall_status == STATUS_GREEN
     )
 
@@ -562,6 +627,9 @@ def build_system_status(snapshots: dict, configs: dict) -> dict:
             "latest_equity": checks["risk_state"]["latest_equity"],
             "peak_equity": checks["risk_state"]["peak_equity"],
         },
+
+        # ── Churn / daily limit state ──────────────────────────────────────
+        "churn_state": checks["churn_state"],
     }
 
     status_doc["status_hash"] = stable_hash(

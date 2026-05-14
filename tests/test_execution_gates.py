@@ -578,11 +578,11 @@ class TestGateExecutionLogWritable:
 # ===========================================================================
 
 class TestRunAllGates:
-    def test_returns_17_results(self):
+    def test_returns_18_results(self):
         with tempfile.TemporaryDirectory() as td:
             ctx = _ctx(exec_dir=Path(td) / "exec")
             results = run_all_gates(ctx)
-            assert len(results) == 17
+            assert len(results) == 18
 
     def test_each_result_has_required_keys(self):
         with tempfile.TemporaryDirectory() as td:
@@ -604,7 +604,7 @@ class TestRunAllGates:
     def test_never_raises_on_bad_context(self):
         results = run_all_gates({})
         assert isinstance(results, list)
-        assert len(results) == 17
+        assert len(results) == 18
 
     def test_gate_ids_are_unique(self):
         with tempfile.TemporaryDirectory() as td:

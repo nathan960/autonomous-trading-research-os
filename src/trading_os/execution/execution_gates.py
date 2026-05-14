@@ -25,6 +25,11 @@ import os
 from pathlib import Path
 from typing import Any, Optional
 
+from ..planning.churn_guard import (
+    _date_str,
+    check_daily_symbol_limit,
+    check_daily_total_limit,
+)
 from ..source_integrity import check_execution_snapshots
 from ..time_utils import iso_age_minutes, utc_now_iso
 
@@ -473,6 +478,39 @@ def gate_execution_log_writable(ctx: dict) -> dict:
                      f"cannot write to {exec_dir}: {type(exc).__name__}")
 
 
+# ── Gate 18 ─────────────────────────────────────────────────────────────────
+
+def gate_daily_order_limits(ctx: dict) -> dict:
+    """Confirm daily order count limits are not exceeded (defense in depth).
+
+    Checks max_total_paper_orders_per_day and max_orders_per_symbol_per_day
+    from risk_limits against today's submitted orders in order_monitor_report.
+    Passes when order_monitor_report is absent (degrade gracefully).
+    """
+    monitor_report = ctx.get("order_monitor_report", {})
+    risk_limits = ctx.get("risk_limits", {})
+    trade_plan = ctx.get("trade_plan", {})
+
+    lifecycles = monitor_report.get("lifecycles", [])
+    today_str = _date_str(utc_now_iso())
+
+    total_check = check_daily_total_limit(lifecycles, today_str, risk_limits)
+    if not total_check["passes"]:
+        return _gate("DAILY_ORDER_LIMITS", False, total_check["skip_reason"])
+
+    proposed_symbols = [
+        o["symbol"]
+        for o in trade_plan.get("proposed_orders", [])
+        if o.get("skip_reason") is None
+    ]
+    for sym in proposed_symbols:
+        sym_check = check_daily_symbol_limit(lifecycles, sym, today_str, risk_limits)
+        if not sym_check["passes"]:
+            return _gate("DAILY_ORDER_LIMITS", False, sym_check["skip_reason"])
+
+    return _gate("DAILY_ORDER_LIMITS", True)
+
+
 # ── Orchestrator ─────────────────────────────────────────────────────────────
 
 _GATE_FUNCTIONS = [
@@ -493,6 +531,7 @@ _GATE_FUNCTIONS = [
     gate_risk_limits_respected,
     gate_no_prohibited_orders,
     gate_execution_log_writable,
+    gate_daily_order_limits,
 ]
 
 

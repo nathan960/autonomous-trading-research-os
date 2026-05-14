@@ -113,6 +113,20 @@ def load_execution_index(history_dir: Path) -> dict:
     return index
 
 
+def load_trade_plan_history(history_dir: Path) -> dict:
+    """Build {plan_id: trade_plan} from data/history/trade_plans/*.json."""
+    index: dict = {}
+    plans_dir = history_dir / "trade_plans"
+    if not plans_dir.is_dir():
+        return index
+    for f in sorted(plans_dir.glob("*.json")):
+        data = _load_json(f, {})
+        plan_id = data.get("plan_id")
+        if plan_id:
+            index[plan_id] = data
+    return index
+
+
 def load_order_records(history_dir: Path) -> dict:
     """Build {client_order_id: order_record} from history/orders/TOS-*.json files."""
     index: dict = {}
@@ -137,6 +151,7 @@ def recover_trigger_snapshot_hash(
     executed_at_str: str,
     current_trade_plan: dict,
     trigger_history_lines: list,
+    trade_plan_history: Optional[dict] = None,
 ) -> tuple:
     """Try to recover trigger_snapshot_hash for a fill.
 
@@ -144,6 +159,7 @@ def recover_trigger_snapshot_hash(
 
     Sources:
       "from_current_trade_plan"         — current data/latest/trade_plan.json matched.
+      "from_trade_plan_history"         — data/history/trade_plans/<plan_id>.json matched.
       "recovered_from_trigger_history"  — closest JSONL entry before execution found.
     """
     # 1. Check current trade plan — cheapest path
@@ -151,6 +167,14 @@ def recover_trigger_snapshot_hash(
         h = current_trade_plan.get("trigger_snapshot_hash")
         if h:
             return (h, "from_current_trade_plan", None)
+
+    # 2. Check archived trade plan history
+    if plan_id and trade_plan_history:
+        hist_plan = trade_plan_history.get(plan_id)
+        if hist_plan:
+            h = hist_plan.get("trigger_snapshot_hash")
+            if h:
+                return (h, "from_trade_plan_history", None)
 
     # 2. Search trigger JSONL history for the closest entry where the symbol
     #    was evaluated (in candidates or selected) and scanned_at <= executed_at.
@@ -275,6 +299,7 @@ def build_lineage_record(
     trigger_snapshot: dict,
     outcome_by_cid: dict,
     linked_at: str,
+    trade_plan_history: Optional[dict] = None,
 ) -> dict:
     """Build a lineage record for one filled lifecycle entry.
 
@@ -301,7 +326,8 @@ def build_lineage_record(
 
     # Trigger snapshot hash recovery
     trigger_hash, hash_source, trigger_entry = recover_trigger_snapshot_hash(
-        plan_id, symbol, filled_at, current_trade_plan, trigger_history_lines
+        plan_id, symbol, filled_at, current_trade_plan, trigger_history_lines,
+        trade_plan_history=trade_plan_history,
     )
 
     # Trigger ID inference
@@ -310,7 +336,7 @@ def build_lineage_record(
     # Candidate metadata
     cand = _candidate_metadata(symbol, trigger_entry, trigger_snapshot)
 
-    # Target data — only available if current trade plan matches this fill's plan_id
+    # Target data — from current plan if it matches, otherwise from archived history
     target_weight: Optional[float] = None
     target_notional: Optional[float] = None
     target_reason: Optional[str] = None
@@ -320,6 +346,14 @@ def build_lineage_record(
         target_weight = _safe_float(t.get("weight"))
         target_notional = _safe_float(t.get("notional"))
         target_reason = t.get("reason")
+    elif plan_id and trade_plan_history:
+        hist_plan = trade_plan_history.get(plan_id)
+        if hist_plan:
+            targets = hist_plan.get("targets") or {}
+            t = targets.get(symbol) or {}
+            target_weight = _safe_float(t.get("weight"))
+            target_notional = _safe_float(t.get("notional"))
+            target_reason = t.get("reason")
 
     # Proposed order data from execution report
     proposed_side: Optional[str] = None
@@ -337,9 +371,9 @@ def build_lineage_record(
     # Outcome data
     outcome = outcome_by_cid.get(cid) or {}
 
-    # Lineage status — direct plan match is always COMPLETE; history recovery
-    # requires trigger_ids to be inferred as well.
-    if hash_source == "from_current_trade_plan":
+    # Lineage status — direct plan match (current or history) is COMPLETE;
+    # trigger JSONL recovery requires trigger_ids to be inferred as well.
+    if hash_source in ("from_current_trade_plan", "from_trade_plan_history"):
         lineage_status = LINEAGE_STATUS_COMPLETE
     elif trigger_hash and trigger_ids:
         lineage_status = LINEAGE_STATUS_RECOVERED
@@ -421,6 +455,7 @@ def build_lineage_snapshot(
     trigger_history_lines: list,
     trigger_snapshot: dict,
     outcome_snapshot: dict,
+    trade_plan_history: Optional[dict] = None,
 ) -> dict:
     """Build a complete lineage snapshot from all data sources.
 
@@ -454,6 +489,7 @@ def build_lineage_snapshot(
             trigger_snapshot=trigger_snapshot,
             outcome_by_cid=outcome_by_cid,
             linked_at=linked_at,
+            trade_plan_history=trade_plan_history,
         )
         records_by_cid[cid] = record
 
