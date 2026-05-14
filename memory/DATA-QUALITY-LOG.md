@@ -3321,3 +3321,45 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T17:22:22Z",
+  "insufficient_bars_count": 0,
+  "issues": [
+    "wide_spreads"
+  ],
+  "market_data_hash": "366d29aa5d67904c56e6cb40e5bbfc2429f9b22f2fdffb9215bbf02facfb064a",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T172219",
+  "snapshot_age_minutes": 0.0388267,
+  "snapshot_fetched_at": "2026-05-14T17:22:20Z",
+  "status": "ATTENTION_REQUIRED",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T17:22:30Z",
+  "insufficient_bars_count": 0,
+  "issues": [
+    "wide_spreads"
+  ],
+  "market_data_hash": "6c783a2c141b2c21569a418ccaae2a54a0b30d5eb346312b9744b127dddbb774",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T172227",
+  "snapshot_age_minutes": 0.0418717,
+  "snapshot_fetched_at": "2026-05-14T17:22:28Z",
+  "status": "ATTENTION_REQUIRED",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```

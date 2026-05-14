@@ -1088,3 +1088,44 @@ based on this report alone. Any experiment requires a candidate PR with:
 - Hypothesis, supporting evidence, success criteria, and rollback plan.
 
 ---
+## Outcome Observations — 2026-05-14T17:22:32Z
+
+*From outcome_tracker run `outcome_tracker-20260514T172232-2e4ad7df`*
+
+**Current unrealized returns (intraday — no strategy conclusions yet):**
+- WELL entry: fill=$218.808 current=$217.31 return=-0.685%
+- JNJ entry: fill=$230.248 current=$230.03 return=-0.095%
+- EQIX entry: fill=$1084.37 current=$1076.625 return=-0.714%
+- EQIX entry: fill=$1079.5 current=$1076.625 return=-0.266%
+- EQIX exit: fill=$1078.442 current=$1076.625 return=-0.169%
+- EQIX entry: fill=$1078.41 current=$1076.625 return=-0.166%
+- JNJ entry: fill=$230.116 current=$230.03 return=-0.037%
+- WMT entry: fill=$132.276 current=$132.3 return=+0.018%
+- WMT entry: fill=$132.474 current=$132.3 return=-0.131%
+- EQIX entry: fill=$1076.89 current=$1076.625 return=-0.025%
+- EQIX entry: fill=$1076.82 current=$1076.625 return=-0.018%
+- JNJ entry: fill=$230.044 current=$230.03 return=-0.006%
+
+*Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
+
+---
+## Trigger Performance Observations — 2026-05-14
+
+*From trigger_performance run `trigger_performance-20260514T172232-2e4ad7df`*
+*Period: 2026-05-08 to 2026-05-14 (7 days)*
+
+**Observations (research only — no strategy conclusions):**
+- Regime: 1 session(s) scanned, 1 risk-on (100%).
+- Spread gate: 36/79 symbols blocked (46%). Avg spread (blocked): 5.989%
+- Trend gate (200 DMA): 34/79 symbols below 200 DMA (43% block rate).
+- Fill count this period: 12. Need 8 more fills before P/L analysis is meaningful.
+- Average current return across 12 tracked outcome(s): -0.191%. Window pending — no conclusions yet.
+- Lineage: Lineage snapshot: 12 records (0 complete, 12 partial). 66 trigger fill associations recovered. 12 record(s) have partial lineage — save trade plans to history/trade_plans/ to improve completeness.
+- Fills linked to triggers (via lineage): ATR_SIZING_V1=11, LIQUIDITY_GATE_V1=11, MOMENTUM_BLEND_6M_12M_V1=11, SPREAD_GATE_V1=11, STOCK_TREND_200DMA_V1=11.
+- IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest.
+
+**Reminder:** Do not modify strategy.json, risk_limits.json, or trigger_registry.json
+based on this report alone. Any experiment requires a candidate PR with:
+- Hypothesis, supporting evidence, success criteria, and rollback plan.
+
+---
