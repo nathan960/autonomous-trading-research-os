@@ -236,3 +236,20 @@
   "source": "alpaca_paper"
 }
 ```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -4e-06,
+  "dry_run": true,
+  "equity": 99802.73,
+  "generated_at": "2026-05-14T14:58:01Z",
+  "open_order_count": 0,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260514T145801-85678229",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```

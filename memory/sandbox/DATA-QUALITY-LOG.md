@@ -264,3 +264,22 @@
   "symbols_with_bars": 81
 }
 ```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T14:58:02Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "aec52d451100fd5994839017626d2fc9d233f44394358c57b167431c4081ee4f",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T145802",
+  "snapshot_age_minutes": 0.015167883333333333,
+  "snapshot_fetched_at": "2026-05-14T14:58:02Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```

@@ -2392,5 +2392,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "spy_passes_200dma": true,
   "spy_passes_6m_momentum": true,
   "trigger_snapshot_hash": "34e9c064a659202d17f63d898c9df0e842c1a82394dd38f01da19568bd1ccc59"
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "a71f11c655a4113c6ee8567fe3cc3df0c4df390c0e862216a1e4c3a3348929e4",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T145801-55b0a8f6",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
