@@ -1,0 +1,27 @@
+{
+  "broker_order_id": "cb9f007e-ee3e-4fa5-9bf3-f49197737d60",
+  "broker_status": "pending_new",
+  "broker_status_latest": "filled",
+  "client_order_id": "TOS-20260514T172103-EQIX-BUY",
+  "error": null,
+  "fill": {
+    "fill_price": 1076.82,
+    "filled_at": "2026-05-14T17:21:04Z",
+    "filled_notional": 25.0,
+    "filled_qty": 0.023216507,
+    "plan_id": "trade_plan-20260514T172103-835a36b9",
+    "position_confirmed": true,
+    "run_id": "execution-20260514T172104-b71591c3",
+    "trade_plan_hash": "8b234ba2cc064e0cd75f91347d7261bf2de849e45a72c7bcddd3b232d31c2fe3",
+    "trigger_snapshot_hash": "6ff598462706d8d43190cdcf9ab421401af90b485e5233c58e0cbac76644cbf4"
+  },
+  "lifecycle_checked_at": "2026-05-14T17:21:09Z",
+  "lifecycle_status": "filled",
+  "limit_price": 1078.96,
+  "notional": 25.0,
+  "side": "buy",
+  "skip_reason": null,
+  "submitted": true,
+  "submitted_at": "2026-05-14T17:21:04Z",
+  "symbol": "EQIX"
+}

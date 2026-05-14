@@ -1,6 +1,19 @@
 {
-  "data_hash": "bb5c959acf082e908d46af50849d6953f13efbfb03b18f2c12e114a6cf6bd93f",
-  "fetched_at": "2026-05-14T17:21:05Z",
+  "data_hash": "b745da98c8922e45091b0e15d13a21a5bae367667eb4b0440627fc5b1cad8f74",
+  "drawdown": -9e-06,
+  "dry_run": false,
+  "equity": 99802.29,
+  "generated_at": "2026-05-14T17:21:08Z",
+  "open_order_count": 1,
+  "orders_summary": [
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "JNJ"
+    }
+  ],
+  "peak_equity": 99803.14,
   "position_count": 4,
   "positions": [
     {
@@ -32,21 +45,21 @@
       "asset_marginable": true,
       "avg_entry_price": "230.181981",
       "avg_entry_swap_rate": null,
-      "change_today": "-0.00167",
+      "change_today": "-0.00152",
       "cost_basis": "50",
-      "current_price": "230.035",
+      "current_price": "230.07",
       "exchange": "NYSE",
       "lastday_price": "230.42",
-      "market_value": "49.968073",
+      "market_value": "49.975675",
       "qty": "0.217219435",
       "qty_available": "0.217219435",
       "side": "long",
       "swap_rate": null,
       "symbol": "JNJ",
-      "unrealized_intraday_pl": "-0.083629",
-      "unrealized_intraday_plpc": "-0.00167",
-      "unrealized_pl": "-0.031927",
-      "unrealized_plpc": "-0.00064",
+      "unrealized_intraday_pl": "-0.076027",
+      "unrealized_intraday_plpc": "-0.00152",
+      "unrealized_pl": "-0.024325",
+      "unrealized_plpc": "-0.00049",
       "usd": null
     },
     {
@@ -55,21 +68,21 @@
       "asset_marginable": true,
       "avg_entry_price": "218.808",
       "avg_entry_swap_rate": null,
-      "change_today": "-0.01352",
+      "change_today": "-0.0134",
       "cost_basis": "25",
-      "current_price": "217.163",
+      "current_price": "217.19",
       "exchange": "NYSE",
       "lastday_price": "220.14",
-      "market_value": "24.81205",
+      "market_value": "24.815135",
       "qty": "0.11425542",
       "qty_available": "0.11425542",
       "side": "long",
       "swap_rate": null,
       "symbol": "WELL",
-      "unrealized_intraday_pl": "-0.340138",
-      "unrealized_intraday_plpc": "-0.01352",
-      "unrealized_pl": "-0.18795",
-      "unrealized_plpc": "-0.00752",
+      "unrealized_intraday_pl": "-0.337053",
+      "unrealized_intraday_plpc": "-0.0134",
+      "unrealized_pl": "-0.184865",
+      "unrealized_plpc": "-0.00739",
       "usd": null
     },
     {
@@ -96,6 +109,7 @@
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260514T172108-e8c23cbb",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }
