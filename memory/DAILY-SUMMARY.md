@@ -1536,3 +1536,72 @@ None.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-14
+
+**Generated:** 2026-05-14T17:18:53Z  **Run ID:** daily_summary-2026-05-14
+
+### Account & Risk
+- Equity: $99,802.45 | Cash: $99,652.76 | Buying power: $199,380.21
+- Peak: $99,803.14 | Drawdown: -0.00% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.046214418 | $49.81 | $-0.11 (-0.22%) |
+| JNJ | long | 0.217219435 | $49.99 | $-0.01 (-0.01%) |
+| WELL | long | 0.11425542 | $24.84 | $-0.16 (-0.65%) |
+| WMT | long | 0.18899876 | $25.05 | +$0.05 (0.20%) |
+
+### Open Orders (3)
+- WMT BUY $25.00 @ $132.48 (limit) status=new
+- JNJ BUY $25.00 @ $230.05 (limit) status=new
+- EQIX BUY $25.00 @ $1,076.96 (limit) status=new
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+9.35%, breadth=56.96%)
+- Candidates: 21 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-14T17:18:44Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260514T171844-6adf1380`
+- Generated: 2026-05-14T17:18:44Z | Expires: 2026-05-14T23:18:44Z
+- Approved for execution: **YES** | Reason: all_risk_checks_pass_and_paper_flag_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - WMT BUY $25.00 @ $132.48 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260514T171846-d8b15803`
+- All gates pass: YES
+
+### Dry Runs Today (1)
+- Pass: 1 | Fail: 0
+
+### Paper Executions Today (11)
+- EQIX BUY $25.00 @ $1,079.73 (PAPER_SUBMITTED) submitted=2026-05-14T14:56:26Z
+- JNJ BUY $25.00 @ $230.12 (PAPER_SUBMITTED) submitted=2026-05-14T15:43:24Z
+- EQIX SELL $25.00 @ $1,078.28 (PAPER_SUBMITTED) submitted=2026-05-14T15:45:44Z
+- EQIX BUY $25.00 @ $1,078.43 (PAPER_SUBMITTED) submitted=2026-05-14T15:48:18Z
+- EQIX BUY $25.00 @ $1,076.96 (PAPER_SUBMITTED) submitted=2026-05-14T16:31:14Z
+- WMT BUY $25.00 @ $132.36 (PAPER_SUBMITTED) submitted=2026-05-14T16:52:33Z
+- JNJ BUY $25.00 @ $230.05 (PAPER_SUBMITTED) submitted=2026-05-14T17:17:40Z
+- WMT BUY $25.00 @ $132.48 (PAPER_SUBMITTED) submitted=2026-05-14T17:18:46Z
+
+### Order Monitor
+- Tracked: 11 | Filled: 8 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 3
+- Runs today: 34 | Latest: order_monitor-20260514T171853-e8122113
+
+### Alerts (total=8, today=0)
+- By source: tradingview=6, test=2
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
