@@ -1025,3 +1025,65 @@ None.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-14
+
+**Generated:** 2026-05-14T15:45:49Z  **Run ID:** daily_summary-2026-05-14
+
+### Account & Risk
+- Equity: $99,802.53 | Cash: $99,702.76 | Buying power: $199,480.29
+- Peak: $99,803.14 | Drawdown: -0.00% | Positions: 3
+
+### Positions (3)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.04621373 | $49.83 | $-0.17 (-0.34%) |
+| JNJ | long | 0.108578576 | $25.00 | $-0.00 (-0.01%) |
+| WELL | long | 0.11425542 | $24.94 | $-0.06 (-0.24%) |
+
+### Open Orders (2)
+- EQIX SELL $25.00 @ $1,078.28 (limit) status=new
+- JNJ BUY $25.00 @ $230.12 (limit) status=new
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+9.65%, breadth=56.96%)
+- Candidates: 23 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-14T15:45:42Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260514T154543-b29ff94f`
+- Generated: 2026-05-14T15:45:43Z | Expires: 2026-05-14T21:45:43Z
+- Approved for execution: **YES** | Reason: all_risk_checks_pass_and_paper_flag_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - EQIX SELL $25.00 @ $1,078.28 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260514T154544-c2e241e8`
+- All gates pass: YES
+
+### Dry Runs Today (1)
+- Pass: 1 | Fail: 0
+
+### Paper Executions Today (6)
+- EQIX BUY $25.00 @ $1,079.73 (PAPER_SUBMITTED) submitted=2026-05-14T14:56:26Z
+- JNJ BUY $25.00 @ $230.12 (PAPER_SUBMITTED) submitted=2026-05-14T15:43:24Z
+- EQIX SELL $25.00 @ $1,078.28 (PAPER_SUBMITTED) submitted=2026-05-14T15:45:44Z
+
+### Order Monitor
+- Tracked: 6 | Filled: 4 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 2
+- Runs today: 18 | Latest: order_monitor-20260514T154549-e3d51b1c
+
+### Alerts (total=8, today=0)
+- By source: tradingview=6, test=2
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
