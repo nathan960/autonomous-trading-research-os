@@ -910,3 +910,251 @@ class TestReportStatusSemantics:
                 assert o.get("error") is not None, (
                     f"submitted=False order must carry an error field"
                 )
+
+
+# ===========================================================================
+# TestBuildFreshExecutionSnapshots — source wiring from fetch_account_state
+# ===========================================================================
+
+class TestBuildFreshExecutionSnapshots:
+    """Verify that fresh Alpaca state is correctly sliced with source fields preserved.
+
+    This is the root-cause fix for CANONICAL_SOURCE_INTEGRITY failing when
+    execute_paper.py reconstructed snapshots without source='alpaca_paper'.
+    """
+
+    def _fresh_state(self, source: str = "alpaca_paper") -> dict:
+        return {
+            "source": source,
+            "schema_version": "0.1.0",
+            "fetched_at": utc_now_iso(),
+            "account": {"status": "ACTIVE", "equity": "40000.00"},
+            "positions": [],
+            "orders": [],
+            "clock": {"is_open": True, "timestamp": utc_now_iso()},
+            "position_count": 0,
+            "open_order_count": 0,
+        }
+
+    def test_account_snapshot_has_source_alpaca_paper(self):
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        acct, _, _ = build_fresh_execution_snapshots(self._fresh_state())
+        assert acct["source"] == "alpaca_paper"
+
+    def test_positions_snapshot_has_source_alpaca_paper(self):
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        _, pos, _ = build_fresh_execution_snapshots(self._fresh_state())
+        assert pos["source"] == "alpaca_paper"
+
+    def test_orders_snapshot_has_source_alpaca_paper(self):
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        _, _, ord_ = build_fresh_execution_snapshots(self._fresh_state())
+        assert ord_["source"] == "alpaca_paper"
+
+    def test_account_snapshot_has_fetched_at(self):
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        acct, _, _ = build_fresh_execution_snapshots(self._fresh_state())
+        assert acct["fetched_at"] != ""
+
+    def test_positions_snapshot_has_fetched_at(self):
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        _, pos, _ = build_fresh_execution_snapshots(self._fresh_state())
+        assert pos["fetched_at"] != ""
+
+    def test_orders_snapshot_has_fetched_at(self):
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        _, _, ord_ = build_fresh_execution_snapshots(self._fresh_state())
+        assert ord_["fetched_at"] != ""
+
+    def test_account_snapshot_has_open_order_count(self):
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        acct, _, _ = build_fresh_execution_snapshots(self._fresh_state())
+        assert "open_order_count" in acct
+
+    def test_account_snapshot_has_schema_version(self):
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        acct, _, _ = build_fresh_execution_snapshots(self._fresh_state())
+        assert acct["schema_version"] == "0.1.0"
+
+    def test_all_three_snapshots_have_data_hash(self):
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        acct, pos, ord_ = build_fresh_execution_snapshots(self._fresh_state())
+        assert len(acct["data_hash"]) == 64
+        assert len(pos["data_hash"]) == 64
+        assert len(ord_["data_hash"]) == 64
+
+    def test_non_alpaca_source_propagated_not_hardcoded(self):
+        """Wrong source propagates so the gate (not the helper) rejects it."""
+        from trading_os.execution.paper_executor import build_fresh_execution_snapshots
+        acct, pos, ord_ = build_fresh_execution_snapshots(self._fresh_state("dry_run_mock"))
+        assert acct["source"] == "dry_run_mock"
+        assert pos["source"] == "dry_run_mock"
+        assert ord_["source"] == "dry_run_mock"
+
+
+# ===========================================================================
+# TestCanonicalSourceIntegrityGateWiring
+# ===========================================================================
+
+def _account_snapshot_with_source(source: str = "alpaca_paper", **kwargs) -> dict:
+    return {
+        "source": source,
+        "account": {"equity": "40000.00", "cash": "40000.00", "status": "ACTIVE"},
+        "clock": {"is_open": True, "timestamp": utc_now_iso()},
+        "position_count": 0,
+        "open_order_count": 0,
+        "fetched_at": utc_now_iso(),
+        **kwargs,
+    }
+
+
+def _positions_snapshot_with_source(source: str = "alpaca_paper", **kwargs) -> dict:
+    return {
+        "source": source,
+        "positions": [],
+        "position_count": 0,
+        "fetched_at": utc_now_iso(),
+        **kwargs,
+    }
+
+
+def _orders_snapshot_with_source(source: str = "alpaca_paper", **kwargs) -> dict:
+    return {
+        "source": source,
+        "orders": [],
+        "open_order_count": 0,
+        "fetched_at": utc_now_iso(),
+        **kwargs,
+    }
+
+
+def _market_snapshot_with_source(source: str = "alpaca_paper") -> dict:
+    now = utc_now_iso()
+    return {
+        "source": source,
+        "generated_at": now,
+        "quotes": {"AAPL": {"bid_price": 100.0, "ask_price": 100.1, "timestamp": now},
+                   "BIL": {"bid_price": 91.4, "ask_price": 91.5, "timestamp": now}},
+        "spreads": {"AAPL": {"spread_pct": 0.001}, "BIL": {"spread_pct": 0.001}},
+    }
+
+
+class TestCanonicalSourceIntegrityGateWiring:
+    """Prove CANONICAL_SOURCE_INTEGRITY passes/fails correctly with run_paper_execution."""
+
+    def _full_ctx(self, tmp_path, **overrides) -> dict:
+        base = _ctx(
+            acct=_account_snapshot_with_source("alpaca_paper"),
+            pos_snap=_positions_snapshot_with_source("alpaca_paper"),
+            ord_snap=_orders_snapshot_with_source("alpaca_paper"),
+            mkt=_market_snapshot_with_source("alpaca_paper"),
+            exec_dir=tmp_path / "exec",
+            orders_dir=tmp_path / "orders",
+        )
+        base.update(overrides)
+        return base
+
+    def _gate_result(self, report: dict, gate_id: str) -> dict | None:
+        return next(
+            (g for g in report.get("gate_results", []) if g["gate_id"] == gate_id),
+            None,
+        )
+
+    def test_all_alpaca_paper_integrity_gate_passes(self, monkeypatch, tmp_path):
+        _paper_env(monkeypatch)
+        report = run_paper_execution(
+            self._full_ctx(tmp_path), _mock_trading_client(), confirm_paper=True
+        )
+        gate = self._gate_result(report, "CANONICAL_SOURCE_INTEGRITY")
+        assert gate is not None
+        assert gate["passes"] is True
+
+    def test_missing_source_account_snapshot_fails_integrity(self, monkeypatch, tmp_path):
+        _paper_env(monkeypatch)
+        ctx = self._full_ctx(tmp_path)
+        ctx["account_snapshot"] = _account_snapshot()  # no source field
+        report = run_paper_execution(ctx, _mock_trading_client(), confirm_paper=True)
+        gate = self._gate_result(report, "CANONICAL_SOURCE_INTEGRITY")
+        assert gate["passes"] is False
+
+    def test_unknown_source_account_snapshot_fails_integrity(self, monkeypatch, tmp_path):
+        _paper_env(monkeypatch)
+        ctx = self._full_ctx(tmp_path)
+        ctx["account_snapshot"] = _account_snapshot_with_source("unknown")
+        report = run_paper_execution(ctx, _mock_trading_client(), confirm_paper=True)
+        gate = self._gate_result(report, "CANONICAL_SOURCE_INTEGRITY")
+        assert gate["passes"] is False
+
+    def test_missing_source_positions_snapshot_fails_integrity(self, monkeypatch, tmp_path):
+        _paper_env(monkeypatch)
+        ctx = self._full_ctx(tmp_path)
+        ctx["positions_snapshot"] = _positions_snapshot()  # no source field
+        report = run_paper_execution(ctx, _mock_trading_client(), confirm_paper=True)
+        gate = self._gate_result(report, "CANONICAL_SOURCE_INTEGRITY")
+        assert gate["passes"] is False
+
+    def test_missing_source_orders_snapshot_fails_integrity(self, monkeypatch, tmp_path):
+        _paper_env(monkeypatch)
+        ctx = self._full_ctx(tmp_path)
+        ctx["orders_snapshot"] = _orders_snapshot()  # no source field
+        report = run_paper_execution(ctx, _mock_trading_client(), confirm_paper=True)
+        gate = self._gate_result(report, "CANONICAL_SOURCE_INTEGRITY")
+        assert gate["passes"] is False
+
+    def test_no_orders_submitted_when_source_missing(self, monkeypatch, tmp_path):
+        _paper_env(monkeypatch)
+        ctx = self._full_ctx(tmp_path)
+        ctx["account_snapshot"] = _account_snapshot()  # no source → gate fails
+        report = run_paper_execution(ctx, _mock_trading_client(), confirm_paper=True)
+        assert report["orders_submitted"] == []
+
+    def test_dry_run_mock_source_fails_integrity(self, monkeypatch, tmp_path):
+        _paper_env(monkeypatch)
+        ctx = self._full_ctx(tmp_path)
+        ctx["positions_snapshot"] = _positions_snapshot_with_source("dry_run_mock")
+        report = run_paper_execution(ctx, _mock_trading_client(), confirm_paper=True)
+        gate = self._gate_result(report, "CANONICAL_SOURCE_INTEGRITY")
+        assert gate["passes"] is False
+        assert report["orders_submitted"] == []
+
+    def test_enable_paper_execution_false_fails_closed(self, monkeypatch):
+        monkeypatch.setenv("TRADING_MODE", "paper")
+        monkeypatch.setenv("ALPACA_PAPER", "true")
+        monkeypatch.setenv("ENABLE_PAPER_EXECUTION", "false")
+        monkeypatch.delenv("LIVE_TRADING_CONFIRMED", raising=False)
+        with pytest.raises(RuntimeError, match="ENABLE_PAPER_EXECUTION"):
+            _check_hard_env_gates()
+
+
+# ===========================================================================
+# TestDryRunExecutePreservesSource
+# ===========================================================================
+
+class TestDryRunExecutePreservesSource:
+    """Verify dry_run_execute.py loads canonical snapshots without reconstructing them."""
+
+    def _script(self) -> str:
+        return (
+            Path(__file__).resolve().parents[1] / "scripts" / "dry_run_execute.py"
+        ).read_text(encoding="utf-8")
+
+    def test_loads_account_snapshot_from_data_latest(self):
+        assert 'LATEST_DIR / "account_snapshot.json"' in self._script()
+
+    def test_loads_positions_snapshot_from_data_latest(self):
+        assert 'LATEST_DIR / "positions_snapshot.json"' in self._script()
+
+    def test_loads_orders_snapshot_from_data_latest(self):
+        assert 'LATEST_DIR / "orders_snapshot.json"' in self._script()
+
+    def test_does_not_fetch_fresh_account_state(self):
+        """dry_run_execute must not call the broker — source comes from saved snapshots."""
+        assert "fetch_account_state" not in self._script()
+        assert "AlpacaPaperClient" not in self._script()
+
+    def test_passes_loaded_snapshots_unmodified_to_gate_context(self):
+        """Snapshots are passed through loaded dict, not reconstructed without source."""
+        src = self._script()
+        assert 'loaded["account_snapshot"]' in src
+        assert 'loaded["positions_snapshot"]' in src
+        assert 'loaded["orders_snapshot"]' in src

@@ -51,6 +51,7 @@ from trading_os.data.account_state import fetch_account_state
 from trading_os.data.alpaca_client import AlpacaPaperClient
 from trading_os.execution.paper_executor import (
     _check_hard_env_gates,
+    build_fresh_execution_snapshots,
     run_paper_execution,
 )
 from trading_os.hashing import stable_hash
@@ -210,22 +211,12 @@ def main() -> int:
         print(f"[execute_paper] ERROR fetching account state: {exc}", file=sys.stderr)
         return 1
 
-    # Decompose fresh_state into the snapshot dicts expected by gate functions
-    account_snapshot = {
-        "account": fresh_state.get("account", {}),
-        "clock": fresh_state.get("clock", {}),
-        "position_count": fresh_state.get("position_count", 0),
-        "fetched_at": fresh_state.get("fetched_at", ""),
-    }
-    positions_snapshot = {
-        "positions": fresh_state.get("positions", []),
-        "position_count": fresh_state.get("position_count", 0),
-        "fetched_at": fresh_state.get("fetched_at", ""),
-    }
-    orders_snapshot = {
-        "orders": fresh_state.get("orders", []),
-        "open_order_count": fresh_state.get("open_order_count", 0),
-    }
+    # Decompose fresh_state into gate-context snapshot dicts.
+    # build_fresh_execution_snapshots preserves source, schema_version, fetched_at,
+    # and data_hash so CANONICAL_SOURCE_INTEGRITY sees source='alpaca_paper'.
+    account_snapshot, positions_snapshot, orders_snapshot = (
+        build_fresh_execution_snapshots(fresh_state)
+    )
 
     clock = fresh_state.get("clock", {})
     print(

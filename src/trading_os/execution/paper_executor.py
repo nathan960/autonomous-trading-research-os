@@ -30,6 +30,60 @@ from .order_builder import build_execution_orders
 
 
 # ---------------------------------------------------------------------------
+# Fresh-state snapshot construction
+# ---------------------------------------------------------------------------
+
+def build_fresh_execution_snapshots(fresh_state: dict) -> tuple:
+    """Slice a fresh_state from fetch_account_state() into three gate-context snapshot dicts.
+
+    Preserves source, schema_version, and fetched_at so CANONICAL_SOURCE_INTEGRITY
+    sees source='alpaca_paper' and passes.  Each sub-snapshot gets its own data_hash.
+
+    Returns (account_snapshot, positions_snapshot, orders_snapshot).
+    """
+    source = fresh_state.get("source", "alpaca_paper")
+    schema_version = fresh_state.get("schema_version", "0.1.0")
+    fetched_at = fresh_state.get("fetched_at", "")
+
+    account_snapshot: dict = {
+        "source": source,
+        "schema_version": schema_version,
+        "fetched_at": fetched_at,
+        "account": fresh_state.get("account", {}),
+        "clock": fresh_state.get("clock", {}),
+        "position_count": fresh_state.get("position_count", 0),
+        "open_order_count": fresh_state.get("open_order_count", 0),
+    }
+    account_snapshot["data_hash"] = stable_hash(
+        {k: v for k, v in account_snapshot.items() if k != "data_hash"}
+    )
+
+    positions_snapshot: dict = {
+        "source": source,
+        "schema_version": schema_version,
+        "fetched_at": fetched_at,
+        "positions": fresh_state.get("positions", []),
+        "position_count": fresh_state.get("position_count", 0),
+    }
+    positions_snapshot["data_hash"] = stable_hash(
+        {k: v for k, v in positions_snapshot.items() if k != "data_hash"}
+    )
+
+    orders_snapshot: dict = {
+        "source": source,
+        "schema_version": schema_version,
+        "fetched_at": fetched_at,
+        "orders": fresh_state.get("orders", []),
+        "open_order_count": fresh_state.get("open_order_count", 0),
+    }
+    orders_snapshot["data_hash"] = stable_hash(
+        {k: v for k, v in orders_snapshot.items() if k != "data_hash"}
+    )
+
+    return account_snapshot, positions_snapshot, orders_snapshot
+
+
+# ---------------------------------------------------------------------------
 # Hard env-var gate checks
 # ---------------------------------------------------------------------------
 
