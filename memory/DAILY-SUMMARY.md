@@ -1087,3 +1087,66 @@ None.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-14
+
+**Generated:** 2026-05-14T15:48:23Z  **Run ID:** daily_summary-2026-05-14
+
+### Account & Risk
+- Equity: $99,802.57 | Cash: $99,727.76 | Buying power: $199,480.33
+- Peak: $99,803.14 | Drawdown: -0.00% | Positions: 3
+
+### Positions (3)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.023032141 | $24.86 | $-0.06 (-0.24%) |
+| JNJ | long | 0.108578576 | $25.01 | +$0.01 (0.04%) |
+| WELL | long | 0.11425542 | $24.94 | $-0.06 (-0.26%) |
+
+### Open Orders (2)
+- EQIX BUY $25.00 @ $1,078.43 (limit) status=new
+- JNJ BUY $25.00 @ $230.12 (limit) status=new
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+9.63%, breadth=56.96%)
+- Candidates: 19 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-14T15:48:17Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260514T154817-6a53654a`
+- Generated: 2026-05-14T15:48:17Z | Expires: 2026-05-14T21:48:17Z
+- Approved for execution: **YES** | Reason: all_risk_checks_pass_and_paper_flag_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - EQIX BUY $25.00 @ $1,078.43 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260514T154818-6157fada`
+- All gates pass: YES
+
+### Dry Runs Today (1)
+- Pass: 1 | Fail: 0
+
+### Paper Executions Today (7)
+- EQIX BUY $25.00 @ $1,079.73 (PAPER_SUBMITTED) submitted=2026-05-14T14:56:26Z
+- JNJ BUY $25.00 @ $230.12 (PAPER_SUBMITTED) submitted=2026-05-14T15:43:24Z
+- EQIX SELL $25.00 @ $1,078.28 (PAPER_SUBMITTED) submitted=2026-05-14T15:45:44Z
+- EQIX BUY $25.00 @ $1,078.43 (PAPER_SUBMITTED) submitted=2026-05-14T15:48:18Z
+
+### Order Monitor
+- Tracked: 7 | Filled: 5 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 2
+- Runs today: 20 | Latest: order_monitor-20260514T154823-07890943
+
+### Alerts (total=8, today=0)
+- By source: tradingview=6, test=2
+- By next_step: request_trade_plan_unapproved=2, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
