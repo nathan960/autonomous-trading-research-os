@@ -2536,5 +2536,28 @@ Data refreshes and quality reviews are logged here.
   "status": "ATTENTION_REQUIRED",
   "symbols_expected": 81,
   "symbols_with_bars": 81
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-14T14:13:20Z",
+  "run_id": "data_refresh-20260514T141320-30da3470",
+  "source_data_hash": "05e458b855ac00e926ac11b022f57dc8ba9ef242934c5a2bc01b997d8a452cec",
+  "symbols": 81
+}
+```
+
+## Data refresh completed
+
+```json
+{
+  "data_source": "dry_run_mock_alpaca_compatible",
+  "dry_run": true,
+  "generated_at": "2026-05-14T14:20:18Z",
+  "run_id": "data_refresh-20260514T142018-d9634e49",
+  "source_data_hash": "007713326d0b1a63941cb29acdd8cfd3f4ae819fa1301aee1dc0a7f5f9279496",
+  "symbols": 81
 }
 ```

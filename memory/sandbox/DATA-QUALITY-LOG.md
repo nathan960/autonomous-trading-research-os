@@ -226,3 +226,41 @@
   "symbols_with_bars": 81
 }
 ```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T14:13:22Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "076d8b2b88ed60174d7d2080ed6161c837e2c945fdb8c9f8786cca72805e1ad6",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T141322",
+  "snapshot_age_minutes": 0.006406899999999999,
+  "snapshot_fetched_at": "2026-05-14T14:13:22Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T14:20:19Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "d3998d9ddda75cdb4854ebb57da030274a6be4c08d6950d85d4867699d908548",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T142019",
+  "snapshot_age_minutes": 0.011987516666666666,
+  "snapshot_fetched_at": "2026-05-14T14:20:19Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
