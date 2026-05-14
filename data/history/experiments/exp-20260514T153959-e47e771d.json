@@ -1,0 +1,38 @@
+{
+  "affected_config_key": null,
+  "affected_trigger_or_rule": "BREADTH_TREND",
+  "candidate_patch": {
+    "file": "config/strategy.json",
+    "key": "parameters.breadth_threshold",
+    "new_value": "0.50",
+    "old_value": "0.55"
+  },
+  "created_at": "2026-05-14T15:39:59Z",
+  "demotion_criteria": {
+    "max_consecutive_losses": 5,
+    "max_drawdown_pct": -0.05,
+    "min_expectancy_after_costs": -0.005
+  },
+  "expected_benefit": "Est. 5-10 pct more fills on moderate breadth days",
+  "experiment_hash": "c1ca9957b0b38772d74a139ccc7c6c226d001f9e439c304aa492cd8a4c69659f",
+  "experiment_id": "exp-20260514T153959-e47e771d",
+  "hypothesis": "Lowering breadth_threshold from 0.55 to 0.50 increases fills in moderate breadth regime",
+  "notes": "Based on 60-day trigger log showing 40 pct of breadth days fall between 0.50 and 0.55",
+  "production_mutation_allowed": false,
+  "promotion_criteria": {
+    "human_approval_required": true,
+    "min_expectancy_after_costs": 0.001,
+    "min_filled_trade_count": 20,
+    "min_observation_count": 50,
+    "must_beat_bil": true,
+    "must_beat_spy": false,
+    "no_operational_failures": true,
+    "no_risk_limit_breach": true
+  },
+  "required_backtest": true,
+  "required_paper_validation": true,
+  "required_sample_size": 50,
+  "risk": "May increase false positives in weak market conditions",
+  "schema_version": "0.1.0",
+  "status": "proposed"
+}

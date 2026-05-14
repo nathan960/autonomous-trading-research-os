@@ -583,3 +583,37 @@ based on this report alone. Any experiment requires a candidate PR with:
 - Hypothesis, supporting evidence, success criteria, and rollback plan.
 
 ---
+## Experiment — exp-20260514T153959-e47e771d
+
+**Created:** 2026-05-14T15:39:59Z  **Status:** proposed
+
+**Hypothesis:** Lowering breadth_threshold from 0.55 to 0.50 increases fills in moderate breadth regime
+**Affected rule / trigger:** BREADTH_TREND  **Config key:** —
+**Expected benefit:** Est. 5-10 pct more fills on moderate breadth days
+**Risk:** May increase false positives in weak market conditions
+
+**Required sample size:** 50 fills  **Backtest required:** True  **Paper validation required:** True
+
+**Promotion criteria:**
+- min fills: 20
+- min observations: 50
+- min expectancy after costs: 0.001
+- must beat BIL: True
+- must beat SPY: False
+- no risk breaches: True
+- human approval required: True
+
+**Demotion criteria:**
+- max drawdown: -0.05
+- max consecutive losses: 5
+- expectancy floor: -0.005
+
+**Candidate patch (documentary — no config modified):**
+- File: `config/strategy.json`
+- Key: `parameters.breadth_threshold`
+- Old: `'0.55'`  →  New: `'0.50'`
+
+**Notes:** Based on 60-day trigger log showing 40 pct of breadth days fall between 0.50 and 0.55
+
+**Safety:** production_mutation_allowed=False
+---

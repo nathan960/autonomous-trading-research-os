@@ -1,0 +1,45 @@
+{
+  "all_promotion_criteria_met": false,
+  "approval_notes": "",
+  "approved_by": null,
+  "candidate_pr_instructions": "# Candidate promotion PR \u2014 exp-20260514T153959-e47e771d\n\n## Steps to apply this experiment result as a production change\n\n1. Create a branch:\n   git checkout -b \"experiment/promote-exp-20260514T153959-e47e771d\"\n\n2. Apply the patch manually:\n   File:      config/strategy.json\n   Key:       parameters.breadth_threshold\n   Old value: '0.55'\n   New value: '0.50'\n\n3. Run validate_all.py and pytest before opening the PR.\n\n4. Open a PR with:\n   Title:  experiment: promote BREADTH_TREND change (exp-20260514T153959-e47e771d)\n   Body:   Hypothesis: Lowering breadth_threshold from 0.55 to 0.50 increases fills in moderate breadth regime\n   Body:   Link to this evaluation JSON and the experiment JSON.\n   Body:   Paper evidence and backtest results.\n   Body:   Rollback notes (how to revert if the change underperforms).\n\n5. Do NOT merge without explicit human review and a second approval.\n\nREMINDER: No config file has been modified. This is a proposal only.",
+  "criteria_met": {
+    "beats_bil": false,
+    "beats_spy": true,
+    "min_filled_trade_count": false,
+    "min_observation_count": false,
+    "no_operational_failures": true,
+    "no_risk_limit_breach": true,
+    "positive_expectancy_after_costs": false
+  },
+  "decision": "pending",
+  "demotion_reasons": [],
+  "demotion_triggered": false,
+  "evidence": {
+    "beats_bil": null,
+    "beats_spy": null,
+    "bil_period_return_pct": null,
+    "consecutive_losses": 3,
+    "drawdown": -5e-06,
+    "expectancy_after_costs": -0.001378666666666667,
+    "filled_trade_count": 3,
+    "observation_count": 3,
+    "operational_failures": [],
+    "risk_limit_breaches": [],
+    "spy_period_return_pct": null,
+    "strategy_period_return_pct": -0.000879
+  },
+  "experiment_id": "exp-20260514T153959-e47e771d",
+  "generated_at": "2026-05-14T15:40:07Z",
+  "human_approval_required": true,
+  "human_approved": false,
+  "notes": "",
+  "production_mutation_allowed": false,
+  "promotion_ready": false,
+  "protected_files": [
+    "config/strategy.json",
+    "config/risk_limits.json",
+    "config/trigger_registry.json"
+  ],
+  "schema_version": "0.1.0"
+}
