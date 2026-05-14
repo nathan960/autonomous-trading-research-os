@@ -53,3 +53,20 @@
 - [ ] Daily order limits hit — churn guard will block new orders until tomorrow
 
 ---
+## System Status — 2026-05-14T18:08:57Z
+
+**Overall:** YELLOW  | Research: YES  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,802.14  drawdown=-0.00%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260514T180756-fc25ae26  approved=False
+**Dry-run gates:** PASS  failed=[]
+
+**Warnings:**
+- 28 wide-spread symbols (['ABBV', 'ADBE', 'AMD', 'AMGN', 'AMT', 'APD', 'CAT', 'COST', 'DE', 'ECL', 'EOG', 'GE', 'HON', 'ISRG', 'JPM', 'LIN', 'LLY', 'LOW', 'MCD', 'MS', 'ORCL', 'PEP', 'PG', 'PM', 'RTX', 'TMUS', 'UNP', 'WELL']) — SPREAD_NOT_TOO_WIDE may block execution
+- Daily order limit reached: 11 orders today (max_total_paper_orders_per_day=3)
+- Per-symbol daily order limits reached: ['EQIX(count=7,limit=1)', 'JNJ(count=2,limit=1)', 'WMT(count=2,limit=1)']
+
+**Required Operator Actions:**
+- [ ] Daily order limits hit — churn guard will block new orders until tomorrow
+
+---
