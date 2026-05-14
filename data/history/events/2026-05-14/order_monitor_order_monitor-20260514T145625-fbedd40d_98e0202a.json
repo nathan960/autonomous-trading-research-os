@@ -1,0 +1,124 @@
+{
+  "event_type": "order_monitor",
+  "run_id": "order_monitor-20260514T145625-fbedd40d",
+  "generated_at": "2026-05-14T14:56:25Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "run_id": "order_monitor-20260514T145625-fbedd40d",
+    "generated_at": "2026-05-14T14:56:25Z",
+    "dry_run": false,
+    "source": "alpaca_paper",
+    "clock": {
+      "timestamp": "2026-05-14T14:56:24Z",
+      "is_open": true,
+      "next_open": "2026-05-15T13:30:00Z",
+      "next_close": "2026-05-14T20:00:00Z"
+    },
+    "fetch_log": {
+      "open_count": 0,
+      "closed_count": 28,
+      "direct_broker_id_lookups": 0,
+      "direct_broker_id_hits": 0,
+      "direct_broker_id_errors": 0,
+      "direct_client_id_lookups": 0,
+      "direct_client_id_hits": 0,
+      "direct_client_id_errors": 0
+    },
+    "orders_tracked": 3,
+    "orders_filled": 3,
+    "orders_partially_filled": 0,
+    "orders_active": 0,
+    "orders_missing": 0,
+    "orders_rejected": 0,
+    "orders_canceled": 0,
+    "orders_expired": 0,
+    "stale_orders": [],
+    "warnings": [],
+    "lifecycles": [
+      {
+        "client_order_id": "TOS-20260513T160035-WELL-BUY",
+        "broker_order_id": "a57f3df1-f9d5-4ab7-8655-ed8240ade13e",
+        "symbol": "WELL",
+        "side": "buy",
+        "notional": 25.0,
+        "limit_price": 218.9,
+        "submitted_at": "2026-05-13T16:00:36Z",
+        "submitted": true,
+        "lifecycle_status": "filled",
+        "broker_status": "filled",
+        "fill": {
+          "fill_price": 218.808,
+          "filled_qty": 0.11425542,
+          "filled_notional": 25.0,
+          "filled_at": "2026-05-13T16:00:36Z",
+          "position_confirmed": true,
+          "plan_id": "trade_plan-20260513T160035-0460e121",
+          "run_id": "execution-20260513T160036-b4ad22c3",
+          "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
+          "trigger_snapshot_hash": null
+        },
+        "stale_warning": null,
+        "warning": null,
+        "checked_at": "2026-05-14T14:56:25Z"
+      },
+      {
+        "client_order_id": "TOS-20260513T192526-JNJ-BUY",
+        "broker_order_id": "bd0079c7-6044-4864-bb4e-ad2798e188a3",
+        "symbol": "JNJ",
+        "side": "buy",
+        "notional": 25.0,
+        "limit_price": 230.26,
+        "submitted_at": "2026-05-13T19:25:27Z",
+        "submitted": true,
+        "lifecycle_status": "filled",
+        "broker_status": "filled",
+        "fill": {
+          "fill_price": 230.248,
+          "filled_qty": 0.108578576,
+          "filled_notional": 25.0,
+          "filled_at": "2026-05-13T19:25:31Z",
+          "position_confirmed": true,
+          "plan_id": "trade_plan-20260513T192526-c793d98e",
+          "run_id": "execution-20260513T192527-04dacaf4",
+          "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
+          "trigger_snapshot_hash": null
+        },
+        "stale_warning": null,
+        "warning": null,
+        "checked_at": "2026-05-14T14:56:25Z"
+      },
+      {
+        "client_order_id": "TOS-20260513T192934-EQIX-BUY",
+        "broker_order_id": "a2d097a2-bb62-4a63-9849-24c45949bc95",
+        "symbol": "EQIX",
+        "side": "buy",
+        "notional": 25.0,
+        "limit_price": 1084.52,
+        "submitted_at": "2026-05-13T19:29:35Z",
+        "submitted": true,
+        "lifecycle_status": "filled",
+        "broker_status": "filled",
+        "fill": {
+          "fill_price": 1084.37,
+          "filled_qty": 0.023054861,
+          "filled_notional": 25.0,
+          "filled_at": "2026-05-13T19:31:19Z",
+          "position_confirmed": true,
+          "plan_id": "trade_plan-20260513T192934-3bac0e2c",
+          "run_id": "execution-20260513T192935-303e6fbe",
+          "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
+          "trigger_snapshot_hash": null
+        },
+        "stale_warning": null,
+        "warning": null,
+        "checked_at": "2026-05-14T14:56:25Z"
+      }
+    ],
+    "safety": {
+      "submit_order_called": false,
+      "cancel_order_called": false,
+      "replace_order_called": false
+    },
+    "report_hash": "6b52c4f91f77c92bfba802e7367646c5a79076bb97505fa9edcda7e247505e48"
+  }
+}
