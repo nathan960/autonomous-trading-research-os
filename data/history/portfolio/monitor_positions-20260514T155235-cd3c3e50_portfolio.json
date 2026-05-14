@@ -1,6 +1,25 @@
 {
-  "data_hash": "ea7c86e1a56bd62b219242487a94c30f05e783e9db1497ba51e960233825c24e",
-  "fetched_at": "2026-05-14T15:52:31Z",
+  "data_hash": "b2546adc6c9a42435f833cd3f6e0ef236cffea17b54bedf0c3b78cc81b37e7c6",
+  "drawdown": -6e-06,
+  "dry_run": false,
+  "equity": 99802.54,
+  "generated_at": "2026-05-14T15:52:35Z",
+  "open_order_count": 2,
+  "orders_summary": [
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "EQIX"
+    },
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "JNJ"
+    }
+  ],
+  "peak_equity": 99803.14,
   "position_count": 3,
   "positions": [
     {
@@ -32,21 +51,21 @@
       "asset_marginable": true,
       "avg_entry_price": "230.248",
       "avg_entry_swap_rate": null,
-      "change_today": "0.00033",
+      "change_today": "0.00043",
       "cost_basis": "25",
-      "current_price": "230.495",
+      "current_price": "230.52",
       "exchange": "NYSE",
       "lastday_price": "230.42",
-      "market_value": "25.026819",
+      "market_value": "25.029533",
       "qty": "0.108578576",
       "qty_available": "0.108578576",
       "side": "long",
       "swap_rate": null,
       "symbol": "JNJ",
-      "unrealized_intraday_pl": "0.008144",
-      "unrealized_intraday_plpc": "0.00033",
-      "unrealized_pl": "0.026819",
-      "unrealized_plpc": "0.00107",
+      "unrealized_intraday_pl": "0.010858",
+      "unrealized_intraday_plpc": "0.00043",
+      "unrealized_pl": "0.029533",
+      "unrealized_plpc": "0.00118",
       "usd": null
     },
     {
@@ -73,6 +92,7 @@
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260514T155235-cd3c3e50",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }

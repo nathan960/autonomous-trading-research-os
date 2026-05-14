@@ -1,6 +1,25 @@
 {
-  "data_hash": "ea7c86e1a56bd62b219242487a94c30f05e783e9db1497ba51e960233825c24e",
-  "fetched_at": "2026-05-14T15:52:31Z",
+  "data_hash": "757953eb32acde9c687cbacec998236d9f2c7accc33ad70d07a7cb210a5978ba",
+  "drawdown": -6e-06,
+  "dry_run": false,
+  "equity": 99802.53,
+  "generated_at": "2026-05-14T15:52:28Z",
+  "open_order_count": 2,
+  "orders_summary": [
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "EQIX"
+    },
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "JNJ"
+    }
+  ],
+  "peak_equity": 99803.14,
   "position_count": 3,
   "positions": [
     {
@@ -73,6 +92,7 @@
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260514T155228-8355ca31",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }

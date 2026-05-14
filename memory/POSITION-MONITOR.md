@@ -1505,3 +1505,35 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
   "source": "alpaca_paper"
 }
 ```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -6e-06,
+  "dry_run": false,
+  "equity": 99802.53,
+  "generated_at": "2026-05-14T15:52:28Z",
+  "open_order_count": 2,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260514T155228-8355ca31",
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -6e-06,
+  "dry_run": false,
+  "equity": 99802.54,
+  "generated_at": "2026-05-14T15:52:35Z",
+  "open_order_count": 2,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260514T155235-cd3c3e50",
+  "source": "alpaca_paper"
+}
+```
