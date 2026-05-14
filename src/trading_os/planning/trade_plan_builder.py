@@ -102,8 +102,11 @@ def _filter_open_order_symbols(
     """Split orders into (no_conflict, open_order_blocked).
 
     Any symbol that already has an open order is blocked at planning time with
-    skip_reason open_order_exists(<status>).  The execution gate
+    skip_reason 'duplicate_open_order'.  The execution gate
     NO_DUPLICATE_OPEN_ORDERS is the independent last line of defense.
+
+    Each blocked entry carries _open_order_info with the available audit
+    fields (client_order_id, side, status, submitted_at) for blocked_symbols.
     """
     open_by_symbol: dict = {}
     for oo in open_orders:
@@ -115,9 +118,14 @@ def _filter_open_order_symbols(
     for o in orders:
         sym = o["symbol"]
         if sym in open_by_symbol:
-            status = open_by_symbol[sym].get("status", "unknown")
+            oo = open_by_symbol[sym]
             bo = dict(o)
-            bo["skip_reason"] = f"open_order_exists({status})"
+            bo["skip_reason"] = "duplicate_open_order"
+            bo["_open_order_info"] = {
+                k: oo.get(k)
+                for k in ("client_order_id", "side", "status", "submitted_at")
+                if oo.get(k) is not None
+            }
             blocked.append(bo)
         else:
             ok.append(o)
@@ -235,12 +243,17 @@ def build_trade_plan(
     proposed_orders, open_order_blocked = _filter_open_order_symbols(
         proposed_orders, _open_orders
     )
+
+    def _open_order_blocked_entry(o: dict) -> dict:
+        entry: dict = {"symbol": o["symbol"], "skip_reason": "duplicate_open_order"}
+        entry.update(o.get("_open_order_info", {}))
+        return entry
+
     for o in open_order_blocked:
-        blocked_symbols.append({"symbol": o["symbol"], "skip_reason": o["skip_reason"]})
+        blocked_symbols.append(_open_order_blocked_entry(o))
 
     open_order_blocked_summary: list = [
-        {"symbol": o["symbol"], "skip_reason": o["skip_reason"]}
-        for o in open_order_blocked
+        _open_order_blocked_entry(o) for o in open_order_blocked
     ]
 
     # ── Read per-run caps from risk_limits ──────────────────────────────────

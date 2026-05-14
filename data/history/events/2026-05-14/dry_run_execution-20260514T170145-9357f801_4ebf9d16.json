@@ -1,0 +1,119 @@
+{
+  "event_type": "dry_run",
+  "run_id": "execution-20260514T170145-9357f801",
+  "generated_at": "2026-05-14T17:01:45Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "run_id": "execution-20260514T170145-9357f801",
+    "plan_id": "trade_plan-20260514T170134-8fd5fb41",
+    "generated_at": "2026-05-14T17:01:45Z",
+    "dry_run": true,
+    "trade_plan_hash": "ca5cb2c5cdb1945fbeb8f1c6b1a70e5ab8ee6d54699034154151479ca742d7de",
+    "gate_results": [
+      {
+        "gate_id": "TRADING_MODE_PAPER",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "ALPACA_PAPER_MODE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "CANONICAL_SOURCE_INTEGRITY",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_EXISTS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_NOT_EXPIRED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "MARKET_CLOCK_OPEN",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "ACCOUNT_NOT_BLOCKED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_STATE_NOT_PAUSED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "POSITIONS_MATCH_SNAPSHOT",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_DUPLICATE_OPEN_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "UNIVERSE_MEMBERSHIP",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "SYMBOLS_TRADABLE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "QUOTE_FRESHNESS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "SPREAD_NOT_TOO_WIDE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_LIMITS_RESPECTED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_PROHIBITED_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "EXECUTION_LOG_WRITABLE",
+        "passes": true,
+        "detail": null
+      }
+    ],
+    "all_gates_pass": true,
+    "failed_gates": [],
+    "orders_validated": [
+      {
+        "symbol": "WMT",
+        "side": "buy",
+        "order_type": "limit",
+        "limit_price": 132.07,
+        "notional": 25.0,
+        "target_weight": 0.11742376,
+        "client_order_id": "TOS-20260514T170134-WMT-BUY",
+        "execution_ready": true,
+        "validation_skip_reason": null
+      }
+    ],
+    "orders_submitted": [],
+    "no_submit_reason": "dry_run_mode",
+    "status": "DRY_RUN_PASS",
+    "execution_report_hash": "7ddc6af1e899f26d2f070ad26574c0c11692cfeffe3eabdfb83e2bda533c526c"
+  }
+}

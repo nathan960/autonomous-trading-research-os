@@ -520,7 +520,13 @@ class TestBuildTradePlan:
 def _orders_snapshot(symbols: list, status: str = "new") -> dict:
     return {
         "orders": [
-            {"symbol": sym, "status": status, "client_order_id": f"TOS-{sym}"}
+            {
+                "symbol": sym,
+                "status": status,
+                "client_order_id": f"TOS-20260514T000000-{sym}-BUY",
+                "side": "buy",
+                "submitted_at": "2026-05-14T00:00:00Z",
+            }
             for sym in symbols
         ],
         "open_order_count": len(symbols),
@@ -562,11 +568,21 @@ class TestOpenOrderBlockedAtPlanning:
         blocked_syms = {b["symbol"] for b in plan["blocked_symbols"]}
         assert "AAPL" in blocked_syms
 
-    def test_blocked_symbol_has_open_order_skip_reason(self):
+    def test_blocked_symbol_has_duplicate_open_order_skip_reason(self):
         plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot=_orders_snapshot(["AAPL"], status="new"))
         matched = [b for b in plan["blocked_symbols"] if b["symbol"] == "AAPL"]
         assert matched, "AAPL must appear in blocked_symbols"
-        assert "open_order_exists" in matched[0]["skip_reason"]
+        assert matched[0]["skip_reason"] == "duplicate_open_order"
+
+    def test_blocked_symbol_includes_audit_fields(self):
+        plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot=_orders_snapshot(["AAPL"], status="new"))
+        matched = [b for b in plan["blocked_symbols"] if b["symbol"] == "AAPL"]
+        assert matched, "AAPL must appear in blocked_symbols"
+        entry = matched[0]
+        assert entry.get("client_order_id") == "TOS-20260514T000000-AAPL-BUY"
+        assert entry.get("side") == "buy"
+        assert entry.get("status") == "new"
+        assert entry.get("submitted_at") == "2026-05-14T00:00:00Z"
 
     def test_no_trade_reasons_includes_open_order_blocked_at_planning(self):
         plan = self._build(selected=["AAPL", "MSFT"], orders_snapshot=_orders_snapshot(["AAPL"]))
