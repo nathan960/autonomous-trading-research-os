@@ -1,7 +1,20 @@
 {
-  "data_hash": "52f83ccde4ffde9b6b4e98f36aaecc8bcdc894eb402ec1d0a60f4416567c073b",
-  "fetched_at": "2026-05-14T16:52:33Z",
-  "position_count": 4,
+  "data_hash": "c9a235422b08100703bfb78a71dda8357d073d162d6e306bf2173b3ac929cc1e",
+  "drawdown": -6e-06,
+  "dry_run": false,
+  "equity": 99802.58,
+  "generated_at": "2026-05-14T16:52:31Z",
+  "open_order_count": 1,
+  "orders_summary": [
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "EQIX"
+    }
+  ],
+  "peak_equity": 99803.14,
+  "position_count": 3,
   "positions": [
     {
       "asset_class": "us_equity",
@@ -32,21 +45,21 @@
       "asset_marginable": true,
       "avg_entry_price": "230.181981",
       "avg_entry_swap_rate": null,
-      "change_today": "-0.00074",
+      "change_today": "-0.0008",
       "cost_basis": "50",
-      "current_price": "230.25",
+      "current_price": "230.235",
       "exchange": "NYSE",
       "lastday_price": "230.42",
-      "market_value": "50.014775",
+      "market_value": "50.011517",
       "qty": "0.217219435",
       "qty_available": "0.217219435",
       "side": "long",
       "swap_rate": null,
       "symbol": "JNJ",
-      "unrealized_intraday_pl": "-0.036927",
-      "unrealized_intraday_plpc": "-0.00074",
-      "unrealized_pl": "0.014775",
-      "unrealized_plpc": "0.0003",
+      "unrealized_intraday_pl": "-0.040185",
+      "unrealized_intraday_plpc": "-0.0008",
+      "unrealized_pl": "0.011517",
+      "unrealized_plpc": "0.00023",
       "usd": null
     },
     {
@@ -71,31 +84,9 @@
       "unrealized_pl": "-0.072324",
       "unrealized_plpc": "-0.00289",
       "usd": null
-    },
-    {
-      "asset_class": "us_equity",
-      "asset_id": "3f3e0ff9-599f-4fec-8842-6bc53f5129a1",
-      "asset_marginable": true,
-      "avg_entry_price": "132.276",
-      "avg_entry_swap_rate": null,
-      "change_today": "0.00612",
-      "cost_basis": "25",
-      "current_price": "132.275",
-      "exchange": "NASDAQ",
-      "lastday_price": "131.47",
-      "market_value": "24.999811",
-      "qty": "0.18899876",
-      "qty_available": "0.18899876",
-      "side": "long",
-      "swap_rate": null,
-      "symbol": "WMT",
-      "unrealized_intraday_pl": "-0.000189",
-      "unrealized_intraday_plpc": "-0.00001",
-      "unrealized_pl": "-0.000189",
-      "unrealized_plpc": "-0.00001",
-      "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260514T165230-d32bb035",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }

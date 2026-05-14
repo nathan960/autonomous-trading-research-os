@@ -1,6 +1,19 @@
 {
-  "data_hash": "52f83ccde4ffde9b6b4e98f36aaecc8bcdc894eb402ec1d0a60f4416567c073b",
-  "fetched_at": "2026-05-14T16:52:33Z",
+  "data_hash": "81ce7da0a3e247def7cbd8ac56c3d9c0df84ed62f03cbd57afa0193ed9311a0c",
+  "drawdown": -6e-06,
+  "dry_run": false,
+  "equity": 99802.58,
+  "generated_at": "2026-05-14T16:52:37Z",
+  "open_order_count": 1,
+  "orders_summary": [
+    {
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "symbol": "EQIX"
+    }
+  ],
+  "peak_equity": 99803.14,
   "position_count": 4,
   "positions": [
     {
@@ -78,24 +91,25 @@
       "asset_marginable": true,
       "avg_entry_price": "132.276",
       "avg_entry_swap_rate": null,
-      "change_today": "0.00612",
+      "change_today": "0.00601",
       "cost_basis": "25",
-      "current_price": "132.275",
+      "current_price": "132.26",
       "exchange": "NASDAQ",
       "lastday_price": "131.47",
-      "market_value": "24.999811",
+      "market_value": "24.996976",
       "qty": "0.18899876",
       "qty_available": "0.18899876",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "-0.000189",
-      "unrealized_intraday_plpc": "-0.00001",
-      "unrealized_pl": "-0.000189",
-      "unrealized_plpc": "-0.00001",
+      "unrealized_intraday_pl": "-0.003024",
+      "unrealized_intraday_plpc": "-0.00012",
+      "unrealized_pl": "-0.003024",
+      "unrealized_plpc": "-0.00012",
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260514T165236-84332287",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }

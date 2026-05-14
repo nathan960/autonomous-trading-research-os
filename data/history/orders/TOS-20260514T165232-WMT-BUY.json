@@ -1,0 +1,27 @@
+{
+  "broker_order_id": "480b99c2-0558-4892-9b7a-7c9fe576cb2c",
+  "broker_status": "pending_new",
+  "broker_status_latest": "filled",
+  "client_order_id": "TOS-20260514T165232-WMT-BUY",
+  "error": null,
+  "fill": {
+    "fill_price": 132.276,
+    "filled_at": "2026-05-14T16:52:33Z",
+    "filled_notional": 25.0,
+    "filled_qty": 0.18899876,
+    "plan_id": "trade_plan-20260514T165232-1f83cea2",
+    "position_confirmed": true,
+    "run_id": "execution-20260514T165233-adcb0da2",
+    "trade_plan_hash": "c70b9817dd2fee23f677bbe06d26888ba6cf1888fe01c1fe1e0b7d542ee8342b",
+    "trigger_snapshot_hash": "04d3134a795621baabb716268a210988f99c925d868f964607ba6a55436d61fe"
+  },
+  "lifecycle_checked_at": "2026-05-14T16:52:37Z",
+  "lifecycle_status": "filled",
+  "limit_price": 132.36,
+  "notional": 25.0,
+  "side": "buy",
+  "skip_reason": null,
+  "submitted": true,
+  "submitted_at": "2026-05-14T16:52:33Z",
+  "symbol": "WMT"
+}
