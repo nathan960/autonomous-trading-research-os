@@ -355,3 +355,71 @@
   "source": "alpaca_paper"
 }
 ```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -7e-06,
+  "dry_run": true,
+  "equity": 99802.43,
+  "generated_at": "2026-05-14T17:44:32Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 4,
+  "run_id": "monitor_positions-20260514T174432-771f6229",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -7e-06,
+  "dry_run": true,
+  "equity": 99802.43,
+  "generated_at": "2026-05-14T17:44:40Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 4,
+  "run_id": "monitor_positions-20260514T174440-ccc48900",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -7e-06,
+  "dry_run": true,
+  "equity": 99802.43,
+  "generated_at": "2026-05-14T17:44:47Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 4,
+  "run_id": "monitor_positions-20260514T174447-c2ef519a",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -7e-06,
+  "dry_run": true,
+  "equity": 99802.43,
+  "generated_at": "2026-05-14T17:44:55Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 4,
+  "run_id": "monitor_positions-20260514T174455-1dd46463",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```

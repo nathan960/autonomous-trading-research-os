@@ -397,3 +397,79 @@
   "symbols_with_bars": 81
 }
 ```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T17:44:33Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "1338bf21b94be4b2b1467ee2219888c5d78d5831a8701cfa0660fac081a9ada1",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T174433",
+  "snapshot_age_minutes": 0.012927733333333333,
+  "snapshot_fetched_at": "2026-05-14T17:44:33Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T17:44:41Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "bda9a4d8f68a17ee2220f4396471db13d61275939b175c5ac9f15447e89aa6d1",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T174440",
+  "snapshot_age_minutes": 0.020695,
+  "snapshot_fetched_at": "2026-05-14T17:44:40Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T17:44:48Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "be16b1c91f51765c2506e64cfb0573aecc6fb5fc5cd69e01fbbb11fb7ff6309d",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T174448",
+  "snapshot_age_minutes": 0.014456749999999999,
+  "snapshot_fetched_at": "2026-05-14T17:44:48Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-05-14T17:44:56Z",
+  "insufficient_bars_count": 0,
+  "issues": [],
+  "market_data_hash": "6d29ef1b0d457198115383d08f3254ecaff5479b88ef4b6cdc8dd16e96f09ba6",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260514T174455",
+  "snapshot_age_minutes": 0.021008433333333333,
+  "snapshot_fetched_at": "2026-05-14T17:44:55Z",
+  "status": "PASS",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
