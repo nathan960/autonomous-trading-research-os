@@ -1,0 +1,23 @@
+{
+  "action": "cancel_paper_order",
+  "broker_order_id": "cc380d6e-9b8f-4429-8f91-a7907b0c570f",
+  "broker_response": {
+    "broker_order_id": "cc380d6e-9b8f-4429-8f91-a7907b0c570f",
+    "dry_run": true,
+    "message": "No broker API call made \u2014 dry_run=True"
+  },
+  "cancelled_at": "2026-05-14T17:14:10Z",
+  "client_order_id": "TOS-20260514T163113-EQIX-BUY",
+  "confirmed_by": "operator (confirm_cancel='CANCEL')",
+  "generated_at": "2026-05-14T17:14:10Z",
+  "limit_price": "1076.96",
+  "notes": "",
+  "notional": "25",
+  "production_order_cancel_allowed": false,
+  "run_id": "order_cancel-20260514T171410-9dd5e164",
+  "side": "buy",
+  "source": "dry_run_snapshot",
+  "status_before_cancel": "new",
+  "submitted_at": "2026-05-14T16:31:14Z",
+  "symbol": "EQIX"
+}

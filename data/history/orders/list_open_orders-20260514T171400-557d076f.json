@@ -1,0 +1,23 @@
+{
+  "action": "list_open_orders",
+  "generated_at": "2026-05-14T17:14:00Z",
+  "open_order_count": 1,
+  "orders": [
+    {
+      "broker_order_id": "cc380d6e-9b8f-4429-8f91-a7907b0c570f",
+      "client_order_id": "TOS-20260514T163113-EQIX-BUY",
+      "expires_at": "2026-05-14T20:00:00Z",
+      "limit_price": "1076.96",
+      "notional": "25",
+      "order_type": "limit",
+      "qty": null,
+      "side": "buy",
+      "status": "new",
+      "submitted_at": "2026-05-14T16:31:14Z",
+      "symbol": "EQIX"
+    }
+  ],
+  "production_order_cancel_allowed": false,
+  "run_id": "list_open_orders-20260514T171400-557d076f",
+  "source": "dry_run_snapshot"
+}

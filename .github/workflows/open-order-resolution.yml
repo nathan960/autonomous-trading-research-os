@@ -1,0 +1,161 @@
+name: Open Order Resolution
+
+# Manual workflow for inspecting and optionally cancelling a single open
+# Alpaca paper order.
+#
+# Safety invariants hardcoded in this workflow:
+#   ENABLE_PAPER_EXECUTION=false  — no order submission path is reachable
+#   LIVE_TRADING_CONFIRMED=false  — live trading is never reachable
+#   No schedule trigger           — manual dispatch only
+#   cancel_one requires confirm_cancel=CANCEL (checked twice: shell + script)
+#   Only cancel_paper_order.py --dry-run=false calls the broker cancel API
+#   No new orders are placed; no orders are replaced
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: >
+          list_only: fetch and log current open orders (read-only).
+          cancel_one: cancel a specific open paper order.
+        required: true
+        default: list_only
+        type: choice
+        options:
+          - list_only
+          - cancel_one
+
+      client_order_id:
+        description: >
+          Client order ID (TOS-... format) of the order to cancel.
+          Required when action=cancel_one (unless broker_order_id is set).
+        required: false
+        default: ""
+        type: string
+
+      broker_order_id:
+        description: >
+          Alpaca broker UUID of the order to cancel.
+          Used as fallback if client_order_id is not provided.
+        required: false
+        default: ""
+        type: string
+
+      confirm_cancel:
+        description: >
+          Type CANCEL (exact) to allow a paper order cancellation.
+          Ignored for list_only. Any other value prevents cancellation.
+        required: true
+        default: "NO"
+        type: string
+
+      notes:
+        description: "Optional rationale for the cancellation (audit trail)."
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trading-os-main
+  cancel-in-progress: false
+
+jobs:
+  open-order-resolution:
+    runs-on: ubuntu-latest
+
+    env:
+      ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+      ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+      TRADING_MODE: paper
+      ALPACA_PAPER: "true"
+      # ENABLE_PAPER_EXECUTION is always false — no execution path here.
+      ENABLE_PAPER_EXECUTION: "false"
+      LIVE_TRADING_CONFIRMED: "false"
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Safety preflight
+        run: |
+          if [ "$LIVE_TRADING_CONFIRMED" = "true" ]; then
+            echo "::error::LIVE_TRADING_CONFIRMED must not be true"
+            exit 1
+          fi
+          if [ "$ENABLE_PAPER_EXECUTION" = "true" ]; then
+            echo "::error::ENABLE_PAPER_EXECUTION must not be true for order resolution"
+            exit 1
+          fi
+          if [ "$TRADING_MODE" != "paper" ]; then
+            echo "::error::TRADING_MODE must be paper"
+            exit 1
+          fi
+          echo "Safety preflight passed. action=${{ github.event.inputs.action }}"
+
+      # ── list_only ────────────────────────────────────────────────────────────
+      - name: List open orders
+        if: github.event.inputs.action == 'list_only'
+        run: python scripts/list_open_orders.py
+
+      # ── cancel_one ───────────────────────────────────────────────────────────
+      - name: Verify cancel confirmation
+        if: github.event.inputs.action == 'cancel_one'
+        run: |
+          if [ "${{ github.event.inputs.confirm_cancel }}" != "CANCEL" ]; then
+            echo "::error::confirm_cancel must be exactly CANCEL to cancel a paper order."
+            echo "::error::Got: '${{ github.event.inputs.confirm_cancel }}'"
+            exit 1
+          fi
+          if [ -z "${{ github.event.inputs.client_order_id }}" ] && \
+             [ -z "${{ github.event.inputs.broker_order_id }}" ]; then
+            echo "::error::Provide client_order_id or broker_order_id to identify the order."
+            exit 1
+          fi
+          echo "Cancel confirmation passed."
+
+      - name: Cancel paper order
+        if: >-
+          github.event.inputs.action == 'cancel_one' &&
+          github.event.inputs.confirm_cancel == 'CANCEL'
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.client_order_id }}" ]; then
+            ARGS="$ARGS --client-order-id ${{ github.event.inputs.client_order_id }}"
+          elif [ -n "${{ github.event.inputs.broker_order_id }}" ]; then
+            ARGS="$ARGS --broker-order-id ${{ github.event.inputs.broker_order_id }}"
+          fi
+          if [ -n "${{ github.event.inputs.notes }}" ]; then
+            ARGS="$ARGS --notes \"${{ github.event.inputs.notes }}\""
+          fi
+          eval python scripts/cancel_paper_order.py $ARGS --confirm-cancel CANCEL
+
+      # ── Commit audit files ───────────────────────────────────────────────────
+      - name: Commit audit files
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A data/history/orders/ memory/TRADE-LOG.md memory/ORDER-RESOLUTION-LOG.md
+          if git diff --cached --quiet; then
+            echo "No audit files to commit."
+          else
+            git commit -m "chore(orders): open-order-resolution action=${{ github.event.inputs.action }} run=${{ github.run_id }}"
+            git pull --rebase --autostash origin main
+            git push
+          fi
