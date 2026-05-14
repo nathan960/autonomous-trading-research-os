@@ -26286,3 +26286,21 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
 - WMT BUY (entry) fill=$132.276 return=-0.001% unpl=$-0.0002 | pending: same_day, 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
 
 ---
+
+## dry_run_execute run
+
+```json
+{
+  "all_gates_pass": true,
+  "dry_run": true,
+  "failed_gates": [],
+  "generated_at": "2026-05-14T17:07:55Z",
+  "no_submit_reason": "dry_run_mode",
+  "orders_ready": 1,
+  "orders_validated": 1,
+  "plan_id": "trade_plan-20260514T170754-d0e7e348",
+  "run_id": "execution-20260514T170755-09d379e6",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "03d9ab4c24dd987f8aef5ffb423cd495a59ef0e5dbeba4a4cfb0f753472eecb7"
+}
+```

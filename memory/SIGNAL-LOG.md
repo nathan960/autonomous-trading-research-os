@@ -22099,3 +22099,33 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
 - WMT BUY cid=TOS-20260514T165232-WMT-BUY trigger_hash=04d3134a7956 trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=complete_from_trade_plan
 
 ---
+
+## scan_triggers candidates  (2026-05-14T17:07:54Z)
+
+```
+  AMD       score=1.9349  atr_pct=0.0450  [SELECTED]
+  GOOGL     score=0.9420  atr_pct=0.0236  [SELECTED]
+  CSCO      score=0.7416  atr_pct=0.0263  [SELECTED]
+  AVGO      score=0.5475  atr_pct=0.0339  [candidate]
+  SLB       score=0.5147  atr_pct=0.0290  [SELECTED]
+  NVDA      score=0.5145  atr_pct=0.0288  [candidate]
+  JNJ       score=0.3673  atr_pct=0.0176  [SELECTED]
+  MRK       score=0.3581  atr_pct=0.0232  [SELECTED]
+  XOM       score=0.3332  atr_pct=0.0269  [SELECTED]
+  WMT       score=0.3297  atr_pct=0.0197  [SELECTED]
+  WELL      score=0.3157  atr_pct=0.0212  [SELECTED]
+  EQIX      score=0.2781  atr_pct=0.0187  [SELECTED]
+  AAPL      score=0.2398  atr_pct=0.0206  [candidate]
+  SBUX      score=0.2388  atr_pct=0.0240  [candidate]
+  NEE       score=0.2096  atr_pct=0.0216  [candidate]
+  EOG       score=0.2093  atr_pct=0.0263  [candidate]
+  TSLA      score=0.1785  atr_pct=0.0362  [candidate]
+  AMZN      score=0.1732  atr_pct=0.0245  [candidate]
+  LIN       score=0.1677  atr_pct=0.0187  [candidate]
+  AEP       score=0.1613  atr_pct=0.0190  [candidate]
+  KO        score=0.1486  atr_pct=0.0159  [candidate]
+  O         score=0.1009  atr_pct=0.0151  [candidate]
+  BLK       score=0.0795  atr_pct=0.0219  [candidate]
+  CL        score=0.0691  atr_pct=0.0212  [candidate]
+  SO        score=0.0570  atr_pct=0.0163  [candidate]
+```
