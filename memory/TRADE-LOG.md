@@ -22064,517 +22064,1604 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
 }
 ```
 
-## order_monitor run
+## Execution attempt completed
 
 ```json
 {
-  "dry_run": false,
-  "generated_at": "2026-05-14T15:00:04Z",
-  "lifecycles": [
-    {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WELL"
-    },
-    {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": null,
-      "lifecycle_status": "new",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    }
-  ],
-  "orders_active": 1,
-  "orders_filled": 3,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 4,
-  "run_id": "order_monitor-20260514T150004-1a8fd0d8",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
-}
-```
-
-## dry_run_execute run
-
-```json
-{
-  "all_gates_pass": false,
+  "candidate_order_count": 11,
+  "confirm_paper": false,
   "dry_run": true,
-  "failed_gates": [
-    "NO_DUPLICATE_OPEN_ORDERS"
-  ],
-  "generated_at": "2026-05-14T15:00:05Z",
-  "no_submit_reason": "dry_run_mode",
-  "orders_ready": 1,
-  "orders_validated": 1,
-  "plan_id": "trade_plan-20260514T150004-88cc6ef5",
-  "run_id": "execution-20260514T150005-a2085adb",
-  "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "9bd017afa8ce0e724c1eff1dca652015e66c5b490d04cffd948d81e4cb5dfcf3"
-}
-```
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T15:00:15Z",
-  "lifecycles": [
+  "generated_at": "2026-05-14T15:27:29Z",
+  "run_id": "execution-20260514T152729-ce5b07d9",
+  "schema_version": "0.1.0",
+  "skipped": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
       "symbol": "WELL"
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": null,
-      "lifecycle_status": "new",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
     }
   ],
-  "orders_active": 1,
-  "orders_filled": 3,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 4,
-  "run_id": "order_monitor-20260514T150015-70c5c992",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "c42e45d3e472e30ca4165887602e830d18f615c31e6bee86066e4d80a05ff5c7",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.009058716666666666,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
 }
 ```
-## Outcome Tracker — 2026-05-14T15:00:15Z
 
-**Run ID:** `outcome_tracker-20260514T150015-70c5c992`  **Outcomes tracked:** 3
-
-- WELL BUY (entry) fill=$218.808 return=+0.396% unpl=$+0.0991 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.248 return=+0.031% unpl=$+0.0078 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1084.37 return=-0.186% unpl=$-0.0466 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-
----
-
-## order_monitor run
+## Execution attempt completed
 
 ```json
 {
-  "dry_run": false,
-  "generated_at": "2026-05-14T15:01:20Z",
-  "lifecycles": [
-    {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WELL"
-    },
-    {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": null,
-      "lifecycle_status": "new",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    }
-  ],
-  "orders_active": 1,
-  "orders_filled": 3,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 4,
-  "run_id": "order_monitor-20260514T150120-e687ed8d",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
-}
-```
-
-## dry_run_execute run
-
-```json
-{
-  "all_gates_pass": true,
+  "candidate_order_count": 11,
+  "confirm_paper": false,
   "dry_run": true,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T15:01:20Z",
-  "no_submit_reason": "dry_run_mode",
-  "orders_ready": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T150120-1cea48e5",
-  "run_id": "execution-20260514T150120-f1f388ac",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "9b38cbf14bf0a2026b77e6796b960b2e94ad175853eca10b4043c08678cd0f5c"
-}
-```
-
-## execute_paper run
-
-```json
-{
-  "all_gates_pass": false,
-  "blocked_reason": "trade_plan.approval.approved_for_execution is not True (reason=\"max_orders_per_run_cap(1)_dequeued(non_blocking): ['WMT', 'WELL', 'MRK', 'GOOGL', 'GS', 'CSCO', 'XOM', 'SLB', 'FCX', 'AMD', 'BIL']; spread_blocked_all_orders: ['JNJ']\") \u2014 regenerate with --approve-paper",
-  "dry_run": false,
-  "failed_gates": [],
-  "generated_at": "2026-05-14T15:01:21Z",
-  "orders_submitted": 0,
-  "orders_submitted_err": 0,
-  "orders_submitted_ok": 0,
-  "orders_validated": 0,
-  "plan_id": "trade_plan-20260514T150120-1cea48e5",
-  "run_id": "execution-20260514T150121-0f807e87",
-  "status": "PAPER_BLOCKED",
-  "trade_plan_hash": "9b38cbf14bf0a2026b77e6796b960b2e94ad175853eca10b4043c08678cd0f5c"
-}
-```
-
-## order_monitor run
-
-```json
-{
-  "dry_run": false,
-  "generated_at": "2026-05-14T15:01:27Z",
-  "lifecycles": [
+  "generated_at": "2026-05-14T15:27:38Z",
+  "run_id": "execution-20260514T152738-ba6c7a51",
+  "schema_version": "0.1.0",
+  "skipped": [
     {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
       "symbol": "WELL"
     },
     {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": null,
-      "lifecycle_status": "new",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
     }
   ],
-  "orders_active": 1,
-  "orders_filled": 3,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 4,
-  "run_id": "order_monitor-20260514T150127-4dbd4463",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "1434d23dd99643ae43c900f954a1f0a16ecbc93528473670ea3dec8260e544a1",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.019338916666666664,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
 }
 ```
-## Outcome Tracker — 2026-05-14T15:01:27Z
 
-**Run ID:** `outcome_tracker-20260514T150127-4dbd4463`  **Outcomes tracked:** 3
-
-- WELL BUY (entry) fill=$218.808 return=+0.398% unpl=$+0.0996 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.248 return=-0.017% unpl=$-0.0041 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1084.37 return=-0.171% unpl=$-0.0429 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-
----
-
-## order_monitor run
+## Execution attempt completed
 
 ```json
 {
-  "dry_run": false,
-  "generated_at": "2026-05-14T15:13:14Z",
-  "lifecycles": [
-    {
-      "client_order_id": "TOS-20260513T160035-WELL-BUY",
-      "fill": {
-        "fill_price": 218.808,
-        "filled_at": "2026-05-13T16:00:36Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.11425542,
-        "plan_id": "trade_plan-20260513T160035-0460e121",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T160036-b4ad22c3",
-        "trade_plan_hash": "d2b6605f29eb01f901b86e39fae682ac50c753d4f21ec3b665c106f98a6553b8",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "WELL"
-    },
-    {
-      "client_order_id": "TOS-20260513T192526-JNJ-BUY",
-      "fill": {
-        "fill_price": 230.248,
-        "filled_at": "2026-05-13T19:25:31Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.108578576,
-        "plan_id": "trade_plan-20260513T192526-c793d98e",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192527-04dacaf4",
-        "trade_plan_hash": "3343469f0673de3e6bfa138d5fddf1872ebc07a6a095b933abef3e886cc6456e",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "JNJ"
-    },
-    {
-      "client_order_id": "TOS-20260513T192934-EQIX-BUY",
-      "fill": {
-        "fill_price": 1084.37,
-        "filled_at": "2026-05-13T19:31:19Z",
-        "filled_notional": 25.0,
-        "filled_qty": 0.023054861,
-        "plan_id": "trade_plan-20260513T192934-3bac0e2c",
-        "position_confirmed": true,
-        "run_id": "execution-20260513T192935-303e6fbe",
-        "trade_plan_hash": "c58aacec17f13c901a86b5101366f9f2587ec9e60aad8e68023e07db9612f0a2",
-        "trigger_snapshot_hash": null
-      },
-      "lifecycle_status": "filled",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    },
-    {
-      "client_order_id": "TOS-20260514T145625-EQIX-BUY",
-      "fill": null,
-      "lifecycle_status": "new",
-      "notional": 25.0,
-      "side": "buy",
-      "symbol": "EQIX"
-    }
-  ],
-  "orders_active": 1,
-  "orders_filled": 3,
-  "orders_missing": 0,
-  "orders_rejected": 0,
-  "orders_tracked": 4,
-  "run_id": "order_monitor-20260514T151314-7ed26ffc",
-  "source": "alpaca_paper",
-  "stale_orders": [],
-  "warnings": []
-}
-```
-
-## dry_run_execute run
-
-```json
-{
-  "all_gates_pass": false,
+  "candidate_order_count": 11,
+  "confirm_paper": false,
   "dry_run": true,
-  "failed_gates": [
-    "NO_DUPLICATE_OPEN_ORDERS"
+  "generated_at": "2026-05-14T15:27:44Z",
+  "run_id": "execution-20260514T152744-4ee16f6a",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
   ],
-  "generated_at": "2026-05-14T15:13:14Z",
-  "no_submit_reason": "dry_run_mode",
-  "orders_ready": 1,
-  "orders_validated": 1,
-  "plan_id": "trade_plan-20260514T151314-d878d221",
-  "run_id": "execution-20260514T151314-ddcac1c7",
-  "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "35f78fe5018ee530ac0ea0e86c45108e390d39969e9f65112b71b902109fdee9"
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "f5f1adb71fe7ee1c1b1b60384265325a7e5d26eee85e21a11c783ee791f3bdc4",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.015468333333333334,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
 }
 ```
-## Outcome Tracker — 2026-05-14T15:13:14Z
 
-**Run ID:** `outcome_tracker-20260514T151314-7ed26ffc`  **Outcomes tracked:** 3
+## Execution attempt completed
 
-- WELL BUY (entry) fill=$218.808 return=-0.022% unpl=$-0.0055 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- JNJ BUY (entry) fill=$230.248 return=-0.208% unpl=$-0.0519 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
-- EQIX BUY (entry) fill=$1084.37 return=-0.034% unpl=$-0.0085 | pending: 1_trading_day, 5_trading_days, 20_trading_days, 63_trading_days
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-14T15:27:50Z",
+  "run_id": "execution-20260514T152750-926050ef",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "4f93bc98418510b11b19722b4ec414e9642cee93afd6b8a4c19c857e32838811",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.008708316666666667,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
 
----
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-14T15:27:56Z",
+  "run_id": "execution-20260514T152756-fd5a3ea4",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "66f1af002c7f39839a0aba0067e00a856bc61806a6c452004f29c09e01125d11",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.012878133333333335,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```
+
+## Execution attempt completed
+
+```json
+{
+  "candidate_order_count": 11,
+  "confirm_paper": false,
+  "dry_run": true,
+  "generated_at": "2026-05-14T15:39:46Z",
+  "run_id": "execution-20260514T153946-80be5930",
+  "schema_version": "0.1.0",
+  "skipped": [
+    {
+      "reason": "dry_run_execution",
+      "symbol": "APD"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BIL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BKNG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "BLK"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "DIS"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "EOG"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "KO"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "LLY"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "ORCL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WELL"
+    },
+    {
+      "reason": "dry_run_execution",
+      "symbol": "WMT"
+    }
+  ],
+  "status": "DRY_RUN_NO_SUBMISSION",
+  "submitted": [],
+  "trade_plan_hash": "af3c2c35409cbe0a5b39b24ed9b7ceb43646c9c1bf9919863306f2fe90f3ddd8",
+  "validation": [
+    {
+      "id": "PLAN_EXISTS",
+      "passed": true,
+      "reason": "data/latest/trade_plan.json exists."
+    },
+    {
+      "id": "PLAN_NOT_EXPIRED",
+      "passed": true,
+      "reason": "Plan expiry must be in the future."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "PAPER_ONLY_SETTINGS",
+      "passed": true,
+      "reason": "Runtime settings must be paper-only."
+    },
+    {
+      "id": "MARKET_CLOCK_OPEN",
+      "passed": true,
+      "reason": "Alpaca market clock must be open for submission."
+    },
+    {
+      "id": "PLAN_NOT_DRY_RUN",
+      "passed": false,
+      "reason": "Actual submission requires a non-dry-run approved paper plan."
+    },
+    {
+      "id": "PLAN_TRADE_CRITICAL_SOURCE_ALPACA",
+      "passed": false,
+      "reason": "Actual submission requires a plan generated from Alpaca paper data, not mock data."
+    },
+    {
+      "details": {
+        "allow_paper_order_submission": false,
+        "alpaca_api_key_present": false,
+        "alpaca_api_secret_present": false,
+        "alpaca_data_feed": "iex",
+        "alpaca_paper": true,
+        "live_trading_confirmed": false,
+        "trading_mode": "paper"
+      },
+      "id": "NO_LIVE_TRADING",
+      "passed": true,
+      "reason": "Trading mode is paper-only and live confirmation is false."
+    },
+    {
+      "details": {
+        "total_weight": 1.0000000000000002
+      },
+      "id": "TOTAL_WEIGHT_LIMIT",
+      "passed": true,
+      "reason": "Target gross exposure must be <= 100%."
+    },
+    {
+      "details": {
+        "targets": {
+          "APD": 0.084553,
+          "BIL": 0.1,
+          "BKNG": 0.081628,
+          "BLK": 0.09616,
+          "DIS": 0.091409,
+          "EOG": 0.094018,
+          "KO": 0.087681,
+          "LLY": 0.08698,
+          "ORCL": 0.093499,
+          "WELL": 0.09616,
+          "WMT": 0.087912
+        }
+      },
+      "id": "LONG_ONLY_TARGETS",
+      "passed": true,
+      "reason": "All targets must be non-negative."
+    },
+    {
+      "details": {
+        "APD": "equity_or_etf",
+        "BIL": "equity_or_etf",
+        "BKNG": "equity_or_etf",
+        "BLK": "equity_or_etf",
+        "DIS": "equity_or_etf",
+        "EOG": "equity_or_etf",
+        "KO": "equity_or_etf",
+        "LLY": "equity_or_etf",
+        "ORCL": "equity_or_etf",
+        "WELL": "equity_or_etf",
+        "WMT": "equity_or_etf"
+      },
+      "id": "NO_OPTIONS_OR_CRYPTO",
+      "passed": true,
+      "reason": "Targets must be US equities/ETFs only."
+    },
+    {
+      "details": {
+        "unknown_symbols": []
+      },
+      "id": "UNIVERSE_ONLY",
+      "passed": true,
+      "reason": "Targets must be in configured universe or approved fallback set."
+    },
+    {
+      "details": {
+        "cap": 0.12,
+        "overweight": {}
+      },
+      "id": "MAX_POSITION_WEIGHT",
+      "passed": true,
+      "reason": "Individual stock weights must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 10,
+        "stock_holdings": 10
+      },
+      "id": "MAX_HOLDINGS",
+      "passed": true,
+      "reason": "Number of stock holdings must stay under cap."
+    },
+    {
+      "details": {
+        "cap": 2,
+        "sector_counts": {
+          "101": 1,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 1,
+          "107": 2,
+          "108": 1,
+          "110": 1,
+          "111": 1
+        }
+      },
+      "id": "SECTOR_CAPS",
+      "passed": true,
+      "reason": "Sector name counts must stay under cap."
+    },
+    {
+      "details": {
+        "oversells": []
+      },
+      "id": "NO_SHORT_SELLS",
+      "passed": true,
+      "reason": "Sell orders must not exceed current long quantity."
+    },
+    {
+      "details": {
+        "source_data_hash_present": true
+      },
+      "id": "DATA_SOURCE_HASH_PRESENT",
+      "passed": true,
+      "reason": "Snapshot must include source data hash."
+    },
+    {
+      "details": {
+        "age_minutes": 0.014852716666666666,
+        "max_age_minutes": 90.0
+      },
+      "id": "PLAN_EXISTS_AND_FRESH",
+      "passed": true,
+      "reason": "Market snapshot must be fresh enough for plan generation."
+    },
+    {
+      "details": {
+        "data_source": "dry_run_mock_alpaca_compatible",
+        "required": false,
+        "run_mode": "dry_run"
+      },
+      "id": "TRADE_CRITICAL_SOURCE_IS_ALPACA_PAPER",
+      "passed": true,
+      "reason": "Paper approval/execution requires Alpaca paper trade-critical data; dry-run mock data is allowed only for no-submit validation."
+    },
+    {
+      "details": {
+        "max_open_orders": 25,
+        "open_order_count": 0
+      },
+      "id": "MAX_OPEN_ORDERS",
+      "passed": true,
+      "reason": "Open orders must stay within configured operational cap before new submissions."
+    },
+    {
+      "details": {
+        "max_spread_pct": 0.02,
+        "wide_spreads": {}
+      },
+      "id": "QUOTE_SPREAD_LIMIT",
+      "passed": true,
+      "reason": "Target quote spreads must be below configured limit."
+    },
+    {
+      "details": {},
+      "id": "NO_SECRETS_IN_OUTPUT",
+      "passed": true,
+      "reason": "No secrets are required or emitted by risk gate output."
+    }
+  ]
+}
+```

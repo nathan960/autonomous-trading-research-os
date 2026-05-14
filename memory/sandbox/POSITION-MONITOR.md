@@ -253,3 +253,105 @@
   "source": "alpaca_paper"
 }
 ```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -4e-06,
+  "dry_run": true,
+  "equity": 99802.7,
+  "generated_at": "2026-05-14T15:27:29Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260514T152729-addd8c02",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -4e-06,
+  "dry_run": true,
+  "equity": 99802.7,
+  "generated_at": "2026-05-14T15:27:38Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260514T152738-e87999fe",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -4e-06,
+  "dry_run": true,
+  "equity": 99802.7,
+  "generated_at": "2026-05-14T15:27:45Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260514T152745-4819b948",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -4e-06,
+  "dry_run": true,
+  "equity": 99802.7,
+  "generated_at": "2026-05-14T15:27:50Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260514T152750-47216fb5",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -4e-06,
+  "dry_run": true,
+  "equity": 99802.7,
+  "generated_at": "2026-05-14T15:27:57Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260514T152757-0a83e308",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```
+
+## monitor_positions run (SANDBOX)
+
+```json
+{
+  "drawdown": -5e-06,
+  "dry_run": true,
+  "equity": 99802.69,
+  "generated_at": "2026-05-14T15:39:47Z",
+  "open_order_count": 1,
+  "peak_equity": 99803.14,
+  "position_count": 3,
+  "run_id": "monitor_positions-20260514T153947-08b33f06",
+  "sandbox": true,
+  "source": "alpaca_paper"
+}
+```

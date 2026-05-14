@@ -2408,98 +2408,98 @@ Every trigger scan records fired, skipped, and selected signals here.
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 22,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-14T15:00:04Z",
-  "selected": [
-    "GOOGL",
-    "CSCO",
-    "FCX",
-    "AVGO",
-    "SLB",
-    "WELL",
-    "WMT",
-    "XOM",
-    "EQIX",
-    "SBUX"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "5f270f2ec25e2221c849ee53b2c645d19d1e102ac872a95dbfa8271f713b4724",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T152729-d9752cf7",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.11270455,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "ef5045912b53c47ef49b5b578a48b2ae064a5b39824aaaa11d98e8951647765a"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 23,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-14T15:01:20Z",
-  "selected": [
-    "AMD",
-    "GOOGL",
-    "CSCO",
-    "FCX",
-    "SLB",
-    "GS",
-    "MRK",
-    "WELL",
-    "WMT",
-    "XOM"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "b5db86f52ede1978369d7b2bf5d9dbc281cad5a8e9f826a6ae637671aebd8a58",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T152738-f109458a",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.0918258,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "bad42007d4ad760b953d4518be10d356e1ba62e3a7c589a2b0772f2cee95d217"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
 
-## scan_triggers run
+## Trigger scan completed
 
 ```json
 {
-  "breadth": 0.569620253164557,
-  "breadth_ok": true,
-  "candidates_count": 24,
-  "data_stale_gate_passes": true,
-  "excluded_count": 69,
-  "regime_risk_on": true,
-  "regime_skip_reason": null,
-  "scanned_at": "2026-05-14T15:13:14Z",
-  "selected": [
-    "AMD",
-    "CAT",
-    "GOOGL",
-    "CSCO",
-    "FCX",
-    "SLB",
-    "MRK",
-    "XOM",
-    "WMT",
-    "EQIX"
-  ],
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "778f3514139adca9abaa190210d547eefa9714d139699c128e612d5f3bdc8f10",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T152744-f994b4fa",
   "selected_count": 10,
-  "snapshot_age_minutes": 0.07429771666666667,
-  "spy_passes_200dma": true,
-  "spy_passes_6m_momentum": true,
-  "trigger_snapshot_hash": "a86792fb5157703a4b21d9a742a0e43b51f65899edfc4d874495846dfa99b138"
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "a9f28eb2e635562edb53b83f023932f0422548a4249e2ee4902d1d89f124c5d9",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T152750-4844d463",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "1913e114ae5c98baa49b905ca65f3255a73095c7d68590058a43871648d2944a",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T152756-2e22cca3",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
+}
+```
+
+## Trigger scan completed
+
+```json
+{
+  "breadth": 0.8987341772151899,
+  "candidate_count": 71,
+  "market_snapshot_hash": "741474106cde550ff670b79e8fb31f9c24f129cb496acf0634d40d391dc8e078",
+  "ready_count": 79,
+  "risk_on": true,
+  "run_id": "trigger_scan-20260514T153946-6ac050d0",
+  "selected_count": 10,
+  "spy_momentum_ok": true,
+  "spy_trend_ok": true
 }
 ```
