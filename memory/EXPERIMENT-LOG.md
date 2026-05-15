@@ -1636,3 +1636,30 @@ based on this report alone. Any experiment requires a candidate PR with:
 *Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
 
 ---
+## Experiment Candidates — 2026-05-15
+
+*From weekly review run weekly_review-2026-05-15*
+
+**Operational issues to investigate:**
+- [ ] Paper execution execution-20260513T193130-305917e5 had unexpected status: PAPER_ORDER_ERRORS
+- [ ] Paper execution execution-20260514T134814-b4369954 had unexpected status: PAPER_FAIL
+- [ ] Paper execution execution-20260514T135504-19cce5c5 had unexpected status: PAPER_FAIL
+- [ ] Paper execution execution-20260514T150121-0f807e87 had unexpected status: PAPER_BLOCKED
+- [ ] Paper execution execution-20260514T171953-fe151e9b had unexpected status: PAPER_BLOCKED
+- [ ] Paper execution execution-20260514T174900-1d804822 had unexpected status: PAPER_BLOCKED
+- [ ] Paper execution execution-20260514T175023-d2a85437 had unexpected status: PAPER_BLOCKED
+- [ ] Paper execution execution-20260514T175221-05f9ad9c had unexpected status: PAPER_BLOCKED
+- [ ] Paper execution execution-20260514T175739-c2e2d180 had unexpected status: PAPER_BLOCKED
+
+**Observations (hypothesis candidates):**
+- 23 paper execution attempt(s), 15 order(s) submitted.
+- 14 order fill(s) confirmed by order monitor.
+- 12 external alert(s) ingested this period, 5 routed.
+
+**To propose a strategy experiment, open a PR with:**
+- Hypothesis
+- Supporting evidence (backtest or paper results)
+- Success criteria
+- Rollback plan
+
+---

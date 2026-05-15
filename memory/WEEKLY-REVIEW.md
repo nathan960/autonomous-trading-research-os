@@ -282,3 +282,79 @@ Weekly summaries of triggers, skips, trades, drawdown, data quality, and operati
 - 8 external alert(s) ingested this period, 5 routed.
 
 ---
+## Weekly Review — 2026-05-09 to 2026-05-15 (7 days)
+
+**Generated:** 2026-05-15T22:29:46Z  **Run ID:** weekly_review-2026-05-15
+
+### Trigger Scans
+- Total runs: 0 | Risk-on: 0 | Risk-off: 0
+- Avg candidates: 0.0 | Avg excluded: 0.0
+
+### Dry Runs
+- Total: 0 | Pass: 0 | Fail: 0
+
+### Paper Executions
+- Attempts: 23 | Orders submitted: 15
+  - [2026-05-13] WELL BUY $25.0 @ $218.9 (PAPER_SUBMITTED)
+  - [2026-05-13] JNJ BUY $25.0 @ $230.26 (PAPER_SUBMITTED)
+  - [2026-05-13] EQIX BUY $25.0 @ $1084.52 (PAPER_SUBMITTED)
+  - [2026-05-13] EQIX SELL $25.0 @ $1084.25 (PAPER_ORDER_ERRORS)
+  - [2026-05-14] EQIX BUY $25.0 @ $1079.73 (PAPER_SUBMITTED)
+  - [2026-05-14] JNJ BUY $25.0 @ $230.12 (PAPER_SUBMITTED)
+  - [2026-05-14] EQIX SELL $25.0 @ $1078.28 (PAPER_SUBMITTED)
+  - [2026-05-14] EQIX BUY $25.0 @ $1078.43 (PAPER_SUBMITTED)
+  - [2026-05-14] EQIX BUY $25.0 @ $1076.96 (PAPER_SUBMITTED)
+  - [2026-05-14] WMT BUY $25.0 @ $132.36 (PAPER_SUBMITTED)
+  - [2026-05-14] JNJ BUY $25.0 @ $230.05 (PAPER_SUBMITTED)
+  - [2026-05-14] WMT BUY $25.0 @ $132.48 (PAPER_SUBMITTED)
+  - [2026-05-14] EQIX BUY $25.0 @ $1078.96 (PAPER_SUBMITTED)
+  - [2026-05-14] EQIX SELL $25.0 @ $1076.63 (PAPER_SUBMITTED)
+  - [2026-05-14] EQIX BUY $25.0 @ $1076.63 (PAPER_SUBMITTED)
+
+### Order Lifecycle
+- Monitor runs: 69 | Unique orders: 14
+- Fills: 14 | Partial: 0 | Missing: 0 | Expired: 0 | Rejected: 0 | Canceled: 0
+- Latest lifecycle by order (14):
+  - TOS-20260513T160035-WELL-BUY | WELL buy | status=filled fill=$218.808 qty=0.11425542 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260513T192526-JNJ-BUY | JNJ buy | status=filled fill=$230.248 qty=0.108578576 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260513T192934-EQIX-BUY | EQIX buy | status=filled fill=$1084.37 qty=0.023054861 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T145625-EQIX-BUY | EQIX buy | status=filled fill=$1079.5 qty=0.023158869 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T154323-JNJ-BUY | JNJ buy | status=filled fill=$230.116 qty=0.108640859 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T154543-EQIX-SELL | EQIX sell | status=filled fill=$1078.442 qty=0.023181589 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T154817-EQIX-BUY | EQIX buy | status=filled fill=$1078.41 qty=0.023182277 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T163113-EQIX-BUY | EQIX buy | status=filled fill=$1076.89 qty=0.023214998 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T165232-WMT-BUY | WMT buy | status=filled fill=$132.276 qty=0.18899876 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T171739-JNJ-BUY | JNJ buy | status=filled fill=$230.044 qty=0.108674862 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T171844-WMT-BUY | WMT buy | status=filled fill=$132.474 qty=0.188716276 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T172103-EQIX-BUY | EQIX buy | status=filled fill=$1076.82 qty=0.023216507 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T172226-EQIX-SELL | EQIX sell | status=filled fill=$1076.718 qty=0.023218707 notional=$25.0 | checked=2026-05-15T21:41:03Z
+  - TOS-20260514T172335-EQIX-BUY | EQIX buy | status=filled fill=$1076.542 qty=0.023222503 notional=$25.0 | checked=2026-05-15T21:41:03Z
+
+### External Alerts
+- Ingested this period: 12 (all-time: 12)
+- Routes this period: 5 (all-time: 5)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By next_step: request_trade_plan_unapproved=6, request_data_refresh=5, log_only=1
+
+### Risk State
+- Equity: $99,799.26 | Peak: $99,803.14 | Drawdown: -0.00% | Positions: 4
+- Last updated: 2026-05-15T21:41:02Z
+
+### Operational Issues (9)
+- Paper execution execution-20260513T193130-305917e5 had unexpected status: PAPER_ORDER_ERRORS
+- Paper execution execution-20260514T134814-b4369954 had unexpected status: PAPER_FAIL
+- Paper execution execution-20260514T135504-19cce5c5 had unexpected status: PAPER_FAIL
+- Paper execution execution-20260514T150121-0f807e87 had unexpected status: PAPER_BLOCKED
+- Paper execution execution-20260514T171953-fe151e9b had unexpected status: PAPER_BLOCKED
+- Paper execution execution-20260514T174900-1d804822 had unexpected status: PAPER_BLOCKED
+- Paper execution execution-20260514T175023-d2a85437 had unexpected status: PAPER_BLOCKED
+- Paper execution execution-20260514T175221-05f9ad9c had unexpected status: PAPER_BLOCKED
+- Paper execution execution-20260514T175739-c2e2d180 had unexpected status: PAPER_BLOCKED
+
+### Research Observations
+- 23 paper execution attempt(s), 15 order(s) submitted.
+- 14 order fill(s) confirmed by order monitor.
+- 12 external alert(s) ingested this period, 5 routed.
+
+---
