@@ -1,0 +1,45 @@
+{
+  "alert_id": "tv_XOM_D_1778851800000_spy_strong_uptrend_start",
+  "alert_time": "1778875260479",
+  "asset_class": "us_equity",
+  "blocked_by_default": true,
+  "condition": "spy_strong_uptrend_start",
+  "confidence": 0.5,
+  "data_timestamp": "1778851800000",
+  "exchange": "NYSE",
+  "ingested_at": "2026-05-15T20:01:32Z",
+  "interval": "D",
+  "metadata": {
+    "note": "Trend strength alert only. Must be verified by Alpaca data. No execution authorization.",
+    "profile": "spy_trend_strength"
+  },
+  "next_step": "request_trade_plan_unapproved",
+  "observed_value": {
+    "atr_pct": 0.0266412216,
+    "close": 157.92,
+    "distance_from_sma200_pct": 21.6010028695,
+    "momentum_pass": true,
+    "overextended_uptrend": true,
+    "roc126": 33.6945479174,
+    "roc20": 7.8393881453,
+    "roc252": 45.5752212389,
+    "roc63": 6.3792522735,
+    "sma200": 129.86735,
+    "strong_downtrend": false,
+    "strong_uptrend": true,
+    "trend_pass": true
+  },
+  "raw_payload_hash": "79b84ce007c951af2a28458e6c6c4ba5a57b47a722179248779cb2d6d1ef8b91",
+  "source": "tradingview",
+  "source_type": "tradingview",
+  "symbol": "XOM",
+  "threshold": {
+    "overextended_distance_pct": 15,
+    "strong_down_roc20": -3,
+    "strong_down_roc63": -6,
+    "strong_up_roc20": 3,
+    "strong_up_roc63": 6
+  },
+  "trade_execution_allowed": false,
+  "trigger_id": "TV_SPY_STRONG_UPTREND_START_V1"
+}

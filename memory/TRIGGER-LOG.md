@@ -3141,3 +3141,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "b1c761de4a2f8648a12b623f1d1363a26a5f3ca4d78632ac61f8569ba9125e86"
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "tv_XOM_D_1778851800000_spy_strong_uptrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-15T20:01:32Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "79b84ce007c951af2a28458e6c6c4ba5a57b47a722179248779cb2d6d1ef8b91",
+  "source": "tradingview",
+  "symbol": "XOM",
+  "trade_execution_allowed": false
+}
+```
