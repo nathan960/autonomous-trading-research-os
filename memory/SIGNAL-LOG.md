@@ -24820,3 +24820,26 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
 - EQIX BUY cid=TOS-20260514T172335-EQIX-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
 
 ---
+
+## scan_triggers candidates  (2026-05-15T17:00:34Z)
+
+```
+  GOOGL     score=0.8886  atr_pct=0.0237  [candidate]
+  CSCO      score=0.7428  atr_pct=0.0266  [candidate]
+  FCX       score=0.5597  atr_pct=0.0441  [candidate]
+  SLB       score=0.5420  atr_pct=0.0283  [candidate]
+  NVDA      score=0.4297  atr_pct=0.0308  [candidate]
+  XOM       score=0.3804  atr_pct=0.0262  [candidate]
+  GS        score=0.3487  atr_pct=0.0246  [candidate]
+  WMT       score=0.3128  atr_pct=0.0201  [candidate]
+  AAPL      score=0.2634  atr_pct=0.0203  [candidate]
+  SBUX      score=0.2230  atr_pct=0.0242  [candidate]
+  NEE       score=0.1924  atr_pct=0.0224  [candidate]
+  AMZN      score=0.1592  atr_pct=0.0251  [candidate]
+  KO        score=0.1486  atr_pct=0.0157  [candidate]
+  AEP       score=0.1481  atr_pct=0.0197  [candidate]
+  BA        score=0.1137  atr_pct=0.0319  [candidate]
+  O         score=0.1034  atr_pct=0.0152  [candidate]
+  CL        score=0.0704  atr_pct=0.0213  [candidate]
+  SO        score=0.0538  atr_pct=0.0161  [candidate]
+```
