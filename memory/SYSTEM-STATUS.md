@@ -87,3 +87,16 @@
 - [ ] Daily order limits hit — churn guard will block new orders until tomorrow
 
 ---
+## System Status — 2026-05-15T22:09:58Z
+
+**Overall:** YELLOW  | Research: YES  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,799.26  drawdown=-0.00%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260515T214104-7822211e  approved=False
+**Dry-run gates:** FAIL  failed=['QUOTE_FRESHNESS']
+
+**Warnings:**
+- Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']
+- 45 wide-spread symbols (['ABBV', 'ADBE', 'AMD', 'AMGN', 'AMT', 'AMZN', 'APD', 'BA', 'BAC', 'BKNG', 'BLK', 'CAT', 'CMCSA', 'COP', 'COST', 'CSCO', 'CVX', 'DIS', 'DUK', 'EOG', 'FCX', 'HD', 'HON', 'INTU', 'JNJ', 'KO', 'MA', 'MCD', 'MDLZ', 'META', 'MRK', 'NEE', 'NKE', 'NVDA', 'ORCL', 'PLD', 'SBUX', 'SHW', 'SRE', 'TMO', 'UNH', 'UPS', 'WELL', 'WFC', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
+
+---
