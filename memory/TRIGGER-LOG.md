@@ -3146,6 +3146,7 @@ Every trigger scan records fired, skipped, and selected signals here.
 
 ```json
 {
+<<<<<<< Updated upstream
   "alert_id": "tv_XOM_D_1778851800000_spy_strong_uptrend_start",
   "blocked_by_default": true,
   "ingested_at": "2026-05-15T20:01:32Z",
@@ -3153,6 +3154,15 @@ Every trigger scan records fired, skipped, and selected signals here.
   "raw_payload_hash": "79b84ce007c951af2a28458e6c6c4ba5a57b47a722179248779cb2d6d1ef8b91",
   "source": "tradingview",
   "symbol": "XOM",
+=======
+  "alert_id": "tv_JNJ_D_1778851800000_spy_strong_downtrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-15T20:02:03Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "b97114ecebeca153a1d5cb32566a8fe69a900e45f49647a76568e30390e50e72",
+  "source": "tradingview",
+  "symbol": "JNJ",
+>>>>>>> Stashed changes
   "trade_execution_allowed": false
 }
 ```
