@@ -3213,6 +3213,7 @@ Every trigger scan records fired, skipped, and selected signals here.
 
 ```json
 {
+<<<<<<< Updated upstream
   "alert_id": "tv_NEE_D_1779111000000_spy_strong_downtrend_start",
   "blocked_by_default": true,
   "ingested_at": "2026-05-18T20:01:35Z",
@@ -3220,6 +3221,15 @@ Every trigger scan records fired, skipped, and selected signals here.
   "raw_payload_hash": "af6be474844c055f19adb2a56c0a20c24f739be1909344967ab0d5ce4c30ea38",
   "source": "tradingview",
   "symbol": "NEE",
+=======
+  "alert_id": "tv_EQIX_D_1779111000000_spy_strong_downtrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-18T20:02:07Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "a635297bc47f722a41356397852eb8e273a2a01443df59dcfa9c9c2770dbd0da",
+  "source": "tradingview",
+  "symbol": "EQIX",
+>>>>>>> Stashed changes
   "trade_execution_allowed": false
 }
 ```
