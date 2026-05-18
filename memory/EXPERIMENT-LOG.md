@@ -1777,3 +1777,25 @@ based on this report alone. Any experiment requires a candidate PR with:
 *Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
 
 ---
+## Trigger Performance Observations — 2026-05-18
+
+*From trigger_performance run `trigger_performance-20260518T223242-2f07a5ca`*
+*Period: 2026-05-12 to 2026-05-18 (7 days)*
+
+**Operational issues:**
+- [ ] Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 67% of candidates — review spread threshold or data freshness.
+
+**Observations (research only — no strategy conclusions):**
+- Spread gate: 53/79 symbols blocked (67%). Avg spread (blocked): 10.427%
+- Trend gate (200 DMA): 35/79 symbols below 200 DMA (44% block rate).
+- Fill count this period: 14. Need 6 more fills before P/L analysis is meaningful.
+- Average current return across 14 tracked outcome(s): -1.063%. Window pending — no conclusions yet.
+- Lineage: Lineage snapshot: 14 records (0 complete, 14 partial). 72 trigger fill associations recovered. 14 record(s) have partial lineage — save trade plans to history/trade_plans/ to improve completeness.
+- Fills linked to triggers (via lineage): ATR_SIZING_V1=12, LIQUIDITY_GATE_V1=12, MOMENTUM_BLEND_6M_12M_V1=12, SPREAD_GATE_V1=12, STOCK_TREND_200DMA_V1=12.
+- IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest.
+
+**Reminder:** Do not modify strategy.json, risk_limits.json, or trigger_registry.json
+based on this report alone. Any experiment requires a candidate PR with:
+- Hypothesis, supporting evidence, success criteria, and rollback plan.
+
+---
