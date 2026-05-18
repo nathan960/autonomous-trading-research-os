@@ -3233,3 +3233,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trade_execution_allowed": false
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.5569620253164557,
+  "breadth_ok": true,
+  "candidates_count": 19,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-05-18T21:50:58Z",
+  "selected": [
+    "CAT",
+    "GOOGL",
+    "AVGO",
+    "MRK",
+    "GS",
+    "JNJ",
+    "CVX",
+    "MS",
+    "EQIX",
+    "WELL"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.13163829999999999,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "c89531773cda66c309e9b97d3ed4e5439bd791f631b1a804a67cadbc8b6a2be6"
+}
+```
