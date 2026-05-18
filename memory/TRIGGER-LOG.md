@@ -3208,3 +3208,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "4136c982b5c8cc911543c81ae232bd9bbbdc2788d43aca2fe3d2bb9f897f0d1f"
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "tv_NEE_D_1779111000000_spy_strong_downtrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-18T20:01:35Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "af6be474844c055f19adb2a56c0a20c24f739be1909344967ab0d5ce4c30ea38",
+  "source": "tradingview",
+  "symbol": "NEE",
+  "trade_execution_allowed": false
+}
+```
