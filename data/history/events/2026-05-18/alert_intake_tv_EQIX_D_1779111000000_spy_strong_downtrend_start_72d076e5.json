@@ -1,0 +1,51 @@
+{
+  "event_type": "alert_intake",
+  "run_id": "tv_EQIX_D_1779111000000_spy_strong_downtrend_start",
+  "generated_at": "2026-05-18T20:02:07Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "source": "tradingview",
+    "source_type": "tradingview",
+    "symbol": "EQIX",
+    "exchange": "NASDAQ",
+    "interval": "D",
+    "asset_class": "us_equity",
+    "alert_id": "tv_EQIX_D_1779111000000_spy_strong_downtrend_start",
+    "trigger_id": "TV_SPY_STRONG_DOWNTREND_START_V1",
+    "condition": "spy_strong_downtrend_start",
+    "observed_value": {
+      "close": 1062.62,
+      "sma200": 862.088525,
+      "roc20": -3.7455727964,
+      "roc63": 11.623265439,
+      "roc126": 35.1005670405,
+      "roc252": 22.528942392,
+      "atr_pct": 0.0207014191,
+      "distance_from_sma200_pct": 23.2611233284,
+      "trend_pass": true,
+      "momentum_pass": true,
+      "strong_uptrend": false,
+      "strong_downtrend": true,
+      "overextended_uptrend": true
+    },
+    "threshold": {
+      "strong_up_roc20": 3,
+      "strong_up_roc63": 6,
+      "strong_down_roc20": -3,
+      "strong_down_roc63": -6,
+      "overextended_distance_pct": 15
+    },
+    "confidence": 0.5,
+    "data_timestamp": "1779111000000",
+    "alert_time": "1779134460810",
+    "next_step": "request_trade_plan_unapproved",
+    "metadata": {
+      "profile": "spy_trend_strength",
+      "note": "Trend strength alert only. Must be verified by Alpaca data. No execution authorization."
+    },
+    "raw_payload_hash": "a635297bc47f722a41356397852eb8e273a2a01443df59dcfa9c9c2770dbd0da",
+    "ingested_at": "2026-05-18T20:02:07Z",
+    "trade_execution_allowed": false,
+    "blocked_by_default": true
+  }
+}
