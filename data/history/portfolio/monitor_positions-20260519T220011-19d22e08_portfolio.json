@@ -1,6 +1,12 @@
 {
-  "data_hash": "ce57eacb559f9db054159e7192ece6ba08bd37d34aa3f802441bc9a321b86f23",
-  "fetched_at": "2026-05-19T22:00:07Z",
+  "data_hash": "dfea9f2b5713faf07aa50d81ba49420a61f9dc6bdf2b2723ac3dcf390f7629da",
+  "drawdown": -2.8e-05,
+  "dry_run": false,
+  "equity": 99800.35,
+  "generated_at": "2026-05-19T22:00:12Z",
+  "open_order_count": 0,
+  "orders_summary": [],
+  "peak_equity": 99803.14,
   "position_count": 4,
   "positions": [
     {
@@ -96,6 +102,7 @@
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260519T220011-19d22e08",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }
