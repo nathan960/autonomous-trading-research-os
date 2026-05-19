@@ -32316,3 +32316,23 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
 - EQIX BUY (entry) fill=$1076.542 return=-2.558% unpl=$-2.6527 | pending: 5_trading_days, 20_trading_days, 63_trading_days
 
 ---
+## Outcome Tracker — 2026-05-19T22:40:20Z
+
+**Run ID:** `outcome_tracker-20260519T224020-0db7e321`  **Outcomes tracked:** 14
+
+- WELL BUY (entry) fill=$218.808 return=-0.369% unpl=$-0.0923 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- JNJ BUY (entry) fill=$230.248 return=-0.292% unpl=$-0.1828 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1084.37 return=-3.262% unpl=$-2.6527 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1079.5 return=-2.825% unpl=$-2.6527 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- EQIX SELL (exit) fill=$1078.442 return=-2.730% unpl=$-2.6527 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1078.41 return=-2.727% unpl=$-2.6527 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- JNJ BUY (entry) fill=$230.116 return=-0.235% unpl=$-0.1828 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- WMT BUY (entry) fill=$132.276 return=+1.447% unpl=$+0.6856 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- WMT BUY (entry) fill=$132.474 return=+1.295% unpl=$+0.6856 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1076.89 return=-2.590% unpl=$-2.6527 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1076.82 return=-2.583% unpl=$-2.6527 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- JNJ BUY (entry) fill=$230.044 return=-0.204% unpl=$-0.1828 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- EQIX SELL (exit) fill=$1076.718 return=-2.574% unpl=$-2.6527 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1076.542 return=-2.558% unpl=$-2.6527 | pending: 5_trading_days, 20_trading_days, 63_trading_days
+
+---
