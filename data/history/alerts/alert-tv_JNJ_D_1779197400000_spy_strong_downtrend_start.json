@@ -1,0 +1,45 @@
+{
+  "alert_id": "tv_JNJ_D_1779197400000_spy_strong_downtrend_start",
+  "alert_time": "1779220860641",
+  "asset_class": "us_equity",
+  "blocked_by_default": true,
+  "condition": "spy_strong_downtrend_start",
+  "confidence": 0.5,
+  "data_timestamp": "1779197400000",
+  "exchange": "NYSE",
+  "ingested_at": "2026-05-19T20:01:37Z",
+  "interval": "D",
+  "metadata": {
+    "note": "Trend strength alert only. Must be verified by Alpaca data. No execution authorization.",
+    "profile": "spy_trend_strength"
+  },
+  "next_step": "request_trade_plan_unapproved",
+  "observed_value": {
+    "atr_pct": 0.0181396934,
+    "close": 230,
+    "distance_from_sma200_pct": 9.6126610249,
+    "momentum_pass": true,
+    "overextended_uptrend": false,
+    "roc126": 17.3888633696,
+    "roc20": 1.697912982,
+    "roc252": 51.9857265579,
+    "roc63": -6.1186170864,
+    "sma200": 209.829775,
+    "strong_downtrend": true,
+    "strong_uptrend": false,
+    "trend_pass": true
+  },
+  "raw_payload_hash": "c32fef47747c0ad5edb347bdd0ee8617c8712a7ca143e69daa69996ecd5e546b",
+  "source": "tradingview",
+  "source_type": "tradingview",
+  "symbol": "JNJ",
+  "threshold": {
+    "overextended_distance_pct": 15,
+    "strong_down_roc20": -3,
+    "strong_down_roc63": -6,
+    "strong_up_roc20": 3,
+    "strong_up_roc63": 6
+  },
+  "trade_execution_allowed": false,
+  "trigger_id": "TV_SPY_STRONG_DOWNTREND_START_V1"
+}

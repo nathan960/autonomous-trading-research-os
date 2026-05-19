@@ -3286,3 +3286,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "5223fa148fdcdbf08858e6d6bf39e6d94a4a53d6cd8378933400f0c4226fa03a"
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "tv_JNJ_D_1779197400000_spy_strong_downtrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-19T20:01:37Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "c32fef47747c0ad5edb347bdd0ee8617c8712a7ca143e69daa69996ecd5e546b",
+  "source": "tradingview",
+  "symbol": "JNJ",
+  "trade_execution_allowed": false
+}
+```
