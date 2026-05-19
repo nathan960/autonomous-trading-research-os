@@ -3291,6 +3291,7 @@ Every trigger scan records fired, skipped, and selected signals here.
 
 ```json
 {
+<<<<<<< Updated upstream
   "alert_id": "tv_JNJ_D_1779197400000_spy_strong_downtrend_start",
   "blocked_by_default": true,
   "ingested_at": "2026-05-19T20:01:37Z",
@@ -3298,6 +3299,15 @@ Every trigger scan records fired, skipped, and selected signals here.
   "raw_payload_hash": "c32fef47747c0ad5edb347bdd0ee8617c8712a7ca143e69daa69996ecd5e546b",
   "source": "tradingview",
   "symbol": "JNJ",
+=======
+  "alert_id": "tv_SPY_D_1779197400000_spy_daily_regime_state",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-19T20:02:08Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "cfddc56ca86f5f3d99bb14026025b47d22f334fb5788a84df5771e45c559cd75",
+  "source": "tradingview",
+  "symbol": "SPY",
+>>>>>>> Stashed changes
   "trade_execution_allowed": false
 }
 ```

@@ -1,0 +1,40 @@
+{
+  "alert_id": "tv_SPY_D_1779197400000_spy_daily_regime_state",
+  "alert_time": "1779220860393",
+  "asset_class": "us_equity",
+  "blocked_by_default": true,
+  "condition": "spy_daily_regime_state",
+  "confidence": 0.5,
+  "data_timestamp": "1779197400000",
+  "exchange": "PYTH",
+  "ingested_at": "2026-05-19T20:02:08Z",
+  "interval": "D",
+  "metadata": {
+    "note": "TradingView external alert only. Must be verified by Alpaca data. No execution authorization.",
+    "profile": "spy_regime"
+  },
+  "next_step": "request_trade_plan_unapproved",
+  "observed_value": {
+    "atr_pct": 0.0105312496,
+    "close": 733.83,
+    "momentum_126_pass": true,
+    "momentum_252_pass": true,
+    "qualified": true,
+    "risk_on_proxy": true,
+    "roc126": 7.7173919442,
+    "roc252": 25.8994330091,
+    "sma200": 676.3171819,
+    "trend_pass": true
+  },
+  "raw_payload_hash": "cfddc56ca86f5f3d99bb14026025b47d22f334fb5788a84df5771e45c559cd75",
+  "source": "tradingview",
+  "source_type": "tradingview",
+  "symbol": "SPY",
+  "threshold": {
+    "roc126_min": 0,
+    "roc252_min": 0,
+    "sma_period": 200
+  },
+  "trade_execution_allowed": false,
+  "trigger_id": "TV_SPY_DAILY_REGIME_STATE_V1"
+}
