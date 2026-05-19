@@ -2671,3 +2671,64 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-19
+
+**Generated:** 2026-05-19T22:17:44Z  **Run ID:** daily_summary-2026-05-19
+
+### Account & Risk
+- Equity: $99,800.35 | Cash: $99,552.75 | Buying power: $199,353.10
+- Peak: $99,803.14 | Drawdown: -0.00% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $97.19 | $-2.65 (-2.66%) |
+| JNJ | long | 0.325894297 | $74.82 | $-0.18 (-0.24%) |
+| WELL | long | 0.11425542 | $24.91 | $-0.09 (-0.37%) |
+| WMT | long | 0.377715036 | $50.69 | +$0.69 (1.37%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_OFF** (SPY 200DMA=✓, 6m ROC=+9.21%, breadth=53.16%)
+- Candidates: 13 | Selected: 0 | Excluded: 79
+- Scanned at: 2026-05-19T22:00:13Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260519T220014-e0847b4b`
+- Generated: 2026-05-19T22:00:14Z | Expires: 2026-05-20T04:00:14Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - EQIX SELL $25.00 @ $1,049.00 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260519T220014-65d972d2`
+- All gates pass: NO
+- Failed gates: QUOTE_FRESHNESS
+
+### Dry Runs Today (0)
+- Pass: 0 | Fail: 0
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260519T220013-6d911730
+
+### Alerts (total=16, today=2)
+- By source: tradingview=14, test=2
+- By next_step: request_trade_plan_unapproved=10, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
