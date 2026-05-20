@@ -3364,3 +3364,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "c3567964f139c911fe6fa4cb07e557473635e9d14e7e91cb72e4e35fd4c29eae"
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "tv_MS_D_1779283800000_spy_strong_uptrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-20T20:01:35Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "0949e4c9f304b344779fa54047f1376221190d3fa210667f0885e62240a52662",
+  "source": "tradingview",
+  "symbol": "MS",
+  "trade_execution_allowed": false
+}
+```
