@@ -3369,6 +3369,7 @@ Every trigger scan records fired, skipped, and selected signals here.
 
 ```json
 {
+<<<<<<< Updated upstream
   "alert_id": "tv_MS_D_1779283800000_spy_strong_uptrend_start",
   "blocked_by_default": true,
   "ingested_at": "2026-05-20T20:01:35Z",
@@ -3376,6 +3377,15 @@ Every trigger scan records fired, skipped, and selected signals here.
   "raw_payload_hash": "0949e4c9f304b344779fa54047f1376221190d3fa210667f0885e62240a52662",
   "source": "tradingview",
   "symbol": "MS",
+=======
+  "alert_id": "tv_GS_D_1779283800000_spy_strong_uptrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-20T20:02:08Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "94980f23d04391eb1994eb956f889ca6eed767ad98bd7f30200260dbb9f12438",
+  "source": "tradingview",
+  "symbol": "GS",
+>>>>>>> Stashed changes
   "trade_execution_allowed": false
 }
 ```

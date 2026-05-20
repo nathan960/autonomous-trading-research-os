@@ -1,0 +1,45 @@
+{
+  "alert_id": "tv_GS_D_1779283800000_spy_strong_uptrend_start",
+  "alert_time": "1779307260548",
+  "asset_class": "us_equity",
+  "blocked_by_default": true,
+  "condition": "spy_strong_uptrend_start",
+  "confidence": 0.5,
+  "data_timestamp": "1779283800000",
+  "exchange": "NYSE",
+  "ingested_at": "2026-05-20T20:02:08Z",
+  "interval": "D",
+  "metadata": {
+    "note": "Trend strength alert only. Must be verified by Alpaca data. No execution authorization.",
+    "profile": "spy_trend_strength"
+  },
+  "next_step": "request_trade_plan_unapproved",
+  "observed_value": {
+    "atr_pct": 0.0262027714,
+    "close": 982.12,
+    "distance_from_sma200_pct": 16.1163724594,
+    "momentum_pass": true,
+    "overextended_uptrend": true,
+    "roc126": 26.6336582598,
+    "roc20": 5.0575499551,
+    "roc252": 60.3984974686,
+    "roc63": 7.1423116784,
+    "sma200": 845.80665,
+    "strong_downtrend": false,
+    "strong_uptrend": true,
+    "trend_pass": true
+  },
+  "raw_payload_hash": "94980f23d04391eb1994eb956f889ca6eed767ad98bd7f30200260dbb9f12438",
+  "source": "tradingview",
+  "source_type": "tradingview",
+  "symbol": "GS",
+  "threshold": {
+    "overextended_distance_pct": 15,
+    "strong_down_roc20": -3,
+    "strong_down_roc63": -6,
+    "strong_up_roc20": 3,
+    "strong_up_roc63": 6
+  },
+  "trade_execution_allowed": false,
+  "trigger_id": "TV_SPY_STRONG_UPTREND_START_V1"
+}
