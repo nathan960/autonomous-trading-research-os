@@ -1,0 +1,51 @@
+{
+  "event_type": "alert_intake",
+  "run_id": "tv_GS_D_1779283800000_spy_strong_uptrend_start",
+  "generated_at": "2026-05-20T20:02:08Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "source": "tradingview",
+    "source_type": "tradingview",
+    "symbol": "GS",
+    "exchange": "NYSE",
+    "interval": "D",
+    "asset_class": "us_equity",
+    "alert_id": "tv_GS_D_1779283800000_spy_strong_uptrend_start",
+    "trigger_id": "TV_SPY_STRONG_UPTREND_START_V1",
+    "condition": "spy_strong_uptrend_start",
+    "observed_value": {
+      "close": 982.12,
+      "sma200": 845.80665,
+      "roc20": 5.0575499551,
+      "roc63": 7.1423116784,
+      "roc126": 26.6336582598,
+      "roc252": 60.3984974686,
+      "atr_pct": 0.0262027714,
+      "distance_from_sma200_pct": 16.1163724594,
+      "trend_pass": true,
+      "momentum_pass": true,
+      "strong_uptrend": true,
+      "strong_downtrend": false,
+      "overextended_uptrend": true
+    },
+    "threshold": {
+      "strong_up_roc20": 3,
+      "strong_up_roc63": 6,
+      "strong_down_roc20": -3,
+      "strong_down_roc63": -6,
+      "overextended_distance_pct": 15
+    },
+    "confidence": 0.5,
+    "data_timestamp": "1779283800000",
+    "alert_time": "1779307260548",
+    "next_step": "request_trade_plan_unapproved",
+    "metadata": {
+      "profile": "spy_trend_strength",
+      "note": "Trend strength alert only. Must be verified by Alpaca data. No execution authorization."
+    },
+    "raw_payload_hash": "94980f23d04391eb1994eb956f889ca6eed767ad98bd7f30200260dbb9f12438",
+    "ingested_at": "2026-05-20T20:02:08Z",
+    "trade_execution_allowed": false,
+    "blocked_by_default": true
+  }
+}
