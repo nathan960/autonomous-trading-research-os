@@ -1,0 +1,51 @@
+{
+  "event_type": "alert_intake",
+  "run_id": "tv_NEE_D_1779370200000_spy_strong_downtrend_start",
+  "generated_at": "2026-05-21T20:02:04Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "source": "tradingview",
+    "source_type": "tradingview",
+    "symbol": "NEE",
+    "exchange": "NYSE",
+    "interval": "D",
+    "asset_class": "us_equity",
+    "alert_id": "tv_NEE_D_1779370200000_spy_strong_downtrend_start",
+    "trigger_id": "TV_SPY_STRONG_DOWNTREND_START_V1",
+    "condition": "spy_strong_downtrend_start",
+    "observed_value": {
+      "close": 89.69,
+      "sma200": 84.6462,
+      "roc20": -6.8155844156,
+      "roc63": -2.7012367108,
+      "roc126": 5.9664461248,
+      "roc252": 20.5348743448,
+      "atr_pct": 0.0266628791,
+      "distance_from_sma200_pct": 5.9586845009,
+      "trend_pass": true,
+      "momentum_pass": true,
+      "strong_uptrend": false,
+      "strong_downtrend": true,
+      "overextended_uptrend": false
+    },
+    "threshold": {
+      "strong_up_roc20": 3,
+      "strong_up_roc63": 6,
+      "strong_down_roc20": -3,
+      "strong_down_roc63": -6,
+      "overextended_distance_pct": 15
+    },
+    "confidence": 0.5,
+    "data_timestamp": "1779370200000",
+    "alert_time": "1779393660160",
+    "next_step": "request_trade_plan_unapproved",
+    "metadata": {
+      "profile": "spy_trend_strength",
+      "note": "Trend strength alert only. Must be verified by Alpaca data. No execution authorization."
+    },
+    "raw_payload_hash": "65a6367dd4ee0c9a057f71fc75b8604c9322189d8043a16145c003249b1d7760",
+    "ingested_at": "2026-05-21T20:02:04Z",
+    "trade_execution_allowed": false,
+    "blocked_by_default": true
+  }
+}
