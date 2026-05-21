@@ -1,0 +1,51 @@
+{
+  "event_type": "alert_intake",
+  "run_id": "tv_WMT_D_1779370200000_spy_strong_downtrend_start",
+  "generated_at": "2026-05-21T20:01:33Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "source": "tradingview",
+    "source_type": "tradingview",
+    "symbol": "WMT",
+    "exchange": "NASDAQ",
+    "interval": "D",
+    "asset_class": "us_equity",
+    "alert_id": "tv_WMT_D_1779370200000_spy_strong_downtrend_start",
+    "trigger_id": "TV_SPY_STRONG_DOWNTREND_START_V1",
+    "condition": "spy_strong_downtrend_start",
+    "observed_value": {
+      "close": 121.34,
+      "sma200": 114.6976,
+      "roc20": -8.096644702,
+      "roc63": -1.3415724856,
+      "roc126": 19.6764966959,
+      "roc252": 24.0695296524,
+      "atr_pct": 0.0259266482,
+      "distance_from_sma200_pct": 5.7912284128,
+      "trend_pass": true,
+      "momentum_pass": true,
+      "strong_uptrend": false,
+      "strong_downtrend": true,
+      "overextended_uptrend": false
+    },
+    "threshold": {
+      "strong_up_roc20": 3,
+      "strong_up_roc63": 6,
+      "strong_down_roc20": -3,
+      "strong_down_roc63": -6,
+      "overextended_distance_pct": 15
+    },
+    "confidence": 0.5,
+    "data_timestamp": "1779370200000",
+    "alert_time": "1779393660095",
+    "next_step": "request_trade_plan_unapproved",
+    "metadata": {
+      "profile": "spy_trend_strength",
+      "note": "Trend strength alert only. Must be verified by Alpaca data. No execution authorization."
+    },
+    "raw_payload_hash": "464d4a4265c03ab2b65057d33136b4c0f18fb6e23a07d3a90c68b194b62cdb1c",
+    "ingested_at": "2026-05-21T20:01:33Z",
+    "trade_execution_allowed": false,
+    "blocked_by_default": true
+  }
+}
