@@ -3458,6 +3458,7 @@ Every trigger scan records fired, skipped, and selected signals here.
 
 ```json
 {
+<<<<<<< Updated upstream
   "alert_id": "tv_WMT_D_1779370200000_spy_strong_downtrend_start",
   "blocked_by_default": true,
   "ingested_at": "2026-05-21T20:01:33Z",
@@ -3465,6 +3466,15 @@ Every trigger scan records fired, skipped, and selected signals here.
   "raw_payload_hash": "464d4a4265c03ab2b65057d33136b4c0f18fb6e23a07d3a90c68b194b62cdb1c",
   "source": "tradingview",
   "symbol": "WMT",
+=======
+  "alert_id": "tv_NEE_D_1779370200000_spy_strong_downtrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-21T20:02:04Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "65a6367dd4ee0c9a057f71fc75b8604c9322189d8043a16145c003249b1d7760",
+  "source": "tradingview",
+  "symbol": "NEE",
+>>>>>>> Stashed changes
   "trade_execution_allowed": false
 }
 ```
