@@ -1,10 +1,8 @@
 {
-  "all_gates_pass": false,
+  "all_gates_pass": true,
   "dry_run": true,
-  "execution_report_hash": "1f7b240b49d96ff200bdad84c6c6c1664d4b2a0e4cdf4b9c5f088f7dd957bc86",
-  "failed_gates": [
-    "QUOTE_FRESHNESS"
-  ],
+  "execution_report_hash": "e5c3785cc6ab9a5561f59391e32f04e6ae9d359aa29e6429a8845bf4d78830d1",
+  "failed_gates": [],
   "gate_results": [
     {
       "detail": null,
@@ -32,7 +30,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-05-20T22:15:19Z",
+      "detail": null,
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -67,9 +65,9 @@
       "passes": true
     },
     {
-      "detail": "stale quotes (>90.0min): ['JNJ(135min)']",
+      "detail": null,
       "gate_id": "QUOTE_FRESHNESS",
-      "passes": false
+      "passes": true
     },
     {
       "detail": null,
@@ -97,24 +95,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-05-20T22:15:23Z",
+  "generated_at": "2026-05-21T17:34:34Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260520T221523-JNJ-BUY",
+      "client_order_id": "TOS-20260521T173434-EQIX-BUY",
       "execution_ready": true,
-      "limit_price": 229.27,
+      "limit_price": 1074.32,
       "notional": 25.0,
       "order_type": "limit",
       "side": "buy",
-      "symbol": "JNJ",
+      "symbol": "EQIX",
       "target_weight": 0.12,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260520T221523-26202569",
-  "run_id": "execution-20260520T221523-122ec062",
-  "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "cb72b95e5504ce0eab327e8d7a8c0f5c6daf73f0e807c49dd2286937f03d4580"
+  "plan_id": "trade_plan-20260521T173434-a21e2578",
+  "run_id": "execution-20260521T173434-bc0ad1a2",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "c8779fae43e9ba3e8e35d0cbb6f59956addfecbd3a8e50799b85aa1d63712e9b"
 }
