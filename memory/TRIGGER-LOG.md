@@ -3453,3 +3453,18 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "1fca9b0a8ac26141e9b5e02b80101637e43f23c6fdacb5c067f0b8944e5f55c7"
 }
 ```
+
+## External alert ingested
+
+```json
+{
+  "alert_id": "tv_WMT_D_1779370200000_spy_strong_downtrend_start",
+  "blocked_by_default": true,
+  "ingested_at": "2026-05-21T20:01:33Z",
+  "next_step": "request_trade_plan_unapproved",
+  "raw_payload_hash": "464d4a4265c03ab2b65057d33136b4c0f18fb6e23a07d3a90c68b194b62cdb1c",
+  "source": "tradingview",
+  "symbol": "WMT",
+  "trade_execution_allowed": false
+}
+```
