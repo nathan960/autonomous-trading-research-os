@@ -3478,3 +3478,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trade_execution_allowed": false
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.5822784810126582,
+  "breadth_ok": true,
+  "candidates_count": 20,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-05-21T22:05:33Z",
+  "selected": [
+    "GOOGL",
+    "CSCO",
+    "SLB",
+    "AVGO",
+    "MS",
+    "XOM",
+    "MRK",
+    "JNJ",
+    "AMZN",
+    "PLD"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.09521043333333333,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "53c731c07cc34c3e6c82157c9d11c94d46bfbd0b46ddf01e7fe0f46cc5369150"
+}
+```
