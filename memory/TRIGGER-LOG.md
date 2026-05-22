@@ -3557,3 +3557,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trade_execution_allowed": false
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6075949367088608,
+  "breadth_ok": true,
+  "candidates_count": 12,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-05-22T21:51:48Z",
+  "selected": [
+    "CAT",
+    "CSCO",
+    "AVGO",
+    "MRK",
+    "COP",
+    "UNH",
+    "WMT",
+    "PM",
+    "LMT",
+    "O"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.13645931666666666,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "8677d96ffb10dae6c4c90bd2c35b6a8c6eaee5dd3933ce3b031f71c0bafebead"
+}
+```
