@@ -1,6 +1,6 @@
 {
   "blocking_issues": [],
-  "buying_power": 199351.97,
+  "buying_power": 199352.04,
   "cash": 99552.75,
   "churn_state": {
     "daily_total_limit_reached": false,
@@ -22,11 +22,11 @@
     },
     {
       "avg_entry_price": "230.135969",
-      "current_price": "234.35",
-      "market_value": "76.373329",
+      "current_price": "234.34",
+      "market_value": "76.37007",
       "qty": "0.325894297",
       "symbol": "JNJ",
-      "unrealized_pl": "1.373329"
+      "unrealized_pl": "1.37007"
     },
     {
       "avg_entry_price": "218.808",
@@ -38,11 +38,11 @@
     },
     {
       "avg_entry_price": "132.374926",
-      "current_price": "120.07",
-      "market_value": "45.352244",
+      "current_price": "120.27",
+      "market_value": "45.427787",
       "qty": "0.377715036",
       "symbol": "WMT",
-      "unrealized_pl": "-4.647756"
+      "unrealized_pl": "-4.572213"
     }
   ],
   "data_quality_status": "ATTENTION_REQUIRED",
@@ -50,14 +50,14 @@
   "failed_gates": [
     "QUOTE_FRESHNESS"
   ],
-  "generated_at": "2026-05-22T22:16:17Z",
+  "generated_at": "2026-05-25T22:16:04Z",
   "last_alert_count": 12,
   "last_route_count": 14,
-  "latest_account_equity": 99799.22,
-  "latest_plan_id": "trade_plan-20260522T215148-d536c070",
+  "latest_account_equity": 99799.29,
+  "latest_plan_id": "trade_plan-20260525T215050-9fe086a0",
   "lineage_status": {
     "complete_count": 0,
-    "generated_at": "2026-05-22T22:08:26Z",
+    "generated_at": "2026-05-25T22:09:18Z",
     "lineage_count": 14,
     "partial_count": 14
   },
@@ -78,7 +78,7 @@
     "warnings": []
   },
   "outcome_summary": {
-    "avg_current_return_pct": -0.00951,
+    "avg_current_return_pct": -0.009303,
     "outcomes_count": 14,
     "source_integrity_status": "ok",
     "tracked_symbols": [
@@ -116,21 +116,21 @@
     "drawdown": -3.9e-05,
     "drawdown_blocked": false,
     "drawdown_warn": false,
-    "latest_equity": 99799.22,
+    "latest_equity": 99799.29,
     "paused": false,
     "peak_equity": 99803.14,
     "stale": false,
-    "updated_at": "2026-05-22T21:51:45Z"
+    "updated_at": "2026-05-25T21:50:48Z"
   },
   "safe_for_manual_paper_execution": false,
   "safe_for_research_cycle": true,
   "safe_for_scheduled_paper_execution": false,
   "schema_version": "0.1.0",
   "source_integrity_status": "ok",
-  "status_hash": "fcc23dad851bfdf5605b57b33773d29bc04d695e312f29be4c9d367a2f3c4d47",
+  "status_hash": "06b99013102c564685ec99966fe83522e35c09a91493f833e36a11b397f81c9d",
   "trade_plan_approved_for_execution": false,
   "trigger_performance_summary": {
-    "avg_current_return_pct": -0.00951,
+    "avg_current_return_pct": -0.009303,
     "avg_slippage_pct": -0.000247,
     "days": 7,
     "operational_issues": [
