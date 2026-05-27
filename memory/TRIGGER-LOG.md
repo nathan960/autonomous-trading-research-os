@@ -3774,3 +3774,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "57b4dac8d3a1ab8c462a8db4820c0bb95149889ac1ac4c77249e9f35c3854e6a"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.5949367088607594,
+  "breadth_ok": true,
+  "candidates_count": 14,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-05-27T22:22:28Z",
+  "selected": [
+    "FCX",
+    "GS",
+    "MS",
+    "AAPL",
+    "COP",
+    "PLD",
+    "CVX",
+    "TSLA",
+    "SBUX",
+    "AEP"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.09195906666666667,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "48fd9f7e527dd26d8409e0ebcf6c2eb99833b1772f00ae65e703f0788f018268"
+}
+```
