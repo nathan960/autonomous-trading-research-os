@@ -1,5 +1,5 @@
 {
-  "account_data_hash": "79043382243c7bbd256550971da10fcccddd14c2978b59f0e143f2bb7f90c656",
+  "account_data_hash": "c39d263c319a17a4b93910d187d054f1d71c7bb3c116a65c93527970259ba1b5",
   "bar_counts": {
     "AAPL": 288,
     "ABBV": 288,
@@ -84,22 +84,22 @@
     "XOM": 288
   },
   "data_feed": "iex",
-  "data_hash": "500aaad4a4eef157d81b6cb5d3216063dfb211518b0f5f0a55329643c73f1994",
-  "generated_at": "2026-05-28T18:20:09Z",
+  "data_hash": "72c0571c9a72415b8a1ac54f110438089cfd83d564ad2a49d826867851167d38",
+  "generated_at": "2026-05-28T18:23:48Z",
   "insufficient_bars": {},
   "issues": [
     "wide_spreads"
   ],
-  "market_data_hash": "09c1072cb4ff1336aab7c7362a6a6a0169cfccb69d473e16c467c710f2fad69c",
+  "market_data_hash": "6223b7a957c2ae4fc7aa9422b6194a8570bca56df7d11bddcd52b9d6aa1bab1b",
   "missing_bars": [],
   "missing_quotes": [],
   "not_tradable": [],
   "open_order_count": 0,
   "position_count": 4,
-  "run_id": "refresh_data-20260528T182005",
+  "run_id": "refresh_data-20260528T182345",
   "schema_version": "0.1.0",
-  "snapshot_age_minutes": 0.0649793,
-  "snapshot_fetched_at": "2026-05-28T18:20:06Z",
+  "snapshot_age_minutes": 0.04393966666666667,
+  "snapshot_fetched_at": "2026-05-28T18:23:46Z",
   "snapshot_source": "alpaca_paper",
   "source_labels": {
     "assets": "alpaca_trading_client.get_all_assets",
@@ -112,24 +112,16 @@
   "symbols_expected": 81,
   "symbols_with_bars": 81,
   "wide_spreads": {
-    "ADBE": 0.047372742200328374,
-    "AMD": 0.04925197835839572,
-    "AXP": 0.07947502734232599,
-    "BLK": 0.05134253359723084,
-    "CAT": 0.07367445973115508,
-    "CL": 0.05087719298245621,
-    "DE": 0.08349445041174372,
-    "GS": 0.07809523809523809,
-    "HON": 0.04203895087907114,
-    "ISRG": 0.04099362019818109,
-    "LIN": 0.039077297286520256,
-    "LMT": 0.02394106813996317,
-    "MSFT": 0.023167560729930394,
-    "RTX": 0.04849701516192075,
-    "SHW": 0.04603323925995594,
-    "SRE": 0.04938956714761364,
-    "UNH": 0.034063512637718694,
-    "UNP": 0.04919312857886514,
-    "WELL": 0.060323383084577166
+    "ABBV": 0.03533303925893247,
+    "AMD": 0.05240836691613894,
+    "CAT": 0.05620059158517456,
+    "CVX": 0.05540066088393235,
+    "GS": 0.04419999999999997,
+    "JNJ": 0.10259569574503036,
+    "LOW": 0.058243933882775475,
+    "PLD": 0.04802131392553114,
+    "SBUX": 0.0528580783983535,
+    "SHW": 0.03898577856603279,
+    "UNP": 0.05035837635087449
   }
 }
