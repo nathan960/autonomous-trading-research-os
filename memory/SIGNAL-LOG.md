@@ -25599,3 +25599,41 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
 - EQIX BUY cid=TOS-20260514T172335-EQIX-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
 
 ---
+
+## scan_triggers candidates  (2026-05-28T18:20:11Z)
+
+```
+  GOOGL     score=0.7416  atr_pct=0.0235  [SELECTED]
+  CSCO      score=0.7155  atr_pct=0.0274  [SELECTED]
+  FCX       score=0.6277  atr_pct=0.0409  [SELECTED]
+  SLB       score=0.5884  atr_pct=0.0292  [SELECTED]
+  AVGO      score=0.4786  atr_pct=0.0342  [SELECTED]
+  MS        score=0.4113  atr_pct=0.0219  [SELECTED]
+  NVDA      score=0.3785  atr_pct=0.0323  [candidate]
+  MRK       score=0.3676  atr_pct=0.0237  [SELECTED]
+  XOM       score=0.3458  atr_pct=0.0291  [SELECTED]
+  AAPL      score=0.3383  atr_pct=0.0183  [candidate]
+  COP       score=0.3252  atr_pct=0.0295  [candidate]
+  EQIX      score=0.3227  atr_pct=0.0173  [SELECTED]
+  JNJ       score=0.3157  atr_pct=0.0168  [SELECTED]
+  LLY       score=0.3063  atr_pct=0.0271  [candidate]
+  CVX       score=0.2736  atr_pct=0.0254  [candidate]
+  PLD       score=0.2658  atr_pct=0.0164  [candidate]
+  AMZN      score=0.2626  atr_pct=0.0241  [candidate]
+  EOG       score=0.2378  atr_pct=0.0275  [candidate]
+  GE        score=0.2102  atr_pct=0.0299  [candidate]
+  BA        score=0.2080  atr_pct=0.0298  [candidate]
+  SBUX      score=0.1893  atr_pct=0.0246  [candidate]
+  WMT       score=0.1743  atr_pct=0.0249  [candidate]
+  NEE       score=0.1686  atr_pct=0.0248  [candidate]
+  AEP       score=0.1447  atr_pct=0.0183  [candidate]
+  TSLA      score=0.1368  atr_pct=0.0342  [candidate]
+  KO        score=0.1154  atr_pct=0.0156  [candidate]
+  UPS       score=0.1126  atr_pct=0.0251  [candidate]
+  AMGN      score=0.1063  atr_pct=0.0212  [candidate]
+  O         score=0.1023  atr_pct=0.0138  [candidate]
+  PM        score=0.0966  atr_pct=0.0256  [candidate]
+  APD       score=0.0727  atr_pct=0.0202  [candidate]
+  DUK       score=0.0412  atr_pct=0.0148  [candidate]
+  SO        score=0.0380  atr_pct=0.0152  [candidate]
+```
