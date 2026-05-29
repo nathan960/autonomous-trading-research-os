@@ -2927,3 +2927,48 @@ based on this report alone. Any experiment requires a candidate PR with:
 - Hypothesis, supporting evidence, success criteria, and rollback plan.
 
 ---
+## Outcome Observations — 2026-05-29T22:37:47Z
+
+*From outcome_tracker run `outcome_tracker-20260529T223747-e7a526ed`*
+
+**Current unrealized returns (intraday — no strategy conclusions yet):**
+- WELL entry: fill=$218.808 current=$205.5 return=-6.082%
+- JNJ entry: fill=$230.248 current=$225.4842 return=-2.069%
+- EQIX entry: fill=$1084.37 current=$1066.54 return=-1.644%
+- EQIX entry: fill=$1079.5 current=$1066.54 return=-1.201%
+- EQIX exit: fill=$1078.442 current=$1066.54 return=-1.104%
+- EQIX entry: fill=$1078.41 current=$1066.54 return=-1.101%
+- JNJ entry: fill=$230.116 current=$225.4842 return=-2.013%
+- WMT entry: fill=$132.276 current=$115.84 return=-12.425%
+- WMT entry: fill=$132.474 current=$115.84 return=-12.556%
+- EQIX entry: fill=$1076.89 current=$1066.54 return=-0.961%
+- EQIX entry: fill=$1076.82 current=$1066.54 return=-0.955%
+- JNJ entry: fill=$230.044 current=$225.4842 return=-1.982%
+- EQIX exit: fill=$1076.718 current=$1066.54 return=-0.945%
+- EQIX entry: fill=$1076.542 current=$1066.54 return=-0.929%
+
+*Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
+
+---
+## Trigger Performance Observations — 2026-05-29
+
+*From trigger_performance run `trigger_performance-20260529T223747-e7a526ed`*
+*Period: 2026-05-23 to 2026-05-29 (7 days)*
+
+**Operational issues:**
+- [ ] Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 61% of candidates — review spread threshold or data freshness.
+
+**Observations (research only — no strategy conclusions):**
+- Spread gate: 48/79 symbols blocked (61%). Avg spread (blocked): 9.976%
+- Trend gate (200 DMA): 35/79 symbols below 200 DMA (44% block rate).
+- Fill count this period: 14. Need 6 more fills before P/L analysis is meaningful.
+- Average current return across 14 tracked outcome(s): -3.283%. Window pending — no conclusions yet.
+- Lineage: Lineage snapshot: 14 records (0 complete, 14 partial). 48 trigger fill associations recovered. 14 record(s) have partial lineage — save trade plans to history/trade_plans/ to improve completeness.
+- Fills linked to triggers (via lineage): ATR_SIZING_V1=8, LIQUIDITY_GATE_V1=8, MOMENTUM_BLEND_6M_12M_V1=8, SPREAD_GATE_V1=8, STOCK_TREND_200DMA_V1=8.
+- IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest.
+
+**Reminder:** Do not modify strategy.json, risk_limits.json, or trigger_registry.json
+based on this report alone. Any experiment requires a candidate PR with:
+- Hypothesis, supporting evidence, success criteria, and rollback plan.
+
+---
