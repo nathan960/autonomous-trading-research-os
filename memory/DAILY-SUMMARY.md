@@ -3593,3 +3593,65 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-05-29
+
+**Generated:** 2026-05-29T22:18:30Z  **Run ID:** daily_summary-2026-05-29
+
+### Account & Risk
+- Equity: $99,792.28 | Cash: $99,552.75 | Buying power: $199,345.03
+- Peak: $99,803.14 | Drawdown: -0.01% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $98.81 | $-1.03 (-1.03%) |
+| JNJ | long | 0.325894297 | $73.48 | $-1.52 (-2.02%) |
+| WELL | long | 0.11425542 | $23.48 | $-1.52 (-6.08%) |
+| WMT | long | 0.377715036 | $43.75 | $-6.25 (-12.49%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+12.05%, breadth=55.70%)
+- Candidates: 13 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-05-29T22:18:30Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260529T221830-a6bd11cf`
+- Generated: 2026-05-29T22:18:30Z | Expires: 2026-05-30T04:18:30Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - EQIX BUY $25.00 @ $1,067.71 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260529T221830-792cd51c`
+- All gates pass: NO
+- Failed gates: QUOTE_FRESHNESS
+
+### Dry Runs Today (1)
+- Pass: 0 | Fail: 1
+  - QUOTE_FRESHNESS: 1x
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260529T221829-8b0b36ee
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
