@@ -242,3 +242,21 @@
 - 57 wide-spread symbols (['ABT', 'ADBE', 'AEP', 'AMD', 'AMGN', 'AMT', 'APD', 'BA', 'CAT', 'CL', 'CMCSA', 'COP', 'COST', 'CRM', 'DE', 'DIS', 'DUK', 'ECL', 'EQIX', 'FCX', 'GE', 'GS', 'HD', 'INTU', 'JNJ', 'KO', 'LIN', 'LLY', 'LMT', 'LOW', 'MA', 'MCD', 'META', 'MRK', 'MSFT', 'NEE', 'NFLX', 'NKE', 'NVDA', 'O', 'ORCL', 'PEP', 'PG', 'PLD', 'RTX', 'SBUX', 'SHW', 'SLB', 'SO', 'SRE', 'TMO', 'UNH', 'UNP', 'UPS', 'V', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
 
 ---
+## System Status — 2026-06-02T23:07:14Z
+
+**Overall:** RED  | Research: NO  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,789.55  drawdown=-0.01%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260602T225104-87aaea10  approved=False
+**Dry-run gates:** FAIL  failed=['QUOTE_FRESHNESS', 'RISK_LIMITS_RESPECTED']
+
+**Blocking Issues:**
+- Execution gates: hard failures: ['RISK_LIMITS_RESPECTED']
+
+**Warnings:**
+- 53 wide-spread symbols (['ABBV', 'ABT', 'ADBE', 'AMD', 'AMGN', 'AMT', 'AMZN', 'APD', 'AXP', 'BA', 'BAC', 'BLK', 'CAT', 'CL', 'COST', 'CVX', 'DE', 'DIS', 'DUK', 'ECL', 'EQIX', 'GOOGL', 'HON', 'INTU', 'ISRG', 'JNJ', 'LIN', 'LOW', 'MDLZ', 'META', 'MRK', 'MS', 'NEE', 'NFLX', 'NKE', 'NVDA', 'O', 'ORCL', 'PEP', 'PG', 'PLD', 'PM', 'SHW', 'SLB', 'SO', 'SRE', 'TMO', 'UNP', 'UPS', 'V', 'WELL', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
+
+**Required Operator Actions:**
+- [ ] Fix hard gate failures before any execution: ['RISK_LIMITS_RESPECTED']
+
+---
