@@ -1,6 +1,12 @@
 {
-  "data_hash": "5895b0f4b4cbf3d218fefa4fbf735b2e6b33d06b99ab4241269ae228493e322a",
-  "fetched_at": "2026-06-02T18:53:04Z",
+  "data_hash": "62c179941f684196705290ec8ca8406a577ec9c110fbe7116cccc1bca5187796",
+  "drawdown": -0.000128,
+  "dry_run": false,
+  "equity": 99790.33,
+  "generated_at": "2026-06-02T18:53:09Z",
+  "open_order_count": 0,
+  "orders_summary": [],
+  "peak_equity": 99803.14,
   "position_count": 4,
   "positions": [
     {
@@ -78,24 +84,25 @@
       "asset_marginable": true,
       "avg_entry_price": "132.374926",
       "avg_entry_swap_rate": null,
-      "change_today": "-0.01104",
+      "change_today": "-0.01126",
       "cost_basis": "50",
-      "current_price": "113.335",
+      "current_price": "113.3101",
       "exchange": "NASDAQ",
       "lastday_price": "114.6",
-      "market_value": "42.808334",
+      "market_value": "42.798929",
       "qty": "0.377715036",
       "qty_available": "0.377715036",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "-0.477809",
-      "unrealized_intraday_plpc": "-0.01104",
-      "unrealized_pl": "-7.191666",
-      "unrealized_plpc": "-0.14383",
+      "unrealized_intraday_pl": "-0.487214",
+      "unrealized_intraday_plpc": "-0.01126",
+      "unrealized_pl": "-7.201071",
+      "unrealized_plpc": "-0.14402",
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260602T185308-5bc55794",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }
