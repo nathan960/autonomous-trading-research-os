@@ -4071,3 +4071,34 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "f0a7ea62c7579d0096e4ff8e97c4abd29005a29bf3e47d79252e6e0077f874c6"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.5822784810126582,
+  "breadth_ok": true,
+  "candidates_count": 10,
+  "data_stale_gate_passes": true,
+  "excluded_count": 70,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-06-04T22:11:32Z",
+  "selected": [
+    "AMD",
+    "SLB",
+    "GS",
+    "MS",
+    "COP",
+    "UNH",
+    "AEP",
+    "UPS",
+    "ABBV"
+  ],
+  "selected_count": 9,
+  "snapshot_age_minutes": 0.08598308333333333,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "98f0f772fd4e8ea1fdafdf036ba2a9de9fd8365514c4dfe7e374e144e225044d"
+}
+```
