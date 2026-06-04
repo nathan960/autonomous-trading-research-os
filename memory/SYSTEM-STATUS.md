@@ -278,3 +278,16 @@
 - [ ] Fix hard gate failures before any execution: ['RISK_LIMITS_RESPECTED']
 
 ---
+## System Status — 2026-06-04T22:42:00Z
+
+**Overall:** YELLOW  | Research: YES  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,795.75  drawdown=-0.01%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260604T221132-a5501470  approved=False
+**Dry-run gates:** FAIL  failed=['QUOTE_FRESHNESS']
+
+**Warnings:**
+- Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']
+- 50 wide-spread symbols (['AAPL', 'ABT', 'ADBE', 'AMGN', 'AMZN', 'APD', 'AVGO', 'BA', 'BKNG', 'CAT', 'CL', 'CRM', 'CSCO', 'CVX', 'DE', 'DUK', 'ECL', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'HD', 'INTU', 'JNJ', 'JPM', 'KO', 'LIN', 'LLY', 'LMT', 'LOW', 'MA', 'MCD', 'MDLZ', 'META', 'MRK', 'NEE', 'NKE', 'NVDA', 'ORCL', 'PLD', 'SBUX', 'SO', 'SRE', 'TMUS', 'TSLA', 'UNP', 'WELL', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
+
+---
