@@ -3,30 +3,30 @@
     "account_blocked": false,
     "account_number": "PA330312PCJ0",
     "accrued_fees": "0",
-    "buying_power": "398695.14",
+    "buying_power": "398695.39",
     "cash": "99552.75",
     "created_at": "2026-05-06T15:27:38Z",
     "crypto_status": "ACTIVE",
     "currency": "USD",
     "daytrade_count": 0,
-    "daytrading_buying_power": "398695.14",
-    "equity": "99794.82",
+    "daytrading_buying_power": "398695.39",
+    "equity": "99794.94",
     "id": "82b03822-7e50-422d-a0df-97d30dc71964",
-    "initial_margin": "121.03",
+    "initial_margin": "121.1",
     "last_equity": "99792.24174006112",
     "last_maintenance_margin": "71.85",
-    "long_market_value": "242.07",
-    "maintenance_margin": "72.62",
+    "long_market_value": "242.19",
+    "maintenance_margin": "72.66",
     "multiplier": "4",
-    "non_marginable_buying_power": "99673.78",
+    "non_marginable_buying_power": "99673.84",
     "options_approved_level": 3,
-    "options_buying_power": "99673.78",
+    "options_buying_power": "99673.84",
     "options_trading_level": 3,
     "pattern_day_trader": false,
     "pending_transfer_in": null,
     "pending_transfer_out": null,
-    "portfolio_value": "99794.82",
-    "regt_buying_power": "199347.57",
+    "portfolio_value": "99794.94",
+    "regt_buying_power": "199347.69",
     "short_market_value": "0",
     "shorting_enabled": true,
     "sma": "99792.31",
@@ -257542,12 +257542,12 @@
     "is_open": true,
     "next_close": "2026-06-04T20:00:00Z",
     "next_open": "2026-06-05T13:30:00Z",
-    "timestamp": "2026-06-04T17:49:11Z"
+    "timestamp": "2026-06-04T17:49:47Z"
   },
   "data_feed": "iex",
-  "data_hash": "3c51b0cf3025abc81c77d4545677e73749cabaf492039c4d0164757a52202b86",
+  "data_hash": "588eac297c67ee42a6b620c66aae87cc97587f774bf4d336314eb0591ce4ba1a",
   "data_source": "alpaca_paper",
-  "generated_at": "2026-06-04T17:49:11Z",
+  "generated_at": "2026-06-04T17:49:47Z",
   "latest_bars": {
     "AAPL": {
       "close": 311.325,
@@ -258449,21 +258449,21 @@
       "asset_marginable": true,
       "avg_entry_price": "1077.631196",
       "avg_entry_swap_rate": null,
-      "change_today": "0.00699",
+      "change_today": "0.00776",
       "cost_basis": "99.842227",
-      "current_price": "1084.53",
+      "current_price": "1085.36",
       "exchange": "NASDAQ",
       "lastday_price": "1077",
-      "market_value": "100.4814",
+      "market_value": "100.558299",
       "qty": "0.092649719",
       "qty_available": "0.092649719",
       "side": "long",
       "swap_rate": null,
       "symbol": "EQIX",
-      "unrealized_intraday_pl": "0.697653",
-      "unrealized_intraday_plpc": "0.00699",
-      "unrealized_pl": "0.639173",
-      "unrealized_plpc": "0.0064",
+      "unrealized_intraday_pl": "0.774552",
+      "unrealized_intraday_plpc": "0.00776",
+      "unrealized_pl": "0.716072",
+      "unrealized_plpc": "0.00717",
       "usd": null
     },
     {
@@ -258472,21 +258472,21 @@
       "asset_marginable": true,
       "avg_entry_price": "230.135969",
       "avg_entry_swap_rate": null,
-      "change_today": "0.02137",
+      "change_today": "0.0215",
       "cost_basis": "75",
-      "current_price": "228.01",
+      "current_price": "228.04",
       "exchange": "NYSE",
       "lastday_price": "223.24",
-      "market_value": "74.307159",
+      "market_value": "74.316935",
       "qty": "0.325894297",
       "qty_available": "0.325894297",
       "side": "long",
       "swap_rate": null,
       "symbol": "JNJ",
-      "unrealized_intraday_pl": "1.554516",
-      "unrealized_intraday_plpc": "0.02137",
-      "unrealized_pl": "-0.692841",
-      "unrealized_plpc": "-0.00924",
+      "unrealized_intraday_pl": "1.564292",
+      "unrealized_intraday_plpc": "0.0215",
+      "unrealized_pl": "-0.683065",
+      "unrealized_plpc": "-0.00911",
       "usd": null
     },
     {
@@ -258495,21 +258495,21 @@
       "asset_marginable": true,
       "avg_entry_price": "218.808",
       "avg_entry_swap_rate": null,
-      "change_today": "-0.00436",
+      "change_today": "-0.00351",
       "cost_basis": "25",
-      "current_price": "198.72",
+      "current_price": "198.89",
       "exchange": "NYSE",
       "lastday_price": "199.59",
-      "market_value": "22.704837",
+      "market_value": "22.72426",
       "qty": "0.11425542",
       "qty_available": "0.11425542",
       "side": "long",
       "swap_rate": null,
       "symbol": "WELL",
-      "unrealized_intraday_pl": "-0.099402",
-      "unrealized_intraday_plpc": "-0.00436",
-      "unrealized_pl": "-2.295163",
-      "unrealized_plpc": "-0.09181",
+      "unrealized_intraday_pl": "-0.079979",
+      "unrealized_intraday_plpc": "-0.00351",
+      "unrealized_pl": "-2.27574",
+      "unrealized_plpc": "-0.09103",
       "usd": null
     },
     {
@@ -258518,43 +258518,43 @@
       "asset_marginable": true,
       "avg_entry_price": "132.374926",
       "avg_entry_swap_rate": null,
-      "change_today": "0.00958",
+      "change_today": "0.01001",
       "cost_basis": "50",
-      "current_price": "118.01",
+      "current_price": "118.06",
       "exchange": "NASDAQ",
       "lastday_price": "116.89",
-      "market_value": "44.574151",
+      "market_value": "44.593037",
       "qty": "0.377715036",
       "qty_available": "0.377715036",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "0.42304",
-      "unrealized_intraday_plpc": "0.00958",
-      "unrealized_pl": "-5.425849",
-      "unrealized_plpc": "-0.10852",
+      "unrealized_intraday_pl": "0.441926",
+      "unrealized_intraday_plpc": "0.01001",
+      "unrealized_pl": "-5.406963",
+      "unrealized_plpc": "-0.10814",
       "usd": null
     }
   ],
   "quotes": {
     "AAPL": {
       "ask_exchange": "V",
-      "ask_price": 311.44,
-      "ask_size": 40.0,
+      "ask_price": 311.26,
+      "ask_size": 120.0,
       "bid_exchange": "V",
-      "bid_price": 311.29,
+      "bid_price": 311.22,
       "bid_size": 80.0,
       "conditions": [
         "R"
       ],
       "symbol": "AAPL",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "ABBV": {
       "ask_exchange": "V",
-      "ask_price": 228.0,
-      "ask_size": 1000.0,
+      "ask_price": 223.78,
+      "ask_size": 100.0,
       "bid_exchange": "V",
       "bid_price": 209.95,
       "bid_size": 100.0,
@@ -258563,21 +258563,21 @@
       ],
       "symbol": "ABBV",
       "tape": "A",
-      "timestamp": "2026-06-04T17:48:57Z"
+      "timestamp": "2026-06-04T17:49:27Z"
     },
     "ABT": {
       "ask_exchange": "V",
       "ask_price": 90.15,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 90.11,
+      "bid_price": 90.1,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "ABT",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:00Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "ADBE": {
       "ask_exchange": "V",
@@ -258595,45 +258595,45 @@
     },
     "AEP": {
       "ask_exchange": "V",
-      "ask_price": 127.48,
+      "ask_price": 127.47,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 127.45,
-      "bid_size": 200.0,
+      "bid_price": 127.44,
+      "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "AEP",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "AMD": {
       "ask_exchange": "V",
       "ask_price": 528.0,
       "ask_size": 200.0,
       "bid_exchange": "V",
-      "bid_price": 520.0,
-      "bid_size": 100.0,
+      "bid_price": 515.0,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "AMD",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:44Z"
     },
     "AMGN": {
       "ask_exchange": "V",
-      "ask_price": 343.54,
-      "ask_size": 40.0,
+      "ask_price": 350.0,
+      "ask_size": 280.0,
       "bid_exchange": "V",
-      "bid_price": 325.75,
+      "bid_price": 343.04,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "AMGN",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:01Z"
+      "timestamp": "2026-06-04T17:49:42Z"
     },
     "AMT": {
       "ask_exchange": "V",
@@ -258647,21 +258647,21 @@
       ],
       "symbol": "AMT",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:09Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "AMZN": {
       "ask_exchange": "V",
-      "ask_price": 253.81,
+      "ask_price": 253.75,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 253.75,
-      "bid_size": 100.0,
+      "bid_price": 253.0,
+      "bid_size": 600.0,
       "conditions": [
         "R"
       ],
       "symbol": "AMZN",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "APD": {
       "ask_exchange": "V",
@@ -258675,25 +258675,25 @@
       ],
       "symbol": "APD",
       "tape": "A",
-      "timestamp": "2026-06-04T17:48:17Z"
+      "timestamp": "2026-06-04T17:49:31Z"
     },
     "AVGO": {
       "ask_exchange": "V",
-      "ask_price": 424.23,
+      "ask_price": 425.0,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 421.18,
-      "bid_size": 120.0,
+      "bid_price": 423.1,
+      "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "AVGO",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:48Z"
     },
     "AXP": {
       "ask_exchange": "V",
-      "ask_price": 311.97,
+      "ask_price": 311.98,
       "ask_size": 40.0,
       "bid_exchange": "V",
       "bid_price": 295.33,
@@ -258703,12 +258703,12 @@
       ],
       "symbol": "AXP",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "BA": {
       "ask_exchange": "V",
-      "ask_price": 217.89,
-      "ask_size": 200.0,
+      "ask_price": 217.97,
+      "ask_size": 100.0,
       "bid_exchange": "V",
       "bid_price": 217.31,
       "bid_size": 100.0,
@@ -258717,7 +258717,7 @@
       ],
       "symbol": "BA",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:47Z"
     },
     "BAC": {
       "ask_exchange": "V",
@@ -258725,13 +258725,13 @@
       "ask_size": 2300.0,
       "bid_exchange": "V",
       "bid_price": 53.83,
-      "bid_size": 2100.0,
+      "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "BAC",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "BIL": {
       "ask_exchange": "V",
@@ -258749,8 +258749,8 @@
     },
     "BKNG": {
       "ask_exchange": "V",
-      "ask_price": 167.15,
-      "ask_size": 10.0,
+      "ask_price": 167.24,
+      "ask_size": 20.0,
       "bid_exchange": "V",
       "bid_price": 167.0,
       "bid_size": 10.0,
@@ -258759,21 +258759,21 @@
       ],
       "symbol": "BKNG",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:50Z"
     },
     "BLK": {
       "ask_exchange": "V",
-      "ask_price": 1020.89,
+      "ask_price": 1076.49,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 1019.99,
+      "bid_price": 984.87,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "BLK",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:08Z"
+      "timestamp": "2026-06-04T17:49:48Z"
     },
     "CAT": {
       "ask_exchange": "V",
@@ -258787,11 +258787,11 @@
       ],
       "symbol": "CAT",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:34Z"
     },
     "CL": {
       "ask_exchange": "V",
-      "ask_price": 84.97,
+      "ask_price": 84.96,
       "ask_size": 300.0,
       "bid_exchange": "V",
       "bid_price": 81.22,
@@ -258801,35 +258801,35 @@
       ],
       "symbol": "CL",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "CMCSA": {
       "ask_exchange": "V",
-      "ask_price": 23.26,
-      "ask_size": 3600.0,
+      "ask_price": 23.27,
+      "ask_size": 2300.0,
       "bid_exchange": "V",
-      "bid_price": 23.25,
-      "bid_size": 7900.0,
+      "bid_price": 23.26,
+      "bid_size": 2400.0,
       "conditions": [
         "R"
       ],
       "symbol": "CMCSA",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:10Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "COP": {
       "ask_exchange": "V",
-      "ask_price": 119.02,
-      "ask_size": 100.0,
+      "ask_price": 118.91,
+      "ask_size": 300.0,
       "bid_exchange": "V",
-      "bid_price": 118.93,
-      "bid_size": 300.0,
+      "bid_price": 118.88,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "COP",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "COST": {
       "ask_exchange": "V",
@@ -258850,28 +258850,28 @@
       "ask_price": 192.0,
       "ask_size": 200.0,
       "bid_exchange": "V",
-      "bid_price": 180.0,
-      "bid_size": 300.0,
+      "bid_price": 189.83,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "CRM",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:48Z"
     },
     "CSCO": {
       "ask_exchange": "V",
-      "ask_price": 129.6,
-      "ask_size": 100.0,
+      "ask_price": 129.59,
+      "ask_size": 200.0,
       "bid_exchange": "V",
-      "bid_price": 129.57,
-      "bid_size": 100.0,
+      "bid_price": 129.54,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "CSCO",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "CVX": {
       "ask_exchange": "V",
@@ -258885,7 +258885,7 @@
       ],
       "symbol": "CVX",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:11Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "DE": {
       "ask_exchange": "V",
@@ -258899,35 +258899,35 @@
       ],
       "symbol": "DE",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:17Z"
     },
     "DIS": {
       "ask_exchange": "V",
-      "ask_price": 99.42,
+      "ask_price": 99.45,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 99.37,
+      "bid_price": 99.0,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "DIS",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:48Z"
     },
     "DUK": {
       "ask_exchange": "V",
-      "ask_price": 121.29,
+      "ask_price": 121.27,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 121.23,
+      "bid_price": 121.21,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "DUK",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:44Z"
     },
     "ECL": {
       "ask_exchange": "V",
@@ -258941,82 +258941,82 @@
       ],
       "symbol": "ECL",
       "tape": "A",
-      "timestamp": "2026-06-04T17:48:35Z"
+      "timestamp": "2026-06-04T17:49:43Z"
     },
     "EOG": {
       "ask_exchange": "V",
-      "ask_price": 140.6,
+      "ask_price": 148.49,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 140.54,
+      "bid_price": 132.28,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "EOG",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:40Z"
     },
     "EQIX": {
       "ask_exchange": "V",
       "ask_price": 1133.4,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 1061.78,
+      "bid_price": 1060.66,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "EQIX",
       "tape": "C",
-      "timestamp": "2026-06-04T17:48:41Z"
+      "timestamp": "2026-06-04T17:49:38Z"
     },
     "FCX": {
       "ask_exchange": "V",
-      "ask_price": 69.69,
-      "ask_size": 700.0,
+      "ask_price": 69.74,
+      "ask_size": 300.0,
       "bid_exchange": "V",
-      "bid_price": 66.51,
-      "bid_size": 100.0,
+      "bid_price": 69.72,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "FCX",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "GE": {
       "ask_exchange": "V",
       "ask_price": 327.4,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 326.78,
+      "bid_price": 326.92,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "GE",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "GOOGL": {
       "ask_exchange": "V",
-      "ask_price": 372.85,
+      "ask_price": 372.88,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 372.76,
-      "bid_size": 80.0,
+      "bid_price": 372.24,
+      "bid_size": 120.0,
       "conditions": [
         "R"
       ],
       "symbol": "GOOGL",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:50Z"
     },
     "GS": {
       "ask_exchange": "V",
-      "ask_price": 1089.67,
-      "ask_size": 40.0,
+      "ask_price": 1107.99,
+      "ask_size": 560.0,
       "bid_exchange": "V",
       "bid_price": 1040.0,
       "bid_size": 40.0,
@@ -259025,21 +259025,21 @@
       ],
       "symbol": "GS",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:45Z"
     },
     "HD": {
       "ask_exchange": "V",
-      "ask_price": 309.12,
+      "ask_price": 309.11,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 308.95,
-      "bid_size": 40.0,
+      "bid_price": 300.0,
+      "bid_size": 120.0,
       "conditions": [
         "R"
       ],
       "symbol": "HD",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:43Z"
     },
     "HON": {
       "ask_exchange": "V",
@@ -259053,21 +259053,21 @@
       ],
       "symbol": "HON",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:10Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "INTU": {
       "ask_exchange": "V",
-      "ask_price": 303.82,
+      "ask_price": 303.84,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 303.0,
-      "bid_size": 240.0,
+      "bid_price": 303.53,
+      "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "INTU",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:11Z"
+      "timestamp": "2026-06-04T17:49:47Z"
     },
     "ISRG": {
       "ask_exchange": "V",
@@ -259081,26 +259081,26 @@
       ],
       "symbol": "ISRG",
       "tape": "C",
-      "timestamp": "2026-06-04T17:48:49Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "JNJ": {
       "ask_exchange": "V",
-      "ask_price": 228.01,
+      "ask_price": 228.06,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 214.6,
+      "bid_price": 227.93,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "JNJ",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:11Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "JPM": {
       "ask_exchange": "V",
-      "ask_price": 312.8,
-      "ask_size": 120.0,
+      "ask_price": 310.27,
+      "ask_size": 40.0,
       "bid_exchange": "V",
       "bid_price": 303.41,
       "bid_size": 80.0,
@@ -259109,21 +259109,21 @@
       ],
       "symbol": "JPM",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "KO": {
       "ask_exchange": "V",
       "ask_price": 77.78,
-      "ask_size": 300.0,
+      "ask_size": 1100.0,
       "bid_exchange": "V",
-      "bid_price": 77.77,
-      "bid_size": 800.0,
+      "bid_price": 77.76,
+      "bid_size": 900.0,
       "conditions": [
         "R"
       ],
       "symbol": "KO",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:50Z"
     },
     "LIN": {
       "ask_exchange": "V",
@@ -259137,11 +259137,11 @@
       ],
       "symbol": "LIN",
       "tape": "C",
-      "timestamp": "2026-06-04T17:48:26Z"
+      "timestamp": "2026-06-04T17:49:39Z"
     },
     "LLY": {
       "ask_exchange": "V",
-      "ask_price": 1137.02,
+      "ask_price": 1134.71,
       "ask_size": 40.0,
       "bid_exchange": "V",
       "bid_price": 1101.5,
@@ -259151,7 +259151,7 @@
       ],
       "symbol": "LLY",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:08Z"
+      "timestamp": "2026-06-04T17:49:45Z"
     },
     "LMT": {
       "ask_exchange": "V",
@@ -259165,21 +259165,21 @@
       ],
       "symbol": "LMT",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:04Z"
+      "timestamp": "2026-06-04T17:49:46Z"
     },
     "LOW": {
       "ask_exchange": "V",
       "ask_price": 218.67,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 207.34,
+      "bid_price": 199.74,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "LOW",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:07Z"
+      "timestamp": "2026-06-04T17:49:39Z"
     },
     "MA": {
       "ask_exchange": "V",
@@ -259193,40 +259193,40 @@
       ],
       "symbol": "MA",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "MCD": {
       "ask_exchange": "V",
       "ask_price": 272.48,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 272.41,
+      "bid_price": 272.0,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "MCD",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:10Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "MDLZ": {
       "ask_exchange": "V",
-      "ask_price": 60.96,
-      "ask_size": 1100.0,
+      "ask_price": 60.95,
+      "ask_size": 200.0,
       "bid_exchange": "V",
       "bid_price": 60.94,
-      "bid_size": 900.0,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "MDLZ",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:11Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "META": {
       "ask_exchange": "V",
-      "ask_price": 629.24,
-      "ask_size": 120.0,
+      "ask_price": 629.65,
+      "ask_size": 40.0,
       "bid_exchange": "V",
       "bid_price": 620.0,
       "bid_size": 40.0,
@@ -259235,11 +259235,11 @@
       ],
       "symbol": "META",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:05Z"
+      "timestamp": "2026-06-04T17:49:48Z"
     },
     "MRK": {
       "ask_exchange": "V",
-      "ask_price": 119.19,
+      "ask_price": 119.2,
       "ask_size": 100.0,
       "bid_exchange": "V",
       "bid_price": 117.76,
@@ -259249,11 +259249,11 @@
       ],
       "symbol": "MRK",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:11Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "MS": {
       "ask_exchange": "V",
-      "ask_price": 228.54,
+      "ask_price": 217.93,
       "ask_size": 100.0,
       "bid_exchange": "V",
       "bid_price": 204.92,
@@ -259263,11 +259263,11 @@
       ],
       "symbol": "MS",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "MSFT": {
       "ask_exchange": "V",
-      "ask_price": 431.0,
+      "ask_price": 427.09,
       "ask_size": 40.0,
       "bid_exchange": "V",
       "bid_price": 425.05,
@@ -259277,109 +259277,109 @@
       ],
       "symbol": "MSFT",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "NEE": {
       "ask_exchange": "V",
-      "ask_price": 85.39,
+      "ask_price": 85.38,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 85.37,
-      "bid_size": 600.0,
+      "bid_price": 85.3,
+      "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "NEE",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:11Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "NFLX": {
       "ask_exchange": "V",
-      "ask_price": 81.8,
-      "ask_size": 600.0,
+      "ask_price": 81.77,
+      "ask_size": 1000.0,
       "bid_exchange": "V",
-      "bid_price": 81.79,
-      "bid_size": 600.0,
+      "bid_price": 81.76,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "NFLX",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:11Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "NKE": {
       "ask_exchange": "V",
-      "ask_price": 43.25,
-      "ask_size": 1200.0,
+      "ask_price": 43.27,
+      "ask_size": 700.0,
       "bid_exchange": "V",
-      "bid_price": 43.24,
-      "bid_size": 300.0,
+      "bid_price": 43.26,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "NKE",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "NVDA": {
       "ask_exchange": "V",
-      "ask_price": 219.42,
-      "ask_size": 1100.0,
+      "ask_price": 219.46,
+      "ask_size": 700.0,
       "bid_exchange": "V",
-      "bid_price": 218.7,
+      "bid_price": 219.44,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "NVDA",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:50Z"
     },
     "O": {
       "ask_exchange": "V",
-      "ask_price": 59.56,
-      "ask_size": 400.0,
+      "ask_price": 59.58,
+      "ask_size": 500.0,
       "bid_exchange": "V",
-      "bid_price": 59.55,
-      "bid_size": 200.0,
+      "bid_price": 59.56,
+      "bid_size": 300.0,
       "conditions": [
         "R"
       ],
       "symbol": "O",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "ORCL": {
       "ask_exchange": "V",
       "ask_price": 236.0,
       "ask_size": 200.0,
       "bid_exchange": "V",
-      "bid_price": 227.1,
-      "bid_size": 800.0,
+      "bid_price": 234.25,
+      "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "ORCL",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:11Z"
+      "timestamp": "2026-06-04T17:49:48Z"
     },
     "PEP": {
       "ask_exchange": "V",
-      "ask_price": 141.95,
+      "ask_price": 143.0,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 141.93,
+      "bid_price": 138.0,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "PEP",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:11Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "PG": {
       "ask_exchange": "V",
-      "ask_price": 140.35,
+      "ask_price": 140.41,
       "ask_size": 100.0,
       "bid_exchange": "V",
       "bid_price": 139.5,
@@ -259389,25 +259389,25 @@
       ],
       "symbol": "PG",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "PLD": {
       "ask_exchange": "V",
       "ask_price": 151.69,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 142.34,
+      "bid_price": 142.39,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "PLD",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:08Z"
+      "timestamp": "2026-06-04T17:49:38Z"
     },
     "PM": {
       "ask_exchange": "V",
-      "ask_price": 176.41,
+      "ask_price": 176.29,
       "ask_size": 100.0,
       "bid_exchange": "V",
       "bid_price": 168.16,
@@ -259417,7 +259417,7 @@
       ],
       "symbol": "PM",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:06Z"
+      "timestamp": "2026-06-04T17:49:47Z"
     },
     "RTX": {
       "ask_exchange": "V",
@@ -259431,7 +259431,7 @@
       ],
       "symbol": "RTX",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:24Z"
     },
     "SBUX": {
       "ask_exchange": "V",
@@ -259445,7 +259445,7 @@
       ],
       "symbol": "SBUX",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "SHW": {
       "ask_exchange": "V",
@@ -259459,67 +259459,67 @@
       ],
       "symbol": "SHW",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:32Z"
     },
     "SLB": {
       "ask_exchange": "V",
-      "ask_price": 57.53,
-      "ask_size": 500.0,
+      "ask_price": 57.52,
+      "ask_size": 300.0,
       "bid_exchange": "V",
       "bid_price": 57.51,
-      "bid_size": 500.0,
+      "bid_size": 300.0,
       "conditions": [
         "R"
       ],
       "symbol": "SLB",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:48Z"
     },
     "SO": {
       "ask_exchange": "V",
-      "ask_price": 91.02,
+      "ask_price": 91.01,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 90.99,
-      "bid_size": 300.0,
+      "bid_price": 90.98,
+      "bid_size": 400.0,
       "conditions": [
         "R"
       ],
       "symbol": "SO",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:50Z"
     },
     "SPY": {
       "ask_exchange": "V",
-      "ask_price": 757.33,
-      "ask_size": 400.0,
+      "ask_price": 757.4,
+      "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 757.27,
+      "bid_price": 757.37,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "SPY",
       "tape": "B",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "SRE": {
       "ask_exchange": "V",
       "ask_price": 89.6,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 89.54,
+      "bid_price": 84.49,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "SRE",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:05Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "TMO": {
       "ask_exchange": "V",
-      "ask_price": 489.82,
+      "ask_price": 480.31,
       "ask_size": 40.0,
       "bid_exchange": "V",
       "bid_price": 479.9,
@@ -259529,7 +259529,7 @@
       ],
       "symbol": "TMO",
       "tape": "A",
-      "timestamp": "2026-06-04T17:48:57Z"
+      "timestamp": "2026-06-04T17:49:34Z"
     },
     "TMUS": {
       "ask_exchange": "V",
@@ -259543,26 +259543,26 @@
       ],
       "symbol": "TMUS",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:45Z"
     },
     "TSLA": {
       "ask_exchange": "V",
-      "ask_price": 418.57,
+      "ask_price": 418.89,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 418.51,
+      "bid_price": 418.68,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "TSLA",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "UNH": {
       "ask_exchange": "V",
-      "ask_price": 396.58,
-      "ask_size": 40.0,
+      "ask_price": 399.89,
+      "ask_size": 80.0,
       "bid_exchange": "V",
       "bid_price": 377.18,
       "bid_size": 40.0,
@@ -259571,11 +259571,11 @@
       ],
       "symbol": "UNH",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:08Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "UNP": {
       "ask_exchange": "V",
-      "ask_price": 262.03,
+      "ask_price": 268.47,
       "ask_size": 100.0,
       "bid_exchange": "V",
       "bid_price": 261.65,
@@ -259585,35 +259585,35 @@
       ],
       "symbol": "UNP",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:12Z"
+      "timestamp": "2026-06-04T17:49:44Z"
     },
     "UPS": {
       "ask_exchange": "V",
-      "ask_price": 109.98,
+      "ask_price": 110.01,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 109.94,
+      "bid_price": 109.97,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "UPS",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:47Z"
     },
     "V": {
       "ask_exchange": "V",
-      "ask_price": 330.0,
+      "ask_price": 320.09,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 319.98,
+      "bid_price": 320.01,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "V",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "WELL": {
       "ask_exchange": "V",
@@ -259627,55 +259627,55 @@
       ],
       "symbol": "WELL",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:06Z"
+      "timestamp": "2026-06-04T17:49:42Z"
     },
     "WFC": {
       "ask_exchange": "V",
-      "ask_price": 81.24,
-      "ask_size": 300.0,
+      "ask_price": 81.28,
+      "ask_size": 700.0,
       "bid_exchange": "V",
-      "bid_price": 81.22,
-      "bid_size": 1600.0,
+      "bid_price": 81.26,
+      "bid_size": 700.0,
       "conditions": [
         "R"
       ],
       "symbol": "WFC",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "WMT": {
       "ask_exchange": "V",
-      "ask_price": 119.0,
+      "ask_price": 118.08,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 118.0,
+      "bid_price": 118.02,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "WMT",
       "tape": "C",
-      "timestamp": "2026-06-04T17:49:05Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     },
     "XOM": {
       "ask_exchange": "V",
-      "ask_price": 152.8,
+      "ask_price": 152.77,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 152.78,
+      "bid_price": 152.6,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "XOM",
       "tape": "A",
-      "timestamp": "2026-06-04T17:49:13Z"
+      "timestamp": "2026-06-04T17:49:49Z"
     }
   },
-  "run_id": "refresh_data-20260604T174910",
+  "run_id": "refresh_data-20260604T174946",
   "run_mode": "alpaca_paper",
   "schema_version": "0.1.0",
-  "source_data_hash": "d36421101ab0c4dcddcdc655646e7f6240980d0d5fb6f25097e995969fd83921",
+  "source_data_hash": "fd9d43497c7dbb9543ab7805c1fef56a671b2aff23b80d928f05bc5911c0cef7",
   "source_labels": {
     "account": "alpaca_trading_client.get_account",
     "assets": "alpaca_trading_client.get_all_assets",
@@ -259689,27 +259689,27 @@
   },
   "spreads": {
     "AAPL": {
-      "ask": 311.44,
-      "bid": 311.29,
+      "ask": 311.26,
+      "bid": 311.22,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.14999999999997726,
-      "spread_pct": 0.0004816337015154677,
+      "spread": 0.03999999999996362,
+      "spread_pct": 0.00012850992739177415,
       "symbol": "AAPL"
     },
     "ABBV": {
-      "ask": 228.0,
+      "ask": 223.78,
       "bid": 209.95,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 18.05000000000001,
-      "spread_pct": 0.07916666666666672,
+      "spread": 13.830000000000013,
+      "spread_pct": 0.06180176959513814,
       "symbol": "ABBV"
     },
     "ABT": {
       "ask": 90.15,
-      "bid": 90.11,
+      "bid": 90.1,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.04000000000000625,
-      "spread_pct": 0.00044370493621748473,
+      "spread": 0.05000000000001137,
+      "spread_pct": 0.0005546311702718953,
       "symbol": "ABT"
     },
     "ADBE": {
@@ -259721,27 +259721,27 @@
       "symbol": "ADBE"
     },
     "AEP": {
-      "ask": 127.48,
-      "bid": 127.45,
+      "ask": 127.47,
+      "bid": 127.44,
       "source": "derived_from_alpaca_latest_quote",
       "spread": 0.030000000000001137,
-      "spread_pct": 0.00023533103231880402,
+      "spread_pct": 0.00023534949399859682,
       "symbol": "AEP"
     },
     "AMD": {
       "ask": 528.0,
-      "bid": 520.0,
+      "bid": 515.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 8.0,
-      "spread_pct": 0.015151515151515152,
+      "spread": 13.0,
+      "spread_pct": 0.02462121212121212,
       "symbol": "AMD"
     },
     "AMGN": {
-      "ask": 343.54,
-      "bid": 325.75,
+      "ask": 350.0,
+      "bid": 343.04,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 17.79000000000002,
-      "spread_pct": 0.05178436281073534,
+      "spread": 6.9599999999999795,
+      "spread_pct": 0.01988571428571423,
       "symbol": "AMGN"
     },
     "AMT": {
@@ -259753,11 +259753,11 @@
       "symbol": "AMT"
     },
     "AMZN": {
-      "ask": 253.81,
-      "bid": 253.75,
+      "ask": 253.75,
+      "bid": 253.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.060000000000002274,
-      "spread_pct": 0.00023639730507073116,
+      "spread": 0.75,
+      "spread_pct": 0.002955665024630542,
       "symbol": "AMZN"
     },
     "APD": {
@@ -259769,27 +259769,27 @@
       "symbol": "APD"
     },
     "AVGO": {
-      "ask": 424.23,
-      "bid": 421.18,
+      "ask": 425.0,
+      "bid": 423.1,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 3.0500000000000114,
-      "spread_pct": 0.007189496263819181,
+      "spread": 1.8999999999999773,
+      "spread_pct": 0.004470588235294064,
       "symbol": "AVGO"
     },
     "AXP": {
-      "ask": 311.97,
+      "ask": 311.98,
       "bid": 295.33,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 16.640000000000043,
-      "spread_pct": 0.053338462031605735,
+      "spread": 16.650000000000034,
+      "spread_pct": 0.053368805692672716,
       "symbol": "AXP"
     },
     "BA": {
-      "ask": 217.89,
+      "ask": 217.97,
       "bid": 217.31,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.5799999999999841,
-      "spread_pct": 0.0026618936160447203,
+      "spread": 0.6599999999999966,
+      "spread_pct": 0.0030279396247189826,
       "symbol": "BA"
     },
     "BAC": {
@@ -259809,19 +259809,19 @@
       "symbol": "BIL"
     },
     "BKNG": {
-      "ask": 167.15,
+      "ask": 167.24,
       "bid": 167.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.15000000000000568,
-      "spread_pct": 0.0008973975471134052,
+      "spread": 0.2400000000000091,
+      "spread_pct": 0.0014350633819660912,
       "symbol": "BKNG"
     },
     "BLK": {
-      "ask": 1020.89,
-      "bid": 1019.99,
+      "ask": 1076.49,
+      "bid": 984.87,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.8999999999999773,
-      "spread_pct": 0.0008815837161692026,
+      "spread": 91.62,
+      "spread_pct": 0.08510994064041469,
       "symbol": "BLK"
     },
     "CAT": {
@@ -259833,27 +259833,27 @@
       "symbol": "CAT"
     },
     "CL": {
-      "ask": 84.97,
+      "ask": 84.96,
       "bid": 81.22,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 3.75,
-      "spread_pct": 0.044133223490643754,
+      "spread": 3.739999999999995,
+      "spread_pct": 0.04402071563088507,
       "symbol": "CL"
     },
     "CMCSA": {
-      "ask": 23.26,
-      "bid": 23.25,
+      "ask": 23.27,
+      "bid": 23.26,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.010000000000001563,
-      "spread_pct": 0.00042992261392955987,
+      "spread": 0.00999999999999801,
+      "spread_pct": 0.0004297378599053722,
       "symbol": "CMCSA"
     },
     "COP": {
-      "ask": 119.02,
-      "bid": 118.93,
+      "ask": 118.91,
+      "bid": 118.88,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.0899999999999892,
-      "spread_pct": 0.0007561754327002957,
+      "spread": 0.030000000000001137,
+      "spread_pct": 0.00025229164914642284,
       "symbol": "COP"
     },
     "COST": {
@@ -259866,18 +259866,18 @@
     },
     "CRM": {
       "ask": 192.0,
-      "bid": 180.0,
+      "bid": 189.83,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 12.0,
-      "spread_pct": 0.0625,
+      "spread": 2.1699999999999875,
+      "spread_pct": 0.011302083333333268,
       "symbol": "CRM"
     },
     "CSCO": {
-      "ask": 129.6,
-      "bid": 129.57,
+      "ask": 129.59,
+      "bid": 129.54,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.030000000000001137,
-      "spread_pct": 0.00023148148148149027,
+      "spread": 0.05000000000001137,
+      "spread_pct": 0.000385832240142074,
       "symbol": "CSCO"
     },
     "CVX": {
@@ -259897,19 +259897,19 @@
       "symbol": "DE"
     },
     "DIS": {
-      "ask": 99.42,
-      "bid": 99.37,
+      "ask": 99.45,
+      "bid": 99.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.04999999999999716,
-      "spread_pct": 0.0005029169181250972,
+      "spread": 0.45000000000000284,
+      "spread_pct": 0.0045248868778280825,
       "symbol": "DIS"
     },
     "DUK": {
-      "ask": 121.29,
-      "bid": 121.23,
+      "ask": 121.27,
+      "bid": 121.21,
       "source": "derived_from_alpaca_latest_quote",
       "spread": 0.060000000000002274,
-      "spread_pct": 0.0004946821667079088,
+      "spread_pct": 0.0004947637503092461,
       "symbol": "DUK"
     },
     "ECL": {
@@ -259921,59 +259921,59 @@
       "symbol": "ECL"
     },
     "EOG": {
-      "ask": 140.6,
-      "bid": 140.54,
+      "ask": 148.49,
+      "bid": 132.28,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.060000000000002274,
-      "spread_pct": 0.00042674253200570606,
+      "spread": 16.210000000000008,
+      "spread_pct": 0.10916560037712982,
       "symbol": "EOG"
     },
     "EQIX": {
       "ask": 1133.4,
-      "bid": 1061.78,
+      "bid": 1060.66,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 71.62000000000012,
-      "spread_pct": 0.06319040056467276,
+      "spread": 72.74000000000001,
+      "spread_pct": 0.06417857773072172,
       "symbol": "EQIX"
     },
     "FCX": {
-      "ask": 69.69,
-      "bid": 66.51,
+      "ask": 69.74,
+      "bid": 69.72,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 3.1799999999999926,
-      "spread_pct": 0.045630650021523785,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.0002867794665901351,
       "symbol": "FCX"
     },
     "GE": {
       "ask": 327.4,
-      "bid": 326.78,
+      "bid": 326.92,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.6200000000000045,
-      "spread_pct": 0.0018937080024435083,
+      "spread": 0.47999999999996135,
+      "spread_pct": 0.0014660965180206518,
       "symbol": "GE"
     },
     "GOOGL": {
-      "ask": 372.85,
-      "bid": 372.76,
+      "ask": 372.88,
+      "bid": 372.24,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.09000000000003183,
-      "spread_pct": 0.00024138393455821867,
+      "spread": 0.6399999999999864,
+      "spread_pct": 0.0017163698777086097,
       "symbol": "GOOGL"
     },
     "GS": {
-      "ask": 1089.67,
+      "ask": 1107.99,
       "bid": 1040.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 49.67000000000007,
-      "spread_pct": 0.045582607578441244,
+      "spread": 67.99000000000001,
+      "spread_pct": 0.06136336970550277,
       "symbol": "GS"
     },
     "HD": {
-      "ask": 309.12,
-      "bid": 308.95,
+      "ask": 309.11,
+      "bid": 300.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.17000000000001592,
-      "spread_pct": 0.000549948240165683,
+      "spread": 9.110000000000014,
+      "spread_pct": 0.029471709100320317,
       "symbol": "HD"
     },
     "HON": {
@@ -259985,11 +259985,11 @@
       "symbol": "HON"
     },
     "INTU": {
-      "ask": 303.82,
-      "bid": 303.0,
+      "ask": 303.84,
+      "bid": 303.53,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.8199999999999932,
-      "spread_pct": 0.0026989664933183897,
+      "spread": 0.3100000000000023,
+      "spread_pct": 0.001020273828330708,
       "symbol": "INTU"
     },
     "ISRG": {
@@ -260001,27 +260001,27 @@
       "symbol": "ISRG"
     },
     "JNJ": {
-      "ask": 228.01,
-      "bid": 214.6,
+      "ask": 228.06,
+      "bid": 227.93,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 13.409999999999997,
-      "spread_pct": 0.05881320994693214,
+      "spread": 0.12999999999999545,
+      "spread_pct": 0.000570025431903865,
       "symbol": "JNJ"
     },
     "JPM": {
-      "ask": 312.8,
+      "ask": 310.27,
       "bid": 303.41,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 9.389999999999986,
-      "spread_pct": 0.030019181585677703,
+      "spread": 6.859999999999957,
+      "spread_pct": 0.022109775356947036,
       "symbol": "JPM"
     },
     "KO": {
       "ask": 77.78,
-      "bid": 77.77,
+      "bid": 77.76,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.010000000000005116,
-      "spread_pct": 0.00012856775520705987,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.000257135510413937,
       "symbol": "KO"
     },
     "LIN": {
@@ -260033,11 +260033,11 @@
       "symbol": "LIN"
     },
     "LLY": {
-      "ask": 1137.02,
+      "ask": 1134.71,
       "bid": 1101.5,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 35.51999999999998,
-      "spread_pct": 0.03123955603243565,
+      "spread": 33.210000000000036,
+      "spread_pct": 0.029267389905790937,
       "symbol": "LLY"
     },
     "LMT": {
@@ -260050,10 +260050,10 @@
     },
     "LOW": {
       "ask": 218.67,
-      "bid": 207.34,
+      "bid": 199.74,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 11.329999999999984,
-      "spread_pct": 0.05181323455435124,
+      "spread": 18.92999999999998,
+      "spread_pct": 0.08656880230484282,
       "symbol": "LOW"
     },
     "MA": {
@@ -260066,130 +260066,130 @@
     },
     "MCD": {
       "ask": 272.48,
-      "bid": 272.41,
+      "bid": 272.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.06999999999999318,
-      "spread_pct": 0.0002568995889606326,
+      "spread": 0.4800000000000182,
+      "spread_pct": 0.0017615971814445763,
       "symbol": "MCD"
     },
     "MDLZ": {
-      "ask": 60.96,
+      "ask": 60.95,
       "bid": 60.94,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.020000000000003126,
-      "spread_pct": 0.0003280839895013636,
+      "spread": 0.010000000000005116,
+      "spread_pct": 0.00016406890894183945,
       "symbol": "MDLZ"
     },
     "META": {
-      "ask": 629.24,
+      "ask": 629.65,
       "bid": 620.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 9.240000000000009,
-      "spread_pct": 0.014684381158222633,
+      "spread": 9.649999999999977,
+      "spread_pct": 0.01532597474787577,
       "symbol": "META"
     },
     "MRK": {
-      "ask": 119.19,
+      "ask": 119.2,
       "bid": 117.76,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 1.4299999999999926,
-      "spread_pct": 0.011997650809631619,
+      "spread": 1.4399999999999977,
+      "spread_pct": 0.012080536912751658,
       "symbol": "MRK"
     },
     "MS": {
-      "ask": 228.54,
+      "ask": 217.93,
       "bid": 204.92,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 23.620000000000005,
-      "spread_pct": 0.1033517108602433,
+      "spread": 13.01000000000002,
+      "spread_pct": 0.05969806818703262,
       "symbol": "MS"
     },
     "MSFT": {
-      "ask": 431.0,
+      "ask": 427.09,
       "bid": 425.05,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 5.949999999999989,
-      "spread_pct": 0.013805104408352642,
+      "spread": 2.0399999999999636,
+      "spread_pct": 0.004776510805684899,
       "symbol": "MSFT"
     },
     "NEE": {
-      "ask": 85.39,
-      "bid": 85.37,
+      "ask": 85.38,
+      "bid": 85.3,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.01999999999999602,
-      "spread_pct": 0.00023421946363738166,
+      "spread": 0.0799999999999983,
+      "spread_pct": 0.0009369875849144799,
       "symbol": "NEE"
     },
     "NFLX": {
-      "ask": 81.8,
-      "bid": 81.79,
+      "ask": 81.77,
+      "bid": 81.76,
       "source": "derived_from_alpaca_latest_quote",
       "spread": 0.009999999999990905,
-      "spread_pct": 0.00012224938875294507,
+      "spread_pct": 0.00012229423994118756,
       "symbol": "NFLX"
     },
     "NKE": {
-      "ask": 43.25,
-      "bid": 43.24,
+      "ask": 43.27,
+      "bid": 43.26,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.00999999999999801,
-      "spread_pct": 0.00023121387283232394,
+      "spread": 0.010000000000005116,
+      "spread_pct": 0.00023110700254229524,
       "symbol": "NKE"
     },
     "NVDA": {
-      "ask": 219.42,
-      "bid": 218.7,
+      "ask": 219.46,
+      "bid": 219.44,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.7199999999999989,
-      "spread_pct": 0.0032813781788351057,
+      "spread": 0.020000000000010232,
+      "spread_pct": 9.11327804611785e-05,
       "symbol": "NVDA"
     },
     "O": {
-      "ask": 59.56,
-      "bid": 59.55,
+      "ask": 59.58,
+      "bid": 59.56,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.010000000000005116,
-      "spread_pct": 0.00016789791806590186,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.0003356831151392417,
       "symbol": "O"
     },
     "ORCL": {
       "ask": 236.0,
-      "bid": 227.1,
+      "bid": 234.25,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 8.900000000000006,
-      "spread_pct": 0.037711864406779684,
+      "spread": 1.75,
+      "spread_pct": 0.007415254237288136,
       "symbol": "ORCL"
     },
     "PEP": {
-      "ask": 141.95,
-      "bid": 141.93,
+      "ask": 143.0,
+      "bid": 138.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.01999999999998181,
-      "spread_pct": 0.0001408946812256556,
+      "spread": 5.0,
+      "spread_pct": 0.03496503496503497,
       "symbol": "PEP"
     },
     "PG": {
-      "ask": 140.35,
+      "ask": 140.41,
       "bid": 139.5,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.8499999999999943,
-      "spread_pct": 0.006056287851799034,
+      "spread": 0.9099999999999966,
+      "spread_pct": 0.0064810198703795785,
       "symbol": "PG"
     },
     "PLD": {
       "ask": 151.69,
-      "bid": 142.34,
+      "bid": 142.39,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 9.349999999999994,
-      "spread_pct": 0.061638868745467694,
+      "spread": 9.300000000000011,
+      "spread_pct": 0.061309249126508085,
       "symbol": "PLD"
     },
     "PM": {
-      "ask": 176.41,
+      "ask": 176.29,
       "bid": 168.16,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 8.25,
-      "spread_pct": 0.04676605634601213,
+      "spread": 8.129999999999995,
+      "spread_pct": 0.04611719326110384,
       "symbol": "PM"
     },
     "RTX": {
@@ -260217,43 +260217,43 @@
       "symbol": "SHW"
     },
     "SLB": {
-      "ask": 57.53,
+      "ask": 57.52,
       "bid": 57.51,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.020000000000003126,
-      "spread_pct": 0.0003476447071093886,
+      "spread": 0.010000000000005116,
+      "spread_pct": 0.0001738525730181696,
       "symbol": "SLB"
     },
     "SO": {
-      "ask": 91.02,
-      "bid": 90.99,
+      "ask": 91.01,
+      "bid": 90.98,
       "source": "derived_from_alpaca_latest_quote",
       "spread": 0.030000000000001137,
-      "spread_pct": 0.0003295978905735128,
+      "spread_pct": 0.0003296341061421946,
       "symbol": "SO"
     },
     "SPY": {
-      "ask": 757.33,
-      "bid": 757.27,
+      "ask": 757.4,
+      "bid": 757.37,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.06000000000005912,
-      "spread_pct": 7.92257008174232e-05,
+      "spread": 0.029999999999972715,
+      "spread_pct": 3.9609189331888986e-05,
       "symbol": "SPY"
     },
     "SRE": {
       "ask": 89.6,
-      "bid": 89.54,
+      "bid": 84.49,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.05999999999998806,
-      "spread_pct": 0.000669642857142724,
+      "spread": 5.109999999999999,
+      "spread_pct": 0.05703125,
       "symbol": "SRE"
     },
     "TMO": {
-      "ask": 489.82,
+      "ask": 480.31,
       "bid": 479.9,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 9.920000000000016,
-      "spread_pct": 0.02025233759340169,
+      "spread": 0.410000000000025,
+      "spread_pct": 0.0008536153734047282,
       "symbol": "TMO"
     },
     "TMUS": {
@@ -260265,43 +260265,43 @@
       "symbol": "TMUS"
     },
     "TSLA": {
-      "ask": 418.57,
-      "bid": 418.51,
+      "ask": 418.89,
+      "bid": 418.68,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.060000000000002274,
-      "spread_pct": 0.0001433451991303779,
+      "spread": 0.20999999999997954,
+      "spread_pct": 0.0005013249301725501,
       "symbol": "TSLA"
     },
     "UNH": {
-      "ask": 396.58,
+      "ask": 399.89,
       "bid": 377.18,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 19.399999999999977,
-      "spread_pct": 0.048918251046447064,
+      "spread": 22.70999999999998,
+      "spread_pct": 0.05679061741979039,
       "symbol": "UNH"
     },
     "UNP": {
-      "ask": 262.03,
+      "ask": 268.47,
       "bid": 261.65,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.37999999999999545,
-      "spread_pct": 0.0014502156241651548,
+      "spread": 6.82000000000005,
+      "spread_pct": 0.02540321078705274,
       "symbol": "UNP"
     },
     "UPS": {
-      "ask": 109.98,
-      "bid": 109.94,
+      "ask": 110.01,
+      "bid": 109.97,
       "source": "derived_from_alpaca_latest_quote",
       "spread": 0.04000000000000625,
-      "spread_pct": 0.0003637024913621227,
+      "spread_pct": 0.0003636033087901668,
       "symbol": "UPS"
     },
     "V": {
-      "ask": 330.0,
-      "bid": 319.98,
+      "ask": 320.09,
+      "bid": 320.01,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 10.019999999999982,
-      "spread_pct": 0.030363636363636308,
+      "spread": 0.07999999999998408,
+      "spread_pct": 0.00024992970726978064,
       "symbol": "V"
     },
     "WELL": {
@@ -260313,27 +260313,27 @@
       "symbol": "WELL"
     },
     "WFC": {
-      "ask": 81.24,
-      "bid": 81.22,
+      "ask": 81.28,
+      "bid": 81.26,
       "source": "derived_from_alpaca_latest_quote",
       "spread": 0.01999999999999602,
-      "spread_pct": 0.0002461841457409653,
+      "spread_pct": 0.0002460629921259353,
       "symbol": "WFC"
     },
     "WMT": {
-      "ask": 119.0,
-      "bid": 118.0,
+      "ask": 118.08,
+      "bid": 118.02,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 1.0,
-      "spread_pct": 0.008403361344537815,
+      "spread": 0.060000000000002274,
+      "spread_pct": 0.0005081300813008323,
       "symbol": "WMT"
     },
     "XOM": {
-      "ask": 152.8,
-      "bid": 152.78,
+      "ask": 152.77,
+      "bid": 152.6,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.020000000000010232,
-      "spread_pct": 0.0001308900523560879,
+      "spread": 0.17000000000001592,
+      "spread_pct": 0.0011127839235453027,
       "symbol": "XOM"
     }
   }
