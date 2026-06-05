@@ -40646,3 +40646,23 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
 - EQIX BUY (entry) fill=$1076.542 return=+0.321% unpl=$+0.2195 | pending: 20_trading_days, 63_trading_days
 
 ---
+## Outcome Tracker — 2026-06-05T22:36:46Z
+
+**Run ID:** `outcome_tracker-20260605T223646-903ce6ed`  **Outcomes tracked:** 14
+
+- WELL BUY (entry) fill=$218.808 return=-5.428% unpl=$-1.3571 | pending: 20_trading_days, 63_trading_days
+- JNJ BUY (entry) fill=$230.248 return=+0.760% unpl=$+0.6068 | pending: 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1084.37 return=-0.403% unpl=$+0.2195 | pending: 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1079.5 return=+0.046% unpl=$+0.2195 | pending: 20_trading_days, 63_trading_days
+- EQIX SELL (exit) fill=$1078.442 return=+0.145% unpl=$+0.2195 | pending: 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1078.41 return=+0.147% unpl=$+0.2195 | pending: 20_trading_days, 63_trading_days
+- JNJ BUY (entry) fill=$230.116 return=+0.818% unpl=$+0.6068 | pending: 20_trading_days, 63_trading_days
+- WMT BUY (entry) fill=$132.276 return=-10.649% unpl=$-5.3579 | pending: 20_trading_days, 63_trading_days
+- WMT BUY (entry) fill=$132.474 return=-10.783% unpl=$-5.3579 | pending: 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1076.89 return=+0.289% unpl=$+0.2195 | pending: 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1076.82 return=+0.295% unpl=$+0.2195 | pending: 20_trading_days, 63_trading_days
+- JNJ BUY (entry) fill=$230.044 return=+0.849% unpl=$+0.6068 | pending: 20_trading_days, 63_trading_days
+- EQIX SELL (exit) fill=$1076.718 return=+0.305% unpl=$+0.2195 | pending: 20_trading_days, 63_trading_days
+- EQIX BUY (entry) fill=$1076.542 return=+0.321% unpl=$+0.2195 | pending: 20_trading_days, 63_trading_days
+
+---
