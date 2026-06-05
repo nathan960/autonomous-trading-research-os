@@ -4102,3 +4102,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "98f0f772fd4e8ea1fdafdf036ba2a9de9fd8365514c4dfe7e374e144e225044d"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.620253164556962,
+  "breadth_ok": true,
+  "candidates_count": 22,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-06-05T17:24:07Z",
+  "selected": [
+    "SLB",
+    "FCX",
+    "MRK",
+    "XOM",
+    "AAPL",
+    "NVDA",
+    "UNH",
+    "WELL",
+    "AEP",
+    "AMZN"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.09295524999999999,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "4c32e8b6ac35f0bfeb215181bcf9b742a9b6dba3c299eaf033ea136321cfcf5d"
+}
+```
