@@ -304,3 +304,21 @@
 - 47 wide-spread symbols (['ABBV', 'ADBE', 'AMGN', 'AMT', 'AMZN', 'APD', 'BA', 'BAC', 'BKNG', 'BLK', 'CL', 'CMCSA', 'COP', 'COST', 'CRM', 'CSCO', 'DIS', 'ECL', 'EOG', 'GE', 'GOOGL', 'GS', 'INTU', 'JPM', 'KO', 'LOW', 'META', 'MS', 'MSFT', 'NFLX', 'NKE', 'NVDA', 'O', 'PEP', 'PLD', 'PM', 'SHW', 'SLB', 'SO', 'SPY', 'SRE', 'TMUS', 'TSLA', 'UPS', 'WELL', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
 
 ---
+## System Status — 2026-06-08T22:46:09Z
+
+**Overall:** RED  | Research: NO  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,794.78  drawdown=-0.01%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260608T221512-6e5e2f60  approved=False
+**Dry-run gates:** FAIL  failed=['RISK_LIMITS_RESPECTED']
+
+**Blocking Issues:**
+- Execution gates: hard failures: ['RISK_LIMITS_RESPECTED']
+
+**Warnings:**
+- 60 wide-spread symbols (['ABBV', 'ABT', 'ADBE', 'AEP', 'AMD', 'AMGN', 'AMT', 'AMZN', 'APD', 'AXP', 'BKNG', 'BLK', 'CL', 'CMCSA', 'COP', 'COST', 'CVX', 'DE', 'DIS', 'DUK', 'EQIX', 'GE', 'GOOGL', 'GS', 'HD', 'HON', 'INTU', 'ISRG', 'JNJ', 'KO', 'LIN', 'LOW', 'MA', 'MCD', 'MDLZ', 'META', 'MRK', 'MSFT', 'NEE', 'NFLX', 'NKE', 'NVDA', 'O', 'ORCL', 'PEP', 'PG', 'PM', 'RTX', 'SBUX', 'SLB', 'SO', 'SPY', 'SRE', 'TMUS', 'TSLA', 'UNP', 'UPS', 'WELL', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
+
+**Required Operator Actions:**
+- [ ] Fix hard gate failures before any execution: ['RISK_LIMITS_RESPECTED']
+
+---
