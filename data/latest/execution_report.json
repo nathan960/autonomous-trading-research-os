@@ -1,10 +1,8 @@
 {
-  "all_gates_pass": false,
+  "all_gates_pass": true,
   "dry_run": true,
-  "execution_report_hash": "e652cfd853b91108c3ae7d107a2d454cef115e9aa1f11c4798cabbc3802d20eb",
-  "failed_gates": [
-    "RISK_LIMITS_RESPECTED"
-  ],
+  "execution_report_hash": "473cde9965f590fa700a38e7cf20b700ffb423efed857dfd38fa615f89d8e1c9",
+  "failed_gates": [],
   "gate_results": [
     {
       "detail": null,
@@ -32,7 +30,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-06-08T22:15:08Z",
+      "detail": null,
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -77,9 +75,9 @@
       "passes": true
     },
     {
-      "detail": "overweight orders: ['BIL'] (max=0.12)",
+      "detail": null,
       "gate_id": "RISK_LIMITS_RESPECTED",
-      "passes": false
+      "passes": true
     },
     {
       "detail": null,
@@ -97,24 +95,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-06-08T22:15:13Z",
+  "generated_at": "2026-06-09T17:29:11Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260608T221512-BIL-BUY",
+      "client_order_id": "TOS-20260609T172911-WMT-SELL",
       "execution_ready": true,
-      "limit_price": 91.45,
+      "limit_price": 118.69,
       "notional": 25.0,
       "order_type": "limit",
-      "side": "buy",
-      "symbol": "BIL",
-      "target_weight": 1.0,
+      "side": "sell",
+      "symbol": "WMT",
+      "target_weight": 0.0,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260608T221512-6e5e2f60",
-  "run_id": "execution-20260608T221513-a0e5c744",
-  "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "464c80f4306f5a99302b81cdcd445d307db1a05b95ab987cecbe8aa33364fded"
+  "plan_id": "trade_plan-20260609T172911-ad086faf",
+  "run_id": "execution-20260609T172911-130c7420",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "58318df18027ba121076ba8a0545865abc5ae4b70b8ea533d21b502dce84097e"
 }

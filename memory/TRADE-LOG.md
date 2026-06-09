@@ -41308,3 +41308,21 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
 - EQIX BUY (entry) fill=$1076.542 return=-1.282% unpl=$-1.3797 | pending: 20_trading_days, 63_trading_days
 
 ---
+
+## dry_run_execute run
+
+```json
+{
+  "all_gates_pass": true,
+  "dry_run": true,
+  "failed_gates": [],
+  "generated_at": "2026-06-09T17:29:11Z",
+  "no_submit_reason": "dry_run_mode",
+  "orders_ready": 1,
+  "orders_validated": 1,
+  "plan_id": "trade_plan-20260609T172911-ad086faf",
+  "run_id": "execution-20260609T172911-130c7420",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "58318df18027ba121076ba8a0545865abc5ae4b70b8ea533d21b502dce84097e"
+}
+```
