@@ -4336,3 +4336,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "080720a1f185c7bbb86e9f36487142bd8d6cad9a094cdbf284809834bb2a05ab"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6329113924050633,
+  "breadth_ok": true,
+  "candidates_count": 19,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-06-11T22:28:15Z",
+  "selected": [
+    "CSCO",
+    "SLB",
+    "MRK",
+    "JNJ",
+    "EQIX",
+    "CVX",
+    "NVDA",
+    "LIN",
+    "AEP",
+    "LMT"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.09116495,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "b24ea1acc9bca438e72762c64ee23b9a8d72c5fb568ab7655eb2951fa492f18d"
+}
+```
