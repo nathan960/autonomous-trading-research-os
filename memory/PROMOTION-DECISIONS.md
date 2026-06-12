@@ -199,3 +199,35 @@ Production strategy promotions require evidence, candidate PR, and explicit appr
 *No config was changed. No orders were placed. No paper execution was enabled. No trade plans were approved. No scheduled execution was enabled.*  
 
 ---
+
+## Phase Gate — 2026-06-12T23:05:25Z
+
+**run_id:** `phase_gate-20260612T230525-19597d49`  
+**current_phase:** PHASE_1_TINY_MANUAL  
+**recommended_phase:** PHASE_1_TINY_MANUAL  
+**status:** STAY AT CURRENT PHASE  
+**recommendation:** stay_at_phase  
+
+**Evidence:**  
+- filled_orders: 14 (need ≥ 20)  
+- active_orders: 0  
+- missing_orders: 0  
+- rejected_orders: 0  
+- source_integrity: ok  
+- outcome_integrity: ok  
+- lineage: 0/14 complete (ratio=0.0)  
+- drawdown: -4e-05  
+- max_orders_per_run: 1  
+- max_notional_per_order: 25.0  
+- daily_summaries_in_history: 77  
+- weekly_reviews_in_history: 11  
+
+**Blocking Issues:**  
+- Only 14 filled order(s). Need at least 20 before reviewing promotion.  
+
+**Warnings:**  
+- Lineage completeness ratio 0.0% (0/14). Older fills have partial lineage — trade plan archiving to data/history/trade_plans/ is now active so future fills will be complete. Run build_lineage.py to update after more fills are archived.  
+
+*No config was changed. No orders were placed. No paper execution was enabled. No trade plans were approved. No scheduled execution was enabled.*  
+
+---
