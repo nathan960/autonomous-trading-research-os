@@ -1,8 +1,10 @@
 {
-  "all_gates_pass": true,
+  "all_gates_pass": false,
   "dry_run": true,
-  "execution_report_hash": "24520b8308f3d0b58daf77b70208342ad76ae5b1261d4448d6e2c5bf700ed385",
-  "failed_gates": [],
+  "execution_report_hash": "ef12da137d6b6e7a02a36e7657c3943eb565f1c8fd7a1f7393289d1853521fc3",
+  "failed_gates": [
+    "QUOTE_FRESHNESS"
+  ],
   "gate_results": [
     {
       "detail": null,
@@ -30,7 +32,7 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "[dry-run] market is_open=False at 2026-06-15T22:50:15Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -65,9 +67,9 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "stale quotes (>90.0min): ['AEP(170min)']",
       "gate_id": "QUOTE_FRESHNESS",
-      "passes": true
+      "passes": false
     },
     {
       "detail": null,
@@ -95,24 +97,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-06-15T19:08:33Z",
+  "generated_at": "2026-06-15T22:50:21Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260615T190832-WMT-SELL",
+      "client_order_id": "TOS-20260615T225020-AEP-BUY",
       "execution_ready": true,
-      "limit_price": 120.66,
+      "limit_price": 129.31,
       "notional": 25.0,
       "order_type": "limit",
-      "side": "sell",
-      "symbol": "WMT",
-      "target_weight": 0.0,
+      "side": "buy",
+      "symbol": "AEP",
+      "target_weight": 0.11906614,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260615T190832-6fec84eb",
-  "run_id": "execution-20260615T190833-bf46f14c",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "ad322dea10ef4a73c6f28e5059f911e405ae62d6bcd0d22ea1ebcbb51301e74b"
+  "plan_id": "trade_plan-20260615T225020-7870d4cc",
+  "run_id": "execution-20260615T225021-f0b8c4d0",
+  "status": "DRY_RUN_FAIL",
+  "trade_plan_hash": "b041e85ad9d78514a4566c67de75b589a70ad579b0e4808b7744b60168c70312"
 }

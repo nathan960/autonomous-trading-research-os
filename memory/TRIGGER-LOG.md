@@ -4464,3 +4464,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "bc9a8cb9a473ab2b99df53c51d9c15022231dd40318c7b0d0e473065c97a6308"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6455696202531646,
+  "breadth_ok": true,
+  "candidates_count": 16,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-06-15T22:50:20Z",
+  "selected": [
+    "GOOGL",
+    "FCX",
+    "JNJ",
+    "EQIX",
+    "AAPL",
+    "UNH",
+    "AEP",
+    "COP",
+    "RTX",
+    "WMT"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.0959596,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "22ee2b5766b986aede52f076abd5c80b00e6c13032b2caff964b79cd9d2e5248"
+}
+```
