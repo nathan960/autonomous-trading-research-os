@@ -4496,3 +4496,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "22ee2b5766b986aede52f076abd5c80b00e6c13032b2caff964b79cd9d2e5248"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6962025316455697,
+  "breadth_ok": true,
+  "candidates_count": 25,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-06-16T18:58:04Z",
+  "selected": [
+    "AMD",
+    "CSCO",
+    "GOOGL",
+    "FCX",
+    "MS",
+    "SLB",
+    "MRK",
+    "WELL",
+    "LLY",
+    "XOM"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.06886563333333333,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "0f0689b6b52d0cfa189e717a03e78f23829e81cab36fb5668da78e3f7c107f8d"
+}
+```
