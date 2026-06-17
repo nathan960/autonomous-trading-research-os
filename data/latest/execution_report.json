@@ -1,7 +1,7 @@
 {
   "all_gates_pass": false,
   "dry_run": true,
-  "execution_report_hash": "517f36c2438a681e56950c99df6c76ea488c7a148681cc7b8d55273f0a69cabb",
+  "execution_report_hash": "cb59a4c57c79e6886af2dec9f70e6bffc0a7367f73b64242051206820267ab08",
   "failed_gates": [
     "QUOTE_FRESHNESS"
   ],
@@ -32,7 +32,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-06-16T22:35:16Z",
+      "detail": "[dry-run] market is_open=False at 2026-06-17T22:25:58Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -67,7 +67,7 @@
       "passes": true
     },
     {
-      "detail": "stale quotes (>90.0min): ['SRE(155min)']",
+      "detail": "stale quotes (>90.0min): ['JNJ(146min)']",
       "gate_id": "QUOTE_FRESHNESS",
       "passes": false
     },
@@ -97,24 +97,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-06-16T22:35:23Z",
+  "generated_at": "2026-06-17T22:26:05Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260616T223523-SRE-BUY",
+      "client_order_id": "TOS-20260617T222605-JNJ-BUY",
       "execution_ready": true,
-      "limit_price": 91.73,
+      "limit_price": 233.92,
       "notional": 25.0,
       "order_type": "limit",
       "side": "buy",
-      "symbol": "SRE",
-      "target_weight": 0.11126995,
+      "symbol": "JNJ",
+      "target_weight": 0.12,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260616T223523-aac6ff24",
-  "run_id": "execution-20260616T223523-664e60b5",
+  "plan_id": "trade_plan-20260617T222605-fc02b41c",
+  "run_id": "execution-20260617T222605-a541c465",
   "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "98cb4675ad7d6d5b99c5048e22fd010dd02bc392fee2af611319f3e371662c5f"
+  "trade_plan_hash": "4ca3d077dc8582088253ca5a90ed7ed795b6a14d571ebdad406e1748db236b57"
 }
