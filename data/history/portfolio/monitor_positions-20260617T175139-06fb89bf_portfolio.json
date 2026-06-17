@@ -1,6 +1,12 @@
 {
-  "data_hash": "142eb655a08043f2aab2b249fe047753151e171dd1900ee201444ba4a670829e",
-  "fetched_at": "2026-06-17T17:51:35Z",
+  "data_hash": "def0f074fed08c6ba794cf44a115bb96866d02b1d6e23922201cb8683cadd9f5",
+  "drawdown": -4.8e-05,
+  "dry_run": false,
+  "equity": 99798.3,
+  "generated_at": "2026-06-17T17:51:40Z",
+  "open_order_count": 0,
+  "orders_summary": [],
+  "peak_equity": 99803.14,
   "position_count": 4,
   "positions": [
     {
@@ -9,21 +15,21 @@
       "asset_marginable": true,
       "avg_entry_price": "1077.631196",
       "avg_entry_swap_rate": null,
-      "change_today": "-0.00713",
+      "change_today": "-0.00697",
       "cost_basis": "99.842227",
-      "current_price": "1086.88",
+      "current_price": "1087.05",
       "exchange": "NASDAQ",
       "lastday_price": "1094.68",
-      "market_value": "100.699127",
+      "market_value": "100.714877",
       "qty": "0.092649719",
       "qty_available": "0.092649719",
       "side": "long",
       "swap_rate": null,
       "symbol": "EQIX",
-      "unrealized_intraday_pl": "-0.722667",
-      "unrealized_intraday_plpc": "-0.00713",
-      "unrealized_pl": "0.8569",
-      "unrealized_plpc": "0.00858",
+      "unrealized_intraday_pl": "-0.706917",
+      "unrealized_intraday_plpc": "-0.00697",
+      "unrealized_pl": "0.87265",
+      "unrealized_plpc": "0.00874",
       "usd": null
     },
     {
@@ -96,6 +102,7 @@
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260617T175139-06fb89bf",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }
