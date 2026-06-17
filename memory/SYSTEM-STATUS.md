@@ -400,3 +400,16 @@
 - 53 wide-spread symbols (['ABBV', 'ADBE', 'AEP', 'AMD', 'AVGO', 'AXP', 'BAC', 'BKNG', 'CAT', 'CL', 'COP', 'COST', 'CSCO', 'DE', 'DIS', 'DUK', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HD', 'HON', 'INTU', 'ISRG', 'JNJ', 'KO', 'LIN', 'LLY', 'LMT', 'LOW', 'MCD', 'MDLZ', 'META', 'MS', 'MSFT', 'NVDA', 'ORCL', 'PEP', 'PLD', 'PM', 'RTX', 'SHW', 'SLB', 'SO', 'TMO', 'UNH', 'UPS', 'V', 'WELL', 'WFC', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
 
 ---
+## System Status — 2026-06-17T22:51:38Z
+
+**Overall:** YELLOW  | Research: YES  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,797.47  drawdown=-0.01%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260617T222605-fc02b41c  approved=False
+**Dry-run gates:** FAIL  failed=['QUOTE_FRESHNESS']
+
+**Warnings:**
+- Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']
+- 50 wide-spread symbols (['AAPL', 'ABT', 'ADBE', 'AEP', 'AMD', 'AMGN', 'AMT', 'AMZN', 'AVGO', 'BLK', 'CAT', 'CL', 'CMCSA', 'COP', 'COST', 'CSCO', 'DE', 'DUK', 'ECL', 'EOG', 'EQIX', 'GOOGL', 'GS', 'HD', 'HON', 'INTU', 'JPM', 'KO', 'LIN', 'LLY', 'MA', 'MDLZ', 'MRK', 'MS', 'NVDA', 'PEP', 'PG', 'PLD', 'PM', 'RTX', 'SHW', 'SLB', 'SO', 'SPY', 'SRE', 'TMUS', 'TSLA', 'UNP', 'WFC', 'WMT']) — SPREAD_NOT_TOO_WIDE may block execution
+
+---

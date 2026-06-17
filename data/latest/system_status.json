@@ -1,6 +1,6 @@
 {
   "blocking_issues": [],
-  "buying_power": 398905.84,
+  "buying_power": 398896.21,
   "cash": 99552.75,
   "churn_state": {
     "daily_total_limit_reached": false,
@@ -14,35 +14,35 @@
   "current_positions": [
     {
       "avg_entry_price": "1077.631196",
-      "current_price": "1094.68",
-      "market_value": "101.421794",
+      "current_price": "1087.43",
+      "market_value": "100.750084",
       "qty": "0.092649719",
       "symbol": "EQIX",
-      "unrealized_pl": "1.579567"
+      "unrealized_pl": "0.907857"
     },
     {
       "avg_entry_price": "230.135969",
-      "current_price": "235.18",
-      "market_value": "76.643821",
+      "current_price": "232.2448",
+      "market_value": "75.687256",
       "qty": "0.325894297",
       "symbol": "JNJ",
-      "unrealized_pl": "1.643821"
+      "unrealized_pl": "0.687256"
     },
     {
       "avg_entry_price": "218.808",
-      "current_price": "213.5",
-      "market_value": "24.393532",
+      "current_price": "207",
+      "market_value": "23.650872",
       "qty": "0.11425542",
       "symbol": "WELL",
-      "unrealized_pl": "-0.606468"
+      "unrealized_pl": "-1.349128"
     },
     {
       "avg_entry_price": "132.374926",
-      "current_price": "120.99",
-      "market_value": "45.699742",
+      "current_price": "118.16",
+      "market_value": "44.630809",
       "qty": "0.377715036",
       "symbol": "WMT",
-      "unrealized_pl": "-4.300258"
+      "unrealized_pl": "-5.369191"
     }
   ],
   "data_quality_status": "ATTENTION_REQUIRED",
@@ -50,14 +50,14 @@
   "failed_gates": [
     "QUOTE_FRESHNESS"
   ],
-  "generated_at": "2026-06-16T22:57:12Z",
-  "last_alert_count": 15,
+  "generated_at": "2026-06-17T22:51:38Z",
+  "last_alert_count": 13,
   "last_route_count": 14,
-  "latest_account_equity": 99800.91,
-  "latest_plan_id": "trade_plan-20260616T223523-aac6ff24",
+  "latest_account_equity": 99797.47,
+  "latest_plan_id": "trade_plan-20260617T222605-fc02b41c",
   "lineage_status": {
     "complete_count": 0,
-    "generated_at": "2026-06-16T22:52:57Z",
+    "generated_at": "2026-06-17T22:45:20Z",
     "lineage_count": 14,
     "partial_count": 14
   },
@@ -78,7 +78,7 @@
     "warnings": []
   },
   "outcome_summary": {
-    "avg_current_return_pct": -0.000726,
+    "avg_current_return_pct": -0.012477,
     "outcomes_count": 14,
     "source_integrity_status": "ok",
     "tracked_symbols": [
@@ -103,38 +103,38 @@
   "proposed_order_count": 1,
   "proposed_orders": [
     {
-      "limit_price": 91.73,
+      "limit_price": 233.92,
       "notional": 25.0,
       "order_type": "limit",
       "side": "buy",
       "skip_reason": null,
-      "symbol": "SRE"
+      "symbol": "JNJ"
     }
   ],
   "required_operator_actions": [],
   "risk_state": {
-    "drawdown": -2.2e-05,
+    "drawdown": -5.7e-05,
     "drawdown_blocked": false,
     "drawdown_warn": false,
-    "latest_equity": 99800.91,
+    "latest_equity": 99797.47,
     "paused": false,
     "peak_equity": 99803.14,
     "stale": false,
-    "updated_at": "2026-06-16T22:35:20Z"
+    "updated_at": "2026-06-17T22:26:02Z"
   },
   "safe_for_manual_paper_execution": false,
   "safe_for_research_cycle": true,
   "safe_for_scheduled_paper_execution": false,
   "schema_version": "0.1.0",
   "source_integrity_status": "ok",
-  "status_hash": "69dc9941c79ebc3f94896808ef4fa962b1dcb3d71337e7337aa16284c31f1d73",
+  "status_hash": "c3cadc132f114945431ef4d892ed8ae3a7ceebcca51bc33b7b3e2f0082acb86b",
   "trade_plan_approved_for_execution": false,
   "trigger_performance_summary": {
-    "avg_current_return_pct": -0.000726,
+    "avg_current_return_pct": -0.012477,
     "avg_slippage_pct": -0.000247,
     "days": 7,
     "operational_issues": [
-      "Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 67% of candidates \u2014 review spread threshold or data freshness."
+      "Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 62% of candidates \u2014 review spread threshold or data freshness."
     ],
     "recommendation": "needs_more_data",
     "regime_category": "market_regime",
@@ -143,6 +143,6 @@
   },
   "warnings": [
     "Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']",
-    "53 wide-spread symbols (['ABBV', 'ADBE', 'AEP', 'AMD', 'AVGO', 'AXP', 'BAC', 'BKNG', 'CAT', 'CL', 'COP', 'COST', 'CSCO', 'DE', 'DIS', 'DUK', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HD', 'HON', 'INTU', 'ISRG', 'JNJ', 'KO', 'LIN', 'LLY', 'LMT', 'LOW', 'MCD', 'MDLZ', 'META', 'MS', 'MSFT', 'NVDA', 'ORCL', 'PEP', 'PLD', 'PM', 'RTX', 'SHW', 'SLB', 'SO', 'TMO', 'UNH', 'UPS', 'V', 'WELL', 'WFC', 'XOM']) \u2014 SPREAD_NOT_TOO_WIDE may block execution"
+    "50 wide-spread symbols (['AAPL', 'ABT', 'ADBE', 'AEP', 'AMD', 'AMGN', 'AMT', 'AMZN', 'AVGO', 'BLK', 'CAT', 'CL', 'CMCSA', 'COP', 'COST', 'CSCO', 'DE', 'DUK', 'ECL', 'EOG', 'EQIX', 'GOOGL', 'GS', 'HD', 'HON', 'INTU', 'JPM', 'KO', 'LIN', 'LLY', 'MA', 'MDLZ', 'MRK', 'MS', 'NVDA', 'PEP', 'PG', 'PLD', 'PM', 'RTX', 'SHW', 'SLB', 'SO', 'SPY', 'SRE', 'TMUS', 'TSLA', 'UNP', 'WFC', 'WMT']) \u2014 SPREAD_NOT_TOO_WIDE may block execution"
   ]
 }
