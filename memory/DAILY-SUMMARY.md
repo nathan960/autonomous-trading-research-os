@@ -5681,3 +5681,65 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-06-23
+
+**Generated:** 2026-06-23T22:04:25Z  **Run ID:** daily_summary-2026-06-23
+
+### Account & Risk
+- Equity: $99,804.38 | Cash: $99,552.75 | Buying power: $398,915.58
+- Peak: $99,804.38 | Drawdown: 0.00% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $103.58 | +$3.74 (3.75%) |
+| JNJ | long | 0.325894297 | $78.04 | +$3.04 (4.06%) |
+| WELL | long | 0.11425542 | $24.87 | $-0.13 (-0.52%) |
+| WMT | long | 0.377715036 | $45.14 | $-4.86 (-9.73%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+8.44%, breadth=62.03%)
+- Candidates: 17 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-06-23T22:04:24Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260623T220424-c1b61181`
+- Generated: 2026-06-23T22:04:24Z | Expires: 2026-06-24T04:04:24Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - AEP BUY $25.00 @ $133.68 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260623T220424-850a4bca`
+- All gates pass: NO
+- Failed gates: QUOTE_FRESHNESS
+
+### Dry Runs Today (1)
+- Pass: 0 | Fail: 1
+  - QUOTE_FRESHNESS: 1x
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260623T220424-90df8ed0
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
