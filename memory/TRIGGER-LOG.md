@@ -4848,3 +4848,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "f4ae7f6c66315f737351c1917ad1dec53bc4b73a706b3ae2e759439eb9db7edd"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6708860759493671,
+  "breadth_ok": true,
+  "candidates_count": 14,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-06-24T22:00:53Z",
+  "selected": [
+    "MRK",
+    "GE",
+    "WELL",
+    "AAPL",
+    "LLY",
+    "PLD",
+    "XOM",
+    "NEE",
+    "BAC",
+    "SRE"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.15237358333333334,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "d765a8d081a95c959a3d06c21aed2f436ecb97bca45d1e056d564a6df9552c5f"
+}
+```
