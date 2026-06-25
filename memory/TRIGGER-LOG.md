@@ -4912,3 +4912,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "14b4693c64576d27f127371e91be8099b79c5071bfccd5a23267786d22b1f8f7"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6329113924050633,
+  "breadth_ok": true,
+  "candidates_count": 10,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-06-25T22:10:20Z",
+  "selected": [
+    "JNJ",
+    "SLB",
+    "WELL",
+    "UNH",
+    "NVDA",
+    "LIN",
+    "COP",
+    "SBUX",
+    "SRE",
+    "SO"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.12966161666666667,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "6f9392e094840ff0fda483076616469317aef9aca187c9670e004aaceb10993d"
+}
+```
