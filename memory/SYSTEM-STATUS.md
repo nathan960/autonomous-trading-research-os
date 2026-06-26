@@ -491,3 +491,16 @@
 - 61 wide-spread symbols (['AAPL', 'ABBV', 'ABT', 'ADBE', 'AEP', 'AMD', 'AMGN', 'AMT', 'APD', 'AVGO', 'AXP', 'BA', 'BAC', 'BKNG', 'CAT', 'CL', 'CMCSA', 'COST', 'CRM', 'CSCO', 'CVX', 'DE', 'DUK', 'ECL', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HON', 'INTU', 'ISRG', 'JPM', 'KO', 'LLY', 'LMT', 'LOW', 'MCD', 'MDLZ', 'MRK', 'MS', 'MSFT', 'NEE', 'NFLX', 'NKE', 'O', 'ORCL', 'PEP', 'PG', 'PLD', 'PM', 'RTX', 'TMO', 'TMUS', 'UNP', 'UPS', 'V', 'WFC', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
 
 ---
+## System Status — 2026-06-26T22:22:15Z
+
+**Overall:** YELLOW  | Research: YES  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,806.31  drawdown=-0.00%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260626T215150-fad49b07  approved=False
+**Dry-run gates:** FAIL  failed=['QUOTE_FRESHNESS']
+
+**Warnings:**
+- Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']
+- 51 wide-spread symbols (['ABBV', 'ABT', 'AEP', 'AMD', 'AMGN', 'AMT', 'AMZN', 'AXP', 'BAC', 'BLK', 'CAT', 'CL', 'COP', 'CRM', 'CSCO', 'DE', 'ECL', 'EOG', 'EQIX', 'FCX', 'GE', 'GS', 'INTU', 'ISRG', 'LMT', 'LOW', 'MA', 'MCD', 'MDLZ', 'META', 'MRK', 'MS', 'NEE', 'NVDA', 'O', 'ORCL', 'PEP', 'PLD', 'RTX', 'SBUX', 'SHW', 'SLB', 'SO', 'SRE', 'TMO', 'TSLA', 'UPS', 'WELL', 'WFC', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
+
+---
