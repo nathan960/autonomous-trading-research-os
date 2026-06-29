@@ -5040,3 +5040,34 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "36a5ad7607868e8951393b5eb78f04551ee214aee0d8d6b6e3afa6d27cf99c36"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.5949367088607594,
+  "breadth_ok": true,
+  "candidates_count": 10,
+  "data_stale_gate_passes": true,
+  "excluded_count": 70,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-06-29T21:59:09Z",
+  "selected": [
+    "AMD",
+    "EQIX",
+    "MRK",
+    "WELL",
+    "LLY",
+    "NEE",
+    "RTX",
+    "SRE",
+    "AMZN"
+  ],
+  "selected_count": 9,
+  "snapshot_age_minutes": 0.06654045,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "41737f409ccee9e52d887b96bb30bfa8335cd312a19c485adf4dc9d7b09f207b"
+}
+```
