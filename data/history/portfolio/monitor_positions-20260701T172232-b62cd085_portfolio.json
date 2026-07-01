@@ -1,6 +1,12 @@
 {
-  "data_hash": "7e8f2b87013dce3db64c729665539c6ef6e4e33ffba375743e493ffb653e2370",
-  "fetched_at": "2026-07-01T17:22:29Z",
+  "data_hash": "c91d24b350a5e282e948a95e6e7f3b9f1251cb2b6cb7d77f10b5dff9f5ca601d",
+  "drawdown": -9.2e-05,
+  "dry_run": false,
+  "equity": 99797.59,
+  "generated_at": "2026-07-01T17:22:32Z",
+  "open_order_count": 0,
+  "orders_summary": [],
+  "peak_equity": 99806.81,
   "position_count": 4,
   "positions": [
     {
@@ -55,21 +61,21 @@
       "asset_marginable": true,
       "avg_entry_price": "218.808",
       "avg_entry_swap_rate": null,
-      "change_today": "0.01776",
+      "change_today": "0.01758",
       "cost_basis": "25",
-      "current_price": "231",
+      "current_price": "230.96",
       "exchange": "NYSE",
       "lastday_price": "226.97",
-      "market_value": "26.393002",
+      "market_value": "26.388432",
       "qty": "0.11425542",
       "qty_available": "0.11425542",
       "side": "long",
       "swap_rate": null,
       "symbol": "WELL",
-      "unrealized_intraday_pl": "0.460449",
-      "unrealized_intraday_plpc": "0.01776",
-      "unrealized_pl": "1.393002",
-      "unrealized_plpc": "0.05572",
+      "unrealized_intraday_pl": "0.455879",
+      "unrealized_intraday_plpc": "0.01758",
+      "unrealized_pl": "1.388432",
+      "unrealized_plpc": "0.05554",
       "usd": null
     },
     {
@@ -96,6 +102,7 @@
       "usd": null
     }
   ],
+  "run_id": "monitor_positions-20260701T172232-b62cd085",
   "schema_version": "0.1.0",
   "source": "alpaca_paper"
 }
