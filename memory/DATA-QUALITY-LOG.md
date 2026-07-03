@@ -6790,3 +6790,45 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-07-03T16:55:15Z",
+  "insufficient_bars_count": 0,
+  "issues": [
+    "wide_spreads"
+  ],
+  "market_data_hash": "49e7e4c6917a41b34340e4aa6ff8a7f8872251ebf7dbf1769331d7a79efb0498",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260703T165509",
+  "snapshot_age_minutes": 0.07082013333333334,
+  "snapshot_fetched_at": "2026-07-03T16:55:11Z",
+  "status": "ATTENTION_REQUIRED",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+## Spread Diagnostics — 2026-07-03T16:55:15Z
+
+**Run ID:** `spread_diagnostics-20260703T165515-8aa03f8d`  **Market open:** False  **Feed:** iex
+
+**Total:** 81  **Pass:** 2  **Fail:** 79  **Block rate:** 98%  **max_spread_pct:** 0.02
+
+**Failure classes:**
+- pass: 2
+- zero_bid_or_ask: 26
+- off_hours_quote: 53
+
+- 79/81 symbols (98%) fail the spread gate.
+- Market is CLOSED (clock timestamp: 2026-07-03T16:55:11Z, next open: 2026-07-06T13:30:00Z). Off-hours quotes are unreliable for spread gate evaluation.
+- 26 symbols have ask_price=0.0 (zero_bid_or_ask). This is a known IEX behavior at/after market close — ask liquidity disappears from the IEX venue. These symbols produce spread_pct=null and are blocked.
+- 53 symbols have computed spread_pct > threshold while market is closed. IEX closing-print bid-ask spreads typically range 8–12% and are not representative of intraday liquidity.
+- Data feed is IEX. IEX is an alternative trading venue with partial market coverage. Quotes reflect IEX-venue activity only, not the National Best Bid and Offer (NBBO). After-hours IEX spreads are structurally wide regardless of underlying liquidity.
+
+- [HIGH] rerun_during_market_hours: Market is closed. 53 symbols show off_hours_quote and 26 show zero_bid_or_ask — both are consistent with post-close IEX quote behavior. Re-run diagnose_spreads.py during market hours (next open: 2026-07-06T13:30:00Z) to evaluate spread gate performance with valid quotes.
+- [MEDIUM] verify_alpaca_data_feed: ALPACA_DATA_FEED=iex. IEX quotes are venue-specific and unreliable after hours. If a SIP (Nasdaq/NYSE consolidated tape) subscription is available and has been explicitly approved, verify by checking Alpaca account data permissions. Do not switch to SIP feed without confirming subscription and approval.
+- [MEDIUM] inspect_quote_timestamps: 26 symbols returned ask_price=0.0. Inspect quote timestamps to confirm these are close-of-day IEX prints. If timestamps are at market close (20:00 UTC in EDT), these symbols will likely pass spread gate when re-evaluated during market hours.
+- [INFO] keep_threshold_unchanged: max_quote_spread_pct=0.02 remains unchanged. Do not adjust the spread threshold based on off-hours or data-quality diagnostic results. A threshold review requires evidence of persistent wide spreads during market hours across multiple days of intraday trigger scans.
