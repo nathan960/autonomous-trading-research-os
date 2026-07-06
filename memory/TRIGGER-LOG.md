@@ -5359,3 +5359,31 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "6f3173f27e2319d6fc3bf480e4dd8254a5eec6feb9884d35bbf5a653d343c199"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6708860759493671,
+  "breadth_ok": true,
+  "candidates_count": 6,
+  "data_stale_gate_passes": true,
+  "excluded_count": 73,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-06T22:02:53Z",
+  "selected": [
+    "LLY",
+    "UNH",
+    "FCX",
+    "NEE",
+    "PM",
+    "AMZN"
+  ],
+  "selected_count": 6,
+  "snapshot_age_minutes": 0.1124901,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "d654360ea2c5cbc89cb0a85f85750ddf3cf17bd513def22ae7ea4beeef51e388"
+}
+```
