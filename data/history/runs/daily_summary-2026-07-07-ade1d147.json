@@ -1,0 +1,170 @@
+{
+  "account": {
+    "buying_power": 398914.5,
+    "cash": 99552.75,
+    "equity": 99804.0,
+    "fetched_at": "2026-07-07T22:00:06Z",
+    "position_count": 4,
+    "source": "alpaca_paper"
+  },
+  "alert_routes": {
+    "approved_trade_plan_created_any": false,
+    "by_action": {
+      "logged": 1,
+      "refresh_requested": 4
+    },
+    "execution_called_any": false,
+    "routes_today": 0,
+    "total_routes": 5
+  },
+  "alerts": {
+    "by_next_step": {
+      "log_only": 1,
+      "request_data_refresh": 5,
+      "request_trade_plan_unapproved": 17
+    },
+    "by_source": {
+      "test": 2,
+      "tradingview": 21
+    },
+    "ingested_today": 0,
+    "total_count": 23
+  },
+  "data_quality": {
+    "available": true,
+    "generated_at": "2026-05-12T15:33:05Z",
+    "insufficient_bars_count": 0,
+    "issues_count": 0,
+    "missing_bars_count": 0,
+    "missing_quotes_count": 0,
+    "status": "PASS",
+    "wide_spreads_count": 0
+  },
+  "date": "2026-07-07",
+  "dry_runs": {
+    "all_pass_count": 0,
+    "count": 0,
+    "fail_count": 0,
+    "failing_gates": {},
+    "latest": null
+  },
+  "execution_report": {
+    "all_gates_pass": false,
+    "available": true,
+    "dry_run": true,
+    "failed_gates": [
+      "QUOTE_FRESHNESS"
+    ],
+    "generated_at": "2026-07-07T22:00:14Z",
+    "orders_submitted_count": 0,
+    "run_id": "execution-20260707T220014-21926ccf",
+    "status": "DRY_RUN_FAIL"
+  },
+  "generated_at": "2026-07-07T22:11:17Z",
+  "open_orders": [],
+  "order_monitor": {
+    "available": true,
+    "generated_at": "2026-07-07T22:00:14Z",
+    "latest_run_id": "order_monitor-20260707T220014-e61b1e68",
+    "orders_active": 0,
+    "orders_canceled": 0,
+    "orders_expired": 0,
+    "orders_filled": 14,
+    "orders_missing": 0,
+    "orders_rejected": 0,
+    "orders_tracked": 14,
+    "runs_today": 2
+  },
+  "paper_executions": {
+    "count": 0,
+    "runs": [],
+    "total_orders_submitted": 0
+  },
+  "positions": [
+    {
+      "avg_entry_price": 1077.631196,
+      "market_value": 94.774177,
+      "qty": "0.092649719",
+      "side": "long",
+      "symbol": "EQIX",
+      "unrealized_pl": -5.06805,
+      "unrealized_plpc": -0.05076
+    },
+    {
+      "avg_entry_price": 230.135969,
+      "market_value": 87.176724,
+      "qty": "0.325894297",
+      "side": "long",
+      "symbol": "JNJ",
+      "unrealized_pl": 12.176724,
+      "unrealized_plpc": 0.16236
+    },
+    {
+      "avg_entry_price": 218.808,
+      "market_value": 27.150515,
+      "qty": "0.11425542",
+      "side": "long",
+      "symbol": "WELL",
+      "unrealized_pl": 2.150515,
+      "unrealized_plpc": 0.08602
+    },
+    {
+      "avg_entry_price": 132.374926,
+      "market_value": 42.149221,
+      "qty": "0.377715036",
+      "side": "long",
+      "symbol": "WMT",
+      "unrealized_pl": -7.850779,
+      "unrealized_plpc": -0.15702
+    }
+  ],
+  "risk_state": {
+    "drawdown": -2.8e-05,
+    "latest_equity": 99804.0,
+    "peak_equity": 99806.81,
+    "position_count": 4,
+    "updated_at": "2026-07-07T22:00:11Z"
+  },
+  "run_id": "daily_summary-2026-07-07",
+  "status": "ok",
+  "summary_hash": "ade1d1473bce8dec",
+  "trade_plan": {
+    "all_risk_checks_pass": true,
+    "approval_reason": "approve_paper_flag_not_set",
+    "approve_paper_flag": false,
+    "approved_for_execution": false,
+    "available": true,
+    "blocked_symbols_count": 81,
+    "expires_at": "2026-07-08T04:00:14Z",
+    "failed_risk_checks": [],
+    "generated_at": "2026-07-07T22:00:14Z",
+    "plan_id": "trade_plan-20260707T220014-6ee6690d",
+    "proposed_orders": [
+      {
+        "limit_price": 267.16,
+        "notional": 25.0,
+        "order_type": "limit",
+        "side": "buy",
+        "symbol": "JNJ",
+        "time_in_force": "day",
+        "would_short": false
+      }
+    ],
+    "proposed_orders_count": 1,
+    "trading_mode": "paper"
+  },
+  "trigger_scan": {
+    "available": true,
+    "breadth_ok": true,
+    "breadth_pct": 0.6835443037974683,
+    "candidates_count": 18,
+    "excluded_count": 69,
+    "risk_on": true,
+    "scanned_at": "2026-07-07T22:00:14Z",
+    "selected_count": 10,
+    "spy_200dma": 693.1585499999997,
+    "spy_6m_roc": 0.09430289903853173,
+    "spy_close": 747.77,
+    "spy_passes_200dma": true
+  }
+}
