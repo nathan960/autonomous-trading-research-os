@@ -5483,3 +5483,34 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "60e39b2b3bbe381f23b65d44ff868aeb882171f147eeb40765c383b2cfd24b88"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6329113924050633,
+  "breadth_ok": true,
+  "candidates_count": 9,
+  "data_stale_gate_passes": true,
+  "excluded_count": 70,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-08T21:47:45Z",
+  "selected": [
+    "AMD",
+    "GOOGL",
+    "MRK",
+    "EQIX",
+    "GE",
+    "EOG",
+    "UNP",
+    "AMGN",
+    "DUK"
+  ],
+  "selected_count": 9,
+  "snapshot_age_minutes": 0.09060135,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "875f7808c99000b8218140458b34df9801b69734eb87ffa8b01ea8f589b2a054"
+}
+```
