@@ -7342,3 +7342,64 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-07-10
+
+**Generated:** 2026-07-10T22:04:11Z  **Run ID:** daily_summary-2026-07-10
+
+### Account & Risk
+- Equity: $99,803.41 | Cash: $99,552.75 | Buying power: $398,912.86
+- Peak: $99,806.81 | Drawdown: -0.00% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $97.39 | $-2.45 (-2.45%) |
+| JNJ | long | 0.325894297 | $83.77 | +$8.77 (11.69%) |
+| WELL | long | 0.11425542 | $26.46 | +$1.46 (5.84%) |
+| WMT | long | 0.377715036 | $43.04 | $-6.96 (-13.92%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+9.47%, breadth=67.09%)
+- Candidates: 21 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-07-10T21:40:48Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260710T214049-1f07822a`
+- Generated: 2026-07-10T21:40:49Z | Expires: 2026-07-11T03:40:49Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - JNJ BUY $25.00 @ $256.93 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260710T214049-d5b36c7a`
+- All gates pass: NO
+- Failed gates: QUOTE_FRESHNESS
+
+### Dry Runs Today (0)
+- Pass: 0 | Fail: 0
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260710T214048-7ba5ccfc
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
