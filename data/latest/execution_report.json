@@ -1,8 +1,10 @@
 {
-  "all_gates_pass": true,
+  "all_gates_pass": false,
   "dry_run": true,
-  "execution_report_hash": "82c4d28c8ecb2d0bc136f154556c13c7946a83f2e9575cba8bc0f50da671b27c",
-  "failed_gates": [],
+  "execution_report_hash": "9292d2a4ae4e3254761860c91b80cf5534d74129610340f36776b0a271b0bdd8",
+  "failed_gates": [
+    "QUOTE_FRESHNESS"
+  ],
   "gate_results": [
     {
       "detail": null,
@@ -30,7 +32,7 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "[dry-run] market is_open=False at 2026-07-10T21:40:41Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -65,9 +67,9 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "stale quotes (>90.0min): ['JNJ(101min)']",
       "gate_id": "QUOTE_FRESHNESS",
-      "passes": true
+      "passes": false
     },
     {
       "detail": null,
@@ -95,24 +97,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-07-10T17:05:55Z",
+  "generated_at": "2026-07-10T21:40:49Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260710T170555-WMT-SELL",
+      "client_order_id": "TOS-20260710T214049-JNJ-BUY",
       "execution_ready": true,
-      "limit_price": 113.76,
+      "limit_price": 256.93,
       "notional": 25.0,
       "order_type": "limit",
-      "side": "sell",
-      "symbol": "WMT",
-      "target_weight": 0.0,
+      "side": "buy",
+      "symbol": "JNJ",
+      "target_weight": 0.11642928,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260710T170555-3a543c84",
-  "run_id": "execution-20260710T170555-f2f2ad4d",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "9433606511ac5d86cc814c91f5e0b89bbf48b32b5dba204b42406398001580d7"
+  "plan_id": "trade_plan-20260710T214049-1f07822a",
+  "run_id": "execution-20260710T214049-d5b36c7a",
+  "status": "DRY_RUN_FAIL",
+  "trade_plan_hash": "bbd6d5b2a4413b1309c7e7d3ad865c6b535ff8a2bdd92b808df5b849f44bef1c"
 }
