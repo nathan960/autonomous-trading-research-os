@@ -7957,3 +7957,64 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-07-17
+
+**Generated:** 2026-07-17T21:55:03Z  **Run ID:** daily_summary-2026-07-17
+
+### Account & Risk
+- Equity: $99,800.48 | Cash: $99,552.75 | Buying power: $398,904.64
+- Peak: $99,806.81 | Drawdown: -0.01% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $94.50 | $-5.34 (-5.35%) |
+| JNJ | long | 0.325894297 | $82.30 | +$7.30 (9.73%) |
+| WELL | long | 0.11425542 | $27.79 | +$2.79 (11.17%) |
+| WMT | long | 0.377715036 | $43.13 | $-6.87 (-13.74%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+7.63%, breadth=69.62%)
+- Candidates: 10 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-07-17T21:32:14Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260717T213215-7f950558`
+- Generated: 2026-07-17T21:32:15Z | Expires: 2026-07-18T03:32:15Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - UNP BUY $25.00 @ $301.65 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260717T213215-a52ef8b2`
+- All gates pass: NO
+- Failed gates: QUOTE_FRESHNESS
+
+### Dry Runs Today (0)
+- Pass: 0 | Fail: 0
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260717T213214-09caf481
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
