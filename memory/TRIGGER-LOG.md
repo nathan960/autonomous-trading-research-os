@@ -5930,3 +5930,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "b59831fda90686775ed2b745e02ef0784f073593179952545819a089a0db46cf"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6962025316455697,
+  "breadth_ok": true,
+  "candidates_count": 10,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-17T21:32:14Z",
+  "selected": [
+    "MS",
+    "JNJ",
+    "UNP",
+    "BAC",
+    "GE",
+    "COP",
+    "AMGN",
+    "KO",
+    "CL",
+    "AMZN"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.08332585,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "13cde0488305a8538b8fefb58427f11ae1eebe0b888b82b65ce92427d0a9672c"
+}
+```
