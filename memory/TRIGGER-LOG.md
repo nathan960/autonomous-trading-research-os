@@ -5962,3 +5962,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "13cde0488305a8538b8fefb58427f11ae1eebe0b888b82b65ce92427d0a9672c"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6582278481012658,
+  "breadth_ok": true,
+  "candidates_count": 21,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-20T16:43:14Z",
+  "selected": [
+    "GOOGL",
+    "AAPL",
+    "UNH",
+    "ABBV",
+    "XOM",
+    "BAC",
+    "AVGO",
+    "COP",
+    "GE",
+    "AEP"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.08205926666666666,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "dac3ba5eb146b4ba79ed763cba3b339c5aacd54a815fc7035768f8157166c98a"
+}
+```
