@@ -5994,3 +5994,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "dac3ba5eb146b4ba79ed763cba3b339c5aacd54a815fc7035768f8157166c98a"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6455696202531646,
+  "breadth_ok": true,
+  "candidates_count": 17,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-20T21:48:22Z",
+  "selected": [
+    "CSCO",
+    "WELL",
+    "MRK",
+    "LLY",
+    "MS",
+    "UNP",
+    "BAC",
+    "AVGO",
+    "DE",
+    "SBUX"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.13602861666666666,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "fc98e7d06adf9c749e694a48faca5e9c1cffd81a4eb257ec5146ab4c572490d3"
+}
+```
