@@ -1,0 +1,126 @@
+{
+  "event_type": "dry_run",
+  "run_id": "execution-20260721T214528-2bdba340",
+  "generated_at": "2026-07-21T21:45:28Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "run_id": "execution-20260721T214528-2bdba340",
+    "plan_id": "trade_plan-20260721T214528-45e9c078",
+    "generated_at": "2026-07-21T21:45:28Z",
+    "dry_run": true,
+    "trade_plan_hash": "239c0027852cb865a3ccdff17c23c99b4b5032175afad416759808ae413e4747",
+    "gate_results": [
+      {
+        "gate_id": "TRADING_MODE_PAPER",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "ALPACA_PAPER_MODE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "CANONICAL_SOURCE_INTEGRITY",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_EXISTS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_NOT_EXPIRED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "MARKET_CLOCK_OPEN",
+        "passes": true,
+        "detail": "[dry-run] market is_open=False at 2026-07-21T21:45:23Z"
+      },
+      {
+        "gate_id": "ACCOUNT_NOT_BLOCKED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_STATE_NOT_PAUSED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "POSITIONS_MATCH_SNAPSHOT",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_DUPLICATE_OPEN_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "UNIVERSE_MEMBERSHIP",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "SYMBOLS_TRADABLE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "QUOTE_FRESHNESS",
+        "passes": false,
+        "detail": "stale quotes (>90.0min): ['WMT(105min)']"
+      },
+      {
+        "gate_id": "SPREAD_NOT_TOO_WIDE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_LIMITS_RESPECTED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_PROHIBITED_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "EXECUTION_LOG_WRITABLE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "DAILY_ORDER_LIMITS",
+        "passes": true,
+        "detail": null
+      }
+    ],
+    "all_gates_pass": false,
+    "failed_gates": [
+      "QUOTE_FRESHNESS"
+    ],
+    "orders_validated": [
+      {
+        "symbol": "WMT",
+        "side": "sell",
+        "order_type": "limit",
+        "limit_price": 110.09,
+        "notional": 25.0,
+        "target_weight": 0.0,
+        "client_order_id": "TOS-20260721T214528-WMT-SELL",
+        "execution_ready": true,
+        "validation_skip_reason": null
+      }
+    ],
+    "orders_submitted": [],
+    "no_submit_reason": "dry_run_mode",
+    "status": "DRY_RUN_FAIL",
+    "execution_report_hash": "40fb894e199eba7b493b91525b37e5d432ba0dbe7626ec7bb1ceb0681eee4907"
+  }
+}
