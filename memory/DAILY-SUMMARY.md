@@ -8264,3 +8264,65 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-07-22
+
+**Generated:** 2026-07-22T21:43:29Z  **Run ID:** daily_summary-2026-07-22
+
+### Account & Risk
+- Equity: $99,800.81 | Cash: $99,552.75 | Buying power: $398,905.56
+- Peak: $99,806.81 | Drawdown: -0.01% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $95.31 | $-4.53 (-4.54%) |
+| JNJ | long | 0.325894297 | $83.43 | +$8.43 (11.24%) |
+| WELL | long | 0.11425542 | $28.00 | +$3.00 (11.99%) |
+| WMT | long | 0.377715036 | $41.32 | $-8.68 (-17.36%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+10.30%, breadth=64.56%)
+- Candidates: 10 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-07-22T21:43:28Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260722T214328-0b021f40`
+- Generated: 2026-07-22T21:43:28Z | Expires: 2026-07-23T03:43:28Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - V BUY $25.00 @ $353.42 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260722T214328-c46db8a7`
+- All gates pass: NO
+- Failed gates: QUOTE_FRESHNESS
+
+### Dry Runs Today (1)
+- Pass: 0 | Fail: 1
+  - QUOTE_FRESHNESS: 1x
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260722T214328-c2185bef
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---

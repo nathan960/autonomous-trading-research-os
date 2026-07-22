@@ -8132,3 +8132,24 @@ Data refreshes and quality reviews are logged here.
 
 - [MEDIUM] verify_alpaca_data_feed: ALPACA_DATA_FEED=iex. IEX quotes are venue-specific and unreliable after hours. If a SIP (Nasdaq/NYSE consolidated tape) subscription is available and has been explicitly approved, verify by checking Alpaca account data permissions. Do not switch to SIP feed without confirming subscription and approval.
 - [INFO] keep_threshold_unchanged: max_quote_spread_pct=0.02 remains unchanged. Do not adjust the spread threshold based on off-hours or data-quality diagnostic results. A threshold review requires evidence of persistent wide spreads during market hours across multiple days of intraday trigger scans.
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-07-22T21:43:26Z",
+  "insufficient_bars_count": 0,
+  "issues": [
+    "wide_spreads"
+  ],
+  "market_data_hash": "8f611341b059109f175d688ca4c9e13489175490834b55af691ee1558e95ae25",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260722T214323",
+  "snapshot_age_minutes": 0.033494750000000004,
+  "snapshot_fetched_at": "2026-07-22T21:43:24Z",
+  "status": "ATTENTION_REQUIRED",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```

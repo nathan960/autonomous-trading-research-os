@@ -6121,3 +6121,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "55db8e0f3755ece78b6d6d4919949cf844008043718b3b1810b36fa8a21cf804"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6455696202531646,
+  "breadth_ok": true,
+  "candidates_count": 10,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-22T21:43:28Z",
+  "selected": [
+    "CAT",
+    "AAPL",
+    "EQIX",
+    "XOM",
+    "ABBV",
+    "COP",
+    "FCX",
+    "SBUX",
+    "AMZN",
+    "V"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.08722003333333334,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "aa7f9531bcb5445bf4d0f775932fdc5e492643c7282aceedde827ffae0ec77f1"
+}
+```
