@@ -6185,3 +6185,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "e8dddc0810d00eca9c5b316ce8f6437919cd5eb40afa9e2c58deea9f0b50ef5d"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6329113924050633,
+  "breadth_ok": true,
+  "candidates_count": 11,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-23T21:41:27Z",
+  "selected": [
+    "AMD",
+    "MS",
+    "UNH",
+    "XOM",
+    "EQIX",
+    "BAC",
+    "NVDA",
+    "AMGN",
+    "KO",
+    "HON"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.08363001666666667,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "7c7016986cd4321088e369744805ae2bb50588512e64172b2fa07d25bff9f2bf"
+}
+```
