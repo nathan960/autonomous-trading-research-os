@@ -6249,3 +6249,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "0e06db343a88ae5fbc0d8f136c6c81882734e678fe97c07910198461e0a45e30"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.620253164556962,
+  "breadth_ok": true,
+  "candidates_count": 16,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-24T21:44:41Z",
+  "selected": [
+    "CSCO",
+    "AAPL",
+    "JNJ",
+    "EQIX",
+    "EOG",
+    "XOM",
+    "PLD",
+    "FCX",
+    "DE",
+    "AEP"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.13433403333333332,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "5d64c56d229137c532076815ad967c33551ee5c0968b617a050a1ee6bf70c03b"
+}
+```
