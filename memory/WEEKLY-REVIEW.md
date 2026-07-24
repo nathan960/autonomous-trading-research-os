@@ -821,3 +821,54 @@ None identified.
 - 14 order fill(s) confirmed by order monitor.
 
 ---
+## Weekly Review — 2026-07-18 to 2026-07-24 (7 days)
+
+**Generated:** 2026-07-24T22:33:51Z  **Run ID:** weekly_review-2026-07-24
+
+### Trigger Scans
+- Total runs: 0 | Risk-on: 0 | Risk-off: 0
+- Avg candidates: 0.0 | Avg excluded: 0.0
+
+### Dry Runs
+- Total: 0 | Pass: 0 | Fail: 0
+
+### Paper Executions
+- Attempts: 0 | Orders submitted: 0
+
+### Order Lifecycle
+- Monitor runs: 10 | Unique orders: 14
+- Fills: 14 | Partial: 0 | Missing: 0 | Expired: 0 | Rejected: 0 | Canceled: 0
+- Latest lifecycle by order (14):
+  - TOS-20260513T160035-WELL-BUY | WELL buy | status=filled fill=$218.808 qty=0.11425542 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260513T192526-JNJ-BUY | JNJ buy | status=filled fill=$230.248 qty=0.108578576 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260513T192934-EQIX-BUY | EQIX buy | status=filled fill=$1084.37 qty=0.023054861 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T145625-EQIX-BUY | EQIX buy | status=filled fill=$1079.5 qty=0.023158869 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T154323-JNJ-BUY | JNJ buy | status=filled fill=$230.116 qty=0.108640859 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T154543-EQIX-SELL | EQIX sell | status=filled fill=$1078.442 qty=0.023181589 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T154817-EQIX-BUY | EQIX buy | status=filled fill=$1078.41 qty=0.023182277 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T163113-EQIX-BUY | EQIX buy | status=filled fill=$1076.89 qty=0.023214998 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T165232-WMT-BUY | WMT buy | status=filled fill=$132.276 qty=0.18899876 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T171739-JNJ-BUY | JNJ buy | status=filled fill=$230.044 qty=0.108674862 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T171844-WMT-BUY | WMT buy | status=filled fill=$132.474 qty=0.188716276 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T172103-EQIX-BUY | EQIX buy | status=filled fill=$1076.82 qty=0.023216507 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T172226-EQIX-SELL | EQIX sell | status=filled fill=$1076.718 qty=0.023218707 notional=$25.0 | checked=2026-07-24T21:44:40Z
+  - TOS-20260514T172335-EQIX-BUY | EQIX buy | status=filled fill=$1076.542 qty=0.023222503 notional=$25.0 | checked=2026-07-24T21:44:40Z
+
+### External Alerts
+- Ingested this period: 0 (all-time: 23)
+- Routes this period: 0 (all-time: 5)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+
+### Risk State
+- Equity: $99,809.09 | Peak: $99,809.69 | Drawdown: -0.00% | Positions: 4
+- Last updated: 2026-07-24T21:44:38Z
+
+### Operational Issues (0)
+None identified.
+
+### Research Observations
+- No paper executions this period.
+- 14 order fill(s) confirmed by order monitor.
+
+---
