@@ -6281,3 +6281,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "5d64c56d229137c532076815ad967c33551ee5c0968b617a050a1ee6bf70c03b"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6455696202531646,
+  "breadth_ok": true,
+  "candidates_count": 28,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-27T17:06:15Z",
+  "selected": [
+    "AMD",
+    "CAT",
+    "AAPL",
+    "JNJ",
+    "MRK",
+    "SLB",
+    "XOM",
+    "RTX",
+    "BAC",
+    "FCX"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.08341326666666667,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "f9ab010ab596d557cbd68ccd36c23d4ef179b6e155317e1a7570b96138e4b518"
+}
+```
