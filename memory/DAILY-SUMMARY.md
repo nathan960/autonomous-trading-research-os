@@ -8633,3 +8633,65 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-07-27
+
+**Generated:** 2026-07-27T21:47:13Z  **Run ID:** daily_summary-2026-07-27
+
+### Account & Risk
+- Equity: $99,808.50 | Cash: $99,552.75 | Buying power: $398,927.10
+- Peak: $99,809.69 | Drawdown: -0.00% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $96.98 | $-2.86 (-2.86%) |
+| JNJ | long | 0.325894297 | $86.95 | +$11.95 (15.93%) |
+| WELL | long | 0.11425542 | $29.59 | +$4.59 (18.37%) |
+| WMT | long | 0.377715036 | $42.23 | $-7.77 (-15.55%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+7.20%, breadth=65.82%)
+- Candidates: 13 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-07-27T21:47:12Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260727T214713-d4331e7f`
+- Generated: 2026-07-27T21:47:13Z | Expires: 2026-07-28T03:47:13Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - NEE BUY $25.00 @ $88.81 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260727T214713-70331527`
+- All gates pass: NO
+- Failed gates: QUOTE_FRESHNESS
+
+### Dry Runs Today (1)
+- Pass: 0 | Fail: 1
+  - QUOTE_FRESHNESS: 1x
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260727T214712-294205cc
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---

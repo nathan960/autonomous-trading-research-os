@@ -6313,3 +6313,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "f9ab010ab596d557cbd68ccd36c23d4ef179b6e155317e1a7570b96138e4b518"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6582278481012658,
+  "breadth_ok": true,
+  "candidates_count": 13,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-27T21:47:12Z",
+  "selected": [
+    "AMD",
+    "AAPL",
+    "WELL",
+    "XOM",
+    "ABBV",
+    "PLD",
+    "JPM",
+    "COP",
+    "AEP",
+    "NEE"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.06546748333333334,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "fc10dfd038f0057ac36a3dfba841b6ed0b0edaa6d648bab641c53b82a500c793"
+}
+```
