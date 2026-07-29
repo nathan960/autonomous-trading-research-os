@@ -6438,3 +6438,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "3aca665ff3f37e0851aa5f4bd3927d0db967820001964e06e1329ea10df1c982"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6582278481012658,
+  "breadth_ok": true,
+  "candidates_count": 14,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-29T21:35:26Z",
+  "selected": [
+    "CAT",
+    "EOG",
+    "EQIX",
+    "PLD",
+    "JPM",
+    "LIN",
+    "SBUX",
+    "V",
+    "CL",
+    "DUK"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.11931406666666668,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "9b3f324d88e127b0c0a2b649b7529797c74cf97f3fb821510ea884907ffac8a2"
+}
+```
