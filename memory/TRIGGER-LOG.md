@@ -6566,3 +6566,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "1f3236935a4ad7dd67cc69f23409909e07160c632e860a8973f8abf06ba956a6"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6708860759493671,
+  "breadth_ok": true,
+  "candidates_count": 13,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-07-31T21:45:41Z",
+  "selected": [
+    "GOOGL",
+    "AAPL",
+    "LLY",
+    "MS",
+    "GE",
+    "EQIX",
+    "KO",
+    "PLD",
+    "AMGN",
+    "JPM"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.09041165000000001,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "414b86d036b1469262bcf95d0998fd99772b4f4322cecab0aec78cdf80a6c685"
+}
+```
