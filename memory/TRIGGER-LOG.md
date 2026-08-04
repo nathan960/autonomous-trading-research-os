@@ -6694,3 +6694,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "2ecc864e51e01130f8f065d22a3442abfaf91cf120692c065af70aa1f1806271"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6835443037974683,
+  "breadth_ok": true,
+  "candidates_count": 16,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-08-04T21:54:50Z",
+  "selected": [
+    "AMD",
+    "CAT",
+    "AVGO",
+    "XOM",
+    "AMGN",
+    "AMZN",
+    "COP",
+    "JPM",
+    "PLD",
+    "DE"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.0751272,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "00db3c3eeb792840fb3ea2956be229df4db44c7a7ac70c77d4365b5469e54a58"
+}
+```
