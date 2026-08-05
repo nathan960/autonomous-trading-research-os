@@ -29800,3 +29800,29 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
 - EQIX BUY cid=TOS-20260514T172335-EQIX-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
 
 ---
+
+## scan_triggers candidates  (2026-08-05T16:50:53Z)
+
+```
+  AMD       score=1.3880  atr_pct=0.0794  [SELECTED]
+  CAT       score=0.6588  atr_pct=0.0465  [SELECTED]
+  CSCO      score=0.6328  atr_pct=0.0299  [SELECTED]
+  GOOGL     score=0.4644  atr_pct=0.0359  [SELECTED]
+  FCX       score=0.3909  atr_pct=0.0418  [SELECTED]
+  MS        score=0.3710  atr_pct=0.0284  [SELECTED]
+  AVGO      score=0.3643  atr_pct=0.0403  [candidate]
+  AAPL      score=0.3334  atr_pct=0.0291  [candidate]
+  GE        score=0.3033  atr_pct=0.0260  [SELECTED]
+  BAC       score=0.2735  atr_pct=0.0173  [SELECTED]
+  SLB       score=0.2691  atr_pct=0.0314  [SELECTED]
+  NVDA      score=0.2289  atr_pct=0.0346  [candidate]
+  AMZN      score=0.2147  atr_pct=0.0335  [SELECTED]
+  PLD       score=0.2045  atr_pct=0.0228  [candidate]
+  KO        score=0.1917  atr_pct=0.0209  [candidate]
+  COP       score=0.1749  atr_pct=0.0271  [candidate]
+  CVX       score=0.1465  atr_pct=0.0227  [candidate]
+  TMO       score=0.1223  atr_pct=0.0271  [candidate]
+  O         score=0.0491  atr_pct=0.0177  [candidate]
+  BLK       score=0.0319  atr_pct=0.0235  [candidate]
+  MA        score=0.0176  atr_pct=0.0206  [candidate]
+```
