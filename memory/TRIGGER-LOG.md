@@ -6790,3 +6790,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "31a126c683e342c14a7f2cc9b83bbd33d1d7149bd1e856e82b15b06225231397"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6962025316455697,
+  "breadth_ok": true,
+  "candidates_count": 12,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-08-07T00:58:41Z",
+  "selected": [
+    "MS",
+    "AAPL",
+    "WELL",
+    "GS",
+    "NVDA",
+    "EOG",
+    "CVX",
+    "TMO",
+    "PM",
+    "LIN"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.09038356666666666,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "bf86aafae99af98b237230b9b7cb46d99ae28ea6f135ea385bbc07b9a5dabb88"
+}
+```
