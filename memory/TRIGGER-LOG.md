@@ -6854,3 +6854,34 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "9b4a073b54d421eb2b8d89e867eb79b8e7d5b174e4d071df12713f6bd80d8f15"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.7215189873417721,
+  "breadth_ok": true,
+  "candidates_count": 9,
+  "data_stale_gate_passes": true,
+  "excluded_count": 70,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-08-07T21:21:38Z",
+  "selected": [
+    "UNH",
+    "WELL",
+    "AAPL",
+    "RTX",
+    "AMGN",
+    "AMZN",
+    "KO",
+    "CVX",
+    "V"
+  ],
+  "selected_count": 9,
+  "snapshot_age_minutes": 0.09666021666666666,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "d348270e1086e69bdf96695c9500dc5a7fc32ded7815149803a68ec45b1cf994"
+}
+```
