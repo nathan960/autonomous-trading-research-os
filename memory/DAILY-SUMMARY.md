@@ -10040,3 +10040,63 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-08-11
+
+**Generated:** 2026-08-11T21:47:58Z  **Run ID:** daily_summary-2026-08-11
+
+### Account & Risk
+- Equity: $99,801.91 | Cash: $99,552.75 | Buying power: $398,908.63
+- Peak: $99,809.69 | Drawdown: -0.01% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $95.85 | $-4.00 (-4.00%) |
+| JNJ | long | 0.325894297 | $84.73 | +$9.73 (12.98%) |
+| WELL | long | 0.11425542 | $25.82 | +$0.82 (3.29%) |
+| WMT | long | 0.377715036 | $42.75 | $-7.25 (-14.49%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+11.03%, breadth=68.35%)
+- Candidates: 18 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-08-11T21:28:11Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260811T212811-a6cea583`
+- Generated: 2026-08-11T21:28:11Z | Expires: 2026-08-12T03:28:11Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - XOM BUY $25.00 @ $159.79 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260811T212811-887217ec`
+- All gates pass: YES
+
+### Dry Runs Today (0)
+- Pass: 0 | Fail: 0
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260811T212811-63a8982e
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
