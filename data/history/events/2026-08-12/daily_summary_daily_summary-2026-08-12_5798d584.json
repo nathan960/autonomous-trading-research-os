@@ -1,0 +1,174 @@
+{
+  "event_type": "daily_summary",
+  "run_id": "daily_summary-2026-08-12",
+  "generated_at": "2026-08-12T21:45:52Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "run_id": "daily_summary-2026-08-12",
+    "date": "2026-08-12",
+    "generated_at": "2026-08-12T21:45:52Z",
+    "status": "ok",
+    "account": {
+      "equity": 99807.25,
+      "cash": 99552.75,
+      "buying_power": 398923.6,
+      "position_count": 4,
+      "fetched_at": "2026-08-12T21:27:06Z",
+      "source": "alpaca_paper"
+    },
+    "risk_state": {
+      "latest_equity": 99807.25,
+      "peak_equity": 99809.69,
+      "drawdown": -2.4e-05,
+      "position_count": 4,
+      "updated_at": "2026-08-12T21:27:10Z"
+    },
+    "positions": [
+      {
+        "symbol": "EQIX",
+        "side": "long",
+        "qty": "0.092649719",
+        "market_value": 99.0583,
+        "unrealized_pl": -0.783927,
+        "unrealized_plpc": -0.00785,
+        "avg_entry_price": 1077.631196
+      },
+      {
+        "symbol": "JNJ",
+        "side": "long",
+        "qty": "0.325894297",
+        "market_value": 85.28002,
+        "unrealized_pl": 10.28002,
+        "unrealized_plpc": 0.13707,
+        "avg_entry_price": 230.135969
+      },
+      {
+        "symbol": "WELL",
+        "side": "long",
+        "qty": "0.11425542",
+        "market_value": 26.370151,
+        "unrealized_pl": 1.370151,
+        "unrealized_plpc": 0.05481,
+        "avg_entry_price": 218.808
+      },
+      {
+        "symbol": "WMT",
+        "side": "long",
+        "qty": "0.377715036",
+        "market_value": 43.792281,
+        "unrealized_pl": -6.207719,
+        "unrealized_plpc": -0.12415,
+        "avg_entry_price": 132.374926
+      }
+    ],
+    "open_orders": [],
+    "trigger_scan": {
+      "available": true,
+      "scanned_at": "2026-08-12T21:27:13Z",
+      "risk_on": true,
+      "spy_close": 772.54,
+      "spy_200dma": 704.4683749999999,
+      "spy_passes_200dma": true,
+      "spy_6m_roc": 0.11620985103524006,
+      "breadth_pct": 0.6582278481012658,
+      "breadth_ok": true,
+      "candidates_count": 14,
+      "selected_count": 10,
+      "excluded_count": 69
+    },
+    "trade_plan": {
+      "available": true,
+      "plan_id": "trade_plan-20260812T212713-2ebaf16b",
+      "generated_at": "2026-08-12T21:27:13Z",
+      "expires_at": "2026-08-13T03:27:13Z",
+      "trading_mode": "paper",
+      "approved_for_execution": false,
+      "approve_paper_flag": false,
+      "approval_reason": "approve_paper_flag_not_set",
+      "all_risk_checks_pass": true,
+      "failed_risk_checks": [],
+      "proposed_orders_count": 1,
+      "proposed_orders": [
+        {
+          "symbol": "BAC",
+          "side": "buy",
+          "order_type": "limit",
+          "limit_price": 64.81,
+          "notional": 25.0,
+          "time_in_force": "day",
+          "would_short": false
+        }
+      ],
+      "blocked_symbols_count": 83
+    },
+    "execution_report": {
+      "available": true,
+      "run_id": "execution-20260812T212713-55941ee9",
+      "generated_at": "2026-08-12T21:27:13Z",
+      "dry_run": true,
+      "all_gates_pass": true,
+      "failed_gates": [],
+      "status": "DRY_RUN_PASS",
+      "orders_submitted_count": 0
+    },
+    "dry_runs": {
+      "count": 0,
+      "all_pass_count": 0,
+      "fail_count": 0,
+      "failing_gates": {},
+      "latest": null
+    },
+    "paper_executions": {
+      "count": 0,
+      "total_orders_submitted": 0,
+      "runs": []
+    },
+    "order_monitor": {
+      "available": true,
+      "latest_run_id": "order_monitor-20260812T212713-c0f1f385",
+      "generated_at": "2026-08-12T21:27:13Z",
+      "orders_tracked": 14,
+      "orders_filled": 14,
+      "orders_missing": 0,
+      "orders_expired": 0,
+      "orders_rejected": 0,
+      "orders_canceled": 0,
+      "orders_active": 0,
+      "runs_today": 1
+    },
+    "alerts": {
+      "total_count": 23,
+      "ingested_today": 0,
+      "by_next_step": {
+        "request_trade_plan_unapproved": 17,
+        "request_data_refresh": 5,
+        "log_only": 1
+      },
+      "by_source": {
+        "tradingview": 21,
+        "test": 2
+      }
+    },
+    "alert_routes": {
+      "total_routes": 5,
+      "routes_today": 0,
+      "by_action": {
+        "refresh_requested": 4,
+        "logged": 1
+      },
+      "execution_called_any": false,
+      "approved_trade_plan_created_any": false
+    },
+    "data_quality": {
+      "available": true,
+      "status": "PASS",
+      "generated_at": "2026-05-12T15:33:05Z",
+      "issues_count": 0,
+      "wide_spreads_count": 0,
+      "missing_bars_count": 0,
+      "insufficient_bars_count": 0,
+      "missing_quotes_count": 0
+    },
+    "summary_hash": "a0adc701baf56189"
+  }
+}
