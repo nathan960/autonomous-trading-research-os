@@ -1,7 +1,7 @@
 {
   "all_gates_pass": true,
   "dry_run": true,
-  "execution_report_hash": "c14aaee43d3141be233aff3646b96f29479ff888e1eb87f5f7f0a7de82c98548",
+  "execution_report_hash": "92b2bded87a3724c018b9be1af31ad02e9f77850d6d67d063e64f31e8b89acc8",
   "failed_gates": [],
   "gate_results": [
     {
@@ -30,7 +30,7 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "[dry-run] market is_open=False at 2026-08-12T21:27:06Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -95,24 +95,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-08-12T16:07:39Z",
+  "generated_at": "2026-08-12T21:27:13Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260812T160739-WMT-SELL",
+      "client_order_id": "TOS-20260812T212713-BAC-BUY",
       "execution_ready": true,
-      "limit_price": 114.82,
+      "limit_price": 64.81,
       "notional": 25.0,
       "order_type": "limit",
-      "side": "sell",
-      "symbol": "WMT",
-      "target_weight": 0.0,
+      "side": "buy",
+      "symbol": "BAC",
+      "target_weight": 0.12,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260812T160739-71c9f297",
-  "run_id": "execution-20260812T160739-4cd51f0e",
+  "plan_id": "trade_plan-20260812T212713-2ebaf16b",
+  "run_id": "execution-20260812T212713-55941ee9",
   "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "53906b1d0790300fb2ce9a4001686dc4f5c73e392883b54eb56075f4f93c4f7e"
+  "trade_plan_hash": "283df4477826b40f4fa1cc8f6b8a7c77fa2160c5e72c6f830a8110d9102ed4ef"
 }
