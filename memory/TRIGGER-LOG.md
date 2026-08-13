@@ -7109,3 +7109,34 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "76293faf88f9acae7f1768709e69a11fb22e393b24cbe61c557e5223fa0d9b56"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.7215189873417721,
+  "breadth_ok": true,
+  "candidates_count": 10,
+  "data_stale_gate_passes": true,
+  "excluded_count": 70,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-08-13T21:28:18Z",
+  "selected": [
+    "CSCO",
+    "FCX",
+    "AMGN",
+    "EQIX",
+    "XOM",
+    "COP",
+    "NVDA",
+    "ABBV",
+    "SBUX"
+  ],
+  "selected_count": 9,
+  "snapshot_age_minutes": 0.13848173333333333,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "32229c87af37a064490ef4e98bea9b09d8ad31476854f525f6832ad128eabe82"
+}
+```
