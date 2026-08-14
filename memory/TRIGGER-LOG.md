@@ -7172,3 +7172,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "d44b41c066035591e71af573f89ed6caf56c2de0b546f25dc1a6cf469acfdcfe"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.7088607594936709,
+  "breadth_ok": true,
+  "candidates_count": 19,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-08-14T21:02:00Z",
+  "selected": [
+    "LLY",
+    "UNH",
+    "BAC",
+    "XOM",
+    "GE",
+    "GS",
+    "AMZN",
+    "AAPL",
+    "COP",
+    "NVDA"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.20338288333333335,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "c1d2555dc4302265ce7b6838d811e8186b91abc16650749e38d7975149c4a200"
+}
+```
