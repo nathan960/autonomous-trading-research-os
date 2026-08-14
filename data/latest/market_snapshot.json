@@ -3,33 +3,33 @@
     "account_blocked": false,
     "account_number": "PA330312PCJ0",
     "accrued_fees": "0",
-    "buying_power": "398926.42",
+    "buying_power": "398928.33",
     "cash": "99552.75",
     "created_at": "2026-05-06T15:27:38Z",
     "crypto_status": "ACTIVE",
     "currency": "USD",
     "daytrade_count": null,
     "daytrading_buying_power": null,
-    "equity": "99808.26",
+    "equity": "99808.94",
     "id": "82b03822-7e50-422d-a0df-97d30dc71964",
-    "initial_margin": "127.75",
-    "last_equity": "99806.94940326841",
-    "last_maintenance_margin": "76.26",
-    "long_market_value": "255.51",
-    "maintenance_margin": "76.65",
+    "initial_margin": "128.09",
+    "last_equity": "99808.1410172563",
+    "last_maintenance_margin": "76.62",
+    "long_market_value": "256.19",
+    "maintenance_margin": "76.86",
     "multiplier": "4",
-    "non_marginable_buying_power": "99680.5",
+    "non_marginable_buying_power": "99680.84",
     "options_approved_level": 3,
-    "options_buying_power": "99680.5",
+    "options_buying_power": "99680.84",
     "options_trading_level": 3,
     "pattern_day_trader": null,
     "pending_transfer_in": null,
     "pending_transfer_out": null,
-    "portfolio_value": "99808.26",
-    "regt_buying_power": "199361.01",
+    "portfolio_value": "99808.94",
+    "regt_buying_power": "199361.69",
     "short_market_value": "0",
     "shorting_enabled": true,
-    "sma": "99801.67",
+    "sma": "99806.95",
     "status": "ACTIVE",
     "trade_suspended_by_user": false,
     "trading_blocked": false,
@@ -768,17 +768,6 @@
   },
   "bars": {
     "AAPL": [
-      {
-        "close": 201.03,
-        "high": 201.66,
-        "low": 196.86,
-        "open": 198.015,
-        "symbol": "AAPL",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 15216.0,
-        "volume": 1310599.0,
-        "vwap": 199.409412
-      },
       {
         "close": 201.53,
         "high": 202.29,
@@ -3946,20 +3935,20 @@
         "trade_count": 27897.0,
         "volume": 1348081.0,
         "vwap": 304.078448
+      },
+      {
+        "close": 305.57,
+        "high": 307.47,
+        "low": 304.33,
+        "open": 305.94,
+        "symbol": "AAPL",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 6813.0,
+        "volume": 312033.0,
+        "vwap": 305.79033
       }
     ],
     "ABBV": [
-      {
-        "close": 185.27,
-        "high": 186.82,
-        "low": 184.19,
-        "open": 186.02,
-        "symbol": "ABBV",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3452.0,
-        "volume": 209066.0,
-        "vwap": 185.111822
-      },
       {
         "close": 183.7,
         "high": 185.74,
@@ -7127,20 +7116,20 @@
         "trade_count": 4754.0,
         "volume": 225214.0,
         "vwap": 251.721493
+      },
+      {
+        "close": 249.06,
+        "high": 250.27,
+        "low": 247.9,
+        "open": 248.0,
+        "symbol": "ABBV",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1124.0,
+        "volume": 54900.0,
+        "vwap": 249.077627
       }
     ],
     "ABT": [
-      {
-        "close": 132.89,
-        "high": 133.375,
-        "low": 131.99,
-        "open": 133.175,
-        "symbol": "ABT",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2436.0,
-        "volume": 122386.0,
-        "vwap": 132.680843
-      },
       {
         "close": 133.205,
         "high": 133.45,
@@ -10308,20 +10297,20 @@
         "trade_count": 4281.0,
         "volume": 334085.0,
         "vwap": 111.275062
+      },
+      {
+        "close": 111.815,
+        "high": 111.945,
+        "low": 110.83,
+        "open": 111.325,
+        "symbol": "ABT",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 2168.0,
+        "volume": 127356.0,
+        "vwap": 111.442938
       }
     ],
     "ADBE": [
-      {
-        "close": 376.98,
-        "high": 381.935,
-        "low": 373.875,
-        "open": 379.725,
-        "symbol": "ADBE",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3459.0,
-        "volume": 103707.0,
-        "vwap": 376.42139
-      },
       {
         "close": 380.025,
         "high": 380.2,
@@ -13489,20 +13478,20 @@
         "trade_count": 5008.0,
         "volume": 223831.0,
         "vwap": 264.455027
+      },
+      {
+        "close": 266.015,
+        "high": 273.35,
+        "low": 261.83,
+        "open": 272.975,
+        "symbol": "ADBE",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1205.0,
+        "volume": 54153.0,
+        "vwap": 264.097704
       }
     ],
     "AEP": [
-      {
-        "close": 101.73,
-        "high": 102.54,
-        "low": 101.26,
-        "open": 101.26,
-        "symbol": "AEP",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 939.0,
-        "volume": 33792.0,
-        "vwap": 101.920382
-      },
       {
         "close": 103.28,
         "high": 103.495,
@@ -16670,20 +16659,20 @@
         "trade_count": 3504.0,
         "volume": 106411.0,
         "vwap": 125.209922
+      },
+      {
+        "close": 125.55,
+        "high": 125.765,
+        "low": 124.89,
+        "open": 124.91,
+        "symbol": "AEP",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1258.0,
+        "volume": 51235.0,
+        "vwap": 125.088567
       }
     ],
     "AMD": [
-      {
-        "close": 128.255,
-        "high": 132.78,
-        "low": 127.56,
-        "open": 128.97,
-        "symbol": "AMD",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 14620.0,
-        "volume": 1034969.0,
-        "vwap": 129.814188
-      },
       {
         "close": 129.58,
         "high": 133.22,
@@ -19851,20 +19840,20 @@
         "trade_count": 8396.0,
         "volume": 401779.0,
         "vwap": 490.53662
+      },
+      {
+        "close": 498.68,
+        "high": 511.29,
+        "low": 483.48,
+        "open": 487.665,
+        "symbol": "AMD",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 5290.0,
+        "volume": 326085.0,
+        "vwap": 500.280594
       }
     ],
     "AMGN": [
-      {
-        "close": 289.37,
-        "high": 293.79,
-        "low": 289.18,
-        "open": 291.335,
-        "symbol": "AMGN",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2200.0,
-        "volume": 79133.0,
-        "vwap": 290.736744
-      },
       {
         "close": 272.29,
         "high": 290.66,
@@ -23032,20 +23021,20 @@
         "trade_count": 2187.0,
         "volume": 44497.0,
         "vwap": 417.694537
+      },
+      {
+        "close": 411.92,
+        "high": 414.65,
+        "low": 410.74,
+        "open": 412.045,
+        "symbol": "AMGN",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 629.0,
+        "volume": 16163.0,
+        "vwap": 412.110183
       }
     ],
     "AMT": [
-      {
-        "close": 217.39,
-        "high": 218.67,
-        "low": 214.98,
-        "open": 214.98,
-        "symbol": "AMT",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1554.0,
-        "volume": 75158.0,
-        "vwap": 217.489557
-      },
       {
         "close": 221.68,
         "high": 222.57,
@@ -26213,20 +26202,20 @@
         "trade_count": 1637.0,
         "volume": 58362.0,
         "vwap": 173.646832
+      },
+      {
+        "close": 176.06,
+        "high": 176.55,
+        "low": 174.22,
+        "open": 174.4,
+        "symbol": "AMT",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 442.0,
+        "volume": 16969.0,
+        "vwap": 175.487276
       }
     ],
     "AMZN": [
-      {
-        "close": 209.61,
-        "high": 214.86,
-        "low": 208.28,
-        "open": 214.46,
-        "symbol": "AMZN",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 19193.0,
-        "volume": 1696793.0,
-        "vwap": 210.19639
-      },
       {
         "close": 208.41,
         "high": 210.39,
@@ -29394,20 +29383,20 @@
         "trade_count": 22437.0,
         "volume": 1224457.0,
         "vwap": 266.45267
+      },
+      {
+        "close": 263.88,
+        "high": 265.71,
+        "low": 263.365,
+        "open": 264.87,
+        "symbol": "AMZN",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 6197.0,
+        "volume": 390405.0,
+        "vwap": 264.331372
       }
     ],
     "APD": [
-      {
-        "close": 270.57,
-        "high": 276.18,
-        "low": 270.57,
-        "open": 274.44,
-        "symbol": "APD",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1085.0,
-        "volume": 37178.0,
-        "vwap": 273.173763
-      },
       {
         "close": 273.13,
         "high": 273.28,
@@ -32575,20 +32564,20 @@
         "trade_count": 1420.0,
         "volume": 29384.0,
         "vwap": 305.215598
+      },
+      {
+        "close": 307.04,
+        "high": 307.245,
+        "low": 304.705,
+        "open": 305.3,
+        "symbol": "APD",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 292.0,
+        "volume": 5046.0,
+        "vwap": 306.133381
       }
     ],
     "AVGO": [
-      {
-        "close": 249.93,
-        "high": 253.33,
-        "low": 244.29,
-        "open": 253.28,
-        "symbol": "AVGO",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 10792.0,
-        "volume": 644506.0,
-        "vwap": 248.340747
-      },
       {
         "close": 253.73,
         "high": 254.19,
@@ -35756,20 +35745,20 @@
         "trade_count": 12075.0,
         "volume": 459823.0,
         "vwap": 420.720577
+      },
+      {
+        "close": 394.36,
+        "high": 412.22,
+        "low": 392.84,
+        "open": 412.0,
+        "symbol": "AVGO",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 10230.0,
+        "volume": 435403.0,
+        "vwap": 400.489679
       }
     ],
     "AXP": [
-      {
-        "close": 298.52,
-        "high": 299.645,
-        "low": 296.775,
-        "open": 297.21,
-        "symbol": "AXP",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2329.0,
-        "volume": 113063.0,
-        "vwap": 298.448974
-      },
       {
         "close": 299.65,
         "high": 299.87,
@@ -38937,20 +38926,20 @@
         "trade_count": 4035.0,
         "volume": 103394.0,
         "vwap": 342.460566
+      },
+      {
+        "close": 343.0,
+        "high": 343.9,
+        "low": 341.905,
+        "open": 343.25,
+        "symbol": "AXP",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1053.0,
+        "volume": 19430.0,
+        "vwap": 342.919007
       }
     ],
     "BA": [
-      {
-        "close": 198.64,
-        "high": 200.67,
-        "low": 197.45,
-        "open": 198.485,
-        "symbol": "BA",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3764.0,
-        "volume": 170155.0,
-        "vwap": 198.714743
-      },
       {
         "close": 201.34,
         "high": 202.11,
@@ -42118,20 +42107,20 @@
         "trade_count": 2761.0,
         "volume": 117197.0,
         "vwap": 230.026617
+      },
+      {
+        "close": 231.08,
+        "high": 233.37,
+        "low": 230.51,
+        "open": 231.23,
+        "symbol": "BA",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 874.0,
+        "volume": 35257.0,
+        "vwap": 231.501833
       }
     ],
     "BAC": [
-      {
-        "close": 45.52,
-        "high": 45.65,
-        "low": 45.275,
-        "open": 45.395,
-        "symbol": "BAC",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 9493.0,
-        "volume": 1741762.0,
-        "vwap": 45.519336
-      },
       {
         "close": 46.28,
         "high": 46.37,
@@ -45299,20 +45288,20 @@
         "trade_count": 13749.0,
         "volume": 1913909.0,
         "vwap": 64.294244
+      },
+      {
+        "close": 64.39,
+        "high": 64.51,
+        "low": 63.81,
+        "open": 64.04,
+        "symbol": "BAC",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 4719.0,
+        "volume": 524300.0,
+        "vwap": 64.352714
       }
     ],
     "BIL": [
-      {
-        "close": 91.65,
-        "high": 91.65,
-        "low": 91.645,
-        "open": 91.645,
-        "symbol": "BIL",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 93.0,
-        "volume": 61209.0,
-        "vwap": 91.648349
-      },
       {
         "close": 91.66,
         "high": 91.66,
@@ -48480,20 +48469,20 @@
         "trade_count": 665.0,
         "volume": 496886.0,
         "vwap": 91.508526
+      },
+      {
+        "close": 91.54,
+        "high": 91.54,
+        "low": 91.535,
+        "open": 91.54,
+        "symbol": "BIL",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 43.0,
+        "volume": 35151.0,
+        "vwap": 91.539734
       }
     ],
     "BKNG": [
-      {
-        "close": 5294.66,
-        "high": 5332.14,
-        "low": 5281.93,
-        "open": 5319.53,
-        "symbol": "BKNG",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1523.0,
-        "volume": 16829.0,
-        "vwap": 5307.102003
-      },
       {
         "close": 5335.98,
         "high": 5345.37,
@@ -51661,20 +51650,20 @@
         "trade_count": 9841.0,
         "volume": 201081.0,
         "vwap": 212.072818
+      },
+      {
+        "close": 214.2,
+        "high": 214.93,
+        "low": 212.1,
+        "open": 212.56,
+        "symbol": "BKNG",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 3405.0,
+        "volume": 64346.0,
+        "vwap": 213.552726
       }
     ],
     "BLK": [
-      {
-        "close": 974.32,
-        "high": 986.91,
-        "low": 974.055,
-        "open": 981.675,
-        "symbol": "BLK",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1125.0,
-        "volume": 18822.0,
-        "vwap": 977.861887
-      },
       {
         "close": 983.08,
         "high": 983.08,
@@ -54842,20 +54831,20 @@
         "trade_count": 1975.0,
         "volume": 24847.0,
         "vwap": 1178.51628
+      },
+      {
+        "close": 1178.12,
+        "high": 1180.0,
+        "low": 1170.815,
+        "open": 1178.5,
+        "symbol": "BLK",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 734.0,
+        "volume": 9207.0,
+        "vwap": 1174.763784
       }
     ],
     "CAT": [
-      {
-        "close": 360.56,
-        "high": 364.015,
-        "low": 359.2,
-        "open": 362.01,
-        "symbol": "CAT",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2148.0,
-        "volume": 74040.0,
-        "vwap": 361.187364
-      },
       {
         "close": 366.28,
         "high": 367.06,
@@ -58023,20 +58012,20 @@
         "trade_count": 2917.0,
         "volume": 87249.0,
         "vwap": 856.952094
+      },
+      {
+        "close": 854.44,
+        "high": 870.65,
+        "low": 850.78,
+        "open": 853.1,
+        "symbol": "CAT",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1122.0,
+        "volume": 37573.0,
+        "vwap": 864.424718
       }
     ],
     "CL": [
-      {
-        "close": 87.8,
-        "high": 88.62,
-        "low": 87.77,
-        "open": 87.98,
-        "symbol": "CL",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2321.0,
-        "volume": 148413.0,
-        "vwap": 88.127576
-      },
       {
         "close": 88.66,
         "high": 88.71,
@@ -61204,20 +61193,20 @@
         "trade_count": 3139.0,
         "volume": 103296.0,
         "vwap": 92.859451
+      },
+      {
+        "close": 92.45,
+        "high": 93.07,
+        "low": 91.845,
+        "open": 93.07,
+        "symbol": "CL",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 779.0,
+        "volume": 44153.0,
+        "vwap": 92.107772
       }
     ],
     "CMCSA": [
-      {
-        "close": 34.52,
-        "high": 34.895,
-        "low": 34.43,
-        "open": 34.43,
-        "symbol": "CMCSA",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 4720.0,
-        "volume": 847527.0,
-        "vwap": 34.599669
-      },
       {
         "close": 34.59,
         "high": 34.625,
@@ -64385,20 +64374,20 @@
         "trade_count": 6555.0,
         "volume": 1251639.0,
         "vwap": 25.965336
+      },
+      {
+        "close": 26.4,
+        "high": 26.47,
+        "low": 26.15,
+        "open": 26.355,
+        "symbol": "CMCSA",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 3593.0,
+        "volume": 760802.0,
+        "vwap": 26.336089
       }
     ],
     "COP": [
-      {
-        "close": 94.69,
-        "high": 95.16,
-        "low": 93.695,
-        "open": 94.57,
-        "symbol": "COP",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 4308.0,
-        "volume": 250454.0,
-        "vwap": 94.398495
-      },
       {
         "close": 91.715,
         "high": 95.965,
@@ -67566,20 +67555,20 @@
         "trade_count": 7189.0,
         "volume": 394711.0,
         "vwap": 124.859257
+      },
+      {
+        "close": 126.74,
+        "high": 127.36,
+        "low": 125.45,
+        "open": 125.8,
+        "symbol": "COP",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 2405.0,
+        "volume": 124465.0,
+        "vwap": 126.570102
       }
     ],
     "COST": [
-      {
-        "close": 979.625,
-        "high": 987.38,
-        "low": 973.945,
-        "open": 983.67,
-        "symbol": "COST",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1721.0,
-        "volume": 37582.0,
-        "vwap": 979.485439
-      },
       {
         "close": 1004.595,
         "high": 1004.84,
@@ -70747,20 +70736,20 @@
         "trade_count": 2121.0,
         "volume": 45017.0,
         "vwap": 957.133458
+      },
+      {
+        "close": 962.46,
+        "high": 965.36,
+        "low": 958.04,
+        "open": 963.34,
+        "symbol": "COST",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 505.0,
+        "volume": 8876.0,
+        "vwap": 961.354038
       }
     ],
     "CRM": [
-      {
-        "close": 260.64,
-        "high": 262.715,
-        "low": 259.38,
-        "open": 260.835,
-        "symbol": "CRM",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 5140.0,
-        "volume": 234308.0,
-        "vwap": 260.844655
-      },
       {
         "close": 263.32,
         "high": 264.57,
@@ -73928,20 +73917,20 @@
         "trade_count": 8278.0,
         "volume": 692407.0,
         "vwap": 197.368788
+      },
+      {
+        "close": 197.385,
+        "high": 203.45,
+        "low": 195.345,
+        "open": 202.75,
+        "symbol": "CRM",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 2103.0,
+        "volume": 163932.0,
+        "vwap": 197.361366
       }
     ],
     "CSCO": [
-      {
-        "close": 66.38,
-        "high": 66.62,
-        "low": 65.725,
-        "open": 66.335,
-        "symbol": "CSCO",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 8928.0,
-        "volume": 1273909.0,
-        "vwap": 66.146191
-      },
       {
         "close": 67.38,
         "high": 67.485,
@@ -77109,20 +77098,20 @@
         "trade_count": 34026.0,
         "volume": 2603136.0,
         "vwap": 113.305804
+      },
+      {
+        "close": 110.16,
+        "high": 113.59,
+        "low": 110.06,
+        "open": 112.6,
+        "symbol": "CSCO",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 6149.0,
+        "volume": 396257.0,
+        "vwap": 111.502495
       }
     ],
     "CVX": [
-      {
-        "close": 149.51,
-        "high": 149.87,
-        "low": 147.92,
-        "open": 148.395,
-        "symbol": "CVX",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3382.0,
-        "volume": 159449.0,
-        "vwap": 148.798318
-      },
       {
         "close": 146.855,
         "high": 151.93,
@@ -80290,20 +80279,20 @@
         "trade_count": 5641.0,
         "volume": 333964.0,
         "vwap": 196.866092
+      },
+      {
+        "close": 201.02,
+        "high": 201.09,
+        "low": 198.56,
+        "open": 198.74,
+        "symbol": "CVX",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 2261.0,
+        "volume": 136071.0,
+        "vwap": 200.406056
       }
     ],
     "DE": [
-      {
-        "close": 521.02,
-        "high": 529.05,
-        "low": 519.18,
-        "open": 526.245,
-        "symbol": "DE",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1472.0,
-        "volume": 31548.0,
-        "vwap": 523.149351
-      },
       {
         "close": 513.93,
         "high": 522.09,
@@ -83471,20 +83460,20 @@
         "trade_count": 1641.0,
         "volume": 30948.0,
         "vwap": 613.605484
+      },
+      {
+        "close": 609.275,
+        "high": 616.0,
+        "low": 608.385,
+        "open": 609.5,
+        "symbol": "DE",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 619.0,
+        "volume": 15828.0,
+        "vwap": 611.734221
       }
     ],
     "DIS": [
-      {
-        "close": 117.59,
-        "high": 119.0,
-        "low": 116.92,
-        "open": 118.18,
-        "symbol": "DIS",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 5026.0,
-        "volume": 383251.0,
-        "vwap": 117.61767
-      },
       {
         "close": 117.8,
         "high": 117.97,
@@ -86652,20 +86641,20 @@
         "trade_count": 6576.0,
         "volume": 321058.0,
         "vwap": 104.387565
+      },
+      {
+        "close": 106.6,
+        "high": 106.98,
+        "low": 104.99,
+        "open": 105.065,
+        "symbol": "DIS",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 3813.0,
+        "volume": 195136.0,
+        "vwap": 106.477749
       }
     ],
     "DUK": [
-      {
-        "close": 115.36,
-        "high": 116.145,
-        "low": 114.75,
-        "open": 115.05,
-        "symbol": "DUK",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1837.0,
-        "volume": 106293.0,
-        "vwap": 115.461878
-      },
       {
         "close": 116.95,
         "high": 117.29,
@@ -89833,20 +89822,20 @@
         "trade_count": 3201.0,
         "volume": 115547.0,
         "vwap": 124.248957
+      },
+      {
+        "close": 123.61,
+        "high": 123.88,
+        "low": 123.07,
+        "open": 123.39,
+        "symbol": "DUK",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1012.0,
+        "volume": 61953.0,
+        "vwap": 123.401772
       }
     ],
     "ECL": [
-      {
-        "close": 261.24,
-        "high": 261.9,
-        "low": 259.49,
-        "open": 259.615,
-        "symbol": "ECL",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1434.0,
-        "volume": 49534.0,
-        "vwap": 260.565028
-      },
       {
         "close": 265.93,
         "high": 266.135,
@@ -93014,20 +93003,20 @@
         "trade_count": 1993.0,
         "volume": 44377.0,
         "vwap": 276.342868
+      },
+      {
+        "close": 275.83,
+        "high": 276.82,
+        "low": 274.49,
+        "open": 276.025,
+        "symbol": "ECL",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 590.0,
+        "volume": 13426.0,
+        "vwap": 275.849593
       }
     ],
     "EOG": [
-      {
-        "close": 125.36,
-        "high": 125.9,
-        "low": 124.09,
-        "open": 125.265,
-        "symbol": "EOG",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 4173.0,
-        "volume": 129304.0,
-        "vwap": 125.137811
-      },
       {
         "close": 121.97,
         "high": 127.59,
@@ -96195,20 +96184,20 @@
         "trade_count": 5599.0,
         "volume": 382739.0,
         "vwap": 141.494209
+      },
+      {
+        "close": 142.595,
+        "high": 143.7,
+        "low": 141.85,
+        "open": 142.545,
+        "symbol": "EOG",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 770.0,
+        "volume": 26282.0,
+        "vwap": 142.937361
       }
     ],
     "EQIX": [
-      {
-        "close": 882.28,
-        "high": 894.335,
-        "low": 882.08,
-        "open": 888.395,
-        "symbol": "EQIX",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1131.0,
-        "volume": 23055.0,
-        "vwap": 887.514873
-      },
       {
         "close": 890.19,
         "high": 895.44,
@@ -99376,20 +99365,20 @@
         "trade_count": 1433.0,
         "volume": 26373.0,
         "vwap": 1071.781139
+      },
+      {
+        "close": 1091.215,
+        "high": 1096.605,
+        "low": 1072.595,
+        "open": 1073.56,
+        "symbol": "EQIX",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 500.0,
+        "volume": 11146.0,
+        "vwap": 1091.489566
       }
     ],
     "FCX": [
-      {
-        "close": 40.22,
-        "high": 41.26,
-        "low": 40.16,
-        "open": 41.26,
-        "symbol": "FCX",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 5752.0,
-        "volume": 446048.0,
-        "vwap": 40.467714
-      },
       {
         "close": 40.94,
         "high": 41.055,
@@ -102557,20 +102546,20 @@
         "trade_count": 8395.0,
         "volume": 505420.0,
         "vwap": 67.531141
+      },
+      {
+        "close": 66.87,
+        "high": 67.45,
+        "low": 65.58,
+        "open": 66.44,
+        "symbol": "FCX",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 4653.0,
+        "volume": 296471.0,
+        "vwap": 66.846281
       }
     ],
     "GE": [
-      {
-        "close": 239.31,
-        "high": 240.8,
-        "low": 236.66,
-        "open": 239.24,
-        "symbol": "GE",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3442.0,
-        "volume": 160413.0,
-        "vwap": 238.713874
-      },
       {
         "close": 247.79,
         "high": 248.46,
@@ -105738,20 +105727,20 @@
         "trade_count": 3727.0,
         "volume": 111927.0,
         "vwap": 361.44114
+      },
+      {
+        "close": 364.07,
+        "high": 365.38,
+        "low": 362.025,
+        "open": 362.15,
+        "symbol": "GE",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 780.0,
+        "volume": 24627.0,
+        "vwap": 364.231426
       }
     ],
     "GOOGL": [
-      {
-        "close": 166.66,
-        "high": 174.34,
-        "low": 165.46,
-        "open": 173.86,
-        "symbol": "GOOGL",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 16810.0,
-        "volume": 1302007.0,
-        "vwap": 169.010211
-      },
       {
         "close": 165.17,
         "high": 167.32,
@@ -108919,20 +108908,20 @@
         "trade_count": 15146.0,
         "volume": 663018.0,
         "vwap": 345.9913
+      },
+      {
+        "close": 345.38,
+        "high": 350.405,
+        "low": 344.81,
+        "open": 346.71,
+        "symbol": "GOOGL",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 4115.0,
+        "volume": 193415.0,
+        "vwap": 347.303974
       }
     ],
     "GS": [
-      {
-        "close": 640.79,
-        "high": 642.39,
-        "low": 636.81,
-        "open": 639.93,
-        "symbol": "GS",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2442.0,
-        "volume": 68807.0,
-        "vwap": 639.880906
-      },
       {
         "close": 647.23,
         "high": 647.28,
@@ -112100,20 +112089,20 @@
         "trade_count": 2589.0,
         "volume": 43921.0,
         "vwap": 1048.16338
+      },
+      {
+        "close": 1034.14,
+        "high": 1042.78,
+        "low": 1030.17,
+        "open": 1036.45,
+        "symbol": "GS",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 807.0,
+        "volume": 24623.0,
+        "vwap": 1036.738352
       }
     ],
     "HD": [
-      {
-        "close": 349.73,
-        "high": 351.11,
-        "low": 347.025,
-        "open": 347.53,
-        "symbol": "HD",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2418.0,
-        "volume": 112628.0,
-        "vwap": 349.531897
-      },
       {
         "close": 356.895,
         "high": 356.95,
@@ -115281,20 +115270,20 @@
         "trade_count": 4032.0,
         "volume": 118640.0,
         "vwap": 342.34452
+      },
+      {
+        "close": 338.19,
+        "high": 340.05,
+        "low": 336.145,
+        "open": 340.05,
+        "symbol": "HD",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1346.0,
+        "volume": 42940.0,
+        "vwap": 337.890547
       }
     ],
     "HON": [
-      {
-        "close": 221.82,
-        "high": 223.01,
-        "low": 220.22,
-        "open": 222.705,
-        "symbol": "HON",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1630.0,
-        "volume": 59446.0,
-        "vwap": 221.455357
-      },
       {
         "close": 224.71,
         "high": 224.91,
@@ -118462,20 +118451,20 @@
         "trade_count": 2435.0,
         "volume": 96786.0,
         "vwap": 234.086953
+      },
+      {
+        "close": 233.225,
+        "high": 234.795,
+        "low": 232.44,
+        "open": 233.565,
+        "symbol": "HON",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 750.0,
+        "volume": 32475.0,
+        "vwap": 233.435918
       }
     ],
     "INTU": [
-      {
-        "close": 761.31,
-        "high": 761.935,
-        "low": 756.335,
-        "open": 756.335,
-        "symbol": "INTU",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1616.0,
-        "volume": 43506.0,
-        "vwap": 759.3011
-      },
       {
         "close": 762.82,
         "high": 764.77,
@@ -121643,20 +121632,20 @@
         "trade_count": 8852.0,
         "volume": 307450.0,
         "vwap": 349.882516
+      },
+      {
+        "close": 347.98,
+        "high": 362.0,
+        "low": 345.665,
+        "open": 362.0,
+        "symbol": "INTU",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 2271.0,
+        "volume": 79633.0,
+        "vwap": 351.293587
       }
     ],
     "ISRG": [
-      {
-        "close": 508.99,
-        "high": 514.04,
-        "low": 508.96,
-        "open": 513.1,
-        "symbol": "ISRG",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2140.0,
-        "volume": 56823.0,
-        "vwap": 511.177685
-      },
       {
         "close": 514.915,
         "high": 515.29,
@@ -124824,20 +124813,20 @@
         "trade_count": 2867.0,
         "volume": 94762.0,
         "vwap": 400.330899
+      },
+      {
+        "close": 400.77,
+        "high": 401.755,
+        "low": 397.92,
+        "open": 401.755,
+        "symbol": "ISRG",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 824.0,
+        "volume": 23429.0,
+        "vwap": 399.814201
       }
     ],
     "JNJ": [
-      {
-        "close": 149.8,
-        "high": 151.26,
-        "low": 149.04,
-        "open": 151.26,
-        "symbol": "JNJ",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 4016.0,
-        "volume": 237690.0,
-        "vwap": 149.586891
-      },
       {
         "close": 151.28,
         "high": 151.4,
@@ -128005,20 +127994,20 @@
         "trade_count": 4445.0,
         "volume": 176030.0,
         "vwap": 261.33684
+      },
+      {
+        "close": 260.26,
+        "high": 261.64,
+        "low": 259.25,
+        "open": 260.42,
+        "symbol": "JNJ",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1153.0,
+        "volume": 65728.0,
+        "vwap": 260.312521
       }
     ],
     "JPM": [
-      {
-        "close": 275.005,
-        "high": 277.255,
-        "low": 273.86,
-        "open": 275.44,
-        "symbol": "JPM",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 4401.0,
-        "volume": 179899.0,
-        "vwap": 275.166301
-      },
       {
         "close": 278.22,
         "high": 278.53,
@@ -131186,20 +131175,20 @@
         "trade_count": 5408.0,
         "volume": 182720.0,
         "vwap": 363.419367
+      },
+      {
+        "close": 363.27,
+        "high": 365.82,
+        "low": 361.94,
+        "open": 362.015,
+        "symbol": "JPM",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1789.0,
+        "volume": 61470.0,
+        "vwap": 364.647445
       }
     ],
     "KO": [
-      {
-        "close": 68.86,
-        "high": 69.545,
-        "low": 68.785,
-        "open": 69.09,
-        "symbol": "KO",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 5631.0,
-        "volume": 517016.0,
-        "vwap": 69.166175
-      },
       {
         "close": 69.73,
         "high": 69.805,
@@ -134367,20 +134356,20 @@
         "trade_count": 8609.0,
         "volume": 630904.0,
         "vwap": 87.513109
+      },
+      {
+        "close": 87.8,
+        "high": 87.95,
+        "low": 87.2,
+        "open": 87.29,
+        "symbol": "KO",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 3314.0,
+        "volume": 258160.0,
+        "vwap": 87.687223
       }
     ],
     "LIN": [
-      {
-        "close": 455.92,
-        "high": 461.78,
-        "low": 455.52,
-        "open": 461.78,
-        "symbol": "LIN",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1935.0,
-        "volume": 47678.0,
-        "vwap": 457.633265
-      },
       {
         "close": 459.79,
         "high": 459.95,
@@ -137548,20 +137537,20 @@
         "trade_count": 2661.0,
         "volume": 90940.0,
         "vwap": 479.18458
+      },
+      {
+        "close": 481.43,
+        "high": 482.715,
+        "low": 477.52,
+        "open": 477.915,
+        "symbol": "LIN",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 523.0,
+        "volume": 19194.0,
+        "vwap": 480.452921
       }
     ],
     "LLY": [
-      {
-        "close": 762.91,
-        "high": 781.9,
-        "low": 756.465,
-        "open": 781.9,
-        "symbol": "LLY",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3335.0,
-        "volume": 110099.0,
-        "vwap": 762.754407
-      },
       {
         "close": 770.4,
         "high": 792.925,
@@ -140729,20 +140718,20 @@
         "trade_count": 2610.0,
         "volume": 60315.0,
         "vwap": 1217.44362
+      },
+      {
+        "close": 1184.88,
+        "high": 1195.4,
+        "low": 1171.37,
+        "open": 1194.565,
+        "symbol": "LLY",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1298.0,
+        "volume": 33804.0,
+        "vwap": 1182.350187
       }
     ],
     "LMT": [
-      {
-        "close": 470.63,
-        "high": 474.17,
-        "low": 462.075,
-        "open": 468.695,
-        "symbol": "LMT",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1198.0,
-        "volume": 38516.0,
-        "vwap": 470.200423
-      },
       {
         "close": 472.18,
         "high": 482.02,
@@ -143910,20 +143899,20 @@
         "trade_count": 1667.0,
         "volume": 32933.0,
         "vwap": 599.105085
+      },
+      {
+        "close": 608.125,
+        "high": 608.125,
+        "low": 599.46,
+        "open": 602.97,
+        "symbol": "LMT",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 705.0,
+        "volume": 12357.0,
+        "vwap": 605.655401
       }
     ],
     "LOW": [
-      {
-        "close": 212.69,
-        "high": 212.905,
-        "low": 210.41,
-        "open": 211.655,
-        "symbol": "LOW",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1960.0,
-        "volume": 79578.0,
-        "vwap": 211.925808
-      },
       {
         "close": 218.62,
         "high": 218.735,
@@ -147091,20 +147080,20 @@
         "trade_count": 3230.0,
         "volume": 179041.0,
         "vwap": 217.258339
+      },
+      {
+        "close": 217.1,
+        "high": 217.94,
+        "low": 216.07,
+        "open": 217.89,
+        "symbol": "LOW",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 708.0,
+        "volume": 33112.0,
+        "vwap": 217.366088
       }
     ],
     "MA": [
-      {
-        "close": 532.77,
-        "high": 538.18,
-        "low": 527.74,
-        "open": 535.405,
-        "symbol": "MA",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 7247.0,
-        "volume": 261292.0,
-        "vwap": 533.642056
-      },
       {
         "close": 542.41,
         "high": 542.885,
@@ -150272,20 +150261,20 @@
         "trade_count": 4406.0,
         "volume": 115072.0,
         "vwap": 562.566843
+      },
+      {
+        "close": 568.18,
+        "high": 569.44,
+        "low": 564.51,
+        "open": 568.285,
+        "symbol": "MA",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1020.0,
+        "volume": 27717.0,
+        "vwap": 566.635687
       }
     ],
     "MCD": [
-      {
-        "close": 287.45,
-        "high": 290.5,
-        "low": 285.61,
-        "open": 289.52,
-        "symbol": "MCD",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3405.0,
-        "volume": 149351.0,
-        "vwap": 287.433155
-      },
       {
         "close": 289.41,
         "high": 289.445,
@@ -153453,20 +153442,20 @@
         "trade_count": 4259.0,
         "volume": 147682.0,
         "vwap": 273.703973
+      },
+      {
+        "close": 274.055,
+        "high": 275.27,
+        "low": 271.275,
+        "open": 272.61,
+        "symbol": "MCD",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1058.0,
+        "volume": 33491.0,
+        "vwap": 273.893778
       }
     ],
     "MDLZ": [
-      {
-        "close": 68.33,
-        "high": 68.69,
-        "low": 66.905,
-        "open": 67.185,
-        "symbol": "MDLZ",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2931.0,
-        "volume": 231732.0,
-        "vwap": 68.203989
-      },
       {
         "close": 68.49,
         "high": 68.675,
@@ -156634,20 +156623,20 @@
         "trade_count": 5639.0,
         "volume": 418235.0,
         "vwap": 63.288179
+      },
+      {
+        "close": 63.64,
+        "high": 63.75,
+        "low": 63.3,
+        "open": 63.42,
+        "symbol": "MDLZ",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1456.0,
+        "volume": 61078.0,
+        "vwap": 63.511397
       }
     ],
     "META": [
-      {
-        "close": 682.6,
-        "high": 701.485,
-        "low": 679.08,
-        "open": 700.55,
-        "symbol": "META",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 8739.0,
-        "volume": 358211.0,
-        "vwap": 686.965801
-      },
       {
         "close": 698.48,
         "high": 698.96,
@@ -159815,20 +159804,20 @@
         "trade_count": 8854.0,
         "volume": 328662.0,
         "vwap": 590.094451
+      },
+      {
+        "close": 594.37,
+        "high": 601.78,
+        "low": 591.97,
+        "open": 597.0,
+        "symbol": "META",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 5681.0,
+        "volume": 208900.0,
+        "vwap": 596.010583
       }
     ],
     "MRK": [
-      {
-        "close": 79.11,
-        "high": 79.915,
-        "low": 78.61,
-        "open": 78.985,
-        "symbol": "MRK",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 5083.0,
-        "volume": 394354.0,
-        "vwap": 79.320104
-      },
       {
         "close": 80.13,
         "high": 80.19,
@@ -162996,20 +162985,20 @@
         "trade_count": 7902.0,
         "volume": 533884.0,
         "vwap": 134.646671
+      },
+      {
+        "close": 133.92,
+        "high": 135.415,
+        "low": 133.84,
+        "open": 134.145,
+        "symbol": "MRK",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 2699.0,
+        "volume": 125368.0,
+        "vwap": 134.497846
       }
     ],
     "MS": [
-      {
-        "close": 132.71,
-        "high": 133.28,
-        "low": 131.935,
-        "open": 133.225,
-        "symbol": "MS",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3783.0,
-        "volume": 160346.0,
-        "vwap": 132.49156
-      },
       {
         "close": 134.0,
         "high": 134.095,
@@ -166177,20 +166166,20 @@
         "trade_count": 5268.0,
         "volume": 248170.0,
         "vwap": 219.33058
+      },
+      {
+        "close": 216.695,
+        "high": 218.655,
+        "low": 216.1,
+        "open": 217.4,
+        "symbol": "MS",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1476.0,
+        "volume": 82327.0,
+        "vwap": 217.491459
       }
     ],
     "MSFT": [
-      {
-        "close": 477.3,
-        "high": 483.25,
-        "low": 476.92,
-        "open": 482.1,
-        "symbol": "MSFT",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 8850.0,
-        "volume": 510151.0,
-        "vwap": 479.712567
-      },
       {
         "close": 485.98,
         "high": 487.64,
@@ -169358,20 +169347,20 @@
         "trade_count": 14970.0,
         "volume": 732670.0,
         "vwap": 497.128605
+      },
+      {
+        "close": 498.095,
+        "high": 499.995,
+        "low": 493.92,
+        "open": 496.435,
+        "symbol": "MSFT",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 5565.0,
+        "volume": 272617.0,
+        "vwap": 497.920165
       }
     ],
     "NEE": [
-      {
-        "close": 71.55,
-        "high": 72.56,
-        "low": 71.52,
-        "open": 71.945,
-        "symbol": "NEE",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2982.0,
-        "volume": 247086.0,
-        "vwap": 71.985975
-      },
       {
         "close": 70.715,
         "high": 72.285,
@@ -172539,20 +172528,20 @@
         "trade_count": 9911.0,
         "volume": 665473.0,
         "vwap": 85.940982
+      },
+      {
+        "close": 86.33,
+        "high": 86.43,
+        "low": 85.84,
+        "open": 86.11,
+        "symbol": "NEE",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 2541.0,
+        "volume": 140713.0,
+        "vwap": 86.133332
       }
     ],
     "NFLX": [
-      {
-        "close": 1231.21,
-        "high": 1247.19,
-        "low": 1225.04,
-        "open": 1234.05,
-        "symbol": "NFLX",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3030.0,
-        "volume": 72521.0,
-        "vwap": 1232.411819
-      },
       {
         "close": 1253.3,
         "high": 1254.26,
@@ -175720,20 +175709,20 @@
         "trade_count": 23949.0,
         "volume": 2551591.0,
         "vwap": 77.31576
+      },
+      {
+        "close": 78.225,
+        "high": 78.72,
+        "low": 77.775,
+        "open": 78.53,
+        "symbol": "NFLX",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 7818.0,
+        "volume": 593769.0,
+        "vwap": 78.137516
       }
     ],
     "NKE": [
-      {
-        "close": 59.785,
-        "high": 60.01,
-        "low": 59.19,
-        "open": 59.78,
-        "symbol": "NKE",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 4393.0,
-        "volume": 319378.0,
-        "vwap": 59.639172
-      },
       {
         "close": 60.78,
         "high": 61.29,
@@ -178901,20 +178890,20 @@
         "trade_count": 8732.0,
         "volume": 1302178.0,
         "vwap": 40.977852
+      },
+      {
+        "close": 40.97,
+        "high": 41.305,
+        "low": 40.785,
+        "open": 41.23,
+        "symbol": "NKE",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 3103.0,
+        "volume": 395672.0,
+        "vwap": 40.951908
       }
     ],
     "NVDA": [
-      {
-        "close": 143.76,
-        "high": 146.195,
-        "low": 142.675,
-        "open": 145.4,
-        "symbol": "NVDA",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 24325.0,
-        "volume": 2488233.0,
-        "vwap": 144.307529
-      },
       {
         "close": 144.16,
         "high": 144.73,
@@ -182082,20 +182071,20 @@
         "trade_count": 38042.0,
         "volume": 3940869.0,
         "vwap": 225.410968
+      },
+      {
+        "close": 225.19,
+        "high": 227.47,
+        "low": 224.5,
+        "open": 226.87,
+        "symbol": "NVDA",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 14742.0,
+        "volume": 1278177.0,
+        "vwap": 225.798271
       }
     ],
     "O": [
-      {
-        "close": 57.19,
-        "high": 57.98,
-        "low": 57.15,
-        "open": 57.61,
-        "symbol": "O",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2902.0,
-        "volume": 214687.0,
-        "vwap": 57.473852
-      },
       {
         "close": 58.355,
         "high": 58.445,
@@ -185263,20 +185252,20 @@
         "trade_count": 4561.0,
         "volume": 286545.0,
         "vwap": 63.094106
+      },
+      {
+        "close": 62.935,
+        "high": 63.27,
+        "low": 62.69,
+        "open": 62.9,
+        "symbol": "O",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1716.0,
+        "volume": 93391.0,
+        "vwap": 62.972878
       }
     ],
     "ORCL": [
-      {
-        "close": 205.11,
-        "high": 213.36,
-        "low": 204.65,
-        "open": 213.36,
-        "symbol": "ORCL",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 10095.0,
-        "volume": 882177.0,
-        "vwap": 207.671933
-      },
       {
         "close": 207.04,
         "high": 207.22,
@@ -188444,20 +188433,20 @@
         "trade_count": 9311.0,
         "volume": 697316.0,
         "vwap": 155.973639
+      },
+      {
+        "close": 153.29,
+        "high": 156.29,
+        "low": 152.705,
+        "open": 155.89,
+        "symbol": "ORCL",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 3112.0,
+        "volume": 218146.0,
+        "vwap": 153.614357
       }
     ],
     "PEP": [
-      {
-        "close": 129.07,
-        "high": 130.4,
-        "low": 128.93,
-        "open": 129.53,
-        "symbol": "PEP",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3901.0,
-        "volume": 295272.0,
-        "vwap": 129.886499
-      },
       {
         "close": 129.09,
         "high": 129.39,
@@ -191625,20 +191614,20 @@
         "trade_count": 3822.0,
         "volume": 191352.0,
         "vwap": 140.126597
+      },
+      {
+        "close": 141.05,
+        "high": 141.27,
+        "low": 140.135,
+        "open": 140.515,
+        "symbol": "PEP",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1037.0,
+        "volume": 49577.0,
+        "vwap": 140.697399
       }
     ],
     "PG": [
-      {
-        "close": 159.025,
-        "high": 159.31,
-        "low": 157.9,
-        "open": 158.03,
-        "symbol": "PG",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3057.0,
-        "volume": 174407.0,
-        "vwap": 158.751477
-      },
       {
         "close": 161.0,
         "high": 161.185,
@@ -194806,20 +194795,20 @@
         "trade_count": 6638.0,
         "volume": 407434.0,
         "vwap": 144.48176
+      },
+      {
+        "close": 144.465,
+        "high": 144.66,
+        "low": 143.47,
+        "open": 144.14,
+        "symbol": "PG",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 3071.0,
+        "volume": 165278.0,
+        "vwap": 144.084802
       }
     ],
     "PLD": [
-      {
-        "close": 105.66,
-        "high": 106.21,
-        "low": 105.16,
-        "open": 105.75,
-        "symbol": "PLD",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1902.0,
-        "volume": 100867.0,
-        "vwap": 105.655068
-      },
       {
         "close": 107.12,
         "high": 107.24,
@@ -197987,20 +197976,20 @@
         "trade_count": 2265.0,
         "volume": 125310.0,
         "vwap": 141.477912
+      },
+      {
+        "close": 140.96,
+        "high": 141.68,
+        "low": 140.81,
+        "open": 141.14,
+        "symbol": "PLD",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 569.0,
+        "volume": 28242.0,
+        "vwap": 141.285761
       }
     ],
     "PM": [
-      {
-        "close": 183.25,
-        "high": 183.34,
-        "low": 181.89,
-        "open": 182.11,
-        "symbol": "PM",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2307.0,
-        "volume": 98268.0,
-        "vwap": 182.550422
-      },
       {
         "close": 184.99,
         "high": 185.46,
@@ -201168,20 +201157,20 @@
         "trade_count": 3397.0,
         "volume": 159297.0,
         "vwap": 189.433014
+      },
+      {
+        "close": 190.165,
+        "high": 190.62,
+        "low": 187.69,
+        "open": 188.79,
+        "symbol": "PM",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 795.0,
+        "volume": 59185.0,
+        "vwap": 189.309897
       }
     ],
     "RTX": [
-      {
-        "close": 146.61,
-        "high": 148.11,
-        "low": 144.37,
-        "open": 146.045,
-        "symbol": "RTX",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3199.0,
-        "volume": 188950.0,
-        "vwap": 146.904968
-      },
       {
         "close": 145.76,
         "high": 147.0,
@@ -204349,20 +204338,20 @@
         "trade_count": 2822.0,
         "volume": 110895.0,
         "vwap": 220.243644
+      },
+      {
+        "close": 221.845,
+        "high": 222.165,
+        "low": 220.005,
+        "open": 220.925,
+        "symbol": "RTX",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1143.0,
+        "volume": 57599.0,
+        "vwap": 221.146935
       }
     ],
     "SBUX": [
-      {
-        "close": 93.09,
-        "high": 93.79,
-        "low": 92.47,
-        "open": 92.85,
-        "symbol": "SBUX",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2793.0,
-        "volume": 196856.0,
-        "vwap": 93.023605
-      },
       {
         "close": 92.35,
         "high": 93.115,
@@ -207530,20 +207519,20 @@
         "trade_count": 4502.0,
         "volume": 173653.0,
         "vwap": 109.541036
+      },
+      {
+        "close": 107.96,
+        "high": 108.79,
+        "low": 107.64,
+        "open": 107.695,
+        "symbol": "SBUX",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 852.0,
+        "volume": 36519.0,
+        "vwap": 108.071717
       }
     ],
     "SHW": [
-      {
-        "close": 333.35,
-        "high": 335.375,
-        "low": 330.3,
-        "open": 335.375,
-        "symbol": "SHW",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1166.0,
-        "volume": 36987.0,
-        "vwap": 332.802602
-      },
       {
         "close": 343.75,
         "high": 344.42,
@@ -210711,20 +210700,20 @@
         "trade_count": 2971.0,
         "volume": 89509.0,
         "vwap": 360.832559
+      },
+      {
+        "close": 357.6,
+        "high": 359.13,
+        "low": 357.03,
+        "open": 358.825,
+        "symbol": "SHW",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 376.0,
+        "volume": 8473.0,
+        "vwap": 358.21432
       }
     ],
     "SLB": [
-      {
-        "close": 35.83,
-        "high": 36.055,
-        "low": 35.49,
-        "open": 35.895,
-        "symbol": "SLB",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 5654.0,
-        "volume": 563880.0,
-        "vwap": 35.771765
-      },
       {
         "close": 33.75,
         "high": 36.08,
@@ -213892,20 +213881,20 @@
         "trade_count": 5532.0,
         "volume": 475184.0,
         "vwap": 52.067386
+      },
+      {
+        "close": 53.81,
+        "high": 53.865,
+        "low": 52.195,
+        "open": 52.31,
+        "symbol": "SLB",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 2428.0,
+        "volume": 195268.0,
+        "vwap": 53.473706
       }
     ],
     "SO": [
-      {
-        "close": 89.305,
-        "high": 89.95,
-        "low": 88.58,
-        "open": 88.655,
-        "symbol": "SO",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2407.0,
-        "volume": 261642.0,
-        "vwap": 89.226478
-      },
       {
         "close": 90.68,
         "high": 90.735,
@@ -217073,20 +217062,20 @@
         "trade_count": 4267.0,
         "volume": 175073.0,
         "vwap": 92.684538
+      },
+      {
+        "close": 93.06,
+        "high": 93.185,
+        "low": 92.56,
+        "open": 92.71,
+        "symbol": "SO",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1015.0,
+        "volume": 40528.0,
+        "vwap": 92.84454
       }
     ],
     "SPY": [
-      {
-        "close": 594.18,
-        "high": 599.44,
-        "low": 592.9,
-        "open": 598.385,
-        "symbol": "SPY",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 14517.0,
-        "volume": 1141672.0,
-        "vwap": 595.232721
-      },
       {
         "close": 600.08,
         "high": 600.53,
@@ -220254,20 +220243,20 @@
         "trade_count": 17867.0,
         "volume": 1209788.0,
         "vwap": 777.356158
+      },
+      {
+        "close": 776.16,
+        "high": 778.78,
+        "low": 775.83,
+        "open": 778.505,
+        "symbol": "SPY",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 8191.0,
+        "volume": 584979.0,
+        "vwap": 777.150628
       }
     ],
     "SRE": [
-      {
-        "close": 74.05,
-        "high": 75.335,
-        "low": 74.01,
-        "open": 75.025,
-        "symbol": "SRE",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1819.0,
-        "volume": 94287.0,
-        "vwap": 74.438951
-      },
       {
         "close": 75.76,
         "high": 75.86,
@@ -223435,20 +223424,20 @@
         "trade_count": 3066.0,
         "volume": 175249.0,
         "vwap": 86.341852
+      },
+      {
+        "close": 86.82,
+        "high": 87.16,
+        "low": 86.71,
+        "open": 86.76,
+        "symbol": "SRE",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 843.0,
+        "volume": 50281.0,
+        "vwap": 86.874858
       }
     ],
     "TMO": [
-      {
-        "close": 397.7,
-        "high": 397.7,
-        "low": 390.8,
-        "open": 393.665,
-        "symbol": "TMO",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2297.0,
-        "volume": 73795.0,
-        "vwap": 394.228193
-      },
       {
         "close": 400.08,
         "high": 400.305,
@@ -226616,20 +226605,20 @@
         "trade_count": 2661.0,
         "volume": 63184.0,
         "vwap": 598.417387
+      },
+      {
+        "close": 593.14,
+        "high": 594.605,
+        "low": 588.8,
+        "open": 592.68,
+        "symbol": "TMO",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 680.0,
+        "volume": 21996.0,
+        "vwap": 592.062057
       }
     ],
     "TMUS": [
-      {
-        "close": 221.41,
-        "high": 223.19,
-        "low": 220.95,
-        "open": 221.525,
-        "symbol": "TMUS",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 3955.0,
-        "volume": 182620.0,
-        "vwap": 222.156757
-      },
       {
         "close": 226.97,
         "high": 227.49,
@@ -229797,20 +229786,20 @@
         "trade_count": 2405.0,
         "volume": 222325.0,
         "vwap": 181.237622
+      },
+      {
+        "close": 182.57,
+        "high": 183.52,
+        "low": 181.9,
+        "open": 183.47,
+        "symbol": "TMUS",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 795.0,
+        "volume": 48532.0,
+        "vwap": 182.549622
       }
     ],
     "TSLA": [
-      {
-        "close": 322.31,
-        "high": 332.295,
-        "low": 317.93,
-        "open": 327.545,
-        "symbol": "TSLA",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 12330.0,
-        "volume": 722348.0,
-        "vwap": 322.736786
-      },
       {
         "close": 348.58,
         "high": 357.45,
@@ -232978,20 +232967,20 @@
         "trade_count": 20072.0,
         "volume": 843846.0,
         "vwap": 335.926219
+      },
+      {
+        "close": 338.32,
+        "high": 351.26,
+        "low": 335.39,
+        "open": 342.17,
+        "symbol": "TSLA",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 14109.0,
+        "volume": 567340.0,
+        "vwap": 343.376171
       }
     ],
     "UNH": [
-      {
-        "close": 302.09,
-        "high": 309.13,
-        "low": 301.63,
-        "open": 309.03,
-        "symbol": "UNH",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 8537.0,
-        "volume": 564902.0,
-        "vwap": 303.92253
-      },
       {
         "close": 300.75,
         "high": 302.17,
@@ -236159,20 +236148,20 @@
         "trade_count": 6888.0,
         "volume": 238890.0,
         "vwap": 401.152298
+      },
+      {
+        "close": 401.41,
+        "high": 402.29,
+        "low": 396.65,
+        "open": 397.82,
+        "symbol": "UNH",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1225.0,
+        "volume": 53546.0,
+        "vwap": 400.870277
       }
     ],
     "UNP": [
-      {
-        "close": 222.515,
-        "high": 223.68,
-        "low": 221.23,
-        "open": 222.77,
-        "symbol": "UNP",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 2610.0,
-        "volume": 121011.0,
-        "vwap": 222.286122
-      },
       {
         "close": 225.88,
         "high": 225.955,
@@ -239340,20 +239329,20 @@
         "trade_count": 2532.0,
         "volume": 104898.0,
         "vwap": 297.628102
+      },
+      {
+        "close": 297.5,
+        "high": 300.51,
+        "low": 297.5,
+        "open": 298.07,
+        "symbol": "UNP",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 997.0,
+        "volume": 37180.0,
+        "vwap": 299.026209
       }
     ],
     "UPS": [
-      {
-        "close": 99.28,
-        "high": 100.475,
-        "low": 99.12,
-        "open": 99.42,
-        "symbol": "UPS",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1870.0,
-        "volume": 92179.0,
-        "vwap": 99.498145
-      },
       {
         "close": 100.43,
         "high": 100.45,
@@ -242521,20 +242510,20 @@
         "trade_count": 2654.0,
         "volume": 130612.0,
         "vwap": 105.351253
+      },
+      {
+        "close": 104.785,
+        "high": 105.845,
+        "low": 104.785,
+        "open": 105.455,
+        "symbol": "UPS",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 957.0,
+        "volume": 44846.0,
+        "vwap": 105.194165
       }
     ],
     "V": [
-      {
-        "close": 338.6,
-        "high": 340.0,
-        "low": 335.0,
-        "open": 339.39,
-        "symbol": "V",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 9100.0,
-        "volume": 454923.0,
-        "vwap": 338.358733
-      },
       {
         "close": 343.72,
         "high": 344.19,
@@ -245702,20 +245691,20 @@
         "trade_count": 5481.0,
         "volume": 171149.0,
         "vwap": 362.512677
+      },
+      {
+        "close": 365.13,
+        "high": 366.63,
+        "low": 362.76,
+        "open": 365.5,
+        "symbol": "V",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 1874.0,
+        "volume": 79261.0,
+        "vwap": 364.190372
       }
     ],
     "WELL": [
-      {
-        "close": 151.29,
-        "high": 154.07,
-        "low": 151.22,
-        "open": 152.65,
-        "symbol": "WELL",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 1678.0,
-        "volume": 83625.0,
-        "vwap": 152.678163
-      },
       {
         "close": 154.11,
         "high": 154.79,
@@ -248883,20 +248872,20 @@
         "trade_count": 3677.0,
         "volume": 174146.0,
         "vwap": 234.723917
+      },
+      {
+        "close": 235.395,
+        "high": 236.32,
+        "low": 233.355,
+        "open": 234.07,
+        "symbol": "WELL",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 620.0,
+        "volume": 27809.0,
+        "vwap": 234.540946
       }
     ],
     "WFC": [
-      {
-        "close": 75.4,
-        "high": 75.77,
-        "low": 75.09,
-        "open": 75.24,
-        "symbol": "WFC",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 7782.0,
-        "volume": 726426.0,
-        "vwap": 75.429537
-      },
       {
         "close": 76.99,
         "high": 77.03,
@@ -252064,20 +252053,20 @@
         "trade_count": 8567.0,
         "volume": 697864.0,
         "vwap": 88.152517
+      },
+      {
+        "close": 88.4,
+        "high": 88.83,
+        "low": 87.78,
+        "open": 88.07,
+        "symbol": "WFC",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 2580.0,
+        "volume": 144291.0,
+        "vwap": 88.470938
       }
     ],
     "WMT": [
-      {
-        "close": 96.11,
-        "high": 96.31,
-        "low": 95.295,
-        "open": 95.295,
-        "symbol": "WMT",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 6259.0,
-        "volume": 472212.0,
-        "vwap": 95.873747
-      },
       {
         "close": 97.84,
         "high": 97.93,
@@ -255245,20 +255234,20 @@
         "trade_count": 8814.0,
         "volume": 760253.0,
         "vwap": 115.432394
+      },
+      {
+        "close": 115.34,
+        "high": 116.44,
+        "low": 114.64,
+        "open": 115.79,
+        "symbol": "WMT",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 3590.0,
+        "volume": 283259.0,
+        "vwap": 115.409915
       }
     ],
     "XOM": [
-      {
-        "close": 114.72,
-        "high": 115.035,
-        "low": 113.21,
-        "open": 113.34,
-        "symbol": "XOM",
-        "timestamp": "2025-06-20T04:00:00Z",
-        "trade_count": 8122.0,
-        "volume": 668544.0,
-        "vwap": 114.271307
-      },
       {
         "close": 111.69,
         "high": 116.92,
@@ -258426,910 +258415,921 @@
         "trade_count": 4197.0,
         "volume": 258580.0,
         "vwap": 158.673677
+      },
+      {
+        "close": 160.75,
+        "high": 161.14,
+        "low": 159.28,
+        "open": 159.685,
+        "symbol": "XOM",
+        "timestamp": "2026-08-14T04:00:00Z",
+        "trade_count": 3107.0,
+        "volume": 190007.0,
+        "vwap": 160.528077
       }
     ]
   },
   "clock": {
-    "is_open": false,
+    "is_open": true,
     "next_close": "2026-08-14T20:00:00Z",
-    "next_open": "2026-08-14T13:30:00Z",
-    "timestamp": "2026-08-13T21:28:10Z"
+    "next_open": "2026-08-17T13:30:00Z",
+    "timestamp": "2026-08-14T15:58:19Z"
   },
   "data_feed": "iex",
-  "data_hash": "ef8fe64ce5880e1ed1410a01f075c7d936b583e54135e953c59633ce4a7f4880",
+  "data_hash": "ea4cfc70309c942f13ddef0748b6fd46e5d39a404272cd5512790ddcb2c5a402",
   "data_source": "alpaca_paper",
-  "generated_at": "2026-08-13T21:28:10Z",
+  "generated_at": "2026-08-14T15:58:19Z",
   "latest_bars": {
     "AAPL": {
-      "close": 304.95,
-      "high": 304.95,
-      "low": 304.95,
-      "open": 304.95,
+      "close": 305.57,
+      "high": 305.71,
+      "low": 305.57,
+      "open": 305.71,
       "symbol": "AAPL",
-      "timestamp": "2026-08-13T20:14:00Z",
-      "trade_count": 1.0,
-      "volume": 47.0,
-      "vwap": 304.95
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 29.0,
+      "volume": 1011.0,
+      "vwap": 305.646783
     },
     "ABBV": {
-      "close": 250.755,
-      "high": 251.295,
-      "low": 250.63,
-      "open": 251.295,
+      "close": 249.06,
+      "high": 249.145,
+      "low": 249.06,
+      "open": 249.145,
       "symbol": "ABBV",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 206.0,
-      "volume": 13215.0,
-      "vwap": 251.006494
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 10.0,
+      "volume": 1191.0,
+      "vwap": 249.0925
     },
     "ABT": {
-      "close": 111.265,
-      "high": 111.41,
-      "low": 111.265,
-      "open": 111.37,
+      "close": 111.815,
+      "high": 111.83,
+      "low": 111.815,
+      "open": 111.83,
       "symbol": "ABT",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 123.0,
-      "volume": 5279.0,
-      "vwap": 111.333194
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 26.0,
+      "volume": 934.0,
+      "vwap": 111.820022
     },
     "ADBE": {
-      "close": 270.475,
-      "high": 270.535,
-      "low": 270.245,
-      "open": 270.41,
+      "close": 266.015,
+      "high": 266.07,
+      "low": 266.015,
+      "open": 266.07,
       "symbol": "ADBE",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 244.0,
-      "volume": 6876.0,
-      "vwap": 270.400849
+      "timestamp": "2026-08-14T15:54:00Z",
+      "trade_count": 15.0,
+      "volume": 294.0,
+      "vwap": 266.026111
     },
     "AEP": {
-      "close": 125.4,
-      "high": 125.4,
-      "low": 125.34,
-      "open": 125.34,
+      "close": 125.55,
+      "high": 125.55,
+      "low": 125.55,
+      "open": 125.55,
       "symbol": "AEP",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 118.0,
-      "volume": 5242.0,
-      "vwap": 125.362328
+      "timestamp": "2026-08-14T15:51:00Z",
+      "trade_count": 16.0,
+      "volume": 191.0,
+      "vwap": 125.55
     },
     "AMD": {
-      "close": 482.97,
-      "high": 483.48,
-      "low": 482.85,
-      "open": 483.31,
+      "close": 498.68,
+      "high": 498.68,
+      "low": 498.18,
+      "open": 498.18,
       "symbol": "AMD",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 298.0,
-      "volume": 17985.0,
-      "vwap": 483.147062
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 18.0,
+      "volume": 620.0,
+      "vwap": 498.443333
     },
     "AMGN": {
-      "close": 417.83,
-      "high": 418.06,
-      "low": 417.83,
-      "open": 418.02,
+      "close": 411.92,
+      "high": 411.92,
+      "low": 411.92,
+      "open": 411.92,
       "symbol": "AMGN",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 82.0,
-      "volume": 1726.0,
-      "vwap": 417.986259
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 2.0,
+      "volume": 42.0,
+      "vwap": 411.92
     },
     "AMT": {
-      "close": 174.19,
-      "high": 174.25,
-      "low": 174.19,
-      "open": 174.23,
+      "close": 176.06,
+      "high": 176.06,
+      "low": 176.055,
+      "open": 176.06,
       "symbol": "AMT",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 48.0,
-      "volume": 1731.0,
-      "vwap": 174.235131
+      "timestamp": "2026-08-14T15:54:00Z",
+      "trade_count": 8.0,
+      "volume": 530.0,
+      "vwap": 176.058913
     },
     "AMZN": {
-      "close": 265.185,
-      "high": 265.185,
-      "low": 264.93,
-      "open": 265.0,
+      "close": 263.88,
+      "high": 263.88,
+      "low": 263.88,
+      "open": 263.88,
       "symbol": "AMZN",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 559.0,
-      "volume": 31453.0,
-      "vwap": 265.047217
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 21.0,
+      "volume": 577.0,
+      "vwap": 263.88
     },
     "APD": {
-      "close": 305.73,
-      "high": 305.73,
-      "low": 305.405,
-      "open": 305.46,
+      "close": 307.04,
+      "high": 307.125,
+      "low": 307.04,
+      "open": 307.125,
       "symbol": "APD",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 82.0,
-      "volume": 1841.0,
-      "vwap": 305.529031
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 7.0,
+      "volume": 147.0,
+      "vwap": 307.0825
     },
     "AVGO": {
-      "close": 417.76,
-      "high": 417.845,
-      "low": 417.52,
-      "open": 417.52,
+      "close": 394.36,
+      "high": 394.365,
+      "low": 394.09,
+      "open": 394.09,
       "symbol": "AVGO",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 395.0,
-      "volume": 13824.0,
-      "vwap": 417.696755
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 29.0,
+      "volume": 715.0,
+      "vwap": 394.286311
     },
     "AXP": {
-      "close": 343.715,
-      "high": 343.82,
-      "low": 343.675,
-      "open": 343.71,
+      "close": 343.0,
+      "high": 343.0,
+      "low": 342.99,
+      "open": 342.99,
       "symbol": "AXP",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 85.0,
-      "volume": 2128.0,
-      "vwap": 343.756617
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 17.0,
+      "volume": 315.0,
+      "vwap": 342.997143
     },
     "BA": {
-      "close": 230.39,
-      "high": 230.39,
-      "low": 230.27,
-      "open": 230.355,
+      "close": 231.08,
+      "high": 231.185,
+      "low": 231.08,
+      "open": 231.185,
       "symbol": "BA",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 96.0,
-      "volume": 4308.0,
-      "vwap": 230.335738
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 9.0,
+      "volume": 906.0,
+      "vwap": 231.118891
     },
     "BAC": {
-      "close": 64.11,
-      "high": 64.23,
-      "low": 64.08,
-      "open": 64.23,
+      "close": 64.39,
+      "high": 64.39,
+      "low": 64.375,
+      "open": 64.375,
       "symbol": "BAC",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 618.0,
-      "volume": 92454.0,
-      "vwap": 64.149397
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 21.0,
+      "volume": 2813.0,
+      "vwap": 64.380562
     },
     "BIL": {
-      "close": 91.52,
-      "high": 91.52,
-      "low": 91.52,
-      "open": 91.52,
+      "close": 91.54,
+      "high": 91.54,
+      "low": 91.54,
+      "open": 91.54,
       "symbol": "BIL",
-      "timestamp": "2026-08-13T20:23:00Z",
+      "timestamp": "2026-08-14T15:28:00Z",
       "trade_count": 1.0,
-      "volume": 4987.0,
-      "vwap": 91.52
+      "volume": 461.0,
+      "vwap": 91.54
     },
     "BKNG": {
-      "close": 213.31,
-      "high": 213.35,
-      "low": 213.07,
-      "open": 213.1,
+      "close": 214.2,
+      "high": 214.27,
+      "low": 214.095,
+      "open": 214.24,
       "symbol": "BKNG",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 289.0,
-      "volume": 4943.0,
-      "vwap": 213.175188
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 72.0,
+      "volume": 1591.0,
+      "vwap": 214.207622
     },
     "BLK": {
-      "close": 1183.04,
-      "high": 1185.01,
-      "low": 1183.04,
-      "open": 1184.95,
+      "close": 1178.12,
+      "high": 1178.295,
+      "low": 1178.12,
+      "open": 1178.27,
       "symbol": "BLK",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 65.0,
-      "volume": 659.0,
-      "vwap": 1184.5272
+      "timestamp": "2026-08-14T15:54:00Z",
+      "trade_count": 10.0,
+      "volume": 331.0,
+      "vwap": 1178.259583
     },
     "CAT": {
-      "close": 854.86,
-      "high": 856.3,
-      "low": 854.58,
-      "open": 856.15,
+      "close": 854.44,
+      "high": 854.44,
+      "low": 854.0,
+      "open": 854.0,
       "symbol": "CAT",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 188.0,
-      "volume": 4989.0,
-      "vwap": 855.570352
+      "timestamp": "2026-08-14T15:54:00Z",
+      "trade_count": 13.0,
+      "volume": 443.0,
+      "vwap": 854.115263
     },
     "CL": {
-      "close": 92.91,
-      "high": 92.995,
-      "low": 92.86,
-      "open": 92.895,
+      "close": 92.45,
+      "high": 92.45,
+      "low": 92.45,
+      "open": 92.45,
       "symbol": "CL",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 93.0,
-      "volume": 3365.0,
-      "vwap": 92.910263
+      "timestamp": "2026-08-14T15:55:00Z",
+      "trade_count": 2.0,
+      "volume": 150.0,
+      "vwap": 92.45
     },
     "CMCSA": {
-      "close": 26.195,
-      "high": 26.2,
-      "low": 26.175,
-      "open": 26.18,
+      "close": 26.4,
+      "high": 26.405,
+      "low": 26.4,
+      "open": 26.405,
       "symbol": "CMCSA",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 407.0,
-      "volume": 64557.0,
-      "vwap": 26.193104
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 20.0,
+      "volume": 770.0,
+      "vwap": 26.402674
     },
     "COP": {
-      "close": 124.72,
-      "high": 125.01,
-      "low": 124.72,
-      "open": 124.98,
+      "close": 126.74,
+      "high": 126.74,
+      "low": 126.73,
+      "open": 126.74,
       "symbol": "COP",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 320.0,
-      "volume": 34553.0,
-      "vwap": 124.876951
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 28.0,
+      "volume": 968.0,
+      "vwap": 126.736667
     },
     "COST": {
-      "close": 961.7,
-      "high": 961.96,
-      "low": 961.44,
-      "open": 961.45,
+      "close": 962.46,
+      "high": 962.53,
+      "low": 962.46,
+      "open": 962.53,
       "symbol": "COST",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 162.0,
-      "volume": 2973.0,
-      "vwap": 961.718012
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 2.0,
+      "volume": 80.0,
+      "vwap": 962.495
     },
     "CRM": {
-      "close": 201.32,
-      "high": 201.62,
-      "low": 201.315,
-      "open": 201.415,
+      "close": 197.385,
+      "high": 197.385,
+      "low": 197.185,
+      "open": 197.185,
       "symbol": "CRM",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 275.0,
-      "volume": 19800.0,
-      "vwap": 201.404536
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 27.0,
+      "volume": 3510.0,
+      "vwap": 197.257681
     },
     "CSCO": {
-      "close": 113.485,
-      "high": 113.71,
-      "low": 113.01,
-      "open": 113.015,
+      "close": 110.16,
+      "high": 110.2,
+      "low": 110.15,
+      "open": 110.2,
       "symbol": "CSCO",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 713.0,
-      "volume": 69704.0,
-      "vwap": 113.17939
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 37.0,
+      "volume": 3448.0,
+      "vwap": 110.166129
     },
     "CVX": {
-      "close": 197.72,
-      "high": 198.06,
-      "low": 197.7,
-      "open": 197.895,
+      "close": 201.02,
+      "high": 201.02,
+      "low": 200.985,
+      "open": 200.985,
       "symbol": "CVX",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 227.0,
-      "volume": 18418.0,
-      "vwap": 197.84019
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 34.0,
+      "volume": 1530.0,
+      "vwap": 201.003
     },
     "DE": {
-      "close": 612.49,
-      "high": 613.235,
-      "low": 612.49,
-      "open": 612.845,
+      "close": 609.275,
+      "high": 609.275,
+      "low": 609.275,
+      "open": 609.275,
       "symbol": "DE",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 46.0,
-      "volume": 1372.0,
-      "vwap": 612.831953
+      "timestamp": "2026-08-14T15:54:00Z",
+      "trade_count": 2.0,
+      "volume": 120.0,
+      "vwap": 609.275
     },
     "DIS": {
-      "close": 104.81,
-      "high": 104.81,
-      "low": 104.7,
-      "open": 104.715,
+      "close": 106.6,
+      "high": 106.6,
+      "low": 106.6,
+      "open": 106.6,
       "symbol": "DIS",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 162.0,
-      "volume": 9468.0,
-      "vwap": 104.753319
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 6.0,
+      "volume": 269.0,
+      "vwap": 106.6
     },
     "DUK": {
-      "close": 124.5,
-      "high": 124.58,
-      "low": 124.485,
-      "open": 124.51,
+      "close": 123.61,
+      "high": 123.61,
+      "low": 123.61,
+      "open": 123.61,
       "symbol": "DUK",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 143.0,
-      "volume": 8651.0,
-      "vwap": 124.51707
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 5.0,
+      "volume": 204.0,
+      "vwap": 123.61
     },
     "ECL": {
-      "close": 276.3,
-      "high": 276.59,
-      "low": 276.2,
-      "open": 276.59,
+      "close": 275.83,
+      "high": 275.83,
+      "low": 275.83,
+      "open": 275.83,
       "symbol": "ECL",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 81.0,
-      "volume": 1581.0,
-      "vwap": 276.351975
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 9.0,
+      "volume": 87.0,
+      "vwap": 275.83
     },
     "EOG": {
-      "close": 141.39,
-      "high": 141.545,
-      "low": 141.355,
-      "open": 141.46,
+      "close": 142.595,
+      "high": 142.595,
+      "low": 142.595,
+      "open": 142.595,
       "symbol": "EOG",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 90.0,
-      "volume": 4496.0,
-      "vwap": 141.428865
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 2.0,
+      "volume": 127.0,
+      "vwap": 142.595
     },
     "EQIX": {
-      "close": 1073.76,
-      "high": 1073.81,
-      "low": 1073.615,
-      "open": 1073.615,
+      "close": 1091.215,
+      "high": 1091.32,
+      "low": 1089.52,
+      "open": 1090.24,
       "symbol": "EQIX",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 34.0,
-      "volume": 377.0,
-      "vwap": 1073.740556
+      "timestamp": "2026-08-14T15:54:00Z",
+      "trade_count": 32.0,
+      "volume": 602.0,
+      "vwap": 1090.423529
     },
     "FCX": {
-      "close": 66.83,
-      "high": 66.93,
-      "low": 66.825,
-      "open": 66.915,
+      "close": 66.87,
+      "high": 66.87,
+      "low": 66.84,
+      "open": 66.85,
       "symbol": "FCX",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 216.0,
-      "volume": 12879.0,
-      "vwap": 66.864315
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 12.0,
+      "volume": 513.0,
+      "vwap": 66.8575
     },
     "GE": {
-      "close": 360.6,
-      "high": 360.925,
-      "low": 360.38,
-      "open": 360.68,
+      "close": 364.07,
+      "high": 364.07,
+      "low": 364.07,
+      "open": 364.07,
       "symbol": "GE",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 135.0,
-      "volume": 4374.0,
-      "vwap": 360.639053
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 5.0,
+      "volume": 75.0,
+      "vwap": 364.07
     },
     "GOOGL": {
-      "close": 346.35,
-      "high": 346.4,
-      "low": 346.13,
-      "open": 346.17,
+      "close": 345.38,
+      "high": 345.425,
+      "low": 345.31,
+      "open": 345.31,
       "symbol": "GOOGL",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 629.0,
-      "volume": 25564.0,
-      "vwap": 346.238406
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 21.0,
+      "volume": 901.0,
+      "vwap": 345.371087
     },
     "GS": {
-      "close": 1042.395,
-      "high": 1042.395,
-      "low": 1041.37,
-      "open": 1042.23,
+      "close": 1034.14,
+      "high": 1034.235,
+      "low": 1034.14,
+      "open": 1034.235,
       "symbol": "GS",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 40.0,
-      "volume": 782.0,
-      "vwap": 1042.138736
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 7.0,
+      "volume": 123.0,
+      "vwap": 1034.1875
     },
     "HD": {
-      "close": 341.66,
-      "high": 341.77,
-      "low": 341.33,
-      "open": 341.445,
+      "close": 338.19,
+      "high": 338.2,
+      "low": 338.13,
+      "open": 338.2,
       "symbol": "HD",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 208.0,
-      "volume": 4613.0,
-      "vwap": 341.502003
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 20.0,
+      "volume": 422.0,
+      "vwap": 338.154607
     },
     "HON": {
-      "close": 234.0,
-      "high": 234.22,
-      "low": 233.97,
-      "open": 234.005,
+      "close": 233.225,
+      "high": 233.225,
+      "low": 233.18,
+      "open": 233.18,
       "symbol": "HON",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 224.0,
-      "volume": 15018.0,
-      "vwap": 234.059068
+      "timestamp": "2026-08-14T15:53:00Z",
+      "trade_count": 2.0,
+      "volume": 200.0,
+      "vwap": 233.2025
     },
     "INTU": {
-      "close": 358.265,
-      "high": 358.34,
-      "low": 358.02,
-      "open": 358.28,
+      "close": 347.98,
+      "high": 347.98,
+      "low": 347.98,
+      "open": 347.98,
       "symbol": "INTU",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 243.0,
-      "volume": 9595.0,
-      "vwap": 358.2269
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 10.0,
+      "volume": 183.0,
+      "vwap": 347.98
     },
     "ISRG": {
-      "close": 401.37,
-      "high": 401.5,
-      "low": 401.25,
-      "open": 401.27,
+      "close": 400.77,
+      "high": 400.77,
+      "low": 400.73,
+      "open": 400.73,
       "symbol": "ISRG",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 57.0,
-      "volume": 1867.0,
-      "vwap": 401.328493
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 6.0,
+      "volume": 201.0,
+      "vwap": 400.758571
     },
     "JNJ": {
-      "close": 262.11,
-      "high": 262.57,
-      "low": 262.08,
-      "open": 262.555,
+      "close": 260.26,
+      "high": 260.26,
+      "low": 260.26,
+      "open": 260.26,
       "symbol": "JNJ",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 191.0,
-      "volume": 7359.0,
-      "vwap": 262.376865
+      "timestamp": "2026-08-14T15:55:00Z",
+      "trade_count": 3.0,
+      "volume": 197.0,
+      "vwap": 260.26
     },
     "JPM": {
-      "close": 363.11,
-      "high": 363.58,
-      "low": 363.08,
-      "open": 363.37,
+      "close": 363.27,
+      "high": 363.27,
+      "low": 363.22,
+      "open": 363.22,
       "symbol": "JPM",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 221.0,
-      "volume": 7734.0,
-      "vwap": 363.329132
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 7.0,
+      "volume": 153.0,
+      "vwap": 363.250769
     },
     "KO": {
-      "close": 87.46,
-      "high": 87.59,
-      "low": 87.39,
-      "open": 87.57,
+      "close": 87.8,
+      "high": 87.8,
+      "low": 87.795,
+      "open": 87.8,
       "symbol": "KO",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 507.0,
-      "volume": 53228.0,
-      "vwap": 87.501562
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 15.0,
+      "volume": 1147.0,
+      "vwap": 87.799361
     },
     "LIN": {
-      "close": 478.135,
-      "high": 478.135,
-      "low": 477.87,
-      "open": 477.91,
+      "close": 481.43,
+      "high": 481.43,
+      "low": 481.43,
+      "open": 481.43,
       "symbol": "LIN",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 85.0,
-      "volume": 2571.0,
-      "vwap": 477.973367
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 1.0,
+      "volume": 51.0,
+      "vwap": 481.43
     },
     "LLY": {
-      "close": 1209.09,
-      "high": 1211.35,
-      "low": 1208.06,
-      "open": 1211.35,
+      "close": 1184.88,
+      "high": 1185.0,
+      "low": 1184.85,
+      "open": 1185.0,
       "symbol": "LLY",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 90.0,
-      "volume": 2439.0,
-      "vwap": 1209.675622
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 8.0,
+      "volume": 170.0,
+      "vwap": 1184.91
     },
     "LMT": {
-      "close": 598.29,
-      "high": 598.555,
-      "low": 598.07,
-      "open": 598.115,
+      "close": 608.125,
+      "high": 608.125,
+      "low": 608.125,
+      "open": 608.125,
       "symbol": "LMT",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 49.0,
-      "volume": 885.0,
-      "vwap": 598.353395
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 5.0,
+      "volume": 69.0,
+      "vwap": 608.125
     },
     "LOW": {
-      "close": 218.23,
-      "high": 218.42,
-      "low": 217.96,
-      "open": 217.96,
+      "close": 217.1,
+      "high": 217.1,
+      "low": 217.1,
+      "open": 217.1,
       "symbol": "LOW",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 147.0,
-      "volume": 9670.0,
-      "vwap": 218.201505
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 5.0,
+      "volume": 132.0,
+      "vwap": 217.1
     },
     "MA": {
-      "close": 567.34,
-      "high": 567.64,
-      "low": 567.08,
-      "open": 567.43,
+      "close": 568.18,
+      "high": 568.18,
+      "low": 568.18,
+      "open": 568.18,
       "symbol": "MA",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 51.0,
-      "volume": 1211.0,
-      "vwap": 567.480667
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 4.0,
+      "volume": 43.0,
+      "vwap": 568.18
     },
     "MCD": {
-      "close": 272.25,
-      "high": 272.32,
-      "low": 272.21,
-      "open": 272.32,
+      "close": 274.055,
+      "high": 274.055,
+      "low": 274.03,
+      "open": 274.03,
       "symbol": "MCD",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 215.0,
-      "volume": 4790.0,
-      "vwap": 272.258687
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 13.0,
+      "volume": 160.0,
+      "vwap": 274.046667
     },
     "MDLZ": {
-      "close": 63.54,
-      "high": 63.555,
-      "low": 63.455,
-      "open": 63.47,
+      "close": 63.64,
+      "high": 63.66,
+      "low": 63.64,
+      "open": 63.66,
       "symbol": "MDLZ",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 245.0,
-      "volume": 19533.0,
-      "vwap": 63.529396
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 5.0,
+      "volume": 348.0,
+      "vwap": 63.653671
     },
     "META": {
-      "close": 594.18,
-      "high": 594.18,
-      "low": 594.18,
-      "open": 594.18,
+      "close": 594.37,
+      "high": 594.37,
+      "low": 594.255,
+      "open": 594.28,
       "symbol": "META",
-      "timestamp": "2026-08-13T20:11:00Z",
-      "trade_count": 3.0,
-      "volume": 73.0,
-      "vwap": 594.18
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 12.0,
+      "volume": 480.0,
+      "vwap": 594.290909
     },
     "MRK": {
-      "close": 135.59,
-      "high": 135.665,
-      "low": 135.53,
-      "open": 135.565,
+      "close": 133.92,
+      "high": 133.92,
+      "low": 133.92,
+      "open": 133.92,
       "symbol": "MRK",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 155.0,
-      "volume": 11188.0,
-      "vwap": 135.606538
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 12.0,
+      "volume": 452.0,
+      "vwap": 133.92
     },
     "MS": {
-      "close": 218.34,
-      "high": 218.67,
-      "low": 218.33,
-      "open": 218.57,
+      "close": 216.695,
+      "high": 216.735,
+      "low": 216.695,
+      "open": 216.735,
       "symbol": "MS",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 178.0,
-      "volume": 8794.0,
-      "vwap": 218.545871
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 18.0,
+      "volume": 642.0,
+      "vwap": 216.719
     },
     "MSFT": {
-      "close": 496.81,
-      "high": 497.09,
-      "low": 496.62,
-      "open": 496.665,
+      "close": 498.095,
+      "high": 498.445,
+      "low": 498.08,
+      "open": 498.445,
       "symbol": "MSFT",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 601.0,
-      "volume": 28493.0,
-      "vwap": 496.813834
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 28.0,
+      "volume": 1344.0,
+      "vwap": 498.291603
     },
     "NEE": {
-      "close": 86.01,
-      "high": 86.01,
-      "low": 85.94,
-      "open": 86.0,
+      "close": 86.33,
+      "high": 86.33,
+      "low": 86.315,
+      "open": 86.315,
       "symbol": "NEE",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 270.0,
-      "volume": 23812.0,
-      "vwap": 85.967561
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 10.0,
+      "volume": 519.0,
+      "vwap": 86.325
     },
     "NFLX": {
-      "close": 78.24,
-      "high": 78.27,
-      "low": 78.17,
-      "open": 78.2,
+      "close": 78.225,
+      "high": 78.235,
+      "low": 78.22,
+      "open": 78.23,
       "symbol": "NFLX",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 835.0,
-      "volume": 89436.0,
-      "vwap": 78.225464
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 19.0,
+      "volume": 1416.0,
+      "vwap": 78.226957
     },
     "NKE": {
-      "close": 41.21,
-      "high": 41.305,
-      "low": 41.195,
-      "open": 41.29,
+      "close": 40.97,
+      "high": 40.97,
+      "low": 40.97,
+      "open": 40.97,
       "symbol": "NKE",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 411.0,
-      "volume": 61976.0,
-      "vwap": 41.24832
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 7.0,
+      "volume": 1231.0,
+      "vwap": 40.97
     },
     "NVDA": {
-      "close": 225.36,
-      "high": 225.41,
-      "low": 224.985,
-      "open": 225.005,
+      "close": 225.19,
+      "high": 225.25,
+      "low": 225.115,
+      "open": 225.115,
       "symbol": "NVDA",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 814.0,
-      "volume": 62619.0,
-      "vwap": 225.213761
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 51.0,
+      "volume": 6429.0,
+      "vwap": 225.168169
     },
     "O": {
-      "close": 62.96,
-      "high": 63.08,
-      "low": 62.95,
-      "open": 63.08,
+      "close": 62.935,
+      "high": 62.95,
+      "low": 62.935,
+      "open": 62.95,
       "symbol": "O",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 283.0,
-      "volume": 27188.0,
-      "vwap": 63.025891
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 11.0,
+      "volume": 709.0,
+      "vwap": 62.9375
     },
     "ORCL": {
-      "close": 156.23,
-      "high": 156.48,
-      "low": 156.2,
-      "open": 156.39,
+      "close": 153.29,
+      "high": 153.29,
+      "low": 153.175,
+      "open": 153.205,
       "symbol": "ORCL",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 261.0,
-      "volume": 19279.0,
-      "vwap": 156.349153
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 22.0,
+      "volume": 2104.0,
+      "vwap": 153.235452
     },
     "PEP": {
-      "close": 140.62,
-      "high": 140.62,
-      "low": 140.57,
-      "open": 140.575,
+      "close": 141.05,
+      "high": 141.05,
+      "low": 141.05,
+      "open": 141.05,
       "symbol": "PEP",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 208.0,
-      "volume": 9749.0,
-      "vwap": 140.598771
+      "timestamp": "2026-08-14T15:55:00Z",
+      "trade_count": 8.0,
+      "volume": 137.0,
+      "vwap": 141.05
     },
     "PG": {
-      "close": 144.255,
-      "high": 144.46,
-      "low": 144.19,
-      "open": 144.3,
+      "close": 144.465,
+      "high": 144.465,
+      "low": 144.41,
+      "open": 144.41,
       "symbol": "PG",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 328.0,
-      "volume": 33513.0,
-      "vwap": 144.333479
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 12.0,
+      "volume": 608.0,
+      "vwap": 144.43
     },
     "PLD": {
-      "close": 141.205,
-      "high": 141.37,
-      "low": 141.195,
-      "open": 141.26,
+      "close": 140.96,
+      "high": 140.96,
+      "low": 140.96,
+      "open": 140.96,
       "symbol": "PLD",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 104.0,
-      "volume": 4992.0,
-      "vwap": 141.305877
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 6.0,
+      "volume": 269.0,
+      "vwap": 140.96
     },
     "PM": {
-      "close": 188.89,
-      "high": 189.185,
-      "low": 188.85,
-      "open": 189.125,
+      "close": 190.165,
+      "high": 190.25,
+      "low": 190.165,
+      "open": 190.25,
       "symbol": "PM",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 131.0,
-      "volume": 11091.0,
-      "vwap": 188.992925
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 5.0,
+      "volume": 503.0,
+      "vwap": 190.213
     },
     "RTX": {
-      "close": 220.48,
-      "high": 220.63,
-      "low": 220.44,
-      "open": 220.45,
+      "close": 221.845,
+      "high": 221.845,
+      "low": 221.845,
+      "open": 221.845,
       "symbol": "RTX",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 71.0,
-      "volume": 2697.0,
-      "vwap": 220.522727
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 3.0,
+      "volume": 152.0,
+      "vwap": 221.845
     },
     "SBUX": {
-      "close": 108.565,
-      "high": 108.565,
-      "low": 108.495,
-      "open": 108.495,
+      "close": 107.96,
+      "high": 107.96,
+      "low": 107.96,
+      "open": 107.96,
       "symbol": "SBUX",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 96.0,
-      "volume": 4715.0,
-      "vwap": 108.521777
+      "timestamp": "2026-08-14T15:53:00Z",
+      "trade_count": 4.0,
+      "volume": 109.0,
+      "vwap": 107.96
     },
     "SHW": {
-      "close": 361.59,
-      "high": 361.85,
-      "low": 361.58,
-      "open": 361.675,
+      "close": 357.6,
+      "high": 357.6,
+      "low": 357.6,
+      "open": 357.6,
       "symbol": "SHW",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 110.0,
-      "volume": 8225.0,
-      "vwap": 361.738185
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 1.0,
+      "volume": 40.0,
+      "vwap": 357.6
     },
     "SLB": {
-      "close": 52.06,
-      "high": 52.07,
-      "low": 51.77,
-      "open": 52.01,
+      "close": 53.81,
+      "high": 53.81,
+      "low": 53.79,
+      "open": 53.79,
       "symbol": "SLB",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 568.0,
-      "volume": 68562.0,
-      "vwap": 51.892929
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 13.0,
+      "volume": 602.0,
+      "vwap": 53.796667
     },
     "SO": {
-      "close": 92.775,
-      "high": 92.795,
-      "low": 92.75,
-      "open": 92.785,
+      "close": 93.06,
+      "high": 93.07,
+      "low": 93.06,
+      "open": 93.06,
       "symbol": "SO",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 116.0,
-      "volume": 8596.0,
-      "vwap": 92.769131
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 10.0,
+      "volume": 508.0,
+      "vwap": 93.062273
     },
     "SPY": {
-      "close": 777.86,
-      "high": 777.88,
-      "low": 777.85,
-      "open": 777.88,
+      "close": 776.16,
+      "high": 776.17,
+      "low": 776.05,
+      "open": 776.075,
       "symbol": "SPY",
-      "timestamp": "2026-08-13T20:06:00Z",
-      "trade_count": 5.0,
-      "volume": 200.0,
-      "vwap": 777.864359
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 40.0,
+      "volume": 1539.0,
+      "vwap": 776.096821
     },
     "SRE": {
-      "close": 86.48,
-      "high": 86.5,
-      "low": 86.41,
-      "open": 86.44,
+      "close": 86.82,
+      "high": 86.825,
+      "low": 86.82,
+      "open": 86.825,
       "symbol": "SRE",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 138.0,
-      "volume": 8932.0,
-      "vwap": 86.46801
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 5.0,
+      "volume": 252.0,
+      "vwap": 86.8225
     },
     "TMO": {
-      "close": 595.69,
-      "high": 596.81,
-      "low": 595.69,
-      "open": 596.81,
+      "close": 593.14,
+      "high": 593.14,
+      "low": 592.96,
+      "open": 592.98,
       "symbol": "TMO",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 72.0,
-      "volume": 1537.0,
-      "vwap": 596.283122
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 7.0,
+      "volume": 163.0,
+      "vwap": 593.05125
     },
     "TMUS": {
-      "close": 183.375,
-      "high": 183.375,
-      "low": 183.135,
-      "open": 183.135,
+      "close": 182.57,
+      "high": 182.57,
+      "low": 182.57,
+      "open": 182.57,
       "symbol": "TMUS",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 96.0,
-      "volume": 9396.0,
-      "vwap": 183.232905
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 4.0,
+      "volume": 260.0,
+      "vwap": 182.57
     },
     "TSLA": {
-      "close": 340.77,
-      "high": 340.77,
-      "low": 340.77,
-      "open": 340.77,
+      "close": 338.32,
+      "high": 338.54,
+      "low": 338.31,
+      "open": 338.46,
       "symbol": "TSLA",
-      "timestamp": "2026-08-13T20:37:00Z",
-      "trade_count": 2.0,
-      "volume": 104.0,
-      "vwap": 340.77
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 44.0,
+      "volume": 1603.0,
+      "vwap": 338.454602
     },
     "UNH": {
-      "close": 399.18,
-      "high": 399.42,
-      "low": 399.0,
-      "open": 399.25,
+      "close": 401.41,
+      "high": 401.41,
+      "low": 401.355,
+      "open": 401.365,
       "symbol": "UNH",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 270.0,
-      "volume": 10052.0,
-      "vwap": 399.223847
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 8.0,
+      "volume": 202.0,
+      "vwap": 401.38
     },
     "UNP": {
-      "close": 297.76,
-      "high": 298.22,
-      "low": 297.76,
-      "open": 298.12,
+      "close": 297.5,
+      "high": 297.785,
+      "low": 297.5,
+      "open": 297.785,
       "symbol": "UNP",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 68.0,
-      "volume": 1876.0,
-      "vwap": 298.08
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 21.0,
+      "volume": 1047.0,
+      "vwap": 297.702062
     },
     "UPS": {
-      "close": 105.55,
-      "high": 105.705,
-      "low": 105.55,
-      "open": 105.7,
+      "close": 104.785,
+      "high": 104.785,
+      "low": 104.785,
+      "open": 104.785,
       "symbol": "UPS",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 156.0,
-      "volume": 9845.0,
-      "vwap": 105.606261
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 11.0,
+      "volume": 373.0,
+      "vwap": 104.785
     },
     "V": {
-      "close": 365.135,
-      "high": 365.27,
-      "low": 364.76,
-      "open": 364.81,
+      "close": 365.13,
+      "high": 365.13,
+      "low": 365.13,
+      "open": 365.13,
       "symbol": "V",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 270.0,
-      "volume": 12736.0,
-      "vwap": 365.025033
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 15.0,
+      "volume": 215.0,
+      "vwap": 365.13
     },
     "WELL": {
-      "close": 234.52,
-      "high": 234.93,
-      "low": 234.52,
-      "open": 234.93,
+      "close": 235.395,
+      "high": 235.395,
+      "low": 235.395,
+      "open": 235.395,
       "symbol": "WELL",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 46.0,
-      "volume": 2690.0,
-      "vwap": 234.738524
+      "timestamp": "2026-08-14T15:56:00Z",
+      "trade_count": 1.0,
+      "volume": 100.0,
+      "vwap": 235.395
     },
     "WFC": {
-      "close": 88.13,
-      "high": 88.265,
-      "low": 88.08,
-      "open": 88.2,
+      "close": 88.4,
+      "high": 88.4,
+      "low": 88.385,
+      "open": 88.39,
       "symbol": "WFC",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 458.0,
-      "volume": 43944.0,
-      "vwap": 88.190839
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 10.0,
+      "volume": 843.0,
+      "vwap": 88.393571
     },
     "WMT": {
-      "close": 115.74,
-      "high": 115.74,
-      "low": 115.66,
-      "open": 115.66,
+      "close": 115.34,
+      "high": 115.35,
+      "low": 115.33,
+      "open": 115.35,
       "symbol": "WMT",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 299.0,
-      "volume": 20626.0,
-      "vwap": 115.700604
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 15.0,
+      "volume": 680.0,
+      "vwap": 115.343333
     },
     "XOM": {
-      "close": 158.63,
-      "high": 158.85,
-      "low": 158.61,
-      "open": 158.83,
+      "close": 160.75,
+      "high": 160.79,
+      "low": 160.71,
+      "open": 160.79,
       "symbol": "XOM",
-      "timestamp": "2026-08-13T19:59:00Z",
-      "trade_count": 99.0,
-      "volume": 5001.0,
-      "vwap": 158.75284
+      "timestamp": "2026-08-14T15:57:00Z",
+      "trade_count": 35.0,
+      "volume": 2161.0,
+      "vwap": 160.756087
     }
   },
   "orders": [],
@@ -259340,21 +259340,21 @@
       "asset_marginable": true,
       "avg_entry_price": "1077.631196",
       "avg_entry_swap_rate": null,
-      "change_today": "0.00431",
+      "change_today": "0.01435",
       "cost_basis": "99.842227",
-      "current_price": "1073.78",
+      "current_price": "1089.19",
       "exchange": "NASDAQ",
-      "lastday_price": "1069.17",
-      "market_value": "99.485415",
+      "lastday_price": "1073.78",
+      "market_value": "100.913147",
       "qty": "0.092649719",
       "qty_available": "0.092649719",
       "side": "long",
       "swap_rate": null,
       "symbol": "EQIX",
-      "unrealized_intraday_pl": "0.427115",
-      "unrealized_intraday_plpc": "0.00431",
-      "unrealized_pl": "-0.356812",
-      "unrealized_plpc": "-0.00357",
+      "unrealized_intraday_pl": "1.427732",
+      "unrealized_intraday_plpc": "0.01435",
+      "unrealized_pl": "1.07092",
+      "unrealized_plpc": "0.01073",
       "usd": null
     },
     {
@@ -259363,21 +259363,21 @@
       "asset_marginable": true,
       "avg_entry_price": "230.135969",
       "avg_entry_swap_rate": null,
-      "change_today": "0.00479",
+      "change_today": "-0.00733",
       "cost_basis": "75",
-      "current_price": "262.11",
+      "current_price": "260.16",
       "exchange": "NYSE",
-      "lastday_price": "260.86",
-      "market_value": "85.420154",
+      "lastday_price": "262.08",
+      "market_value": "84.78466",
       "qty": "0.325894297",
       "qty_available": "0.325894297",
       "side": "long",
       "swap_rate": null,
       "symbol": "JNJ",
-      "unrealized_intraday_pl": "0.407368",
-      "unrealized_intraday_plpc": "0.00479",
-      "unrealized_pl": "10.420154",
-      "unrealized_plpc": "0.13894",
+      "unrealized_intraday_pl": "-0.625717",
+      "unrealized_intraday_plpc": "-0.00733",
+      "unrealized_pl": "9.78466",
+      "unrealized_plpc": "0.13046",
       "usd": null
     },
     {
@@ -259386,21 +259386,21 @@
       "asset_marginable": true,
       "avg_entry_price": "218.808",
       "avg_entry_swap_rate": null,
-      "change_today": "0.02275",
+      "change_today": "0.00469",
       "cost_basis": "25",
-      "current_price": "235.508",
+      "current_price": "235.54",
       "exchange": "NYSE",
-      "lastday_price": "230.27",
-      "market_value": "26.908065",
+      "lastday_price": "234.44",
+      "market_value": "26.911722",
       "qty": "0.11425542",
       "qty_available": "0.11425542",
       "side": "long",
       "swap_rate": null,
       "symbol": "WELL",
-      "unrealized_intraday_pl": "0.598469",
-      "unrealized_intraday_plpc": "0.02275",
-      "unrealized_pl": "1.908065",
-      "unrealized_plpc": "0.07632",
+      "unrealized_intraday_pl": "0.125681",
+      "unrealized_intraday_plpc": "0.00469",
+      "unrealized_pl": "1.911722",
+      "unrealized_plpc": "0.07647",
       "usd": null
     },
     {
@@ -259409,1009 +259409,1009 @@
       "asset_marginable": true,
       "avg_entry_price": "132.374926",
       "avg_entry_swap_rate": null,
-      "change_today": "-0.00282",
+      "change_today": "-0.00298",
       "cost_basis": "50",
-      "current_price": "115.6823",
+      "current_price": "115.375",
       "exchange": "NASDAQ",
-      "lastday_price": "116.01",
-      "market_value": "43.694944",
+      "lastday_price": "115.72",
+      "market_value": "43.578872",
       "qty": "0.377715036",
       "qty_available": "0.377715036",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "-0.123777",
-      "unrealized_intraday_plpc": "-0.00282",
-      "unrealized_pl": "-6.305056",
-      "unrealized_plpc": "-0.1261",
+      "unrealized_intraday_pl": "-0.130312",
+      "unrealized_intraday_plpc": "-0.00298",
+      "unrealized_pl": "-6.421128",
+      "unrealized_plpc": "-0.12842",
       "usd": null
     }
   ],
   "quotes": {
     "AAPL": {
       "ask_exchange": "V",
-      "ask_price": 319.59,
+      "ask_price": 306.05,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 289.0,
+      "bid_price": 305.52,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "AAPL",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "ABBV": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 264.18,
+      "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 238.22,
+      "bid_price": 248.0,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "ABBV",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:17Z"
     },
     "ABT": {
       "ask_exchange": "V",
-      "ask_price": 116.43,
+      "ask_price": 111.85,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 106.34,
-      "bid_size": 100.0,
+      "bid_price": 111.83,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "ABT",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:21Z"
     },
     "ADBE": {
       "ask_exchange": "V",
-      "ask_price": 280.47,
+      "ask_price": 275.0,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 253.67,
+      "bid_price": 253.4,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "ADBE",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:19Z"
     },
     "AEP": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 125.41,
+      "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 117.46,
+      "bid_price": 125.38,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "AEP",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:04Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "AMD": {
       "ask_exchange": "V",
-      "ask_price": 507.95,
+      "ask_price": 507.2,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 458.51,
+      "bid_price": 496.51,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "AMD",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:23Z"
     },
     "AMGN": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 415.0,
+      "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 396.41,
+      "bid_price": 411.36,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "AMGN",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:02Z"
+      "timestamp": "2026-08-14T15:58:21Z"
     },
     "AMT": {
       "ask_exchange": "V",
-      "ask_price": 183.54,
+      "ask_price": 184.54,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 165.39,
+      "bid_price": 164.49,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "AMT",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:57:06Z"
     },
     "AMZN": {
       "ask_exchange": "V",
-      "ask_price": 280.46,
-      "ask_size": 100.0,
+      "ask_price": 263.99,
+      "ask_size": 200.0,
       "bid_exchange": "V",
-      "bid_price": 253.52,
-      "bid_size": 100.0,
+      "bid_price": 263.93,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "AMZN",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "APD": {
       "ask_exchange": "V",
-      "ask_price": 328.15,
+      "ask_price": 322.6,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 275.06,
+      "bid_price": 288.26,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "APD",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:11Z"
     },
     "AVGO": {
       "ask_exchange": "V",
-      "ask_price": 445.62,
-      "ask_size": 40.0,
+      "ask_price": 395.38,
+      "ask_size": 120.0,
       "bid_exchange": "V",
-      "bid_price": 403.31,
+      "bid_price": 392.75,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "AVGO",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:21Z"
     },
     "AXP": {
       "ask_exchange": "V",
-      "ask_price": 358.56,
+      "ask_price": 363.3,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 328.08,
-      "bid_size": 40.0,
+      "bid_price": 339.25,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "AXP",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:17Z"
     },
     "BA": {
       "ask_exchange": "V",
-      "ask_price": 240.06,
+      "ask_price": 231.27,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 220.59,
-      "bid_size": 100.0,
+      "bid_price": 231.1,
+      "bid_size": 300.0,
       "conditions": [
         "R"
       ],
       "symbol": "BA",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "BAC": {
       "ask_exchange": "V",
-      "ask_price": 67.1,
-      "ask_size": 100.0,
+      "ask_price": 64.41,
+      "ask_size": 1400.0,
       "bid_exchange": "V",
-      "bid_price": 61.65,
-      "bid_size": 100.0,
+      "bid_price": 64.4,
+      "bid_size": 1100.0,
       "conditions": [
         "R"
       ],
       "symbol": "BAC",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "BIL": {
       "ask_exchange": "V",
-      "ask_price": 91.53,
-      "ask_size": 5000.0,
+      "ask_price": 91.54,
+      "ask_size": 100000.0,
       "bid_exchange": "V",
-      "bid_price": 91.51,
-      "bid_size": 5000.0,
+      "bid_price": 91.53,
+      "bid_size": 237100.0,
       "conditions": [
         "R"
       ],
       "symbol": "BIL",
       "tape": "B",
-      "timestamp": "2026-08-13T20:23:21Z"
+      "timestamp": "2026-08-14T15:54:21Z"
     },
     "BKNG": {
       "ask_exchange": "V",
-      "ask_price": 212.04,
+      "ask_price": 214.32,
       "ask_size": 10.0,
       "bid_exchange": "V",
-      "bid_price": 200.36,
+      "bid_price": 214.27,
       "bid_size": 10.0,
       "conditions": [
         "R"
       ],
       "symbol": "BKNG",
       "tape": "C",
-      "timestamp": "2026-08-13T20:35:27Z"
+      "timestamp": "2026-08-14T15:58:20Z"
     },
     "BLK": {
       "ask_exchange": "V",
-      "ask_price": 1227.74,
+      "ask_price": 1249.5,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 1102.0,
+      "bid_price": 1104.54,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "BLK",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:03Z"
+      "timestamp": "2026-08-14T15:58:20Z"
     },
     "CAT": {
       "ask_exchange": "V",
-      "ask_price": 900.9,
+      "ask_price": 899.33,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 809.87,
+      "bid_price": 809.4,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "CAT",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:06Z"
     },
     "CL": {
       "ask_exchange": "V",
-      "ask_price": 98.18,
+      "ask_price": 92.36,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 85.48,
+      "bid_price": 87.4,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "CL",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:20Z"
     },
     "CMCSA": {
       "ask_exchange": "V",
-      "ask_price": 27.14,
-      "ask_size": 100.0,
+      "ask_price": 26.41,
+      "ask_size": 5200.0,
       "bid_exchange": "V",
-      "bid_price": 24.87,
-      "bid_size": 100.0,
+      "bid_price": 26.4,
+      "bid_size": 2300.0,
       "conditions": [
         "R"
       ],
       "symbol": "CMCSA",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:23Z"
     },
     "COP": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 126.78,
+      "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 116.38,
+      "bid_price": 126.76,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "COP",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:02Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "COST": {
       "ask_exchange": "V",
-      "ask_price": 1002.74,
+      "ask_price": 963.76,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 904.72,
+      "bid_price": 962.69,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "COST",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:17Z"
     },
     "CRM": {
       "ask_exchange": "V",
-      "ask_price": 211.94,
+      "ask_price": 205.52,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 190.12,
+      "bid_price": 186.96,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "CRM",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:19Z"
     },
     "CSCO": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 110.3,
+      "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 108.11,
+      "bid_price": 110.28,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "CSCO",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:03Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "CVX": {
       "ask_exchange": "V",
-      "ask_price": 205.03,
+      "ask_price": 201.07,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 185.25,
+      "bid_price": 201.03,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "CVX",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "DE": {
       "ask_exchange": "V",
-      "ask_price": 660.43,
+      "ask_price": 649.95,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 580.44,
+      "bid_price": 608.62,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "DE",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:04Z"
     },
     "DIS": {
       "ask_exchange": "V",
-      "ask_price": 109.26,
+      "ask_price": 106.59,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 98.19,
+      "bid_price": 106.55,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "DIS",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "DUK": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 123.65,
+      "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 117.32,
+      "bid_price": 116.18,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "DUK",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:02Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "ECL": {
       "ask_exchange": "V",
-      "ask_price": 289.48,
+      "ask_price": 288.5,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 261.24,
+      "bid_price": 261.25,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "ECL",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:11Z"
     },
     "EOG": {
       "ask_exchange": "V",
-      "ask_price": 155.16,
+      "ask_price": 142.75,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 134.33,
+      "bid_price": 133.75,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "EOG",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:22Z"
     },
     "EQIX": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 1133.99,
+      "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 1014.76,
+      "bid_price": 1088.1,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "EQIX",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:02Z"
+      "timestamp": "2026-08-14T15:57:51Z"
     },
     "FCX": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 66.85,
+      "ask_size": 200.0,
       "bid_exchange": "V",
-      "bid_price": 63.29,
-      "bid_size": 100.0,
+      "bid_price": 66.83,
+      "bid_size": 300.0,
       "conditions": [
         "R"
       ],
       "symbol": "FCX",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:05Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "GE": {
       "ask_exchange": "V",
-      "ask_price": 379.18,
-      "ask_size": 40.0,
+      "ask_price": 367.0,
+      "ask_size": 160.0,
       "bid_exchange": "V",
-      "bid_price": 347.22,
+      "bid_price": 363.85,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "GE",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "GOOGL": {
       "ask_exchange": "V",
-      "ask_price": 363.29,
-      "ask_size": 40.0,
+      "ask_price": 345.64,
+      "ask_size": 80.0,
       "bid_exchange": "V",
-      "bid_price": 328.32,
-      "bid_size": 40.0,
+      "bid_price": 344.98,
+      "bid_size": 80.0,
       "conditions": [
         "R"
       ],
       "symbol": "GOOGL",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "GS": {
       "ask_exchange": "V",
-      "ask_price": 1099.35,
+      "ask_price": 1035.35,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 985.62,
+      "bid_price": 988.0,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "GS",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:06Z"
     },
     "HD": {
       "ask_exchange": "V",
-      "ask_price": 364.35,
+      "ask_price": 359.06,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 328.22,
+      "bid_price": 338.04,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "HD",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:21Z"
     },
     "HON": {
       "ask_exchange": "V",
-      "ask_price": 247.79,
+      "ask_price": 245.38,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 223.01,
+      "bid_price": 220.21,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "HON",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:13Z"
     },
     "INTU": {
       "ask_exchange": "V",
-      "ask_price": 376.58,
-      "ask_size": 40.0,
+      "ask_price": 350.0,
+      "ask_size": 240.0,
       "bid_exchange": "V",
-      "bid_price": 340.53,
+      "bid_price": 347.94,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "INTU",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "ISRG": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 418.0,
+      "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 382.66,
+      "bid_price": 400.87,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "ISRG",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:02Z"
+      "timestamp": "2026-08-14T15:58:23Z"
     },
     "JNJ": {
       "ask_exchange": "V",
-      "ask_price": 275.31,
-      "ask_size": 100.0,
+      "ask_price": 260.18,
+      "ask_size": 200.0,
       "bid_exchange": "V",
-      "bid_price": 248.18,
+      "bid_price": 246.05,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "JNJ",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:21Z"
     },
     "JPM": {
       "ask_exchange": "V",
-      "ask_price": 379.64,
+      "ask_price": 381.18,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 348.27,
+      "bid_price": 343.9,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "JPM",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:17Z"
     },
     "KO": {
       "ask_exchange": "V",
-      "ask_price": 91.88,
+      "ask_price": 87.82,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 82.56,
-      "bid_size": 100.0,
+      "bid_price": 87.81,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "KO",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:21Z"
     },
     "LIN": {
       "ask_exchange": "V",
-      "ask_price": 504.3,
+      "ask_price": 481.57,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 455.45,
+      "bid_price": 454.08,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "LIN",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:57:25Z"
     },
     "LLY": {
       "ask_exchange": "V",
-      "ask_price": 1275.47,
+      "ask_price": 1236.9,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 1148.88,
+      "bid_price": 1160.0,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "LLY",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "LMT": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 611.0,
+      "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 576.87,
+      "bid_price": 608.62,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "LMT",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:04Z"
+      "timestamp": "2026-08-14T15:58:22Z"
     },
     "LOW": {
       "ask_exchange": "V",
-      "ask_price": 228.9,
+      "ask_price": 230.88,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 205.62,
+      "bid_price": 206.32,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "LOW",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:03Z"
     },
     "MA": {
       "ask_exchange": "V",
-      "ask_price": 594.72,
+      "ask_price": 568.66,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 534.87,
+      "bid_price": 568.33,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "MA",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:13Z"
     },
     "MCD": {
       "ask_exchange": "V",
-      "ask_price": 286.12,
-      "ask_size": 40.0,
+      "ask_price": 280.0,
+      "ask_size": 640.0,
       "bid_exchange": "V",
-      "bid_price": 263.34,
+      "bid_price": 274.02,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "MCD",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:23Z"
     },
     "MDLZ": {
       "ask_exchange": "V",
-      "ask_price": 65.89,
-      "ask_size": 100.0,
+      "ask_price": 63.65,
+      "ask_size": 200.0,
       "bid_exchange": "V",
-      "bid_price": 59.28,
-      "bid_size": 100.0,
+      "bid_price": 63.63,
+      "bid_size": 300.0,
       "conditions": [
         "R"
       ],
       "symbol": "MDLZ",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:21Z"
     },
     "META": {
       "ask_exchange": "V",
-      "ask_price": 622.49,
+      "ask_price": 596.6,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 562.86,
-      "bid_size": 40.0,
+      "bid_price": 592.5,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "META",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:17Z"
     },
     "MRK": {
       "ask_exchange": "V",
-      "ask_price": 140.78,
+      "ask_price": 133.92,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 126.58,
+      "bid_price": 126.73,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "MRK",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:23Z"
     },
     "MS": {
       "ask_exchange": "V",
-      "ask_price": 231.0,
+      "ask_price": 230.15,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 208.33,
+      "bid_price": 207.1,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "MS",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "MSFT": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 498.4,
+      "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 468.62,
+      "bid_price": 498.3,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "MSFT",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:04Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "NEE": {
       "ask_exchange": "V",
-      "ask_price": 90.04,
+      "ask_price": 86.35,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 80.94,
+      "bid_price": 86.33,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "NEE",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "NFLX": {
       "ask_exchange": "V",
-      "ask_price": 81.63,
+      "ask_price": 78.27,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 73.94,
+      "bid_price": 78.26,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "NFLX",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:22Z"
     },
     "NKE": {
       "ask_exchange": "V",
-      "ask_price": 42.79,
-      "ask_size": 100.0,
+      "ask_price": 40.98,
+      "ask_size": 800.0,
       "bid_exchange": "V",
-      "bid_price": 38.7,
-      "bid_size": 100.0,
+      "bid_price": 40.97,
+      "bid_size": 300.0,
       "conditions": [
         "R"
       ],
       "symbol": "NKE",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "NVDA": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 225.38,
+      "ask_size": 500.0,
       "bid_exchange": "V",
-      "bid_price": 213.75,
-      "bid_size": 100.0,
+      "bid_price": 225.35,
+      "bid_size": 600.0,
       "conditions": [
         "R"
       ],
       "symbol": "NVDA",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:04Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "O": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 62.94,
+      "ask_size": 700.0,
       "bid_exchange": "V",
-      "bid_price": 59.54,
-      "bid_size": 100.0,
+      "bid_price": 62.92,
+      "bid_size": 600.0,
       "conditions": [
         "R"
       ],
       "symbol": "O",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:03Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "ORCL": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 153.68,
+      "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 155.85,
-      "bid_size": 100.0,
+      "bid_price": 152.82,
+      "bid_size": 1200.0,
       "conditions": [
         "R"
       ],
       "symbol": "ORCL",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:46Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "PEP": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 140.99,
+      "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 132.06,
+      "bid_price": 133.33,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "PEP",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:02Z"
+      "timestamp": "2026-08-14T15:58:21Z"
     },
     "PG": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 144.46,
+      "ask_size": 500.0,
       "bid_exchange": "V",
-      "bid_price": 137.09,
-      "bid_size": 100.0,
+      "bid_price": 143.56,
+      "bid_size": 900.0,
       "conditions": [
         "R"
       ],
       "symbol": "PG",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "PLD": {
       "ask_exchange": "V",
-      "ask_price": 152.21,
+      "ask_price": 148.76,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 132.94,
+      "bid_price": 133.82,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "PLD",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:15Z"
     },
     "PM": {
       "ask_exchange": "V",
-      "ask_price": 198.31,
+      "ask_price": 190.48,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 180.71,
+      "bid_price": 183.8,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "PM",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:23Z"
     },
     "RTX": {
       "ask_exchange": "V",
-      "ask_price": 231.02,
+      "ask_price": 232.36,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 211.94,
+      "bid_price": 209.45,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "RTX",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "SBUX": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 107.9,
+      "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 103.12,
+      "bid_price": 107.73,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "SBUX",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:02Z"
+      "timestamp": "2026-08-14T15:58:20Z"
     },
     "SHW": {
       "ask_exchange": "V",
-      "ask_price": 378.19,
+      "ask_price": 357.57,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 326.8,
+      "bid_price": 337.06,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "SHW",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:19Z"
     },
     "SLB": {
       "ask_exchange": "V",
-      "ask_price": 54.29,
-      "ask_size": 100.0,
+      "ask_price": 53.81,
+      "ask_size": 800.0,
       "bid_exchange": "V",
-      "bid_price": 49.4,
+      "bid_price": 53.8,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "SLB",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "SO": {
       "ask_exchange": "V",
-      "ask_price": 97.64,
+      "ask_price": 98.18,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 87.63,
+      "bid_price": 93.06,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "SO",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "SPY": {
       "ask_exchange": "V",
-      "ask_price": 777.93,
-      "ask_size": 1480.0,
+      "ask_price": 776.36,
+      "ask_size": 360.0,
       "bid_exchange": "V",
-      "bid_price": 777.79,
-      "bid_size": 1480.0,
+      "bid_price": 776.33,
+      "bid_size": 240.0,
       "conditions": [
         "R"
       ],
       "symbol": "SPY",
       "tape": "B",
-      "timestamp": "2026-08-13T20:00:27Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "SRE": {
       "ask_exchange": "V",
-      "ask_price": 92.79,
+      "ask_price": 86.89,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 80.63,
+      "bid_price": 81.22,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "SRE",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:20Z"
     },
     "TMO": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 625.79,
+      "ask_size": 40.0,
       "bid_exchange": "V",
       "bid_price": 555.75,
       "bid_size": 40.0,
@@ -260420,153 +260420,153 @@
       ],
       "symbol": "TMO",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:10Z"
     },
     "TMUS": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 194.25,
+      "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 171.42,
+      "bid_price": 172.42,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "TMUS",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "TSLA": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 338.89,
+      "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 324.2,
+      "bid_price": 338.84,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "TSLA",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "UNH": {
       "ask_exchange": "V",
-      "ask_price": 418.81,
-      "ask_size": 40.0,
+      "ask_price": 401.58,
+      "ask_size": 80.0,
       "bid_exchange": "V",
-      "bid_price": 384.75,
-      "bid_size": 40.0,
+      "bid_price": 397.5,
+      "bid_size": 160.0,
       "conditions": [
         "R"
       ],
       "symbol": "UNH",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:02Z"
+      "timestamp": "2026-08-14T15:58:23Z"
     },
     "UNP": {
       "ask_exchange": "V",
-      "ask_price": 310.85,
+      "ask_price": 314.11,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 282.58,
-      "bid_size": 100.0,
+      "bid_price": 297.13,
+      "bid_size": 200.0,
       "conditions": [
         "R"
       ],
       "symbol": "UNP",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:20Z"
     },
     "UPS": {
       "ask_exchange": "V",
-      "ask_price": 109.83,
+      "ask_price": 111.28,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 99.17,
+      "bid_price": 100.32,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "UPS",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "V": {
       "ask_exchange": "V",
-      "ask_price": 381.91,
-      "ask_size": 40.0,
+      "ask_price": 366.0,
+      "ask_size": 160.0,
       "bid_exchange": "V",
-      "bid_price": 343.23,
+      "bid_price": 346.94,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "V",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:20Z"
     },
     "WELL": {
       "ask_exchange": "V",
-      "ask_price": 248.67,
+      "ask_price": 249.75,
       "ask_size": 100.0,
       "bid_exchange": "V",
-      "bid_price": 209.73,
+      "bid_price": 223.78,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "WELL",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:01Z"
+      "timestamp": "2026-08-14T15:57:55Z"
     },
     "WFC": {
       "ask_exchange": "V",
-      "ask_price": 92.21,
-      "ask_size": 100.0,
+      "ask_price": 88.43,
+      "ask_size": 500.0,
       "bid_exchange": "V",
-      "bid_price": 84.35,
+      "bid_price": 88.41,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "WFC",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "WMT": {
       "ask_exchange": "V",
-      "ask_price": 122.16,
-      "ask_size": 100.0,
+      "ask_price": 115.39,
+      "ask_size": 500.0,
       "bid_exchange": "V",
-      "bid_price": 110.33,
+      "bid_price": 115.3,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "WMT",
       "tape": "C",
-      "timestamp": "2026-08-13T20:00:00Z"
+      "timestamp": "2026-08-14T15:58:24Z"
     },
     "XOM": {
-      "ask_exchange": " ",
-      "ask_price": 0.0,
-      "ask_size": 0.0,
+      "ask_exchange": "V",
+      "ask_price": 160.79,
+      "ask_size": 300.0,
       "bid_exchange": "V",
-      "bid_price": 150.22,
+      "bid_price": 160.74,
       "bid_size": 100.0,
       "conditions": [
         "R"
       ],
       "symbol": "XOM",
       "tape": "A",
-      "timestamp": "2026-08-13T20:00:03Z"
+      "timestamp": "2026-08-14T15:58:23Z"
     }
   },
-  "run_id": "refresh_data-20260813T212809",
+  "run_id": "refresh_data-20260814T155818",
   "run_mode": "alpaca_paper",
   "schema_version": "0.1.0",
-  "source_data_hash": "384635da51c41a451ad7273ee4a53f57b2c810d5b26d1dce1343759fccc13e7d",
+  "source_data_hash": "5dea34554124ffe8d847b1a9dcad71d17dfa152a7a04d35ab6bd480fb4f55fd5",
   "source_labels": {
     "account": "alpaca_trading_client.get_account",
     "assets": "alpaca_trading_client.get_all_assets",
@@ -260580,651 +260580,651 @@
   },
   "spreads": {
     "AAPL": {
-      "ask": 319.59,
-      "bid": 289.0,
+      "ask": 306.05,
+      "bid": 305.52,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 30.589999999999975,
-      "spread_pct": 0.09571638662035727,
+      "spread": 0.5300000000000296,
+      "spread_pct": 0.0017317431792191783,
       "symbol": "AAPL"
     },
     "ABBV": {
-      "ask": null,
-      "bid": 238.22,
+      "ask": 264.18,
+      "bid": 248.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 16.180000000000007,
+      "spread_pct": 0.0612461200696495,
       "symbol": "ABBV"
     },
     "ABT": {
-      "ask": 116.43,
-      "bid": 106.34,
+      "ask": 111.85,
+      "bid": 111.83,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 10.090000000000003,
-      "spread_pct": 0.08666151335566437,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.00017881090746531982,
       "symbol": "ABT"
     },
     "ADBE": {
-      "ask": 280.47,
-      "bid": 253.67,
+      "ask": 275.0,
+      "bid": 253.4,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 26.80000000000004,
-      "spread_pct": 0.09555389168181994,
+      "spread": 21.599999999999994,
+      "spread_pct": 0.07854545454545453,
       "symbol": "ADBE"
     },
     "AEP": {
-      "ask": null,
-      "bid": 117.46,
+      "ask": 125.41,
+      "bid": 125.38,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.030000000000001137,
+      "spread_pct": 0.00023921537357468413,
       "symbol": "AEP"
     },
     "AMD": {
-      "ask": 507.95,
-      "bid": 458.51,
+      "ask": 507.2,
+      "bid": 496.51,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 49.44,
-      "spread_pct": 0.09733241460773698,
+      "spread": 10.689999999999998,
+      "spread_pct": 0.02107649842271293,
       "symbol": "AMD"
     },
     "AMGN": {
-      "ask": null,
-      "bid": 396.41,
+      "ask": 415.0,
+      "bid": 411.36,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 3.6399999999999864,
+      "spread_pct": 0.008771084337349364,
       "symbol": "AMGN"
     },
     "AMT": {
-      "ask": 183.54,
-      "bid": 165.39,
+      "ask": 184.54,
+      "bid": 164.49,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 18.150000000000006,
-      "spread_pct": 0.09888852566198107,
+      "spread": 20.049999999999983,
+      "spread_pct": 0.10864853148368908,
       "symbol": "AMT"
     },
     "AMZN": {
-      "ask": 280.46,
-      "bid": 253.52,
+      "ask": 263.99,
+      "bid": 263.93,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 26.93999999999997,
-      "spread_pct": 0.09605647864223052,
+      "spread": 0.060000000000002274,
+      "spread_pct": 0.00022728133641426672,
       "symbol": "AMZN"
     },
     "APD": {
-      "ask": 328.15,
-      "bid": 275.06,
+      "ask": 322.6,
+      "bid": 288.26,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 53.089999999999975,
-      "spread_pct": 0.16178576870333683,
+      "spread": 34.34000000000003,
+      "spread_pct": 0.1064476131432115,
       "symbol": "APD"
     },
     "AVGO": {
-      "ask": 445.62,
-      "bid": 403.31,
+      "ask": 395.38,
+      "bid": 392.75,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 42.31,
-      "spread_pct": 0.09494636685965621,
+      "spread": 2.6299999999999955,
+      "spread_pct": 0.006651828620567544,
       "symbol": "AVGO"
     },
     "AXP": {
-      "ask": 358.56,
-      "bid": 328.08,
+      "ask": 363.3,
+      "bid": 339.25,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 30.480000000000018,
-      "spread_pct": 0.08500669344042842,
+      "spread": 24.05000000000001,
+      "spread_pct": 0.06619873382879166,
       "symbol": "AXP"
     },
     "BA": {
-      "ask": 240.06,
-      "bid": 220.59,
+      "ask": 231.27,
+      "bid": 231.1,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 19.47,
-      "spread_pct": 0.08110472381904524,
+      "spread": 0.17000000000001592,
+      "spread_pct": 0.0007350715613785441,
       "symbol": "BA"
     },
     "BAC": {
-      "ask": 67.1,
-      "bid": 61.65,
+      "ask": 64.41,
+      "bid": 64.4,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 5.449999999999996,
-      "spread_pct": 0.08122205663189264,
+      "spread": 0.009999999999990905,
+      "spread_pct": 0.0001552553951248394,
       "symbol": "BAC"
     },
     "BIL": {
-      "ask": 91.53,
-      "bid": 91.51,
+      "ask": 91.54,
+      "bid": 91.53,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.01999999999999602,
-      "spread_pct": 0.0002185075931388181,
+      "spread": 0.010000000000005116,
+      "spread_pct": 0.00010924186148137553,
       "symbol": "BIL"
     },
     "BKNG": {
-      "ask": 212.04,
-      "bid": 200.36,
+      "ask": 214.32,
+      "bid": 214.27,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 11.679999999999978,
-      "spread_pct": 0.055083946425202694,
+      "spread": 0.04999999999998295,
+      "spread_pct": 0.0002332960059722982,
       "symbol": "BKNG"
     },
     "BLK": {
-      "ask": 1227.74,
-      "bid": 1102.0,
+      "ask": 1249.5,
+      "bid": 1104.54,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 125.74000000000001,
-      "spread_pct": 0.10241582093928682,
+      "spread": 144.96000000000004,
+      "spread_pct": 0.11601440576230496,
       "symbol": "BLK"
     },
     "CAT": {
-      "ask": 900.9,
-      "bid": 809.87,
+      "ask": 899.33,
+      "bid": 809.4,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 91.02999999999997,
-      "spread_pct": 0.10104340104340101,
+      "spread": 89.93000000000006,
+      "spread_pct": 0.09999666418333655,
       "symbol": "CAT"
     },
     "CL": {
-      "ask": 98.18,
-      "bid": 85.48,
+      "ask": 92.36,
+      "bid": 87.4,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 12.700000000000003,
-      "spread_pct": 0.12935424730087597,
+      "spread": 4.959999999999994,
+      "spread_pct": 0.053702901689042806,
       "symbol": "CL"
     },
     "CMCSA": {
-      "ask": 27.14,
-      "bid": 24.87,
+      "ask": 26.41,
+      "bid": 26.4,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 2.2699999999999996,
-      "spread_pct": 0.08364038319823137,
+      "spread": 0.010000000000001563,
+      "spread_pct": 0.0003786444528588248,
       "symbol": "CMCSA"
     },
     "COP": {
-      "ask": null,
-      "bid": 116.38,
+      "ask": 126.78,
+      "bid": 126.76,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.00015775358889411596,
       "symbol": "COP"
     },
     "COST": {
-      "ask": 1002.74,
-      "bid": 904.72,
+      "ask": 963.76,
+      "bid": 962.69,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 98.01999999999998,
-      "spread_pct": 0.09775215908410952,
+      "spread": 1.0699999999999363,
+      "spread_pct": 0.0011102349132563463,
       "symbol": "COST"
     },
     "CRM": {
-      "ask": 211.94,
-      "bid": 190.12,
+      "ask": 205.52,
+      "bid": 186.96,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 21.819999999999993,
-      "spread_pct": 0.1029536661319241,
+      "spread": 18.560000000000002,
+      "spread_pct": 0.0903075126508369,
       "symbol": "CRM"
     },
     "CSCO": {
-      "ask": null,
-      "bid": 108.11,
+      "ask": 110.3,
+      "bid": 110.28,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.00018132366273795124,
       "symbol": "CSCO"
     },
     "CVX": {
-      "ask": 205.03,
-      "bid": 185.25,
+      "ask": 201.07,
+      "bid": 201.03,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 19.78,
-      "spread_pct": 0.09647368677754475,
+      "spread": 0.03999999999999204,
+      "spread_pct": 0.000198935694036863,
       "symbol": "CVX"
     },
     "DE": {
-      "ask": 660.43,
-      "bid": 580.44,
+      "ask": 649.95,
+      "bid": 608.62,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 79.9899999999999,
-      "spread_pct": 0.1211180594461183,
+      "spread": 41.33000000000004,
+      "spread_pct": 0.06358950688514507,
       "symbol": "DE"
     },
     "DIS": {
-      "ask": 109.26,
-      "bid": 98.19,
+      "ask": 106.59,
+      "bid": 106.55,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 11.070000000000007,
-      "spread_pct": 0.10131795716639215,
+      "spread": 0.04000000000000625,
+      "spread_pct": 0.000375269725114985,
       "symbol": "DIS"
     },
     "DUK": {
-      "ask": null,
-      "bid": 117.32,
+      "ask": 123.65,
+      "bid": 116.18,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 7.469999999999999,
+      "spread_pct": 0.06041245450869388,
       "symbol": "DUK"
     },
     "ECL": {
-      "ask": 289.48,
-      "bid": 261.24,
+      "ask": 288.5,
+      "bid": 261.25,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 28.24000000000001,
-      "spread_pct": 0.09755423518032337,
+      "spread": 27.25,
+      "spread_pct": 0.09445407279029462,
       "symbol": "ECL"
     },
     "EOG": {
-      "ask": 155.16,
-      "bid": 134.33,
+      "ask": 142.75,
+      "bid": 133.75,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 20.829999999999984,
-      "spread_pct": 0.1342485176591904,
+      "spread": 9.0,
+      "spread_pct": 0.06304728546409807,
       "symbol": "EOG"
     },
     "EQIX": {
-      "ask": null,
-      "bid": 1014.76,
+      "ask": 1133.99,
+      "bid": 1088.1,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 45.8900000000001,
+      "spread_pct": 0.04046772899231924,
       "symbol": "EQIX"
     },
     "FCX": {
-      "ask": null,
-      "bid": 63.29,
+      "ask": 66.85,
+      "bid": 66.83,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.00029917726252798836,
       "symbol": "FCX"
     },
     "GE": {
-      "ask": 379.18,
-      "bid": 347.22,
+      "ask": 367.0,
+      "bid": 363.85,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 31.95999999999998,
-      "spread_pct": 0.08428714594651611,
+      "spread": 3.1499999999999773,
+      "spread_pct": 0.00858310626702991,
       "symbol": "GE"
     },
     "GOOGL": {
-      "ask": 363.29,
-      "bid": 328.32,
+      "ask": 345.64,
+      "bid": 344.98,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 34.97000000000003,
-      "spread_pct": 0.09625918687549899,
+      "spread": 0.6599999999999682,
+      "spread_pct": 0.001909501215137045,
       "symbol": "GOOGL"
     },
     "GS": {
-      "ask": 1099.35,
-      "bid": 985.62,
+      "ask": 1035.35,
+      "bid": 988.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 113.7299999999999,
-      "spread_pct": 0.10345203984172457,
+      "spread": 47.34999999999991,
+      "spread_pct": 0.04573332689428687,
       "symbol": "GS"
     },
     "HD": {
-      "ask": 364.35,
-      "bid": 328.22,
+      "ask": 359.06,
+      "bid": 338.04,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 36.129999999999995,
-      "spread_pct": 0.09916289282283516,
+      "spread": 21.019999999999982,
+      "spread_pct": 0.05854174789728731,
       "symbol": "HD"
     },
     "HON": {
-      "ask": 247.79,
-      "bid": 223.01,
+      "ask": 245.38,
+      "bid": 220.21,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 24.78,
-      "spread_pct": 0.10000403567537028,
+      "spread": 25.169999999999987,
+      "spread_pct": 0.10257559703317298,
       "symbol": "HON"
     },
     "INTU": {
-      "ask": 376.58,
-      "bid": 340.53,
+      "ask": 350.0,
+      "bid": 347.94,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 36.05000000000001,
-      "spread_pct": 0.09572999097137398,
+      "spread": 2.0600000000000023,
+      "spread_pct": 0.005885714285714292,
       "symbol": "INTU"
     },
     "ISRG": {
-      "ask": null,
-      "bid": 382.66,
+      "ask": 418.0,
+      "bid": 400.87,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 17.129999999999995,
+      "spread_pct": 0.040980861244019125,
       "symbol": "ISRG"
     },
     "JNJ": {
-      "ask": 275.31,
-      "bid": 248.18,
+      "ask": 260.18,
+      "bid": 246.05,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 27.129999999999995,
-      "spread_pct": 0.09854346009952415,
+      "spread": 14.129999999999995,
+      "spread_pct": 0.05430855561534321,
       "symbol": "JNJ"
     },
     "JPM": {
-      "ask": 379.64,
-      "bid": 348.27,
+      "ask": 381.18,
+      "bid": 343.9,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 31.370000000000005,
-      "spread_pct": 0.08263091349699717,
+      "spread": 37.28000000000003,
+      "spread_pct": 0.09780156356576952,
       "symbol": "JPM"
     },
     "KO": {
-      "ask": 91.88,
-      "bid": 82.56,
+      "ask": 87.82,
+      "bid": 87.81,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 9.319999999999993,
-      "spread_pct": 0.10143665650848926,
+      "spread": 0.009999999999990905,
+      "spread_pct": 0.00011386927806867349,
       "symbol": "KO"
     },
     "LIN": {
-      "ask": 504.3,
-      "bid": 455.45,
+      "ask": 481.57,
+      "bid": 454.08,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 48.85000000000002,
-      "spread_pct": 0.09686694427919894,
+      "spread": 27.49000000000001,
+      "spread_pct": 0.05708412068858112,
       "symbol": "LIN"
     },
     "LLY": {
-      "ask": 1275.47,
-      "bid": 1148.88,
+      "ask": 1236.9,
+      "bid": 1160.0,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 126.58999999999992,
-      "spread_pct": 0.09924968835017674,
+      "spread": 76.90000000000009,
+      "spread_pct": 0.06217155792707582,
       "symbol": "LLY"
     },
     "LMT": {
-      "ask": null,
-      "bid": 576.87,
+      "ask": 611.0,
+      "bid": 608.62,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 2.3799999999999955,
+      "spread_pct": 0.003895253682487718,
       "symbol": "LMT"
     },
     "LOW": {
-      "ask": 228.9,
-      "bid": 205.62,
+      "ask": 230.88,
+      "bid": 206.32,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 23.28,
-      "spread_pct": 0.10170380078636959,
+      "spread": 24.560000000000002,
+      "spread_pct": 0.10637560637560639,
       "symbol": "LOW"
     },
     "MA": {
-      "ask": 594.72,
-      "bid": 534.87,
+      "ask": 568.66,
+      "bid": 568.33,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 59.85000000000002,
-      "spread_pct": 0.10063559322033902,
+      "spread": 0.32999999999992724,
+      "spread_pct": 0.0005803116097491071,
       "symbol": "MA"
     },
     "MCD": {
-      "ask": 286.12,
-      "bid": 263.34,
+      "ask": 280.0,
+      "bid": 274.02,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 22.78000000000003,
-      "spread_pct": 0.07961694393960586,
+      "spread": 5.980000000000018,
+      "spread_pct": 0.02135714285714292,
       "symbol": "MCD"
     },
     "MDLZ": {
-      "ask": 65.89,
-      "bid": 59.28,
+      "ask": 63.65,
+      "bid": 63.63,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 6.609999999999999,
-      "spread_pct": 0.10031871300652602,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.00031421838177527134,
       "symbol": "MDLZ"
     },
     "META": {
-      "ask": 622.49,
-      "bid": 562.86,
+      "ask": 596.6,
+      "bid": 592.5,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 59.629999999999995,
-      "spread_pct": 0.09579270349724493,
+      "spread": 4.100000000000023,
+      "spread_pct": 0.006872276231981265,
       "symbol": "META"
     },
     "MRK": {
-      "ask": 140.78,
-      "bid": 126.58,
+      "ask": 133.92,
+      "bid": 126.73,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 14.200000000000003,
-      "spread_pct": 0.10086660036937067,
+      "spread": 7.1899999999999835,
+      "spread_pct": 0.053688769414575746,
       "symbol": "MRK"
     },
     "MS": {
-      "ask": 231.0,
-      "bid": 208.33,
+      "ask": 230.15,
+      "bid": 207.1,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 22.669999999999987,
-      "spread_pct": 0.09813852813852808,
+      "spread": 23.05000000000001,
+      "spread_pct": 0.10015207473386926,
       "symbol": "MS"
     },
     "MSFT": {
-      "ask": null,
-      "bid": 468.62,
+      "ask": 498.4,
+      "bid": 498.3,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.0999999999999659,
+      "spread_pct": 0.00020064205457457043,
       "symbol": "MSFT"
     },
     "NEE": {
-      "ask": 90.04,
-      "bid": 80.94,
+      "ask": 86.35,
+      "bid": 86.33,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 9.100000000000009,
-      "spread_pct": 0.10106619280319866,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.00023161551823967598,
       "symbol": "NEE"
     },
     "NFLX": {
-      "ask": 81.63,
-      "bid": 73.94,
+      "ask": 78.27,
+      "bid": 78.26,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 7.689999999999998,
-      "spread_pct": 0.0942055616807546,
+      "spread": 0.009999999999990905,
+      "spread_pct": 0.00012776287210924882,
       "symbol": "NFLX"
     },
     "NKE": {
-      "ask": 42.79,
-      "bid": 38.7,
+      "ask": 40.98,
+      "bid": 40.97,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 4.089999999999996,
-      "spread_pct": 0.09558308015891555,
+      "spread": 0.00999999999999801,
+      "spread_pct": 0.00024402147388965376,
       "symbol": "NKE"
     },
     "NVDA": {
-      "ask": null,
-      "bid": 213.75,
+      "ask": 225.38,
+      "bid": 225.35,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.030000000000001137,
+      "spread_pct": 0.00013310852781968737,
       "symbol": "NVDA"
     },
     "O": {
-      "ask": null,
-      "bid": 59.54,
+      "ask": 62.94,
+      "bid": 62.92,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.01999999999999602,
+      "spread_pct": 0.00031776294884010205,
       "symbol": "O"
     },
     "ORCL": {
-      "ask": null,
-      "bid": 155.85,
+      "ask": 153.68,
+      "bid": 152.82,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.8600000000000136,
+      "spread_pct": 0.005596043727225492,
       "symbol": "ORCL"
     },
     "PEP": {
-      "ask": null,
-      "bid": 132.06,
+      "ask": 140.99,
+      "bid": 133.33,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 7.659999999999997,
+      "spread_pct": 0.054330094332931386,
       "symbol": "PEP"
     },
     "PG": {
-      "ask": null,
-      "bid": 137.09,
+      "ask": 144.46,
+      "bid": 143.56,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.9000000000000057,
+      "spread_pct": 0.006230098297106504,
       "symbol": "PG"
     },
     "PLD": {
-      "ask": 152.21,
-      "bid": 132.94,
+      "ask": 148.76,
+      "bid": 133.82,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 19.27000000000001,
-      "spread_pct": 0.1266014059523028,
+      "spread": 14.939999999999998,
+      "spread_pct": 0.10043022317827371,
       "symbol": "PLD"
     },
     "PM": {
-      "ask": 198.31,
-      "bid": 180.71,
+      "ask": 190.48,
+      "bid": 183.8,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 17.599999999999994,
-      "spread_pct": 0.08874993696737428,
+      "spread": 6.679999999999978,
+      "spread_pct": 0.035069298614027605,
       "symbol": "PM"
     },
     "RTX": {
-      "ask": 231.02,
-      "bid": 211.94,
+      "ask": 232.36,
+      "bid": 209.45,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 19.080000000000013,
-      "spread_pct": 0.0825902519262402,
+      "spread": 22.910000000000025,
+      "spread_pct": 0.09859700464796016,
       "symbol": "RTX"
     },
     "SBUX": {
-      "ask": null,
-      "bid": 103.12,
+      "ask": 107.9,
+      "bid": 107.73,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.1700000000000017,
+      "spread_pct": 0.0015755329008341214,
       "symbol": "SBUX"
     },
     "SHW": {
-      "ask": 378.19,
-      "bid": 326.8,
+      "ask": 357.57,
+      "bid": 337.06,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 51.389999999999986,
-      "spread_pct": 0.1358840794309738,
+      "spread": 20.50999999999999,
+      "spread_pct": 0.05735939815980085,
       "symbol": "SHW"
     },
     "SLB": {
-      "ask": 54.29,
-      "bid": 49.4,
+      "ask": 53.81,
+      "bid": 53.8,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 4.890000000000001,
-      "spread_pct": 0.09007183643396575,
+      "spread": 0.010000000000005116,
+      "spread_pct": 0.00018583906337121567,
       "symbol": "SLB"
     },
     "SO": {
-      "ask": 97.64,
-      "bid": 87.63,
+      "ask": 98.18,
+      "bid": 93.06,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 10.010000000000005,
-      "spread_pct": 0.10251945923801725,
+      "spread": 5.1200000000000045,
+      "spread_pct": 0.05214911387247916,
       "symbol": "SO"
     },
     "SPY": {
-      "ask": 777.93,
-      "bid": 777.79,
+      "ask": 776.36,
+      "bid": 776.33,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 0.13999999999998636,
-      "spread_pct": 0.00017996477832193946,
+      "spread": 0.029999999999972715,
+      "spread_pct": 3.864186717498675e-05,
       "symbol": "SPY"
     },
     "SRE": {
-      "ask": 92.79,
-      "bid": 80.63,
+      "ask": 86.89,
+      "bid": 81.22,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 12.16000000000001,
-      "spread_pct": 0.1310486043754716,
+      "spread": 5.670000000000002,
+      "spread_pct": 0.06525492001381059,
       "symbol": "SRE"
     },
     "TMO": {
-      "ask": null,
+      "ask": 625.79,
       "bid": 555.75,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 70.03999999999996,
+      "spread_pct": 0.11192252992217831,
       "symbol": "TMO"
     },
     "TMUS": {
-      "ask": null,
-      "bid": 171.42,
+      "ask": 194.25,
+      "bid": 172.42,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 21.830000000000013,
+      "spread_pct": 0.11238095238095244,
       "symbol": "TMUS"
     },
     "TSLA": {
-      "ask": null,
-      "bid": 324.2,
+      "ask": 338.89,
+      "bid": 338.84,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.05000000000001137,
+      "spread_pct": 0.0001475404998672471,
       "symbol": "TSLA"
     },
     "UNH": {
-      "ask": 418.81,
-      "bid": 384.75,
+      "ask": 401.58,
+      "bid": 397.5,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 34.06,
-      "spread_pct": 0.08132566080084049,
+      "spread": 4.079999999999984,
+      "spread_pct": 0.010159868519348534,
       "symbol": "UNH"
     },
     "UNP": {
-      "ask": 310.85,
-      "bid": 282.58,
+      "ask": 314.11,
+      "bid": 297.13,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 28.27000000000004,
-      "spread_pct": 0.09094418529837554,
+      "spread": 16.980000000000018,
+      "spread_pct": 0.05405749578173257,
       "symbol": "UNP"
     },
     "UPS": {
-      "ask": 109.83,
-      "bid": 99.17,
+      "ask": 111.28,
+      "bid": 100.32,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 10.659999999999997,
-      "spread_pct": 0.09705909132295362,
+      "spread": 10.960000000000008,
+      "spread_pct": 0.09849029475197707,
       "symbol": "UPS"
     },
     "V": {
-      "ask": 381.91,
-      "bid": 343.23,
+      "ask": 366.0,
+      "bid": 346.94,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 38.68000000000001,
-      "spread_pct": 0.10128040637846614,
+      "spread": 19.060000000000002,
+      "spread_pct": 0.052076502732240446,
       "symbol": "V"
     },
     "WELL": {
-      "ask": 248.67,
-      "bid": 209.73,
+      "ask": 249.75,
+      "bid": 223.78,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 38.94,
-      "spread_pct": 0.1565930751598504,
+      "spread": 25.97,
+      "spread_pct": 0.10398398398398398,
       "symbol": "WELL"
     },
     "WFC": {
-      "ask": 92.21,
-      "bid": 84.35,
+      "ask": 88.43,
+      "bid": 88.41,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 7.859999999999999,
-      "spread_pct": 0.08524021255829085,
+      "spread": 0.020000000000010232,
+      "spread_pct": 0.00022616759018444227,
       "symbol": "WFC"
     },
     "WMT": {
-      "ask": 122.16,
-      "bid": 110.33,
+      "ask": 115.39,
+      "bid": 115.3,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 11.829999999999998,
-      "spread_pct": 0.09684020956123116,
+      "spread": 0.09000000000000341,
+      "spread_pct": 0.000779963601698617,
       "symbol": "WMT"
     },
     "XOM": {
-      "ask": null,
-      "bid": 150.22,
+      "ask": 160.79,
+      "bid": 160.74,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": null,
-      "spread_pct": null,
+      "spread": 0.04999999999998295,
+      "spread_pct": 0.0003109646122270225,
       "symbol": "XOM"
     }
   }
