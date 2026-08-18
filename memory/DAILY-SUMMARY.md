@@ -10640,3 +10640,63 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-08-18
+
+**Generated:** 2026-08-18T21:24:47Z  **Run ID:** daily_summary-2026-08-18
+
+### Account & Risk
+- Equity: $99,812.13 | Cash: $99,552.75 | Buying power: $398,937.26
+- Peak: $99,813.01 | Drawdown: -0.00% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $100.53 | +$0.69 (0.69%) |
+| JNJ | long | 0.325894297 | $88.32 | +$13.32 (17.76%) |
+| WELL | long | 0.11425542 | $26.98 | +$1.98 (7.91%) |
+| WMT | long | 0.377715036 | $43.55 | $-6.45 (-12.90%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+12.39%, breadth=65.82%)
+- Candidates: 12 | Selected: 10 | Excluded: 69
+- Scanned at: 2026-08-18T20:59:37Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260818T205937-318c8555`
+- Generated: 2026-08-18T20:59:37Z | Expires: 2026-08-19T02:59:37Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - WMT SELL $25.00 @ $115.30 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260818T205937-6dfcfc40`
+- All gates pass: YES
+
+### Dry Runs Today (0)
+- Pass: 0 | Fail: 0
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260818T205937-4269d98f
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
