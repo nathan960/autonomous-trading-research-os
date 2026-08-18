@@ -965,3 +965,15 @@
 - 52 wide-spread symbols (['ABBV', 'ADBE', 'AEP', 'AMD', 'AMZN', 'AVGO', 'AXP', 'BAC', 'BLK', 'CL', 'COST', 'CRM', 'CVX', 'DE', 'DUK', 'ECL', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HD', 'HON', 'INTU', 'JPM', 'LIN', 'LMT', 'LOW', 'MCD', 'MDLZ', 'MRK', 'MS', 'NEE', 'NFLX', 'O', 'PEP', 'PLD', 'RTX', 'SBUX', 'SHW', 'SO', 'SRE', 'TMO', 'TMUS', 'TSLA', 'UNH', 'UPS', 'V', 'WELL', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
 
 ---
+## System Status — 2026-08-18T21:34:57Z
+
+**Overall:** YELLOW  | Research: YES  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,812.13  drawdown=-0.00%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260818T205937-318c8555  approved=False
+**Dry-run gates:** PASS  failed=[]
+
+**Warnings:**
+- 51 wide-spread symbols (['ABBV', 'ABT', 'ADBE', 'AEP', 'AMD', 'AMGN', 'AMT', 'APD', 'AVGO', 'BAC', 'CAT', 'COP', 'COST', 'CRM', 'CSCO', 'DE', 'DIS', 'DUK', 'ECL', 'EOG', 'EQIX', 'FCX', 'GS', 'HON', 'INTU', 'JNJ', 'LLY', 'LMT', 'LOW', 'MCD', 'MDLZ', 'META', 'MS', 'NEE', 'NFLX', 'NVDA', 'O', 'ORCL', 'PEP', 'PG', 'PLD', 'RTX', 'SBUX', 'SO', 'SRE', 'TMO', 'TMUS', 'UNH', 'UNP', 'V', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
+
+---
