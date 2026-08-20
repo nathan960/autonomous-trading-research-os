@@ -7428,3 +7428,35 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "c7b565db0a40e052c05c9bc0787244cb493bbcabdd4b78bc069358498d987821"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6329113924050633,
+  "breadth_ok": true,
+  "candidates_count": 10,
+  "data_stale_gate_passes": true,
+  "excluded_count": 69,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-08-20T21:03:10Z",
+  "selected": [
+    "FCX",
+    "COP",
+    "SLB",
+    "UNH",
+    "JNJ",
+    "EQIX",
+    "JPM",
+    "V",
+    "PM",
+    "APD"
+  ],
+  "selected_count": 10,
+  "snapshot_age_minutes": 0.10430028333333333,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "f180e424f9c57f707f028a4fd3297c8fd69fc27a36d096db2c2a4e3057cb64e0"
+}
+```
