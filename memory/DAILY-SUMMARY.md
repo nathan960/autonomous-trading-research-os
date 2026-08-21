@@ -10940,3 +10940,63 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-08-21
+
+**Generated:** 2026-08-21T20:59:35Z  **Run ID:** daily_summary-2026-08-21
+
+### Account & Risk
+- Equity: $99,804.19 | Cash: $99,552.75 | Buying power: $398,915.04
+- Peak: $99,813.01 | Drawdown: -0.01% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $96.91 | $-2.93 (-2.94%) |
+| JNJ | long | 0.325894297 | $88.08 | +$13.08 (17.44%) |
+| WELL | long | 0.11425542 | $27.33 | +$2.33 (9.33%) |
+| WMT | long | 0.377715036 | $39.12 | $-10.88 (-21.77%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_ON** (SPY 200DMA=✓, 6m ROC=+11.05%, breadth=63.29%)
+- Candidates: 7 | Selected: 6 | Excluded: 73
+- Scanned at: 2026-08-21T20:59:35Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260821T205935-a41ed7d2`
+- Generated: 2026-08-21T20:59:35Z | Expires: 2026-08-22T02:59:35Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - PLD BUY $25.00 @ $141.81 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260821T205935-31bf0137`
+- All gates pass: YES
+
+### Dry Runs Today (1)
+- Pass: 1 | Fail: 0
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260821T205935-d4970a23
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---

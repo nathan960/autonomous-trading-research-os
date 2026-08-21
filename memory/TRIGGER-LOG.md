@@ -7492,3 +7492,31 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "badbc6deb09a43fcaac235207a97e19d1438729c69e4c8c49e8fae7c3cc70a42"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6329113924050633,
+  "breadth_ok": true,
+  "candidates_count": 7,
+  "data_stale_gate_passes": true,
+  "excluded_count": 73,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-08-21T20:59:35Z",
+  "selected": [
+    "CSCO",
+    "LLY",
+    "UNH",
+    "EOG",
+    "GE",
+    "PLD"
+  ],
+  "selected_count": 6,
+  "snapshot_age_minutes": 0.10337543333333334,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "8302d5a6a77302242108764aae2a90e05e559d32b8e6a699395fa410e8954c73"
+}
+```
