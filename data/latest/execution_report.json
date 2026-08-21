@@ -1,7 +1,7 @@
 {
   "all_gates_pass": true,
   "dry_run": true,
-  "execution_report_hash": "920a46348479faa9c7e7593857a5bec707778b5aa0aa38e954230cbd591927b7",
+  "execution_report_hash": "1e584713cfb46952a00dc47a10e8a15a1f7b74a7bffff600887e84edd32f25cd",
   "failed_gates": [],
   "gate_results": [
     {
@@ -30,7 +30,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-08-20T21:03:04Z",
+      "detail": null,
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -95,24 +95,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-08-20T21:03:10Z",
+  "generated_at": "2026-08-21T15:45:46Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260820T210310-JPM-BUY",
+      "client_order_id": "TOS-20260821T154546-WMT-SELL",
       "execution_ready": true,
-      "limit_price": 351.84,
+      "limit_price": 102.72,
       "notional": 25.0,
       "order_type": "limit",
-      "side": "buy",
-      "symbol": "JPM",
-      "target_weight": 0.12,
+      "side": "sell",
+      "symbol": "WMT",
+      "target_weight": 0.0,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260820T210310-e8f1b104",
-  "run_id": "execution-20260820T210310-69ac7a0f",
+  "plan_id": "trade_plan-20260821T154546-c59ca6d5",
+  "run_id": "execution-20260821T154546-3dfcf7ff",
   "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "4c8b29051c83dba5ecc7e55796a6fd11c9132eaeb07061521e252f8284c0e38e"
+  "trade_plan_hash": "a48e623956bce5f8626d7cf01420b16ca03f937eb39aff5735aa1a81dae08872"
 }
