@@ -12,7 +12,7 @@
     "daytrading_buying_power": null,
     "equity": "99803.12",
     "id": "82b03822-7e50-422d-a0df-97d30dc71964",
-    "initial_margin": "125.19",
+    "initial_margin": "125.18",
     "last_equity": "99805.23621010792",
     "last_maintenance_margin": "75.75",
     "long_market_value": "250.37",
@@ -259324,12 +259324,12 @@
     "is_open": false,
     "next_close": "2026-08-31T20:00:00Z",
     "next_open": "2026-08-31T13:30:00Z",
-    "timestamp": "2026-08-28T23:59:32Z"
+    "timestamp": "2026-08-29T00:00:18Z"
   },
   "data_feed": "iex",
-  "data_hash": "28b0023a999fdf519410cb364ae85974c5d7d3425068201eb44a21ce626356ba",
+  "data_hash": "bd8b593afa4748f6e8d3c6fc207be943b05068b012a3bde28e95a90b7e551c08",
   "data_source": "alpaca_paper",
-  "generated_at": "2026-08-28T23:59:32Z",
+  "generated_at": "2026-08-29T00:00:17Z",
   "latest_bars": {
     "AAPL": {
       "close": 319.92,
@@ -260300,21 +260300,21 @@
       "asset_marginable": true,
       "avg_entry_price": "132.374926",
       "avg_entry_swap_rate": null,
-      "change_today": "0.0044",
+      "change_today": "0.00438",
       "cost_basis": "50",
-      "current_price": "103.0815",
+      "current_price": "103.08",
       "exchange": "NASDAQ",
       "lastday_price": "102.63",
-      "market_value": "38.935432",
+      "market_value": "38.934866",
       "qty": "0.377715036",
       "qty_available": "0.377715036",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "0.170538",
-      "unrealized_intraday_plpc": "0.0044",
-      "unrealized_pl": "-11.064568",
-      "unrealized_plpc": "-0.22129",
+      "unrealized_intraday_pl": "0.169972",
+      "unrealized_intraday_plpc": "0.00438",
+      "unrealized_pl": "-11.065134",
+      "unrealized_plpc": "-0.2213",
       "usd": null
     }
   ],
@@ -261454,10 +261454,10 @@
       "timestamp": "2026-08-28T20:00:00Z"
     }
   },
-  "run_id": "refresh_data-20260828T235932",
+  "run_id": "refresh_data-20260829T000017",
   "run_mode": "alpaca_paper",
   "schema_version": "0.1.0",
-  "source_data_hash": "bc555084f5636ac586804d2846140beb3ceb518e19303cc505335a30d6902107",
+  "source_data_hash": "03c04c0153eba0d7e1d2e57001b132274d790c99cfdb4f81715b8696f2865435",
   "source_labels": {
     "account": "alpaca_trading_client.get_account",
     "assets": "alpaca_trading_client.get_all_assets",
