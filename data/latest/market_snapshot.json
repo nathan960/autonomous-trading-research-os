@@ -10338,8 +10338,8 @@
         "open": 111.41,
         "symbol": "ABT",
         "timestamp": "2026-08-31T04:00:00Z",
-        "trade_count": 7584.0,
-        "volume": 530345.0,
+        "trade_count": 7585.0,
+        "volume": 530350.0,
         "vwap": 110.322027
       }
     ],
@@ -93330,8 +93330,8 @@
         "open": 286.065,
         "symbol": "ECL",
         "timestamp": "2026-08-31T04:00:00Z",
-        "trade_count": 2294.0,
-        "volume": 65083.0,
+        "trade_count": 2299.0,
+        "volume": 65089.0,
         "vwap": 283.361396
       }
     ],
@@ -128442,8 +128442,8 @@
         "open": 266.565,
         "symbol": "JNJ",
         "timestamp": "2026-08-31T04:00:00Z",
-        "trade_count": 3131.0,
-        "volume": 126147.0,
+        "trade_count": 3134.0,
+        "volume": 126150.0,
         "vwap": 266.323078
       }
     ],
@@ -259324,12 +259324,12 @@
     "is_open": false,
     "next_close": "2026-09-01T20:00:00Z",
     "next_open": "2026-09-01T13:30:00Z",
-    "timestamp": "2026-08-31T20:45:32Z"
+    "timestamp": "2026-08-31T20:48:38Z"
   },
   "data_feed": "iex",
-  "data_hash": "262242a09165b46841a995b65c188e9e59cee6faaee040b1300429e0adcc672b",
+  "data_hash": "8fdbc6961ff5bd2a46ed03ddf20766536ffdfbbb026bd6b637426235b83afc52",
   "data_source": "alpaca_paper",
-  "generated_at": "2026-08-31T20:45:32Z",
+  "generated_at": "2026-08-31T20:48:37Z",
   "latest_bars": {
     "AAPL": {
       "close": 317.14,
@@ -261329,17 +261329,17 @@
     },
     "TSLA": {
       "ask_exchange": "V",
-      "ask_price": 386.42,
-      "ask_size": 40.0,
+      "ask_price": 368.09,
+      "ask_size": 80.0,
       "bid_exchange": "V",
-      "bid_price": 344.03,
-      "bid_size": 40.0,
+      "bid_price": 367.9,
+      "bid_size": 80.0,
       "conditions": [
         "R"
       ],
       "symbol": "TSLA",
       "tape": "C",
-      "timestamp": "2026-08-31T20:00:00Z"
+      "timestamp": "2026-08-31T20:46:22Z"
     },
     "UNH": {
       "ask_exchange": "V",
@@ -261454,10 +261454,10 @@
       "timestamp": "2026-08-31T20:00:00Z"
     }
   },
-  "run_id": "refresh_data-20260831T204531",
+  "run_id": "refresh_data-20260831T204837",
   "run_mode": "alpaca_paper",
   "schema_version": "0.1.0",
-  "source_data_hash": "be52c8e825332e57b7676d0387fcc276dcb726eb46a3dc6663db7ebd34866a94",
+  "source_data_hash": "c5070efbf670de38d547d27eba1a326f6d110f6f76672d02543959acaf939d71",
   "source_labels": {
     "account": "alpaca_trading_client.get_account",
     "assets": "alpaca_trading_client.get_all_assets",
@@ -262047,11 +262047,11 @@
       "symbol": "TMUS"
     },
     "TSLA": {
-      "ask": 386.42,
-      "bid": 344.03,
+      "ask": 368.09,
+      "bid": 367.9,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 42.39000000000004,
-      "spread_pct": 0.10969929092697076,
+      "spread": 0.18999999999999773,
+      "spread_pct": 0.0005161781086147348,
       "symbol": "TSLA"
     },
     "UNH": {
