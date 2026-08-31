@@ -1,5 +1,5 @@
 {
-  "account_data_hash": "32e7f674999d3eb2ef13b5c1b5e34aff152afa6631f6d2412e14c9c014217379",
+  "account_data_hash": "8d37051aef5f4ba165911cf34c7f0e661eed95b9e8b15aca37a5977a45abe8aa",
   "bar_counts": {
     "AAPL": 290,
     "ABBV": 290,
@@ -84,22 +84,22 @@
     "XOM": 290
   },
   "data_feed": "iex",
-  "data_hash": "453da9d56271da46dca31b7629410430c198afe30591d4dc6d1174db1d0bcd0e",
-  "generated_at": "2026-08-31T20:48:41Z",
+  "data_hash": "0748a98c5fe88ff5804e4f36aa495e6bd975d7ab0a7c241ff61c18ecbcb937db",
+  "generated_at": "2026-08-31T20:59:39Z",
   "insufficient_bars": {},
   "issues": [
     "wide_spreads"
   ],
-  "market_data_hash": "675aaf19d8a6fd8ad4e844acfe6aec37aca9eb876b47b3b7c776f4113204b7db",
+  "market_data_hash": "157b1049b7f8e44088f892012437bac00ec609808a90aa5117a58b91e1a7b3fa",
   "missing_bars": [],
   "missing_quotes": [],
   "not_tradable": [],
   "open_order_count": 0,
   "position_count": 4,
-  "run_id": "refresh_data-20260831T204837",
+  "run_id": "refresh_data-20260831T205936",
   "schema_version": "0.1.0",
-  "snapshot_age_minutes": 0.051701816666666664,
-  "snapshot_fetched_at": "2026-08-31T20:48:38Z",
+  "snapshot_age_minutes": 0.04565193333333333,
+  "snapshot_fetched_at": "2026-08-31T20:59:37Z",
   "snapshot_source": "alpaca_paper",
   "source_labels": {
     "assets": "alpaca_trading_client.get_all_assets",
@@ -137,6 +137,7 @@
     "EQIX": 0.11247165532879819,
     "FCX": 0.10108394252583829,
     "GE": 0.08494669509594882,
+    "GOOGL": 0.07520522552740755,
     "GS": 0.09835551497376016,
     "HD": 0.09901563404748115,
     "HON": 0.08852297200287146,
