@@ -7868,3 +7868,32 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "a3b2bd347d03b9f9fc611e262f3466610b4c5f1deb5e8b905f03d4b1c1c650d6"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6455696202531646,
+  "breadth_ok": true,
+  "candidates_count": 10,
+  "data_stale_gate_passes": true,
+  "excluded_count": 72,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-09-01T00:04:53Z",
+  "selected": [
+    "MRK",
+    "CAT",
+    "SLB",
+    "LLY",
+    "BAC",
+    "CVX",
+    "JPM"
+  ],
+  "selected_count": 7,
+  "snapshot_age_minutes": 0.11994193333333333,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "713da0a3a510f6c784a8e149fdb668065bc2b8bb03e679adc44ad42e0a9d2966"
+}
+```
