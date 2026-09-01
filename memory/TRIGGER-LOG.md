@@ -7929,3 +7929,34 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "b25a272725c1e7a3eaff2eb50a596248b03a3a456dfd4d30d7609bb91914b28b"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.6075949367088608,
+  "breadth_ok": true,
+  "candidates_count": 12,
+  "data_stale_gate_passes": true,
+  "excluded_count": 70,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-09-01T22:49:34Z",
+  "selected": [
+    "AMD",
+    "FCX",
+    "AMGN",
+    "UNH",
+    "AAPL",
+    "WELL",
+    "XOM",
+    "CVX",
+    "MDLZ"
+  ],
+  "selected_count": 9,
+  "snapshot_age_minutes": 0.11896408333333335,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "25efe40a62f3719b791dd1441ecef4d18896aeb5c8683ecefac6622614469e43"
+}
+```
