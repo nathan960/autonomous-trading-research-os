@@ -1,6 +1,6 @@
 {
   "blocking_issues": [],
-  "buying_power": 398919.78,
+  "buying_power": 398919.77,
   "cash": 99552.75,
   "churn_state": {
     "daily_total_limit_reached": false,
@@ -38,11 +38,11 @@
     },
     {
       "avg_entry_price": "132.374926",
-      "current_price": "107.15",
-      "market_value": "40.472166",
+      "current_price": "107.14",
+      "market_value": "40.468389",
       "qty": "0.377715036",
       "symbol": "WMT",
-      "unrealized_pl": "-9.527834"
+      "unrealized_pl": "-9.531611"
     }
   ],
   "data_quality_status": "ATTENTION_REQUIRED",
@@ -50,14 +50,14 @@
   "failed_gates": [
     "QUOTE_FRESHNESS"
   ],
-  "generated_at": "2026-09-04T23:01:09Z",
+  "generated_at": "2026-09-07T23:28:11Z",
   "last_alert_count": 11,
   "last_route_count": 14,
-  "latest_account_equity": 99805.89,
-  "latest_plan_id": "trade_plan-20260904T223158-56948679",
+  "latest_account_equity": 99805.88,
+  "latest_plan_id": "trade_plan-20260907T225944-4f951f95",
   "lineage_status": {
     "complete_count": 0,
-    "generated_at": "2026-09-04T22:47:52Z",
+    "generated_at": "2026-09-07T23:18:05Z",
     "lineage_count": 14,
     "partial_count": 14
   },
@@ -78,7 +78,7 @@
     "warnings": []
   },
   "outcome_summary": {
-    "avg_current_return_pct": -0.002073,
+    "avg_current_return_pct": -0.002083,
     "outcomes_count": 14,
     "source_integrity_status": "ok",
     "tracked_symbols": [
@@ -116,21 +116,21 @@
     "drawdown": -7.1e-05,
     "drawdown_blocked": false,
     "drawdown_warn": false,
-    "latest_equity": 99805.89,
+    "latest_equity": 99805.88,
     "paused": false,
     "peak_equity": 99813.01,
     "stale": false,
-    "updated_at": "2026-09-04T22:31:56Z"
+    "updated_at": "2026-09-07T22:59:43Z"
   },
   "safe_for_manual_paper_execution": false,
   "safe_for_research_cycle": true,
   "safe_for_scheduled_paper_execution": false,
   "schema_version": "0.1.0",
   "source_integrity_status": "ok",
-  "status_hash": "3f10f5d5c68d3e7a59a21f4f69a99661efbacf58e884fb5efe32399168d2bef8",
+  "status_hash": "82dc2c77dc03924bc63288b5c5db09f71bda3dad9f95e7fdb0d64e257f7952da",
   "trade_plan_approved_for_execution": false,
   "trigger_performance_summary": {
-    "avg_current_return_pct": -0.002073,
+    "avg_current_return_pct": -0.002083,
     "avg_slippage_pct": -0.000247,
     "days": 7,
     "operational_issues": [
