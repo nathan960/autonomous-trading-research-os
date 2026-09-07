@@ -8182,3 +8182,34 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "1621d1ed9566ed5ad0a8c6439bd4edcdc5e701e457781d9d6f986bfd63148fad"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.569620253164557,
+  "breadth_ok": true,
+  "candidates_count": 11,
+  "data_stale_gate_passes": true,
+  "excluded_count": 70,
+  "regime_risk_on": true,
+  "regime_skip_reason": null,
+  "scanned_at": "2026-09-07T22:59:44Z",
+  "selected": [
+    "AMD",
+    "MS",
+    "UNH",
+    "NVDA",
+    "WELL",
+    "TMO",
+    "EQIX",
+    "KO",
+    "EOG"
+  ],
+  "selected_count": 9,
+  "snapshot_age_minutes": 0.07207976666666666,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "cdbd82bee63287d974a84561d0a0ce3939dc0a8b9e830ae1ff92a9977dfd5c6a"
+}
+```
