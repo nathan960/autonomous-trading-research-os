@@ -11936,3 +11936,40 @@ Data refreshes and quality reviews are logged here.
   "symbols_with_bars": 81
 }
 ```
+
+## refresh_data run
+
+```json
+{
+  "generated_at": "2026-09-15T19:09:22Z",
+  "insufficient_bars_count": 0,
+  "issues": [
+    "wide_spreads"
+  ],
+  "market_data_hash": "ced72d2ff7a2b41b8ac2e094fc85144c68af4bbe0939595968f017804a6fbdfc",
+  "missing_bars_count": 0,
+  "not_tradable_count": 0,
+  "run_id": "refresh_data-20260915T190917",
+  "snapshot_age_minutes": 0.07339266666666666,
+  "snapshot_fetched_at": "2026-09-15T19:09:18Z",
+  "status": "ATTENTION_REQUIRED",
+  "symbols_expected": 81,
+  "symbols_with_bars": 81
+}
+```
+## Spread Diagnostics — 2026-09-15T19:09:22Z
+
+**Run ID:** `spread_diagnostics-20260915T190922-94631e6c`  **Market open:** True  **Feed:** iex
+
+**Total:** 81  **Pass:** 60  **Fail:** 21  **Block rate:** 26%  **max_spread_pct:** 0.02
+
+**Failure classes:**
+- pass: 60
+- data_feed_limitation: 21
+
+- 21/81 symbols (26%) fail the spread gate.
+- Data feed is IEX. IEX is an alternative trading venue with partial market coverage. Quotes reflect IEX-venue activity only, not the National Best Bid and Offer (NBBO). After-hours IEX spreads are structurally wide regardless of underlying liquidity.
+- 21 symbols classified as data_feed_limitation: market was open but IEX quote coverage was insufficient for reliable spread measurement.
+
+- [MEDIUM] verify_alpaca_data_feed: ALPACA_DATA_FEED=iex. IEX quotes are venue-specific and unreliable after hours. If a SIP (Nasdaq/NYSE consolidated tape) subscription is available and has been explicitly approved, verify by checking Alpaca account data permissions. Do not switch to SIP feed without confirming subscription and approval.
+- [INFO] keep_threshold_unchanged: max_quote_spread_pct=0.02 remains unchanged. Do not adjust the spread threshold based on off-hours or data-quality diagnostic results. A threshold review requires evidence of persistent wide spreads during market hours across multiple days of intraday trigger scans.
