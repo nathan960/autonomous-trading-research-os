@@ -1245,3 +1245,16 @@
 - 43 wide-spread symbols (['ABT', 'ADBE', 'AEP', 'AMGN', 'AMT', 'AVGO', 'AXP', 'BA', 'BKNG', 'BLK', 'CAT', 'CMCSA', 'COP', 'CVX', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HD', 'HON', 'INTU', 'ISRG', 'LIN', 'LLY', 'LOW', 'MA', 'MCD', 'MS', 'NEE', 'NFLX', 'NVDA', 'O', 'RTX', 'SBUX', 'SHW', 'SLB', 'SPY', 'TMO', 'UPS', 'WELL', 'WFC', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
 
 ---
+## System Status — 2026-09-17T23:31:51Z
+
+**Overall:** YELLOW  | Research: YES  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,802.62  drawdown=-0.01%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260917T230607-dec73660  approved=False
+**Dry-run gates:** FAIL  failed=['QUOTE_FRESHNESS']
+
+**Warnings:**
+- Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']
+- 56 wide-spread symbols (['AAPL', 'ABT', 'ADBE', 'AEP', 'AMD', 'AMZN', 'AVGO', 'BA', 'BAC', 'CAT', 'CL', 'COP', 'COST', 'CRM', 'CSCO', 'CVX', 'DE', 'ECL', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HD', 'HON', 'INTU', 'ISRG', 'KO', 'LIN', 'LLY', 'LMT', 'LOW', 'MCD', 'MDLZ', 'MS', 'NFLX', 'NVDA', 'O', 'ORCL', 'PEP', 'PG', 'PM', 'RTX', 'SBUX', 'SHW', 'SLB', 'SO', 'SRE', 'TMO', 'TSLA', 'UNH', 'UNP', 'V', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
+
+---
