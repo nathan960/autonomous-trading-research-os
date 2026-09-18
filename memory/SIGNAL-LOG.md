@@ -32463,3 +32463,40 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
   V         score=0.1497  atr_pct=0.0157  [candidate]
   WFC       score=0.0877  atr_pct=0.0229  [candidate]
 ```
+
+## scan_triggers candidates  (2026-09-18T22:49:26Z)
+
+```
+  MRK       score=0.5467  atr_pct=0.0225  [candidate]
+  CSCO      score=0.5061  atr_pct=0.0260  [candidate]
+  AAPL      score=0.3769  atr_pct=0.0220  [candidate]
+  JNJ       score=0.3299  atr_pct=0.0192  [candidate]
+  MS        score=0.2821  atr_pct=0.0253  [candidate]
+  NVDA      score=0.2742  atr_pct=0.0296  [candidate]
+  AMGN      score=0.2530  atr_pct=0.0248  [candidate]
+  KO        score=0.2406  atr_pct=0.0150  [candidate]
+  UNP       score=0.2393  atr_pct=0.0186  [candidate]
+  ABBV      score=0.2373  atr_pct=0.0200  [candidate]
+  AMZN      score=0.1554  atr_pct=0.0249  [candidate]
+  PM        score=0.1443  atr_pct=0.0234  [candidate]
+```
+## Lineage Snapshot — 2026-09-18T22:49:27Z
+
+**Run ID:** `lineage-20260918T224927-a7f6e7af`  **Records:** 14 (complete: 0, partial: 14)
+
+- WELL BUY cid=TOS-20260513T160035-WELL-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- JNJ BUY cid=TOS-20260513T192526-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
+- EQIX BUY cid=TOS-20260513T192934-EQIX-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- EQIX BUY cid=TOS-20260514T145625-EQIX-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- EQIX SELL cid=TOS-20260514T154543-EQIX-SELL trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- EQIX BUY cid=TOS-20260514T154817-EQIX-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- JNJ BUY cid=TOS-20260514T154323-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
+- WMT BUY cid=TOS-20260514T165232-WMT-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- WMT BUY cid=TOS-20260514T171844-WMT-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- EQIX BUY cid=TOS-20260514T163113-EQIX-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- EQIX BUY cid=TOS-20260514T172103-EQIX-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- JNJ BUY cid=TOS-20260514T171739-JNJ-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
+- EQIX SELL cid=TOS-20260514T172226-EQIX-SELL trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+- EQIX BUY cid=TOS-20260514T172335-EQIX-BUY trigger_hash=null trigger_ids=[none] status=partial_missing_trigger_snapshot_hash
+
+---
