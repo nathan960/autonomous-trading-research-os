@@ -13453,3 +13453,64 @@ None today.
 - Generated: 2026-05-12T15:33:05Z
 
 ---
+## Daily Summary — 2026-09-18
+
+**Generated:** 2026-09-18T23:04:31Z  **Run ID:** daily_summary-2026-09-18
+
+### Account & Risk
+- Equity: $99,801.88 | Cash: $99,552.75 | Buying power: $398,908.58
+- Peak: $99,813.01 | Drawdown: -0.01% | Positions: 4
+
+### Positions (4)
+| Symbol | Side | Qty | Market Value | Unrealized P/L |
+|--------|------|-----|--------------|----------------|
+| EQIX | long | 0.092649719 | $94.63 | $-5.22 (-5.22%) |
+| JNJ | long | 0.325894297 | $87.99 | +$12.99 (17.32%) |
+| WELL | long | 0.11425542 | $26.15 | +$1.15 (4.60%) |
+| WMT | long | 0.377715036 | $40.37 | $-9.63 (-19.27%) |
+
+### Open Orders (0)
+None.
+
+### Trigger Scan
+- Regime: **RISK_OFF** (SPY 200DMA=✓, 6m ROC=+15.42%, breadth=48.10%)
+- Candidates: 12 | Selected: 0 | Excluded: 79
+- Scanned at: 2026-09-18T22:49:26Z
+
+### Trade Plan
+- Plan ID: `trade_plan-20260918T224927-db28027a`
+- Generated: 2026-09-18T22:49:27Z | Expires: 2026-09-19T04:49:27Z
+- Approved for execution: NO | Reason: approve_paper_flag_not_set
+- All risk checks pass: YES
+- Proposed orders (1):
+  - JNJ SELL $25.00 @ $270.00 (limit, day)
+
+### Latest Execution Report (Dry Run)
+- Run ID: `execution-20260918T224927-33af605d`
+- All gates pass: NO
+- Failed gates: QUOTE_FRESHNESS
+
+### Dry Runs Today (0)
+- Pass: 0 | Fail: 0
+
+### Paper Executions Today (0)
+None today.
+
+### Order Monitor
+- Tracked: 14 | Filled: 14 | Missing: 0 | Expired: 0 | Rejected: 0 | Active: 0
+- Runs today: 2 | Latest: order_monitor-20260918T224926-092ea442
+
+### Alerts (total=23, today=0)
+- By source: tradingview=21, test=2
+- By next_step: request_trade_plan_unapproved=17, request_data_refresh=5, log_only=1
+
+### Alert Routes (total=5, today=0)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+- By action: refresh_requested=4, logged=1
+
+### Data Quality
+- Status: **PASS** | Issues: 0 | Wide spreads: 0 | Missing bars: 0 | Insufficient bars: 0
+- Generated: 2026-05-12T15:33:05Z
+
+---
