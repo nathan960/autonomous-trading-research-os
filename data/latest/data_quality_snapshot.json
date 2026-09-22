@@ -1,5 +1,5 @@
 {
-  "account_data_hash": "358e7cfc3030c71c21ac8d1a4f1eb5ca7c25a410daec5ff0e231d74bd6702540",
+  "account_data_hash": "919c284f0a253b8028aff4b6b10255f3332485993a321c70b0af2c4f2fc8b053",
   "bar_counts": {
     "AAPL": 289,
     "ABBV": 289,
@@ -84,22 +84,22 @@
     "XOM": 289
   },
   "data_feed": "iex",
-  "data_hash": "16d86f9ad2285d67b04ee4c3810e80ffc6ccafcd87346541c7b2ed53337bfea2",
-  "generated_at": "2026-09-22T18:44:19Z",
+  "data_hash": "3ff8c0e28ac0b5d688603e36c57ce046cb872cfdf0654c737f75cdc065b27eea",
+  "generated_at": "2026-09-22T18:51:01Z",
   "insufficient_bars": {},
   "issues": [
     "wide_spreads"
   ],
-  "market_data_hash": "b61fc216919409170c24b5f8a371126c6eb03e89069f8c909d8b14b9fabe7d0d",
+  "market_data_hash": "9eaaa604c982b126ddb1866e70b7dd41dec634de65dee729e1d60349fc8be0ab",
   "missing_bars": [],
   "missing_quotes": [],
   "not_tradable": [],
   "open_order_count": 0,
   "position_count": 4,
-  "run_id": "refresh_data-20260922T184416",
+  "run_id": "refresh_data-20260922T185056",
   "schema_version": "0.1.0",
-  "snapshot_age_minutes": 0.04769055,
-  "snapshot_fetched_at": "2026-09-22T18:44:17Z",
+  "snapshot_age_minutes": 0.07761235000000001,
+  "snapshot_fetched_at": "2026-09-22T18:50:57Z",
   "snapshot_source": "alpaca_paper",
   "source_labels": {
     "assets": "alpaca_trading_client.get_all_assets",
@@ -112,24 +112,23 @@
   "symbols_expected": 81,
   "symbols_with_bars": 81,
   "wide_spreads": {
-    "ABBV": 0.04058494313052901,
-    "ADBE": 0.06925925925925931,
+    "ABBV": 0.04163206354937705,
+    "ADBE": 0.05181738146145145,
     "AMT": 0.09871314546343042,
     "APD": 0.10070506851137431,
-    "BLK": 0.05596633020399506,
-    "EOG": 0.04430650684931513,
-    "EQIX": 0.06659388646288208,
-    "GE": 0.04410486891385776,
-    "GS": 0.04634640051306718,
-    "HD": 0.032467532467532464,
-    "HON": 0.10271822014891901,
+    "AXP": 0.04375,
+    "BLK": 0.08958318627796992,
+    "GE": 0.06268171444649392,
+    "GS": 0.04587542087542085,
+    "HON": 0.05360186597290746,
     "INTU": 0.05245901639344262,
-    "LLY": 0.021496655518394678,
+    "LIN": 0.03941741555624416,
     "LMT": 0.026415094339622643,
     "LOW": 0.10581389663097153,
-    "MS": 0.029464463468046924,
-    "PLD": 0.04967466592038056,
+    "PLD": 0.050864059329741904,
     "SHW": 0.05851680185399768,
-    "WELL": 0.06754067151263418
+    "SRE": 0.04906080079090458,
+    "UNP": 0.10021037868162688,
+    "WELL": 0.11755793956268941
   }
 }
