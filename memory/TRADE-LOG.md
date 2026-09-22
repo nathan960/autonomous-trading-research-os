@@ -89428,3 +89428,23 @@ Execution attempts, submitted paper orders, skips, errors, and position-monitor 
 - EQIX BUY (entry) fill=$1076.542 return=-1.605% unpl=$-1.7021 | pending: none
 
 ---
+## Outcome Tracker — 2026-09-22T23:30:19Z
+
+**Run ID:** `outcome_tracker-20260922T233019-2c3a56f3`  **Outcomes tracked:** 14
+
+- WELL BUY (entry) fill=$218.808 return=+5.293% unpl=$+1.3233 | pending: none
+- JNJ BUY (entry) fill=$230.248 return=+16.913% unpl=$+12.7275 | pending: none
+- EQIX BUY (entry) fill=$1084.37 return=-2.316% unpl=$-1.7021 | pending: none
+- EQIX BUY (entry) fill=$1079.5 return=-1.875% unpl=$-1.7021 | pending: none
+- EQIX SELL (exit) fill=$1078.442 return=-1.779% unpl=$-1.7021 | pending: none
+- EQIX BUY (entry) fill=$1078.41 return=-1.776% unpl=$-1.7021 | pending: none
+- JNJ BUY (entry) fill=$230.116 return=+16.980% unpl=$+12.7275 | pending: none
+- WMT BUY (entry) fill=$132.276 return=-16.825% unpl=$-8.4438 | pending: none
+- WMT BUY (entry) fill=$132.474 return=-16.950% unpl=$-8.4438 | pending: none
+- EQIX BUY (entry) fill=$1076.89 return=-1.637% unpl=$-1.7021 | pending: none
+- EQIX BUY (entry) fill=$1076.82 return=-1.631% unpl=$-1.7021 | pending: none
+- JNJ BUY (entry) fill=$230.044 return=+17.017% unpl=$+12.7275 | pending: none
+- EQIX SELL (exit) fill=$1076.718 return=-1.621% unpl=$-1.7021 | pending: none
+- EQIX BUY (entry) fill=$1076.542 return=-1.605% unpl=$-1.7021 | pending: none
+
+---
