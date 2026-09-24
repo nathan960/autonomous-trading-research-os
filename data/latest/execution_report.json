@@ -1,8 +1,10 @@
 {
-  "all_gates_pass": true,
+  "all_gates_pass": false,
   "dry_run": true,
-  "execution_report_hash": "1ea10d3a8ab5418989c422c314946443b96d808e77f1eafde7877e39a8cd10cb",
-  "failed_gates": [],
+  "execution_report_hash": "aaca541733637c4c2ef3d69bfcebee8604c14da19401bfc5d97686cdfdc8020e",
+  "failed_gates": [
+    "QUOTE_FRESHNESS"
+  ],
   "gate_results": [
     {
       "detail": null,
@@ -30,7 +32,7 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "[dry-run] market is_open=False at 2026-09-24T23:27:17Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -65,9 +67,9 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "stale quotes (>90.0min): ['JNJ(207min)']",
       "gate_id": "QUOTE_FRESHNESS",
-      "passes": true
+      "passes": false
     },
     {
       "detail": null,
@@ -95,14 +97,14 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-09-24T19:06:39Z",
+  "generated_at": "2026-09-24T23:27:21Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260924T190639-JNJ-SELL",
+      "client_order_id": "TOS-20260924T232721-JNJ-SELL",
       "execution_ready": true,
-      "limit_price": 271.67,
+      "limit_price": 270.5,
       "notional": 25.0,
       "order_type": "limit",
       "side": "sell",
@@ -111,8 +113,8 @@
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260924T190639-892978f2",
-  "run_id": "execution-20260924T190639-fb2ee4e9",
-  "status": "DRY_RUN_PASS",
-  "trade_plan_hash": "c7a7e1955545ed26e851f8d6e003b74f21cad07758105903847e5a5999fc3b5a"
+  "plan_id": "trade_plan-20260924T232721-df3ce3e1",
+  "run_id": "execution-20260924T232721-30660c4e",
+  "status": "DRY_RUN_FAIL",
+  "trade_plan_hash": "d72539cf0d38e8f7fd4c63908bdd7e4bf1fee34715d393d7fa4aa2cbe5e85e64"
 }
