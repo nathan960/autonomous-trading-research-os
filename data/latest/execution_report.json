@@ -1,9 +1,9 @@
 {
   "all_gates_pass": false,
   "dry_run": true,
-  "execution_report_hash": "3bcc9690ec3151fd0a63c4d07493d5c105fb5cd0ae756daa4dade286849a8e09",
+  "execution_report_hash": "9cb07f839628894e7a785612b99951f64631ce07870bcbe4a295dffcb0b9caa4",
   "failed_gates": [
-    "QUOTE_FRESHNESS"
+    "RISK_LIMITS_RESPECTED"
   ],
   "gate_results": [
     {
@@ -32,7 +32,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-09-25T23:33:03Z",
+      "detail": "[dry-run] market is_open=False at 2026-09-28T21:13:04Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -67,9 +67,9 @@
       "passes": true
     },
     {
-      "detail": "stale quotes (>90.0min): ['JNJ(213min)']",
+      "detail": null,
       "gate_id": "QUOTE_FRESHNESS",
-      "passes": false
+      "passes": true
     },
     {
       "detail": null,
@@ -77,9 +77,9 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "overweight orders: ['BIL'] (max=0.12)",
       "gate_id": "RISK_LIMITS_RESPECTED",
-      "passes": true
+      "passes": false
     },
     {
       "detail": null,
@@ -97,24 +97,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-09-25T23:33:11Z",
+  "generated_at": "2026-09-28T21:13:09Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260925T233311-JNJ-SELL",
+      "client_order_id": "TOS-20260928T211308-BIL-BUY",
       "execution_ready": true,
-      "limit_price": 271.22,
+      "limit_price": 91.62,
       "notional": 25.0,
       "order_type": "limit",
-      "side": "sell",
-      "symbol": "JNJ",
-      "target_weight": 0.0,
+      "side": "buy",
+      "symbol": "BIL",
+      "target_weight": 1.0,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260925T233311-3aa2f100",
-  "run_id": "execution-20260925T233311-81903bcf",
+  "plan_id": "trade_plan-20260928T211308-52c22cad",
+  "run_id": "execution-20260928T211309-69af85a5",
   "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "4f7f25c003d9a408c2424732bd760d2f1a2e2846f3d0d383845d0d00b046af4f"
+  "trade_plan_hash": "160f737c3e44631d3c32570f891c4a88d60a952e8f790ddb150c230420252b11"
 }
