@@ -6545,3 +6545,19 @@ Reserved for manual position-monitor notes. Automated outputs are also logged to
   "source": "alpaca_paper"
 }
 ```
+
+## monitor_positions run
+
+```json
+{
+  "drawdown": -0.000103,
+  "dry_run": false,
+  "equity": 99802.74,
+  "generated_at": "2026-09-28T21:11:28Z",
+  "open_order_count": 0,
+  "peak_equity": 99813.01,
+  "position_count": 4,
+  "run_id": "monitor_positions-20260928T211128-3c4f7a46",
+  "source": "alpaca_paper"
+}
+```
