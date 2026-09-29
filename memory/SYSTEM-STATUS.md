@@ -1336,3 +1336,21 @@
 - 51 wide-spread symbols (['ABBV', 'ABT', 'ADBE', 'AMGN', 'AXP', 'BAC', 'BKNG', 'BLK', 'CAT', 'COP', 'COST', 'CRM', 'CSCO', 'DE', 'DIS', 'EQIX', 'FCX', 'GE', 'GOOGL', 'HD', 'HON', 'INTU', 'LLY', 'LMT', 'LOW', 'MA', 'MCD', 'MDLZ', 'META', 'MRK', 'MS', 'MSFT', 'NEE', 'NFLX', 'NVDA', 'O', 'PG', 'PLD', 'PM', 'RTX', 'SBUX', 'SHW', 'SLB', 'SO', 'SRE', 'TSLA', 'UPS', 'V', 'WELL', 'WFC', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
 
 ---
+## System Status — 2026-09-29T00:57:23Z
+
+**Overall:** RED  | Research: NO  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,803.05  drawdown=-0.01%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20260929T003306-c07dc424  approved=False
+**Dry-run gates:** FAIL  failed=['QUOTE_FRESHNESS', 'RISK_LIMITS_RESPECTED']
+
+**Blocking Issues:**
+- Execution gates: hard failures: ['RISK_LIMITS_RESPECTED']
+
+**Warnings:**
+- 51 wide-spread symbols (['AAPL', 'AEP', 'AMD', 'AMGN', 'AMT', 'AVGO', 'AXP', 'BA', 'BAC', 'BKNG', 'BLK', 'CAT', 'CL', 'CMCSA', 'COP', 'CVX', 'DIS', 'DUK', 'EOG', 'EQIX', 'GE', 'GS', 'INTU', 'ISRG', 'JNJ', 'JPM', 'LLY', 'LMT', 'LOW', 'MCD', 'MDLZ', 'META', 'MRK', 'MS', 'MSFT', 'NEE', 'NKE', 'O', 'PEP', 'PG', 'PM', 'RTX', 'SO', 'TMUS', 'UNH', 'UNP', 'V', 'WELL', 'WFC', 'WMT', 'XOM']) — SPREAD_NOT_TOO_WIDE may block execution
+
+**Required Operator Actions:**
+- [ ] Fix hard gate failures before any execution: ['RISK_LIMITS_RESPECTED']
+
+---
