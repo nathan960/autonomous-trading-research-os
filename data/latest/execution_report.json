@@ -1,8 +1,9 @@
 {
   "all_gates_pass": false,
   "dry_run": true,
-  "execution_report_hash": "9cb07f839628894e7a785612b99951f64631ce07870bcbe4a295dffcb0b9caa4",
+  "execution_report_hash": "3baed18882adadadc3c986f3ce0178af83f7b551bb778953e6ed3b5bdc04f3db",
   "failed_gates": [
+    "QUOTE_FRESHNESS",
     "RISK_LIMITS_RESPECTED"
   ],
   "gate_results": [
@@ -32,7 +33,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-09-28T21:13:04Z",
+      "detail": "[dry-run] market is_open=False at 2026-09-29T00:33:02Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -67,9 +68,9 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "stale quotes (>90.0min): ['BIL(213min)']",
       "gate_id": "QUOTE_FRESHNESS",
-      "passes": true
+      "passes": false
     },
     {
       "detail": null,
@@ -97,12 +98,12 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-09-28T21:13:09Z",
+  "generated_at": "2026-09-29T00:33:06Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260928T211308-BIL-BUY",
+      "client_order_id": "TOS-20260929T003306-BIL-BUY",
       "execution_ready": true,
       "limit_price": 91.62,
       "notional": 25.0,
@@ -113,8 +114,8 @@
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260928T211308-52c22cad",
-  "run_id": "execution-20260928T211309-69af85a5",
+  "plan_id": "trade_plan-20260929T003306-c07dc424",
+  "run_id": "execution-20260929T003306-40605d33",
   "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "160f737c3e44631d3c32570f891c4a88d60a952e8f790ddb150c230420252b11"
+  "trade_plan_hash": "9949318342030f4464c26868d63fed5919e2429f930d3a0632ecf75f9b45c662"
 }
