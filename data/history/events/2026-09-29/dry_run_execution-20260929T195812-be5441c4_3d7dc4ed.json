@@ -1,0 +1,124 @@
+{
+  "event_type": "dry_run",
+  "run_id": "execution-20260929T195812-be5441c4",
+  "generated_at": "2026-09-29T19:58:12Z",
+  "schema_version": "0.1.0",
+  "payload": {
+    "run_id": "execution-20260929T195812-be5441c4",
+    "plan_id": "trade_plan-20260929T195812-f5bcc777",
+    "generated_at": "2026-09-29T19:58:12Z",
+    "dry_run": true,
+    "trade_plan_hash": "ae1df39c7eafe7e3e9289c8f29c6dd276bb00b3bb306d91c649bb19fb59a6e7c",
+    "gate_results": [
+      {
+        "gate_id": "TRADING_MODE_PAPER",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "ALPACA_PAPER_MODE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "CANONICAL_SOURCE_INTEGRITY",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_EXISTS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "TRADE_PLAN_NOT_EXPIRED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "MARKET_CLOCK_OPEN",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "ACCOUNT_NOT_BLOCKED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_STATE_NOT_PAUSED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "POSITIONS_MATCH_SNAPSHOT",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_DUPLICATE_OPEN_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "UNIVERSE_MEMBERSHIP",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "SYMBOLS_TRADABLE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "QUOTE_FRESHNESS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "SPREAD_NOT_TOO_WIDE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "RISK_LIMITS_RESPECTED",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "NO_PROHIBITED_ORDERS",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "EXECUTION_LOG_WRITABLE",
+        "passes": true,
+        "detail": null
+      },
+      {
+        "gate_id": "DAILY_ORDER_LIMITS",
+        "passes": true,
+        "detail": null
+      }
+    ],
+    "all_gates_pass": true,
+    "failed_gates": [],
+    "orders_validated": [
+      {
+        "symbol": "JNJ",
+        "side": "sell",
+        "order_type": "limit",
+        "limit_price": 267.56,
+        "notional": 25.0,
+        "target_weight": 0.0,
+        "client_order_id": "TOS-20260929T195812-JNJ-SELL",
+        "execution_ready": true,
+        "validation_skip_reason": null
+      }
+    ],
+    "orders_submitted": [],
+    "no_submit_reason": "dry_run_mode",
+    "status": "DRY_RUN_PASS",
+    "execution_report_hash": "c57faeb4c6444a18d8de40347b26ce6bd016cab27ab79fa67409078bc7660dfe"
+  }
+}

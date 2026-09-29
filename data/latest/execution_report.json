@@ -1,11 +1,8 @@
 {
-  "all_gates_pass": false,
+  "all_gates_pass": true,
   "dry_run": true,
-  "execution_report_hash": "3baed18882adadadc3c986f3ce0178af83f7b551bb778953e6ed3b5bdc04f3db",
-  "failed_gates": [
-    "QUOTE_FRESHNESS",
-    "RISK_LIMITS_RESPECTED"
-  ],
+  "execution_report_hash": "c57faeb4c6444a18d8de40347b26ce6bd016cab27ab79fa67409078bc7660dfe",
+  "failed_gates": [],
   "gate_results": [
     {
       "detail": null,
@@ -33,7 +30,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-09-29T00:33:02Z",
+      "detail": null,
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -68,9 +65,9 @@
       "passes": true
     },
     {
-      "detail": "stale quotes (>90.0min): ['BIL(213min)']",
+      "detail": null,
       "gate_id": "QUOTE_FRESHNESS",
-      "passes": false
+      "passes": true
     },
     {
       "detail": null,
@@ -78,9 +75,9 @@
       "passes": true
     },
     {
-      "detail": "overweight orders: ['BIL'] (max=0.12)",
+      "detail": null,
       "gate_id": "RISK_LIMITS_RESPECTED",
-      "passes": false
+      "passes": true
     },
     {
       "detail": null,
@@ -98,24 +95,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-09-29T00:33:06Z",
+  "generated_at": "2026-09-29T19:58:12Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20260929T003306-BIL-BUY",
+      "client_order_id": "TOS-20260929T195812-JNJ-SELL",
       "execution_ready": true,
-      "limit_price": 91.62,
+      "limit_price": 267.56,
       "notional": 25.0,
       "order_type": "limit",
-      "side": "buy",
-      "symbol": "BIL",
-      "target_weight": 1.0,
+      "side": "sell",
+      "symbol": "JNJ",
+      "target_weight": 0.0,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20260929T003306-c07dc424",
-  "run_id": "execution-20260929T003306-40605d33",
-  "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "9949318342030f4464c26868d63fed5919e2429f930d3a0632ecf75f9b45c662"
+  "plan_id": "trade_plan-20260929T195812-f5bcc777",
+  "run_id": "execution-20260929T195812-be5441c4",
+  "status": "DRY_RUN_PASS",
+  "trade_plan_hash": "ae1df39c7eafe7e3e9289c8f29c6dd276bb00b3bb306d91c649bb19fb59a6e7c"
 }
