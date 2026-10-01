@@ -8992,3 +8992,24 @@ Every trigger scan records fired, skipped, and selected signals here.
   "trigger_snapshot_hash": "4b92333de05caa49d0dfcebb7184df7eaa1d22a900dae5a92c73ee13cda5755a"
 }
 ```
+
+## scan_triggers run
+
+```json
+{
+  "breadth": 0.3924050632911392,
+  "breadth_ok": false,
+  "candidates_count": 9,
+  "data_stale_gate_passes": true,
+  "excluded_count": 79,
+  "regime_risk_on": false,
+  "regime_skip_reason": "breadth_below_threshold(0.392<0.55)",
+  "scanned_at": "2026-10-01T20:20:15Z",
+  "selected": [],
+  "selected_count": 0,
+  "snapshot_age_minutes": 0.08833540000000001,
+  "spy_passes_200dma": true,
+  "spy_passes_6m_momentum": true,
+  "trigger_snapshot_hash": "60edd8ab5f6c947b97592d3f6d08d364d32996df53c87a19cbc43ca77e73ea51"
+}
+```
