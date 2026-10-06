@@ -12,7 +12,7 @@
     "daytrading_buying_power": null,
     "equity": "99799.08",
     "id": "82b03822-7e50-422d-a0df-97d30dc71964",
-    "initial_margin": "123.16",
+    "initial_margin": "123.17",
     "last_equity": "99795.29788673329",
     "last_maintenance_margin": "72.76",
     "long_market_value": "246.33",
@@ -29391,8 +29391,8 @@
         "open": 253.52,
         "symbol": "AMZN",
         "timestamp": "2026-10-06T04:00:00Z",
-        "trade_count": 15862.0,
-        "volume": 1062844.0,
+        "trade_count": 15863.0,
+        "volume": 1062849.0,
         "vwap": 254.992326
       }
     ],
@@ -35753,8 +35753,8 @@
         "open": 366.75,
         "symbol": "AVGO",
         "timestamp": "2026-10-06T04:00:00Z",
-        "trade_count": 21310.0,
-        "volume": 994569.0,
+        "trade_count": 21312.0,
+        "volume": 994595.0,
         "vwap": 376.355178
       }
     ],
@@ -258433,12 +258433,12 @@
     "is_open": false,
     "next_close": "2026-10-07T20:00:00Z",
     "next_open": "2026-10-07T13:30:00Z",
-    "timestamp": "2026-10-06T20:08:30Z"
+    "timestamp": "2026-10-06T20:14:46Z"
   },
   "data_feed": "iex",
-  "data_hash": "962f5887b09d47afd02fd77bb580b7b104692a9a4efdb2e8b9724b5d9562d072",
+  "data_hash": "80caa2dab6665eb728ef9026855a1f43bfac6ff253672eac2791625a25e9738b",
   "data_source": "alpaca_paper",
-  "generated_at": "2026-10-06T20:08:29Z",
+  "generated_at": "2026-10-06T20:14:45Z",
   "latest_bars": {
     "AAPL": {
       "close": 333.72,
@@ -259409,21 +259409,21 @@
       "asset_marginable": true,
       "avg_entry_price": "132.374926",
       "avg_entry_swap_rate": null,
-      "change_today": "0.01958",
+      "change_today": "0.01961",
       "cost_basis": "50",
-      "current_price": "107.1274",
+      "current_price": "107.13",
       "exchange": "NASDAQ",
       "lastday_price": "105.07",
-      "market_value": "40.46363",
+      "market_value": "40.464612",
       "qty": "0.377715036",
       "qty_available": "0.377715036",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "0.777111",
-      "unrealized_intraday_plpc": "0.01958",
-      "unrealized_pl": "-9.53637",
-      "unrealized_plpc": "-0.19073",
+      "unrealized_intraday_pl": "0.778093",
+      "unrealized_intraday_plpc": "0.01961",
+      "unrealized_pl": "-9.535388",
+      "unrealized_plpc": "-0.19071",
       "usd": null
     }
   ],
@@ -259636,7 +259636,7 @@
       ],
       "symbol": "BIL",
       "tape": "B",
-      "timestamp": "2026-10-06T20:08:26Z"
+      "timestamp": "2026-10-06T20:11:13Z"
     },
     "BKNG": {
       "ask_exchange": " ",
@@ -260563,10 +260563,10 @@
       "timestamp": "2026-10-06T20:00:00Z"
     }
   },
-  "run_id": "refresh_data-20261006T200829",
+  "run_id": "refresh_data-20261006T201445",
   "run_mode": "alpaca_paper",
   "schema_version": "0.1.0",
-  "source_data_hash": "ee46b439909541f859a1c7146724d5e28dccce9602794f384d28c0377dd4a7f5",
+  "source_data_hash": "fcc70358ee248e73b09ea213a62811eaaf1cd418abeaea7eb2e86bd3f37bb168",
   "source_labels": {
     "account": "alpaca_trading_client.get_account",
     "assets": "alpaca_trading_client.get_all_assets",
