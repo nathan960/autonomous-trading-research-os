@@ -1,5 +1,5 @@
 {
-  "account_data_hash": "1f3aafc1ff8427c720eb9e38e4215b14d560218c7d3cab193d0210e1cd66132f",
+  "account_data_hash": "7495b09b83870af388e3f623b9916771a2b4bf986a890b3227912c0e62f05539",
   "bar_counts": {
     "AAPL": 289,
     "ABBV": 289,
@@ -84,22 +84,22 @@
     "XOM": 289
   },
   "data_feed": "iex",
-  "data_hash": "152616ab24d4c66c0552f32d13229afe01fbb86cd5c18539fd04677e7b1462a7",
-  "generated_at": "2026-10-06T20:29:12Z",
+  "data_hash": "d5cd03042a99c3cbcb46f9b218388313be371945e7e62505376e99c094db9856",
+  "generated_at": "2026-10-07T00:08:37Z",
   "insufficient_bars": {},
   "issues": [
     "wide_spreads"
   ],
-  "market_data_hash": "9fe84985c9a525038a2156ccd75fc21968d7c3c159538e35018edd9b91cded6c",
+  "market_data_hash": "37a1413de6a8039c799737db4662a09470c21d704a3ae2e57060f8fbf9184738",
   "missing_bars": [],
   "missing_quotes": [],
   "not_tradable": [],
   "open_order_count": 0,
   "position_count": 4,
-  "run_id": "refresh_data-20261006T202909",
+  "run_id": "refresh_data-20261007T000833",
   "schema_version": "0.1.0",
-  "snapshot_age_minutes": 0.03386613333333333,
-  "snapshot_fetched_at": "2026-10-06T20:29:10Z",
+  "snapshot_age_minutes": 0.05325326666666667,
+  "snapshot_fetched_at": "2026-10-07T00:08:34Z",
   "snapshot_source": "alpaca_paper",
   "source_labels": {
     "assets": "alpaca_trading_client.get_all_assets",
@@ -112,7 +112,6 @@
   "symbols_expected": 81,
   "symbols_with_bars": 81,
   "wide_spreads": {
-    "AAPL": 0.06204889060504364,
     "ABBV": 0.08875419417685905,
     "ABT": 0.10349812084417458,
     "ADBE": 0.09994467277900725,
@@ -144,6 +143,7 @@
     "MRK": 0.09836621246017213,
     "MSFT": 0.09601634320735442,
     "NKE": 0.09704990350151649,
+    "NVDA": 0.021499540786507496,
     "O": 0.0970412116942585,
     "ORCL": 0.08168790860463583,
     "PEP": 0.09797246179452264,
@@ -153,7 +153,7 @@
     "SO": 0.10953506698187554,
     "SRE": 0.12224168126094569,
     "TMO": 0.12296156394029516,
-    "TSLA": 0.0955490205851567,
+    "TSLA": 0.02051507018992565,
     "UNH": 0.09798364849275215,
     "V": 0.09877368434583647,
     "WMT": 0.09515740658164633,
