@@ -1,9 +1,9 @@
 {
   "all_gates_pass": false,
   "dry_run": true,
-  "execution_report_hash": "42ed1e03a10fc9720258abdf2901a369189b50d48362d825906350a3c61eadac",
+  "execution_report_hash": "ec7afec2966f71af8f22d8193af96f86779b7da2bd818db4f3c944d8aec8db92",
   "failed_gates": [
-    "QUOTE_FRESHNESS"
+    "RISK_LIMITS_RESPECTED"
   ],
   "gate_results": [
     {
@@ -32,7 +32,7 @@
       "passes": true
     },
     {
-      "detail": "[dry-run] market is_open=False at 2026-10-07T00:08:34Z",
+      "detail": "[dry-run] market is_open=False at 2026-10-07T20:35:02Z",
       "gate_id": "MARKET_CLOCK_OPEN",
       "passes": true
     },
@@ -67,9 +67,9 @@
       "passes": true
     },
     {
-      "detail": "stale quotes (>90.0min): ['WELL(249min)']",
+      "detail": null,
       "gate_id": "QUOTE_FRESHNESS",
-      "passes": false
+      "passes": true
     },
     {
       "detail": null,
@@ -77,9 +77,9 @@
       "passes": true
     },
     {
-      "detail": null,
+      "detail": "overweight orders: ['BIL'] (max=0.12)",
       "gate_id": "RISK_LIMITS_RESPECTED",
-      "passes": true
+      "passes": false
     },
     {
       "detail": null,
@@ -97,24 +97,24 @@
       "passes": true
     }
   ],
-  "generated_at": "2026-10-07T00:08:40Z",
+  "generated_at": "2026-10-07T20:35:07Z",
   "no_submit_reason": "dry_run_mode",
   "orders_submitted": [],
   "orders_validated": [
     {
-      "client_order_id": "TOS-20261007T000840-WELL-SELL",
+      "client_order_id": "TOS-20261007T203507-BIL-BUY",
       "execution_ready": true,
-      "limit_price": 225.78,
+      "limit_price": 91.46,
       "notional": 25.0,
       "order_type": "limit",
-      "side": "sell",
-      "symbol": "WELL",
-      "target_weight": 0.0,
+      "side": "buy",
+      "symbol": "BIL",
+      "target_weight": 1.0,
       "validation_skip_reason": null
     }
   ],
-  "plan_id": "trade_plan-20261007T000840-b31ba6f1",
-  "run_id": "execution-20261007T000840-50179d76",
+  "plan_id": "trade_plan-20261007T203507-aa0dfc58",
+  "run_id": "execution-20261007T203507-8f34e7a5",
   "status": "DRY_RUN_FAIL",
-  "trade_plan_hash": "7edefd3c8f16085bd1c5bb0a8f844dea2f79ae8b52db6cefadce9e6f5d2d60bd"
+  "trade_plan_hash": "b7d4d185ad5b19ada79fe7e85a8b3715caa5eb690d316c760d5ff8829504d07e"
 }

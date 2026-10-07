@@ -33405,3 +33405,15 @@ Candidate ranking, trade-plan generation, and no-trade reasons are logged here.
 - EQIX BUY cid=TOS-20260514T172335-EQIX-BUY trigger_hash=null trigger_ids=[ATR_SIZING_V1, LIQUIDITY_GATE_V1, MOMENTUM_BLEND_6M_12M_V1…] status=partial_missing_trigger_snapshot_hash
 
 ---
+
+## scan_triggers candidates  (2026-10-07T20:35:07Z)
+
+```
+  AAPL      score=0.3056  atr_pct=0.0201  [candidate]
+  PM        score=0.2261  atr_pct=0.0213  [candidate]
+  MSFT      score=0.2089  atr_pct=0.0215  [candidate]
+  KO        score=0.2041  atr_pct=0.0146  [candidate]
+  COP       score=0.2026  atr_pct=0.0236  [candidate]
+  V         score=0.1343  atr_pct=0.0156  [candidate]
+  JPM       score=0.0678  atr_pct=0.0183  [candidate]
+```
