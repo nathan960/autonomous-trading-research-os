@@ -3,30 +3,30 @@
     "account_blocked": false,
     "account_number": "PA330312PCJ0",
     "accrued_fees": "0",
-    "buying_power": "398899.28",
+    "buying_power": "398898.85",
     "cash": "99552.75",
     "created_at": "2026-05-06T15:27:38Z",
     "crypto_status": "ACTIVE",
     "currency": "USD",
     "daytrade_count": null,
     "daytrading_buying_power": null,
-    "equity": "99798.56",
+    "equity": "99798.41",
     "id": "82b03822-7e50-422d-a0df-97d30dc71964",
-    "initial_margin": "122.91",
+    "initial_margin": "122.83",
     "last_equity": "99799.1065992683",
     "last_maintenance_margin": "73.91",
-    "long_market_value": "245.81",
-    "maintenance_margin": "73.74",
+    "long_market_value": "245.66",
+    "maintenance_margin": "73.7",
     "multiplier": "4",
-    "non_marginable_buying_power": "99675.65",
+    "non_marginable_buying_power": "99675.58",
     "options_approved_level": 3,
-    "options_buying_power": "99675.65",
+    "options_buying_power": "99675.58",
     "options_trading_level": 3,
     "pattern_day_trader": null,
     "pending_transfer_in": null,
     "pending_transfer_out": null,
-    "portfolio_value": "99798.56",
-    "regt_buying_power": "199351.31",
+    "portfolio_value": "99798.41",
+    "regt_buying_power": "199351.16",
     "short_market_value": "0",
     "shorting_enabled": true,
     "sma": "99795.3",
@@ -51658,8 +51658,8 @@
         "open": 157.665,
         "symbol": "BKNG",
         "timestamp": "2026-10-07T04:00:00Z",
-        "trade_count": 15937.0,
-        "volume": 307442.0,
+        "trade_count": 15946.0,
+        "volume": 307478.0,
         "vwap": 156.573059
       }
     ],
@@ -175717,8 +175717,8 @@
         "open": 68.94,
         "symbol": "NFLX",
         "timestamp": "2026-10-07T04:00:00Z",
-        "trade_count": 15199.0,
-        "volume": 1584931.0,
+        "trade_count": 15200.0,
+        "volume": 1584941.0,
         "vwap": 69.15706
       }
     ],
@@ -258423,8 +258423,8 @@
         "open": 166.59,
         "symbol": "XOM",
         "timestamp": "2026-10-07T04:00:00Z",
-        "trade_count": 5472.0,
-        "volume": 284669.0,
+        "trade_count": 5473.0,
+        "volume": 284709.0,
         "vwap": 164.252709
       }
     ]
@@ -258433,12 +258433,12 @@
     "is_open": false,
     "next_close": "2026-10-08T20:00:00Z",
     "next_open": "2026-10-08T13:30:00Z",
-    "timestamp": "2026-10-07T20:43:20Z"
+    "timestamp": "2026-10-08T00:24:23Z"
   },
   "data_feed": "iex",
-  "data_hash": "0cc4a2a25516be300c3aa58301fb210504b862dd0cdc08953112b36a5322531e",
+  "data_hash": "f3a9bb2997f4891811673b8cfc3b93ab3986a66cd62888451b3a956c94621413",
   "data_source": "alpaca_paper",
-  "generated_at": "2026-10-07T20:43:20Z",
+  "generated_at": "2026-10-08T00:24:22Z",
   "latest_bars": {
     "AAPL": {
       "close": 336.58,
@@ -259363,21 +259363,21 @@
       "asset_marginable": true,
       "avg_entry_price": "230.135969",
       "avg_entry_swap_rate": null,
-      "change_today": "0.01362",
+      "change_today": "0.01185",
       "cost_basis": "75",
-      "current_price": "258.25",
+      "current_price": "257.8",
       "exchange": "NYSE",
       "lastday_price": "254.78",
-      "market_value": "84.162202",
+      "market_value": "84.01555",
       "qty": "0.325894297",
       "qty_available": "0.325894297",
       "side": "long",
       "swap_rate": null,
       "symbol": "JNJ",
-      "unrealized_intraday_pl": "1.130853",
-      "unrealized_intraday_plpc": "0.01362",
-      "unrealized_pl": "9.162202",
-      "unrealized_plpc": "0.12216",
+      "unrealized_intraday_pl": "0.984201",
+      "unrealized_intraday_plpc": "0.01185",
+      "unrealized_pl": "9.01555",
+      "unrealized_plpc": "0.12021",
       "usd": null
     },
     {
@@ -259409,21 +259409,21 @@
       "asset_marginable": true,
       "avg_entry_price": "132.374926",
       "avg_entry_swap_rate": null,
-      "change_today": "0.00746",
+      "change_today": "0.00737",
       "cost_basis": "50",
-      "current_price": "108",
+      "current_price": "107.99",
       "exchange": "NASDAQ",
       "lastday_price": "107.2",
-      "market_value": "40.793224",
+      "market_value": "40.789447",
       "qty": "0.377715036",
       "qty_available": "0.377715036",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "0.302172",
-      "unrealized_intraday_plpc": "0.00746",
-      "unrealized_pl": "-9.206776",
-      "unrealized_plpc": "-0.18414",
+      "unrealized_intraday_pl": "0.298395",
+      "unrealized_intraday_plpc": "0.00737",
+      "unrealized_pl": "-9.210553",
+      "unrealized_plpc": "-0.18421",
       "usd": null
     }
   ],
@@ -259630,27 +259630,27 @@
       "ask_size": 52000.0,
       "bid_exchange": "V",
       "bid_price": 91.45,
-      "bid_size": 48000.0,
+      "bid_size": 43000.0,
       "conditions": [
         "R"
       ],
       "symbol": "BIL",
       "tape": "B",
-      "timestamp": "2026-10-07T20:30:00Z"
+      "timestamp": "2026-10-07T20:59:58Z"
     },
     "BKNG": {
       "ask_exchange": "V",
-      "ask_price": 165.74,
-      "ask_size": 10.0,
+      "ask_price": 155.87,
+      "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 149.15,
-      "bid_size": 10.0,
+      "bid_price": 155.4,
+      "bid_size": 20.0,
       "conditions": [
         "R"
       ],
       "symbol": "BKNG",
       "tape": "C",
-      "timestamp": "2026-10-07T20:00:00Z"
+      "timestamp": "2026-10-07T20:59:55Z"
     },
     "BLK": {
       "ask_exchange": "V",
@@ -260563,10 +260563,10 @@
       "timestamp": "2026-10-07T20:00:01Z"
     }
   },
-  "run_id": "refresh_data-20261007T204319",
+  "run_id": "refresh_data-20261008T002422",
   "run_mode": "alpaca_paper",
   "schema_version": "0.1.0",
-  "source_data_hash": "1cd71ca27490ccc8bfaff03699d80adc558bcf69f5e4156f77bdac1041611bd2",
+  "source_data_hash": "76fb81ae895d7136d37a108c5ebf636fd2aca41d7058a39dc938d2aafd87cfef",
   "source_labels": {
     "account": "alpaca_trading_client.get_account",
     "assets": "alpaca_trading_client.get_all_assets",
@@ -260700,11 +260700,11 @@
       "symbol": "BIL"
     },
     "BKNG": {
-      "ask": 165.74,
-      "bid": 149.15,
+      "ask": 155.87,
+      "bid": 155.4,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 16.590000000000003,
-      "spread_pct": 0.10009653674429832,
+      "spread": 0.46999999999999886,
+      "spread_pct": 0.003015333290562641,
       "symbol": "BKNG"
     },
     "BLK": {
