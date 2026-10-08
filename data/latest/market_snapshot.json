@@ -3,7 +3,7 @@
     "account_blocked": false,
     "account_number": "PA330312PCJ0",
     "accrued_fees": "0",
-    "buying_power": "398895.76",
+    "buying_power": "398895.77",
     "cash": "99552.75",
     "created_at": "2026-05-06T15:27:38Z",
     "crypto_status": "ACTIVE",
@@ -18,9 +18,9 @@
     "long_market_value": "244.56",
     "maintenance_margin": "73.37",
     "multiplier": "4",
-    "non_marginable_buying_power": "99675.02",
+    "non_marginable_buying_power": "99675.03",
     "options_approved_level": 3,
-    "options_buying_power": "99675.02",
+    "options_buying_power": "99675.03",
     "options_trading_level": 3,
     "pattern_day_trader": null,
     "pending_transfer_in": null,
@@ -19848,8 +19848,8 @@
         "open": 637.53,
         "symbol": "AMD",
         "timestamp": "2026-10-08T04:00:00Z",
-        "trade_count": 12710.0,
-        "volume": 583574.0,
+        "trade_count": 12711.0,
+        "volume": 583577.0,
         "vwap": 624.396924
       }
     ],
@@ -153450,8 +153450,8 @@
         "open": 230.29,
         "symbol": "MCD",
         "timestamp": "2026-10-08T04:00:00Z",
-        "trade_count": 7892.0,
-        "volume": 336074.0,
+        "trade_count": 7894.0,
+        "volume": 336082.0,
         "vwap": 235.949187
       }
     ],
@@ -188441,8 +188441,8 @@
         "open": 141.44,
         "symbol": "ORCL",
         "timestamp": "2026-10-08T04:00:00Z",
-        "trade_count": 16990.0,
-        "volume": 1422492.0,
+        "trade_count": 16991.0,
+        "volume": 1422499.0,
         "vwap": 137.076937
       }
     ],
@@ -236156,8 +236156,8 @@
         "open": 374.9,
         "symbol": "UNH",
         "timestamp": "2026-10-08T04:00:00Z",
-        "trade_count": 5094.0,
-        "volume": 176718.0,
+        "trade_count": 5095.0,
+        "volume": 176720.0,
         "vwap": 370.839492
       }
     ],
@@ -258433,12 +258433,12 @@
     "is_open": false,
     "next_close": "2026-10-09T20:00:00Z",
     "next_open": "2026-10-09T13:30:00Z",
-    "timestamp": "2026-10-08T20:41:00Z"
+    "timestamp": "2026-10-08T20:46:01Z"
   },
   "data_feed": "iex",
-  "data_hash": "3acd82d16d35b22d7e7101c7b68c7d3769b6691d70f4289e5d0a02240aa94cbf",
+  "data_hash": "dc89245105519d071fe2cee09c33bfa8b7f04355452d6392c0ac626e36e6516c",
   "data_source": "alpaca_paper",
-  "generated_at": "2026-10-08T20:40:59Z",
+  "generated_at": "2026-10-08T20:46:01Z",
   "latest_bars": {
     "AAPL": {
       "close": 340.43,
@@ -259409,21 +259409,21 @@
       "asset_marginable": true,
       "avg_entry_price": "132.374926",
       "avg_entry_swap_rate": null,
-      "change_today": "0.0233",
+      "change_today": "0.02339",
       "cost_basis": "50",
-      "current_price": "110.68",
+      "current_price": "110.69",
       "exchange": "NASDAQ",
       "lastday_price": "108.16",
-      "market_value": "41.8055",
+      "market_value": "41.809277",
       "qty": "0.377715036",
       "qty_available": "0.377715036",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "0.951842",
-      "unrealized_intraday_plpc": "0.0233",
-      "unrealized_pl": "-8.1945",
-      "unrealized_plpc": "-0.16389",
+      "unrealized_intraday_pl": "0.955619",
+      "unrealized_intraday_plpc": "0.02339",
+      "unrealized_pl": "-8.190723",
+      "unrealized_plpc": "-0.16381",
       "usd": null
     }
   ],
@@ -260452,17 +260452,17 @@
     },
     "UNH": {
       "ask_exchange": "V",
-      "ask_price": 387.39,
+      "ask_price": 366.73,
       "ask_size": 40.0,
       "bid_exchange": "V",
-      "bid_price": 355.73,
+      "bid_price": 365.77,
       "bid_size": 40.0,
       "conditions": [
         "R"
       ],
       "symbol": "UNH",
       "tape": "A",
-      "timestamp": "2026-10-08T20:00:03Z"
+      "timestamp": "2026-10-08T20:45:22Z"
     },
     "UNP": {
       "ask_exchange": " ",
@@ -260563,10 +260563,10 @@
       "timestamp": "2026-10-08T20:00:02Z"
     }
   },
-  "run_id": "refresh_data-20261008T204059",
+  "run_id": "refresh_data-20261008T204600",
   "run_mode": "alpaca_paper",
   "schema_version": "0.1.0",
-  "source_data_hash": "a88117ea0d955899f78176ef1d2964afbb1ce27f45419a602fe742ad1e2d18bd",
+  "source_data_hash": "8e5e27fecbc7cc94883bc72f226da8c4e02196848eae95b018ea9cb20701ac75",
   "source_labels": {
     "account": "alpaca_trading_client.get_account",
     "assets": "alpaca_trading_client.get_all_assets",
@@ -261164,11 +261164,11 @@
       "symbol": "TSLA"
     },
     "UNH": {
-      "ask": 387.39,
-      "bid": 355.73,
+      "ask": 366.73,
+      "bid": 365.77,
       "source": "derived_from_alpaca_latest_quote",
-      "spread": 31.659999999999968,
-      "spread_pct": 0.08172642556596703,
+      "spread": 0.9600000000000364,
+      "spread_pct": 0.002617729664876166,
       "symbol": "UNH"
     },
     "UNP": {
