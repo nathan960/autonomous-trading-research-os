@@ -15576,3 +15576,26 @@ based on this report alone. Any experiment requires a candidate PR with:
 - Hypothesis, supporting evidence, success criteria, and rollback plan.
 
 ---
+## Outcome Observations — 2026-10-08T01:02:28Z
+
+*From outcome_tracker run `outcome_tracker-20261008T010228-f12aacf0`*
+
+**Current unrealized returns (intraday — no strategy conclusions yet):**
+- WELL entry: fill=$218.808 current=$221.12 return=+1.057%
+- JNJ entry: fill=$230.248 current=$257.8 return=+11.966%
+- EQIX entry: fill=$1084.37 current=$1031.77 return=-4.851%
+- EQIX entry: fill=$1079.5 current=$1031.77 return=-4.421%
+- EQIX exit: fill=$1078.442 current=$1031.77 return=-4.328%
+- EQIX entry: fill=$1078.41 current=$1031.77 return=-4.325%
+- JNJ entry: fill=$230.116 current=$257.8 return=+12.030%
+- WMT entry: fill=$132.276 current=$107.99 return=-18.360%
+- WMT entry: fill=$132.474 current=$107.99 return=-18.482%
+- EQIX entry: fill=$1076.89 current=$1031.77 return=-4.190%
+- EQIX entry: fill=$1076.82 current=$1031.77 return=-4.184%
+- JNJ entry: fill=$230.044 current=$257.8 return=+12.066%
+- EQIX exit: fill=$1076.718 current=$1031.77 return=-4.175%
+- EQIX entry: fill=$1076.542 current=$1031.77 return=-4.159%
+
+*Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
+
+---
