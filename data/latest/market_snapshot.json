@@ -3,30 +3,30 @@
     "account_blocked": false,
     "account_number": "PA330312PCJ0",
     "accrued_fees": "0",
-    "buying_power": "398905.64",
+    "buying_power": "398905.46",
     "cash": "99552.75",
     "created_at": "2026-05-06T15:27:38Z",
     "crypto_status": "ACTIVE",
     "currency": "USD",
     "daytrade_count": null,
     "daytrading_buying_power": null,
-    "equity": "99800.83",
+    "equity": "99800.77",
     "id": "82b03822-7e50-422d-a0df-97d30dc71964",
-    "initial_margin": "124.04",
+    "initial_margin": "124.01",
     "last_equity": "99797.26276241556",
     "last_maintenance_margin": "73.35",
-    "long_market_value": "248.08",
-    "maintenance_margin": "74.43",
+    "long_market_value": "248.02",
+    "maintenance_margin": "74.41",
     "multiplier": "4",
-    "non_marginable_buying_power": "99676.79",
+    "non_marginable_buying_power": "99676.76",
     "options_approved_level": 3,
-    "options_buying_power": "99676.79",
+    "options_buying_power": "99676.76",
     "options_trading_level": 3,
     "pattern_day_trader": null,
     "pending_transfer_in": null,
     "pending_transfer_out": null,
-    "portfolio_value": "99800.83",
-    "regt_buying_power": "199353.58",
+    "portfolio_value": "99800.77",
+    "regt_buying_power": "199353.52",
     "short_market_value": "0",
     "shorting_enabled": true,
     "sma": "99798.69",
@@ -3943,8 +3943,8 @@
         "open": 331.685,
         "symbol": "AAPL",
         "timestamp": "2026-10-09T04:00:00Z",
-        "trade_count": 30585.0,
-        "volume": 2132364.0,
+        "trade_count": 30588.0,
+        "volume": 2132399.0,
         "vwap": 334.173843
       }
     ],
@@ -182079,8 +182079,8 @@
         "open": 233.79,
         "symbol": "NVDA",
         "timestamp": "2026-10-09T04:00:00Z",
-        "trade_count": 25888.0,
-        "volume": 2316354.0,
+        "trade_count": 25893.0,
+        "volume": 2316542.0,
         "vwap": 230.222982
       }
     ],
@@ -188441,8 +188441,8 @@
         "open": 136.96,
         "symbol": "ORCL",
         "timestamp": "2026-10-09T04:00:00Z",
-        "trade_count": 9217.0,
-        "volume": 668901.0,
+        "trade_count": 9218.0,
+        "volume": 668941.0,
         "vwap": 141.241594
       }
     ],
@@ -204346,8 +204346,8 @@
         "open": 184.03,
         "symbol": "RTX",
         "timestamp": "2026-10-09T04:00:00Z",
-        "trade_count": 3283.0,
-        "volume": 176456.0,
+        "trade_count": 3284.0,
+        "volume": 176460.0,
         "vwap": 185.737595
       }
     ],
@@ -232975,8 +232975,8 @@
         "open": 382.33,
         "symbol": "TSLA",
         "timestamp": "2026-10-09T04:00:00Z",
-        "trade_count": 14703.0,
-        "volume": 672232.0,
+        "trade_count": 14704.0,
+        "volume": 672312.0,
         "vwap": 384.372332
       }
     ],
@@ -258433,12 +258433,12 @@
     "is_open": false,
     "next_close": "2026-10-12T20:00:00Z",
     "next_open": "2026-10-12T13:30:00Z",
-    "timestamp": "2026-10-09T20:05:32Z"
+    "timestamp": "2026-10-09T20:15:23Z"
   },
   "data_feed": "iex",
-  "data_hash": "ce1c8afd951bceaa7769ce3a61ebe8dba586eda35194f76a4b36238588421600",
+  "data_hash": "8fa0c4565a980c63dd12bd5f836c4785d61b48a32198a84eb9799ae9608365ed",
   "data_source": "alpaca_paper",
-  "generated_at": "2026-10-09T20:05:32Z",
+  "generated_at": "2026-10-09T20:15:23Z",
   "latest_bars": {
     "AAPL": {
       "close": 336.47,
@@ -259057,15 +259057,15 @@
       "vwap": 34.748426
     },
     "NVDA": {
-      "close": 229.35,
-      "high": 229.42,
-      "low": 229.25,
-      "open": 229.41,
+      "close": 229.47,
+      "high": 229.47,
+      "low": 229.47,
+      "open": 229.47,
       "symbol": "NVDA",
-      "timestamp": "2026-10-09T19:59:00Z",
-      "trade_count": 1042.0,
-      "volume": 74458.0,
-      "vwap": 229.335682
+      "timestamp": "2026-10-09T20:11:00Z",
+      "trade_count": 5.0,
+      "volume": 188.0,
+      "vwap": 229.47
     },
     "O": {
       "close": 54.17,
@@ -259233,15 +259233,15 @@
       "vwap": 148.568711
     },
     "TSLA": {
-      "close": 382.68,
-      "high": 383.11,
-      "low": 382.68,
-      "open": 383.11,
+      "close": 382.5,
+      "high": 382.5,
+      "low": 382.5,
+      "open": 382.5,
       "symbol": "TSLA",
-      "timestamp": "2026-10-09T19:59:00Z",
-      "trade_count": 311.0,
-      "volume": 9674.0,
-      "vwap": 382.935632
+      "timestamp": "2026-10-09T20:11:00Z",
+      "trade_count": 1.0,
+      "volume": 80.0,
+      "vwap": 382.5
     },
     "UNH": {
       "close": 379.31,
@@ -259409,21 +259409,21 @@
       "asset_marginable": true,
       "avg_entry_price": "132.374926",
       "avg_entry_swap_rate": null,
-      "change_today": "0.00712",
+      "change_today": "0.00561",
       "cost_basis": "50",
-      "current_price": "111.3475",
+      "current_price": "111.1797",
       "exchange": "NASDAQ",
       "lastday_price": "110.56",
-      "market_value": "42.057625",
+      "market_value": "41.994244",
       "qty": "0.377715036",
       "qty_available": "0.377715036",
       "side": "long",
       "swap_rate": null,
       "symbol": "WMT",
-      "unrealized_intraday_pl": "0.297451",
-      "unrealized_intraday_plpc": "0.00712",
-      "unrealized_pl": "-7.942375",
-      "unrealized_plpc": "-0.15885",
+      "unrealized_intraday_pl": "0.23407",
+      "unrealized_intraday_plpc": "0.00561",
+      "unrealized_pl": "-8.005756",
+      "unrealized_plpc": "-0.16012",
       "usd": null
     }
   ],
@@ -259627,7 +259627,7 @@
     "BIL": {
       "ask_exchange": "V",
       "ask_price": 91.51,
-      "ask_size": 161000.0,
+      "ask_size": 75000.0,
       "bid_exchange": "V",
       "bid_price": 91.5,
       "bid_size": 42000.0,
@@ -259636,7 +259636,7 @@
       ],
       "symbol": "BIL",
       "tape": "B",
-      "timestamp": "2026-10-09T20:00:13Z"
+      "timestamp": "2026-10-09T20:09:02Z"
     },
     "BKNG": {
       "ask_exchange": "V",
@@ -260563,10 +260563,10 @@
       "timestamp": "2026-10-09T20:00:02Z"
     }
   },
-  "run_id": "refresh_data-20261009T200531",
+  "run_id": "refresh_data-20261009T201522",
   "run_mode": "alpaca_paper",
   "schema_version": "0.1.0",
-  "source_data_hash": "f5fc7132d2d53ba7bd5dcc12c7d8d0eb8cbc1d89fd9ec7cb13bf5605f2b01f68",
+  "source_data_hash": "a0e2d05d22d845d84f5060fb4aba7a76118ae6be04377671b46193c18378c3fc",
   "source_labels": {
     "account": "alpaca_trading_client.get_account",
     "assets": "alpaca_trading_client.get_all_assets",
