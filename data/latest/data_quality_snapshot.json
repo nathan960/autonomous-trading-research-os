@@ -1,5 +1,5 @@
 {
-  "account_data_hash": "c3d3cf08becaa2d5d44f933d347d8a298355d27eabc706455b96b660645192a7",
+  "account_data_hash": "124188c3a0b734684d2915c5f83682c1dc8ecf30577205f0fab8bfd40fa49dff",
   "bar_counts": {
     "AAPL": 289,
     "ABBV": 289,
@@ -84,22 +84,22 @@
     "XOM": 289
   },
   "data_feed": "iex",
-  "data_hash": "fc16eb5bdb49243e15676d8dc0cae36a776cc8364b407da90d30b8c59ea0dab0",
-  "generated_at": "2026-10-09T20:15:28Z",
+  "data_hash": "f683b870ea39112d255e92dd9a74376604cb307cf68bc13b3c2446f1033e6671",
+  "generated_at": "2026-10-10T00:19:32Z",
   "insufficient_bars": {},
   "issues": [
     "wide_spreads"
   ],
-  "market_data_hash": "c5e925eb7a4a6c50f21e850db71e5469f4cc9d50438511741ccf186b12e24182",
+  "market_data_hash": "c90dba3d014c5b6f39e28b5fcd6027d332d12991ed468d5d557acf14cea6355a",
   "missing_bars": [],
   "missing_quotes": [],
   "not_tradable": [],
   "open_order_count": 0,
   "position_count": 4,
-  "run_id": "refresh_data-20261009T201522",
+  "run_id": "refresh_data-20261010T001928",
   "schema_version": "0.1.0",
-  "snapshot_age_minutes": 0.09181393333333333,
-  "snapshot_fetched_at": "2026-10-09T20:15:23Z",
+  "snapshot_age_minutes": 0.06701351666666668,
+  "snapshot_fetched_at": "2026-10-10T00:19:28Z",
   "snapshot_source": "alpaca_paper",
   "source_labels": {
     "assets": "alpaca_trading_client.get_all_assets",
@@ -112,6 +112,7 @@
   "symbols_expected": 81,
   "symbols_with_bars": 81,
   "wide_spreads": {
+    "AAPL": 0.9999702372094408,
     "ABBV": 0.10693939185942744,
     "ABT": 0.10435273103318612,
     "ADBE": 0.10342115611482505,
