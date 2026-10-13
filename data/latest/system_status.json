@@ -50,14 +50,14 @@
   "failed_gates": [
     "QUOTE_FRESHNESS"
   ],
-  "generated_at": "2026-10-10T00:45:06Z",
+  "generated_at": "2026-10-13T02:32:59Z",
   "last_alert_count": 7,
   "last_route_count": 14,
   "latest_account_equity": 99800.68,
   "latest_plan_id": "trade_plan-20261010T001934-4c6550da",
   "lineage_status": {
     "complete_count": 0,
-    "generated_at": "2026-10-10T00:30:22Z",
+    "generated_at": "2026-10-13T02:26:08Z",
     "lineage_count": 14,
     "partial_count": 14
   },
@@ -111,7 +111,10 @@
       "symbol": "WMT"
     }
   ],
-  "required_operator_actions": [],
+  "required_operator_actions": [
+    "Run monitor_positions.py to refresh risk state",
+    "Re-run generate_trade_plan.py to refresh the plan"
+  ],
   "risk_state": {
     "drawdown": -0.000124,
     "drawdown_blocked": false,
@@ -119,7 +122,7 @@
     "latest_equity": 99800.68,
     "paused": false,
     "peak_equity": 99813.01,
-    "stale": false,
+    "stale": true,
     "updated_at": "2026-10-10T00:19:33Z"
   },
   "safe_for_manual_paper_execution": false,
@@ -127,7 +130,7 @@
   "safe_for_scheduled_paper_execution": false,
   "schema_version": "0.1.0",
   "source_integrity_status": "ok",
-  "status_hash": "d7ff1f206cbf9702b7744367dc6a2d5379b9917aa0f0dc9fffa9b6c904d6c2ee",
+  "status_hash": "6f58344e4e55f061a9222d093d25a8cb882e30ee91f0a2d354a26868fa61341e",
   "trade_plan_approved_for_execution": false,
   "trigger_performance_summary": {
     "avg_current_return_pct": -0.019573,
@@ -143,6 +146,8 @@
   },
   "warnings": [
     "Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']",
-    "60 wide-spread symbols (['AAPL', 'ABBV', 'ABT', 'ADBE', 'AMD', 'AMT', 'AMZN', 'APD', 'AVGO', 'BA', 'BAC', 'BKNG', 'BLK', 'CAT', 'CL', 'CMCSA', 'COP', 'CSCO', 'DE', 'DIS', 'DUK', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HON', 'ISRG', 'JNJ', 'JPM', 'KO', 'LLY', 'LMT', 'LOW', 'MA', 'MCD', 'MDLZ', 'MRK', 'MSFT', 'NEE', 'NFLX', 'NKE', 'NVDA', 'O', 'ORCL', 'PEP', 'PLD', 'PM', 'SBUX', 'SHW', 'SLB', 'SO', 'TMUS', 'TSLA', 'UNH', 'UNP', 'UPS', 'V', 'WELL']) \u2014 SPREAD_NOT_TOO_WIDE may block execution"
+    "Risk state is stale (4453.4min old) \u2014 run monitor_positions.py",
+    "60 wide-spread symbols (['AAPL', 'ABBV', 'ABT', 'ADBE', 'AMD', 'AMT', 'AMZN', 'APD', 'AVGO', 'BA', 'BAC', 'BKNG', 'BLK', 'CAT', 'CL', 'CMCSA', 'COP', 'CSCO', 'DE', 'DIS', 'DUK', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HON', 'ISRG', 'JNJ', 'JPM', 'KO', 'LLY', 'LMT', 'LOW', 'MA', 'MCD', 'MDLZ', 'MRK', 'MSFT', 'NEE', 'NFLX', 'NKE', 'NVDA', 'O', 'ORCL', 'PEP', 'PLD', 'PM', 'SBUX', 'SHW', 'SLB', 'SO', 'TMUS', 'TSLA', 'UNH', 'UNP', 'UPS', 'V', 'WELL']) \u2014 SPREAD_NOT_TOO_WIDE may block execution",
+    "Trade plan has expired"
   ]
 }
