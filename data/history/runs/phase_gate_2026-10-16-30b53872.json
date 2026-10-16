@@ -1,0 +1,155 @@
+{
+  "blocking_issues": [
+    "Only 14 filled order(s). Need at least 20 before reviewing promotion."
+  ],
+  "checks": [
+    {
+      "blocking": true,
+      "check_id": "FILLED_ORDERS_MIN_20",
+      "detail": "Only 14 filled order(s). Need at least 20 before reviewing promotion.",
+      "evidence": "orders_filled=14",
+      "passes": false,
+      "required": ">= 20"
+    },
+    {
+      "blocking": true,
+      "check_id": "NO_MISSING_ORDERS",
+      "detail": null,
+      "evidence": "orders_missing=0",
+      "passes": true,
+      "required": "== 0"
+    },
+    {
+      "blocking": true,
+      "check_id": "NO_REJECTED_ORDERS",
+      "detail": null,
+      "evidence": "orders_rejected=0",
+      "passes": true,
+      "required": "== 0"
+    },
+    {
+      "blocking": true,
+      "check_id": "SOURCE_INTEGRITY_OK",
+      "detail": null,
+      "evidence": "source_integrity_status=ok",
+      "passes": true,
+      "required": "== 'ok'"
+    },
+    {
+      "blocking": true,
+      "check_id": "NO_SYSTEM_BLOCKING_ISSUES",
+      "detail": null,
+      "evidence": "blocking_issues=[]",
+      "passes": true,
+      "required": "empty list"
+    },
+    {
+      "blocking": true,
+      "check_id": "OPEN_ORDERS_ZERO",
+      "detail": null,
+      "evidence": "orders_active=0",
+      "passes": true,
+      "required": "== 0"
+    },
+    {
+      "blocking": true,
+      "check_id": "DRAWDOWN_NOT_BREACHED",
+      "detail": null,
+      "evidence": "drawdown=-0.0001 block_threshold=-0.1",
+      "passes": true,
+      "required": "> -0.1"
+    },
+    {
+      "blocking": true,
+      "check_id": "DAILY_SUMMARIES_PRESENT",
+      "detail": null,
+      "evidence": "daily_summary_history_count=252",
+      "passes": true,
+      "required": ">= 1"
+    },
+    {
+      "blocking": true,
+      "check_id": "WEEKLY_REVIEW_PRESENT",
+      "detail": null,
+      "evidence": "weekly_review_history_count=29",
+      "passes": true,
+      "required": ">= 1"
+    },
+    {
+      "blocking": true,
+      "check_id": "OUTCOME_INTEGRITY_OK",
+      "detail": null,
+      "evidence": "outcome_snapshot.source_integrity_status=ok",
+      "passes": true,
+      "required": "== 'ok'"
+    },
+    {
+      "blocking": true,
+      "check_id": "TRIGGER_PERFORMANCE_OK",
+      "detail": null,
+      "evidence": "trigger_performance.status=ok",
+      "passes": true,
+      "required": "== 'ok'"
+    },
+    {
+      "blocking": true,
+      "check_id": "MAX_ORDERS_PER_RUN_ONE",
+      "detail": null,
+      "evidence": "max_orders_per_run=1",
+      "passes": true,
+      "required": "== 1"
+    },
+    {
+      "blocking": false,
+      "check_id": "DAILY_ORDER_LIMIT_RESPECTED",
+      "detail": null,
+      "evidence": "today_limit_reached=False violations=[] max_total_paper_orders_per_day=3",
+      "passes": true,
+      "required": "daily limits not exceeded"
+    },
+    {
+      "blocking": false,
+      "check_id": "LINEAGE_ADEQUATE",
+      "detail": "Lineage completeness ratio 0.0% (0/14). Older fills have partial lineage \u2014 trade plan archiving to data/history/trade_plans/ is now active so future fills will be complete. Run build_lineage.py to update after more fills are archived.",
+      "evidence": "lineage_count=14 complete_count=0 ratio=0.00",
+      "passes": false,
+      "required": ">= 0.5 complete ratio"
+    }
+  ],
+  "current_phase": "PHASE_1_TINY_MANUAL",
+  "eligible_for_next_phase": false,
+  "evidence_summary": {
+    "active_orders_count": 0,
+    "daily_order_limit_violations": [],
+    "daily_summaries_count": 252,
+    "drawdown": -0.000124,
+    "filled_orders_count": 14,
+    "lineage_complete_count": 0,
+    "lineage_complete_ratio": 0.0,
+    "lineage_count": 14,
+    "lineage_note": "14 fill(s) have partial lineage. Trade plan archiving is now active \u2014 future fills will resolve to COMPLETE.",
+    "lineage_partial_count": 14,
+    "max_notional_per_order": 25.0,
+    "max_orders_per_run": 1,
+    "max_total_paper_orders_per_day": 3,
+    "missing_orders_count": 0,
+    "outcome_integrity_status": "ok",
+    "rejected_orders_count": 0,
+    "source_integrity_status": "ok",
+    "weekly_reviews_count": 29
+  },
+  "generated_at": "2026-10-16T23:59:53Z",
+  "next_phase": "PHASE_2_SMALL_MANUAL",
+  "phase_gate_hash": "30b53872bebc793a",
+  "recommendation": "stay_at_phase",
+  "recommended_phase": "PHASE_1_TINY_MANUAL",
+  "required_human_actions": [
+    "Resolve all blocking issues before requesting promotion review.",
+    "Re-run phase_gate.py after resolving blockers."
+  ],
+  "run_id": "phase_gate-20261016T235953-204858d6",
+  "safety_note": "No config was changed. No orders were placed. No paper execution was enabled. No trade plans were approved. No scheduled execution was enabled.",
+  "warnings": [
+    "Lineage completeness ratio 0.0% (0/14). Older fills have partial lineage \u2014 trade plan archiving to data/history/trade_plans/ is now active so future fills will be complete. Run build_lineage.py to update after more fills are archived."
+  ]
+}
