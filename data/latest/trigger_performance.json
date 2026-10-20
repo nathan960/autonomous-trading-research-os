@@ -1,8 +1,8 @@
 {
   "days": 7,
   "execution_fill_stats": {
-    "total_fills": 14,
-    "total_tracked": 14
+    "total_fills": 0,
+    "total_tracked": 0
   },
   "fill_outcomes": {
     "avg_current_return_pct": -0.019573,
@@ -60,14 +60,15 @@
     "source_integrity_status": "ok",
     "total_outcomes": 14
   },
-  "generated_at": "2026-10-16T23:16:45Z",
+  "generated_at": "2026-10-20T00:06:57Z",
   "lineage_status_note": "Lineage snapshot: 14 records (0 complete, 14 partial). 0 trigger fill associations recovered. 14 record(s) have partial lineage \u2014 save trade plans to history/trade_plans/ to improve completeness.",
   "operational_issues": [
-    "Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 76% of candidates \u2014 review spread threshold or data freshness."
+    "Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 76% of candidates \u2014 review spread threshold or data freshness.",
+    "No fills recorded this period \u2014 verify execution pipeline is active."
   ],
-  "performance_hash": "f37fa363ee4d4287",
-  "period_end": "2026-10-16",
-  "period_start": "2026-10-10",
+  "performance_hash": "607f4b992b380106",
+  "period_end": "2026-10-20",
+  "period_start": "2026-10-14",
   "regime": {
     "avg_candidates_per_session": null,
     "avg_excluded_per_session": null,
@@ -86,13 +87,13 @@
   "research_observations": [
     "Spread gate: 60/79 symbols blocked (76%). Avg spread (blocked): 12.014%",
     "Trend gate (200 DMA): 43/79 symbols below 200 DMA (54% block rate).",
-    "Fill count this period: 14. Need 6 more fills before P/L analysis is meaningful.",
+    "Fill count this period: 0. Need 20 more fills before P/L analysis is meaningful.",
     "Average current return across 14 tracked outcome(s): -1.957%. Window pending \u2014 no conclusions yet.",
     "Lineage: Lineage snapshot: 14 records (0 complete, 14 partial). 0 trigger fill associations recovered. 14 record(s) have partial lineage \u2014 save trade plans to history/trade_plans/ to improve completeness.",
     "No fills linked to triggers via lineage \u2014 run build_lineage.py to recover trigger provenance.",
     "IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest."
   ],
-  "run_id": "trigger_performance-20261016T231645-2122823e",
+  "run_id": "trigger_performance-20261020T000657-6da09276",
   "safety_note": "All recommendations are research-only observations. No config files were read for modification. No strategy changes are implied or permitted from this output.",
   "status": "ok",
   "triggers": {
