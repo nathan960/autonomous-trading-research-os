@@ -50,14 +50,14 @@
   "failed_gates": [
     "QUOTE_FRESHNESS"
   ],
-  "generated_at": "2026-10-16T23:31:58Z",
+  "generated_at": "2026-10-20T00:17:18Z",
   "last_alert_count": 7,
   "last_route_count": 14,
   "latest_account_equity": 99800.68,
   "latest_plan_id": "trade_plan-20261010T001934-4c6550da",
   "lineage_status": {
     "complete_count": 0,
-    "generated_at": "2026-10-16T23:16:45Z",
+    "generated_at": "2026-10-20T00:06:57Z",
     "lineage_count": 14,
     "partial_count": 14
   },
@@ -130,14 +130,15 @@
   "safe_for_scheduled_paper_execution": false,
   "schema_version": "0.1.0",
   "source_integrity_status": "ok",
-  "status_hash": "ae9c2d27c78cd69550669c898177de176e612bbfd76e3eb4d9666011c7c04053",
+  "status_hash": "34d6e5bb8ddfe1e23e29bcb98ce6b26f6868b5bf9decce2f18f36dcc64230145",
   "trade_plan_approved_for_execution": false,
   "trigger_performance_summary": {
     "avg_current_return_pct": -0.019573,
     "avg_slippage_pct": -0.000247,
     "days": 7,
     "operational_issues": [
-      "Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 76% of candidates \u2014 review spread threshold or data freshness."
+      "Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 76% of candidates \u2014 review spread threshold or data freshness.",
+      "No fills recorded this period \u2014 verify execution pipeline is active."
     ],
     "recommendation": "needs_more_data",
     "regime_category": "market_regime",
@@ -146,7 +147,7 @@
   },
   "warnings": [
     "Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']",
-    "Risk state is stale (10032.4min old) \u2014 run monitor_positions.py",
+    "Risk state is stale (14397.8min old) \u2014 run monitor_positions.py",
     "60 wide-spread symbols (['AAPL', 'ABBV', 'ABT', 'ADBE', 'AMD', 'AMT', 'AMZN', 'APD', 'AVGO', 'BA', 'BAC', 'BKNG', 'BLK', 'CAT', 'CL', 'CMCSA', 'COP', 'CSCO', 'DE', 'DIS', 'DUK', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HON', 'ISRG', 'JNJ', 'JPM', 'KO', 'LLY', 'LMT', 'LOW', 'MA', 'MCD', 'MDLZ', 'MRK', 'MSFT', 'NEE', 'NFLX', 'NKE', 'NVDA', 'O', 'ORCL', 'PEP', 'PLD', 'PM', 'SBUX', 'SHW', 'SLB', 'SO', 'TMUS', 'TSLA', 'UNH', 'UNP', 'UPS', 'V', 'WELL']) \u2014 SPREAD_NOT_TOO_WIDE may block execution",
     "Trade plan has expired"
   ]
