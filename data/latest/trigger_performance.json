@@ -60,13 +60,13 @@
     "source_integrity_status": "ok",
     "total_outcomes": 14
   },
-  "generated_at": "2026-10-20T00:30:11Z",
+  "generated_at": "2026-10-20T23:38:50Z",
   "lineage_status_note": "Lineage snapshot: 14 records (0 complete, 14 partial). 0 trigger fill associations recovered. 14 record(s) have partial lineage \u2014 save trade plans to history/trade_plans/ to improve completeness.",
   "operational_issues": [
     "Trigger 'SPREAD_GATE_V1' (spread_gate): Spread gate blocking 76% of candidates \u2014 review spread threshold or data freshness.",
     "No fills recorded this period \u2014 verify execution pipeline is active."
   ],
-  "performance_hash": "508e06ff9c276ac7",
+  "performance_hash": "a81459d62968e608",
   "period_end": "2026-10-20",
   "period_start": "2026-10-14",
   "regime": {
@@ -93,7 +93,7 @@
     "No fills linked to triggers via lineage \u2014 run build_lineage.py to recover trigger provenance.",
     "IMPORTANT: With only a few paper fills, no trigger should be promoted or demoted. These observations require 20+ fills and a comparison backtest."
   ],
-  "run_id": "trigger_performance-20261020T003011-40cdbbcf",
+  "run_id": "trigger_performance-20261020T233850-4c864332",
   "safety_note": "All recommendations are research-only observations. No config files were read for modification. No strategy changes are implied or permitted from this output.",
   "status": "ok",
   "triggers": {
