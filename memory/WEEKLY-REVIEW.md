@@ -1484,3 +1484,38 @@ None identified.
 - 14 order fill(s) confirmed by order monitor.
 
 ---
+## Weekly Review — 2026-10-17 to 2026-10-23 (7 days)
+
+**Generated:** 2026-10-23T23:54:21Z  **Run ID:** weekly_review-2026-10-23
+
+### Trigger Scans
+- Total runs: 0 | Risk-on: 0 | Risk-off: 0
+- Avg candidates: 0.0 | Avg excluded: 0.0
+
+### Dry Runs
+- Total: 0 | Pass: 0 | Fail: 0
+
+### Paper Executions
+- Attempts: 0 | Orders submitted: 0
+
+### Order Lifecycle
+- Monitor runs: 0 | Unique orders: 0
+- Fills: 0 | Partial: 0 | Missing: 0 | Expired: 0 | Rejected: 0 | Canceled: 0
+
+### External Alerts
+- Ingested this period: 0 (all-time: 23)
+- Routes this period: 0 (all-time: 5)
+- Execution called (ever): NO
+- Approved plan created (ever): NO
+
+### Risk State
+- Equity: $99,800.68 | Peak: $99,813.01 | Drawdown: -0.01% | Positions: 4
+- Last updated: 2026-10-10T00:19:33Z
+
+### Operational Issues (0)
+None identified.
+
+### Research Observations
+- No paper executions this period.
+
+---
