@@ -63,7 +63,7 @@
       "blocking": true,
       "check_id": "DAILY_SUMMARIES_PRESENT",
       "detail": null,
-      "evidence": "daily_summary_history_count=252",
+      "evidence": "daily_summary_history_count=257",
       "passes": true,
       "required": ">= 1"
     },
@@ -71,7 +71,7 @@
       "blocking": true,
       "check_id": "WEEKLY_REVIEW_PRESENT",
       "detail": null,
-      "evidence": "weekly_review_history_count=29",
+      "evidence": "weekly_review_history_count=30",
       "passes": true,
       "required": ">= 1"
     },
@@ -121,7 +121,7 @@
   "evidence_summary": {
     "active_orders_count": 0,
     "daily_order_limit_violations": [],
-    "daily_summaries_count": 252,
+    "daily_summaries_count": 257,
     "drawdown": -0.000124,
     "filled_orders_count": 14,
     "lineage_complete_count": 0,
@@ -136,18 +136,18 @@
     "outcome_integrity_status": "ok",
     "rejected_orders_count": 0,
     "source_integrity_status": "ok",
-    "weekly_reviews_count": 29
+    "weekly_reviews_count": 30
   },
-  "generated_at": "2026-10-16T23:59:53Z",
+  "generated_at": "2026-10-24T00:05:45Z",
   "next_phase": "PHASE_2_SMALL_MANUAL",
-  "phase_gate_hash": "30b53872bebc793a",
+  "phase_gate_hash": "864bffee3a8ce960",
   "recommendation": "stay_at_phase",
   "recommended_phase": "PHASE_1_TINY_MANUAL",
   "required_human_actions": [
     "Resolve all blocking issues before requesting promotion review.",
     "Re-run phase_gate.py after resolving blockers."
   ],
-  "run_id": "phase_gate-20261016T235953-204858d6",
+  "run_id": "phase_gate-20261024T000545-1446e2c3",
   "safety_note": "No config was changed. No orders were placed. No paper execution was enabled. No trade plans were approved. No scheduled execution was enabled.",
   "warnings": [
     "Lineage completeness ratio 0.0% (0/14). Older fills have partial lineage \u2014 trade plan archiving to data/history/trade_plans/ is now active so future fills will be complete. Run build_lineage.py to update after more fills are archived."
