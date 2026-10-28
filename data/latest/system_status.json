@@ -50,14 +50,14 @@
   "failed_gates": [
     "QUOTE_FRESHNESS"
   ],
-  "generated_at": "2026-10-27T00:22:57Z",
+  "generated_at": "2026-10-28T00:27:52Z",
   "last_alert_count": 7,
   "last_route_count": 14,
   "latest_account_equity": 99800.68,
   "latest_plan_id": "trade_plan-20261010T001934-4c6550da",
   "lineage_status": {
     "complete_count": 0,
-    "generated_at": "2026-10-27T00:14:53Z",
+    "generated_at": "2026-10-28T00:16:14Z",
     "lineage_count": 14,
     "partial_count": 14
   },
@@ -130,7 +130,7 @@
   "safe_for_scheduled_paper_execution": false,
   "schema_version": "0.1.0",
   "source_integrity_status": "ok",
-  "status_hash": "673923083c124d572c6ee9ae52d27a3845d5cae6918c911f43bc865d75ae655e",
+  "status_hash": "76ab5249d05fafd86decc70b8fe1db6a9b8cfef07afb603f415f359e88d85164",
   "trade_plan_approved_for_execution": false,
   "trigger_performance_summary": {
     "avg_current_return_pct": -0.019573,
@@ -147,7 +147,7 @@
   },
   "warnings": [
     "Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']",
-    "Risk state is stale (24483.4min old) \u2014 run monitor_positions.py",
+    "Risk state is stale (25928.3min old) \u2014 run monitor_positions.py",
     "60 wide-spread symbols (['AAPL', 'ABBV', 'ABT', 'ADBE', 'AMD', 'AMT', 'AMZN', 'APD', 'AVGO', 'BA', 'BAC', 'BKNG', 'BLK', 'CAT', 'CL', 'CMCSA', 'COP', 'CSCO', 'DE', 'DIS', 'DUK', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HON', 'ISRG', 'JNJ', 'JPM', 'KO', 'LLY', 'LMT', 'LOW', 'MA', 'MCD', 'MDLZ', 'MRK', 'MSFT', 'NEE', 'NFLX', 'NKE', 'NVDA', 'O', 'ORCL', 'PEP', 'PLD', 'PM', 'SBUX', 'SHW', 'SLB', 'SO', 'TMUS', 'TSLA', 'UNH', 'UNP', 'UPS', 'V', 'WELL']) \u2014 SPREAD_NOT_TOO_WIDE may block execution",
     "Trade plan has expired"
   ]
