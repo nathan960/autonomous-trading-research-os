@@ -17217,3 +17217,17 @@ based on this report alone. Any experiment requires a candidate PR with:
 *Outcome windows pending — revisit after 1, 5, 20, 63 trading days.*
 
 ---
+## Experiment Candidates — 2026-10-31
+
+*From weekly review run weekly_review-2026-10-31*
+
+**Observations (hypothesis candidates):**
+- No paper executions this period.
+
+**To propose a strategy experiment, open a PR with:**
+- Hypothesis
+- Supporting evidence (backtest or paper results)
+- Success criteria
+- Rollback plan
+
+---
