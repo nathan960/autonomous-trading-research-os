@@ -1742,3 +1742,22 @@
 - [ ] Re-run generate_trade_plan.py to refresh the plan
 
 ---
+## System Status — 2026-10-31T00:42:24Z
+
+**Overall:** YELLOW  | Research: YES  | Paper Execution: NO  | Scheduled: NO (policy)
+
+**Account:** equity=$99,800.68  drawdown=-0.01%  positions=4  open_orders=0
+**Trade Plan:** trade_plan-20261010T001934-4c6550da  approved=False
+**Dry-run gates:** FAIL  failed=['QUOTE_FRESHNESS']
+
+**Warnings:**
+- Dry-run gates failed for market/timing reasons: ['QUOTE_FRESHNESS']
+- Risk state is stale (30262.9min old) — run monitor_positions.py
+- 60 wide-spread symbols (['AAPL', 'ABBV', 'ABT', 'ADBE', 'AMD', 'AMT', 'AMZN', 'APD', 'AVGO', 'BA', 'BAC', 'BKNG', 'BLK', 'CAT', 'CL', 'CMCSA', 'COP', 'CSCO', 'DE', 'DIS', 'DUK', 'EOG', 'EQIX', 'FCX', 'GE', 'GOOGL', 'GS', 'HON', 'ISRG', 'JNJ', 'JPM', 'KO', 'LLY', 'LMT', 'LOW', 'MA', 'MCD', 'MDLZ', 'MRK', 'MSFT', 'NEE', 'NFLX', 'NKE', 'NVDA', 'O', 'ORCL', 'PEP', 'PLD', 'PM', 'SBUX', 'SHW', 'SLB', 'SO', 'TMUS', 'TSLA', 'UNH', 'UNP', 'UPS', 'V', 'WELL']) — SPREAD_NOT_TOO_WIDE may block execution
+- Trade plan has expired
+
+**Required Operator Actions:**
+- [ ] Run monitor_positions.py to refresh risk state
+- [ ] Re-run generate_trade_plan.py to refresh the plan
+
+---
